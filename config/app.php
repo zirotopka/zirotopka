@@ -178,6 +178,9 @@ return [
         App\Providers\RouteServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
 
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+
     ],
 
     /*
@@ -230,7 +233,8 @@ return [
         'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
         'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
         'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
-
+        'Moloquent'  => Jenssegers\Mongodb\Eloquent\Model::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];
