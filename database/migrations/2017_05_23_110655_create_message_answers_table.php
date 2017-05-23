@@ -15,7 +15,16 @@ class CreateMessageAnswersTable extends Migration
     {
         Schema::create('message_answers', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->integer('message_id');
+            $table->string('text');
+            $table->integer('sender_id');
+        });
+
+        Schema::create('message_to_answers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('message_id');
+            $table->integer('answer_id');
+            $table->boolean('is_read')->default(0)->comment="Прочитано ли?";
         });
     }
 
@@ -27,5 +36,7 @@ class CreateMessageAnswersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('message_answers');
+
+        Schema::dropIfExists('message_to_answers');
     }
 }
