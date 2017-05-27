@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('user/registration', [ 'uses' => 'UserController@registration' ] );
+
+// Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
+
+// })
