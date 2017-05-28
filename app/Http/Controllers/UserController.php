@@ -54,6 +54,7 @@ class UserController extends CartalystUser
             'age' => $request->get("age"),
             'phone' => $request->get("phone"),
             'user_ip' => $_SERVER["REMOTE_ADDR"],
+            'referer_code' => md5( date('Y-m-d').uniqid(rand(), true) ),
         ];
 
         $user = Sentinel::register($credentials);
