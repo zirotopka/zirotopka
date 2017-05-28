@@ -12,3 +12,10 @@
 */
 
 Route::get('/', 'HomeController@index');
+
+
+Route::get('user/registration', [ 'uses' => 'UserController@registration' ] );
+
+// Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
+
+// })

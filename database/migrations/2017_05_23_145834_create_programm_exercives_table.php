@@ -15,7 +15,7 @@ class CreateProgrammExercivesTable extends Migration
     {
         Schema::create('programm_exercives', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('slug')->nullabel()->comment = "Ключ";
+            $table->string('slug')->nullable()->comment = "Ключ";
             $table->string('name')->comment = "Название";
             $table->string('description')->nullable()->comment = "Описание";
 
