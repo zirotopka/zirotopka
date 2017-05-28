@@ -49,7 +49,7 @@ class UserController extends Controller
             'last_name' => $request->get("last_name"),
         ];
 
-        $user = Sentinel::register($credentials);
+        $user = Sentinel::registerAndActivate($credentials);
 
         if ( $user ) {
             $user->sex = $request->get("sex");
@@ -62,9 +62,9 @@ class UserController extends Controller
 
             $user->save();
 
-            $activation = Activation::create($user);
-            $activation->completed = 1;
-            $activation->save();
+            // $activation = Activation::create($user);
+            // $activation->completed = 1;
+            // $activation->save();
 
             $role = Sentinel::findRoleBySlug("client");
             $role->users()->attach($user);
@@ -78,5 +78,23 @@ class UserController extends Controller
         } else {
             dd('error');
         }
+    }
+
+    /**
+     * Логин
+     */
+    public function login(Request $request) {
+        return Sentinel::authenticateAndRemember([ 'email' => $request->get('login'), 'password' => $request->get('password') ]);
+    }
+
+    /**
+     * Логаут
+     */
+    public function logout() {
+        //$current_user = Sentinel::getUser()
+
+        Sentinel::logout();
+        Session::flush();
+        return true;
     }
 }

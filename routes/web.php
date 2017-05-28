@@ -15,6 +15,8 @@ Route::get('/', 'HomeController@index');
 
 
 Route::get('user/registration', [ 'uses' => 'UserController@registration' ] );
+Route::post('user/login', [ 'uses' => 'UserController@login' ] );
+Route::post('user/logout', [ 'uses' => 'UserController@logout' ] );
 
 // Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 
