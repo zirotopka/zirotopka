@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Cartalyst\Sentinel\Users\EloquentUser as CartalystUser;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 
@@ -11,7 +10,7 @@ use App\Balance;
 
 use Illuminate\Http\Request;
 
-class UserController extends CartalystUser
+class UserController extends Controller
 {	
 	/**
 	 * Регистрация пользователя
@@ -21,7 +20,7 @@ class UserController extends CartalystUser
             'email' => 'required|email|unique:users,email',
             'first_name' => 'required',
             'last_name' => 'required',
-            'sex' => 'required',
+            'sex' => 'required|boolean',
             'phone' => 'required',
         ];
         $messages = [
@@ -48,29 +47,36 @@ class UserController extends CartalystUser
             'password' => $request->get("password"),
             'first_name' => $request->get("first_name"),
             'last_name' => $request->get("last_name"),
-            'sex' => $request->get("sex"),
-            'weight' => $request->get("weight"),
-            'growth' => $request->get("growth"),
-            'age' => $request->get("age"),
-            'phone' => $request->get("phone"),
-            'user_ip' => $_SERVER["REMOTE_ADDR"],
-            'referer_code' => md5( date('Y-m-d').uniqid(rand(), true) ),
         ];
 
         $user = Sentinel::register($credentials);
 
-        $activation = Activation::create($user);
-        $activation->completed = 1;
-        $activation->save();
+        if ( $user ) {
+            $user->sex = $request->get("sex");
+            $user->weight = $request->get("weight");
+            $user->growth = $request->get("growth");
+            $user->age = $request->get("age");
+            $user->phone = $request->get("phone");
+            $user->user_ip = $_SERVER["REMOTE_ADDR"];
+            $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
 
-        $role = Sentinel::findRoleBySlug("client");
-        $role->users()->attach($user);
+            $user->save();
 
-        Balance::create([
-            'user_id' => $user->id,
-            'sum' => 0,
-        ]);
+            $activation = Activation::create($user);
+            $activation->completed = 1;
+            $activation->save();
 
-        dd($user);
+            $role = Sentinel::findRoleBySlug("client");
+            $role->users()->attach($user);
+
+            Balance::create([
+                'user_id' => $user->id,
+                'sum' => 0,
+            ]);
+
+            dd($user);
+        } else {
+            dd('error');
+        }
     }
 }

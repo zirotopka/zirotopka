@@ -2,11 +2,11 @@
 
 namespace App;
 
+use Cartalyst\Sentinel\Users\EloquentUser as CartalystUser;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Authenticatable
+class User extends CartalystUser
 {
     use Notifiable;
 
