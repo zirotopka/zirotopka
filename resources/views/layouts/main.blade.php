@@ -11,6 +11,7 @@
     <link href="/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <link href="/navigation/css/component.css" type="text/css" rel="stylesheet">
     <link href="/navigation/css/user.css" type="text/css" rel="stylesheet">
+    <link href="/css/modal.css" type="text/css" rel="stylesheet">
 
 
 	<title>Жиротопка</title>
@@ -45,16 +46,21 @@
                                     <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                                 </button>
                             </div>
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registr">
+                                Регистрация
+                            </button>
                         </div>
-                        <div class="main clearfix">
+                        <div class="main">
+
                             @section("content")
                             @show    
+                            @include('layouts.reg_modal')
                         </div> 
                     </div><!-- /st-content-inner -->
                 </div><!-- /st-content -->
             </div><!-- /st-pusher -->
         </div><!-- /st-container -->
-            @include('layouts.topbar')
+
     @section('js')
         @yield('js')
     @show
