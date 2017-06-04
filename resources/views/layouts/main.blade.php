@@ -17,7 +17,7 @@
 	<title>Жиротопка</title>
 
     @section('css')
-        @yield('css')
+        
     @show
 	
 </head>
@@ -41,28 +41,66 @@
                     <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                         <!-- Top Navigation -->
                         <div class="codrops-top clearfix ">
-                            <div id="st-trigger-effects" class="column">
-                                <button data-effect="st-effect-2">
+                            <div id="st-trigger-effects" class="column col-lg-1 col-md-1">
+                                <button data-effect="st-effect-2" class="codrops-btn">
                                     <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                                 </button>
                             </div>
-                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registr">
+                            <!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registr">
                                 Регистрация
-                            </button>
+                            </button>-->
+                            <div class="col-lg-1">
+                                
+                            </div>
+                            <div class="min-logo col-lg-2 col-md-2">
+                                <a href="/">
+                                    <img src="/min-logo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <p class="immunitet nav-text col-lg-6">Ваши иммунитеты:</p>
+                                <div class="hearts col-lg-6">  
+                                    <i class="fa fa-heart-o fa-lg" area-hidden="true"></i>
+                                    <i class="fa fa-heart-o fa-lg" area-hidden="true"></i>
+                                    <i class="fa fa-heart-o fa-lg" area-hidden="true"></i>
+                                    <i class="fa fa-heart-o fa-lg" area-hidden="true"></i>
+                                    <i class="fa fa-heart-o fa-lg" area-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="score nav-text col-lg-2 ">
+                                <p>Ваш счёт: Мильён мильёнов</p>                                
+                            </div>
+                            <div class="envelop col-lg-1">
+                                <a href="">
+                                    <i class="fa fa-envelope fa-3x"></i>
+                                </a>
+                            </div>
+                            <div class="dropdown col-lg-2">
+                                <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Пётр Петрович
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
+                                    <li><a href="">asd</a></li>
+                                    <li><a href="">asd</a></li>
+                                    <li><a href="">asd</a></li>
+                                    <li><a href="">asd</a></li>                                    
+                                </ul>
+                            </div>
                         </div>
                         <div class="main">
-
-                            @section("content")
-                            @show    
                             @include('layouts.reg_modal')
                         </div> 
                     </div><!-- /st-content-inner -->
+                    @section("content")
+                    @show 
                 </div><!-- /st-content -->
             </div><!-- /st-pusher -->
         </div><!-- /st-container -->
 
     @section('js')
-        @yield('js')
+        
     @show
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>

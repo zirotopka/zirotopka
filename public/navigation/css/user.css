@@ -11,23 +11,21 @@
 }
 
 body {
-	background: #444;
-	color: #48a770;
+	background: white;
 	font-weight: 300;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 }
 
 a {
 	text-decoration: none;
-	color: #48a770;
 	outline: none;
 }
 
 a:hover, a:focus {
-	color: #2c774b;
 	outline: none;
 }
 
+}
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
 .clearfix:after {
@@ -61,18 +59,18 @@ a:hover, a:focus {
 	display: block;
 	padding: 0 0 0.6em 0.1em;
 	font-size: 60%;
-	color: #aca89a;
+
 }
 
 /* To Navigation Style */
 .codrops-top {
-	width: 100%;
-	text-transform: uppercase;
-	font-size: 0.69em;
+	font-size: 1em;
 	line-height: 2.2;
 	font-weight: 400;
+	height: 70px;
 }
 .st-content-inner{
+	height: 70px;
 	background-color: #282828;
 }
 .codrops-top a {
@@ -122,8 +120,10 @@ a:hover, a:focus {
 
 .column {
 	float: left;
-	padding: 1em;
+	padding: 1.5em 0 0 0;
+	padding-right: 0;
 	position: relative;
+	text-align: right;
 }
 
 .column:nth-child(2) {
@@ -141,22 +141,21 @@ a:hover, a:focus {
 
 button {
 	border: none;
-	padding: 0.6em 1.2em;
-	background: #388a5a;
+	padding: 1em 1.2em;
+	background: #282828;
 	color: #fff;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	font-size: 1em;
 	letter-spacing: 1px;
-	text-transform: uppercase;
 	cursor: pointer;
 	display: inline-block;
-	margin: 3px 2px;
 	border-radius: 2px;
 	float: left;
 }
 
 button:hover {
-	background: #2c774b;
+	background: #282828;
+	cursor: pointer;
 }
 
 .info {
@@ -207,4 +206,38 @@ button:hover {
 		display: none;
 	}
 
+}
+
+
+/* Навигация top*/
+.codrops-btn{
+	width: 100%;
+	padding: 0;
+}
+.min-logo{
+	margin: 1.1em 0 15px 0;
+}	
+
+.hearts{
+	padding: 1.4em 0 0 0;
+	color: white;
+
+}
+
+.nav-text{
+	margin: 1.4em 0 10px 0;	
+	color: white;
+	padding: 0px;
+}
+
+.envelop{
+	margin: 0.8em 0 0 0;
+}
+
+.dropdown{
+	margin: 0.5em auto;
+}
+
+.dropdown-menu{
+	margin: 0 24px 0;
 }

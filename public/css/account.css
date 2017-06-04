@@ -1,0 +1,60 @@
+.main-content{
+	text-align: center;
+	height: 1000px;
+}
+
+.logo{
+	padding:70px 50px 0 0;
+	color: #1E0F00;
+	vertical-align: unset;
+	font-size: 28px;
+}
+
+.logo-pos{
+	vertical-align: unset;
+
+}
+
+.box-cal{
+	width: 50px;
+	height: 35px;
+	background: #ff9319;
+	border: 0.5px solid white;
+}
+
+.calendar{
+	margin: 170px 0 0 0;
+}
+
+.programs{
+	margin: 100px 0 0 0;
+}
+
+.program{
+	background-color: #ebebeb;
+	border: 15px solid white;
+	padding: 0px;
+}
+
+.video-descr{
+	border: 1px solid black;
+	width: 100%;
+}
+
+.otchet{
+	height: 100px;
+	vertical-align: middle;
+}
+
+.prof-file{
+	padding: 40px 0 0 40px;
+}
+
+.send-proof{
+	text-align: center;
+}
+
+.send-proof-file{
+	width: 200px;
+	float: none;
+}
