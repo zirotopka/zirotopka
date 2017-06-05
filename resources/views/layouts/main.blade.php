@@ -41,7 +41,7 @@
                     <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                         <!-- Top Navigation -->
                         <div class="codrops-top clearfix ">
-                            <div id="st-trigger-effects" class="column col-lg-1 col-md-1">
+                            <div id="st-trigger-effects" class="column col-lg-1 col-md-1 col-sm-4 col-xs-4">
                                 <button data-effect="st-effect-2" class="codrops-btn">
                                     <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                                 </button>
@@ -49,33 +49,31 @@
                             <!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registr">
                                 Регистрация
                             </button>-->
-                            <div class="col-lg-1">
+                            <div class="col-lg-1 hidden-md hidden-sm hidden-xs">
                                 
                             </div>
-                            <div class="min-logo col-lg-2 col-md-2">
+                            <div class="min-logo col-lg-2 col-md-2 hidden-xs hidden-sm">
                                 <a href="/">
                                     <img src="/min-logo.png" alt="">
                                 </a>
                             </div>
-                            <div class="col-lg-3 col-md-3">
-                                <p class="immunitet nav-text col-lg-6">Ваши иммунитеты:</p>
-                                <div class="hearts col-lg-6">  
-                                    <i class="fa fa-heart-o fa-lg" area-hidden="true"></i>
-                                    <i class="fa fa-heart-o fa-lg" area-hidden="true"></i>
-                                    <i class="fa fa-heart-o fa-lg" area-hidden="true"></i>
-                                    <i class="fa fa-heart-o fa-lg" area-hidden="true"></i>
-                                    <i class="fa fa-heart-o fa-lg" area-hidden="true"></i>
+                            <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                <p class="immunitet nav-text col-lg-6 col-md-6">Ваши иммунитеты:</p>
+                                <div class="hearts col-lg-6 col-md-6">  
+                                    @for ($i=0; $i<5; $i++)
+                                        <img class="heart" src="/ico/heart.png" alt="">
+                                    @endfor
                                 </div>
                             </div>
-                            <div class="score nav-text col-lg-2 ">
+                            <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm">
                                 <p>Ваш счёт: Мильён мильёнов</p>                                
                             </div>
-                            <div class="envelop col-lg-1">
+                            <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4">
                                 <a href="">
-                                    <i class="fa fa-envelope fa-3x"></i>
+                                    <img class="envel" src="/ico/envelop.png" alt="envelop">
                                 </a>
                             </div>
-                            <div class="dropdown col-lg-2">
+                            <div class="dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     Пётр Петрович
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>

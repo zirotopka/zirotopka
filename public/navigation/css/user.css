@@ -10,8 +10,12 @@
 		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
 }
 
+html {
+	background-color: white !important;
+}
+
 body {
-	background: white;
+	background: white !important;
 	font-weight: 300;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 }
@@ -150,7 +154,7 @@ button {
 	cursor: pointer;
 	display: inline-block;
 	border-radius: 2px;
-	float: left;
+
 }
 
 button:hover {
@@ -173,12 +177,21 @@ button:hover {
 	font-size: 0.9em;
 }
 
+.envel{
+	margin: 10px 0 0 0;
+	width: 49px;
+}
+
+.heart{
+	width: 17%;
+}
+
 @media screen and (max-width: 46.0625em) {
 	.column {
-		width: 100%;
+
 		min-width: auto;
 		min-height: auto;
-		padding: 2em; 
+		padding: 1.3em; 
 		text-align: center;
 	}
 
@@ -189,6 +202,24 @@ button:hover {
 	.column:nth-child(2) {
 		text-align: center;
 		box-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+	}
+	
+	.dropdown{
+		padding: 0px;
+		margin: 0px;
+		text-align: center !important;
+	}
+	.dropdown-toggle{
+		float: none;
+	}
+	#nav-dropdown{
+		padding: 13px 0 0 0;
+		font-size: 14px;
+	}
+	.envel{
+		width: 60px;
+		margin: 10px 0 0 0;
+
 	}
 }
 
@@ -204,6 +235,24 @@ button:hover {
 
 	.codrops-icon span {
 		display: none;
+	}
+
+	.dropdown{
+		margin: 0px !important;
+		padding: 0px !important;
+		text-align: center;
+	}
+
+	.dropdown-toggle{
+		border: none !important;
+		padding: 28px 0 0 0 !important;
+		font-size: 3.1vw !important;
+	}
+
+	.envel{
+		width: 55px;
+		margin: 10px 0 0 0;
+
 	}
 
 }
@@ -232,6 +281,7 @@ button:hover {
 
 .envelop{
 	margin: 0.8em 0 0 0;
+	text-align: center;
 }
 
 .dropdown{
