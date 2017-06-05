@@ -23,17 +23,13 @@
 </head>
 <body>
         <div id="st-container" class="st-container">
-            <!--    
-                example menus 
-                these menus will be on top of the push wrapper
-            -->
-
-            
             <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
-                <h2 class="icon icon-stack">Sidebar</h2>
                 <ul>
-                    <li><a class="icon icon-data" href="#">Data Management</a></li>
-                </ul>
+                    <li><a class="icon icon-data" href="#">Главная</a></li>
+                    <li><a class="icon icon-location" href="#">R.one start</a></li>
+                    <li><a class="icon icon-study" href="#">r.one pro</a></li>
+                    <li><a class="icon icon-photo" href="#">Бонусная программа</a></li>
+                 </ul>                
             </nav>
            <!-- content push wrapper -->
             <div class="st-pusher">
@@ -66,7 +62,7 @@
                                 </div>
                             </div>
                             <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm">
-                                <p>Ваш счёт: Мильён мильёнов</p>                                
+                                <p>Ваш счёт: 9999991$</p>                                
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4">
                                 <a href="">

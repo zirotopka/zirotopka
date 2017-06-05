@@ -15,7 +15,7 @@ body,
 
 .st-content {
 	overflow-y: scroll;
-
+	background: #f3efe0;
 }
 
 .st-content,
@@ -43,7 +43,7 @@ body,
 	right: 0;
 	width: 0;
 	height: 0;
-	background: rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0);
 	content: '';
 	opacity: 0;
 	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
@@ -59,11 +59,13 @@ body,
 }
 
 .st-menu {
+	padding: 0px;
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 100;
 	visibility: hidden;
+	width: 220px;
 	height: 100%;
 	background: #202020;
 	-webkit-transition: all 0.5s;
@@ -93,10 +95,13 @@ body,
 
 /* content style */
 
+
 .st-menu ul {
+	font-size: 17px;
 	margin: 0;
-	padding: 0;
+	padding: 70px 0 0 0;
 	list-style: none;
+	text-align: center;
 }
 
 .st-menu h2 {
@@ -109,8 +114,9 @@ body,
 }
 
 .st-menu ul li a {
+	text-decoration: none;
 	display: block;
-	padding: 1em 1em 1em 1.2em;
+	padding: 1.5em 0 1.5em 0em;
 	outline: none;
 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
 	color: #f3efe0;
@@ -132,8 +138,8 @@ body,
 	color: #fff;
 }
 	.st-effect-2.st-menu-open .st-pusher {
-		-webkit-transform: translate3d(16.6%, 0, 0);
-		transform: translate3d(16.6%, 0, 0);
+		-webkit-transform: translate3d(220px, 0, 0);
+		transform: translate3d(220px, 0, 0);
 
 	}
 
@@ -153,8 +159,8 @@ body,
 /* Effect 2: Reveal */
 @media screen and (max-width: 61.1em) {
 	.st-effect-2.st-menu-open .st-pusher {
-		-webkit-transform: translate3d(32%, 0, 0);
-		transform: translate3d(32%, 0, 0);
+		-webkit-transform: translate3d(220px, 0, 0);
+		transform: translate3d(220px, 0, 0);
 
 	}
 
@@ -175,8 +181,8 @@ body,
 
 @media screen and (max-width: 37em) {
 	.st-effect-2.st-menu-open .st-pusher {
-		-webkit-transform: translate3d(40%, 0, 0);
-		transform: translate3d(40%, 0, 0);
+		-webkit-transform: translate3d(220px, 0, 0);
+		transform: translate3d(220px, 0, 0);
 
 	}
 
@@ -193,4 +199,11 @@ body,
 	.st-effect-2.st-menu::after {
 		display: none;
 	}
+}
+
+
+/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
+.no-csstransforms3d .st-pusher,
+.no-js .st-pusher {
+	padding-left: 300px;
 }
