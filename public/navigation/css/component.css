@@ -15,7 +15,7 @@ body,
 
 .st-content {
 	overflow-y: scroll;
-	background: #f3efe0;
+	background: white;
 }
 
 .st-content,
@@ -43,7 +43,7 @@ body,
 	right: 0;
 	width: 0;
 	height: 0;
-	background: rgba(0,0,0,0);
+	background: rgba(0,0,0,0.2);
 	content: '';
 	opacity: 0;
 	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;

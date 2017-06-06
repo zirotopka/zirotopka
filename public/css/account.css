@@ -17,6 +17,7 @@
 
 .t-cal{
 	width: 100%;
+	font-weight: bold;
 }
 
 .box-cal{
@@ -32,12 +33,30 @@
 
 .programs{
 	margin: 100px 0 0 0;
+	text-align: left;
 }
 
 .program{
 	background-color: #ebebeb;
 	border: 15px solid white;
 	padding: 0px;
+}
+
+.prog-txt{
+	margin-left: 2em;
+	margin-top: 1.5em;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.prog-name{
+	font-weight: bold;
+	text-transform: uppercase;
+
+}
+
+.prog-count{
+	color: #FF9319;
 }
 
 .video-descr{
@@ -55,7 +74,7 @@
 	height: 100%;
 	opacity:0;
     filter:alpha(opacity:0);
-    	cursor: pointer;
+    cursor: pointer;
 }
 
 .send-proof{
@@ -63,21 +82,27 @@
 }
 
 .send-proof-file{
-	width: 200px;
+	background: url('/ico/send.png') ;
+	background-size: cover;
 	float: none;
+	margin-top: 4em;
+	width: 300px;
+
 }
 
 .otchet{
 	background: url('/ico/load.png');
 	background-repeat: no-repeat;
-	background-size: 67px;
-	margin: 15px 0 0 20%;
+	background-size: 3.5em;
+	padding: 1.5em 0 0 4em;
 	overflow: hidden;
+	background-position: 4em 1.5em;
 }
 
 
 .load-text{
-	padding: 15px 0 0 0;
+	padding: 0.9em 0 0 0;
+	font-weight: bolder;
 }
 
 @media screen and (max-width: 25em) {
