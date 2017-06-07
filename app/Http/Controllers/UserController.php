@@ -56,7 +56,7 @@ class UserController extends Controller
             'last_name' => $request->get("last_name"),
         ];
 
-        $user = Sentinel::registerAndActivate($credentials);
+        $user = Sentinel::register($credentials);
 
         if ( $user ) {
             $user->sex = $request->get("sex");
@@ -69,9 +69,9 @@ class UserController extends Controller
 
             $user->save();
 
-            // $activation = Activation::create($user);
-            // $activation->completed = 1;
-            // $activation->save();
+            $activation = Activation::create($user);
+            $activation->completed = 1;
+            $activation->save();
 
             $role = Sentinel::findRoleBySlug("client");
             $role->users()->attach($user);
@@ -82,6 +82,12 @@ class UserController extends Controller
             ]);
 
             dd($user);
+
+            // Sentinel::authenticateAndRemember($user);
+
+            // if ( $user = Sentinel::check() ) {
+            //      return redirect('lk/'.$user->id);
+            // }
         } else {
             return redirect()->back()->withInput();
         }
@@ -91,12 +97,12 @@ class UserController extends Controller
      * Логин
      */
     public function login(Request $request) {
-        $user = Sentinel::authenticateAndRemember([ 'email' => $request->get('login'), 'password' => $request->get('password') ]);
-        dd($user);
+        $user = Sentinel::authenticateAndRemember([ 'email' => $request->get('email'), 'password' => $request->get('password') ]);
+
         if( $user === false ) {
             return redirect()->back();
         } else {
-            return redirect()->route('lk/'.$user->id);
+            return redirect('lk/'.$user->id);
         }
     }
 
