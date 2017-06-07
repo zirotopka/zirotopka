@@ -13,11 +13,11 @@
 
 Route::get('/', 'HomeController@index');
 
+Route::get('login', ['uses' => 'HomeController@index' ] );
+Route::post('registration', [ 'as' => 'registration', 'uses' => 'UserController@registration' ] );
+Route::post('login', ['as' => 'login', 'uses' => 'UserController@login' ] );
+Route::post('logout', [ 'as' => 'logout', 'uses' => 'UserController@logout' ] );
 
-Route::get('user/registration', [ 'uses' => 'UserController@registration' ] );
-Route::post('user/login', [ 'uses' => 'UserController@login' ] );
-Route::post('user/logout', [ 'uses' => 'UserController@logout' ] );
-
-// Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
-
-// })
+Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
+	Route::get('lk/{id}', [ 'uses' => 'PrivatOfficeController@index' ] );
+});

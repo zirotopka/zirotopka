@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <div class="main">
-                            @include('layouts.reg_modal')
+                            {{-- @include('layouts.reg_modal') --}}
                         </div> 
                     </div><!-- /st-content-inner -->
                     @section("content")

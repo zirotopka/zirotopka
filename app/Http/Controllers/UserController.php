@@ -9,6 +9,7 @@ use Validator;
 use App\Balance;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {	
@@ -16,12 +17,15 @@ class UserController extends Controller
 	 * Регистрация пользователя
 	 */
     public function registration (Request $request) {
+
     	$rules = [
             'email' => 'required|email|unique:users,email',
             'first_name' => 'required',
             'last_name' => 'required',
-            'sex' => 'required|boolean',
+            'sex' => 'required',
             'phone' => 'required',
+            'offer' => 'required',
+            'adult' => 'required',
         ];
         $messages = [
             'email.required' => 'Не указана почта',
@@ -34,6 +38,9 @@ class UserController extends Controller
             'sex.required' => 'Пол не указан',
 
             'phone.required' => 'Телефон не указан',
+
+            'offer.required' => 'Согласитесь с оффертой',
+            'adult.required' => 'Подтвердите что вам больше 14 лет',
         ];
 
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -76,7 +83,7 @@ class UserController extends Controller
 
             dd($user);
         } else {
-            dd('error');
+            return redirect()->back()->withInput();
         }
     }
 
@@ -84,7 +91,13 @@ class UserController extends Controller
      * Логин
      */
     public function login(Request $request) {
-        return Sentinel::authenticateAndRemember([ 'email' => $request->get('login'), 'password' => $request->get('password') ]);
+        $user = Sentinel::authenticateAndRemember([ 'email' => $request->get('login'), 'password' => $request->get('password') ]);
+        dd($user);
+        if( $user === false ) {
+            return redirect()->back();
+        } else {
+            return redirect()->route('lk/'.$user->id);
+        }
     }
 
     /**
