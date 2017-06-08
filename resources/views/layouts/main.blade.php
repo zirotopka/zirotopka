@@ -25,9 +25,14 @@
         <div id="st-container" class="st-container">
             <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
                 <ul>
-                    <li><a class="icon icon-data" href="#">Главная</a></li>
-                    <li><a class="icon icon-location" href="#">R.one start</a></li>
-                    <li><a class="icon icon-study" href="#">r.one pro</a></li>
+                    <li><a class="icon icon-data" href="/">Главная</a></li>
+                    <?php
+                        $programms = App\Programm::select('id','name','slug')->get();
+                    ?>
+                    @forelse ($programms as $programm)
+                        <li><a class="icon icon-photo" data-id="{{$programm->id}}" href="#{{$programm->slug}}">{{$programm->name}}</a></li>
+                    @empty
+                    @endforelse
                     <li><a class="icon icon-photo" href="#">Бонусная программа</a></li>
                  </ul>                
             </nav>
