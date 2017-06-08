@@ -18,7 +18,7 @@
 @section("content")
 	<div class="main-content container-fluid">
 		<div class="logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<img class="logo-pos" src="R'ONE logo.png" alt="">
+			<img class="logo-pos" src="/R'ONE logo.png" alt="">
 			<b>.START</b>
 		</div>
 		<div class="calendar">
@@ -45,7 +45,7 @@
 						<p class="prog-txt prog-name">Название Упражнения</p>
 						<p class="prog-txt prog-count">Количество подходов</p>
 						<p class="prog-txt" style="margin-bottom:  2em;">Описание выполнения упражнения</p>
-						<video class="video-descr" src=""></video>
+						<video class="video-descr" src="/video/trainings/Берпи с отжиманием.mp4" controls="controls"></video>
 						<div class="otchet">
 							<input class="prof-file col-lg-4 col-md-4 col-sm-4 col-xs-4" type="file">
 							<p class="load-text col-lg-7 col-md-7 col-sm-7 col-xs-7">Загрузить отчёт</p>

@@ -53,8 +53,8 @@
                                     <img src="/min-logo.png" alt="">
                                 </a>
                             </div>
-                            <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-                                <span class="immunitet nav-text">Ваши иммунитеты:</span>
+                            <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                <span class=" nav-text">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
                                     <?php 
                                         $empty_hearts = 5;
@@ -87,17 +87,15 @@
                                     <img class="envel" src="/ico/envelop.png" alt="envelop">
                                 </a>
                             </div>
-                            <div class="dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
+                            <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     {{$user->first_name.' '.$user->last_name}}
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
 
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li><a href="">asd</a></li>
-                                    <li><a href="">asd</a></li>
-                                    <li><a href="">asd</a></li>
-                                    <li><a href="">asd</a></li>                                    
+                                <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
+                                    <li><a href="">МОЙ АККАУНТ</a></li>
+                                    <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>
                             </div>
                         </div>

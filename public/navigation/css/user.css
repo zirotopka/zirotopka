@@ -34,7 +34,8 @@ a:hover, a:focus {
 
 .codrops-header,
 .codrops-top {
-	font-family: 'Lato', Arial, sans-serif;
+	font-family: 'Sans', Arial, sans-serif;
+	font-family: 1.05em;
 }
 
 .codrops-header {
@@ -182,7 +183,7 @@ button:hover {
 
 		min-width: auto;
 		min-height: auto;
-		padding: 1.3em; 
+		padding: 1.8em 0 0 0; 
 		text-align: center;
 	}
 
@@ -195,11 +196,6 @@ button:hover {
 		box-shadow: 0 -1px 0 rgba(0,0,0,0.1);
 	}
 	
-	.dropdown{
-		padding: 0px;
-		margin: 0px;
-		text-align: center !important;
-	}
 	.dropdown-toggle{
 		float: none;
 	}
@@ -212,40 +208,15 @@ button:hover {
 		margin: 10px 0 0 0;
 
 	}
-}
-
-@media screen and (max-width: 25em) {
-
-	.codrops-header {
-		font-size: 100%;
-	}
-
-	.codrops-top {
-		font-size: 120%;
-	}
-
-	.codrops-icon span {
-		display: none;
-	}
-
+	
 	.dropdown{
-		margin: 0px !important;
-		padding: 0px !important;
-		text-align: center;
+		margin: 0.8em auto !important;
 	}
 
-	.dropdown-toggle{
-		border: none !important;
-		padding: 28px 0 0 0 !important;
-		font-size: 3.1vw !important;
+	.user_dropdown{
+		width: 11em ;
+		margin: 1.1em 0 0 0 !important;
 	}
-
-	.envel{
-		width: 55px;
-		margin: 10px 0 0 0;
-
-	}
-
 }
 
 
@@ -256,6 +227,7 @@ button:hover {
 }
 .min-logo{
 	margin: 1.1em 0 15px 0;
+	padding: 0;
 }	
 
 .hearts{
@@ -265,20 +237,59 @@ button:hover {
 }
 
 .nav-text{
-	margin: 1.4em 0 10px 0;	
+	margin: 1.4em 0 0 0;	
 	color: white;
 	padding: 0px;
+	vertical-align: super;
+}
+
+.fa{
+	font-size: 1.5em;
 }
 
 .envelop{
 	margin: 0.8em 0 0 0;
 	text-align: center;
+	padding: 0 2.5em 0 0;
 }
 
 .dropdown{
 	margin: 0.5em auto;
+	text-align: center;
 }
 
 .dropdown-menu{
 	margin: 0 24px 0;
+}
+
+.user_dropdown{
+	color: white;
+	background-color: #282828;
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0.3em 0 0 0;
+	padding: 0;
+	width: 17em;
+	border: none;
+}
+
+.user_dropdown li a{
+	color: white;
+	font-weight: bold;
+	padding: 1.5em;
+	font-size: 0.95em;
+}
+
+.user_dropdown li a:hover{
+	border-left: 0.4em solid #FF9319;
+}
+
+.immunitet{
+	text-align: center;
+	margin:1.4em 0 0 0;
+	padding: 0;
+}
+
+.score{
+	padding: 0 0 0 3em;
 }
