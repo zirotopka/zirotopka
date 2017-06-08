@@ -22,4 +22,7 @@ Route::post('logout', [ 'as' => 'logout', 'uses' => 'UserController@logout' ] );
 
 Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	Route::get('lk/{id}', [ 'uses' => 'PrivatOfficeController@index' ] );
+
+	Route::post('program/choice_programm', [ 'uses' => 'ProgrammController@choice_program' ] );
+	
 });

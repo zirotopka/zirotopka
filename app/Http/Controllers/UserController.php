@@ -81,13 +81,9 @@ class UserController extends Controller
                 'sum' => 0,
             ]);
 
-            dd($user);
+            Sentinel::authenticateAndRemember([ 'email' => $request->get('email'), 'password' => $request->get('password') ]);
 
-            // Sentinel::authenticateAndRemember($user);
-
-            // if ( $user = Sentinel::check() ) {
-            //      return redirect('lk/'.$user->id);
-            // }
+            return redirect('lk/'.$user->id);
         } else {
             return redirect()->back()->withInput();
         }
