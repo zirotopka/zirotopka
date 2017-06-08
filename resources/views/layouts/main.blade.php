@@ -54,15 +54,33 @@
                                 </a>
                             </div>
                             <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-                                <p class="immunitet nav-text col-lg-6 col-md-6">Ваши иммунитеты:</p>
-                                <div class="hearts col-lg-6 col-md-6">  
-                                    @for ($i=0; $i<5; $i++)
-                                        <img class="heart" src="/ico/heart.png" alt="">
-                                    @endfor
-                                </div>
+                                <span class="immunitet nav-text">Ваши иммунитеты:</span>
+                               <!--  <div class="hearts col-lg-6 col-md-6">  -->
+                                    <?php 
+                                        $empty_hearts = 5;
+                                        $full_hearts = $user->immunity_count;
+                                        $empty_hearts -= $full_hearts;
+                                    ?>
+                                    
+                                    @if ( !empty($full_hearts) )
+                                        @for ($i=0; $i<$full_hearts; $i++)
+                                            <i class="fa fa-heart fa-2x c-orange" aria-hidden="true"></i>
+                                        @endfor
+                                    @endif
+
+                                    @if ( $empty_hearts > 0 )
+                                        @for ($i=0; $i<$empty_hearts; $i++)
+                                            <i class="fa fa-heart-o fa-2x c-white" aria-hidden="true"></i>
+                                        @endfor
+                                    @endif
+
+                                    {{-- @for ($i=0; $i<5; $i++) --}}
+                                        <!-- <img class="heart" src="/ico/heart.png" alt=""> -->
+                                    {{-- @endfor --}}
+                                <!-- </div> -->
                             </div>
                             <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm">
-                                <p>Ваш счёт: 9999991$</p>                                
+                                <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4">
                                 <a href="">
@@ -71,7 +89,7 @@
                             </div>
                             <div class="dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Пётр Петрович
+                                    {{$user->first_name.' '.$user->last_name}}
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
 
                                 </button>
