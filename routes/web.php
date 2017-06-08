@@ -14,7 +14,9 @@
 Route::get('/', 'HomeController@index');
 
 Route::get('login', ['uses' => 'HomeController@index' ] );
-Route::post('registration', [ 'as' => 'registration', 'uses' => 'UserController@registration' ] );
+Route::get('register', ['uses' => 'HomeController@index' ] );
+
+Route::post('register', ['uses' => 'UserController@registration' ] );
 Route::post('login', ['as' => 'login', 'uses' => 'UserController@login' ] );
 Route::post('logout', [ 'as' => 'logout', 'uses' => 'UserController@logout' ] );
 

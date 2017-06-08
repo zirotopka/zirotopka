@@ -7,7 +7,7 @@
         </button>
         <h2>Регистрация</h2>
         <div class="user_data" style="height: 350px;">
-          <form action="/registration"" method="POST">
+          <form action="/register"" method="POST">
             {{ csrf_field() }}
             <p>
               <input class="col-lg-12" id="email" type="email" name="email" placeholder="E-mail" required="required">
