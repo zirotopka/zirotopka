@@ -137,7 +137,7 @@ a:hover, a:focus {
 
 button {
 	border: none;
-	padding: 1em 1.2em;
+	padding: 0;
 	background: #282828;
 	color: #fff;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -198,9 +198,9 @@ button:hover {
 	
 	.dropdown-toggle{
 		float: none;
+		padding: 0 !important;
 	}
 	#nav-dropdown{
-		padding: 13px 0 0 0;
 		font-size: 14px;
 	}
 	.envel{
@@ -210,7 +210,8 @@ button:hover {
 	}
 	
 	.dropdown{
-		margin: 0.8em auto !important;
+		margin: 1.6em auto !important;
+		white-space: nowrap;
 	}
 
 	.user_dropdown{
@@ -254,8 +255,9 @@ button:hover {
 }
 
 .dropdown{
-	margin: 0.5em auto;
+	margin: 1.5em auto;
 	text-align: center;
+	padding: 0;
 }
 
 .dropdown-menu{
@@ -267,7 +269,7 @@ button:hover {
 	background-color: #282828;
 	border-radius: 0;
 	box-shadow: none;
-	margin: 0.3em 0 0 0;
+	margin: 1.2em 0 0 0;
 	padding: 0;
 	width: 17em;
 	border: none;
@@ -288,6 +290,7 @@ button:hover {
 	text-align: center;
 	margin:1.4em 0 0 0;
 	padding: 0;
+	white-space: nowrap;
 }
 
 .score{
