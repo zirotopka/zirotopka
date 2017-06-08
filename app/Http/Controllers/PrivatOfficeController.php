@@ -11,7 +11,7 @@ use Carbon\Carbon;
 class PrivatOfficeController extends Controller
 {
     public function index($id)
-    {	
+    {		
     	$user = User::select([
     			'id',
     			'first_name',
