@@ -114,14 +114,13 @@
             </div><!-- /st-pusher -->
         </div><!-- /st-container -->
 
-    @section('js')
-        
-    @show
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/navigation/js/classie.js"></script>
     <script type="text/javascript" src="/navigation/js/sidebarEffects.js"></script>
-
+    @section('js')
+        
+    @show
 
 </body>
 </html>
