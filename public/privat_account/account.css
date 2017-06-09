@@ -158,11 +158,12 @@
 .box-cal span{
 	color:white;
 	z-index: 10;
-	width: 13em;
-	margin: 1.2em -1.5779em;
-	position: fixed;
+	width: 20em;
+	margin: 1.2em -1.56131em;
+	position: absolute;
 	visibility: hidden;
 	padding: 1em;
+	text-align: left;
 }
 
 .box-cal:hover span, .box-cal:hover{

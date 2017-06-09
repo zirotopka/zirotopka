@@ -87,9 +87,9 @@
                             <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm">
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
                             </div>
-                            <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4">
+                            <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
                                 <a href="">
-                                    <img class="envel" src="/ico/envelop.png" alt="envelop">
+                                    <img class="envel" src="/ico/envelop.png" alt="envelop" data-toggle="tooltipe" data-placement="bottom" title="sadsd">
                                 </a>
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">

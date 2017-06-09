@@ -3,7 +3,7 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
-    <link href="/css/account.css" type="text/css" rel="stylesheet">
+    <link href="/privat_account/account.css" type="text/css" rel="stylesheet">
 
 
 @overwrite
@@ -35,7 +35,10 @@
 						<tr>
 							@for ($i = 1; $i<29; $i++)
 								<td class="box-cal">
-									<span>Время выполнения 2дня.</span>
+									<span>
+										<p>Уровень сложности:</p>
+										<p>Время выполнения:</p>
+									</span>
 								</td>
 							@endfor	
 						</tr>
