@@ -47,17 +47,14 @@
                                     <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                                 </button>
                             </div>
-                            <!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registr">
-                                Регистрация
-                            </button>-->
                             <div class="col-lg-1 hidden-md hidden-sm hidden-xs">
-                                
                             </div>
                             <div class="min-logo col-lg-2 col-md-2 hidden-xs hidden-sm">
                                 <a href="/">
                                     <img src="/min-logo.png" alt="">
                                 </a>
                             </div>
+                       @if ($user = Sentinel::check())
                             <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs">
                                 <span class=" nav-text">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
@@ -99,16 +96,27 @@
 
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li><a href="">МОЙ АККАУНТ</a></li>
+                                    <li><a href="/lk/{{$user->id}}">МОЙ АККАУНТ</a></li>
                                     <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>
                             </div>
+                        @else
+                            <div class="reg_log_btn">
+                                <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#registr">
+                                    Регистрация
+                                </button>
+                                <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#login">
+                                    Войти
+                                </button>
+                            </div>
+                        @endif
                         </div>
-                        <div class="main">
-                            {{-- @include('layouts.reg_modal') --}}
-                        </div> 
-                    </div><!-- /st-content-inner -->
+
+
+                                           </div><!-- /st-content-inner -->
+                    {{-- @include('layouts.reg_modal') --}}
                     @section("content")
+
                     @show 
                 </div><!-- /st-content -->
             </div><!-- /st-pusher -->
