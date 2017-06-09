@@ -17,7 +17,7 @@
 
 .t-cal{
 	width: 100%;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 .box-cal{
@@ -46,12 +46,13 @@
 	margin-left: 2em;
 	margin-top: 1.5em;
 	font-size: 16px;
-	font-weight: bolder;
+	font-weight: 500;
 }
 
 .prog-name{
 	font-weight: bold;
 	text-transform: uppercase;
+	color: #1b3149;
 
 }
 
