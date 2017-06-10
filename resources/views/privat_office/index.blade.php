@@ -4,6 +4,7 @@
     @parent
     <!-- Добавлять css тут -->
     <link href="/privat_account/account.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/video/video-btn.css">
 
 
 @overwrite
@@ -11,7 +12,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script type="text/javascript" src="/js/video_btns.js"></script>
+    <script type="text/javascript" src="/video/video-btn.js"></script>
 
 @overwrite
 
@@ -52,10 +53,14 @@
 							<p class="prog-txt prog-name">Название Упражнения</p>
 							<p class="prog-txt prog-count">Количество подходов</p>
 							<p class="prog-txt" style="margin-bottom:  2em;">Описание выполнения упражнения</p>
-							<video class="video-descr" id="myvideo" src="/video/trainings/Берпи с отжиманием.mp4"></video>
-							<div id="controls">
-							    <span id="playpause" class="paused" >Play</span>
+							<div id="video_holder">
+							    <div id="overlay"></div>
+							<video class="video-descr" id="tr-video">
+								<source src="/video/trainings/Берпи с отжиманием.mp4" >
+							</video>
 							</div>
+							<div></div>
+							
 							<div class="otchet">
 								<input class="prof-file col-lg-4 col-md-4 col-sm-4 col-xs-4" type="file">
 								<p class="load-text col-lg-7 col-md-7 col-sm-7 col-xs-7">Загрузить отчёт</p>
