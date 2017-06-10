@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
 
 	<link href="/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
@@ -12,6 +12,7 @@
     <link href="/navigation/css/component.css" type="text/css" rel="stylesheet">
     <link href="/navigation/css/user.css" type="text/css" rel="stylesheet">
     <link href="/css/modal.css" type="text/css" rel="stylesheet">
+    <link href="/tooltipster-master/dist/css/tooltipster.main.min.css" type="text/css" rel="stylesheet">
 
 
 	<title>Жиротопка</title>
@@ -124,8 +125,11 @@
 
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>    
     <script type="text/javascript" src="/navigation/js/classie.js"></script>
     <script type="text/javascript" src="/navigation/js/sidebarEffects.js"></script>
+    <script type="text/javascript" src="/tooltipster-master/dist/js/tooltipster.main.min.js"></script>
+
     @section('js')
         
     @show

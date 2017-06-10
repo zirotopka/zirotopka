@@ -24,92 +24,56 @@
 			<b>.START</b>
 		</div>
 		@if ( !empty($user->current_programm_id) )
-			@if ( !empty($programm_days) )
-				<div class="calendar">
-					<div class="day-number">
-						<table class="t-cal">
-							<tr class="num-cal">
-								@foreach ( $programm_days as $program_day )
-									<td>{{$program_day->day}}</td>
-								@endforeach
-							</tr>
-							<tr>
-								@foreach ( $programm_days as $program_day )
-									@php
-										$difficult = $difficult_array[$program_day->difficult];
-				
-										$class = '';
+			<div class="calendar">
+				<div class="day-number">
+					<table class="t-cal">
+						<tr class="num-cal">
 
-										if ( !empty($user->current_day) && $user->current_day > $program_day->day ) {
-											{{-- Если день пройден --}}
-											$class = 'bg-success';
-										} else if ( empty($user->current_day) || $user->current_day < $program_day->day ) {
-											{{-- Если день не пройден еще --}}
-											$class = 'bg-warning';
-										} else {
-											{{-- Текущий день --}}
-											$class = 'bg-info';
-										}
-
-									@endphp
-									<td class="box-cal {{$class}}">
-										@if ($program_day->day == $user->current_day)
-											<i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
-										@elseif ( empty($program_day->status) )
-											<i class="fa fa-sun-o fa-2x" aria-hidden="true"></i>
-										@endif
-										<span>
-											@if ( !empty($difficult) )
-										  		<p class="{{ $difficult['color'] }}">Сложность: {{ $difficult['text'] }}</p>
-										  	@else 
-												<p>Сложность: - </p>
-										  	@endif
-										  	<p>Время выполнения:  {{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
-										</span>
-									</td>
-								@endforeach	
-							</tr>
-						</table>
-					</div>
+							@for ($i = 1; $i<29; $i++)
+								<td>{{$i}}</td>
+							@endfor
+						</tr>
+						<tr>
+							@for ($i = 1; $i<29; $i++)
+								<td class="box-cal">
+									<span>
+										<p>Уровень сложности:</p>
+										<p>Время выполнения:</p>
+									</span>
+								</td>
+							@endfor	
+						</tr>
+					</table>
 				</div>
-			@endif
-			<div class="programs row">
-				@forelse ( $programm_stages as $programm_stage )
-					@if ( !empty($programm_stage->exercive) )
+			</div>
+			<form>	
+				<div class="programs">
+					@for ($i =0; $i<4; $i++)	
 						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
-							<form>
-								<p class="prog-txt prog-name">{{$programm_stage->exercive->name}}</p>
-								@if ( !empty($programm_stage->repeat_count) )
-									<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
-								@endif 
-								@if ( !empty($programm_stage->time_exercive) )
-									<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
-								@endif 
-								<p class="prog-txt" style="margin-bottom:  2em;">{{$programm_stage->exercive->description}}</p>
+							<p class="prog-txt prog-name">Название Упражнения</p>
+							<p class="prog-txt prog-count">Количество подходов</p>
+							<p class="prog-txt" style="margin-bottom:  2em;">Описание выполнения упражнения</p>
+							<div id="video_holder">
+							    <div id="overlay"></div>
+							<video class="video-descr" id="tr-video">
+								<source src="/video/trainings/Берпи с отжиманием.mp4" >
+							</video>
+							</div>
+							<div></div>
+							
+							<div class="otchet">
+								<input class="prof-file col-lg-4 col-md-4 col-sm-4 col-xs-4" type="file">
+								<p class="load-text col-lg-7 col-md-7 col-sm-7 col-xs-7">Загрузить отчёт</p>
+				<form>	
 
-								<div id="video_holder">
-								    <div id="overlay"></div>
-								    @php
-								    	$video_model = $programm_stage->exercive->files->first();
-								    @endphp
-								    @if (!empty($video_model))
-										<video class="video-descr" id="tr-video">
-											<source src="{{ $video_model->file_url }}" >
-										</video>
-									@endif
 								</div>
-								<div class="otchet">
-									<input class="prof-file col-lg-4 col-md-4 col-sm-4 col-xs-4" type="file">
-									<p class="load-text col-lg-7 col-md-7 col-sm-7 col-xs-7">Загрузить отчёт</p>
-								</div>
-							</form>
-						</div>
-					@endif
-				@empty
-				@endforelse
-				<div class="send-proof col-lg-12">
-						<button type="submit" class="send-proof-file"> Отправить на проверку</button>
-				</div>
+							</div>
+						@endfor
+					</div>
+					<div class="send-proof col-lg-12">
+							<button type="submit" class="send-proof-file"> Отправить на проверку</button>
+					</div>
+				</form>
 			</div>		
 		@else
 			<div class="chose-program col-lg-12 col-md-12 col-sm-12 col-xs-12">
