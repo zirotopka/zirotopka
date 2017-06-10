@@ -106,10 +106,7 @@ class UserController extends Controller
      * Логаут
      */
     public function logout() {
-        //$current_user = Sentinel::getUser()
-
         Sentinel::logout();
-        Session::flush();
-        return true;
+        return Redirect::to('/login');
     }
 }

@@ -6,6 +6,7 @@ use App\Programm;
 use App\ProgrammDay;
 use App\ProgrammExercive;
 use App\ProgrammStage;
+use App\File;
 
 class ProgrammTableSeeder extends Seeder
 {
@@ -20,10 +21,11 @@ class ProgrammTableSeeder extends Seeder
     	ProgrammDay::truncate();
     	ProgrammExercive::truncate();
     	ProgrammStage::truncate();
+        File::truncate();
 
     	$exercive_array = [
-    		['slug' => 'berpie', 'name' => 'Берпи с отжиманием', 'description' => 'Берпи с отжиманием'],
-    		['slug' => 'jump', 'name' => 'Прыжки на скакалке', 'description' => 'Прыжки на скакалке'],
+    		['slug' => 'berpie', 'name' => 'Берпи с отжиманием', 'description' => 'Берпи с отжиманием', 'file_url' => '/video/trainings/birpie.mp4' ],
+    		['slug' => 'jump', 'name' => 'Прыжки на скакалке', 'description' => 'Прыжки на скакалке', 'file_url' => '/video/trainings/jump.mp4'],
     	];
 
     	$programm_exercive_ids = [];
@@ -36,6 +38,13 @@ class ProgrammTableSeeder extends Seeder
 
         	if ( $programm_exercive->save() ) {
         		$programm_exercive_ids[] = $programm_exercive->id;
+
+                $programm_exercive->files()->create([
+                    'file_url' => $exercive_row['file_url'],
+                    'file_type' => 3,
+                    'owner_id' => $programm_exercive->id,
+                    'owner_type' => 'ProgrammExercive',
+                ]);
         	}
     	}
 
@@ -54,36 +63,36 @@ class ProgrammTableSeeder extends Seeder
         		$programm_id = $programm->id;
 
         		$programm_days_array = [
-        			['day' => 1, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 2, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 3, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 4, 'status' => 0, 'description' => 'wvwfw r fe er '],
-        			['day' => 5, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 6, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 7, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 8, 'status' => 0, 'description' => 'wvwfw r fe er '],
-        			['day' => 9, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 10, 'status' => 1, 'description' => 'wvwfw r fe er '],
+        			['day' => 1, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 1],
+        			['day' => 2, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 123, 'difficult' => 2],
+        			['day' => 3, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 23, 'difficult' => 2],
+        			['day' => 4, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 3],
+        			['day' => 5, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 432, 'difficult' => 3],
+        			['day' => 6, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 1],
+        			['day' => 7, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 3],
+        			['day' => 8, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => 432, 'difficult' => 1],
+        			['day' => 9, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 1],
+        			['day' => 10, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 123, 'difficult' => 2],
 
-        			['day' => 11, 'status' => 0, 'description' => 'wvwfw r fe er '],
-        			['day' => 12, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 13, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 14, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 15, 'status' => 0, 'description' => 'wvwfw r fe er '],
-        			['day' => 16, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 17, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 18, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 19, 'status' => 0, 'description' => 'wvwfw r fe er '],
-        			['day' => 20, 'status' => 1, 'description' => 'wvwfw r fe er '],
+        			['day' => 11, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 1],
+        			['day' => 12, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 231, 'difficult' => 3],
+        			['day' => 13, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 1],
+        			['day' => 14, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 324, 'difficult' => 1],
+        			['day' => 15, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 2],
+        			['day' => 16, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 3],
+        			['day' => 17, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 324, 'difficult' => 1],
+        			['day' => 18, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 123, 'difficult' => 1],
+        			['day' => 19, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 2],
+        			['day' => 20, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 3],
 
-        			['day' => 21, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 22, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 23, 'status' => 0, 'description' => 'wvwfw r fe er '],
-        			['day' => 24, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 25, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 26, 'status' => 1, 'description' => 'wvwfw r fe er '],
-        			['day' => 27, 'status' => 0, 'description' => 'wvwfw r fe er '],
-        			['day' => 28, 'status' => 1, 'description' => 'wvwfw r fe er '],
+        			['day' => 21, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 1],
+        			['day' => 22, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 13, 'difficult' => 2],
+        			['day' => 23, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 1],
+        			['day' => 24, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234, 'difficult' => 2],
+        			['day' => 25, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 342, 'difficult' => 1],
+        			['day' => 26, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 3],
+        			['day' => 27, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => 14, 'difficult' => 1],
+        			['day' => 28, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => 234242, 'difficult' => 2],
         		];
 
         		foreach ( $programm_days_array as $programm_day_row ) {
@@ -91,6 +100,8 @@ class ProgrammTableSeeder extends Seeder
 		        	$programm_day->day = $programm_day_row['day'];
 		        	$programm_day->status = $programm_day_row['status'];
 		        	$programm_day->description = $programm_day_row['description'];
+                    $programm_day->lead_time = $programm_day_row['lead_time'];
+                    $programm_day->difficult = $programm_day_row['difficult'];
 		        	$programm_day->programm_id = $programm_id;
 
 		        	if ( $programm_day->save() ) {

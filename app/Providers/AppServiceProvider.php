@@ -21,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
 
             'message' => \App\Message::class,
             'message_answer' => \App\MessageAnswer::class,
+
+            'programm_exercive' => \App\ProgrammExercive::class,
         ]);
     }
 

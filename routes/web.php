@@ -18,11 +18,10 @@ Route::get('register', ['uses' => 'HomeController@index' ] );
 
 Route::post('register', ['uses' => 'UserController@registration' ] );
 Route::post('login', ['as' => 'login', 'uses' => 'UserController@login' ] );
-Route::post('logout', [ 'as' => 'logout', 'uses' => 'UserController@logout' ] );
 
 Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
+	Route::get('logout', [ 'as' => 'logout', 'uses' => 'UserController@logout' ] );
 	Route::get('lk/{id}', [ 'uses' => 'PrivatOfficeController@index' ] );
 
 	Route::post('program/choice_programm', [ 'uses' => 'ProgrammController@choice_program' ] );
-	
 });
