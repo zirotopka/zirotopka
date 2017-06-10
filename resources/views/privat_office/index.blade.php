@@ -3,7 +3,8 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
-    <link href="/css/account.css" type="text/css" rel="stylesheet">
+    <link href="/privat_account/account.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/video/video-btn.css">
 
 
 @overwrite
@@ -11,6 +12,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
+    <script type="text/javascript" src="/video/video-btn.js"></script>
 
 @overwrite
 
@@ -31,38 +33,65 @@
 								<td>{{$i}}</td>
 							@endfor
 						</tr>
-						<tr >
+						<tr>
 							@for ($i = 1; $i<29; $i++)
-								<td class="box-cal"></td>
+								<td class="box-cal">
+									<span>
+										<p>Уровень сложности:</p>
+										<p>Время выполнения:</p>
+									</span>
+								</td>
 							@endfor	
 						</tr>
 					</table>
 				</div>
 			</div>
-		</div>
-		<form>	
-			<div class="programs">
-				@for ($i =0; $i<4; $i++)	
-					<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<p class="prog-txt prog-name">Название Упражнения</p>
-						<p class="prog-txt prog-count">Количество подходов</p>
-						<p class="prog-txt" style="margin-bottom:  2em;">Описание выполнения упражнения</p>
-						<video class="video-descr" src="/video/trainings/Берпи с отжиманием.mp4" controls="controls"></video>
-						<div class="otchet">
-							<input class="prof-file col-lg-4 col-md-4 col-sm-4 col-xs-4" type="file">
-							<p class="load-text col-lg-7 col-md-7 col-sm-7 col-xs-7">Загрузить отчёт</p>
 			<form>	
-
+				<div class="programs">
+					@for ($i =0; $i<4; $i++)	
+						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<p class="prog-txt prog-name">Название Упражнения</p>
+							<p class="prog-txt prog-count">Количество подходов</p>
+							<p class="prog-txt" style="margin-bottom:  2em;">Описание выполнения упражнения</p>
+							<div id="video_holder">
+							    <div id="overlay"></div>
+							<video class="video-descr" id="tr-video">
+								<source src="/video/trainings/Берпи с отжиманием.mp4" >
+							</video>
 							</div>
-						</div>
-					@endfor
-				</div>
-				<div class="send-proof col-lg-12">
-						<button type="submit" class="send-proof-file"> Отправить на проверку</button>
-				</div>
-			</form>
+							<div></div>
+							
+							<div class="otchet">
+								<input class="prof-file col-lg-4 col-md-4 col-sm-4 col-xs-4" type="file">
+								<p class="load-text col-lg-7 col-md-7 col-sm-7 col-xs-7">Загрузить отчёт</p>
+				<form>	
+
+								</div>
+							</div>
+						@endfor
+					</div>
+					<div class="send-proof col-lg-12">
+							<button type="submit" class="send-proof-file"> Отправить на проверку</button>
+					</div>
+				</form>
+			</div>		
 		@else
-			<h1>Выберите программу</h1>
+			<div class="chose-program col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h1>Выберите программу</h1>	
+				<div class="chose-prog-container col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<h3>Программа: <b>ХИЛЯК</b></h3>
+					<p>Надоело быть хиляком, устал от насмешек со стороны спортивных товарищей, хочешь отлично прокачаться и слегка подзаработать, закажи программу <b>"ХИЛЯК"</b>. Мы быстро подтянем твои дряблые мышцы.</p>
+					<br>
+					<br>
+					<button style="padding: 1em 4em;"> ЗАКАЗАТЬ</button>
+				</div>
+				<div class="chose-prog-container col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<h3>Программа: <b>МАТЁРЫЙ ХИЛЯК</b></h3>
+					<p>Наконец прошел программу <b>"ХИЛЯК"</b> и понял, что хочется чего-то большего, тогда программа <b>"МАТЁРЫЙ ХИЛЯК"</b> специально для тебя. С этой программой ты не только сможешь укрепить своё уже не совсем дряблое телье, но и подняться на следующий уровень своего спортивного развития.</p>
+					<br>
+					<button style="padding: 1em 4em;"> ЗАКАЗАТЬ</button>
+				</div>
+			</div>
 		@endif
 	</div>
 @overwrite

@@ -227,7 +227,7 @@ button:hover {
 	padding: 0;
 }
 .min-logo{
-	margin: 1.1em 0 15px 0;
+	margin: 1.4em 0 1em 0;
 	padding: 0;
 }	
 
@@ -246,6 +246,7 @@ button:hover {
 
 .fa{
 	font-size: 1.5em;
+	color: white;
 }
 
 .envelop{
@@ -296,3 +297,10 @@ button:hover {
 .score{
 	padding: 0 0 0 3em;
 }
+
+.reg_log_btn{
+	margin: 1.3em;
+	float: right;
+
+}
+

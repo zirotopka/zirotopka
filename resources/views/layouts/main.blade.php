@@ -47,17 +47,14 @@
                                     <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                                 </button>
                             </div>
-                            <!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registr">
-                                Регистрация
-                            </button>-->
                             <div class="col-lg-1 hidden-md hidden-sm hidden-xs">
-                                
                             </div>
                             <div class="min-logo col-lg-2 col-md-2 hidden-xs hidden-sm">
                                 <a href="/">
                                     <img src="/min-logo.png" alt="">
                                 </a>
                             </div>
+                       @if ($user = Sentinel::check())
                             <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs">
                                 <span class=" nav-text">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
@@ -87,9 +84,9 @@
                             <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm">
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
                             </div>
-                            <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4">
+                            <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
                                 <a href="">
-                                    <img class="envel" src="/ico/envelop.png" alt="envelop">
+                                    <img class="envel" src="/ico/envelop.png" alt="envelop" data-toggle="tooltipe" data-placement="bottom" title="sadsd">
                                 </a>
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
@@ -99,29 +96,39 @@
 
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li><a href="">МОЙ АККАУНТ</a></li>
+                                    <li><a href="/lk/{{$user->id}}">МОЙ АККАУНТ</a></li>
                                     <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>
                             </div>
+                        @else
+                            <div class="reg_log_btn">
+                                <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#registr">
+                                    Регистрация
+                                </button>
+                                <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#login">
+                                    Войти
+                                </button>
+                            </div>
+                        @endif
                         </div>
-                        <div class="main">
-                            {{-- @include('layouts.reg_modal') --}}
-                        </div> 
-                    </div><!-- /st-content-inner -->
+
+
+                                           </div><!-- /st-content-inner -->
+                    {{-- @include('layouts.reg_modal') --}}
                     @section("content")
+
                     @show 
                 </div><!-- /st-content -->
             </div><!-- /st-pusher -->
         </div><!-- /st-container -->
 
-    @section('js')
-        
-    @show
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/navigation/js/classie.js"></script>
     <script type="text/javascript" src="/navigation/js/sidebarEffects.js"></script>
-
+    @section('js')
+        
+    @show
 
 </body>
 </html>
