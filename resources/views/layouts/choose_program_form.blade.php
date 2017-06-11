@@ -10,7 +10,9 @@
           <h3>ВЫБЕРИТЕ ПРОГРАММУ</h3>
           <select name="" id="">
             <option disabled>Выберите программу</option>
-            <option value=""></option>            
+            @foreach ($programs as $program )
+              <option value="{{$program->id}}">{{$program->name}}</option>            
+            @endforeach
           </select>
           <br>
           <h3>ВИБЕРИТЕ ДАТУ СТАРТА</h3>
