@@ -16,11 +16,16 @@
             @endforeach
           </select>
           <br>
-          <h3>ВИБЕРИТЕ ДАТУ СТАРТА</h3>
-          <input type="text" name="program_date_input" id="program_date_input" required="required">
+          <h3>ВЫБЕРИТЕ ДАТУ СТАРТА</h3>
+          <input type="text" name="program_date_input" id="program_date_input" class="col-lg-12 col-md-12 col-sx-12" required="required">
+          <input type="checkbox" class="col-lg-12 col-md-12 col-sx-12"> <a href="#">Мне больше 14.</a>
+          <input type="checkbox" class="col-lg-12 col-md-12 col-sx-12"> <a href="#">Ознакомился (-ась) с офертой.</a>
+          <input type="checkbox" class="col-lg-12 col-md-12 col-sx-12"> <a href="#">Ознакомился (-ась) с политикой конфиденциальности.</a>
           </div>
-          
+
           <div class="right-progrm-part col-lg-6">
+            <img src="" alt="">
+            <h3>{{}}</h3>
             <input type="submit" value="Отправить">
           </div>
         </form>  

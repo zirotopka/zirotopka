@@ -86,7 +86,7 @@
                                     {{-- @endfor --}}
                                 <!-- </div> -->
                             </div>
-                            <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" data-tooltip-content="#score_tooltipe">
+                            <div class="tooltipstered score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" data-tooltip-content="#score_tooltipe">
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
                             </div>
                             <div class="tooltipstered envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" data-tooltip-content="#envelop_tooltipe">
@@ -132,7 +132,6 @@
     <span id="immun_tooltip_content">
         <p>Иммунитет - это ваше здоровье на этом курсе. Если Вы не выполнили какое-либо задание, Вы теряете одно сердчкою.</p>
     </span>
-<<<<<<< HEAD
     <span>
         <p id="score_tooltipe">
             Ваш счёт - Это деньги которые можно потратить на иммунитет, также их можно вывести.
@@ -153,9 +152,6 @@
             Полсе выполнения задания, Вам необходимо загрузить отчёт в соответствующую форму с заданием
         </p>
     </span>
-=======
-
->>>>>>> 43852eda9652f07e6272f8c650d9f8a01f185a1e
 </div>
 
 
