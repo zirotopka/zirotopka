@@ -3,8 +3,8 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
-    <link href="/privat_account/account.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/video-btn.css">
+    <link href="/assets/privat_account/account.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
 
 
 @overwrite
@@ -12,7 +12,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script type="text/javascript" src="/js/video-btn.js"></script>
+    <script type="text/javascript" src="/assets/js/video-btn.js"></script>
 
 @overwrite
 
