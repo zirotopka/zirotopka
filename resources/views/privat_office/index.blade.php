@@ -54,6 +54,7 @@
 									@endphp
 									
 										@if ( empty($program_day->status) )
+										
 											<td class="box-cal {{$class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 70% 70%; background-position: center;">
 												<span>
 													@if ( !empty($difficult) )
