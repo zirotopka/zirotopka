@@ -5,4 +5,6 @@ $(document).ready(function(){
    maxWidth: 400,
    side: 'bottom',
 	});
+
+	$('#choose_programe_form').modal('show')
 })
