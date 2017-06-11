@@ -122,7 +122,11 @@
 				</div>
 			</div>		
 		@else
-			
+			@include('layouts.choose_program_form')
+			                                <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#choose_programe_form">
+                                    Войти
+                                </button>
+
 		@endif
 	</div>
 @overwrite

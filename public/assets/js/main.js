@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$('.tooltipstered').tooltipster({
-   theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
+   theme: 'tooltipster-borderless',
    delay: 200,
    maxWidth: 400,
    side: 'bottom',
