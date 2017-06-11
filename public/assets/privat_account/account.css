@@ -86,7 +86,8 @@
 
 .prof-file{
 	padding: 0;
-	height: 100%;
+	height: 3.5em;
+	width: 3.5em;
 	opacity:0;
     filter:alpha(opacity:0);
     cursor: pointer;
