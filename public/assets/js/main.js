@@ -5,4 +5,6 @@ $(document).ready(function(){
    maxWidth: 400,
    side: 'bottom',
 	});
+
+	$( "#program_date_input" ).datepicker();
 })

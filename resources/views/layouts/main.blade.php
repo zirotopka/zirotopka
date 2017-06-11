@@ -15,6 +15,7 @@
     <link href="/assets/tooltipster-master/dist/css/tooltipster.bundle.min.css" type="text/css" rel="stylesheet">
     <link href="/assets/tooltipster-master/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" type="text/css" rel="stylesheet">
     <link href="/assets/css/tooltips.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 
 
@@ -137,6 +138,7 @@
 
 
     <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>    
     <script type="text/javascript" src="/assets/navigation/js/classie.js"></script>
