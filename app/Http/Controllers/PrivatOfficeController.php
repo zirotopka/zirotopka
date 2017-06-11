@@ -25,6 +25,9 @@ class PrivatOfficeController extends Controller
     		])
     		->where('id','=',$id)->with('balance')->first();
 
+        $programs = Programm::select('id','description','name')
+                            ->get();
+
         if ( !empty($user->current_programm_id) ) {
             $programm_days = ProgrammDay::select('id','day','status','lead_time', 'difficult')
                                         ->where('programm_id','=',$user->current_programm_id)
@@ -46,6 +49,7 @@ class PrivatOfficeController extends Controller
             'programm_days' => $programm_days,
             'difficult_array' => $difficult_array,
             'programm_stages' => $programm_stages,
+            'programs' => $programs,
     	];
 
     	return view('privat_office.index', $data);
