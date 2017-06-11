@@ -118,7 +118,7 @@
 				@empty
 				@endforelse
 				<div class="send-proof col-lg-12">
-						<button type="submit" class="send-proof-file"> Отправить на проверку</button>
+					<button type="submit" class="send-proof-file"> Отправить на проверку</button>
 				</div>
 			</div>		
 		@else
