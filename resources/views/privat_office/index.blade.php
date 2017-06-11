@@ -4,7 +4,7 @@
     @parent
     <!-- Добавлять css тут -->
     <link href="/privat_account/account.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/video/video-btn.css">
+    <link rel="stylesheet" type="text/css" href="/css/video-btn.css">
 
 
 @overwrite
@@ -12,7 +12,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script type="text/javascript" src="/video/video-btn.js"></script>
+    <script type="text/javascript" src="/js/video-btn.js"></script>
 
 @overwrite
 
@@ -20,12 +20,12 @@
 @section("content")
 	<div class="main-content container-fluid">
 		<div class="logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<img class="logo-pos" src="/R'ONE logo.png" alt="">
+			<img class="logo-pos" src="/ico/R'ONE logo.png" alt="">
 			<b>.START</b>
 		</div>
 		@if ( !empty($user->current_programm_id) )
 			@if ( !empty($programm_days) )
-				<div class="calendar">
+				<div class="calendar tooltipstered" data-tooltip-content="#envelop_tooltipe">
 					<div class="day-number">
 						<table class="t-cal">
 							<tr class="num-cal">
@@ -54,7 +54,7 @@
 									@endphp
 									
 										@if ( empty($program_day->status) )
-										
+
 											<td class="box-cal {{$class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 70% 70%; background-position: center;">
 												<span>
 													@if ( !empty($difficult) )
@@ -97,9 +97,8 @@
 									<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
 								@endif 
 								<p class="prog-txt" style="margin-bottom:  2em;">{{$programm_stage->exercive->description}}</p>
-
-								<div id="video_holder">
-								    <div id="overlay"></div>
+								<div id="video_holder" data-id="{{--*/$video->id/*--}}">
+								    <div id="overlay" data-id="{{--*/$overlay->id/*--}}"></div>
 								    @php
 								    	$video_model = $programm_stage->exercive->files->first();
 								    @endphp

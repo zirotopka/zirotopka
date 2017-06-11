@@ -180,7 +180,7 @@
 	text-align: left;
 }
 
-.box-cal:hover span, .box-cal:hover{
+.box-cal:active span, .box-cal:active{
 	visibility: visible;
 	background-color: #f36d00;
 }
