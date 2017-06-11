@@ -36,6 +36,7 @@ class PrivatOfficeController extends Controller
                                         ->get();
         } else {
             $programm_days = 0;
+            $programm_stages = 0;
         }
 
         $difficult_array = ProgrammDay::$difficult_array;
