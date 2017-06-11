@@ -5,6 +5,7 @@
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-borderless-customized .tooltipster-content {
 	color: white;
-	font-weight: 500;
+	font-weight: bold;
 	padding: 8px;
+
 }

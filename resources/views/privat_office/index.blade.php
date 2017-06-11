@@ -55,7 +55,7 @@
 									
 										@if ( empty($program_day->status) )
 
-											<td class="box-cal {{$class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 70% 70%; background-position: center;">
+											<td class="box-cal {{$class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 2em 2em; background-position: center;">
 												<span>
 													@if ( !empty($difficult) )
 												  		<p class="{{ $difficult['color'] }}">Сложность: {{ $difficult['text'] }}</p>
@@ -88,7 +88,7 @@
 				@forelse ( $programm_stages as $programm_stage )
 					@if ( !empty($programm_stage->exercive) )
 						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
-							<form>
+							<form class="prog-form">
 								<p class="prog-txt prog-name">{{$programm_stage->exercive->name}}</p>
 								@if ( !empty($programm_stage->repeat_count) )
 									<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
@@ -109,8 +109,10 @@
 									@endif
 								</div>
 								<div class="otchet">
-									<input class="prof-file col-lg-4 col-md-4 col-sm-4 col-xs-4 tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
-									<p class="load-text col-lg-7 col-md-7 col-sm-7 col-xs-7">Загрузить отчёт</p>
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="height: 100%;">
+										<input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
+									</div>
+									<p class="load-text col-lg-8 col-md-8 col-sm-8 col-xs-8">Загрузить отчёт</p>
 								</div>
 							</form>
 						</div>

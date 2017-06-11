@@ -1,5 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-}@font-face{font-family:'Sans';src:url(/fonts/ofont.ru_Microsoft Sans Serif.ttf);}
+@font-face{
+	font-family:'GilroyLight'; 
+	src:url('/fonts/Radomir Tinkov - Gilroy-Light.otf');
+}
+
+@font-face{
+	font-family:'GilroyBold'; 
+	src:url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.otf');
+}
+
 
 html {
 	background-color: white !important;
@@ -7,8 +15,8 @@ html {
 
 body {
 	background: white !important;
-	font-weight: 300;
-	font-family: 'Sans', Calibri, Arial, sans-serif;
+	font-weight: bold !important;
+	font-family: 'GilroyLight' !important;
 }
 
 a {
@@ -227,7 +235,7 @@ button:hover {
 	padding: 0;
 }
 .min-logo{
-	margin: 1.4em 0 1em 0;
+	margin: 1.1em 0 1em 0;
 	padding: 0;
 }	
 
@@ -242,6 +250,8 @@ button:hover {
 	color: white;
 	padding: 0px;
 	vertical-align: super;
+	font-weight: bold;
+	font-family: GilroyLight;
 }
 
 .fa{
@@ -296,6 +306,10 @@ button:hover {
 
 .score{
 	padding: 0 0 0 3em;
+}
+
+.score p{
+	margin: 0;
 }
 
 .reg_log_btn{
