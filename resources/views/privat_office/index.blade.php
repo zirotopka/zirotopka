@@ -97,13 +97,13 @@
 									<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
 								@endif 
 								<p class="prog-txt" style="margin-bottom:  2em;">{{$programm_stage->exercive->description}}</p>
-								<div id="video_holder" data-id="{{--*/$video->id/*--}}">
-								    <div id="overlay" data-id="{{--*/$overlay->id/*--}}"></div>
+								<div class="video_holder">
+								    <div class="overlay" data-id="{{$programm_stage->id}}"></div>
 								    @php
 								    	$video_model = $programm_stage->exercive->files->first();
 								    @endphp
 								    @if (!empty($video_model))
-										<video class="video-descr" id="tr-video">
+										<video class="video-descr" id="{{ 'video_'.$programm_stage->id}}">
 											<source src="{{ $video_model->file_url }}" >
 										</video>
 									@endif

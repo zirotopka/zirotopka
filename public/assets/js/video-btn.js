@@ -1,20 +1,20 @@
 $( document ).ready(function() {
-	var overlay = document.getElementById('overlay');
-	var vid = document.getElementById('tr-video');
+	$('body').on('click','.overlay',function(){
+		var this_btn = $(this),
+			id = this_btn.data('id'),
+			video_id = 'video_' + id,
+			video = document.getElementById(video_id);
 
-	if(overlay.addEventListener){
-			overlay.addEventListener("click", play, false)
-		}else if(overlay.attachEvent){
-			overlay.attachEvent("onclick", play)
-		}
-
-	function play() { 
-	    if (vid.paused){
-	        vid.play(); 
-	        overlay.className = "o";
-	    }else {
-	        vid.pause(); 
-	        overlay.className = "";
-	    }
-	}    
+		play(this_btn, video);
+	}) 
 });
+
+function play(overlay, vid) { 
+    if (vid.paused){
+        vid.play(); 
+        overlay.className = "o";
+    }else {
+        vid.pause(); 
+        overlay.className = "";
+    }
+}

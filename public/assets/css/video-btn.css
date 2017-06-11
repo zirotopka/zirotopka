@@ -1,7 +1,7 @@
-#video_holder{
+.video_holder{
     position: relative;
 }
-#overlay{
+.overlay {
     position: absolute;
     top: 4em;
     left: 8em;
@@ -11,6 +11,11 @@
     background: url('/ico/play.png') no-repeat;   
     background-size: 4em 4em;
 }
-#overlay.o{
+
+.overlay:hover {
+    cursor: pointer;
+}
+
+.overlay.o{
     background: none;
 }
