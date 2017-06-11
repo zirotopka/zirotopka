@@ -3,8 +3,8 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
-    <link href="/privat_account/account.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/video/video-btn.css">
+    <link href="/assets/privat_account/account.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
 
 
 @overwrite
@@ -12,7 +12,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script type="text/javascript" src="/video/video-btn.js"></script>
+    <script type="text/javascript" src="/assets/js/video-btn.js"></script>
 
 @overwrite
 
@@ -20,12 +20,12 @@
 @section("content")
 	<div class="main-content container-fluid">
 		<div class="logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<img class="logo-pos" src="/R'ONE logo.png" alt="">
+			<img class="logo-pos" src="/ico/R'ONE logo.png" alt="">
 			<b>.START</b>
 		</div>
 		@if ( !empty($user->current_programm_id) )
 			@if ( !empty($programm_days) )
-				<div class="calendar">
+				<div class="calendar tooltipstered" data-tooltip-content="#envelop_tooltipe">
 					<div class="day-number">
 						<table class="t-cal">
 							<tr class="num-cal">
@@ -52,21 +52,32 @@
 										}
 
 									@endphp
-									<td class="box-cal {{$class}}">
-										@if ($program_day->day == $user->current_day)
-											<i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
-										@elseif ( empty($program_day->status) )
-											<i class="fa fa-sun-o fa-2x" aria-hidden="true"></i>
+									
+										@if ( empty($program_day->status) )
+
+											<td class="box-cal {{$class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 70% 70%; background-position: center;">
+												<span>
+													@if ( !empty($difficult) )
+												  		<p class="{{ $difficult['color'] }}">Сложность: {{ $difficult['text'] }}</p>
+												  	@else 
+														<p>Сложность: - </p>
+												  	@endif
+												  	<p>Время выполнения:  {{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
+												</span>
+											</td>
+										@else
+											<td class="box-cal {{$class}}">
+												<span>
+													@if ( !empty($difficult) )
+												  		<p class="{{ $difficult['color'] }}">Сложность: {{ $difficult['text'] }}</p>
+												  	@else 
+														<p>Сложность: - </p>
+												  	@endif
+												  	<p>Время выполнения:  {{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
+												</span>
+											</td>
 										@endif
-										<span>
-											@if ( !empty($difficult) )
-										  		<p class="{{ $difficult['color'] }}">Сложность: {{ $difficult['text'] }}</p>
-										  	@else 
-												<p>Сложность: - </p>
-										  	@endif
-										  	<p>Время выполнения:  {{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
-										</span>
-									</td>
+												
 								@endforeach	
 							</tr>
 						</table>
@@ -86,9 +97,8 @@
 									<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
 								@endif 
 								<p class="prog-txt" style="margin-bottom:  2em;">{{$programm_stage->exercive->description}}</p>
-
-								<div id="video_holder">
-								    <div id="overlay"></div>
+								<div id="video_holder" data-id="{{--*/$video->id/*--}}">
+								    <div id="overlay" data-id="{{--*/$overlay->id/*--}}"></div>
 								    @php
 								    	$video_model = $programm_stage->exercive->files->first();
 								    @endphp
@@ -112,22 +122,7 @@
 				</div>
 			</div>		
 		@else
-			<div class="chose-program col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h1>Выберите программу</h1>	
-				<div class="chose-prog-container col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<h3>Программа: <b>ХИЛЯК</b></h3>
-					<p>Надоело быть хиляком, устал от насмешек со стороны спортивных товарищей, хочешь отлично прокачаться и слегка подзаработать, закажи программу <b>"ХИЛЯК"</b>. Мы быстро подтянем твои дряблые мышцы.</p>
-					<br>
-					<br>
-					<button style="padding: 1em 4em;"> ЗАКАЗАТЬ</button>
-				</div>
-				<div class="chose-prog-container col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<h3>Программа: <b>МАТЁРЫЙ ХИЛЯК</b></h3>
-					<p>Наконец прошел программу <b>"ХИЛЯК"</b> и понял, что хочется чего-то большего, тогда программа <b>"МАТЁРЫЙ ХИЛЯК"</b> специально для тебя. С этой программой ты не только сможешь укрепить своё уже не совсем дряблое телье, но и подняться на следующий уровень своего спортивного развития.</p>
-					<br>
-					<button style="padding: 1em 4em;"> ЗАКАЗАТЬ</button>
-				</div>
-			</div>
+			
 		@endif
 	</div>
 @overwrite

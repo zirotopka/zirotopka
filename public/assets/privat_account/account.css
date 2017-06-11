@@ -23,8 +23,22 @@
 .box-cal{
 	width: 50px;
 	height: 35px;
-	//background: #ff9319;
-	border: 0.5px solid #ffb35d;
+	border-right:  0.5px solid #ffb35d;
+}
+
+.bg-warning{
+	background-color: #ff9319;
+}
+
+.bg-success{
+	background-color: #3c9066;
+	background-image: url('/ico/smile.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.bg-info{
+	background-color: #ecba82;
 }
 
 .calendar{
@@ -166,7 +180,7 @@
 	text-align: left;
 }
 
-.box-cal:hover span, .box-cal:hover{
+.box-cal:active span, .box-cal:active{
 	visibility: visible;
 	background-color: #f36d00;
 }

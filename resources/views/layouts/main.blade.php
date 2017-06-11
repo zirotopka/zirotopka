@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width">
 
-	<link href="/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
-    <link href="/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <link href="/navigation/css/component.css" type="text/css" rel="stylesheet">
-    <link href="/navigation/css/user.css" type="text/css" rel="stylesheet">
-    <link href="/css/modal.css" type="text/css" rel="stylesheet">
-    <link href="/tooltipster-master/dist/css/tooltipster.main.min.css" type="text/css" rel="stylesheet">
+	<link href="/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="/assets/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <link href="/assets/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="/assets/navigation/css/component.css" type="text/css" rel="stylesheet">
+    <link href="/assets/navigation/css/user.css" type="text/css" rel="stylesheet">
+    <link href="/assets/css/modal.css" type="text/css" rel="stylesheet">
+    <link href="/assets/tooltipster-master/dist/css/tooltipster.bundle.min.css" type="text/css" rel="stylesheet">
+    <link href="/assets/css/tooltips.css" type="text/css" rel="stylesheet">
+
 
 
 	<title>Жиротопка</title>
@@ -52,12 +54,12 @@
                             </div>
                             <div class="min-logo col-lg-2 col-md-2 hidden-xs hidden-sm">
                                 <a href="/">
-                                    <img src="/min-logo.png" alt="">
+                                    <img src="/ico/min-logo.png" alt="">
                                 </a>
                             </div>
                        @if ($user = Sentinel::check())
-                            <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs">
-                                <span class=" nav-text">Ваши иммунитеты:</span>
+                            <div class="tooltipstered immunitet col-lg-3 col-md-3 hidden-sm hidden-xs" data-tooltip-content="#immun_tooltip_content">
+                                <span class="nav-text">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
                                     <?php 
                                         $empty_hearts = 5;
@@ -82,12 +84,12 @@
                                     {{-- @endfor --}}
                                 <!-- </div> -->
                             </div>
-                            <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm">
+                            <div class="tooltipstered score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" data-tooltip-content="#score_tooltipe">
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
                                 <a href="">
-                                    <img class="envel" src="/ico/envelop.png" alt="envelop" data-toggle="tooltipe" data-placement="bottom" title="sadsd">
+                                    <img class="envel tooltipstered" data-tooltip-content="#envelop_tooltipe" src="/ico/envelop.png" alt="envelop">
                                 </a>
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
@@ -123,13 +125,29 @@
             </div><!-- /st-pusher -->
         </div><!-- /st-container -->
 
-    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>    
-    <script type="text/javascript" src="/navigation/js/classie.js"></script>
-    <script type="text/javascript" src="/navigation/js/sidebarEffects.js"></script>
-    <script type="text/javascript" src="/tooltipster-master/dist/js/tooltipster.main.min.js"></script>
 
+<div class="tooltip_templates" style="display: none;">
+    <span id="immun_tooltip_content">
+        <p>Иммунитет - это ваше здоровье на этом курсе. Если Вы не выполнили какое-либо задание, Вы теряете одно сердчкою.</p>
+    </span>
+    <span id="score_tooltipe">
+        <p > Hello</p>
+    </span>
+    <span id="envelop_tooltipe">
+        <p> bye</p>
+    </span>
+</div>
+
+
+
+    <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>    
+    <script type="text/javascript" src="/assets/navigation/js/classie.js"></script>
+    <script type="text/javascript" src="/assets/navigation/js/sidebarEffects.js"></script>
+    <script type="text/javascript" src="/assets/tooltipster-master/dist/js/tooltipster.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+    
     @section('js')
         
     @show
