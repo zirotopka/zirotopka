@@ -33,6 +33,7 @@
 .bg-success{
 	background-color: #3c9066;
 	background-image: url('/ico/smile.png');
+	background-size: 2em;
 	background-repeat: no-repeat;
 	background-position: center;
 }
