@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-borderless-customized .tooltipster-box {
 	background: #FF9319;
 
@@ -7,4 +8,9 @@
 	color: white;
 	font-weight: 500;
 	padding: 8px;
+=======
+.myTooltipeTheme
+{
+	background-color: black !important;
+>>>>>>> 43852eda9652f07e6272f8c650d9f8a01f185a1e
 }
