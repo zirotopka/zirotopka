@@ -91,11 +91,7 @@
                             </div>
                             <div class="tooltipstered envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" data-tooltip-content="#envelop_tooltipe">
                                 <a href="">
-<<<<<<< HEAD
-                                    <img class="envel "  src="/ico/envelop.png" alt="envelop">
-=======
                                     <img class="envel " data-tooltip-content="#envelop_tooltipe" src="/ico/envelop.png" alt="envelop">
->>>>>>> 43852eda9652f07e6272f8c650d9f8a01f185a1e
                                 </a>
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 tooltipstered" data-tooltip-content="#user_tooltipe" >
