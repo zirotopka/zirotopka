@@ -25,7 +25,7 @@
 		</div>
 		@if ( !empty($user->current_programm_id) )
 			@if ( !empty($programm_days) )
-				<div class="calendar tooltipstered" data-tooltip-content="#envelop_tooltipe">
+				<div class="calendar tooltipstered" data-tooltip-content="#calendar_tooltipe">
 					<div class="day-number">
 						<table class="t-cal">
 							<tr class="num-cal">
@@ -109,7 +109,7 @@
 									@endif
 								</div>
 								<div class="otchet">
-									<input class="prof-file col-lg-4 col-md-4 col-sm-4 col-xs-4" type="file">
+									<input class="prof-file col-lg-4 col-md-4 col-sm-4 col-xs-4 tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
 									<p class="load-text col-lg-7 col-md-7 col-sm-7 col-xs-7">Загрузить отчёт</p>
 								</div>
 							</form>

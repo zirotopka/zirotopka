@@ -85,15 +85,15 @@
                                     {{-- @endfor --}}
                                 <!-- </div> -->
                             </div>
-                            <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" data-tooltip-content="#score_tooltipe">
+                            <div class="tooltipstered score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" data-tooltip-content="#score_tooltipe">
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
                             </div>
-                            <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
+                            <div class="tooltipstered envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" data-tooltip-content="#envelop_tooltipe">
                                 <a href="">
-                                    <img class="envel " data-tooltip-content="#envelop_tooltipe" src="/ico/envelop.png" alt="envelop">
+                                    <img class="envel "  src="/ico/envelop.png" alt="envelop">
                                 </a>
                             </div>
-                            <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
+                            <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 tooltipstered" data-tooltip-content="#user_tooltipe" >
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     {{$user->first_name.' '.$user->last_name}}
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -131,7 +131,26 @@
     <span id="immun_tooltip_content">
         <p>Иммунитет - это ваше здоровье на этом курсе. Если Вы не выполнили какое-либо задание, Вы теряете одно сердчкою.</p>
     </span>
-
+    <span>
+        <p id="score_tooltipe">
+            Ваш счёт - Это деньги которые можно потратить на иммунитет, также их можно вывести.
+        </p>
+    </span>
+    <span>
+        <p id="envelop_tooltipe">
+            Все сообщения от преподавателя или какие-либо оповещения приходят Вам в сообщения. Там же Вы можете задать любые вопросы или попросить о помощи. 
+        </p>
+    </span>
+    <span>
+        <p id="calendar_tooltipe">
+            Календарь Ваших тренировок включает в себя 28 дней вместе с выходными. Каждый день выполняйте задания и загружайте отчёты в формы. У каждого дня есть уровень сложности и затрачиваемое время. <br> Дни проверенные преподавателем отмечены зелёным смайликом. Выходные дни отмечены солнышком. 
+        </p>
+    </span>
+    <span>
+        <p id="otchet_tooltipe">
+            Полсе выполнения задания, Вам необходимо загрузить отчёт в соответствующую форму с заданием
+        </p>
+    </span>
 </div>
 
 

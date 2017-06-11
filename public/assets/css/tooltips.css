@@ -1,4 +1,10 @@
-.myTooltipeTheme
-{
-	background-color: black !important;
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-borderless-customized .tooltipster-box {
+	background: #FF9319;
+
+}
+
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-borderless-customized .tooltipster-content {
+	color: white;
+	font-weight: 500;
+	padding: 8px;
 }
