@@ -4,7 +4,7 @@
 }
 
 .logo{
-	padding:70px 50px 0 0;
+	padding:2em 0 0 0;
 	color: #1E0F00;
 	vertical-align: unset;
 	font-size: 28px;
@@ -43,11 +43,11 @@
 }
 
 .calendar{
-	margin: 170px 0 0 0;
+	margin: 10em 0 0 0;
 }
 
 .programs{
-	margin: 100px 0 0 0;
+	margin: 5em 0 0 0;
 	text-align: left;
 }
 
