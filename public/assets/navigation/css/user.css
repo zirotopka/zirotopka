@@ -263,8 +263,8 @@ button:hover {
 .envelop{
 	text-align: center;
 	padding: 0.9em 0 0 0;
-	border-left: 1px solid white;
-	border-right: 1px solid white;
+	border-left: 1px solid #909090;
+	border-right: 1px solid #909090;
 	height: 100%;
 }
 
@@ -306,7 +306,7 @@ button:hover {
 	padding:1em 0 0 0;
 	white-space: nowrap;
 	height: 100%;
-	border-right: 1px solid white;
+	border-right: 1px solid #909090;
 }
 
 .score{
