@@ -341,3 +341,7 @@ button:focus {
 .dropdown-toggle{
 	width: 100%;
 }
+
+.icon{
+	font-weight: bold;
+}

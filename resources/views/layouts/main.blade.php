@@ -125,15 +125,11 @@
             </div><!-- /st-pusher -->
         </div><!-- /st-container -->
 
-
+<!--
 <div class="tooltip_templates" style="display: none;">
     <span id="immun_tooltip_content">
         <p>Иммунитет - это ваше здоровье на этом курсе. Если Вы не выполнили какое-либо задание, Вы теряете одно сердчкою.</p>
     </span>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cf964bc0ef0b326711dd8f9e094ed36ad4ed087e
     <span>
         <p id="score_tooltipe">
             Ваш счёт - Это деньги которые можно потратить на иммунитет, также их можно вывести.
@@ -154,14 +150,8 @@
             Полсе выполнения задания, Вам необходимо загрузить отчёт в соответствующую форму с заданием
         </p>
     </span>
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 43852eda9652f07e6272f8c650d9f8a01f185a1e
->>>>>>> cf964bc0ef0b326711dd8f9e094ed36ad4ed087e
 </div>
-
+-->
 
 
     <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
