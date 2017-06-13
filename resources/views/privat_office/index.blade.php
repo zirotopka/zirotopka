@@ -113,7 +113,8 @@
 										<input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
 									</div>
 									<p class="load-text col-lg-8 col-md-8 col-sm-8 col-xs-8">Загрузить отчёт</p>
-
+									<input class="prof-file col-lg-4 col-md-4 col-sm-4 col-xs-4 tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
+									<p class="load-text col-lg-7 col-md-7 col-sm-7 col-xs-7">Загрузить отчёт</p>
 								</div>
 							</form>
 						</div>

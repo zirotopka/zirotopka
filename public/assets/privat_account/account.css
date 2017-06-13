@@ -4,7 +4,7 @@
 }
 
 .logo{
-	padding:70px 50px 0 0;
+	padding:2em 0 0 0;
 	color: #1E0F00;
 	vertical-align: unset;
 	font-size: 28px;
@@ -33,6 +33,7 @@
 .bg-success{
 	background-color: #3c9066;
 	background-image: url('/ico/smile.png');
+	background-size: 2em;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -42,11 +43,11 @@
 }
 
 .calendar{
-	margin: 170px 0 0 0;
+	margin: 10em 0 0 0;
 }
 
 .programs{
-	margin: 100px 0 0 0;
+	margin: 5em 0 0 0;
 	text-align: left;
 }
 
@@ -82,7 +83,10 @@
 
 .prof-file{
 	padding: 0;
+<<<<<<< HEAD
 	margin: 1em 2.5em;
+=======
+>>>>>>> cf964bc0ef0b326711dd8f9e094ed36ad4ed087e
 	height: 3.5em;
 	width: 3.5em;
 	opacity:0;

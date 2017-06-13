@@ -123,7 +123,7 @@ body,
 	text-transform: uppercase;
 	text-shadow: 0 0 1px rgba(255,255,255,0.1);
 	letter-spacing: 1px;
-	font-weight: 400;
+	font-weight: bold;
 	-webkit-transition: background 0.3s, box-shadow 0.3s;
 	transition: background 0.3s, box-shadow 0.3s;
 }

@@ -54,10 +54,8 @@
                             </div>
                             <div class="col-lg-1 hidden-md hidden-sm hidden-xs">
                             </div>
-                            <div class="min-logo col-lg-2 col-md-2 hidden-xs hidden-sm">
-                                <a href="/">
-                                    <img src="/ico/min-logo.png" alt="">
-                                </a>
+                            <div class="col-lg-2 col-md-2 hidden-xs hidden-sm" style="height: 100%;">
+                                <a href="/" class="min-logo"></a>
                             </div>
                        @if ($user = Sentinel::check())
                             <div class="tooltipstered immunitet col-lg-3 col-md-3 hidden-sm hidden-xs" data-tooltip-content="#immun_tooltip_content">
@@ -96,7 +94,7 @@
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 tooltipstered" data-tooltip-content="#user_tooltipe" >
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    {{$user->first_name.' '.$user->last_name}}
+                                    <div style="display: inline-block;">{{$user->first_name.' '.$user->last_name}}</div>
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
 
                                 </button>
@@ -127,7 +125,7 @@
             </div><!-- /st-pusher -->
         </div><!-- /st-container -->
 
-
+<!--
 <div class="tooltip_templates" style="display: none;">
     <span id="immun_tooltip_content">
         <p>Иммунитет - это ваше здоровье на этом курсе. Если Вы не выполнили какое-либо задание, Вы теряете одно сердчкою.</p>
@@ -153,7 +151,7 @@
         </p>
     </span>
 </div>
-
+-->
 
 
     <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
