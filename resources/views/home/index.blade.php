@@ -3,9 +3,6 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
-    <link href="/css/modal.css" type="text/css" rel="stylesheet">
-
-
 @overwrite
 
 @section('js')
@@ -14,5 +11,7 @@
 
 @overwrite
 
-@include('home.registration', [])
-@include('home.login', [])
+@section("content")
+@include('home.registration')
+@include('home.login')
+@overwrite
