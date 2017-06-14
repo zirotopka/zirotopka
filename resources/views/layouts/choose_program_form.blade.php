@@ -17,7 +17,7 @@
           </select>
           <br>
           <h3>ВЫБЕРИТЕ ДАТУ СТАРТА</h3>
-          <input type="text" name="program_date_input" id="program_date_input" class="col-lg-12 col-md-12 col-sx-12" required="required">
+          <input type="date" name="program_date_input" id="program_date_input" class="col-lg-12 col-md-12 col-sx-12" required="required">
           <input type="checkbox" class="col-lg-12 col-md-12 col-sx-12"> <a href="#">Мне больше 14.</a>
           <input type="checkbox" class="col-lg-12 col-md-12 col-sx-12"> <a href="#">Ознакомился (-ась) с офертой.</a>
           <input type="checkbox" class="col-lg-12 col-md-12 col-sx-12"> <a href="#">Ознакомился (-ась) с политикой конфиденциальности.</a>
