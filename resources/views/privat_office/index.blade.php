@@ -18,14 +18,16 @@
 
 
 @section("content")
+<!--Логотип-->
 	<div class="main-content container-fluid">
 		<div class="logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<img class="logo-pos" src="/ico/R'ONE logo.png" alt="">
 			<b>.START</b>
 		</div>
+<!--Календарь-->
 		@if ( !empty($user->current_programm_id) )
 			@if ( !empty($programm_days) )
-				<div class="calendar tooltipstered" data-tooltip-content="#calendar_tooltipe">
+				<div class="calendar">
 					<div class="day-number">
 						<table class="t-cal">
 							<tr class="num-cal">
@@ -79,6 +81,7 @@
 					</div>
 				</div>
 			@endif
+<!--Описание программ-->
 			<div class="programs row">
 				@forelse ( $programm_stages as $programm_stage )
 					@if ( !empty($programm_stage->exercive) )
@@ -94,25 +97,37 @@
 									@endif 
 									<p class="prog-txt" style="margin-bottom:  2em;">{{$programm_stage->exercive->description}}</p>
 								</div>
+<!--VIDEO-->
 								<div class="video_holder">
-									<button type="button" class="video-btn">
+									<button type="button" class="video-btn" data-toggle="modal" data-target="#video-moadl">
 										<img src="/video/vdo-img1.png" alt="" style="width:100%;">
 										<img class="btn-play" src="/ico/play.png" alt="">
 									</button>
-<!--
-								    <div class="overlay" data-id="{{$programm_stage->id}}"></div>
-								    @php
-								    	$video_model = $programm_stage->exercive->files->first();
-								    @endphp
-								    @if (!empty($video_model))
-										<video class="video-descr" id="{{ 'video_'.$programm_stage->id}}">
-											<source src="{{ $video_model->file_url }}" >
-										</video>
-									@endif
--->	
+									
+									<div class="modal fade" id="video-moadl" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog modal-lg" role="document">
+									    <div class="modal-content">
+									      <div class="video-modal modal-body">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										        <span aria-hidden="true">
+										        	<img src="/ico/close.png" alt="">	
+										        </span>
+									        </button>
+										    @php
+										    	$video_model = $programm_stage->exercive->files->first();
+										    @endphp
+										    @if (!empty($video_model))
+												<video class="video-descr" controls >
+													<source src="{{ $video_model->file_url }}" >
+												</video>
+											@endif											
+									      </div>
+									    </div>
+									  </div>
+									</div>
 								</div>
 								<div class="otchet">
-									<input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
+									<input class="prof-file " type="file">
 									<p class="load-text">Загрузить отчёт</p>
 								</div>
 

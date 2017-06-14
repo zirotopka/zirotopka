@@ -58,7 +58,7 @@
                                 <a href="/" class="min-logo"></a>
                             </div>
                        @if ($user = Sentinel::check())
-                            <div class="tooltipstered immunitet col-lg-3 col-md-3 hidden-sm hidden-xs" data-tooltip-content="#immun_tooltip_content">
+                            <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs">
                                 <span class="nav-text" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
                                     <?php 
@@ -84,15 +84,15 @@
                                     {{-- @endfor --}}
                                 <!-- </div> -->
                             </div>
-                            <div class="tooltipstered score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" data-tooltip-content="#score_tooltipe">
+                            <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" >
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
                             </div>
-                            <div class="tooltipstered envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" data-tooltip-content="#envelop_tooltipe">
+                            <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
                                 <a href="">
-                                    <img class="envel " data-tooltip-content="#envelop_tooltipe" src="/ico/envelop.png" alt="envelop">
+                                    <img class="envel" src="/ico/envelop.png" alt="envelop">
                                 </a>
                             </div>
-                            <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 tooltipstered" data-tooltip-content="#user_tooltipe" >
+                            <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     <div style="display: inline-block;">{{$user->first_name.' '.$user->last_name}}</div>
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
