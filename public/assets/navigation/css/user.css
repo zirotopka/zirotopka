@@ -76,6 +76,9 @@ a:hover, a:focus {
 .st-content-inner{
 	height: 4.2em;
 	background-color: #282828;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
 }
 .codrops-top a {
 	display: inline-block;
@@ -302,8 +305,8 @@ button:hover {
 }
 
 .immunitet{
-	text-align: center;
-	padding:1em 0 0 0;
+	text-align: right;
+	padding:1em 2em 0 0;
 	white-space: nowrap;
 	height: 100%;
 	border-right: 1px solid #909090;
@@ -334,7 +337,7 @@ button:focus {
 }
 
 .fa-caret-down{
-	position: fixed;
+	position: absolute;
 	padding:5px;
 }
 

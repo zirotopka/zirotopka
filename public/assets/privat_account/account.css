@@ -4,7 +4,7 @@
 }
 
 .logo{
-	padding:2em 0 0 0;
+	padding:3em 0 0 0;
 	color: #1E0F00;
 	vertical-align: unset;
 	font-size: 28px;
@@ -43,7 +43,7 @@
 }
 
 .calendar{
-	margin: 10em 0 0 0;
+	margin: 12em 0 0 0;
 }
 
 .programs{
@@ -83,8 +83,8 @@
 
 .prof-file{
 	padding: 0;
-	height: 3.5em;
-	width: 3.5em;
+	height: 100%;
+	width: 100%;
 	opacity:0;
     filter:alpha(opacity:0);
     cursor: pointer;
@@ -115,8 +115,8 @@
 
 .load-text{
 	font-weight: bolder;
-	padding: 2.5em 0 0 9%;
 	height: 100%;
+	margin: -4.5em 0 3.5em 9em;
 }
 
 @media screen and (max-width: 25em) {
@@ -180,7 +180,7 @@
 	text-align: left;
 }
 
-.box-cal:active span, .box-cal:active{
+.box-cal:hover span, .box-cal:hover{
 	visibility: visible;
 	background-color: #f36d00;
 }
