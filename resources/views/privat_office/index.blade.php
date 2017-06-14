@@ -57,12 +57,7 @@
 
 											<td class="box-cal {{$class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 2em 2em; background-position: center;">
 												<span>
-													@if ( !empty($difficult) )
-												  		<p class="{{ $difficult['color'] }}">Сложность: {{ $difficult['text'] }}</p>
-												  	@else 
-														<p>Сложность: - </p>
-												  	@endif
-												  	<p>Время выполнения:  {{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
+													<h3>Ура выходной!!!</h3>
 												</span>
 											</td>
 										@else
@@ -89,15 +84,22 @@
 					@if ( !empty($programm_stage->exercive) )
 						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
 							<form class="prog-form">
-								<p class="prog-txt prog-name">{{$programm_stage->exercive->name}}</p>
-								@if ( !empty($programm_stage->repeat_count) )
-									<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
-								@endif 
-								@if ( !empty($programm_stage->time_exercive) )
-									<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
-								@endif 
-								<p class="prog-txt" style="margin-bottom:  2em;">{{$programm_stage->exercive->description}}</p>
+								<div class="prog-txt-container">	
+									<p class="prog-txt prog-name">{{$programm_stage->exercive->name}}</p>
+									@if ( !empty($programm_stage->repeat_count) )
+										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
+									@endif 
+									@if ( !empty($programm_stage->time_exercive) )
+										<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
+									@endif 
+									<p class="prog-txt" style="margin-bottom:  2em;">{{$programm_stage->exercive->description}}</p>
+								</div>
 								<div class="video_holder">
+									<button type="button" class="video-btn">
+										<img src="/video/vdo-img1.png" alt="" style="width:100%;">
+										<img class="btn-play" src="/ico/play.png" alt="">
+									</button>
+<!--
 								    <div class="overlay" data-id="{{$programm_stage->id}}"></div>
 								    @php
 								    	$video_model = $programm_stage->exercive->files->first();
@@ -107,21 +109,22 @@
 											<source src="{{ $video_model->file_url }}" >
 										</video>
 									@endif
+-->	
 								</div>
 								<div class="otchet">
 									<input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
-								</div>
 									<p class="load-text">Загрузить отчёт</p>
+								</div>
 
 							</form>
 						</div>
 					@endif
 				@empty
 				@endforelse
+			</div>		
 				<div class="send-proof col-lg-12">
 						<button type="submit" class="send-proof-file"> Отправить на проверку</button>
 				</div>
-			</div>		
 		@else
 			@include('layouts.choose_program_form')
 
