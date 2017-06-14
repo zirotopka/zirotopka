@@ -59,7 +59,7 @@
                             </div>
                        @if ($user = Sentinel::check())
                             <div class="tooltipstered immunitet col-lg-3 col-md-3 hidden-sm hidden-xs" data-tooltip-content="#immun_tooltip_content">
-                                <span class="nav-text">Ваши иммунитеты:</span>
+                                <span class="nav-text" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
                                     <?php 
                                         $empty_hearts = 5;
