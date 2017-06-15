@@ -1,3 +1,11 @@
+var _token = jQuery('meta[name="csrf-token"]').prop('content');
+
+jQuery.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+    }
+});
+
 $(document).ready(function(){
 	$('.tooltipstered').tooltipster({
    theme: ['tooltipster-borderless', 'tooltipster-borderless-customized'],

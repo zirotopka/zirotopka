@@ -14,6 +14,16 @@ class ProgrammExercive extends Model
         return $this->morphMany('App\File', 'owner');
     }
 
+    public function previews()
+    {
+        return $this->morphMany('App\File', 'owner')->where('file_type',2);
+    }
+
+    public function videos()
+    {
+        return $this->morphMany('App\File', 'owner')->where('file_type',3);
+    }
+
     public function stages()
     {
         return $this->hasMany('App\ProgrammStage','exercise_id');
