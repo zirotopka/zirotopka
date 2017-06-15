@@ -109,6 +109,7 @@
 								    @endphp
 								    @if (!empty($preview))
 								    	<img src="{{ $preview->file_url }}" alt="" style="width: 100%;">
+								    	<div id="mask"></div>
 								    	<img class="btn-play" src="/ico/play.png" alt="">
 								    @endif
 								</div>
