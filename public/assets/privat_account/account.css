@@ -92,7 +92,8 @@
 .btn-play{
 	height: 5vw;
 	width: 5vw;
-	margin: -15vw 0 0 0;
+	margin: -10vw 0 0 -2.5vw;
+	position: absolute;
 }
 
 .video-btn, .video-btn:hover{
@@ -111,7 +112,7 @@
 
 .prof-file{
 	padding: 0;
-	margin: -5em 0 0 1em;
+	margin: -19.5em 0 0 0;
 	height: 6.5em;
 	width: 100%;
 	opacity:0;
@@ -139,7 +140,7 @@
 
 .load-btn{
 	text-align: center;
-	margin: 0 0 0 0;
+	margin: 1.5em 0 15em 0;
 }
 
 .load{
@@ -251,7 +252,7 @@
 
 #mask {
     background-color:rgba(0,0,0,.3);
-    height:90%;
+    height:100%;
     position:absolute;
     width:100%;
     top:0;

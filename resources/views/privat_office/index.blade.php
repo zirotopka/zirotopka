@@ -71,7 +71,7 @@
 												  	@else 
 														<p>Сложность: - </p>
 												  	@endif
-												  	<p>Время выполнения:  {{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
+												  	<p>Время выполнения:{{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
 												</span>
 											</td>
 										@endif
@@ -98,7 +98,7 @@
 										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
 									@endif 
 									@if ( !empty($programm_stage->time_exercive) )
-										<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
+										<p class="prog-txt prog-count">Время выполнения:{{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
 									@endif 
 									<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
 								</div>
