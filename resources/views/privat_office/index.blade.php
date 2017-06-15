@@ -99,7 +99,7 @@
 									@if ( !empty($programm_stage->time_exercive) )
 										<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
 									@endif 
-									<p class="prog-txt" style="margin-bottom:  2em;">{{$exercive->description}}</p>
+									<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
 								</div>
 <!--VIDEO-->
 								<div class="row video_holder" data-id="{{$exercive->id}}">
@@ -107,8 +107,8 @@
 								    	$preview = $programm_stage->exercive->previews->first();
 								    @endphp
 								    @if (!empty($preview))
+								    	<img src="{{ $preview->file_url }}" alt="" style="width: 100%;">
 								    	<img class="btn-play" src="/ico/play.png" alt="">
-								    	<img src="{{ $preview->file_url }}" alt="">
 								    @endif
 								</div>
 

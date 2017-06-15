@@ -90,7 +90,7 @@
 .btn-play{
 	height: 5vw;
 	width: 5vw;
-	margin: 0;
+	margin: -14em 0 0 0;
 }
 
 .video-btn, .video-btn:hover{
@@ -109,9 +109,8 @@
 
 .prof-file{
 	padding: 0;
-	/*margin: -4em 0 0 0;
-	height: 6em;*/
-	height: 100%;
+	margin: -5em 0 0 1em;
+	height: 6.5em;
 	width: 100%;
 	opacity:0;
     filter:alpha(opacity:0);
@@ -138,7 +137,7 @@
 
 .load-btn{
 	text-align: center;
-	margin: 1em 0 0 0;
+	margin: 0.3em 0 0 0;
 }
 
 .load{
@@ -151,7 +150,7 @@
 	display: inline-block;
 	font-weight: bolder;
 	height: 100%;
-	margin: -4.5em 0 3.5em 9em;
+	margin: 0 0 1em 0;
 }
 
 @media screen and (max-width: 47.95em) {
@@ -176,7 +175,7 @@
 	.btn-play{
 		height: 20vw !important;
 		width: 20vw !important;
-		margin:  0 !important;
+		margin:  -60vw 0 0 0 !important;
 	}
 	.video-btn, .video-btn:hover{
 		height: 55vw !important;
@@ -206,7 +205,7 @@
 	.btn-play{
 		height: 13vw;
 		width: 13vw;
-		margin: 0;
+		margin: -29vw 0 0 0;
 	}
 
 	.video-btn, .video-btn:hover{
