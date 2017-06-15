@@ -109,8 +109,9 @@
 
 .prof-file{
 	padding: 0;
-	margin: -4em 0 0 0;
-	height: 6em;
+	/*margin: -4em 0 0 0;
+	height: 6em;*/
+	height: 100%;
 	width: 100%;
 	opacity:0;
     filter:alpha(opacity:0);
@@ -150,6 +151,7 @@
 	display: inline-block;
 	font-weight: bolder;
 	height: 100%;
+	margin: -4.5em 0 3.5em 9em;
 }
 
 @media screen and (max-width: 47.95em) {

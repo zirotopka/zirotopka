@@ -24,8 +24,8 @@ class ProgrammTableSeeder extends Seeder
         File::truncate();
 
     	$exercive_array = [
-    		['slug' => 'berpie', 'name' => 'Берпи с отжиманием', 'description' => 'Берпи с отжиманием', 'file_url' => '/video/trainings/birpie.mp4' ],
-    		['slug' => 'jump', 'name' => 'Прыжки на скакалке', 'description' => 'Прыжки на скакалке', 'file_url' => '/video/trainings/jump.mp4'],
+    		['slug' => 'berpie', 'name' => 'Берпи с отжиманием', 'description' => 'Берпи с отжиманием', 'file_url' => '/video/trainings/birpie.mp4', 'preview' => '/image/test/preview1.png' ],
+    		['slug' => 'jump', 'name' => 'Прыжки на скакалке', 'description' => 'Прыжки на скакалке', 'file_url' => '/video/trainings/jump.mp4', 'preview' => '/image/test/preview2.png'],
     	];
 
     	$programm_exercive_ids = [];
@@ -42,6 +42,13 @@ class ProgrammTableSeeder extends Seeder
                 $programm_exercive->files()->create([
                     'file_url' => $exercive_row['file_url'],
                     'file_type' => 3,
+                    'owner_id' => $programm_exercive->id,
+                    'owner_type' => 'ProgrammExercive',
+                ]);
+
+                $programm_exercive->files()->create([
+                    'file_url' => $exercive_row['preview'],
+                    'file_type' => 2,
                     'owner_id' => $programm_exercive->id,
                     'owner_type' => 'ProgrammExercive',
                 ]);

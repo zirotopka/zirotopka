@@ -54,4 +54,25 @@ class PrivatOfficeController extends Controller
 
     	return view('privat_office.index', $data);
     }
+
+    /**
+     * Получаем видео по тренировке 
+     */
+    public function get_exercive_video(Request $request) {
+        $exercive_id = $request->get('exercive_id');
+
+        if ( !empty($exercive_id ) ) {
+            $exercive = ProgrammExercive::where('id','=',$exercive_id)->select('id')
+                                        ->with('videos')
+                                        ->first();
+            if ( !empty($exercive) && count( $exercive->videos ) > 0 ){
+                return ['response' => 200, 'data' => $exercive->videos->first()->file_url ];
+            } else {
+                return ['response' => 500, 'data' => 'Не найден exercive']; 
+            }
+        } else {
+             return ['response' => 500, 'data' => 'Не найден exercive_id']; 
+        }
+    }
+
 }

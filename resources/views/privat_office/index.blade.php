@@ -12,7 +12,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script type="text/javascript" src="/assets/js/video-btn.js"></script>
+    <script type="text/javascript" src="/assets/js/video-btn.js?123"></script>
 
 @overwrite
 
@@ -84,54 +84,44 @@
 <!--Описание программ-->
 			<div class="programs row">
 				@forelse ( $programm_stages as $programm_stage )
-					@if ( !empty($programm_stage->exercive) )
+					@php
+				    	$exercive = $programm_stage->exercive;
+				    @endphp
+					@if ( !empty($exercive) )
 						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
 							<form class="prog-form">
+
 								<div class="row prog-txt-container">	
-									<p class="prog-txt prog-name">{{$programm_stage->exercive->name}}</p>
+									<p class="prog-txt prog-name">{{$exercive->name}}</p>
 									@if ( !empty($programm_stage->repeat_count) )
 										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
 									@endif 
 									@if ( !empty($programm_stage->time_exercive) )
 										<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
 									@endif 
-									<p class="prog-txt prog-descr"> {{$programm_stage->exercive->description}}</p>
+									<p class="prog-txt" style="margin-bottom:  2em;">{{$exercive->description}}</p>
 								</div>
 <!--VIDEO-->
-								<div class="row video_holder">
-									<button type="button" class="video-btn" data-toggle="modal" data-target="#video-moadl">
-										<img class="btn-play" src="/ico/play.png" alt="">
-									</button>
-									
-									<div class="modal fade" id="video-moadl" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
-									  <div class="modal-dialog modal-lg" role="document">
-									    <div class="modal-content">
-									      <div class="video-modal modal-body">
-									        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										        <span aria-hidden="true">
-										        	<img src="/ico/close.png" alt="">	
-										        </span>
-									        </button>
-										    @php
-										    	$video_model = $programm_stage->exercive->files->first();
-										    @endphp
-										    @if (!empty($video_model))
-												<video class="video-descr" controls >
-													<source src="{{ $video_model->file_url }}" >
-												</video>
-											@endif											
-									      </div>
-									    </div>
-									  </div>
-									</div>
+								<div class="row video_holder" data-id="{{$exercive->id}}">
+									@php
+								    	$preview = $programm_stage->exercive->previews->first();
+								    @endphp
+								    @if (!empty($preview))
+								    	<img class="btn-play" src="/ico/play.png" alt="">
+								    	<img src="{{ $preview->file_url }}" alt="">
+								    @endif
 								</div>
-								<div class=" row otchet">
+
+								<div class="row otchet">
 									<div class="load-btn">
 										<img class="load" src="/ico/load.png" alt="">
 										<p class="load-text">Загрузить отчёт</p>
 									</div>
 									<input class="prof-file " type="file">
 								</div>
+									<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
+								</div>
+									<p class="load-text">Загрузить отчёт</p> -->
 
 							</form>
 						</div>
@@ -139,12 +129,30 @@
 				@empty
 				@endforelse
 			</div>		
-				<div class="send-proof col-lg-12">
-						<button type="submit" class="send-proof-file"> Отправить на проверку</button>
-				</div>
+			<div class="send-proof col-lg-12">
+					<button type="submit" class="send-proof-file"> Отправить на проверку</button>
+			</div>
+
+			<!-- --------------------------------------------------------------- -->
+			<div class="modal fade" id="video-modal" tabindex="1" role="dialog" aria-labelledby="videoModal">
+			  <div class="modal-dialog modal-lg" role="document">
+			    <div class="modal-content">
+			      <div class="video-modal modal-body">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				        <span aria-hidden="true">
+				        	<img src="/ico/close.png" alt="">	
+				        </span>
+			        </button>
+			        <p id="video-container">
+			        	
+			        </p>									
+			      </div>
+			    </div>
+			  </div>
+			</div>
 		@else
 			@include('layouts.choose_program_form')
-
 		@endif
 	</div>
 @overwrite
+
