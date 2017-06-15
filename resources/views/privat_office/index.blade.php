@@ -85,11 +85,11 @@
 										<td class="box-cal {{$class}} {{$cal_class}}">
 											<span>
 												@if ( !empty($difficult) )
-											  		<p class="{{ $difficult['color'] }}">Уровень сложности: {{ $difficult['text'] }}</p>
+											  		<p class="" style="display: inline-block; width: 65%;">Уровень сложности:</p><div style="display: inline-block; text-align: right;">{{ $difficult['text'] }}</div>
 											  	@else 
 													<p>Сложность: - </p>
 											  	@endif
-											  	<p>Время выполнения:{{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
+											  	<p style="display: inline-block; width: 65%;">Продолжительность тренировки:</p><div style="display: inline-block; text-align: right; vertical-align: top;">{{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</div>
 											</span>
 										</td>
 									@endif
@@ -154,7 +154,7 @@
 			</div>
 
 			<!-- --------------------------------------------------------------- -->
-			<div class="modal fade" id="video-modal" tabindex="1" role="dialog" aria-labelledby="videoModal">
+			<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
 			  <div class="modal-dialog modal-lg" role="document">
 			    <div class="modal-content">
 			      <div class="video-modal modal-body">

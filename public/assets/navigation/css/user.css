@@ -82,7 +82,7 @@ a:hover, a:focus {
 	background-color: #282828;
 	position: fixed;
 	width: 100%;
-	z-index: 100;
+	z-index: 10;
 }
 .codrops-top a {
 	display: inline-block;

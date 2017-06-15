@@ -80,10 +80,6 @@
                                             <i class="fa fa-heart-o fa-2x c-white" aria-hidden="true"></i>
                                         @endfor
                                     @endif
-
-                                    {{-- @for ($i=0; $i<5; $i++) --}}
-                                        <!-- <img class="heart" src="/ico/heart.png" alt=""> -->
-                                    {{-- @endfor --}}
                                 <!-- </div> -->
                             </div>
                             <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" >

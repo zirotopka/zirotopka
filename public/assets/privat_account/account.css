@@ -45,6 +45,7 @@
 
 .calendar{
 	margin: 12em 0 0 0;
+	position: relative;
 }
 
 .programs{
@@ -92,7 +93,7 @@
 .btn-play{
 	height: 5vw;
 	width: 5vw;
-	margin: -10vw 0 0 -2.5vw;
+	margin: -9.5vw 0 0 -2.5vw;
 	position: absolute;
 }
 
@@ -180,7 +181,7 @@
 	.btn-play{
 		height: 20vw !important;
 		width: 20vw !important;
-		margin:  -39vw 0 0 -4em !important;
+		margin:  -37vw 0 0 -2em !important;
 	}
 	.video-btn, .video-btn:hover{
 		height: 55vw !important;
@@ -231,16 +232,15 @@
 	color:white;
 	z-index: 10;
 	width: 20em;
-	margin: 1.2em 0;
+	margin: 2.5em 0;
 	position: absolute;
-	visibility: hidden;
-	padding: 1em;
+	display: none;
+	padding: 1.5em 0em 1em 2em;
 	text-align: left;
-	display: block;
 }
 
 .box-cal:hover span, .box-cal:hover{
-	visibility: visible;
+	display: block;
 	background-color: #f36d00;
 }
 

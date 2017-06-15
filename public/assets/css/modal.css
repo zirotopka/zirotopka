@@ -1,5 +1,6 @@
 .modal-backdrop {
 	background: #ffffff;
+	z-index: 5465
 }
 .video-modal{
 	background-color: #f48931;
