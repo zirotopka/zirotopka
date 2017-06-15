@@ -90,7 +90,7 @@
 .btn-play{
 	height: 5vw;
 	width: 5vw;
-	margin: -14em 0 0 0;
+	margin: -15vw 0 0 0;
 }
 
 .video-btn, .video-btn:hover{
@@ -151,7 +151,7 @@
 	font-weight: bolder;
 	height: 100%;
 	margin: 0 0 1em 0;
-	vertical-align: middle;
+	vertical-align: text-top;
 }
 
 @media screen and (max-width: 47.95em) {
@@ -247,4 +247,11 @@
 	height: 20em;
 }
 
-
+#mask {
+    background-color:rgba(0,0,0,.3);
+    height:100%;
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+}
