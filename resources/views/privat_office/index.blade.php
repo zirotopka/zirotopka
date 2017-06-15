@@ -81,7 +81,7 @@
 					</div>
 				</div>
 			@endif
-			
+
 <!--Описание программ-->
 			<div class="programs row">
 				@forelse ( $programm_stages as $programm_stage )
@@ -91,7 +91,6 @@
 					@if ( !empty($exercive) )
 						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
 							<form class="prog-form">
-
 								<div class="row prog-txt-container">	
 									<p class="prog-txt prog-name">{{$exercive->name}}</p>
 									@if ( !empty($programm_stage->repeat_count) )

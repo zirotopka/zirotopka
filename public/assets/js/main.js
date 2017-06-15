@@ -18,4 +18,6 @@ $(document).ready(function(){
 	$( "#program_date_input" ).datepicker();
 
 
+
 })
+
