@@ -12,7 +12,7 @@ function update_training_height() {
 		height = 0;
 
 	$.each(blocks, function( index, value ) {
-		height = $(value).height();
+		height = $(value).outerHeight();
 
 		if ( height > max_height ) {
 			max_height = height;
@@ -20,6 +20,6 @@ function update_training_height() {
 	})	
 
 	$.each(blocks, function( index, value ) {
-		$(value).height( max_height );
+		$(value).outerHeight( max_height );
 	});
 }
