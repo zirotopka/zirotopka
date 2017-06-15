@@ -81,6 +81,67 @@
 					</div>
 				</div>
 			@endif
+
+			<div class="row">
+				@forelse ( $programm_stages as $programm_stage )
+					@php
+				    	$exercive = $programm_stage->exercive;
+				    @endphp
+					<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<div class="row prog-txt-container">	
+							<p class="prog-txt prog-name">{{$exercive->name}}</p>
+							@if ( !empty($programm_stage->repeat_count) )
+								<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
+							@endif 
+							@if ( !empty($programm_stage->time_exercive) )
+								<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
+							@endif 
+							<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
+						</div>
+					</div>
+				@empty
+				@endforelse
+			</div>
+			<div class="row">
+				@forelse ( $programm_stages as $programm_stage )
+					@php
+				    	$exercive = $programm_stage->exercive;
+				    @endphp
+				    <div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					    <div class="row video_holder" data-id="{{$exercive->id}}">
+							@php
+						    	$preview = $exercive->previews->first();
+						    @endphp
+						    @if (!empty($preview))
+						    	<img src="{{ $preview->file_url }}" alt="" style="width: 100%;">
+						    	<img class="btn-play" src="/ico/play.png" alt="">
+						    @endif
+						</div>
+					</div>
+				@empty
+				@endforelse
+			</div>
+			<div class="row">
+				@forelse ( $programm_stages as $programm_stage )
+					@php
+				    	$exercive = $programm_stage->exercive;
+				    @endphp
+				    <div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					    <div class="row video_holder" data-id="{{$exercive->id}}">
+							<form class="prog-form">
+							<div class="row otchet">
+									<div class="load-btn">
+										<img class="load" src="/ico/load.png" alt="">
+										<p class="load-text">Загрузить отчёт</p>
+									</div>
+									<input class="prof-file " type="file">
+								</div>
+							</form>
+						</div>
+					</div>
+				@empty
+				@endforelse
+			</div>
 <!--Описание программ-->
 			<div class="programs row">
 				@forelse ( $programm_stages as $programm_stage )
@@ -104,7 +165,7 @@
 <!--VIDEO-->
 								<div class="row video_holder" data-id="{{$exercive->id}}">
 									@php
-								    	$preview = $programm_stage->exercive->previews->first();
+								    	$preview = $exercive->previews->first();
 								    @endphp
 								    @if (!empty($preview))
 								    	<img src="{{ $preview->file_url }}" alt="" style="width: 100%;">
