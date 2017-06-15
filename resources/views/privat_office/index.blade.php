@@ -12,8 +12,9 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
+    <script type="text/javascript" src="/assets/privat_account/account.js?123"></script>
     <script type="text/javascript" src="/assets/js/video-btn.js?123"></script>
-
+	
 @overwrite
 
 

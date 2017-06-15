@@ -24,7 +24,7 @@ class ProgrammTableSeeder extends Seeder
         File::truncate();
 
     	$exercive_array = [
-    		['slug' => 'berpie', 'name' => 'Берпи с отжиманием', 'description' => 'Берпи с отжиманием', 'file_url' => '/video/trainings/birpie.mp4', 'preview' => '/image/test/preview1.png' ],
+    		['slug' => 'berpie', 'name' => 'Берпи с отжиманием', 'description' => 'Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием', 'file_url' => '/video/trainings/birpie.mp4', 'preview' => '/image/test/preview1.png' ],
     		['slug' => 'jump', 'name' => 'Прыжки на скакалке', 'description' => 'Прыжки на скакалке', 'file_url' => '/video/trainings/jump.mp4', 'preview' => '/image/test/preview2.png'],
     	];
 
