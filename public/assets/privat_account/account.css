@@ -18,12 +18,14 @@
 .t-cal{
 	width: 100%;
 	font-weight: bold;
+	position: relative;
 }
 
 .box-cal{
 	width: 50px;
 	height: 35px;
 	border-right:  0.5px solid #ffb35d;
+
 }
 
 .bg-warning{
@@ -219,11 +221,12 @@
 	color:white;
 	z-index: 10;
 	width: 20em;
-	margin: 1.2em -1.56131em;
+	margin: 1.2em 0;
 	position: absolute;
 	visibility: hidden;
 	padding: 1em;
 	text-align: left;
+	display: block;
 }
 
 .box-cal:hover span, .box-cal:hover{
