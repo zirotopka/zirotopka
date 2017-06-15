@@ -28,18 +28,36 @@
 <!--Календарь-->
 		@if ( !empty($user->current_programm_id) )
 			@if ( !empty($programm_days) )
+				@php
+					$start_class_key = 0;
+					if ( !empty($user->current_day) ) {
+						$start_class_key = $user->current_day;
+					}
+				@endphp
 				<div class="calendar">
 					<div class="day-number">
 						<table class="t-cal">
 							<tr class="num-cal">
 								@foreach ( $programm_days as $program_day )
-									<td>{{$program_day->day}}</td>
+									@php
+										$cal_class = '';
+										if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
+											$cal_class = 'hidden-xs hidden-sm';
+										}
+									@endphp
+										
+									<td class="{{$cal_class}}">{{$program_day->day}}</td>
 								@endforeach
 							</tr>
 							<tr>
 								@foreach ( $programm_days as $program_day )
 									@php
 										$difficult = $difficult_array[$program_day->difficult];
+										
+										$cal_class = '';
+										if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
+											$cal_class = 'hidden-xs hidden-sm';
+										}
 				
 										$class = '';
 
@@ -56,25 +74,25 @@
 
 									@endphp
 									
-										@if ( empty($program_day->status) )
+									@if ( empty($program_day->status) )
 
-											<td class="box-cal {{$class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 2em 2em; background-position: center;">
-												<span>
-													<h3>Ура выходной!!!</h3>
-												</span>
-											</td>
-										@else
-											<td class="box-cal {{$class}}">
-												<span>
-													@if ( !empty($difficult) )
-												  		<p class="{{ $difficult['color'] }}">Уровень сложности: {{ $difficult['text'] }}</p>
-												  	@else 
-														<p>Сложность: - </p>
-												  	@endif
-												  	<p>Время выполнения:{{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
-												</span>
-											</td>
-										@endif
+										<td class="box-cal {{$class}} {{$cal_class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 2em 2em; background-position: center;">
+											<span>
+												<h3>Ура выходной!!!</h3>
+											</span>
+										</td>
+									@else
+										<td class="box-cal {{$class}} {{$cal_class}}">
+											<span>
+												@if ( !empty($difficult) )
+											  		<p class="{{ $difficult['color'] }}">Уровень сложности: {{ $difficult['text'] }}</p>
+											  	@else 
+													<p>Сложность: - </p>
+											  	@endif
+											  	<p>Время выполнения:{{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
+											</span>
+										</td>
+									@endif
 												
 								@endforeach	
 							</tr>
