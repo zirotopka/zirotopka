@@ -151,6 +151,7 @@
 	font-weight: bolder;
 	height: 100%;
 	margin: 0 0 1em 0;
+	vertical-align: middle;
 }
 
 @media screen and (max-width: 47.95em) {
