@@ -132,6 +132,9 @@
 									</div>
 									<input class="prof-file " type="file">
 								</div>
+									<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
+								</div>
+									<p class="load-text">Загрузить отчёт</p> -->
 
 							</form>
 						</div>
