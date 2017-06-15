@@ -91,7 +91,7 @@
 					@if ( !empty($exercive) )
 						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
 							<form class="prog-form">
-								<div class="row prog-txt-container">	
+								<div class="prog-txt-container">	
 									<p class="prog-txt prog-name">{{$exercive->name}}</p>
 									@if ( !empty($programm_stage->repeat_count) )
 										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
@@ -102,7 +102,7 @@
 									<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
 								</div>
 <!--VIDEO-->
-								<div class="row video_holder" data-id="{{$exercive->id}}">
+								<div class="video_holder" data-id="{{$exercive->id}}">
 									@php
 								    	$preview = $exercive->previews->first();
 								    @endphp
@@ -112,7 +112,7 @@
 								    @endif
 								</div>
 
-								<div class="row otchet">
+								<div class="otchet">
 									<div class="load-btn">
 										<img class="load" src="/ico/load.png" alt="">
 										<p class="load-text">Загрузить отчёт</p>
