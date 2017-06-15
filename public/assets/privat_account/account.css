@@ -232,7 +232,7 @@
 	color:white;
 	z-index: 10;
 	width: 20em;
-	margin: 2.5em 0;
+	margin: 1.2em 0;
 	position: absolute;
 	display: none;
 	padding: 1.5em 0em 1em 2em;
@@ -240,7 +240,7 @@
 }
 
 .box-cal:hover span, .box-cal:hover{
-	display: block;
+	display: table-cell;
 	background-color: #f36d00;
 }
 
