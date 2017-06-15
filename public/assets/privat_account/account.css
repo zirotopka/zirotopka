@@ -59,7 +59,7 @@
 }
 
 .prog-txt{
-	margin: 1em 0 0 2em;
+	margin: 1em 0.5em 0 2em;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -69,14 +69,16 @@
 	font-weight: normal;
 	text-transform: uppercase;
 	color: #1b3149;
-	margin: 2em 0 0 2em;
+	margin: 2em 0.5em 0 2em;
+	word-wrap: break-word;
 
 }
 
 .prog-descr{
 	font-family: Suns;
 	font-size: 14px;
-	margin: 1em 0 1.5em 2.3em;
+	margin: 1em 0.5em 1.5em 2.3em;
+	word-wrap: break-word;
 }
 
 .prog-count{
