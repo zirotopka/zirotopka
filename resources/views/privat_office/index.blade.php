@@ -100,7 +100,6 @@
 <!--VIDEO-->
 								<div class="video_holder">
 									<button type="button" class="video-btn" data-toggle="modal" data-target="#video-moadl">
-										<img src="/video/vdo-img1.png" alt="" style="width:100%;">
 										<img class="btn-play" src="/ico/play.png" alt="">
 									</button>
 									
@@ -127,8 +126,11 @@
 									</div>
 								</div>
 								<div class="otchet">
+									<div class="load-btn">
+										<img class="load" src="/ico/load.png" alt="">
+										<p class="load-text">Загрузить отчёт</p>
+									</div>
 									<input class="prof-file " type="file">
-									<p class="load-text">Загрузить отчёт</p>
 								</div>
 
 							</form>

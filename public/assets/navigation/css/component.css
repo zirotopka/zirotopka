@@ -18,11 +18,6 @@ body,
 	background: white;
 }
 
-.st-content,
-.st-content-inner {
-	position: relative;
-}
-
 .st-container {
 	position: relative;
 	overflow: hidden;

@@ -64,10 +64,6 @@
 	font-weight: bold;
 }
 
-.prog-txt-container{
-	height: 12em;
-}
-
 .prog-name{
 	font-family: 'GilroyBold';
 	font-weight: normal;
@@ -85,21 +81,28 @@
 }
 
 .btn-play{
-	position: absolute;
-	z-index: 1;
 	height: 5vw;
 	width: 5vw;
-	margin: 15% 0 0 -60%;
+	margin: 0;
 }
 
-.video-btn{
+.video-btn, .video-btn:hover{
 	width: 100%;
-	height: 100%;
+	background: url(/video/vdo-img1.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 13vw;
 }
+
+.video_holder{
+	text-align: center;
+}
+
 
 .prof-file{
 	padding: 0;
-	height: 100%;
+	margin: -4em 0 0 0;
+	height: 6em;
 	width: 100%;
 	opacity:0;
     filter:alpha(opacity:0);
@@ -119,23 +122,29 @@
 }
 
 .otchet{
-	background: url('/ico/load.png');
-	background-repeat: no-repeat;
-	background-size: 3em;
-	overflow: hidden;
-	background-position: 20% 45%;
-	height: 100px;
+	width: 100%;
+	height: 5em;
 	vertical-align: middle;
+}
+
+.load-btn{
+	text-align: center;
+	margin: 1em 0 0 0;
+}
+
+.load{
+	width: 3em;
+	display: inline-block;
 }
 
 
 .load-text{
+	display: inline-block;
 	font-weight: bolder;
 	height: 100%;
-	margin: -4.5em 0 0 7em;
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 47.95em) {
 	.logo{
 		padding: 3em 0 0 0 !important;
 	}
@@ -154,18 +163,18 @@
 	.send-proof{
 		padding: 0px;
 	}
-	.load-text{
-		margin: -4.5em 0 0 50% !important;
-	}
 	.btn-play{
 		height: 20vw !important;
 		width: 20vw !important;
-		margin: 15% 0 0 -58% !important;
+		margin:  0 !important;
+	}
+	.video-btn, .video-btn:hover{
+		height: 55vw !important;
 	}
 
 }
 
-@media screen and (max-width: 62em) {
+@media screen and (max-width: 61.95em) {
 	.logo{
 		padding: 3em 0 0 0 !important;
 	}
@@ -185,13 +194,15 @@
 	.send-proof{
 		padding: 0px;
 	}
-	.load-text{
-		margin: -4.5em 0 0 50%;
-	}
+
 	.btn-play{
 		height: 13vw;
 		width: 13vw;
-		margin: 12% 0 0 -62%;
+		margin: 0;
+	}
+
+	.video-btn, .video-btn:hover{
+		height: 28vw;
 	}
 
 }
