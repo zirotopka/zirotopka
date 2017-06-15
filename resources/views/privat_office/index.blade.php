@@ -66,7 +66,7 @@
 											<td class="box-cal {{$class}}">
 												<span>
 													@if ( !empty($difficult) )
-												  		<p class="{{ $difficult['color'] }}">Сложность: {{ $difficult['text'] }}</p>
+												  		<p class="{{ $difficult['color'] }}">Уровень сложности: {{ $difficult['text'] }}</p>
 												  	@else 
 														<p>Сложность: - </p>
 												  	@endif
@@ -87,7 +87,7 @@
 					@if ( !empty($programm_stage->exercive) )
 						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
 							<form class="prog-form">
-								<div class="prog-txt-container">	
+								<div class="row prog-txt-container">	
 									<p class="prog-txt prog-name">{{$programm_stage->exercive->name}}</p>
 									@if ( !empty($programm_stage->repeat_count) )
 										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
@@ -95,10 +95,10 @@
 									@if ( !empty($programm_stage->time_exercive) )
 										<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
 									@endif 
-									<p class="prog-txt" style="margin-bottom:  2em;">{{$programm_stage->exercive->description}}</p>
+									<p class="prog-txt prog-descr"> {{$programm_stage->exercive->description}}</p>
 								</div>
 <!--VIDEO-->
-								<div class="video_holder">
+								<div class="row video_holder">
 									<button type="button" class="video-btn" data-toggle="modal" data-target="#video-moadl">
 										<img class="btn-play" src="/ico/play.png" alt="">
 									</button>
@@ -125,7 +125,7 @@
 									  </div>
 									</div>
 								</div>
-								<div class="otchet">
+								<div class=" row otchet">
 									<div class="load-btn">
 										<img class="load" src="/ico/load.png" alt="">
 										<p class="load-text">Загрузить отчёт</p>
