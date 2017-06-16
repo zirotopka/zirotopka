@@ -185,7 +185,7 @@ button:hover {
 }
 
 .envel{
-	width: 3.2em;
+	width: 2.7em;
 }
 
 .heart{
@@ -351,4 +351,11 @@ button:focus {
 
 .icon{
 	font-weight: bold;
+}
+
+.user-name{
+	display: inline-block; 
+	font-family: GilroyLight; 
+	font-weight: bold;
+	font-size: 1em;
 }

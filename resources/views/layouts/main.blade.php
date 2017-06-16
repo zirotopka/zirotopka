@@ -92,7 +92,7 @@
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <div style="display: inline-block;">{{$user->first_name.' '.$user->last_name}}</div>
+                                    <div class="user-name">{{$user->first_name.' '.$user->last_name}}</div>
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
 
                                 </button>

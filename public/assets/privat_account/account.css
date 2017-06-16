@@ -28,7 +28,7 @@
 }
 
 .bg-warning{
-	background-color: #ff9319;
+	background-color: #b96507;
 }
 
 .bg-success{
@@ -37,10 +37,11 @@
 	background-size: 2em;
 	background-repeat: no-repeat;
 	background-position: center;
+	border-right-color: white;
 }
 
 .bg-info{
-	background-color: #ecba82;
+	background-color: #ff9319;
 }
 
 .calendar{
@@ -127,11 +128,13 @@
 }
 
 .send-proof-file{
-	background: url('/ico/send.png') ;
-	background-size: cover;
+	background-color: #232323;
 	float: none;
 	margin-top: 4em;
-	padding: 1em 4em;
+	padding: 1.5em 4em;
+	font-family: GilroyLight;
+	text-transform: uppercase;
+	border-radius: 0.3em;
 }
 
 .otchet{
@@ -158,6 +161,7 @@
 	margin: 0 0 0 1em;
 	vertical-align: text-top;
 }
+
 
 @media screen and (max-width: 47.95em) {
 	.logo{
@@ -237,11 +241,13 @@
 	display: none;
 	padding: 1.5em 0em 1em 2em;
 	text-align: left;
+	right: auto;
 }
 
 .box-cal:hover span, .box-cal:hover{
 	display: table-cell;
 	background-color: #f36d00;
+
 }
 
 .chose-prog-container{
@@ -251,7 +257,7 @@
 	height: 20em;
 }
 
-#mask {
+.mask {
     background-color:rgba(0,0,0,.3);
     height:100%;
     position:absolute;
@@ -260,3 +266,6 @@
     left:0;
 }
 
+.fa-star, .fa-star-o{
+	font-size: 1em !important;
+}

@@ -53,6 +53,7 @@
 								@foreach ( $programm_days as $program_day )
 									@php
 										$difficult = $difficult_array[$program_day->difficult];
+										$emp_star= 3 - $program_day->difficult;
 										
 										$cal_class = '';
 										if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
@@ -66,7 +67,8 @@
 											$class = 'bg-success';
 										} else if ( empty($user->current_day) || $user->current_day < $program_day->day ) {
 											{{-- Если день не пройден еще --}}
-											$class = 'bg-warning';
+											$class = 'bg-warning' 
+											 ;
 										} else {
 											{{-- Текущий день --}}
 											$class = 'bg-info';
@@ -85,11 +87,21 @@
 										<td class="box-cal {{$class}} {{$cal_class}}">
 											<span>
 												@if ( !empty($difficult) )
-											  		<p class="" style="display: inline-block; width: 65%;">Уровень сложности:</p><div style="display: inline-block; text-align: right;">{{ $difficult['text'] }}</div>
+											  		<p class="" style="display: inline-block; width: 65%;">Уровень сложности:</p>
+											  		<div style="display: inline-block; text-align: center; width: 30%">
+															@for ($i=0;$i<$program_day->difficult;$i++)
+																<i class="fa fa-star"></i>
+																<!--<img src="/ico/full-star.png" alt="">-->
+												  			@endfor
+															@for ($i=0;$i<$emp_star;$i++)
+																<i class="fa fa-star-o"></i>
+																<!--<img src="/ico/star.png" alt="">-->
+												  			@endfor
+													</div>
 											  	@else 
 													<p>Сложность: - </p>
 											  	@endif
-											  	<p style="display: inline-block; width: 65%;">Продолжительность тренировки:</p><div style="display: inline-block; text-align: right; vertical-align: top;">{{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</div>
+											  	<p style="display: inline-block; width: 65%;">Продолжительность тренировки:</p><div style="display: inline-block; text-align: center; width: 30%; vertical-align: top;">~{{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</div>
 											</span>
 										</td>
 									@endif
@@ -127,7 +139,7 @@
 								    @endphp
 								    @if (!empty($preview))
 								    	<img src="{{ $preview->file_url }}" alt="" style="width: 100%;">
-								    	<div id="mask"></div>
+								    	<div class="mask"></div>
 								    	<img class="btn-play" src="/ico/play.png" alt="">
 								    @endif
 								</div>
