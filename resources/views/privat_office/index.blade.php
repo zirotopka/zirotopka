@@ -28,18 +28,36 @@
 <!--Календарь-->
 		@if ( !empty($user->current_programm_id) )
 			@if ( !empty($programm_days) )
+				@php
+					$start_class_key = 0;
+					if ( !empty($user->current_day) ) {
+						$start_class_key = $user->current_day;
+					}
+				@endphp
 				<div class="calendar">
 					<div class="day-number">
 						<table class="t-cal">
 							<tr class="num-cal">
 								@foreach ( $programm_days as $program_day )
-									<td>{{$program_day->day}}</td>
+									@php
+										$cal_class = '';
+										if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
+											$cal_class = 'hidden-xs hidden-sm';
+										}
+									@endphp
+										
+									<td class="{{$cal_class}}">{{$program_day->day}}</td>
 								@endforeach
 							</tr>
 							<tr>
 								@foreach ( $programm_days as $program_day )
 									@php
 										$difficult = $difficult_array[$program_day->difficult];
+										
+										$cal_class = '';
+										if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
+											$cal_class = 'hidden-xs hidden-sm';
+										}
 				
 										$class = '';
 
@@ -56,25 +74,25 @@
 
 									@endphp
 									
-										@if ( empty($program_day->status) )
+									@if ( empty($program_day->status) )
 
-											<td class="box-cal {{$class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 2em 2em; background-position: center;">
-												<span>
-													<h3>Ура выходной!!!</h3>
-												</span>
-											</td>
-										@else
-											<td class="box-cal {{$class}}">
-												<span>
-													@if ( !empty($difficult) )
-												  		<p class="{{ $difficult['color'] }}">Уровень сложности: {{ $difficult['text'] }}</p>
-												  	@else 
-														<p>Сложность: - </p>
-												  	@endif
-												  	<p>Время выполнения:  {{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</p>
-												</span>
-											</td>
-										@endif
+										<td class="box-cal {{$class}} {{$cal_class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 2em 2em; background-position: center;">
+											<span>
+												<h3>Ура выходной!!!</h3>
+											</span>
+										</td>
+									@else
+										<td class="box-cal {{$class}} {{$cal_class}}">
+											<span>
+												@if ( !empty($difficult) )
+											  		<p class="" style="display: inline-block; width: 65%;">Уровень сложности:</p><div style="display: inline-block; text-align: right;">{{ $difficult['text'] }}</div>
+											  	@else 
+													<p>Сложность: - </p>
+											  	@endif
+											  	<p style="display: inline-block; width: 65%;">Продолжительность тренировки:</p><div style="display: inline-block; text-align: right; vertical-align: top;">{{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</div>
+											</span>
+										</td>
+									@endif
 												
 								@endforeach	
 							</tr>
@@ -82,7 +100,7 @@
 					</div>
 				</div>
 			@endif
-			
+
 <!--Описание программ-->
 			<div class="programs row">
 				@forelse ( $programm_stages as $programm_stage )
@@ -92,29 +110,29 @@
 					@if ( !empty($exercive) )
 						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
 							<form class="prog-form">
-
-								<div class="row prog-txt-container">	
+								<div class="prog-txt-container">	
 									<p class="prog-txt prog-name">{{$exercive->name}}</p>
 									@if ( !empty($programm_stage->repeat_count) )
 										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
 									@endif 
 									@if ( !empty($programm_stage->time_exercive) )
-										<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
+										<p class="prog-txt prog-count">Время выполнения:{{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
 									@endif 
 									<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
 								</div>
 <!--VIDEO-->
-								<div class="row video_holder" data-id="{{$exercive->id}}">
+								<div class="video_holder" data-id="{{$exercive->id}}">
 									@php
 								    	$preview = $exercive->previews->first();
 								    @endphp
 								    @if (!empty($preview))
 								    	<img src="{{ $preview->file_url }}" alt="" style="width: 100%;">
+								    	<div id="mask"></div>
 								    	<img class="btn-play" src="/ico/play.png" alt="">
 								    @endif
 								</div>
 
-								<div class="row otchet">
+								<div class="otchet">
 									<div class="load-btn">
 										<img class="load" src="/ico/load.png" alt="">
 										<p class="load-text">Загрузить отчёт</p>
@@ -136,7 +154,7 @@
 			</div>
 
 			<!-- --------------------------------------------------------------- -->
-			<div class="modal fade" id="video-modal" tabindex="1" role="dialog" aria-labelledby="videoModal">
+			<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
 			  <div class="modal-dialog modal-lg" role="document">
 			    <div class="modal-content">
 			      <div class="video-modal modal-body">

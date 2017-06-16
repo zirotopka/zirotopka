@@ -60,7 +60,7 @@
                             </div>
                        @if ($user = Sentinel::check())
                             <!-- <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs"> -->
-                            <div class="tooltipstered immunitet col-lg-3 col-md-3 hidden-sm hidden-xs" data-tooltip-content="#immun_tooltip_content">
+                            <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs">
                                 <span class="nav-text" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
                                     <?php 
@@ -80,10 +80,6 @@
                                             <i class="fa fa-heart-o fa-2x c-white" aria-hidden="true"></i>
                                         @endfor
                                     @endif
-
-                                    {{-- @for ($i=0; $i<5; $i++) --}}
-                                        <!-- <img class="heart" src="/ico/heart.png" alt=""> -->
-                                    {{-- @endfor --}}
                                 <!-- </div> -->
                             </div>
                             <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" >

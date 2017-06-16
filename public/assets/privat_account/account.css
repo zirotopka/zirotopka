@@ -45,6 +45,7 @@
 
 .calendar{
 	margin: 12em 0 0 0;
+	position: relative;
 }
 
 .programs{
@@ -59,7 +60,7 @@
 }
 
 .prog-txt{
-	margin: 1em 0 0 1.7em;
+	margin: 1em 2em 0 2.5em;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -69,14 +70,16 @@
 	font-weight: normal;
 	text-transform: uppercase;
 	color: #1b3149;
-	margin: 2em 0 0 1.7em;
+	margin: 2em 2em 0 2.5em;
+	word-wrap: break-word;
 
 }
 
 .prog-descr{
 	font-family: Suns;
 	font-size: 14px;
-	margin: 1em 0 1.5em 2em;
+	margin: 1em 2em 1.5em 2.8em;
+	word-wrap: break-word;
 }
 
 .prog-count{
@@ -90,7 +93,8 @@
 .btn-play{
 	height: 5vw;
 	width: 5vw;
-	margin: -15vw 0 0 0;
+	margin: -9.5vw 0 0 -2.5vw;
+	position: absolute;
 }
 
 .video-btn, .video-btn:hover{
@@ -103,13 +107,14 @@
 
 .video_holder{
 	text-align: center;
-	margin: 0;
+	margin: 2em 0 0 0;
+	cursor: pointer;
 }
 
 
 .prof-file{
 	padding: 0;
-	margin: -5em 0 0 1em;
+	margin: -19.5em 0 0 0;
 	height: 6.5em;
 	width: 100%;
 	opacity:0;
@@ -137,7 +142,7 @@
 
 .load-btn{
 	text-align: center;
-	margin: 0.3em 0 0 0;
+	margin: 1.5em 0 15em 0;
 }
 
 .load{
@@ -150,7 +155,7 @@
 	display: inline-block;
 	font-weight: bolder;
 	height: 100%;
-	margin: 0 0 1em 0;
+	margin: 0 0 0 1em;
 	vertical-align: text-top;
 }
 
@@ -176,7 +181,7 @@
 	.btn-play{
 		height: 20vw !important;
 		width: 20vw !important;
-		margin:  -60vw 0 0 0 !important;
+		margin:  -37vw 0 0 -2em !important;
 	}
 	.video-btn, .video-btn:hover{
 		height: 55vw !important;
@@ -206,7 +211,7 @@
 	.btn-play{
 		height: 13vw;
 		width: 13vw;
-		margin: -29vw 0 0 0;
+		margin: -21vw 0 0 -8vw;
 	}
 
 	.video-btn, .video-btn:hover{
@@ -229,14 +234,13 @@
 	width: 20em;
 	margin: 1.2em 0;
 	position: absolute;
-	visibility: hidden;
-	padding: 1em;
+	display: none;
+	padding: 1.5em 0em 1em 2em;
 	text-align: left;
-	display: block;
 }
 
 .box-cal:hover span, .box-cal:hover{
-	visibility: visible;
+	display: table-cell;
 	background-color: #f36d00;
 }
 
@@ -255,3 +259,4 @@
     top:0;
     left:0;
 }
+
