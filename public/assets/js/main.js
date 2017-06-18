@@ -7,14 +7,7 @@ jQuery.ajaxSetup({
 });
 
 $(document).ready(function(){
-	$('.tooltipstered').tooltipster({
-   theme: ['tooltipster-borderless', 'tooltipster-borderless-customized'],
-   delay: 200,
-   maxWidth: 400,
-   side: 'bottom',
-	});
-
-	$('#choose_programe_form').modal('show')
+	$('#choose_programe_form').modal('show');
 	$( "#program_date_input" ).datepicker();
 
 
