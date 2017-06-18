@@ -166,8 +166,8 @@
 			</div>
 
 			<!-- --------------------------------------------------------------- -->
-			<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
-			  <div class="modal-dialog modal-lg" role="document">
+			<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="videoModal">
+			  <div class="modal-dialog modal-lg">
 			    <div class="modal-content">
 			      <div class="video-modal modal-body">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
