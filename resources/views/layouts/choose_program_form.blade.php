@@ -10,15 +10,15 @@
           <div class="left-progrm-part col-lg-5">
             <p class="prog-bold-txt">ВЫБЕРИТЕ ПРОГРАММУ</p>
             <img src="/ico/drop-ico.png" alt="" class="ddicc">
-            <select class="selectpicker" name="program_option">
+            <select class="selectpicker" name="program_id" id="program_id" >
               @foreach ($programs as $program )
                 <option value="{{$program->id}}">{{$program->name}} </option>  
 
-
               @endforeach
             </select>
-           <br>
-          <p class="prog-bold-txt slate">ВЫБЕРИТЕ ДАТУ <br> начала тренировок</p>
+            
+            <br>
+          <p class="prog-bold-txt slate">ВЫБЕРИТЕ ДАТУ начала тренировок</p>
           <div class="progr-drop">      
             <div class="select-side" style="height: 2.6em; z-index: 2; margin: 0.2em; ">
               <img src="/ico/drop-ico.png"></img>
