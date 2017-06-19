@@ -282,10 +282,6 @@ button:hover {
 	height: 100%;
 }
 
-.dropdown-menu{
-	margin: 0 24px 0;
-}
-
 .user_dropdown{
 	color: white;
 	background-color: #282828;
@@ -330,10 +326,6 @@ button:hover {
 
 }
 
-.choose-program-form{
-	height: 500px;
-}
-
 button, 
 button:active, 
 button:focus {
@@ -359,3 +351,4 @@ button:focus {
 	font-weight: bold;
 	font-size: 1em;
 }
+

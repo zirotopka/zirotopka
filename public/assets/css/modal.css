@@ -1,3 +1,10 @@
+.left-progrm-part{
+	margin: 2em 0 0 0;
+}
+
+.slate{
+	margin: 2em 0 1em 0;
+}
 .video-modal{
 	background-color: #f48931;
 }
@@ -15,6 +22,159 @@
 	margin: 1em 0 0 0;
 }
 
+
+		/*Окно выбора программы*/
+.checkboxiki{
+	margin: 5em 0 0 0;
+	text-align: left;
+}
+
+.checkboxiki ul{
+	list-style-type: none;
+	vertical-align: center;
+}
+.ddicc{
+	margin: 1.35em 0 0 15.35em;
+	position: absolute;
+	z-index: 3;
+	pointer-events: none;
+
+}
 .chs-program-widnow{
-	width: 65em;
+	width: 60em;
+}
+
+.choose-program-form{
+	height: 32em;
+}
+
+.prog-bold-txt{
+	font-family: GilroyBold;
+	font-size: 1em;
+	color: #FF9319;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: left;
+	margin-left: 2.3em;
+}
+
+.progr-drop{
+	position: relative;
+	width: 17em;
+}
+
+.drp-control{
+	height: 3em;
+	border:0.1em solid #b3b3b3;
+	border-radius: 0.3em;
+	color: #7d7d7d;
+	appearance: none;
+	-moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 0;
+    padding-left: 2em;
+    left: 2.8em;
+}
+
+.drp-control:hover {
+	background-color: #e0e0e0;
+	background-position: 0 -15px;
+	color: #333;
+	border-color: #adadad;
+}
+
+.drp-control:focus{
+    outline: none;
+    box-shadow: none;	
+	border:0.1em solid #b3b3b3;
+	border-radius: 0.3em;
+	outline: thin dotted #333 !important;
+	outline: 5px auto -webkit-focus-ring-color !important;
+	outline-offset: -2px;
+	background-color: #e0e0e0;
+    background-position: 0 -15px;
+	color: #333;
+	border-color: #8c8c8c;
+}
+
+.drp-control:active{
+	background-color: #e0e0e0;
+	border-color: #dbdbdb;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	color: #333;
+}
+.select-side{
+	pointer-events: none;
+    width: 3em;
+    position: absolute;
+    top: 0px;
+    height: 80%;
+    left: 16.4em;
+    padding: 0.6em 0 0 0;
+    margin: 0.4em 0 0 0;
+    border-left: 0.1em solid #b3b3b3;
+}
+
+.drp-control option{
+	height: 3em;
+	border: 0.1em solid #b3b3b3;
+
+}
+
+.bootstrap-select button, .bootstrap-select button:hover, .bootstrap-select button:active,.bootstrap-select button:focus ,input, select, select:hover, select:focus, select:active,
+option, option:hover, option:active ,option:focus,
+.form-control::-moz-focus-inner,.form-control:active,
+.form-control:hover,.form-control:focus{
+	outline: none;
+	cursor: pointer;
+}
+
+/*--Select--*/
+
+.bootstrap-select{
+	width: 17em !important;
+	height: 3em !important;
+}
+
+.bootstrap-select button{
+	height: 3em;
+	background: none;
+	border: 0.1em solid #b3b3b3;
+	color: #7d7d7d;
+	font-family: sans-serif;
+	padding-right: 2.6em !important;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+}
+
+.filter-option{
+	height: 100%;
+	padding: 0.5em 0 0 2em;
+	border-right: 0.1em solid #b3b3b3; 
+}
+
+.bootstrap-select button .bs-caret{
+	display: none;
+}
+
+.open ul li{
+	height: 3em;
+} 
+
+.open ul li a{
+	height: 100%;
+	padding: 0.7em 0 0 2.78em !important;
+}
+.open ul li a:hover{
+	border-left: 0.4em solid #FF9319;}
+
+.right-progrm-part{
+	text-align: left;
+	padding: 1em 0 0 4em;
+}
+
+.prg-img {
+
 }
