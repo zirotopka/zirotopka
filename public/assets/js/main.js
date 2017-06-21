@@ -7,17 +7,26 @@ jQuery.ajaxSetup({
 });
 
 $(document).ready(function(){
-	$('.tooltipstered').tooltipster({
-   theme: ['tooltipster-borderless', 'tooltipster-borderless-customized'],
-   delay: 200,
-   maxWidth: 400,
-   side: 'bottom',
+	$('#choose_programe_form').modal('show');
+	$("#program_bnr").attr('src',"/image/test/r.one_start.png");
+	$('.selectpicker').on('hidden.bs.select', function (e) {
+  	var	program_id = $('.selectpicker').val();
+  		if (program_id == 1) {
+  			$("#program_bnr").attr('src',"/image/test/r.one_start.png");
+  				
+  		}
+  		else if (program_id == 2){
+  			$("#program_bnr").attr('src',"/image/test/r.one_pro.png");
+  		}
+  		else if (program_id == 3){
+  			$("#program_bnr").attr('src',"/image/test/r.one_run.png");
+  		}
+  		else if (program_id == 4){
+  			$("#program_bnr").attr('src',"/image/test/r.one_run+.png");
+  		}
+  		else if (program_id == 5){
+  			$("#program_bnr").attr('src',"/image/test/r.one_power.png");
+  		}
 	});
-
-	$('#choose_programe_form').modal('show')
-	$( "#program_date_input" ).datepicker();
-
-
-
 })
 

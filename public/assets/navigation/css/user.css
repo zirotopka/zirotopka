@@ -82,7 +82,7 @@ a:hover, a:focus {
 	background-color: #282828;
 	position: fixed;
 	width: 100%;
-	z-index: 10;
+	z-index: 1;
 }
 .codrops-top a {
 	display: inline-block;
@@ -185,7 +185,7 @@ button:hover {
 }
 
 .envel{
-	width: 3.2em;
+	width: 2.7em;
 }
 
 .heart{
@@ -282,10 +282,6 @@ button:hover {
 	height: 100%;
 }
 
-.dropdown-menu{
-	margin: 0 24px 0;
-}
-
 .user_dropdown{
 	color: white;
 	background-color: #282828;
@@ -330,10 +326,6 @@ button:hover {
 
 }
 
-.choose-program-form{
-	height: 500px;
-}
-
 button, 
 button:active, 
 button:focus {
@@ -352,3 +344,11 @@ button:focus {
 .icon{
 	font-weight: bold;
 }
+
+.user-name{
+	display: inline-block; 
+	font-family: GilroyLight; 
+	font-weight: bold;
+	font-size: 1em;
+}
+

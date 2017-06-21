@@ -9,15 +9,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 	<link href="/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="/assets/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <link href="/assets/bootstrap-select/dist/css/bootstrap-select.min.css" type="text/css" rel="stylesheet">
     <link href="/assets/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <link href="/assets/navigation/css/component.css" type="text/css" rel="stylesheet">
     <link href="/assets/navigation/css/user.css" type="text/css" rel="stylesheet">
     <link href="/assets/css/modal.css" type="text/css" rel="stylesheet">
-    <link href="/assets/tooltipster-master/dist/css/tooltipster.bundle.min.css" type="text/css" rel="stylesheet">
-    <link href="/assets/tooltipster-master/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" type="text/css" rel="stylesheet">
-    <link href="/assets/css/tooltips.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+    <link rel="stylesheet" href="/assets/jquery-ui-1.12.1.custom/jquery-ui.min.css">
 
 
 	<title>Жиротопка</title>
@@ -92,7 +89,7 @@
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <div style="display: inline-block;">{{$user->first_name.' '.$user->last_name}}</div>
+                                    <div class="user-name">{{$user->first_name.' '.$user->last_name}}</div>
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
 
                                 </button>
@@ -152,15 +149,17 @@
 </div>
 -->
 
-
     <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/assets/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="/assets/js/video.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>    
     <script type="text/javascript" src="/assets/navigation/js/classie.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/sidebarEffects.js"></script>
-    <script type="text/javascript" src="/assets/tooltipster-master/dist/js/tooltipster.bundle.min.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="/assets/js/calendar.js"></script>
+
     
     @section('js')
         
