@@ -100,9 +100,9 @@
                             </div>
                         @else
                             <div class="reg_log_btn">
-                                <!-- <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#registr">
+                                <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#registr">
                                     Регистрация
-                                </button> -->
+                                </button>
                                 <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#login">
                                     Войти
                                 </button>

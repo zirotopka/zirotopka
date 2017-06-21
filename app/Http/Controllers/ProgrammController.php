@@ -10,6 +10,21 @@ use Carbon\Carbon;
 
 class ProgrammController extends Controller
 {	
+
+    /**
+     * получить программу
+     */
+    public function get_program(Request $request) {
+        $program = Programm::select([
+                'id',
+                'description',
+                'cost',
+                'name'
+            ])->where('id','=',$request->get('id'))
+            ->first();
+
+        return $program;
+    }
 	/**
 	 * Выбор программы
 	 */
