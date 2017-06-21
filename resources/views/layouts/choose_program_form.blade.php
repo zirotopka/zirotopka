@@ -28,13 +28,22 @@
           <div class="checkboxiki">
             <ul>
               <li>
-                <input type="checkbox" class=""> <a class="" href="#">Мне больше 14.</a>
+                <input type="checkbox" id="check1"> 
+                <label for="check1">
+                  <a class="" href="#">Мне больше 14.</a>
+                </label>
               </li>
               <li>
-                <input type="checkbox" class=""> <a class="" href="#">Ознакомился (-ась) с офертой.</a>
+                <input type="checkbox" id="check2">
+                <label for="check2">
+                  <a class="" href="#">Ознакомился (-ась) с офертой.</a>
+                </label>
               </li>
               <li>
-                <input type="checkbox" class=""> <a class="" href="#">Ознакомился (-ась) с политикой конфиденциальности.</a>                
+                <input type="checkbox" id="check3">    
+                <label for="check3">
+                  <a class="" href="#">Ознакомился (-ась) с политикой конфиденциальности.</a>             
+                </label>
               </li>
             </ul>
           </div>
