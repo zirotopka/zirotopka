@@ -4,6 +4,11 @@
 }
 
 @font-face{
+	font-family:'MuseoSansCyrl'; 
+	src:url('/fonts/MuseoSansCyrl.otf');
+}
+
+@font-face{
 	font-family:'GilroyBold'; 
 	src:url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.otf');
 }

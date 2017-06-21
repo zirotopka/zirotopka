@@ -56,11 +56,11 @@ class ProgrammTableSeeder extends Seeder
     	}
 
         $trainings = [
-            ['slug' => 'r.one_start','name' => 'R.ONE START','description' => 'Программа предназначеная для новичков'],
-            ['slug' => 'r.one_pro','name' => 'R.ONE PRO','description' => 'Программа предназначеная для Про'],
-            ['slug' => 'r.one_runner','name' => 'R.ONE RUNNER','description' => 'Программа предназначеная для бега.'],
-        	['slug' => 'r.one_runner_plus','name' => 'R.ONE RUNNER +','description' => 'Программа предназначеная для бега с бонусами'],
-        	['slug' => 'r.one_power','name' => 'R.ONE POWER','description' => 'Программа предназначеная для самых сильных'],
+            ['slug' => 'r.one_start','name' => 'R.ONE START','description' => 'Программа предназначенная для новичков'],
+            ['slug' => 'r.one_pro','name' => 'R.ONE PRO','description' => 'Программа предназначенная для Про'],
+            ['slug' => 'r.one_runner','name' => 'R.ONE RUNNER','description' => 'Программа предназначенная для бега.'],
+        	['slug' => 'r.one_runner_plus','name' => 'R.ONE RUNNER +','description' => 'Программа предназначенная для бега с бонусами'],
+        	['slug' => 'r.one_power','name' => 'R.ONE POWER','description' => 'Программа предназначенная для самых сильных'],
         ];
 
         foreach ( $trainings as $training ) {
