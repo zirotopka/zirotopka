@@ -11,6 +11,17 @@ $(document).ready(function(){
 	$("#program_bnr").attr('src',"/image/test/r.one_start.png");
 	$('.selectpicker').on('hidden.bs.select', function (e) {
   	var	program_id = $('.selectpicker').val();
+	$("#program_id").change(function () {
+        console.log();
+		jQuery.ajax({
+		            type: "post",
+		            url: '/program/get_program',
+		            data: {id: program_id},
+		            success: function (result) {
+		           		
+		            }
+		        });   
+	});
   		if (program_id == 1) {
   			$("#program_bnr").attr('src',"/image/test/r.one_start.png");
   				
@@ -28,13 +39,7 @@ $(document).ready(function(){
   			$("#program_bnr").attr('src',"/image/test/r.one_power.png");
   		}
 	});
-jQuery.ajax({
-            type: "post",
-            url: 'program/get_program',
-            data: {id},
-            success: function (data) {
-            }
-        });   
+
 });
 
 
