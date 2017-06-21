@@ -6,7 +6,15 @@
 	margin: 2em 0 1em 0;
 }
 .video-modal{
-	background-color: #f48931;
+	height: 100%;
+}
+
+.modal-content{
+	height: 30em;
+}
+
+.video-container{
+	height: 100%;
 }
 
 .close span img{
