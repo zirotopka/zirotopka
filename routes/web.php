@@ -25,5 +25,5 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	Route::post('privat_office/get_exercive_video', [ 'uses' => 'PrivatOfficeController@get_exercive_video' ] );
 
 	Route::post('program/choice_programm', [ 'uses' => 'ProgrammController@choice_program' ] );
-
+	Route::post('program/get_program', [ 'uses' => 'ProgrammController@get_program' ] );
 });

@@ -45,7 +45,11 @@ $( document ).ready(function() {
                 }
             }
         });
+<<<<<<< HEAD
    });
+=======
+   })
+>>>>>>> a9b569677e01a1913778b1f29df978f221a41cd8
     $("#video-modal").on('hide.bs.modal', function () {
       var video = document.getElementsByTagName('video');
       for (var i = 0; i < video.length; i++) {

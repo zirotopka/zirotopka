@@ -170,14 +170,42 @@
 			  <div class="modal-dialog modal-lg" role="document">
 			    <div class="modal-content">
 			      <div class="video-modal modal-body">
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<!--			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				        <span aria-hidden="true">
 				        	<img src="/ico/close.png" alt="">	
 				        </span>
 			        </button>
-			        <p id="video-container">
-			        	
-			        </p>									
+-->		
+					<div class="videoContainer">
+						<p id="video-container"></p>
+						<div class="caption">This is HTML5 video with custom controls</div>
+						<div class="control">
+							<div class="progress">
+								<span class="bufferBar"></span>
+								<span class="timeBar"></span>
+							</div>
+							
+							<div class="btmControl">
+								
+								<div class="mainControl">
+									<a class="btnStop lvl3 btnmain" href="#" tabindex="0" title="Stop play"></a>
+									<a class="btnBck lvl2 btnmain" href="#" tabindex="0" title="Rewind"></a>
+									<a class="btnPlay lvl1 btnmain" href="#" tabindex="0" title="Play/Pause video"></a>
+									<a class="btnFwd lvl2 btnmain" href="#" tabindex="0" title="Fast forward"></a>
+									<a class="btnEnd lvl3 btnmain" href="#" tabindex="0" title="End video"></a>
+								</div>	
+
+								<div class="volume">
+									<div class="sound" title="Mute/Unmute sound"></div>
+									<span class="volumeCover" title="Set volume"></span>
+									<span class="volumeBar"></span>
+								</div>
+							</div>
+							
+						</div>
+						<div class="loading"></div>
+					</div>
+									
 			      </div>
 			    </div>
 			  </div>
