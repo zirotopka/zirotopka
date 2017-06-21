@@ -28,5 +28,13 @@ $(document).ready(function(){
   			$("#program_bnr").attr('src',"/image/test/r.one_power.png");
   		}
 	});
-})
+jQuery.ajax({
+            type: "post",
+            url: 'program/get_program',
+            data: {id},
+            success: function (data) {
+            }
+        });   
+});
+
 

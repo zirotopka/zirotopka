@@ -45,7 +45,7 @@ $( document ).ready(function() {
                 }
             }
         });
-   })
+   });
     $("#video-modal").on('hide.bs.modal', function () {
       var video = document.getElementsByTagName('video');
       for (var i = 0; i < video.length; i++) {
