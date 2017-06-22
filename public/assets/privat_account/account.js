@@ -4,6 +4,19 @@ $( document ).ready(function() {
 	$( window ).resize(function() {
 		update_training_height();
 	});
+
+	$('.otchet').on('click',function(){
+			$(this).find('.load').eq(0).attr('src','/ico/load_act.png');
+			$(this).find('.load').eq(0).attr('style','width:3.1em');
+	});
+	$('.otchet').on('mouseover',function(){
+			$(this).find('.load').eq(0).attr('src','/ico/load_hov.png');
+			$(this).find('.load').eq(0).attr('style','width:3.1em');
+	});
+	$('.otchet').on('mouseout',function(){
+			$(this).find('.load').eq(0).attr('src','/ico/load.png');
+			$(this).find('.load').eq(0).attr('style','width:3em');
+	});
 });
 
 function update_training_height() {

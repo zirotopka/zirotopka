@@ -147,6 +147,32 @@
 	font-family: GilroyLight;
 	text-transform: uppercase;
 	border-radius: 0.3em;
+	width: 23.5em;
+	height: 4.5em;
+}
+
+.send-proof-file:hover{
+	background-color: #232323;
+	float: none;
+	margin-top: 3.8em;
+	padding: 1.5em 4em;
+	font-family: GilroyLight;
+	text-transform: uppercase;
+	border-radius: 0.3em;
+	width: 23.7em;
+	height: 4.7em;
+}
+
+.send-proof-file:active{
+	background-color: black;
+	float: none;
+	margin-top: 3.8em;
+	padding: 1.5em 4em;
+	font-family: GilroyLight;
+	text-transform: uppercase;
+	border-radius: 0.3em;
+width: 23.7em;
+height: 4.7em;
 }
 
 .otchet{
@@ -165,6 +191,10 @@
 	display: inline-block;
 }
 
+.load{
+	width: 3em;
+	display: inline-block;
+}
 
 .load-text{
 	display: inline-block;

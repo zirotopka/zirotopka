@@ -13,11 +13,6 @@
 	src:url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.otf');
 }
 
-@font-face{
-	font-family:'Suns'; 
-	src:url('/fonts/ofont.ru_Microsoft Sans Serif.ttf');
-}
-
 html {
 	background-color: white !important;
 }

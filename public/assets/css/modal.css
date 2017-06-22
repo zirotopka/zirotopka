@@ -208,6 +208,8 @@ option, option:hover, option:active ,option:focus,
     font-weight: 100;
 }
 
+
+
 #r_prgr_descr{
 	font-family: MuseoSansCyrl; 
 	color: #454545;
@@ -240,6 +242,20 @@ option, option:hover, option:active ,option:focus,
 	font-size: 1em;
 }
 
+.send-progr-btn:hover{
+	width: 19.2em;
+	height: 4.2em;
+	margin: 4.8em 0 0 2.1em;
+	font-size: 1em;
+}
+
+.send-progr-btn:active{
+	width: 19.2em;
+	height: 4.2em;
+	margin: 4.8em 0 0 2.1em;
+	font-size: 1em;
+	background-color: #d9550e;
+}
 /* Base for label styling */
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
