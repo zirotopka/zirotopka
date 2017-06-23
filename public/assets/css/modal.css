@@ -10,7 +10,7 @@
 }
 
 .modal-content{
-	height: 30em;
+	height: 40em;
 }
 
 .video-container{
@@ -33,9 +33,20 @@
 
 		/*Окно выбора программы*/
 .checkboxiki{
-	margin: 5em 0 0 0;
+	margin: 3em 0 0 0;
 	text-align: left;
+	font-family: MuseoSansCyrl_100;
+	font-size: 1em;
+	color: #444444;
 }
+
+.checkboxiki a{
+	color: #454545;
+	vertical-align: super !important;
+	text-decoration: underline;
+	text-decoration-color: #454545;
+}
+
 
 .checkboxiki ul{
 	list-style-type: none;
@@ -53,14 +64,19 @@
 }
 
 .choose-program-form{
-	height: 32em;
+	height: 100%;
+	background: url('/ico/REFORMATOR_ONE_fon_logo.png');
+	background-repeat: no-repeat;
+	background-position: -24% 98%;
+	background-size: 78em 12em;
+
 }
 
 .prog-bold-txt{
 	font-family: GilroyBold;
 	font-size: 1em;
 	color: #FF9319;
-	font-weight: 500;
+	font-weight: 400;
 	text-transform: uppercase;
 	text-align: left;
 	margin-left: 2.3em;
@@ -80,8 +96,10 @@
 	-moz-appearance: none;
     -webkit-appearance: none;
     padding-right: 0;
-    padding-left: 2em;
+    padding-left: 3em;
     left: 2.8em;
+	margin: 0 0 0 2.3em;
+	width: 17.1em;
 }
 
 .drp-control:hover {
@@ -180,9 +198,135 @@ option, option:hover, option:active ,option:focus,
 
 .right-progrm-part{
 	text-align: left;
-	padding: 1em 0 0 4em;
+	padding: 2em 0 0 4em;
 }
 
 .prg-img {
 
 }
+
+#r_prgr_name{
+	padding: 1em 0 0 0;
+    font-size: 1.1em;
+    color: #FF9319;
+    font-family: GilroyBold;
+    font-weight: 100;
+}
+
+
+
+#r_prgr_descr{
+	font-family: MuseoSansCyrl_100; 
+	color: #454545;
+	width: 24em;
+}
+
+#r_prgr_price{
+	padding-right: 7vw;
+	font-family: GilroyBold;
+    font-weight: 100;
+    color: #FF9319;
+	text-align: right;
+    font-size: 1.1em;
+
+}
+
+.righ_prgr_text p{
+	margin: 1vw;
+}
+
+.send-progr-btn{
+	float: left;
+	margin: 3em 0 0 2.3em;
+	height: 4em;
+	width: 19em;
+	background-color: #F98749;
+	border: none;
+	border-radius: 2em;
+	color: white;
+	font-family: MuseoSansCyrl;
+	font-size: 1em;
+}
+
+.send-progr-btn:hover{
+	width: 19.2em;
+	height: 4.2em;
+	margin: 2.8em 0 0 2.1em;
+	font-size: 1em;
+}
+
+.send-progr-btn:active{
+	width: 19.2em;
+	height: 4.2em;
+	margin: 2.8em 0 0 2.1em;
+	font-size: 1em;
+	background-color: #d9550e;
+}
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding: 0 0 0 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+	content: '';
+	position: absolute;
+	left: 0.15em;
+	top: 0.4em;
+	width: 0.9em;
+	height: 0.9em;
+	border: 0.1em solid #ccc;
+	border-radius: 26px;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+	content: url('/ico/check.png');
+	position: absolute;
+	left: .3em;
+	font-size: 1em;
+	transition: all .2s;
+	top: 0;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #F98749!important;
+}
+

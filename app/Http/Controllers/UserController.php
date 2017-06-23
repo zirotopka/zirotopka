@@ -21,7 +21,7 @@ class UserController extends Controller
     	$rules = [
             'email' => 'required|email|unique:users,email',
             'first_name' => 'required',
-            'last_name' => 'required',
+            'surname' => 'required',
             'sex' => 'required',
             'phone' => 'required',
             'offer' => 'required',
@@ -34,7 +34,7 @@ class UserController extends Controller
 
             'name.required' => 'Укажите Фамилию Имя Отчество',
             'first_name.required' => 'Имя не указано',
-            'last_name.required' => 'Фамилия не указано',
+            'surname.required' => 'Фамилия не указано',
             'sex.required' => 'Пол не указан',
 
             'phone.required' => 'Телефон не указан',
@@ -53,7 +53,7 @@ class UserController extends Controller
             'email'    => $request->get("email"),
             'password' => $request->get("password"),
             'first_name' => $request->get("first_name"),
-            'last_name' => $request->get("last_name"),
+            'surname' => $request->get("surname"),
         ];
 
         $user = Sentinel::register($credentials);

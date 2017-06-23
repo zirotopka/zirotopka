@@ -26,19 +26,41 @@
 </head>
 <body>
         <div id="st-container" class="st-container">
-            <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
-                <ul>
-                    <li><a class="icon icon-data" href="/">Главная</a></li>
-                    <?php
-                        $programms = App\Programm::select('id','name','slug')->get();
-                    ?>
-                    @forelse ($programms as $programm)
-                        <li><a class="icon icon-photo" data-id="{{$programm->id}}" href="#{{$programm->slug}}">{{$programm->name}}</a></li>
-                    @empty
-                    @endforelse
-                    <li><a class="icon icon-photo" href="#">Бонусная программа</a></li>
-                 </ul>                
-            </nav>
+            @if ($user = Sentinel::check())
+                <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
+                    <ul>
+                        <li>
+                            @if (!empty($user->user_ava_url))
+                                <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
+                            @else
+                                <img src="/image/test/user.png" alt="" class="img-circle">
+                            @endif
+                            <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
+                        </li>
+                        <li>
+                           <a href="/lk/{{$user->id}}/edit" class="profile_btns"><i class="prof_ico prof-disp"></i><p class="prof-disp">ПРОФИЛЬ</p></a> 
+                        </li>
+                        <li>
+                           <a href="/lk/{{$user->id}}/balance" class="profile_btns"><i class="wallet_ico prof-disp"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
+                        </li>
+                     </ul>                
+                </nav>
+            @else
+                <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
+                    <ul>
+                        <li><a class="icon icon-data" href="/">Главная</a></li>
+                        <?php
+                            $programms = App\Programm::select('id','name','slug')->get();
+                        ?>
+                        @forelse ($programms as $programm)
+                            <li><a class="icon icon-photo" data-id="{{$programm->id}}" href="#{{$programm->slug}}">{{$programm->name}}</a></li>
+                        @empty
+                        @endforelse
+                        <li><a class="icon icon-photo" href="#">Бонусная программа</a></li>
+                     </ul>                
+                </nav>
+            @endif
+<!-- Шапка сайта -->
            <!-- content push wrapper -->
             <div class="st-pusher">
                 <div class="st-content"><!-- this is the wrapper for the content -->
@@ -83,18 +105,19 @@
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
-                                <a href="">
+                                <a href="/lk/{{$user->id}}/messages">
                                     <img class="envel" src="/ico/envelop.png" alt="envelop">
                                 </a>
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <div class="user-name">{{$user->first_name.' '.$user->last_name}}</div>
+                                    <div class="user-name">{{$user->first_name.' '.$user->surname}}</div>
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
 
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li><a href="/lk/{{$user->id}}">МОЙ АККАУНТ</a></li>
+                                    <li><a href="/lk/{{$user->id}}">ЛИЧНЫЙ КАБИНЕТ</a></li>
+                                    <li><a href="/lk/{{$user->id}}/edit">ПРОФИЛЬ</a></li>
                                     <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>
                             </div>

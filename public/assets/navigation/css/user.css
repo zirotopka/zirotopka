@@ -9,9 +9,32 @@
 }
 
 @font-face{
-	font-family:'Suns'; 
+	font-family:'MuseoSansCyrl'; 
 	src:url('/fonts/ofont.ru_Microsoft Sans Serif.ttf');
 }
+
+@font-face{
+	font-family:'MuseoSansCyrl_100'; 
+	src:url('/fonts/MuseoSansCyrl_100.otf');
+}
+@font-face{
+	font-family:'MuseoSansCyrl_300'; 
+	src:url('/fonts/MuseoSansCyrl_300.otf');
+}
+@font-face{
+	font-family:'MuseoSansCyrl_500'; 
+	src:url('/fonts/MuseoSansCyrl_500.otf');
+}
+@font-face{
+	font-family:'MuseoSansCyrl_700'; 
+	src:url('/fonts/MuseoSansCyrl_700.otf');
+}
+
+@font-face{
+	font-family:'MuseoSansCyrl_900'; 
+	src:url('/fonts/MuseoSansCyrl_900.otf');
+}
+
 
 html {
 	background-color: white !important;
@@ -350,5 +373,11 @@ button:focus {
 	font-family: GilroyLight; 
 	font-weight: bold;
 	font-size: 1em;
+}
+
+.user-fln{
+	margin:1em 0 2em 0;
+	color: white;
+	font-family: MuseoSansCyrl_300;
 }
 
