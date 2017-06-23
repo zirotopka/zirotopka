@@ -17,17 +17,7 @@ class PrivatOfficeController extends Controller
 {
     public function index($id)
     {		
-    	$user = User::select([
-    			'id',
-    			'first_name',
-    			'surname',
-    			'immunity_count',
-                'current_programm_id',
-                'current_day',
-                'user_ava_url',
-
-    		])
-    		->where('id','=',$id)->with('balance')->first();
+    	$user = Sentinel::getUser();
 
         $programs = Programm::select('id','description','name')
                             ->get();
@@ -80,40 +70,59 @@ class PrivatOfficeController extends Controller
     }
 
     public function personal_data($id){
-        $user = User::select([
-                'id',
-                'first_name',
-                'last_name',
-                'surname',
-                'immunity_count',
-                'current_programm_id',
-                'current_day',
-                'phone',
-                'user_ava_url',
-                'birthday',
-                'pasport_kem_vidan',
-                'pasport_data_vidachi',
-                'pasport_series',
-                'pasport_number',
-                'weight',
-                'growth'
-            ])
-            ->where('id','=',$id)->with('balance')->first();
+        $user = Sentinel::getUser();
+
         $data = [
           'user' => $user,
         ];
+
         return view('privat_office.lk_edit', $data);
     }
 
+    /**
+     * Сохранить персональные данные клиента
+     */
+    public function personal_data_store($id,Request $request){
+        $user = Sentinel::getUser();
+
+        if (!empty($user)) {
+            $user->phone = $request->get('phone');
+
+            if ($request->get('year') && $request->get('month') && $request->get('day')) {
+                try {
+                    $birthday = Carbon::parse($request->get('year').'-'.$request->get('month').'-'.$request->get('day'));
+                } catch (Exception $e) {
+                    $birthday = null;
+                }
+            } else {
+                $birthday = null;
+            }
+
+            $user->birthday = $birthday;
+            $user->growth = $request->get('growth');
+            $user->weight = $request->get('weight');
+            $user->pasport_name = $request->get('pasport_name');
+            $user->pasport_number = $request->get('pasport_number');
+            $user->pasport_series = $request->get('pasport_series');
+            $user->pasport_data_vidachi = Carbon::parse($request->get('pasport_data_vidachi'));
+            $user->pasport_kem_vidan = $request->get('pasport_kem_vidan');
+
+            if ($user->save()) {
+                $data = [
+                  'user' => $user,
+                ];
+
+                return view('privat_office.lk_edit', $data);
+            } else {
+                return redirect()->back()->withInput();
+            }
+        }
+
+        return redirect()->back()->withInput();
+    }
+
     public function balance($id){
-        $user = User::select([
-                'id',
-                'first_name',
-                'surname',
-                'immunity_count'
-            ])
-            ->where('id','=',$id)->with('balance')
-            ->first();
+        $user = Sentinel::getUser();
 
         $accruals = Accrual::select([
                 'id',
@@ -134,18 +143,11 @@ class PrivatOfficeController extends Controller
         return view('privat_office.balance', $data);
     }
     public function messages($id){
-        $user = User::select([
-                'id',
-                'first_name',
-                'surname',
-                'immunity_count'
-            ])
-            ->where('id','=',$id)->with('balance')
-            ->first();
+        $user = Sentinel::getUser();
 
-            $data = [
-                'user' => $user,
-            ];
+        $data = [
+            'user' => $user,
+        ];
         return view('privat_office.messages', $data);
     }
 }

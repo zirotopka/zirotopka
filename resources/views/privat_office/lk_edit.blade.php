@@ -27,7 +27,7 @@
                             @endif                    <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
                 </li>
                 <li>
-                	<a href="/lk/{{$user->id}}/eidt" class="profile_btns">
+                	<a href="/lk/{{$user->id}}/edit" class="profile_btns">
 	                	<i class="prof_ico prof-disp"></i>
 	                	<p class="prof-disp">  ПРОФИЛЬ</p>
 	                </a> 
@@ -59,8 +59,8 @@
 				</div>
 			</span>
 		</div>
-		@include('privat_office.layouts.user_data')
-		@include('privat_office.layouts.change_user_data_form')
+		@include('privat_office._partials.user_data')
+		@include('privat_office._partials.change_user_data_form')
 	</div>
 @overwrite
 

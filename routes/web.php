@@ -24,6 +24,8 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	Route::get('lk/{id}', [ 'uses' => 'PrivatOfficeController@index' ] );
 	Route::post('privat_office/get_exercive_video', [ 'uses' => 'PrivatOfficeController@get_exercive_video' ] );
 	Route::get('lk/{id}/edit', ['uses' => 'PrivatOfficeController@personal_data']);
+	Route::post('lk/{id}', ['uses' => 'PrivatOfficeController@personal_data_store']);
+
 	Route::get('lk/{id}/balance', ['uses' => 'PrivatOfficeController@balance']);
 	Route::get('lk/{id}/messages', ['uses' => 'PrivatOfficeController@messages']);
 
