@@ -311,3 +311,41 @@ height: 4.7em;
 .fa-star, .fa-star-o{
 	font-size: 1em !important;
 }
+
+.prof_ico{
+	background: url('/ico/profile.png');
+	background-size: cover;
+	width: 1em;
+	height: 1em;
+}
+
+.wallet_ico{
+	background: url('/ico/wallet.png');
+	background-size: cover;
+	width: 1em;
+	height: 1em;
+
+}
+
+.prof-disp{
+	display: inline-block;
+	margin: 0 0 0 0.5em;
+}
+
+.img-circle{
+	background-color: white;
+}
+
+.st-menu p{
+	font-family: GilroyLight;
+	color: white;
+	font-size: 1em;
+}
+
+.user-fln{
+	margin:1em 0 2em 0;
+}
+
+.profile_btns:hover{
+	border-left: 0.5em solid #FC9319;
+}

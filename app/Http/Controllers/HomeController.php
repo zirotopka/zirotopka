@@ -14,7 +14,7 @@ class HomeController extends Controller
     	$user = User::select([
     			'id',
     			'first_name',
-    			'last_name',
+    			'surname',
     		]);
     		
     	$data = [

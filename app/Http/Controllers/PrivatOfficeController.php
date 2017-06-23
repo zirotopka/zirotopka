@@ -8,6 +8,7 @@ use App\Programm;
 use App\ProgrammDay;
 use App\ProgrammExercive;
 use App\ProgrammStage;
+use App\Balance;
 
 use Carbon\Carbon;
 
@@ -18,7 +19,7 @@ class PrivatOfficeController extends Controller
     	$user = User::select([
     			'id',
     			'first_name',
-    			'last_name',
+    			'surname',
     			'immunity_count',
                 'current_programm_id',
                 'current_day',
@@ -73,6 +74,50 @@ class PrivatOfficeController extends Controller
         } else {
              return ['response' => 500, 'data' => 'Не найден exercive_id']; 
         }
+    }
+
+    public function personal_data($id){
+        $user = User::select([
+                'id',
+                'first_name',
+                'last_name',
+                'surname',
+                'immunity_count',
+                'current_programm_id',
+                'current_day',
+                'phone',
+                'user_ava_url',
+                'birthday',
+                'pasport_kem_vidan',
+                'pasport_data_vidachi',
+                'pasport_series',
+                'pasport_number',
+                'weight',
+                'growth'
+            ])
+            ->where('id','=',$id)->with('balance')->first();
+        $data = [
+          'user' => $user,
+        ];
+        return view('privat_office.lk_edit', $data);
+    }
+
+    public function balance($id){
+        $user = User::select([
+                'id',
+                'first_name',
+                'surname',
+                'immunity_count'
+            ]);
+        $balance = Balance::select([
+                'id',
+                'sum'
+            ]);
+        $data = [
+            'user' => $user,
+            'balance' => $balance
+        ];
+        return view('privat_office.balance', $data);
     }
 
 }
