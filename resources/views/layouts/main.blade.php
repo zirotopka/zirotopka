@@ -41,7 +41,7 @@
                            <a href="/lk/{{$user->id}}/edit" class="profile_btns"><i class="prof_ico prof-disp"></i><p class="prof-disp">ПРОФИЛЬ</p></a> 
                         </li>
                         <li>
-                           <a href="" class="profile_btns"><i class="wallet_ico prof-disp"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
+                           <a href="/lk/{{$user->id}}/balance" class="profile_btns"><i class="wallet_ico prof-disp"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
                         </li>
                      </ul>                
                 </nav>

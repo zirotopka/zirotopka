@@ -1,4 +1,5 @@
-<form action="edit_user_data" class="show-hidden-form">	
+<form action="edit_user_data" class="show-hidden-form">
+    {{ csrf_field() }}
 	<div class="row">
 		<div class="col-lg-4 lft-info">
 			<p id="myself_info">ИНФОРМАЦИЯ О СЕБЕ</p>

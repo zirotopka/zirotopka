@@ -110,15 +110,11 @@ class PrivatOfficeController extends Controller
                 'first_name',
                 'surname',
                 'immunity_count'
-            ]);
-        $balance = Balance::select([
-                'id',
-                'sum'
-            ]);
-        $data = [
-            'user' => $user,
-            'balance' => $balance
-        ];
+            ])
+            ->where('id','=',$id)->with('balance')->first();
+            $data = [
+                'user' => $user,
+            ];
         return view('privat_office.balance', $data);
     }
 

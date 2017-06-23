@@ -27,13 +27,13 @@
                             @endif                    <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
                 </li>
                 <li>
-                	<a href="" class="profile_btns">
+                	<a href="/lk/{{$user->id}}/eidt" class="profile_btns">
 	                	<i class="prof_ico prof-disp"></i>
 	                	<p class="prof-disp">  ПРОФИЛЬ</p>
 	                </a> 
                 </li>
 	            <li>
-	                <a href="" class="profile_btns">
+	                <a href="/lk/{{$user->id}}/balance" class="profile_btns">
 	                	<i class="wallet_ico prof-disp"></i>
 	                	<p class="prof-disp">МОЙ СЧЁТ</p>
 	                </a> 
