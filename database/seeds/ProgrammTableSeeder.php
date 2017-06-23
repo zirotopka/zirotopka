@@ -8,6 +8,11 @@ use App\ProgrammExercive;
 use App\ProgrammStage;
 use App\File;
 
+use App\User;
+
+use App\Accrual;
+use App\AccrualType;
+
 class ProgrammTableSeeder extends Seeder
 {
     /**
@@ -22,6 +27,9 @@ class ProgrammTableSeeder extends Seeder
     	ProgrammExercive::truncate();
     	ProgrammStage::truncate();
         File::truncate();
+
+        AccrualType::truncate();
+        Accrual::truncate();
 
     	$exercive_array = [
     		['slug' => 'berpie', 'name' => 'Берпи с отжиманием', 'description' => 'Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием', 'file_url' => '/video/trainings/birpie.mp4', 'preview' => '/image/test/preview1.png' ],
@@ -137,6 +145,59 @@ class ProgrammTableSeeder extends Seeder
 		        	}
 		        }
         	}
+        }
+
+        $accruals_types = [
+            ['id' => 1, 'slug' => 'replenishment', 'name' => 'Пополнение'],
+            ['id' => 2, 'slug' => 'write-off', 'name' => 'Списание'],
+        ];
+
+        foreach ( $accruals_types as $accruals_type ) {
+            $type = new AccrualType;
+            $type->id = $accruals_type['id'];
+            $type->slug = $accruals_type['slug'];
+            $type->name = $accruals_type['name'];
+
+            $type->save();
+        }
+
+        $accruals = [
+            ['sum' => '5493', 'type_id' => 2 , 'comment' => 'Оплата программы'],
+            ['sum' => '123', 'type_id' => 2, 'comment' => 'Иммуннитет'],
+            ['sum' => '4212', 'type_id' => 1 , 'comment' => 'За приглашенного пользователя'],
+            ['sum' => '3214', 'type_id' => 1 , 'comment' => 'Бонус'],
+            ['sum' => '5493', 'type_id' => 2 , 'comment' => 'Оплата программы'],
+            ['sum' => '123', 'type_id' => 2, 'comment' => 'Иммуннитет'],
+            ['sum' => '4212', 'type_id' => 1 , 'comment' => 'За приглашенного пользователя'],
+            ['sum' => '3214', 'type_id' => 1 , 'comment' => 'Бонус'],
+            ['sum' => '5493', 'type_id' => 2 , 'comment' => 'Оплата программы'],
+            ['sum' => '123', 'type_id' => 2, 'comment' => 'Иммуннитет'],
+            ['sum' => '4212', 'type_id' => 1 , 'comment' => 'За приглашенного пользователя'],
+            ['sum' => '3214', 'type_id' => 1 , 'comment' => 'Бонус'],
+            ['sum' => '5493', 'type_id' => 2 , 'comment' => 'Оплата программы'],
+            ['sum' => '123', 'type_id' => 2, 'comment' => 'Иммуннитет'],
+            ['sum' => '4212', 'type_id' => 1 , 'comment' => 'За приглашенного пользователя'],
+            ['sum' => '3214', 'type_id' => 1 , 'comment' => 'Бонус'],
+        ];
+
+        $users = User::select('id')->with('balance')->get();
+
+        if (count($users) > 0) {
+            foreach ($users as $user) {
+                foreach ( $accruals as $accrual ) {
+                    $acc = new Accrual;
+                    $acc->sum = $accrual['sum'];
+                    $acc->type_id = $accrual['type_id'];
+                    $acc->comment = $accrual['comment'];
+                    $acc->user_id = $user->id;
+
+                    if (!empty($user->balance)) {
+                        $acc->balance_id = $user->balance->id;
+                    }
+
+                    $acc->save();
+                }
+            }
         }
     }
 }

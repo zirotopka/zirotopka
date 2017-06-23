@@ -19,12 +19,12 @@
 		<nav>
             <ul>
                 <li style="padding: 0 0 1em 0; 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);">
-                            @if (!empty($user->user_ava_url))
-                                <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
-                            @else
-                                <img src="/image/test/user.png" alt="" class="img-circle">
-                            @endif                    <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
-                </li>
+                    @if (!empty($user->user_ava_url))
+                        <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
+                    @else
+                        <img src="/image/test/user.png" alt="" class="img-circle">
+                    @endif                    <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
+	            </li>
                 <li>
                 	<a href="/lk/{{$user->id}}/edit" class="profile_btns">
 	                	<i class="prof_ico prof-disp"></i>
@@ -61,16 +61,25 @@
 					<th>НАЗНАЧЕНИЕ</th>
 					<th>СУММА</th>
 				</tr>
-				<tr>
-					<td>qwe</td>
-					<td>qwe</td>
-					<td>qwe</td>
-					<td>qwe</td>
-					<td>qwe</td>
-					<td>qwe</td>
-				</tr>
+			
+				@forelse ($accruals as $accrual)
+					<?php $created_at = DateTime::createFromFormat('Y-m-d H:i:s', $accrual->created_at); ?>
+					<tr>
+						<td>{{$accrual->id}}</td>
+						<td>{{$created_at->format('Y-m-d')}}</td>
+						<td>{{$created_at->format('H:i:s')}}</td>
+						<td>{{!empty($accrual->type) ? $accrual->type->name : ''}}</td>
+						<td>{{$accrual->comment}}</td>
+						<td>{{number_format($accrual->sum,0,',',' ')}}</td>
+					</tr>
+				@empty
+					<tr>
+						<td class="text-center">Транзакции отсутствуют</td>
+					</tr>
+				@endforelse
 			</table>
 		</div>
+		<?php echo $accruals->render(); ?>
 	</div>
 
 				

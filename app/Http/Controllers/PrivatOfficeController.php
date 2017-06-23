@@ -9,6 +9,7 @@ use App\ProgrammDay;
 use App\ProgrammExercive;
 use App\ProgrammStage;
 use App\Balance;
+use App\Accrual;
 
 use Carbon\Carbon;
 
@@ -111,10 +112,25 @@ class PrivatOfficeController extends Controller
                 'surname',
                 'immunity_count'
             ])
-            ->where('id','=',$id)->with('balance')->first();
-            $data = [
-                'user' => $user,
-            ];
+            ->where('id','=',$id)->with('balance')
+            ->first();
+
+        $accruals = Accrual::select([
+                'id',
+                'sum',
+                'comment',
+                'created_at',
+                'type_id',
+            ])->where('user_id','=',$user->id)
+            ->orderBy('created_at','desc')
+            ->with('type')
+            ->paginate(10);
+
+        $data = [
+            'user' => $user,
+            'accruals' => $accruals,
+        ];
+
         return view('privat_office.balance', $data);
     }
     public function messages($id){
@@ -124,7 +140,9 @@ class PrivatOfficeController extends Controller
                 'surname',
                 'immunity_count'
             ])
-            ->where('id','=',$id)->with('balance')->first();
+            ->where('id','=',$id)->with('balance')
+            ->first();
+
             $data = [
                 'user' => $user,
             ];

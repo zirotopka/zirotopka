@@ -8,4 +8,14 @@ class Accrual extends Model
 {
     protected $table = 'accruals';
     protected $primaryKey = 'id';
+
+    public function user()
+    {
+        return $this->belongsTo('App\User','user_id');
+    }
+
+    public function type()
+    {	
+    	return $this->belongsTo('App\AccrualType','type_id');
+    }
 }

@@ -37,4 +37,9 @@ class User extends CartalystUser
     {
         return $this->hasOne('App\Balance','user_id');
     }
+
+    public function accruals()
+    {
+        return $this->hasMany('App\Accrual','user_id');
+    }
 }
