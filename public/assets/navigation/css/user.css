@@ -375,3 +375,9 @@ button:focus {
 	font-size: 1em;
 }
 
+.user-fln{
+	margin:1em 0 2em 0;
+	color: white;
+	font-family: MuseoSansCyrl_300;
+}
+

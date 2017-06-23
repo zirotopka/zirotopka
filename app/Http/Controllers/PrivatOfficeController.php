@@ -23,6 +23,8 @@ class PrivatOfficeController extends Controller
     			'immunity_count',
                 'current_programm_id',
                 'current_day',
+                'user_ava_url',
+
     		])
     		->where('id','=',$id)->with('balance')->first();
 

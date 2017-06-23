@@ -30,7 +30,11 @@
                 <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
                     <ul>
                         <li>
-                            <img src="/ico/user.png" alt="" class="img-circle">
+                            @if (!empty($user->user_ava_url))
+                                <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
+                            @else
+                                <img src="/image/test/user.png" alt="" class="img-circle">
+                            @endif
                             <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
                         </li>
                         <li>

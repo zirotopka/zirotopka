@@ -20,8 +20,11 @@
 		<nav>
             <ul>
                 <li style="padding: 0 0 1em 0; 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);">
-                    <img src="/ico/user.png" alt="" class="img-circle">
-                    <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
+                            @if (!empty($user->user_ava_url))
+                                <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
+                            @else
+                                <img src="/image/test/user.png" alt="" class="img-circle">
+                            @endif                    <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
                 </li>
                 <li>
                 	<a href="" class="profile_btns">
@@ -42,7 +45,7 @@
 		<p class="my_acc">МОЙ АККАУНТ</p>
 		<div class="row">
 			<span class="m_usr_img col-lg-1">
-                <img src="/ico/user.png" alt="" class="img-circle">
+                <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
 			</span>
 			<span class="m_usr_dscr col-lg-11">
 				<p class="usr_name">{{$user->surname.' '.$user->first_name.' '.$user->last_name}}</p>
