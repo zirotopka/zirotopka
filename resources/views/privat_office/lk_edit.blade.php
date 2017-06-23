@@ -45,8 +45,12 @@
 		<p class="my_acc">МОЙ АККАУНТ</p>
 		<div class="row">
 			<span class="m_usr_img col-lg-1">
-                <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
-			</span>
+                @if (!empty($user->user_ava_url))
+                    <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
+                @else
+                    <img src="/image/test/user.png" alt="" class="img-circle">
+                @endif                
+            </span>
 			<span class="m_usr_dscr col-lg-11">
 				<p class="usr_name">{{$user->surname.' '.$user->first_name.' '.$user->last_name}}</p>
 				<div class="ld_img">	
