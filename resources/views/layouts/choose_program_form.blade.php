@@ -1,6 +1,6 @@
 <div class="modal fade" id="choose_programe_form" tabindex="-1" role="dialog" aria-labelledby="ProgramModalLabel">
   <div class="modal-dialog chs-program-widnow" role="document">
-    <div class="modal-content">
+    <div class="modal-content reg-mod-content">
       <div class="modal-body choose-program-form">
         <form action="/program/choice_programm" method="POST"> 
           {{ csrf_field() }}
@@ -36,13 +36,13 @@
               <li>
                 <input type="checkbox" id="check2">
                 <label for="check2">
-                  <a class="" href="#">Ознакомился (-ась) с офертой.</a>
+                  <a class="" href="#">Ознакомился(-ась) с офертой.</a>
                 </label>
               </li>
               <li>
                 <input type="checkbox" id="check3">    
                 <label for="check3">
-                  <a class="" href="#">Ознакомился (-ась) с политикой конфиденциальности.</a>             
+                  <a class="" href="#">Ознакомился(-ась) с политикой<br> конфиденциальности.</a>             
                 </label>
               </li>
             </ul>
