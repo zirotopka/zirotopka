@@ -105,7 +105,7 @@
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
-                                <a href="">
+                                <a href="/lk/{{$user->id}}/messages">
                                     <img class="envel" src="/ico/envelop.png" alt="envelop">
                                 </a>
                             </div>

@@ -117,5 +117,17 @@ class PrivatOfficeController extends Controller
             ];
         return view('privat_office.balance', $data);
     }
-
+    public function messages($id){
+        $user = User::select([
+                'id',
+                'first_name',
+                'surname',
+                'immunity_count'
+            ])
+            ->where('id','=',$id)->with('balance')->first();
+            $data = [
+                'user' => $user,
+            ];
+        return view('privat_office.messages', $data);
+    }
 }

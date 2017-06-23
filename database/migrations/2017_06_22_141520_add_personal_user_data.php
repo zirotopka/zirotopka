@@ -32,7 +32,7 @@ class AddPersonalUserData extends Migration
      */
     public function down()
     {
-        Schema::table('programms', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('pasport_number');
             $table->dropColumn('pasport_series');
             $table->dropColumn('pasport_data_vidachi');
