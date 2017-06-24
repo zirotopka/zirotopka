@@ -59,6 +59,7 @@ class UserController extends Controller
         $user = Sentinel::register($credentials);
 
         if ( $user ) {
+            $user->surname = $request->get("surname");
             $user->sex = $request->get("sex");
             $user->weight = $request->get("weight");
             $user->growth = $request->get("growth");
