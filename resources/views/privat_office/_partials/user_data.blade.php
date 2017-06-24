@@ -17,6 +17,8 @@
 			</div>
 		</div>
 		<div class="col-lg-9">
+			<p class="orange-text">Город проживания</p>
+			<p class="gray-text">{{$user->city}}</p>
 			<p class="orange-text">Паспортные данные</p>
 			<p class="gray-text">{{$user->pasport_name}}</p>
 			<p class="gray-text">{{$user->pasport_number.' '.$user->pasport_series.' '.!empty($user->pasport_date) ?  gmdate("Y-m-d", $user->pasport_date) : '' }}</p>

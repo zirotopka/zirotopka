@@ -6,25 +6,30 @@
 			<a href=""> <img src=/ico/edit.png class="edit_btn" alt="Изменить профиль"></a>
 			<p class="p_marg">Номер телефона</p>
 			<input type="text" name="phone" class="phone-inp edit-inputs">
-			<p class="p_marg">Дата рождения</p>
-			<input type="text" name="day" class="col-lg-4 birthdate-left edit-inputs" placeholder="дд">
-			<input type="text" name="month" class="col-lg-4 birthdate-center edit-inputs" placeholder="мм">
-			<input type="text" name="year" class="col-lg-4 birthdate-right edit-inputs" placeholder="гггг">
-			<div class="row">	
-				<div class="col-lg-6" style="padding: 0;">
-					<p class="p_marg">Рост</p>
-					<input type="text" name="growth" class="edit-inputs hw-cls">
-					<p class="mera">см.</p>
-				</div>
-				<div class="col-lg-6 wght-cls">
-					<p class="p_marg">Вес</p>
-					<input type="text" name="weight" class="edit-inputs hw-cls ">
-					<p class="mera">кг.</p>
-				</div>
+			<div style="height: 4em;">	
+				<p class="p_marg">Дата рождения</p>
+				<input type="text" name="day" class="col-lg-4 birthdate-left edit-inputs" placeholder="дд">
+				<input type="text" name="month" class="col-lg-4 birthdate-center edit-inputs" placeholder="мм">
+				<input type="text" name="year" class="col-lg-4 birthdate-right edit-inputs" placeholder="гггг">
 			</div>
+			<div class="row">
+					<p class="col-lg-2">Рост</p>
+					<input type="text" name="growth" class="edit-inputs hw-cls col-lg-6">
+					<p class="col-lg-4">см.</p>
+			</div>	
+			<div class="row">
+					<p class="col-lg-2">Вес</p>
+					<input type="text" name="weight" class="edit-inputs hw-cls col-lg-6">
+					<p class="col-lg-4">кг.</p>
+			</div>	
+			
 			<input type="submit" class="save-btn" title="СОХРАНИТЬ" value="СОХРАНИТЬ">
 		</div>			
 		<div class="row col-lg-8 rt-info">
+			<div class="city">
+				<p>Город проживания</p>
+				<input type="text" name="city" class="edit-inputs">
+			</div>
 			<div class="pasport">
 				<p>Паспортные данные</p>
 				<input type="text" name="pasport_name" class="edit-inputs pasp_id col-lg-12" placeholder="ФИО">
