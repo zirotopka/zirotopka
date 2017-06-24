@@ -7,7 +7,6 @@ use Cartalyst\Sentinel\Laravel\Facades\Activation;
 
 use Validator;
 use App\Balance;
-use App\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
