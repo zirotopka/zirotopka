@@ -28,8 +28,8 @@
               </div>
             </p>
             <p>
-              <input type="checkbox" name="offer">: Я ознакомлен с офертой<br>
-              <input type="checkbox" name="adult">: Мне больше 14 <br>
+              <input type="checkbox" name="offer" class="check">: Я ознакомлен с офертой<br>
+              <input type="checkbox" name="adult" class="check">: Мне больше 14 <br>
             </p>
             <input class="btn btn-default btn-primary btn-lg" type="submit">
           </form>
