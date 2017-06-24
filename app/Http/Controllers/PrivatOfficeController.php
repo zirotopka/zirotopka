@@ -10,6 +10,7 @@ use App\ProgrammExercive;
 use App\ProgrammStage;
 use App\Balance;
 use App\Accrual;
+use Validator;
 
 use Carbon\Carbon;
 
@@ -86,6 +87,23 @@ class PrivatOfficeController extends Controller
         $user = Sentinel::getUser();
 
         if (!empty($user)) {
+            $rules = [
+                'year' => 'date_format:Y',
+                'month' => 'date_format:m',
+                'day' => 'date_format:d',
+            ];
+            $messages = [
+                'year.date_format' => 'Введите год рождения',
+                'month.date_format' => 'Введите месяц рождения',
+                'day.date_format' => 'Введите день рождения',
+            ];
+
+            $validator = Validator::make($request->all(), $rules, $messages);
+
+            if ($validator->fails()) {
+                return back()->withErrors($validator)->withInput();
+            }
+
             $user->phone = $request->get('phone');
 
             if ($request->get('year') && $request->get('month') && $request->get('day')) {
