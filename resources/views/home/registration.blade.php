@@ -13,7 +13,7 @@
               <input class="col-lg-12" id="email" type="email" name="email" placeholder="E-mail" required="required">
               <input class="col-lg-12" id="password" type="password" name="password" placeholder="Пароль" required="required">
               <input class="col-lg-12" id="first_name" type="text" name="first_name" placeholder="Имя" required="required">
-              <input class="col-lg-12" id="surname" type="text" name="last_name" placeholder="Фамилия" required="required"> 
+              <input class="col-lg-12" id="surname" type="text" name="surname" placeholder="Фамилия" required="required"> 
               <input class="col-lg-12" type="tel" id="phone" name="phone" placeholder="Телефон" required="required">
             </p>
             <p>
