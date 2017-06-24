@@ -87,22 +87,25 @@ class PrivatOfficeController extends Controller
         $user = Sentinel::getUser();
 
         if (!empty($user)) {
-            // $rules = [
+            $rules = [
             //     'year' => 'date_format:Y',
             //     'month' => 'date_format:m',
             //     'day' => 'date_format:d',
-            // ];
-            // $messages = [
+                'pasport_date' => 'date',
+            ];
+            $messages = [
             //     'year.date_format' => 'Введите год рождения',
             //     'month.date_format' => 'Введите месяц рождения',
             //     'day.date_format' => 'Введите день рождения',
-            // ];
+                'pasport_date.date' => 'Поле дата выдачи должно быть корректной формы',
+            ];
 
-            // $validator = Validator::make($request->all(), $rules, $messages);
+            $validator = Validator::make($request->all(), $rules, $messages);
 
-            // if ($validator->fails()) {
-            //     return back()->withErrors($validator)->withInput();
-            // }
+            if ($validator->fails()) {
+                dd($validator);
+                return back()->withErrors($validator)->withInput();
+            }
 
             $user->phone = $request->get('phone');
 
