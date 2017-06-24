@@ -45,7 +45,7 @@
 		<p class="cnt">МОЙ СЧЕТ</p>
 		<div class="row">
 			<div class="money col-lg-3">
-				<p>МОЙ СЧЕТ:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}$</p> 
+				<p>МОЙ СЧЕТ:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ')  : 0 }}&nbsp;&#8381;</p> 
 			</div>
 			<div class="col-lg-9">
 				<button class="replenish_btn" type="button">ПОПОЛНИТЬ</button>

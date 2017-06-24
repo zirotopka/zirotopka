@@ -102,7 +102,7 @@
                                 <!-- </div> -->
                             </div>
                             <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" >
-                                <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
+                                <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;&#8381;</p>                             
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
                                 <a href="/lk/{{$user->id}}/messages">

@@ -92,12 +92,18 @@ class PrivatOfficeController extends Controller
             //     'month' => 'date_format:m',
             //     'day' => 'date_format:d',
                 'pasport_date' => 'date',
+                'growth' => 'numeric',
+                'weight' => 'numeric',
+                'pasport_number' => 'numeric',
             ];
             $messages = [
             //     'year.date_format' => 'Введите год рождения',
             //     'month.date_format' => 'Введите месяц рождения',
             //     'day.date_format' => 'Введите день рождения',
                 'pasport_date.date' => 'Поле дата выдачи должно быть корректной формы',
+                'growth.numeric' => 'Рост указан неверно',
+                'weight.numeric' => 'Вес указан неверно',
+                'pasport_number.numeric' => 'Номер паспорта указан неверно',
             ];
 
             $validator = Validator::make($request->all(), $rules, $messages);
