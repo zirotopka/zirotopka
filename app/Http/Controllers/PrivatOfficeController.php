@@ -87,22 +87,22 @@ class PrivatOfficeController extends Controller
         $user = Sentinel::getUser();
 
         if (!empty($user)) {
-            $rules = [
-                'year' => 'date_format:Y',
-                'month' => 'date_format:m',
-                'day' => 'date_format:d',
-            ];
-            $messages = [
-                'year.date_format' => 'Введите год рождения',
-                'month.date_format' => 'Введите месяц рождения',
-                'day.date_format' => 'Введите день рождения',
-            ];
+            // $rules = [
+            //     'year' => 'date_format:Y',
+            //     'month' => 'date_format:m',
+            //     'day' => 'date_format:d',
+            // ];
+            // $messages = [
+            //     'year.date_format' => 'Введите год рождения',
+            //     'month.date_format' => 'Введите месяц рождения',
+            //     'day.date_format' => 'Введите день рождения',
+            // ];
 
-            $validator = Validator::make($request->all(), $rules, $messages);
+            // $validator = Validator::make($request->all(), $rules, $messages);
 
-            if ($validator->fails()) {
-                return back()->withErrors($validator)->withInput();
-            }
+            // if ($validator->fails()) {
+            //     return back()->withErrors($validator)->withInput();
+            // }
 
             $user->phone = $request->get('phone');
 
@@ -122,8 +122,8 @@ class PrivatOfficeController extends Controller
             $user->pasport_name = $request->get('pasport_name');
             $user->pasport_number = $request->get('pasport_number');
             $user->pasport_series = $request->get('pasport_series');
-            $user->pasport_data_vidachi = Carbon::parse($request->get('pasport_data_vidachi'));
-            $user->pasport_kem_vidan = $request->get('pasport_kem_vidan');
+            $user->pasport_date = Carbon::parse($request->get('pasport_date'))->timestamp;
+            $user->pasport_issued = $request->get('pasport_issued');
 
             if ($user->save()) {
                 $data = [
