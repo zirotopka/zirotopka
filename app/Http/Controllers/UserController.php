@@ -10,9 +10,35 @@ use App\Balance;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class UserController extends Controller
 {	
+
+    /**
+     * Заменить лого у юзера
+     */
+    public function change_logo (Request $request) {
+        if ($request->hasFile('logo'))
+        {   
+            $user = Sentinel::getUser();
+            $file = $request->file('logo');
+            $fileName = time() . '-' . $file->getClientOriginalName();
+            $destinationPath = public_path().'/image/logos/';
+            $file->move($destinationPath, $fileName);
+
+            $image = Image::make($destinationPath.$fileName)->resize(100, 100);
+            $image->save($destinationPath.$fileName);
+
+            $user->user_ava_url = $fileName;
+            $user->save();
+
+            return ['response' => 200,'url' => $fileName];
+        } else {
+            return ['response' => 500];
+        }
+    }
+
 	/**
 	 * Регистрация пользователя
 	 */

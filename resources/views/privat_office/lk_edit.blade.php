@@ -10,7 +10,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script type="text/javascript" src="/assets/privat_account/lk_edit.js"></script>    
+    <script type="text/javascript" src="/assets/privat_account/lk_edit.js?342423"></script>    
 
 @overwrite
 
@@ -21,9 +21,9 @@
             <ul>
                 <li style="padding: 0 0 1em 0; 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);">
                             @if (!empty($user->user_ava_url))
-                                <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
+                                <img src="{{'/image/logos/'.$user->user_ava_url}}" alt="" class="img-circle logo-img">
                             @else
-                                <img src="/image/test/user.png" alt="" class="img-circle">
+                                <img src="/image/test/user.png" alt="" class="img-circle logo-img">
                             @endif                    <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
                 </li>
                 <li>
@@ -46,16 +46,18 @@
 		<div class="row">
 			<span class="m_usr_img col-lg-1">
                 @if (!empty($user->user_ava_url))
-                    <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
+                    <img src="{{'/image/logos/'.$user->user_ava_url}}" alt="" class="img-circle logo-img">
                 @else
-                    <img src="/image/test/user.png" alt="" class="img-circle">
+                    <img src="/image/logos/default.jpg" alt="" class="img-circle logo-img">
                 @endif                
             </span>
 			<span class="m_usr_dscr col-lg-11">
 				<p class="usr_name">{{$user->surname.' '.$user->first_name.' '.$user->last_name}}</p>
-				<div class="ld_img">	
-					<input type="file" title="Загрузить фото" style="height: 100%; width: 10em;">
-					<p id="load_photo_txt">Заргузить фото</p>
+				<div class="ld_img">
+					<form enctype="multipart/form-data" id="download-logos-form" role="form" method="POST" action="" >	
+						<input type="file" multiple="multiple" name="logo" accept="image/*" id="download-logos" title="Загрузить фото" style="height: 100%; width: 10em;">
+						<p id="load_photo_txt">Заргузить фото</p>
+					</form>
 				</div>
 			</span>
 		</div>

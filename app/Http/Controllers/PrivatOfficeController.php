@@ -133,6 +133,7 @@ class PrivatOfficeController extends Controller
             $user->pasport_series = $request->get('pasport_series');
             $user->pasport_date = Carbon::parse($request->get('pasport_date'))->timestamp;
             $user->pasport_issued = $request->get('pasport_issued');
+            $user->city = $request->get('city');
 
             if ($user->save()) {
                 $data = [
