@@ -381,3 +381,7 @@ button:focus {
 	font-family: MuseoSansCyrl_300;
 }
 
+.check{
+	left: 0 !important;
+	position: block !important;
+}
