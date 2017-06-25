@@ -17,14 +17,9 @@
 	<div class="left_edit_part col-xs-5 col-sm-5 col-lg-2 col-md-2">
 		<nav>
             <ul>
-                <li style="padding: 0 0 1em 0; 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);">
-                            @if (!empty($user->user_ava_url))
-                                <img src="{{$user->user_ava_url}}" alt="" class="img-circle">
-                            @else
-                                <img src="/image/test/user.png" alt="" class="img-circle">
-                            @endif                    <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
+				<li class="write_button_li">
+	           		<button type="button" class="write_button">НАПИСАТЬ</button>
                 </li>
-                		<button>НАПИСАТЬ</button>
                 <li>
                 	<a href="/lk/{{$user->id}}/eidt" class="profile_btns">
 	                	<i class="inp_msg_ico prof-disp"></i>
@@ -47,7 +42,10 @@
         </nav>
 	</div>
 	<div class="right_edit_part col-xs-7 col-sm-7 col-lg-10 col-md-10">
-		
+		@include('privat_office._partials.sended_message')
+		@include('privat_office._partials.new_message')
+		@include('privat_office._partials.received_message')
+
 	</div>
 @overwrite
 
