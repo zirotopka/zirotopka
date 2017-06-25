@@ -228,7 +228,7 @@ td{
 	display: none;
 }
 
-.dropdown-toggle{
+.bs-placeholder{
 	width: 16em!important;
 	height: 3em;
 }
