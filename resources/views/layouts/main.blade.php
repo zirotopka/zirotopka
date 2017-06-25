@@ -15,7 +15,7 @@
     <link href="/assets/navigation/css/user.css" type="text/css" rel="stylesheet">
     <link href="/assets/css/modal.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-
+    <link rel="stylesheet" href="/assets/css/layout.css">
 
 	<title>Жиротопка</title>
 
@@ -111,9 +111,7 @@
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <div class="user-name">{{$user->first_name.' '.$user->surname}}</div>
-                                <i class="fa fa-caret-down" aria-hidden="true"></i>
-
+                                    <div class="user-name">{{$user->first_name.' '.$user->surname}}<i class="fa fa-caret-down" aria-hidden="true"></i></div>
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
                                     <li><a href="/lk/{{$user->id}}">ЛИЧНЫЙ КАБИНЕТ</a></li>
