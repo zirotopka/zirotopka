@@ -18,9 +18,9 @@ input{
 .left_edit_part ul {
 	font-size: 1em;
 	margin: 0;
-	padding: 6em 0 0 0;
+	padding: 6em 0 0 2em;
 	list-style: none;
-	text-align: center;
+	text-align: left;
 }
 
 
@@ -104,4 +104,86 @@ input{
 	background-size: cover;
 	width: 1em;
 	height: 1em;
+}
+
+.write_button{
+	margin: 1em 0 3em 0;
+	height: 3.5em;
+	width: 12em;
+	background-color: #F98749;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	font-size: 0.9em;
+}
+
+.write_button:hover{
+	margin: 0.8em -0.2 3em 0;
+	height: 3.7em;
+	width: 12.2em;
+	background-color: #F98749;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	font-size: 0.9em;
+}
+
+.write_button:acive{
+	margin: 0.8em -0.2 3em 0;
+	height: 3.7em;
+	width: 12.2em;
+	background-color: #d9550e	;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	font-size: 0.9em;
+}
+
+.write_button_li{
+	height: 4em;
+	margin-bottom: 5em;
+}
+
+
+.right_edit_part{
+	height: 100%;
+	padding: 7em 0 0 0;
+	text-align: left;
+}
+
+/*-----------------New message---------------*/
+.new_message{
+	padding: 0 0 0 6em;
+	position: relative;
+	display: block;
+}
+
+.new-msg{
+	font-family: MuseoSansCyrl_500;
+}
+
+.msg_theme{
+	padding: 0 0 0 2em;
+	width: 60%;
+	height: 3em;
+	margin: 2em 0 0 0;
+	border: 0.1em solid #C5C5C5;
+	border-radius: 4px 4px 0 0;
+	font-family: MuseoSansCyrl_100;
+
+}
+
+.msg_text{
+	padding: 1em 0 0 2em;
+	width: 60%;
+	margin: 0;
+	border: 0.1em solid #C5C5C5;
+	border-radius: 0 0 4px 4px;
+	border-top: none;
+	resize: none;
+	font-family: MuseoSansCyrl_100;
+}
+
+.msg_sendbutton{
+	margin: 2em 0 0 45%;
 }
