@@ -7,6 +7,7 @@ use Cartalyst\Sentinel\Laravel\Facades\Activation;
 
 use Validator;
 use App\Balance;
+use App\Helpers\IP;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -93,7 +94,9 @@ class UserController extends Controller
             $user->phone = $request->get("phone");
             $user->user_ip = $_SERVER["REMOTE_ADDR"];
             $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
-
+            $user->ip = $request->ip();
+            //Сделать сохранение timezone
+            $user->timezone = 'Africa/Nairobi';
             $user->save();
 
             $activation = Activation::create($user);

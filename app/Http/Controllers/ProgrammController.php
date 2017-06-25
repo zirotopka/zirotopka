@@ -33,14 +33,16 @@ class ProgrammController extends Controller
 
     	if ( !empty($user) ) {   
     		$program_id = $request->get('program_id');
-            $start_training_day = Carbon::parse( $request->get('program_date_input'), 'Europe/Moscow' );
-            $now = Carbon::now('Europe/Moscow');
+            $start_training_day = Carbon::parse( $request->get('program_date_input'), 'Africa/Nairobi' );
+            $now = Carbon::now('Africa/Nairobi');
 
             $user->start_training_day = $start_training_day;
     		$user->current_programm_id = $program_id;
 
             if ( ($now->month == $start_training_day->month) && ($now->day == $start_training_day->day) ) {
                 $user->current_day = $now->day;
+            } elseif ( ($now->year > $start_training_day->year) || ($now->month > $start_training_day->month ) || ($now->day > $start_training_day->day )){
+                return back(); //Выбрана старая дата
             }
 
     		$user->save();
