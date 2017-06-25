@@ -10,6 +10,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут --> 
+    <script type="text/javascript" src="/assets/privat_account/lk_balance.js"></script>    
 
 @overwrite
 
@@ -79,7 +80,7 @@
 		<?php echo $accruals->render(); ?>
 		<div>
 			<button class="replenish_btn" type="button" data-toggle="modal" data-target="#balance_motions">ПОПОЛНИТЬ</button>
-			<button class="black_btn" type="button">ВЫВЕСТИ</button>
+			<button class="black_btn" type="button" data-toggle="modal" data-target="#balance_motions">ВЫВЕСТИ</button>
 		</div>
 	</div>
 	</div>
