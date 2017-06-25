@@ -120,20 +120,46 @@ input{
 	border-radius: 4px;
 	font-family: MuseoSansCyrl_100;
 	font-size: 0.8em;
+	margin: 3em 0 0 8em;
 }
 
 .replenish_btn:hover{
 	height: 3.7em;
 	width: 12.2em;
 	background-color: #F98749;
-	margin: -0.2em -0.2em 0 0;
+	margin: 2.8em 0em 0 8em;
 }
+
 
 .replenish_btn:active{
 	height: 3.7em;
 	width: 12.2em;
 	background-color: #d9550e;
-	margin: -0.2em -0.2em 0 0;
+	margin: 2.8em 0 0 8em;
+}
+
+.black_btn{
+	background-color: #232323;
+	height: 3.5em;
+	width: 12em;
+	color: white;
+	border-radius: 4px;
+	font-family: MuseoSansCyrl_100;
+	font-size: 0.8em;
+	margin: 0 0 0 2em;
+}
+
+.black_btn:hover{
+	height: 3.7em;
+	width: 12.2em;
+	margin: -0.2em -0.2em 0 2em;
+}
+
+.black_btn:active{
+	height: 3.7em;
+	width: 12.2em;
+	margin: -0.2em -0.2em 0 2em;
+	background-color: black;
 }
 
 .balance_table{
@@ -143,7 +169,7 @@ input{
 
 th, td{
 	vertical-align: middle!important;
-	height: 5em;
+	height: 4em;
 	text-align: center;
 }
 
@@ -162,8 +188,88 @@ td{
 .table-scrolling{
 	margin: 3em 0 0 0;
 	overflow: auto;
-	height: 70%;
+	height: 60%;
 	width: 95%;
 	border: 1px solid #EAEAEA;
 
+}
+
+/*-----------------------Balance-Modal-------------------*/
+.bal_modal_width{
+	width: 22em;
+	margin: 15% auto;
+	text-align: center;
+}
+
+.bal_modal_height{
+	height: 24em;
+	border-radius: 0;
+}
+
+.add_money{
+	text-align: center;
+	margin: 2em 0 0 0;
+	color: #FF9319;
+	font-family: MuseoSansCyrl_500;
+}
+
+.money_inputs{
+	border-radius: 4px;
+	border: 0.1em solid #b3b3b3;
+	height: 3em;
+	width: 16em;
+	color: #999;
+	padding-left: 3em;
+	font-family: MuseoSansCyrl_100;
+	margin: 2.5em 0 2em 0;
+}
+
+.output_money{
+	display: none;
+}
+
+.dropdown-toggle{
+	width: 16em!important;
+	height: 3em;
+}
+
+.bootstrap-select{
+	left: 0.5em;
+}
+
+.send{
+	margin: 2em 0 0 0;
+	height: 3em;
+	width: 12em;
+	background-color: #F98749;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	font-size: 0.9em;
+}
+
+.send:hover{
+	margin: 1.8em -0.2 0 0;
+	height: 3.2em;
+	width: 12.2em;
+	background-color: #F98749;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	font-size: 0.9em;
+}
+
+.send:active{
+	margin: 1.8em -0.2 0 0;
+	height: 3.2em;
+	width: 12.2em;
+	background-color: #d9550e;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	font-size: 0.9em;
+}
+
+.plaseholder{
+	background: none;
 }
