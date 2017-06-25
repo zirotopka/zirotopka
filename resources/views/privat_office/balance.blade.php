@@ -10,6 +10,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут --> 
+    <script type="text/javascript" src="/assets/privat_account/lk_balance.js"></script>    
 
 @overwrite
 
@@ -44,11 +45,8 @@
 	<div class="right_edit_part col-xs-7 col-sm-7 col-lg-10 col-md-10">
 		<p class="cnt">МОЙ СЧЕТ</p>
 		<div class="row">
-			<div class="money col-lg-3">
-				<p>МОЙ СЧЕТ:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ')  : 0 }}&nbsp;&#8381;</p> 
-			</div>
-			<div class="col-lg-9">
-				<button class="replenish_btn" type="button">ПОПОЛНИТЬ</button>
+			<div class="money ">
+				<p>МОЙ СЧЕТ:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}$</p> 
 			</div>			
 		</div>
 		<div class="table-scrolling">
@@ -80,9 +78,46 @@
 			</table>
 		</div>
 		<?php echo $accruals->render(); ?>
+		<div>
+			<button class="replenish_btn" type="button" data-toggle="modal" data-target="#balance_motions">ПОПОЛНИТЬ</button>
+			<button class="black_btn" type="button" data-toggle="modal" data-target="#balance_motions">ВЫВЕСТИ</button>
+		</div>
 	</div>
+	</div>
+<div class="modal fade" id="balance_motions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog bal_modal_width" role="document">
+    <div class="modal-content bal_modal_height">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<div class="input_money">
+			<form action="">
+				<p class="add_money">ПОПОЛНИТЬ СЧЕТ</p>
+				<input type="text" value="Сумма" class="money_inputs">
+	            <select class="selectpicker" name="program_id" id="program_id" >
+	                <option value=""></option>  
+	            </select>
+                <img src="/ico/drop-ico.png" style="z-index: 9999; margin: -4.5em 0 0 13.2em;
+"></img>
+                <input type="submit" value="ПОПОЛНИТЬ" class="send">
+            </form>
+		</div>
+		<div class="output_money">
+			<form action="">
+				<p class="add_money">ВЫВЕСТИ СРЕДСТВА</p>
+				<input type="text" value="Сумма" class="money_inputs">
+	            <select class="selectpicker" name="program_id" id="program_id" >
+	                <option value=""></option>  
+	            </select>
+                <img src="/ico/drop-ico.png" style="z-index: 9999; margin: -4.5em 0 0 13.2em;
+"></img>
+                <input type="submit" value="ВЫВЕСТИ" class="send">
+            </form>
+		</div>
 
-				
-	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 @overwrite
 

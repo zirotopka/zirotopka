@@ -235,7 +235,7 @@ button:hover {
 	.dropdown-toggle{
 		float: none;
 		padding: 0 !important;
-		width: 100%;
+		width: 100%!important;
 	}
 	#nav-dropdown{
 		font-size: 14px;
@@ -358,10 +358,6 @@ button:focus {
 .fa-caret-down{
 	position: absolute;
 	padding:5px;
-}
-
-.dropdown-toggle{
-	width: 100%;
 }
 
 .icon{
