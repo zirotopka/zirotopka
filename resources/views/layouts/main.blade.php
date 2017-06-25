@@ -176,7 +176,6 @@
     <script src="/assets/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-    <script type="text/javascript" src="/assets/js/video.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>    
     <script type="text/javascript" src="/assets/navigation/js/classie.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/sidebarEffects.js"></script>

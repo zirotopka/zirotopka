@@ -35,13 +35,15 @@ class ProgrammController extends Controller
     		$program_id = $request->get('program_id');
             $start_training_day = Carbon::parse( $request->get('program_date_input'), 'Africa/Nairobi' );
             $now = Carbon::now('Africa/Nairobi');
-
+ 
             $user->start_training_day = $start_training_day;
     		$user->current_programm_id = $program_id;
+            $user->current_day = 0;
 
             if ( ($now->month == $start_training_day->month) && ($now->day == $start_training_day->day) ) {
-                $user->current_day = $now->day;
+                $user->current_day = 1;
             } elseif ( ($now->year > $start_training_day->year) || ($now->month > $start_training_day->month ) || ($now->day > $start_training_day->day )){
+                dd('Выбранная вами дата уже прошла');
                 return back(); //Выбрана старая дата
             }
 
@@ -49,6 +51,7 @@ class ProgrammController extends Controller
 
     		return redirect('lk/'.$user->id);
     	} else {
+            dd('Пользователь отсутствует');
     		return back();
     	}
     }
