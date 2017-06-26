@@ -77,7 +77,6 @@
 				@endforelse
 			</table>
 		</div>
-		<?php echo $accruals->render(); ?>
 		<div>
 			<button class="replenish_btn" type="button" data-toggle="modal" data-target="#balance_motions">ПОПОЛНИТЬ</button>
 			<button class="black_btn" type="button" data-toggle="modal" data-target="#balance_motions">ВЫВЕСТИ</button>

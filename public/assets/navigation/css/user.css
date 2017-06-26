@@ -369,6 +369,9 @@ button:focus {
 	font-family: GilroyLight; 
 	font-weight: bold;
 	font-size: 1em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
 }
 
 .user-fln{
@@ -381,3 +384,4 @@ button:focus {
 	left: 0 !important;
 	position: block !important;
 }
+
