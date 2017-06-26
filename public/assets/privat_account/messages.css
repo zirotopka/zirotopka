@@ -18,7 +18,7 @@ input{
 .left_edit_part ul {
 	font-size: 1em;
 	margin: 0;
-	padding: 6em 0 0 2em;
+	padding: 7em 0 0 2em;
 	list-style: none;
 	text-align: left;
 }
@@ -29,7 +29,6 @@ input{
 	display: block;
 	padding: 1.2em 0 1.2em 0em;
 	outline: none;
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
 	color: #f3efe0;
 	text-transform: uppercase;
 	text-shadow: 0 0 1px rgba(255,255,255,0.1);
@@ -86,6 +85,79 @@ input{
 
 .profile_btns:hover{
 	border-left: 0.3em solid #F36D00;
+}
+
+.message_list{
+	background-color: #2C2C2C;
+	height: 100%;
+}
+
+.message_list{
+	padding: 4em 0 0 0;
+}
+
+.message_list ul{
+	padding: 0;
+	height: 4em;
+}
+
+.message_list ul li{
+	text-align: center;
+	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
+	font-family: MuseoSansCyrl_300;
+	font-size: 1em;
+	height: 100%;
+}
+
+.sended{
+	color: white;
+	font-family: MuseoSansCyrl_300;
+	vertical-align: middle;
+	padding: 5.5% 0 0 0;
+	height: 100%;
+	width: 100%;
+	background-color: #5A5A5A;
+}
+
+.min_msg_cont{
+	height: 6em !important;
+	color: #A9A9A9;
+
+}
+
+.min_left_col, .min_right_col{
+	padding: 1em 0 0 3em;
+	text-align: left;
+}
+
+.min_right_col{
+	padding-left: 6em; 
+}
+
+.who_send{
+	font-family: MuseoSansCyrl_500!important;
+}
+
+.when_send{
+	font-family: MuseoSansCyrl_500!important;
+}
+
+.answer_msg{
+	font-family: MuseoSansCyrl_300;
+	font-size: 0.9em;
+	color: #909090;
+	margin: 1.3em 0 0 0;
+}
+
+.attach_ico{
+	height: 1em;
+	width: 1em;
+	margin: 0.5em 0 0 25%;
+}
+
+
+ul{
+	list-style: none;
 }
 
 /*---------------------Right edit part------------------------*/
@@ -147,12 +219,30 @@ input{
 
 .right_edit_part{
 	height: 100%;
-	padding: 7em 0 0 0;
 	text-align: left;
+}
+
+.right_edit_part .row{
+	height: 100%;
+}
+
+.message_list{
+	background-color: #2C2C2C;
+	height: 100%;
+}
+
+.i-o_message{
+	display: none;
+}
+
+.message_list{
+	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
+
 }
 
 /*-----------------New message---------------*/
 .new_message{
+	margin: 7em 0 0 0;
 	padding: 0 0 0 6em;
 	position: relative;
 	display: block;
@@ -187,3 +277,14 @@ input{
 .msg_sendbutton{
 	margin: 2em 0 0 45%;
 }
+
+.sended_message{
+	display: none;
+}
+
+.received_message{
+	display: none;
+}
+
+
+/*----------------------------Input message-------------------------*/
