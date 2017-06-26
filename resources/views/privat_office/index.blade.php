@@ -3,6 +3,7 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
+    <link href="http://vjs.zencdn.net/6.1.0/video-js.css" rel="stylesheet">
     <link href="/assets/privat_account/account.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
 
@@ -12,9 +13,10 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
+    <script src="http://vjs.zencdn.net/6.1.0/video.js"></script>
     <script type="text/javascript" src="/assets/privat_account/account.js?123"></script>
     <script type="text/javascript" src="/assets/js/video-btn.js?123"></script>
-	
+    <script type="text/javascript" src="/assets/js/video.js"></script>
 @overwrite
 
 
@@ -114,102 +116,105 @@
 			@endif
 
 <!--Описание программ-->
-			<div class="programs row">
-				@forelse ( $programm_stages as $programm_stage )
-					@php
-				    	$exercive = $programm_stage->exercive;
-				    @endphp
-					@if ( !empty($exercive) )
-						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
-							<form class="prog-form">
-								<div class="prog-txt-container">	
-									<p class="prog-txt prog-name">{{$exercive->name}}</p>
-									@if ( !empty($programm_stage->repeat_count) )
-										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
-									@endif 
-									@if ( !empty($programm_stage->time_exercive) )
-										<p class="prog-txt prog-count">Время выполнения:{{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
-									@endif 
-									<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
-								</div>
-<!--VIDEO-->
-								<div class="video_holder" data-id="{{$exercive->id}}">
-									@php
-								    	$preview = $exercive->previews->first();
-								    @endphp
-								    @if (!empty($preview))
-								    	<img src="{{ $preview->file_url }}" alt="" style="width: 100%;">
-								    	<div class="mask"></div>
-								    	<img class="btn-play" src="/ico/play.png" alt="">
-								    @endif
-								</div>
 
-								<div class="otchet">
-									<div class="load-btn">
-										<img class="load" src="/ico/load.png" alt="">
-										<p class="load-text">Загрузить отчёт</p>
+			@if(!empty($programm_stages))
+				<div class="programs row">
+					@forelse ( $programm_stages as $programm_stage )
+						@php
+					    	$exercive = $programm_stage->exercive;
+					    @endphp
+						@if ( !empty($exercive) )
+							<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
+								<form class="prog-form">
+									<div class="prog-txt-container">	
+										<p class="prog-txt prog-name">{{$exercive->name}}</p>
+										@if ( !empty($programm_stage->repeat_count) )
+											<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
+										@endif 
+										@if ( !empty($programm_stage->time_exercive) )
+											<p class="prog-txt prog-count">Время выполнения:{{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
+										@endif 
+										<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
 									</div>
-									<input class="prof-file " type="file">
-								</div>
-									<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
-								</div>
-									<p class="load-text">Загрузить отчёт</p> -->
+	<!--VIDEO-->
+									<div class="video_holder" data-id="{{$exercive->id}}">
+										@php
+									    	$preview = $exercive->previews->first();
+									    @endphp
+									    @if (!empty($preview))
+									    	<img src="{{ $preview->file_url }}" alt="" style="width: 100%;">
+									    	<div class="mask"></div>
+									    	<img class="btn-play" src="/ico/play.png" alt="">
+									    @endif
+									</div>
 
-							</form>
-						</div>
-					@endif
-				@empty
-				@endforelse
-			</div>		
-			<div class="send-proof col-lg-12">
-					<button type="submit" class="send-proof-file"> Отправить на проверку</button>
-			</div>
+									<div class="otchet">
+										<div class="load-btn">
+											<img class="load" src="/ico/load.png" alt="">
+											<p class="load-text">Загрузить отчёт</p>
+										</div>
+										<input class="prof-file " type="file">
+									</div>
+										<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
+									</div>
+										<p class="load-text">Загрузить отчёт</p> -->
 
-			<!-- --------------------------------------------------------------- -->
-			<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
-			  <div class="modal-dialog modal-lg" role="document">
-			    <div class="modal-content">
-			      <div class="video-modal modal-body">
-<!--			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				        <span aria-hidden="true">
-				        	<img src="/ico/close.png" alt="">	
-				        </span>
-			        </button>
--->		
-					<div class="videoContainer">
-						<p id="video-container"></p>
-						<div class="caption">This is HTML5 video with custom controls</div>
-						<div class="control">
-							<div class="progress">
-								<span class="bufferBar"></span>
-								<span class="timeBar"></span>
+								</form>
 							</div>
-							
-							<div class="btmControl">
+						@endif
+					@empty
+					@endforelse
+				</div>		
+				<div class="send-proof col-lg-12">
+						<button type="submit" class="send-proof-file"> Отправить на проверку</button>
+				</div>
+
+
+				<!-- --------------------------------------------------------------- -->
+				<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
+				  <div class="modal-dialog modal-lg" role="document">
+				    <div class="modal-content">
+				      <div class="video-modal modal-body">
+	<!--			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					        <span aria-hidden="true">
+					        	<img src="/ico/close.png" alt="">	
+					        </span>
+				        </button>
+	-->		
+						<div class="videoContainer">
+							<p id="video-container"></p>
+							<!-- <div class="control">
+								<div class="progress">
+									<span class="bufferBar"></span>
+									<span class="timeBar"></span>
+								</div>
 								
-								<div class="mainControl">
-									<a class="btnStop lvl3 btnmain" href="#" tabindex="0" title="Stop play"></a>
-									<a class="btnBck lvl2 btnmain" href="#" tabindex="0" title="Rewind"></a>
-									<a class="btnPlay lvl1 btnmain" href="#" tabindex="0" title="Play/Pause video"></a>
-									<a class="btnFwd lvl2 btnmain" href="#" tabindex="0" title="Fast forward"></a>
-									<a class="btnEnd lvl3 btnmain" href="#" tabindex="0" title="End video"></a>
-								</div>	
-
-								<div class="volume">
-									<div class="sound" title="Mute/Unmute sound"></div>
-									<span class="volumeCover" title="Set volume"></span>
-									<span class="volumeBar"></span>
-								</div>
-							</div>
-							
-						</div>
-						<div class="loading"></div>
-					</div>
+								<div class="btmControl">
 									
-			      </div>
-			    </div>
-			  </div>
-			</div>
+									<div class="mainControl">
+										<a class="btnStop lvl3 btnmain" href="#" tabindex="0" title="Stop play"></a>
+										<a class="btnBck lvl2 btnmain" href="#" tabindex="0" title="Rewind"></a>
+										<a class="btnPlay lvl1 btnmain" href="#" tabindex="0" title="Play/Pause video"></a>
+										<a class="btnFwd lvl2 btnmain" href="#" tabindex="0" title="Fast forward"></a>
+										<a class="btnEnd lvl3 btnmain" href="#" tabindex="0" title="End video"></a>
+									</div>	
+
+									<div class="volume">
+										<div class="sound" title="Mute/Unmute sound"></div>
+										<span class="volumeCover" title="Set volume"></span>
+										<span class="volumeBar"></span>
+									</div>
+								</div>
+								
+							</div>
+							<div class="loading"></div> -->
+						</div>
+										
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			@endif
 		@else
 			@include('layouts.choose_program_form')
 		@endif

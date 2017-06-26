@@ -23,18 +23,25 @@ class PrivatOfficeController extends Controller
         $programs = Programm::select('id','description','name')
                             ->get();
 
+        $current_program_day = 0;
+        $programm_days = 0;
+        $programm_stages = 0;
+
         if ( !empty($user->current_programm_id) ) {
             $programm_days = ProgrammDay::select('id','day','status','lead_time', 'difficult')
                                         ->where('programm_id','=',$user->current_programm_id)
                                         ->orderBy('day')->get();
 
-            $programm_stages = ProgrammStage::select('id','exercise_id','status','description', 'repeat_count','time_exercive')
-                                        ->where('programm_day_id','=',$user->current_programm_id)
+            if (!empty($user->current_day)) {
+                $current_program_day = $programm_days->whereStrict('day',$user->current_day)->first();
+
+                if (!empty($current_program_day)) {
+                    $programm_stages = ProgrammStage::select('id','exercise_id','status','description', 'repeat_count','time_exercive')
+                                        ->where('programm_day_id','=',$current_program_day->id)
                                         ->with('exercive')
                                         ->get();
-        } else {
-            $programm_days = 0;
-            $programm_stages = 0;
+                }
+            }
         }
 
         $difficult_array = ProgrammDay::$difficult_array;
@@ -45,6 +52,7 @@ class PrivatOfficeController extends Controller
             'difficult_array' => $difficult_array,
             'programm_stages' => $programm_stages,
             'programs' => $programs,
+            'current_program_day' => $current_program_day,
     	];
 
     	return view('privat_office.index', $data);
@@ -92,12 +100,18 @@ class PrivatOfficeController extends Controller
             //     'month' => 'date_format:m',
             //     'day' => 'date_format:d',
                 'pasport_date' => 'date',
+                'growth' => 'numeric',
+                'weight' => 'numeric',
+                'pasport_number' => 'numeric',
             ];
             $messages = [
             //     'year.date_format' => 'Введите год рождения',
             //     'month.date_format' => 'Введите месяц рождения',
             //     'day.date_format' => 'Введите день рождения',
                 'pasport_date.date' => 'Поле дата выдачи должно быть корректной формы',
+                'growth.numeric' => 'Рост указан неверно',
+                'weight.numeric' => 'Вес указан неверно',
+                'pasport_number.numeric' => 'Номер паспорта указан неверно',
             ];
 
             $validator = Validator::make($request->all(), $rules, $messages);
@@ -127,6 +141,7 @@ class PrivatOfficeController extends Controller
             $user->pasport_series = $request->get('pasport_series');
             $user->pasport_date = Carbon::parse($request->get('pasport_date'))->timestamp;
             $user->pasport_issued = $request->get('pasport_issued');
+            $user->city = $request->get('city');
 
             if ($user->save()) {
                 $data = [

@@ -15,7 +15,7 @@
     <link href="/assets/navigation/css/user.css" type="text/css" rel="stylesheet">
     <link href="/assets/css/modal.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-
+    <link rel="stylesheet" href="/assets/css/layout.css">
 
 	<title>Жиротопка</title>
 
@@ -102,7 +102,7 @@
                                 <!-- </div> -->
                             </div>
                             <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" >
-                                <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}&nbsp;$</p>                             
+                                <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;&#8381;</p>                             
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
                                 <a href="/lk/{{$user->id}}/messages">
@@ -111,9 +111,7 @@
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <div class="user-name">{{$user->first_name.' '.$user->surname}}</div>
-                                <i class="fa fa-caret-down" aria-hidden="true"></i>
-
+                                    <div class="user-name">{{$user->first_name.' '.$user->surname}}<i class="fa fa-caret-down" aria-hidden="true"></i></div>
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
                                     <li><a href="/lk/{{$user->id}}">ЛИЧНЫЙ КАБИНЕТ</a></li>
@@ -176,7 +174,6 @@
     <script src="/assets/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-    <script type="text/javascript" src="/assets/js/video.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>    
     <script type="text/javascript" src="/assets/navigation/js/classie.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/sidebarEffects.js"></script>

@@ -21,6 +21,9 @@ Route::post('login', ['as' => 'login', 'uses' => 'UserController@login' ] );
 
 Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	Route::get('logout', [ 'as' => 'logout', 'uses' => 'UserController@logout' ] );
+
+	Route::post('user/change_logo', [ 'uses' => 'UserController@change_logo' ] );
+
 	Route::get('lk/{id}', [ 'uses' => 'PrivatOfficeController@index' ] );
 	Route::post('privat_office/get_exercive_video', [ 'uses' => 'PrivatOfficeController@get_exercive_video' ] );
 	Route::get('lk/{id}/edit', ['uses' => 'PrivatOfficeController@personal_data']);
