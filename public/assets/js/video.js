@@ -26,25 +26,28 @@ $( document ).ready(function() {
 
           			video_container.html('');
 
-          			video.className = 'video-descr vjs-default-skin';
+          			video.className = 'vjs-matrix video-js ';
           			video.id = 'exercive';
           			video.controls = 'controlls';
-
+                video.width = '1000';
+                video.height = '560';
           			source.src = src;
           			source.type = 'video/ogg';
+
 
           			video.appendChild( source );
 
           			video_container.html( video );
 
                 video_modal_form.modal('show');
+                videojs('exercive');
 
                 video.play();
 
-                //videojs('exercive');
             } else {
                 alert('Видео не может быть загружено. Обратитесь в тех. поддержку.')
             }
+
         }
     });
    });

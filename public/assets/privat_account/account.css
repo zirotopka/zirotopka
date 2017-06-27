@@ -147,7 +147,7 @@
 .send-proof-file{
 	background-color: #232323;
 	float: none;
-	margin-top: 4em;
+	margin: 4em 0 4em 0; 
 	padding: 1.5em 4em;
 	font-family: GilroyLight;
 	text-transform: uppercase;

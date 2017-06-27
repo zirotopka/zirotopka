@@ -284,9 +284,6 @@ ul{
 	font-family: MuseoSansCyrl_100;
 }
 
-.msg_sendbutton{
-	margin: 2em 0 0 45%;
-}
 
 .sended_message{
 	display: none;
@@ -352,4 +349,54 @@ ul{
 	margin: 1em 0 3em 56%;
 	text-transform: uppercase;
 
+}
+
+.send_btn_align{
+	width: 60%;
+	text-align: right;
+}
+
+@media screen and (max-width: 61.95em) {
+	.left_edit_part{
+		width: 33.333333%;
+	}
+	.write_button{
+		width: 80%;
+	}
+	.write_button:hover{
+		width: 80.2%;
+	}
+	.write_button:active{
+		width: 80.2%;
+	}
+	.msg_theme{
+		width: 100%;
+	}
+	.msg_text{
+		width: 100%;
+	}
+	.new_message{
+		padding: 0;
+		margin: 7em auto;
+	}
+	.msg_sendbutton{
+		width: 12em;
+	}
+	.msg_sendbutton:hover{
+		width: 12.2em;
+	}
+	.msg_sendbutton:active{
+		width: 12.2em;
+	}
+	.send_btn_align{
+		width: 100%;
+		text-align: right;
+	}
+	.message_list{
+		height: 100%;
+		width: 33.33333%;
+		margin: 0 0 0 -33.3333333%;
+		position: fixed;
+		display: none;
+	}
 }

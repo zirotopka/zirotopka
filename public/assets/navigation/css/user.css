@@ -105,7 +105,7 @@ a:hover, a:focus {
 	background-color: #282828;
 	position: fixed;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 }
 .codrops-top a {
 	display: inline-block;
@@ -238,7 +238,6 @@ button:hover {
 	
 	.dropdown-toggle{
 		float: none;
-		padding: 0 !important;
 		width: 100%!important;
 	}
 	#nav-dropdown{
@@ -255,8 +254,12 @@ button:hover {
 	}
 
 	.user_dropdown{
-		width: 11em ;
+		width: 100%!important ;
 		margin: 0 0 0 0;
+	}
+
+	.dropdown button div{
+		width: 8em !important;
 	}
 }
 
@@ -311,7 +314,7 @@ button:hover {
 .dropdown button{
 	height: 100%;
 	width: 100%;
-	padding: 0.8em 0 0 2em;
+	padding: 0.8em 0 0 2.5vw;
 	text-align: left;
 }
 

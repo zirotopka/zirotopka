@@ -6,6 +6,7 @@
     <link href="http://vjs.zencdn.net/6.1.0/video-js.css" rel="stylesheet">
     <link href="/assets/privat_account/account.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
+    <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
 @overwrite
 
 @section('js')
@@ -15,6 +16,7 @@
     <script type="text/javascript" src="/assets/privat_account/account.js?123"></script>
     <script type="text/javascript" src="/assets/js/video-btn.js?123"></script>
     <script type="text/javascript" src="/assets/js/video.js"></script>
+    <script src="//vjs.zencdn.net/5.19/video.min.js"></script>
 @overwrite
 
 

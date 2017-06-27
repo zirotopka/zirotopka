@@ -43,10 +43,10 @@
             </ul>                
         </nav>
 	</div>
-	<div class="col-xs-5 col-sm-5 col-lg-2 col-md-2">
+	<div class="col-xs-4 col-sm-4 col-lg-2 col-md-2">
 		
 	</div>
-	<div class="right_edit_part col-xs-7 col-sm-7 col-lg-10 col-md-10">
+	<div class="right_edit_part col-xs-8 col-sm-8 col-lg-10 col-md-10">
 		@include('privat_office._partials.new_message')
 		<div class="row i-o_message">
 			<div class="col-lg-4 col-md-4"></div>
@@ -56,11 +56,11 @@
 						<p class="sended">ОТПРАВЛЕННЫЕ</p>
 					</li>
 					<li class="min_msg_cont">
-						<div class="min_left_col col-lg-6 col-md-6">
+						<div class="min_left_col col-lg-6 col-md-6 col-sm-6 col-xs-6">
 							<p class="who_send">Тренер</p>
 							<a class="answer_msg">Ответить на вопрос</a>
 						</div>
-						<div class="min_right_col col-lg-6 col-md-6">
+						<div class="min_right_col col-lg-6 col-md-6 col-sm-6 col-xs-6">
 							<p class="when_send">12:23</p>
 							<img class="attach_ico" src="/ico/attach_grey.png" alt="">
 						</div>
