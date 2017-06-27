@@ -16,7 +16,7 @@
 
 
 @section("content")
-	<div class="left_edit_part col-xs-5 col-sm-5 col-lg-2 col-md-2">
+	<div class="left_edit_part">
 		<nav>
             <ul>
 				<li class="write_button_li send">
@@ -37,16 +37,20 @@
 	            <li>
 	                <a href="#" class="profile_btns help">
 	                	<i class="wallet_ico prof-disp"></i>
-	                	<p class="prof-disp">ПОМОШЬ</p>
+	                	<p class="prof-disp">ПОМОЩЬ</p>
 	                </a> 
 	            </li>
             </ul>                
         </nav>
 	</div>
+	<div class="col-xs-5 col-sm-5 col-lg-2 col-md-2">
+		
+	</div>
 	<div class="right_edit_part col-xs-7 col-sm-7 col-lg-10 col-md-10">
 		@include('privat_office._partials.new_message')
 		<div class="row i-o_message">
-			<div class="col-lg-4 col-md-4 message_list">
+			<div class="col-lg-4 col-md-4"></div>
+			<div class="message_list">
 				<ul>
 					<li>
 						<p class="sended">ОТПРАВЛЕННЫЕ</p>
@@ -54,7 +58,7 @@
 					<li class="min_msg_cont">
 						<div class="min_left_col col-lg-6 col-md-6">
 							<p class="who_send">Тренер</p>
-							<p class="answer_msg">Ответить на вопрос</p>
+							<a class="answer_msg">Ответить на вопрос</a>
 						</div>
 						<div class="min_right_col col-lg-6 col-md-6">
 							<p class="when_send">12:23</p>
@@ -63,7 +67,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-lg-4 col-md-8">
+			<div class="col-lg-8 col-md-8">
 				@include('privat_office._partials.message_content')
 			</div>
 		</div>

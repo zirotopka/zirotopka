@@ -187,8 +187,8 @@ td{
 
 .table-scrolling{
 	margin: 3em 0 0 0;
-	overflow: auto;
 	height: 60%;
+	overflow: scroll;
 	width: 95%;
 	border: 1px solid #EAEAEA;
 

@@ -21,4 +21,6 @@ $( document ).ready(function() {
 		$('.i-o_message').attr('style','display:block;')
 		$('.sended').text('ОТПРАВЛЕННЫЕ')
 	});
+
+    $('.message_list').perfectScrollbar();
 })

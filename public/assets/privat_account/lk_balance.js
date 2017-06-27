@@ -7,4 +7,5 @@ $( document ).ready(function() {
 		$('.output_money').attr('style','display:block;')
 		$('.input_money').attr('style','display:none;')
 	});
+
 })

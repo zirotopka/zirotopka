@@ -11,6 +11,7 @@
     <link href="/assets/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
     <link href="/assets/bootstrap-select/dist/css/bootstrap-select.min.css" type="text/css" rel="stylesheet">
     <link href="/assets/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/perfect-scrollbar.min.css">
     <link href="/assets/navigation/css/component.css" type="text/css" rel="stylesheet">
     <link href="/assets/navigation/css/user.css" type="text/css" rel="stylesheet">
     <link href="/assets/css/modal.css" type="text/css" rel="stylesheet">
@@ -175,6 +176,7 @@
     <script type="text/javascript" src="/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>    
+    <script type="text/javascript" src="/assets/js/perfect-scrollbar.jquery.min.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/classie.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/sidebarEffects.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>
