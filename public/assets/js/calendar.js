@@ -1,4 +1,18 @@
 $(document).ready(function(){
+	//------------------Календарь лк--------------------
+	$(".box-cal").on('mouseover',function(){
+		var cal = $(this).find('.cal_hints');
+		var offset = cal.offset();
+		var max_left_pos = $("html").width() - cal.width() -44;
+		if (offset.left > max_left_pos) {
+			cal.offset({left:max_left_pos});			
+		}
+	});
+		
+
+
+
+	//------------------Каледраь формы------------------
 	$( "#program_date_input" ).datepicker({
     dateFormat: "dd-mm-yy",
     monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",

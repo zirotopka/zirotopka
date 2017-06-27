@@ -215,6 +215,10 @@ button:hover {
 	width: 17%;
 }
 
+.drop-text{
+	padding: 0;
+}
+
 @media screen and (max-width: 46.0625em) {
 	.column {
 
@@ -299,10 +303,22 @@ button:hover {
 }
 
 .dropdown{
-	padding: 1em 0 0 0;
 	text-align: center;
 	margin: 0;
 	height: 100%;
+}
+
+.dropdown button{
+	height: 100%;
+	width: 100%;
+	padding: 0.8em 0 0 2em;
+	text-align: left;
+}
+
+.dropdown button div{
+	height: 2em;
+	width: 11em;
+	display: inline-block;
 }
 
 .user_dropdown{
@@ -312,7 +328,7 @@ button:hover {
 	box-shadow: none;
 	margin: 0;
 	padding: 0;
-	width: 15.3em;
+	width: 100%;
 	border: none;
 }
 
@@ -371,7 +387,8 @@ button:focus {
 	font-size: 1em;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	width: 100%;
+	width: 45%;
+	height: 2em;
 }
 
 .user-fln{

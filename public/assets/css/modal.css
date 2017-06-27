@@ -330,3 +330,6 @@ label:hover:before {
   border: 2px solid #F98749!important;
 }
 
+.reg-mod-content{
+	height: 40em;
+}

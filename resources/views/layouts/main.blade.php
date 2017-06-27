@@ -112,7 +112,11 @@
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <div class="user-name">{{$user->first_name.' '.$user->surname}}<i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                                    <div>
+                                        <span class="user-name">{{$user->first_name}}</span>
+                                        <span class="user-name">{{$user->surname}}</span>
+                                    </div>
+                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
                                     <li><a href="/lk/{{$user->id}}">ЛИЧНЫЙ КАБИНЕТ</a></li>
