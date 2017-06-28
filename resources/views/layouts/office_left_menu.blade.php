@@ -1,4 +1,4 @@
-    <div class=" col-xs-4 col-sm-4 col-lg-2 col-md-2" style="height: 100%; padding: 0; z-index: 1">
+    <div class="office_sidebar col-xs-4 col-sm-4 col-lg-2 col-md-2" style="height: 100%; padding: 0; z-index: 1">
         <nav class="left_edit_part">
             <ul>
                 <li style="padding: 0 0 1em 0;  box-shadow: inset 0 -1px rgba(0,0,0,0.2);">

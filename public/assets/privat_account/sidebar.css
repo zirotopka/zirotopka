@@ -87,4 +87,10 @@
 	.left_edit_part{
 		width: 33.33333333% !important;
 	}
+	.codrops-btn{
+		display: block;
+	}
+	.office_sidebar{
+		display: none;
+	}
 }

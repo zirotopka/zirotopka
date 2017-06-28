@@ -1,7 +1,7 @@
 <form action="{{'/lk/'.$user->id.'/'}}" method="POST" class="show-hidden-form">
     {{ csrf_field() }}
 	<div class="row">
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 lft-info">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 lft-info">
 			<p id="myself_info">ИНФОРМАЦИЯ О СЕБЕ</p>
 			<a href=""> <img src=/ico/edit.png class="edit_btn" alt="Изменить профиль"></a>
 			<p class="p_marg">Номер телефона</p>
@@ -17,7 +17,7 @@
 			</div>
 			<div class="row rac">
 					<p class="col-lg-2 col-md-2 col-sm-4 col-xs-4 rgt">Рост</p>
-					<input type="text" name="growth" class="edit-inputs hw-cls col-lg-4 col-md-4 col-sm-4 col-xs-">
+					<input type="text" name="growth" class="edit-inputs hw-cls col-lg-4 col-md-4 col-sm-4 col-xs-4">
 					<p class="col-lg-6 col-md-6 col-sm-4 col-xs-4 lft">см.</p>
 			</div>	
 			<div class="row">
@@ -27,7 +27,7 @@
 			</div>	
 			
 		</div>			
-		<div class="row col-lg-8 col-md-8 col-sm-12 col-xs-12 rt-info">
+		<div class="row col-lg-8 col-md-8 col-sm-8 col-xs-12 rt-info">
 			<div class="city col-xs-12 col-sm-12">
 				<p>Город проживания</p>
 				<input type="text" name="city" class="edit-inputs">

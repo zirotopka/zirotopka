@@ -224,20 +224,20 @@ input{
 
 @media screen and (max-width: 61.95em) {
 	.m_usr_dscr{
-		padding: 0;
+		padding: 0 0 0 2em;
+		text-align: left;
 	}
 	.right_edit_part{
 		padding: 0;
 		margin: 7em auto;
 		text-align: center;
-		background-position: 0em 9em;
+		background-position: 50% 0;
 	}
-
+	.m_usr_img{
+		text-align: right;
+	}
 	.right_edit_part .row{
 		margin: 2em 0 0 0;
-	}
-	.ld_img{
-		margin: 0em auto;
 	}
 	.pasport{
 		width: 100%;

@@ -44,6 +44,12 @@
                         <li>
                            <a href="/lk/{{$user->id}}/balance" class="profile_btns"><i class="wallet_ico prof-disp"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
                         </li>
+                        <li>
+                            <a href="/lk/{{$user->id}}/faq" class="profile_btns help">
+                                <i class="wallet_ico prof-disp"></i>
+                                <p class="prof-disp">ПОМОЩЬ</p>
+                            </a> 
+                        </li>
                      </ul>                
                 </nav>
             @else

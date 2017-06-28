@@ -19,7 +19,7 @@
 @section("content")
 	@include('layouts.office_left_menu')
 	<!--Balance content-->
-	<div class="right_edit_part col-xs-8 col-sm-8 col-lg-10 col-md-10">
+	<div class="right_edit_part col-xs-12 col-sm-12 col-lg-10 col-md-10">
 		<p class="cnt">МОЙ СЧЕТ</p>
 		<div class="row">
 			<div class="money ">
