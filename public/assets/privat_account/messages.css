@@ -94,6 +94,7 @@ input{
 	height: 100%;
 	position: fixed;
 	width: 27%;
+	display: none;
 }
 
 .message_list{
@@ -126,7 +127,12 @@ input{
 .min_msg_cont{
 	height: 6em !important;
 	color: #A9A9A9;
+}
 
+.min_msg_cont:hover{
+	background-color: #353535;
+	border-left: 0.3em solid #F98749;
+	cursor: pointer;
 }
 
 .min_left_col, .min_right_col{
@@ -241,7 +247,7 @@ ul{
 	height: 100%;
 }
 
-.i-o_message{
+.received_message{
 	display: none;
 }
 
@@ -250,6 +256,10 @@ ul{
 	
 }
 
+.back{
+	display: none;
+	cursor: pointer;
+}
 /*-----------------New message---------------*/
 .new_message{
 	margin: 7em 0 0 0;
@@ -357,6 +367,35 @@ ul{
 }
 
 @media screen and (max-width: 61.95em) {
+	.received_message{
+		padding: 0;
+		margin: 7em auto;
+		text-align: center;
+	}
+
+	.message_head p{
+		text-align: left;
+	}
+
+	.message_cnt{
+		text-align: left;
+		padding: 0 0 0 3em;
+	}
+
+	.send_back{
+		width: 95%;
+	}
+
+	.snd_btn{
+		width: 14em!important;
+	}
+
+	.back{
+		position: fixed;
+		z-index: 2;
+		margin: 1em 0 0 -30%;
+	}
+
 	.left_edit_part{
 		width: 33.333333%;
 	}

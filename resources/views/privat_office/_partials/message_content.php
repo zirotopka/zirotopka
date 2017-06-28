@@ -1,9 +1,9 @@
 <div class="received_message col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<div class="message_head">
-		<div class="col-lg-2 col-md-2">
+		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
 			<img src="/image/logos/default.jpg" alt="" class="user_ava">	
 		</div>
-		<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+		<div class="col-lg-10 col-md-10 col-sm-6 col-xs-6">
 			<p class="message_sender">Иван Поветкин</p>
 			<p class="message_time">12:32</p>
 		</div>

@@ -40,6 +40,7 @@
 	                	<p class="prof-disp">ПОМОЩЬ</p>
 	                </a> 
 	            </li>
+
             </ul>                
         </nav>
 	</div>
@@ -48,6 +49,7 @@
 	</div>
 	<div class="right_edit_part col-xs-8 col-sm-8 col-lg-10 col-md-10">
 		@include('privat_office._partials.new_message')
+		<img src="/ico/back.png" alt="" class="back">
 		<div class="row i-o_message">
 			<div class="col-lg-4 col-md-4"></div>
 			<div class="message_list">
