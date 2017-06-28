@@ -39,7 +39,7 @@
 			</span>
 		</div>
 		@include('privat_office._partials.user_data')
-		@include('privat_office._partials.change_user_data_form')
+		@include('privat_office._partials.change_user_data_form')		
 	</div>
 @overwrite
 

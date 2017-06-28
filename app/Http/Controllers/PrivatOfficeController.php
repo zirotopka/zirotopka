@@ -157,7 +157,29 @@ class PrivatOfficeController extends Controller
         return redirect()->back()->withInput();
     }
 
-    public function balance($id){
+    public function faq($id){
+        $user = Sentinel::getUser();
+
+        $accruals = Accrual::select([
+                'id',
+                'sum',
+                'comment',
+                'created_at',
+                'type_id',
+            ])->where('user_id','=',$user->id)
+            ->orderBy('created_at','desc')
+            ->with('type')
+            ->paginate(10);
+
+        $data = [
+            'user' => $user,
+            'accruals' => $accruals,
+        ];
+
+        return view('FAQ.FAQ', $data);
+    }
+
+        public function balance($id){
         $user = Sentinel::getUser();
 
         $accruals = Accrual::select([
@@ -178,6 +200,7 @@ class PrivatOfficeController extends Controller
 
         return view('privat_office.balance', $data);
     }
+
     public function messages($id){
         $user = Sentinel::getUser();
 

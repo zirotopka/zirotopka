@@ -259,7 +259,7 @@ button:hover {
 	}
 
 	.dropdown button div{
-		width: 8em !important;
+		width: 75% !important;
 	}
 }
 

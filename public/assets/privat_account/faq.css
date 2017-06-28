@@ -1,0 +1,32 @@
+/*-----------------------------------------FAQ-------------------------------------*/
+ul,li {
+	list-style: none;
+}
+
+.FAQ{
+	margin: 7em 0 0 4em;
+}
+
+.faq_ico{
+	width: 3em;
+	display: inline-block;
+}
+
+.faq_title{
+	display: inline-block;
+}
+
+.faq_help{
+	font-family: MuseoSansCyrl_500;
+}
+
+.faq_title{
+	color: #FF9319;
+	font-family: MuseoSansCyrl_500;
+	font-size: 1.1em;
+}
+
+.questions_block ul li a{ 
+	color: #c4c4c4;
+	font-family: MuseoSansCyrl_100;
+}

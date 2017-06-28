@@ -31,6 +31,7 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 
 	Route::get('lk/{id}/balance', ['uses' => 'PrivatOfficeController@balance']);
 	Route::get('lk/{id}/messages', ['uses' => 'PrivatOfficeController@messages']);
+	Route::get('lk/{id}/faq', ['uses' => 'PrivatOfficeController@faq']);
 
 	Route::post('program/choice_programm', [ 'uses' => 'ProgrammController@choice_program']);
 	Route::post('program/get_program', [ 'uses' => 'ProgrammController@get_program' ] );

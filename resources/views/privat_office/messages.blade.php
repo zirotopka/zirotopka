@@ -34,13 +34,6 @@
 	                	<p class="prof-disp">ОТПРАВЛЕНЫЕ</p>
 	                </a> 
 	            </li>
-	            <li>
-	                <a href="#" class="profile_btns help">
-	                	<i class="wallet_ico prof-disp"></i>
-	                	<p class="prof-disp">ПОМОЩЬ</p>
-	                </a> 
-	            </li>
-
             </ul>                
         </nav>
 	</div>

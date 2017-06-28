@@ -4,6 +4,8 @@ $( document ).ready(function() {
 		$('.show-hidden-form').attr('style','display:block;')
 	});
 
+
+
 	$('body').on('change','#download-logos',function(){
 		var file = this.files[0];
 		var formData = new FormData();

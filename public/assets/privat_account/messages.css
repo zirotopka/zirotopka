@@ -366,6 +366,8 @@ ul{
 	text-align: right;
 }
 
+
+/*-----------------------------------------Moblie screen--------------------------------*/
 @media screen and (max-width: 61.95em) {
 	.received_message{
 		padding: 0;
@@ -439,3 +441,4 @@ ul{
 		display: none;
 	}
 }
+
