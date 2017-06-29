@@ -25,13 +25,14 @@ $( document ).ready(function() {
 
 	$('.min_msg_cont').on('click',function(){
 		$('.received_message').attr('style','display:block;');
+		if ($('body').width() < 991) {
+			$('.message_list').attr('style','display:none;')	
+		}
+		
+
 	})
 
-	$('.back').on('click',function(){
-		$('.message_list').attr('style','display:block;');
-		$('.received_message').attr('style','none;');
-		$('.back').attr('style','display:none;');
-		$('.sended').text('ВХОДЯЩИЕ');	});
+
 
     $('.message_list').perfectScrollbar();
 })

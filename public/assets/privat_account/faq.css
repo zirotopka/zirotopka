@@ -1,10 +1,17 @@
 /*-----------------------------------------FAQ-------------------------------------*/
+
+
 ul,li {
 	list-style: none;
 }
 
 .FAQ{
-	margin: 7em 0 0 4em;
+	margin: 7em auto;
+	padding: 0 0 0 10%;
+}
+
+.FAQ ul{
+	margin: 0 0 0 0.7em;
 }
 
 .faq_ico{
@@ -18,6 +25,7 @@ ul,li {
 
 .faq_help{
 	font-family: MuseoSansCyrl_500;
+	font-size: 1.2em;
 }
 
 .faq_title{
@@ -26,7 +34,90 @@ ul,li {
 	font-size: 1.1em;
 }
 
+.questions_block{
+	line-height: 1.8em;
+}
+
 .questions_block ul li a{ 
-	color: #c4c4c4;
+	color: #000000b3;
+	font-family: MuseoSansCyrl_100;;
+}
+
+
+.questions_block ul li a:hover{ 
+	text-decoration:none;
+	color: #FF9319;
+}
+
+.questions_block ul li a:focus{ 
+	text-decoration:none;
+	color: #FF9319;
+}
+
+.faq_show_all{
+	color: #ABABAB !important;
+	font-size: 1.1em;
+}
+
+.faq_show_all:hover{
+	color: #FF9319 !important;
+}
+
+.access_block, .programm_block, .immunity_block, .questions_block{
+	margin: 2em 0 0 0;
+}
+
+/*------------------------------FAQ-Lists-------------------------*/
+.access_list{
+	display: none;
+	margin: 7em 0 0 0;
+	padding: 4em 0 0 10%; 
+}
+
+.programm_list{
+	display: none;
+}
+
+.immunity_list{
+	display: none;
+}
+
+.questions_list{
+	display: none;
+}
+
+.asn_faq_block{
+	margin: 5em 0 0 0;
 	font-family: MuseoSansCyrl_100;
+	color: #000000b3;
+}
+
+.asn_faq_block p{
+	width: 85%;
+}
+
+.mail_recovery{
+	width: 75%;
+	background-color: white;
+	border:0.1em solid #c6c6c6;
+	border-radius: 4px; 
+	height: 2.5em;
+}
+
+.send_btn{
+	border: none;
+	background-color: #F98749;
+	border-radius: 4px;
+	color: white;
+	margin: 1em 0 0 0;
+	width: 10em;
+	height: 3em;
+}
+
+.send_btn:hover{
+	background-color: #FF7930;
+}
+
+.send_btn:active{
+
 }

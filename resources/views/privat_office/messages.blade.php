@@ -16,33 +16,23 @@
 
 
 @section("content")
-	<div class="left_edit_part">
-		<nav>
-            <ul>
-				<li class="write_button_li send">
-	           		<button type="button" class="write_button ">НАПИСАТЬ</button>
-                </li>
-                <li>
-                	<a href="#" class="profile_btns input">
-	                	<i class="inp_msg_ico prof-disp"></i>
-	                	<p class="prof-disp">ВХОДЯЩИЕ</p>
-	                </a> 
-                </li>
-	            <li>
-	                <a href="#" class="profile_btns output">
-	                	<i class="msg_ico prof-disp"></i>
-	                	<p class="prof-disp">ОТПРАВЛЕНЫЕ</p>
-	                </a> 
-	            </li>
-            </ul>                
-        </nav>
+
+	<div class="little_menu">
+		<ul>
+			<li class="hidden-xs hidden-sm"></li>
+			<li class="send">
+				<img src="/ico/add_msg.png" alt="" class="add_img">
+			</li>
+			<li class="input">
+				<img src="/ico/mess.png" alt="">
+			</li>
+			<li class="output">
+				<img src="/ico/input_mess.png" alt="">
+			</li>
+		</ul>		
 	</div>
-	<div class="col-xs-4 col-sm-4 col-lg-2 col-md-2">
-		
-	</div>
-	<div class="right_edit_part col-xs-8 col-sm-8 col-lg-10 col-md-10">
+	<div class="right_edit_part col-xs-12 col-sm-12 col-lg-12 col-md-12">
 		@include('privat_office._partials.new_message')
-		<img src="/ico/back.png" alt="" class="back">
 		<div class="row i-o_message">
 			<div class="col-lg-4 col-md-4"></div>
 			<div class="message_list">

@@ -76,7 +76,7 @@
                         <div class="codrops-top clearfix ">
                             <div id="st-trigger-effects" class="column col-lg-1 col-md-1 col-sm-4 col-xs-4">
                                 <button data-effect="st-effect-2" class="codrops-btn">
-                                    <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                                    <img src="/ico/menu.png" alt="">
                                 </button>
                             </div>
                             <div class="col-lg-1 hidden-md hidden-sm hidden-xs">
