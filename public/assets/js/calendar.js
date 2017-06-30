@@ -17,32 +17,43 @@ $(document).ready(function(){
 		
 
 
-
 	//------------------Каледраь формы------------------
-	$('.drp-control').on('click',function(){
-		$(".ui-datepicker-header").append('<a class="prew_year" href="#"><img src="/ico/left.png" alt="" /></a>');
-		$(".ui-datepicker-header").append('<a class="next_year" href="#"><img src="/ico/right.png" alt="" /></a>');
-	});	
 
-	$('.ui-datepicker-month').on('change',function(){
-		$(".ui-datepicker-header").append('<a class="prew_year" href="#"><img src="/ico/left.png" alt="" /></a>');
-		$(".ui-datepicker-header").append('<a class="next_year" href="#"><img src="/ico/right.png" alt="" /></a>');
-	});	
+	var inputDate = $("#program_date_input");
+	var changeYearButtons = function() {
+	    setTimeout(function() {
+	        var widgetHeader = inputDate.datepicker("widget").find(".ui-datepicker-header");
+	        //you can opt to style up these simple buttons tho
+	        var prevYrBtn = $('<a class="prew_year" href="#"><img src="/ico/left.png" alt="" /></a>');
+	        prevYrBtn.bind("click", function() {
+	            $.datepicker._adjustDate(inputDate, -1, 'Y');
+	        });
+	        var nextYrBtn = $('<a class="next_year" href="#"><img src="/ico/right.png" alt="" /></a>');
+	        nextYrBtn.bind("click", function() {
+	            $.datepicker._adjustDate(inputDate, +1, 'Y');
 
+	        });
+	        prevYrBtn.appendTo(widgetHeader);
+	        nextYrBtn.appendTo(widgetHeader);
 
-	$( "#program_date_input" ).datepicker({
-    dateFormat: "dd-mm-yy",
-    monthNamesShort: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-                "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
-    dayNames: ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
-    dayNamesMin: [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
-  	changeMonth: true,
-  	changeYear: true,
-  	firstDay: 1,
-  	minDate: 0,
-  	gotoCurrent: true,
-	showOtherMonths: true,
-  });
+	    }, 1);
+	};
+
+	var dates = $("#program_date_input").datepicker({
+	    beforeShow: changeYearButtons,
+	    onChangeMonthYear: changeYearButtons,
+	    dateFormat: "dd-mm-yy",
+	    monthNamesShort: [ "Январь", "Февр.", "Март", "Апрель", "Май", "Июнь",
+	                "Июль", "Август", "Сентяб.", "Октябь", "Ноябрь", "Декаб." ],
+	    dayNames: ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
+	    dayNamesMin: [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+	  	changeMonth: true,
+	  	changeYear: true,
+	  	firstDay: 1,
+	  	minDate: 0,
+	  	gotoCurrent: true,
+		showOtherMonths: true,
+	});
 
     jQuery('input.date').each(function(){
         jQuery(this).datepicker({dateFormat:'dd/mm/yy', changeMonth: true,    stepMonths: 12, showAnim:"slideDown" });
