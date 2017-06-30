@@ -62,13 +62,25 @@
 }
 
 .prew_year img{
-	margin: -3.5em 0 0 9em;
+	margin: -1.6em 0 0 9em;
+	cursor: pointer;
+	position: absolute;
+}
+
+.prew_year img:hover{
+	margin: -1.7em 0 0 8.9em;
 	cursor: pointer;
 	position: absolute;
 }
 
 .next_year img{
-	margin: -3.5em 0 0 4em;
+	margin: -1.6em 0 0 14.3em;
+	cursor: pointer;
+	position: absolute;
+}
+
+.next_year img:hover{
+	margin: -1.7em 0 0 14.4em;
 	cursor: pointer;
 	position: absolute;
 }

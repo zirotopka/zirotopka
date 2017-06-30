@@ -44,6 +44,12 @@ $(document).ready(function(){
 	showOtherMonths: true,
   });
 
+    jQuery('input.date').each(function(){
+        jQuery(this).datepicker({dateFormat:'dd/mm/yy', changeMonth: true,    stepMonths: 12, showAnim:"slideDown" });
+        jQuery('#ui-datepicker-div .ui-helper-hidden-accessible').css("position", "absolute !important");
+        jQuery('#ui-datepicker-div').css('clip', 'auto');
+    });
+
 	$('.next_year').on('click',function(){
 	    $('.ui-datepicker-year > option:selected').removeAttr('selected').next('option').attr('selected', 'selected');
   	});
