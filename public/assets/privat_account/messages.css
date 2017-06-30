@@ -411,8 +411,8 @@ ul{
 	}
 
 	.snd_btn{
-		width: 14em!important;
-		margin: 0 1.5em 0 0;
+		width: 96%!important;
+		margin: 0 0.7em 0 0;
 		float: right;
 	}
 
@@ -424,9 +424,6 @@ ul{
 
 	.left_edit_part{
 		width: 33.333333%;
-	}
-	.write_button{
-		width: 80%;
 	}
 	.write_button:hover{
 		width: 80.2%;

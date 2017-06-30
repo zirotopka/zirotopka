@@ -39,6 +39,7 @@ $(document).ready(function(){
 			$("#program_bnr").attr('src',"/image/test/r.one_power.png");
 		}
 	});
+	
 	$('.selectpicker').on('loaded.bs.select', function (e) {
 		var program_id = $('.selectpicker').val();
     

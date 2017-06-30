@@ -22,7 +22,7 @@
             <div class="select-side" style="height: 2.6em; z-index: 2; margin: 0.2em; ">
               <img src="/ico/drop-ico.png"></img>
             </div>
-              <input type="text" name="program_date_input" id="program_date_input" class="drp-control progr-dropdowns" required="required">
+              <input type="text" name="program_date_input" id="program_date_input" class="drp-control progr-dropdowns" required="required" placeholder="Выберите дату">
           </div>
          
           <div class="checkboxiki">

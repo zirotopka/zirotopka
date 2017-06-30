@@ -75,7 +75,6 @@ a:hover, a:focus {
 
 .codrops-header {
 	margin: 0 auto 3em;
-	padding: 3em;
 	text-align: center;
 }
 
@@ -261,6 +260,9 @@ button:hover {
 	.dropdown button div{
 		width: 75% !important;
 	}
+	.codrops-header {
+		padding: 3em;
+	}
 }
 
 
@@ -409,3 +411,6 @@ button:focus {
 	position: block !important;
 }
 
+.img-circle{
+	width: 6em !important;
+}
