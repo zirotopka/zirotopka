@@ -40,9 +40,9 @@ class ProgrammController extends Controller
     		$user->current_programm_id = $program_id;
             $user->current_day = 0;
 
-            if ( ($now->month == $start_training_day->month) && ($now->day == $start_training_day->day) ) {
+            if ( ($now->month <= $start_training_day->month) && ($now->day <= $start_training_day->day) ) {
                 $user->current_day = 1;
-            } elseif ( ($now->year > $start_training_day->year) || ($now->month > $start_training_day->month ) || ($now->day > $start_training_day->day )){
+            } elseif ( ($now->year > $start_training_day->year) && ($now->month > $start_training_day->month ) && ($now->day > $start_training_day->day )){
                 dd('Выбранная вами дата уже прошла');
                 return back(); //Выбрана старая дата
             }
