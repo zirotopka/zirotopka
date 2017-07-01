@@ -240,6 +240,7 @@ height: 4.7em;
 	}
 	.send-proof-file{
 		width: 100%!important;
+		padding: 0;
 	}
 	.send-proof-file:hover{
 		width: 100%!important;
@@ -316,6 +317,7 @@ height: 4.7em;
 	}
 	.send-proof-file{
 		width: 100%!important;
+		padding: 0;
 	}
 	.send-proof-file:active{
 		width: 100%!important;
