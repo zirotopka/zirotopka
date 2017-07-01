@@ -414,3 +414,8 @@ button:focus {
 .img-circle{
 	width: 6em !important;
 }
+
+.dropdown-menu-right a{
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

@@ -237,7 +237,15 @@ height: 4.7em;
 	.video-btn, .video-btn:hover{
 		height: 55vw !important;
 	}
-
+	.send-proof-file{
+		width: 100%!important;
+	}
+	.send-proof-file:hover{
+		width: 100%!important;
+	}
+	.send-proof-file:active{
+		width: 100%!important;
+	}
 }
 
 @media screen and (max-width: 61.95em) {
@@ -267,6 +275,15 @@ height: 4.7em;
 
 	.video-btn, .video-btn:hover{
 		height: 28vw;
+	}
+	.send-proof-file{
+		width: 100%!important;
+	}
+	.send-proof-file:active{
+		width: 100%!important;
+	}
+	.send-proof-file:hover{
+		width: 100%!important;
 	}
 
 }
