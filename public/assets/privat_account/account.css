@@ -267,7 +267,20 @@ height: 4.7em;
 	}
 	.send-progr-btn{
 		margin: 0;
+		width: 17em!important;
 	}
+	.send-progr-btn:hover{
+		margin: 0;
+		width: 17em!important;
+	}
+	.send-progr-btn:active{
+		margin: 0;
+		width: 17em!important;
+	}
+	.checkboxiki ul{
+		padding: 0!important;
+	}
+
 }
 
 @media screen and (max-width: 61.95em) {
@@ -325,7 +338,20 @@ height: 4.7em;
 	}
 	.send-progr-btn{
 		margin: 0;
+		width: 17em!important;
 	}
+	.send-progr-btn:hover{
+		margin: 0;
+		width: 17em!important;
+	}
+	.send-progr-btn:active{
+		margin: 0;
+		width: 17em!important;
+	}
+	.checkboxiki ul{
+		padding: 0!important;
+	}
+
 }
 
 .c-orange {
