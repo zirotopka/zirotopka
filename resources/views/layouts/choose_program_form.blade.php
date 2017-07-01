@@ -6,9 +6,10 @@
           {{ csrf_field() }}
 
 <!-- Left part -->
-          <div class="left-progrm-part col-lg-5 col-md-5 col-sm-5 col-xs-5">
+          <div class="left-progrm-part col-lg-5 col-md-5 col-sm-12 col-xs-12">
             <p class="prog-bold-txt">ВЫБЕРИТЕ ПРОГРАММУ</p>
             <img src="/ico/drop-ico.png" alt="" class="ddicc">
+            <br>
             <select class="selectpicker" name="program_id" id="program_id" >
               @foreach ($programs as $program )
                 <option value="{{$program->id}}">{{$program->name}} </option>  
@@ -51,7 +52,7 @@
             <input type="submit" value="НАЧАТЬ ПРОБНЫЙ ПЕРИОД" class="send-progr-btn">
           </div>
 <!-- - - - - - - - - - - Right part-------------------------------------!-->
-          <div class="right-progrm-part col-lg-7 col-md-7 col-sm-7 col-xs-7">
+          <div class="right-progrm-part col-lg-7 col-md-7 hidden-xs hidden-sm">
               <img alt="" class="prg-img" id="program_bnr" style="display: block;">
               <div class="righ_prgr_text">
                 <p id="r_prgr_name"></p>

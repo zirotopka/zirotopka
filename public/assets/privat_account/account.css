@@ -208,8 +208,9 @@ height: 4.7em;
 	margin: 0 0 0 1em;
 	vertical-align: text-top;
 }
-
-
+.ddicc{
+	margin: 2.7em 0 0px 6.85em;
+}
 @media screen and (max-width: 47.95em) {
 	.logo{
 		padding: 3em 0 0 0 !important;
@@ -246,9 +247,33 @@ height: 4.7em;
 	.send-proof-file:active{
 		width: 100%!important;
 	}
+	.chs-program-widnow{
+		width: 95%!important;
+	}
+	.drp-control{
+		margin: 0;		
+	}
+
+	.left-progrm-part{
+		text-align: left!important;
+	}
+
+	.select-side{
+		left: 14em;
+		text-align: center;
+	}
+	.ddicc{
+		margin: 2.7em 0 0 15.46em !important;
+	}
+	.send-progr-btn{
+		margin: 0;
+	}
 }
 
 @media screen and (max-width: 61.95em) {
+	.left-progrm-part{
+		text-align: left!important;
+	}
 	.logo{
 		padding: 3em 0 0 0 !important;
 	}
@@ -285,7 +310,22 @@ height: 4.7em;
 	.send-proof-file:hover{
 		width: 100%!important;
 	}
-
+	.chs-program-widnow{
+		width: 95%!important;
+	}
+	.drp-control{
+		margin: 0;		
+	}
+	.select-side{
+		left: 14em;
+		text-align: center;
+	}
+	.ddicc{
+		margin: 2.7em 0 0 15.46em !important;
+	}
+	.send-progr-btn{
+		margin: 0;
+	}
 }
 
 .c-orange {
