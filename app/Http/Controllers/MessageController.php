@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use App\User;
+use App\Balance;
+
+
+use Validator;
 
 class MessageController extends Controller
 {
@@ -13,7 +19,11 @@ class MessageController extends Controller
      */
     public function index($type)
     {
-        dd($type);
+        $user = Sentinel::getUser();
+        $data = [
+                'user' => $user,
+            ];
+        return view('privat_office._partials.input_message', $data);
     }
 
     /**
@@ -23,7 +33,11 @@ class MessageController extends Controller
      */
     public function create(Request $request)
     {
-        dd('new');
+        $user = Sentinel::getUser();
+        $data = [
+            'user' => $user,
+        ];
+        return view('privat_office._partials.new_message', $data);
     }
     /**
      * Display the specified resource.
@@ -33,6 +47,10 @@ class MessageController extends Controller
      */
     public function show(Request $request)
     {
-        dd('show');
+        $user = Sentinel::getUser();
+        $data = [
+            'user' => $user,
+        ];
+        return view('privat_office._partials.output_message', $data);
     }
 }

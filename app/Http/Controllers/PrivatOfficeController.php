@@ -200,13 +200,4 @@ class PrivatOfficeController extends Controller
 
         return view('privat_office.balance', $data);
     }
-
-    public function messages($id){
-        $user = Sentinel::getUser();
-
-        $data = [
-            'user' => $user,
-        ];
-        return view('privat_office.messages', $data);
-    }
 }

@@ -20,7 +20,7 @@
     <link href="/assets/css/calendar.css" type="text/css" rel="stylesheet">
     
 
-	<title>Жиротопка</title>
+	<title>Reformator.ONE</title>
 
     @section('css')
         
@@ -113,7 +113,7 @@
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;&#8381;</p>                             
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
-                                <a href="/lk/{{$user->id}}/messages">
+                                <a href="/message/1">
                                     <img class="envel" src="/ico/envelop.png" alt="envelop">
                                 </a>
                             </div>
