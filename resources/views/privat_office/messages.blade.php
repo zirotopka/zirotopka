@@ -1,4 +1,3 @@
-
 	<div class="little_menu">
 		<ul>
 			<li class="hidden-xs hidden-sm"></li>
