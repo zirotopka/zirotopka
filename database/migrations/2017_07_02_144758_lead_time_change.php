@@ -14,6 +14,9 @@ class LeadTimeChange extends Migration
     public function up()
     {
         Schema::table('programm_days', function (Blueprint $table) {
+            $table->dropColumn('lead_time');
+        });
+        Schema::table('programm_days', function (Blueprint $table) {
             $table->string('lead_time');
         });
     }
