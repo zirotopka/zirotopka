@@ -11,7 +11,7 @@
 					<img src="/ico/mess.png" alt="">
 				</li>
 			</a>
-			<a href="/message/2/{{$user->id}}">
+			<a href="/message/2">
 				<li class="output">
 					<img src="/ico/input_mess.png" alt="">
 				</li>

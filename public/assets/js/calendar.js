@@ -6,11 +6,11 @@ $(document).ready(function(){
 		var max_left_pos = $("html").width() - cal.width() -44;
 		if ($("html").width() > 991) {
 			if (offset.left > max_left_pos) {
-				cal.offset({left:max_left_pos});			
+				cal.offset({left:max_left_pos-10});			
 			}
 		} else {
 			if (offset.left > max_left_pos) {
-				cal.offset({left:max_left_pos});			
+				cal.offset({left:max_left_pos-10});			
 			}
 		}
 	});

@@ -21,7 +21,7 @@
 			<div class="message_list">
 				<ul>
 					<li>
-						<p class="sended">ОТПРАВЛЕННЫЕ</p>
+						<p class="sended">ВХОДЯЩИЕ</p>
 					</li>
 					<li class="min_msg_cont">
 						<div class="min_left_col col-lg-6 col-md-6 col-sm-6 col-xs-6">

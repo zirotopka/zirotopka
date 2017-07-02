@@ -18,12 +18,18 @@ class MessageController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index($type)
-    {
+    {   
         $user = Sentinel::getUser();
         $data = [
                 'user' => $user,
             ];
-        return view('privat_office._partials.input_message', $data);
+        if ($type ==1) {
+            return view('privat_office._partials.output_message', $data);
+        }
+        else if ($type ==2) {
+            return view('privat_office._partials.inbox', $data);
+        }
+
     }
 
     /**
@@ -47,10 +53,11 @@ class MessageController extends Controller
      */
     public function show(Request $request)
     {
-        $user = Sentinel::getUser();
-        $data = [
-            'user' => $user,
-        ];
-        return view('privat_office._partials.output_message', $data);
+            $user = Sentinel::getUser();
+            $data = [
+                    'user' => $user,
+                ];
+            return view('privat_office._partials.output_message', $data);
+        
     }
 }

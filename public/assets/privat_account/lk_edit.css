@@ -283,3 +283,51 @@ input{
 		margin: 2.5em 0 0 0!important;
 	}
 
+.profile_btns p{
+	font-family: MuseoSansCyrl_300!important;
+	color: white;
+	font-size: 1.2em!important;
+}
+
+.profile_btns i{
+	width: 17px;
+	height: 17px;
+}
+
+.user-fln{
+	font-size: 17px!important;
+	font-family: MuseoSansCyrl_300!important;
+}
+
+.img-circle{
+	width: 110px;
+	height: 110px;
+}
+.profile_btns{
+
+	text-decoration: none;
+	display: block;
+	padding: 2em 0 2em 0em!important;
+	outline: none;
+	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
+	color: #f3efe0;
+	text-transform: uppercase;
+	text-shadow: 0 0 1px rgba(255,255,255,0.1);
+	letter-spacing: 1px;
+	font-weight: bold;
+	-webkit-transition: background 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, box-shadow 0.3s;
+	color: #f3efe0;
+	text-transform: uppercase;
+	text-shadow: 0 0 1px rgba(255,255,255,0.1);
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+.left_edit_part ul {
+    font-size: 17px;
+    list-style: none;
+    text-align: center;
+}
+
+
