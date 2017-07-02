@@ -420,3 +420,10 @@ button:focus {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
+.close{
+	position: absolute;
+	z-index: 1;
+	margin: 3% 0 0 53%;
+
+}

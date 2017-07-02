@@ -103,7 +103,7 @@
 											  	@else 
 													<p>Сложность: - </p>
 											  	@endif
-											  	<p style="display: inline-block; width: 65%;">Продолжительность тренировки:</p><div style="display: inline-block; text-align: center; width: 30%; vertical-align: top;">~{{ $program_day->lead_time}}ч.</div>
+											  	<p style="display: inline-block; width: 65%;">Продолжительность тренировки:</p><div style="display: inline-block; text-align: center; width: 30%; vertical-align: top;">~{{ $program_day->lead_time}}</div>
 											</span>
 										</td>
 									@endif
@@ -175,12 +175,11 @@
 				  <div class="modal-dialog modal-lg" role="document">
 				    <div class="modal-content">
 				      <div class="video-modal modal-body">
-	<!--			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					        <span aria-hidden="true">
 					        	<img src="/ico/close.png" alt="">	
 					        </span>
 				        </button>
-	-->		
 						<div class="videoContainer">
 							<p id="video-container"></p>
 							<!-- <div class="control">
