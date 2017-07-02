@@ -42,4 +42,14 @@ class User extends CartalystUser
     {
         return $this->hasMany('App\Accrual','user_id');
     }
+
+    public function income_messages()
+    {
+        return $this->hasMany('App\Message', 'recipient_id', 'id')->orderBy('created_at','desc');
+    }
+
+    public function output_messages()
+    {
+        return $this->hasMany('App\Message', 'sender_id', 'id')->orderBy('created_at','desc');
+    }
 }

@@ -17,7 +17,7 @@ class Authenticate
      * @return mixed
      */
     public function handle($request, Closure $next, $guard = null)
-    {
+    {   
         $user = Sentinel::check();
         if ($user === false) {
             if( $request->ajax() ) {
