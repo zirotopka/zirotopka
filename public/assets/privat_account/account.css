@@ -208,10 +208,18 @@ height: 4.7em;
 	margin: 0 0 0 1em;
 	vertical-align: text-top;
 }
+.cal_hints h3{
+	text-transform: uppercase;
+	margin: 0.5em 0 0.5em 0;
+}
+
 .ddicc{
 	margin: 2.7em 0 0px 6.85em;
 }
 @media screen and (max-width: 47.95em) {
+	.choose_programe_form{
+		padding: 0;
+	}
 	.logo{
 		padding: 3em 0 0 0 !important;
 	}
@@ -285,6 +293,9 @@ height: 4.7em;
 }
 
 @media screen and (max-width: 61.95em) {
+	.choose_programe_form{
+		padding: 0;
+	}
 	.left-progrm-part{
 		text-align: left!important;
 	}
@@ -371,7 +382,7 @@ height: 4.7em;
 	margin: 1.2em 0;
 	position: absolute;
 	display: none;
-	padding: 1.5em 0em 1em 2em;
+	padding: 1em 0em 1em 2em;
 	text-align: left;
 	right: auto;
 }

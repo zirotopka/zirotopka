@@ -103,7 +103,7 @@
 											  	@else 
 													<p>Сложность: - </p>
 											  	@endif
-											  	<p style="display: inline-block; width: 65%;">Продолжительность тренировки:</p><div style="display: inline-block; text-align: center; width: 30%; vertical-align: top;">~{{ !empty($program_day->lead_time) ? gmdate('H:i:s' ,$program_day->lead_time) : '-' }}</div>
+											  	<p style="display: inline-block; width: 65%;">Продолжительность тренировки:</p><div style="display: inline-block; text-align: center; width: 30%; vertical-align: top;">~{{ $program_day->lead_time}}ч.</div>
 											</span>
 										</td>
 									@endif

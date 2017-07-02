@@ -25,6 +25,11 @@ input{
 
 }
 
+.img-circle{
+	width: 7em !important;
+	height: 7em !important;
+}
+
 .m_usr_img{
 
 	padding: 0;
@@ -60,7 +65,7 @@ input{
 	font-family: MuseoSansCyrl_100;
 	color: #b6b6b6;
 	cursor: pointer;
-	width: 7.5em;
+	width: 8.5em;
 }
 
 /*-------------Инфо о себе----------------*/
@@ -263,6 +268,13 @@ input{
 	}
 	.rt-info{
 		margin: 0!important;
+	}
+	#load_photo_txt{
+		width:7.5em;
+	}
+
+	.ld_img{
+		background-position: left;
 	}
 
 

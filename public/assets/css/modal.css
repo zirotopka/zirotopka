@@ -191,7 +191,7 @@ option, option:hover, option:active ,option:focus,
 
 .open ul li a{
 	height: 100%;
-	padding: 0.7em 0 0 2.78em !important;
+	padding: 0.87em 0 0 15% !important;
 }
 .open ul li a:hover{
 	border-left: 0.4em solid #FF9319;}
@@ -332,4 +332,13 @@ label:hover:before {
 
 .reg-mod-content{
 	height: 40em;
+}
+
+
+
+@media screen and (max-width: 61.95em) {
+	.prog-bold-txt{
+		margin-left: 0;
+		text-align: center;
+	}
 }

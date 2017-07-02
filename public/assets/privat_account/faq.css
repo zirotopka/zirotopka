@@ -121,3 +121,8 @@ ul,li {
 .send_btn:active{
 
 }
+@media screen and (max-width: 61.95em) {
+	.questions_block ul{ 
+		padding: 0;
+	}
+}
