@@ -2,21 +2,20 @@
 	<div class="little_menu">
 		<ul>
 			<li class="hidden-xs hidden-sm"></li>
-			<li class="send">
-				<a href="/message/new">	
+			<a href="/message/new">	
+				<li class="send">
 					<img src="/ico/add_msg.png" alt="" class="add_img">
-				</a>
-			</li>
-			<li class="input">
-				<a href="/message/1">
+				</li>
+			</a>
+			<a href="/message/1">
+				<li class="input">
 					<img src="/ico/mess.png" alt="">
-				</a>
-			</li>
-			<li class="output">
-				<a href="/message/2/{{$user->id}}">
+				</li>
+			</a>
+			<a href="/message/2/{{$user->id}}">
+				<li class="output">
 					<img src="/ico/input_mess.png" alt="">
-				</a>
-			</li>
+				</li>
+			</a>
 		</ul>		
 	</div>
-
