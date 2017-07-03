@@ -61,7 +61,7 @@ input{
 }
 
 #load_photo_txt{
-	margin: -1em 0 0 2em;
+	margin: -1.7em 0 0 2em;
 	font-family: MuseoSansCyrl_100;
 	color: #b6b6b6;
 	cursor: pointer;
@@ -286,7 +286,7 @@ input{
 .profile_btns p{
 	font-family: MuseoSansCyrl_300!important;
 	color: white;
-	font-size: 1.2em!important;
+	font-size: 1.1em!important;
 }
 
 .profile_btns i{

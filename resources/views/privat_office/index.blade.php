@@ -81,8 +81,8 @@
 									@if ( empty($program_day->status) )
 
 										<td class="box-cal {{$class}} {{$cal_class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 2em 2em; background-position: center;">
-											<span class="cal_hints">
-												<h3>Ура выходной!!!</h3>
+											<span class="cal_hints outlet">
+												<p>Ура выходной!!!</p>
 											</span>
 										</td>
 									@else

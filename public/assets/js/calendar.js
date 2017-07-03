@@ -1,18 +1,20 @@
 $(document).ready(function(){
 	//------------------Календарь лк--------------------
 	$(".box-cal").on('mouseover',function(){
+		var FIREFOX = /Firefox/i.test(navigator.userAgent);		
 		var cal = $(this).find('.cal_hints');
 		var offset = cal.offset();
 		var max_left_pos = $("html").width() - cal.width() -44;
 		if ($("html").width() > 991) {
 			if (offset.left > max_left_pos) {
-				cal.offset({left:max_left_pos-10});			
+				if (FIREFOX) {	
+					cal.offset({left:max_left_pos-10});			
+				} else {
+					cal.offset({left:max_left_pos-14});
+				}
 			}
-		} else {
-			if (offset.left > max_left_pos) {
-				cal.offset({left:max_left_pos-10});			
-			}
-		}
+		} 
+		
 	});
 		
 

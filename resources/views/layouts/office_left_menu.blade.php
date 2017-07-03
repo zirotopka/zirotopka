@@ -16,7 +16,7 @@
                         </li>
                         <li>
                             <a href="/lk/{{$user->id}}/faq" class="profile_btns help">
-                                <i class="wallet_ico prof-disp"></i>
+                                <i class="help_ico prof-disp"></i>
                                 <p class="prof-disp">ПОМОЩЬ</p>
                             </a> 
                         </li>

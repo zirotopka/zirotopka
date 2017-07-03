@@ -19,11 +19,13 @@
               </div>
               <div class="col-lg-6 right-sex">
                 <div class="sex">
-                  <input type="radio" name="sex" required="required" value="2">
+                  <input type="radio" name="sex" required="required" value="2" id="fm">
+                  <label for="fm"><span></span></label>
                   <p>Ж</p>
                 </div>
                 <div class="sex">
-                  <input type="radio" name="sex" required="required" value="1">
+                  <input type="radio" name="sex" required="required" value="1" id="ml">
+                  <label for="ml"><span></span></label>
                   <p>М</p>
                 </div>
               </div>

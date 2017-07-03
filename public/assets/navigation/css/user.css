@@ -345,11 +345,14 @@ button:hover {
 	color: white;
 	font-weight: bold;
 	padding: 1.5em;
-	font-size: 0.95em;
+	font-family: MuseoSansCyrl_300;
 }
 
 .user_dropdown li a:hover{
 	border-left: 0.4em solid #FF9319;
+	background-color: #191919 !important;
+	color: white!important;
+	background-image: none;
 }
 
 .immunitet{
@@ -426,4 +429,31 @@ button:focus {
 	z-index: 1;
 	margin: 3% 0 0 53%;
 
+}
+
+.prof_ico{
+	background: url('/ico/profile.png');
+	background-size: cover;
+	width: 1em;
+	height: 1em;
+}
+
+.prof-disp{
+	display: inline-block;
+	margin: 0 0 0 0.5em;
+}
+
+.wallet_ico{
+	background: url('/ico/wallet.png');
+	background-size: cover;
+	width: 1em;
+	height: 1em;
+}
+
+.help_ico{
+	background: url('/ico/help.png');
+	background-size: cover;
+	width: 1em;
+	height: 1em;
+	vertical-align: sub;
 }

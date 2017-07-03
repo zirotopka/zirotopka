@@ -23,7 +23,7 @@
 		<p class="cnt">МОЙ СЧЕТ</p>
 		<div class="row">
 			<div class="money ">
-				<p>МОЙ СЧЕТ:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }}$</p> 
+				<p>МОЙ СЧЕТ:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }} <i class="fa fa-rub" aria-hidden="true"></i></p> 
 			</div>			
 		</div>
 		<div class="table-scrolling col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -49,7 +49,12 @@
 					</tr>
 				@empty
 					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
 						<td class="text-center">Транзакции отсутствуют</td>
+						<td></td>
+						<td></td>
 					</tr>
 				@endforelse
 			</table>
