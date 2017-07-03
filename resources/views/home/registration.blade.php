@@ -5,33 +5,46 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h3>ПРИСОЕДИНЯЙТЕСЬ</h3>
+        <h3>ПРИСОЕДИНЯЙТЕСЬ!</h3>
         <div class="user_data">
           <form action="/register"" method="POST">
             {{ csrf_field() }}
             <p>
-              <input class="reg_input" id="email" type="email" name="email" placeholder="E-mail" required="required">
+              <input class="reg_input" id="email" type="email" name="email" placeholder="Почта" required="required">
               <input class="reg_input" id="password" type="password" name="password" placeholder="Пароль" required="required">
-              <input class="reg_input" id="first_name" type="text" name="first_name" placeholder="Имя" required="required">
-              <input class="reg_input" id="surname" type="text" name="surname" placeholder="Фамилия" required="required"> 
-              <input class="reg_input" type="tel" id="phone" name="phone" placeholder="Телефон" required="required">
             </p>
-            <p>
-              <div class="col-lg-6">
-                <p>Мужской</p>
-
-                <input type="radio" name="sex" required="required" value="1">
+            <div class="sex_chs">
+              <div class="col-lg-6 left-sex">
+                Выберите пол:
               </div>
-              <div class="col-lg-6">
-                <p>Женский</p>
-                <input type="radio" name="sex" required="required" value="2">
+              <div class="col-lg-6 right-sex">
+                <div class="sex">
+                  <input type="radio" name="sex" required="required" value="2">
+                  <p>Ж</p>
+                </div>
+                <div class="sex">
+                  <input type="radio" name="sex" required="required" value="1">
+                  <p>М</p>
+                </div>
               </div>
-            </p>
-            <p>
-              <input type="checkbox" name="offer" class="check">: Я ознакомлен с офертой<br>
-              <input type="checkbox" name="adult" class="check">: Мне больше 14 <br>
-            </p>
-            <input class="btn btn-default btn-primary btn-lg" type="submit">
+            </div>
+            <input class="reg_input" id="first_name" type="text" name="first_name" placeholder="Имя" required="required">
+            <input class="reg_input" id="surname" type="text" name="surname" placeholder="Фамилия" required="required"> 
+            
+            <div class="enter_across reg_enter_across">
+              <hr>
+              <a href="">или войти через</a>
+              <hr>
+            </div>
+            <div class="vk_fs"> 
+              <a href="">
+                <img src="/ico/vkontakte.png" alt="">
+              </a>
+              <a href="">
+                <img src="/ico/icon-facebook.svg" alt="">
+              </a>
+            </div>
+            <input class="registr_btn" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ">
           </form>
         </div>
       </div>

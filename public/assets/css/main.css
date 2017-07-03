@@ -17,7 +17,7 @@ background-position: 20em 8em;
 text-align: center;
 }
 
-.login_form .modal-content .modal-body h4{
+.login_form .modal-content .modal-body h4,.reg_modal .modal-content .modal-body h3 {
 	color: #F98749;
 	font-family: MuseoSansCyrl_900;
 	font-size: 1.4em;
@@ -35,11 +35,11 @@ text-align: center;
 	padding: 0 0 0 2em;
 }
 
-#email{
+.login_form .modal-content .modal-body .user_data #email{
 	margin: 3em 0 0 0;
 }
 
-#password{
+.login_form .modal-content .modal-body .user_data #password{
 	margin: 0.5em 0 0 0;
 }
 
@@ -65,9 +65,11 @@ text-align: center;
 }
 
 hr{
-	margin: 0 0 0.2em 0;
-	width: 25%;
-	border: 0.001em solid #81868F;
+margin: 0 0 0.2em 0;
+width: 25%;
+border-bottom: 0.00000000000000000000411px solid #81868F;
+box-shadow: 0px 1px 0px #81868F;
+
 }
 .enter_across{
 	text-align: center;
@@ -80,6 +82,8 @@ hr{
 
 .enter_across a{
 	color: #81868F !important;	
+	text-decoration: none;
+	pointer-events: none;
 }
 
 .vk_fs a img{
@@ -115,4 +119,80 @@ hr{
 .reg_modal .modal-content{
 	height: 36em;
 	text-align: center;
+	border-radius: 0;
+	background: url("/ico/R.png");
+	background-repeat: no-repeat;
+	background-size: 11em;
+	background-color: white;
+	background-position: 20em 9.75em;
+
+}
+
+.reg_input{
+	background-color: white;
+	border-radius: 3px;
+	border: 0.1em solid #B3B3B3;
+	color: #A3A6AD;
+	width: 65%;
+	height: 2.5em;
+	font-size: 1em;
+	padding: 0 0 0 2em;
+}
+
+.reg_modal .modal-content .modal-body .user_data #email{
+	margin: 2em 0 0 0;
+}
+
+.reg_modal .modal-content .modal-body .user_data #password,#first_name ,#surname ,#phone{
+	margin: 0.5em 0 0 0;
+}
+
+.sex_chs{
+	height: 1em;
+
+}
+
+.sex, .sex p, .sex input{
+	display: inline-block;
+	font-family: MuseoSansCyrl_100;
+}
+
+.left-sex{
+	text-align: right;
+	padding: 0.2em 0 0 0;
+	color: #A3A6AD;
+	font-family: MuseoSansCyrl_100;
+}
+
+.right-sex{
+	text-align: left;
+}
+
+.sex p{
+	vertical-align: middle;
+	color: #A3A6AD;
+}
+
+.sex{
+	width: 4em;
+}
+
+.registr_btn{
+	background-color: #F98749;
+	border: none;
+	border-radius: 2em;
+	width: 65%;
+	height: 3.5em;
+	color: white;
+	margin: 2em 0 0 0;
+	font-family: MuseoSansCyrl_100;
+	font-size: 0.88em;
+}
+
+.reg_enter_across{
+	margin: 1em 0 0 0;
+}
+
+.reg_enter_across hr{
+	width: 16%;
 }
