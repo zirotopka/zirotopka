@@ -1,20 +1,20 @@
 <div class="modal fade" id="registr" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+  <div class="modal-dialog reg_modal" role="document">
+    <div class="modal-content ">
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h2>Регистрация</h2>
-        <div class="user_data" style="height: 350px;">
+        <h3>ПРИСОЕДИНЯЙТЕСЬ</h3>
+        <div class="user_data">
           <form action="/register"" method="POST">
             {{ csrf_field() }}
             <p>
-              <input class="col-lg-12" id="email" type="email" name="email" placeholder="E-mail" required="required">
-              <input class="col-lg-12" id="password" type="password" name="password" placeholder="Пароль" required="required">
-              <input class="col-lg-12" id="first_name" type="text" name="first_name" placeholder="Имя" required="required">
-              <input class="col-lg-12" id="surname" type="text" name="surname" placeholder="Фамилия" required="required"> 
-              <input class="col-lg-12" type="tel" id="phone" name="phone" placeholder="Телефон" required="required">
+              <input class="reg_input" id="email" type="email" name="email" placeholder="E-mail" required="required">
+              <input class="reg_input" id="password" type="password" name="password" placeholder="Пароль" required="required">
+              <input class="reg_input" id="first_name" type="text" name="first_name" placeholder="Имя" required="required">
+              <input class="reg_input" id="surname" type="text" name="surname" placeholder="Фамилия" required="required"> 
+              <input class="reg_input" type="tel" id="phone" name="phone" placeholder="Телефон" required="required">
             </p>
             <p>
               <div class="col-lg-6">

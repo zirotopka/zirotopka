@@ -3,6 +3,8 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet">
+
 @overwrite
 
 @section('js')
