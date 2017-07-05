@@ -50,9 +50,6 @@ class UserController extends Controller
             'first_name' => 'required',
             'surname' => 'required',
             'sex' => 'required',
-            'phone' => 'required',
-            'offer' => 'required',
-            'adult' => 'required',
         ];
         $messages = [
             'email.required' => 'Не указана почта',

@@ -44,27 +44,6 @@
 	color: #fff;
 }
 
-
-.prof_ico{
-	background: url('/ico/profile.png');
-	background-size: cover;
-	width: 1em;
-	height: 1em;
-}
-
-.wallet_ico{
-	background: url('/ico/wallet.png');
-	background-size: cover;
-	width: 1em;
-	height: 1em;
-
-}
-
-.prof-disp{
-	display: inline-block;
-	margin: 0 0 0 0.5em;
-}
-
 .img-circle{
 	width: 90px;
 }
@@ -80,7 +59,7 @@
 }
 
 .profile_btns:hover{
-	border-left: 0.3em solid #F36D00;
+	border-left: 0.4em solid #F36D00;
 }
 
 @media screen and (max-width: 61.95em) {

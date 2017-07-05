@@ -224,6 +224,7 @@ ul{
 	border: none;
 	color: white;
 	font-size: 0.9em;
+	outline: none;
 }
 
 .write_button:hover{
@@ -235,6 +236,7 @@ ul{
 	border: none;
 	color: white;
 	font-size: 0.9em;
+	outline: none;
 }
 
 .write_button:acive{
@@ -246,6 +248,7 @@ ul{
 	border: none;
 	color: white;
 	font-size: 0.9em;
+	outline: none;
 }
 
 .write_button_li{

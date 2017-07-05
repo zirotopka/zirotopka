@@ -28,7 +28,13 @@
 }
 
 .bg-warning{
-	background-color: #b96507;
+	background-color: #757575;
+	border-right:  0.5px solid white!important;
+
+}
+
+.outlet{
+	width: 14%!important;
 }
 
 .bg-success{
@@ -147,37 +153,35 @@
 .send-proof-file{
 	background-color: #232323;
 	float: none;
-	margin: 4em 0 4em 0; 
-	padding: 1.5em 4em;
+	margin: 4em 0 4em 0;
 	font-family: GilroyLight;
 	text-transform: uppercase;
 	border-radius: 0.3em;
 	width: 23.5em;
-	height: 4.5em;
+	height: 3.5em;
+
 }
 
 .send-proof-file:hover{
 	background-color: #232323;
 	float: none;
 	margin-top: 3.8em;
-	padding: 1.5em 4em;
 	font-family: GilroyLight;
 	text-transform: uppercase;
 	border-radius: 0.3em;
 	width: 23.7em;
-	height: 4.7em;
+	height: 3.7em;
 }
 
 .send-proof-file:active{
 	background-color: black;
 	float: none;
 	margin-top: 3.8em;
-	padding: 1.5em 4em;
 	font-family: GilroyLight;
 	text-transform: uppercase;
 	border-radius: 0.3em;
-width: 23.7em;
-height: 4.7em;
+	width: 23.7em;
+	height: 3.7em;
 }
 
 .otchet{
@@ -214,7 +218,7 @@ height: 4.7em;
 }
 
 .ddicc{
-	margin: 2.7em 0 0px 6.85em;
+	margin: 2.7em 0 0px 6.875em;
 }
 @media screen and (max-width: 47.95em) {
 	.choose_programe_form{
@@ -443,14 +447,11 @@ height: 4.7em;
 	font-size: 1em;
 }
 
-.profile_btns:hover{
-	border-left: 0.5em solid #FC9319;
-}
 
 .profile_btns p{
 	font-family: MuseoSansCyrl_300!important;
 	color: white;
-	font-size: 1.2em!important;
+	font-size: 0.9em!important;
 }
 
 .profile_btns i{
@@ -471,7 +472,6 @@ height: 4.7em;
 
 	text-decoration: none;
 	display: block;
-	padding: 2em 0 2em 0em!important;
 	outline: none;
 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
 	color: #f3efe0;

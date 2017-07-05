@@ -33,7 +33,7 @@
 				<div class="ld_img">
 					<form enctype="multipart/form-data" id="download-logos-form" role="form" method="POST" action="" >	
 						<input type="file" multiple="multiple" name="logo" accept="image/*" id="download-logos" title="Загрузить фото" style="height: 100%; width: 10em;">
-						<p id="load_photo_txt">Заргузить фото</p>
+						<p id="load_photo_txt">Загрузить фото</p>
 					</form>
 				</div>
 			</span>
