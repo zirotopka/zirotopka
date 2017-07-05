@@ -49,9 +49,9 @@
 }
 
 .left_edit_part p{
-	font-family: GilroyLight;
+	font-family: GilroyLight!important;
 	color: white;
-	font-size: 1em;
+	font-size: 1.1em !important;
 }
 
 .user-fln{

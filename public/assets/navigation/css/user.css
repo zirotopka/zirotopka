@@ -47,13 +47,22 @@ body {
 }
 
 a {
-	text-decoration: none;
-	outline: none;
+	text-decoration: none!important;
+	outline: none!important;
 }
 
 a:hover, a:focus {
 	outline: none;
 }
+
+.wals{
+	color: white;
+}
+
+.wals:hover{
+	color: white!important;
+}
+
 
 }
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
@@ -345,7 +354,8 @@ button:hover {
 	color: white;
 	font-weight: bold;
 	padding: 1.5em;
-	font-family: MuseoSansCyrl_300;
+	font-family: GilroyLight; 
+
 }
 
 .user_dropdown li a:hover{
@@ -355,6 +365,12 @@ button:hover {
 	background-image: none;
 }
 
+.user_dropdown li a:focus{
+	border-left: 0.4em solid #FF9319;
+	background-color: #191919 !important;
+	color: white!important;
+	background-image: none;	
+}
 .immunitet{
 	text-align: right;
 	padding:1em 2em 0 0;
