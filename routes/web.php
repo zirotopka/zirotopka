@@ -48,3 +48,5 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	]]);
 
 });
+
+Route::get('api/user/email_store', ['uses' => 'Api\UserApiController@email_store']);
