@@ -42,10 +42,14 @@ class UserApiController extends Controller
         $user = Sentinel::register($credentials);
 
         if ( $user ) {
+            $user->first_name = $request->get("name");
+            $user->save();
+
             $role = Sentinel::findRoleBySlug("pretender");
             $role->users()->attach($user);
         }
 
-        return response()->json(['code' => 200, 'text' => 'Email успешно сохранен']);
+        return redirect('http://reformator.one');
+        //return response()->json(['code' => 200, 'text' => 'Email успешно сохранен']);
     }
 }
