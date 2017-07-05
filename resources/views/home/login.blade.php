@@ -12,7 +12,7 @@
            
             <input class="login_btn" type="submit" value="ВОЙТИ">
           </form>
-          <a href="">Зарегистрироваться!</a>
+          <a href="" id="open_reg" data-toggle="modal" data-target="#registr">Зарегистрироваться!</a>
           <div class="enter_across">
             <hr>
             <a href="">или войти через</a>

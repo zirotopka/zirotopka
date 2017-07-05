@@ -2,9 +2,6 @@
   <div class="modal-dialog reg_modal" role="document">
     <div class="modal-content ">
       <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
         <h3>ПРИСОЕДИНЯЙТЕСЬ!</h3>
         <div class="user_data">
           <form action="/register"" method="POST">
@@ -14,10 +11,10 @@
               <input class="reg_input" id="password" type="password" name="password" placeholder="Пароль" required="required">
             </p>
             <div class="sex_chs">
-              <div class="col-lg-6 left-sex">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 left-sex">
                 Выберите пол:
               </div>
-              <div class="col-lg-6 right-sex">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 right-sex">
                 <div class="sex">
                   <input type="radio" name="sex" required="required" value="2" id="fm">
                   <label for="fm"><span></span></label>

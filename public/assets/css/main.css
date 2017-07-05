@@ -126,7 +126,7 @@ hr{
 /*------------------------------Registration Form---------------------------------*/
 
 .reg_modal{
-	width: 35%;
+	width: 32em;
 }
 
 .reg_modal .modal-content{
@@ -278,4 +278,16 @@ div {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+
+@media screen and (max-width: 46.0625em) {
+	.reg_modal{
+		width: 95%;
+	}
+
+	.reg_modal .modal-content{
+		background-position: 90% 9.75em;
+
+	}
 }

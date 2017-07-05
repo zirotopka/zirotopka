@@ -81,36 +81,35 @@ class ProgrammTableSeeder extends Seeder
         		$programm_id = $programm->id;
 
         		$programm_days_array = [
-        			['day' => 1, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
-        			['day' => 2, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '3ч', 'difficult' => 2],
-        			['day' => 3, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '5ч', 'difficult' => 2],
-        			['day' => 2, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '2мин.', 'difficult' => 3],
-        			['day' => 5, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '1ч', 'difficult' => 3],
-        			['day' => 6, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '25мин.', 'difficult' => 1],
-        			['day' => 7, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 3],
-        			['day' => 8, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
-        			['day' => 9, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
-        			['day' => 10, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '15мин', 'difficult' => 2],
+        			['day' => 1, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч','interest' => 0, 'difficult' => 1],
+        			['day' => 2, 'status' => 1,'interest' => 1 , 'description' => 'wvwfw r fe er ', 'lead_time' => '3ч', 'difficult' => 2],
+        			['day' => 3, 'status' => 1,'interest' => 1,  'description' => 'wvwfw r fe er ', 'lead_time' => '5ч', 'difficult' => 2],
+        			['day' => 2, 'status' => 0,'interest' => 0,  'description' => 'wvwfw r fe er ', 'lead_time' => '2мин.', 'difficult' => 3],
+        			['day' => 5, 'status' => 1,'interest' => 1,  'description' => 'wvwfw r fe er ', 'lead_time' => '1ч', 'difficult' => 3],
+        			['day' => 6, 'status' => 1,'interest' => 1,  'description' => 'wvwfw r fe er ', 'lead_time' => '25мин.', 'difficult' => 1],
+        			['day' => 7, 'status' => 1,'interest' => 0,  'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 3],
+        			['day' => 8, 'status' => 0,'interest' => 1,  'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
+        			['day' => 9, 'status' => 1,'interest' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
+        			['day' => 10, 'status' => 1,'interest' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '15мин', 'difficult' => 2],
 
-        			['day' => 11, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '30мин.', 'difficult' => 1],
-        			['day' => 12, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 3],
-        			['day' => 13, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
-        			['day' => 14, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
-        			['day' => 15, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '5ч', 'difficult' => 2],
-        			['day' => 16, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '1ч', 'difficult' => 3],
-        			['day' => 17, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
-        			['day' => 18, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '5ч', 'difficult' => 1],
-        			['day' => 19, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '2мин.', 'difficult' => 2],
-        			['day' => 20, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 3],
-
-        			['day' => 21, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
-        			['day' => 22, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 2],
-        			['day' => 23, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
-        			['day' => 24, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '21ч.', 'difficult' => 2],
-        			['day' => 25, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '5мин.', 'difficult' => 1],
-        			['day' => 26, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '58мин.', 'difficult' => 3],
-        			['day' => 27, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
-        			['day' => 28, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 2],
+        			['day' => 11, 'status' => 0,'interest' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '30мин.', 'difficult' => 1],
+        			['day' => 12, 'status' => 1,'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 3],
+        			['day' => 13, 'status' => 1,'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
+        			['day' => 14, 'status' => 1,'interest' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
+        			['day' => 15, 'status' => 0,'interest' => 1,'interest' => '0', 'description' => 'wvwfw r fe er ', 'lead_time' => '5ч', 'difficult' => 2],
+        			['day' => 16, 'status' => 1,'interest' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '1ч', 'difficult' => 3],
+        			['day' => 17, 'status' => 1,'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
+        			['day' => 18, 'status' => 1,'interest' => 0,'interest' => '0', 'description' => 'wvwfw r fe er ', 'lead_time' => '5ч', 'difficult' => 1],
+        			['day' => 19, 'status' => 0,'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2мин.', 'difficult' => 2],
+        			['day' => 20, 'status' => 1,'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 3],
+        			['day' => 21, 'status' => 1,'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
+        			['day' => 22, 'status' => 1, 'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 2],
+        			['day' => 23, 'status' => 0, 'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
+        			['day' => 24, 'status' => 1, 'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '21ч.', 'difficult' => 2],
+        			['day' => 25, 'status' => 1, 'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '5мин.', 'difficult' => 1],
+        			['day' => 26, 'status' => 1, 'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '58мин.', 'difficult' => 3],
+        			['day' => 27, 'status' => 0, 'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 1],
+        			['day' => 28, 'status' => 1, 'interest' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч', 'difficult' => 2],
         		];
 
         		foreach ( $programm_days_array as $programm_day_row ) {
@@ -120,16 +119,17 @@ class ProgrammTableSeeder extends Seeder
 		        	$programm_day->description = $programm_day_row['description'];
                     $programm_day->lead_time = $programm_day_row['lead_time'];
                     $programm_day->difficult = $programm_day_row['difficult'];
+                    $programm_day->interest = $programm_day_row['interest'];
 		        	$programm_day->programm_id = $programm_id;
 
 		        	if ( $programm_day->save() ) {
 		        		$programm_day_id = $programm_day->id;
 
 		        		$programm_stages_array = [
-        					['description' => 'rververve', 'time_exercive' => '12345', 'repeat_count' => null],
-        					['description' => 'wvwr', 'time_exercive' => null, 'repeat_count' => 23],
-        					['description' => 'wrverer', 'time_exercive' => '32', 'repeat_count' => null],
-        					['description' => 'rverwvwverve', 'time_exercive' => null, 'repeat_count' => 100],
+        					['description' => 'rververve', 'interest' => 1, 'time_exercive' => '12345', 'repeat_count' => null],
+        					['description' => 'wvwr', 'interest' => 1, 'time_exercive' => null, 'repeat_count' => 23],
+        					['description' => 'wrverer', 'interest' => 1, 'time_exercive' => '32', 'repeat_count' => null],
+        					['description' => 'rverwvwverve', 'interest' => 1, 'time_exercive' => null, 'repeat_count' => 100],
         				];
 
         				foreach ( $programm_stages_array as $programm_stages_row ) {

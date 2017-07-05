@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class LeadTimeChange extends Migration
+class AddInterest extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class LeadTimeChange extends Migration
      */
     public function up()
     {
+
         Schema::table('programm_days', function (Blueprint $table) {
-            $table->string('lead_time');
+            $table->integer('interest')->nullable();
         });
     }
 
@@ -26,7 +27,7 @@ class LeadTimeChange extends Migration
     public function down()
     {
         Schema::table('programm_days', function (Blueprint $table) {
-            $table->dropColumn('lead_time');
+            $table->dropColumn('interest');
         });
     }
 }

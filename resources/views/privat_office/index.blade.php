@@ -89,6 +89,11 @@
 										<td class="box-cal {{$class}} {{$cal_class}}">
 											<span class="cal_hints">
 												@if ( !empty($difficult) )
+													@if ($program_day->interest =1)
+														<p style="text-align: center;">Обязательный день</p>
+											  		@else
+														<p style="text-align: center;">Необязательный день</p>
+											  		@endif
 											  		<p class="" style="display: inline-block; width: 65%;">Уровень сложности:</p>
 											  		<div style="display: inline-block; text-align: center; width: 30%">
 															@for ($i=0;$i<$program_day->difficult;$i++)

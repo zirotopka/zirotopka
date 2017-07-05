@@ -71,6 +71,9 @@ $(document).ready(function(){
 			$("#program_bnr").attr('src',"/image/test/r.one_power.png");
 		}
 	});
+	$('#open_reg').on('click',function(){
+		$('#login').modal('hide');
+	})
 });
 
 

@@ -24,6 +24,9 @@
 				<li>
 					<a href="#">Как изменить почту?</a>
 				</li>
+				<li>
+					<a href="#" class="faq_back">Назад</a>
+				</li>
 			</ul>
 		</div>
 	</div>

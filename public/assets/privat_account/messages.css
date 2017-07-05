@@ -156,6 +156,13 @@ input{
 	cursor: pointer;
 }
 
+.min_msg_cont:focus{
+	background-color: #353535;
+	border-left: 0.3em solid #F98749;
+	cursor: pointer;
+}
+
+
 .min_left_col, .min_right_col{
 	padding: 1em 0 0 2em;
 	text-align: left;
@@ -515,7 +522,7 @@ ul{
 }
 
 .input{
-	padding: 1.2em 0 0 0!important;
+	padding: 0.8em 0 0 0!important;
 }
 
 .output{
@@ -523,6 +530,6 @@ ul{
 }
 
 .add_img{
-	width: 50%;
+	width: 60% !important;
 	margin-left: 5px;
 }
