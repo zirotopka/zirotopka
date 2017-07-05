@@ -24,7 +24,7 @@
 						<p class="sended">ОТПРАВЛЕННЫЕ</p>
 					</li>
 					<li class="min_msg_cont">
-						<a href="#" class="min_msg_cont">
+						<a href="#">
 						<div class="min_left_col col-lg-6 col-md-6 col-sm-6 col-xs-6">
 							<p class="who_send">Тренер</p>
 							<a class="answer_msg">Ответить на вопрос</a>
