@@ -6,6 +6,7 @@ use Cartalyst\Sentinel\Laravel\Facades\Sentinel;//Временно
 use Illuminate\Http\Request;
 use App\User;
 use App\Message;
+use App\Http\Controllers\Controller;
 
 use Validator;
 
