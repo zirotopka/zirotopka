@@ -77,8 +77,8 @@ input{
 .prof_ico{
 	background: url('/ico/profile.png');
 	background-size: cover;
-	width: 1em;
-	height: 1em;
+	width: 0.8em;
+	height: 0.8em;
 }
 
 .wallet_ico{
@@ -235,9 +235,8 @@ ul{
 }
 
 .write_button:hover{
-	margin: 0.8em -0.2 3em 0;
-	height: 3.7em;
-	width: 12.2em;
+	height: 3.6em;
+	width: 12.1em;
 	background-color: #F98749;
 	border-radius: 4px;
 	border: none;
@@ -246,16 +245,37 @@ ul{
 	outline: none;
 }
 
+
+.write_button:hover, add_file{
+	margin: 1em 0 0.1em 0!important;
+}
+
 .write_button:acive{
-	margin: 0.8em -0.2 3em 0;
-	height: 3.7em;
-	width: 12.2em;
+	height: 3.6em;
+	width: 12.1em;
 	background-color: #d9550e	;
 	border-radius: 4px;
 	border: none;
 	color: white;
 	font-size: 0.9em;
 	outline: none;
+}
+
+.add_file{
+	display: inline-block!important;
+	width: 3em;
+	height: 3em;
+	margin: 0;
+	opacity: 0;
+}
+
+.lbl_fl{
+	background: url('/ico/attach_grey.png');
+	background-repeat: no-repeat;
+	margin:0 0px -9px -36px;
+	width: 2em;
+	height: 2em;
+	background-size: cover;
 }
 
 .write_button_li{
@@ -387,7 +407,7 @@ ul{
 }
 
 .snd_btn{
-	margin: 1em 0 3em 56%;
+	margin: 1em 0 3em 60.1%;
 	text-transform: uppercase;
 
 }
@@ -395,6 +415,7 @@ ul{
 .send_btn_align{
 	width: 60%;
 	text-align: right;
+	display: inline-block;
 }
 
 
@@ -420,10 +441,21 @@ ul{
 	}
 
 	.snd_btn{
-		width: 96%!important;
-		margin: 0 0.7em 0 0;
+		margin: 0 1.2em 0 0;
 		float: right;
 	}
+	
+		.snd_btn:hover{
+		margin: 0 1.2em 0 0!important;
+		float: right;
+		width: 12.1em; 
+		height: 3.8em;
+	}
+
+		.snd_btn:active{
+		margin: 0 1.2em 0 0!important;
+		width: 12.1em; 
+		height: 3.8em;	}
 
 	.back{
 		position: fixed;
@@ -434,20 +466,15 @@ ul{
 	.left_edit_part{
 		width: 33.333333%;
 	}
-	.write_button:hover{
-		width: 80.2%;
-	}
-	.write_button:active{
-		width: 80.2%;
-	}
+
 	.msg_theme{
-		width: 100%;
+		width: 90%;
 	}
 	.msg_text{
-		width: 100%;
+		width: 90%;
 	}
 	.new_message{
-		padding: 0;
+		padding: 0em 0 0 5%;
 		margin: 10em auto;
 	}
 	.msg_sendbutton{
@@ -460,7 +487,7 @@ ul{
 		width: 12.2em;
 	}
 	.send_btn_align{
-		width: 100%;
+		width: 90%;
 		text-align: right;
 	}
 	.message_list{
@@ -468,7 +495,7 @@ ul{
 		width: 100%;
 		margin: 0;
 		position: fixed;
-		display: none;
+		display: block;
 	}
 	.right_edit_part{
 		margin: 0;
@@ -497,7 +524,7 @@ ul{
 
 	.little_menu ul li img{
 		padding: 6px 0 0 0;
-		width: 2em;
+		width: 1.8em!important;
 	}
 	.send{
 	padding: 0;
@@ -514,6 +541,9 @@ ul{
 	.output img{
 		width: 1.9em !important;
 		margin:  0 0 0.2em 0!important;
+	}
+	.input_form .add_file{
+		margin: 0 0 0 60%;
 	}
 }
 
@@ -533,3 +563,4 @@ ul{
 	width: 60% !important;
 	margin-left: 5px;
 }
+

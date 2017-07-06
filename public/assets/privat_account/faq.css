@@ -175,11 +175,12 @@ ul,li {
 }
 
 .faq_back{
-	color: #ababab;
+	color: #ababab!important;
 	font-size: 1.1em;
 }
 
 .faq_back:hover{
-	color: #FF9319;
-	font-size: 1.1em;
+	text-decoration:none;
+	color: #F98749!important;
+	font-size: 1.2em;
 }

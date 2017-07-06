@@ -185,12 +185,13 @@ option, option:hover, option:active ,option:focus,
 }
 
 .open ul li{
-	height: 4em;
+	height: 3em;
 } 
 
 .open ul li a{
 	height: 100%;
-	padding: 1.25em 0 0 15% !important;
+	padding: 1em 0 0 15% !important;
+	font-size: 0.8em;
 }
 .open ul li a:hover{
 	border-left: 0.4em solid #FF9319;}

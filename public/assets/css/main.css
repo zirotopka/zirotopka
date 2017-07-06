@@ -175,10 +175,12 @@ hr{
 	padding: 0.2em 0 0 0;
 	color: #81868F;
 	font-family: MuseoSansCyrl_100;
+	margin: 0;
 }
 
 .right-sex{
 	text-align: left;
+	margin: 0;
 }
 
 .sex p{
@@ -198,7 +200,7 @@ hr{
 	width: 65%;
 	height: 3.5em;
 	color: white;
-	margin: 2em 0 0 0;
+	margin: 1.5em 0 0 0;
 	font-family: MuseoSansCyrl_100;
 	font-size: 0.88em;
 }
@@ -206,13 +208,13 @@ hr{
 .registr_btn:hover{
 	width: 66%!important;
 	height: 3.7em;
-	margin: 1.9em 0 0 0;
+	margin: 1.4em 0 0 0;
 }
 
 .registr_btn:active{
 	width: 66%!important;
 	height: 3.7em;
-	margin: 1.9em 0 0 0;
+	margin: 1.4em 0 0 0;
 	background-color: #D9550E;
 }
 

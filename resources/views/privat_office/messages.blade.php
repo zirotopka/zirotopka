@@ -6,14 +6,14 @@
 					<img src="/ico/add_msg.png" alt="" class="add_img">
 				</li>
 			</a>
-			<a href="/message/1">
-				<li class="input">
-					<img src="/ico/mess.png" alt="">
-				</li>
-			</a>
 			<a href="/message/2">
 				<li class="output">
 					<img src="/ico/input_mess.png" alt="">
+				</li>
+			</a>
+			<a href="/message/1">
+				<li class="input">
+					<img src="/ico/mess.png" alt="">
 				</li>
 			</a>
 		</ul>		

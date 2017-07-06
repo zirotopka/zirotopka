@@ -51,9 +51,11 @@
 						<p class="message_theme">Вопрос по упражнению</p>
 						<p class="message_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec ex ut nisl volutpat vestibulum. Maecenas condimentum, ligula sit amet pellentesque mollis, justo enim sollicitudin purus, sit amet faucibus nunc diam euismod ex. Donec nibh mauris, commodo quis interdum nec, accumsan vel lorem. Aenean dapibus, neque id ullamcorper eleifend, nibh turpis dictum erat, at varius neque ex non nulla. Maecenas ultricies suscipit dolor nec finibus.</p>
 					</div>
-					<form action="">
+					<form action="" class="input_form">
 						<textarea name="" id="" cols="30" rows="10" class="send_back" placeholder="Ответить"></textarea>
 						<input type="submit" class="write_button snd_btn" value="Отправить">
+						<input type="file" class="add_file" id="add_file">
+						<label for="add_file" class="lbl_fl"></label>
 					</form>
 				</div>
 			</div>

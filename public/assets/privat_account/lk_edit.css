@@ -47,6 +47,7 @@ input{
 	cursor: pointer;
 	background-position: left bottom;
 	width: 10em;
+	margin: 0.5em 0 0 0;
 }
 
 .m_usr_dscr .usr_name{
