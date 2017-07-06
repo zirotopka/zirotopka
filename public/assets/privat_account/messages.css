@@ -263,18 +263,18 @@ ul{
 
 .add_file{
 	display: inline-block!important;
-	width: 3em;
-	height: 3em;
+	width: 2em;
+	height: 2em;
 	margin: 0;
 	opacity: 0;
 }
 
 .lbl_fl{
-	background: url('/ico/attach_grey.png');
+	background: url('/ico/attach_dark.png');
 	background-repeat: no-repeat;
-	margin:0 0px -9px -36px;
-	width: 2em;
-	height: 2em;
+	margin:0 0px -9px -25px;
+	width: 1.5em;
+	height: 1.5em;
 	background-size: cover;
 }
 
