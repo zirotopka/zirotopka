@@ -49,7 +49,7 @@ class ProgrammController extends Controller
 
     		$user->save();
 
-    		return redirect('lk/'.$user->id);
+    		return redirect('lk/'.$user->id.'/edit');
     	} else {
             dd('Пользователь отсутствует');
     		return back();

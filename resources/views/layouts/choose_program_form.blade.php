@@ -30,19 +30,19 @@
           <div class="checkboxiki">
             <ul>
               <li>
-                <input type="checkbox" id="check1"> 
+                <input type="checkbox" id="check1" required> 
                 <label for="check1">
                   <a class="" href="#">Мне больше 14.</a>
                 </label>
               </li>
               <li>
-                <input type="checkbox" id="check2">
+                <input type="checkbox" id="check2" required>
                 <label for="check2">
                   <a class="" href="#">Ознакомился(-ась) с офертой.</a>
                 </label>
               </li>
               <li>
-                <input type="checkbox" id="check3">    
+                <input type="checkbox" id="check3" required>    
                 <label for="check3">
                   <a class="" href="#">Ознакомился(-ась) с политикой<br> конфиденциальности.</a>             
                 </label>
