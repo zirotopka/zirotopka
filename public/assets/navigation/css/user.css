@@ -273,7 +273,7 @@ button:hover {
 	}
 
 	.dropdown button div{
-		width: 75% !important;
+		width: 70% !important;
 	}
 	.codrops-header {
 		padding: 3em;
@@ -335,14 +335,14 @@ button:hover {
 .dropdown button{
 	height: 100%;
 	width: 100%;
-	padding: 0.8em 0 0 2.5vw;
-	text-align: left;
+	text-align: center;
 }
 
 .dropdown button div{
 	height: 2em;
-	width: 11em;
+	width: 70%;
 	display: inline-block;
+
 }
 
 .user_dropdown{
@@ -407,7 +407,13 @@ button:focus {
 
 .fa-caret-down{
 	position: absolute;
-	padding:5px;
+	padding:6.2px;
+}
+
+@-moz-document url-prefix() {
+	.fa-caret-down{
+	    padding: 5.2px!important;
+    }
 }
 
 .icon{
@@ -423,6 +429,7 @@ button:focus {
 	text-overflow: ellipsis;
 	width: 45%;
 	height: 2em;
+	text-align: center;
 }
 
 .user-fln{
