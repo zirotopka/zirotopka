@@ -83,7 +83,7 @@
 
 .progr-drop{
 	position: relative;
-	width: 17em;
+	width: 17.1em;
 }
 
 .drp-control{
@@ -169,7 +169,7 @@ option, option:hover, option:active ,option:focus,
 	border: 0.1em solid #b3b3b3;
 	color: #7d7d7d;
 	font-family: sans-serif;
-	padding-right: 2.435em !important;
+	padding-right: 2.5em !important;
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
 	margin: 0;
@@ -200,8 +200,6 @@ option, option:hover, option:active ,option:focus,
 	padding: 1em 0 0 15% !important;
 	font-size: 0.8em;
 }
-.open ul li a:hover{
-	border-left: 0.4em solid #FF9319;}
 
 .right-progrm-part{
 	text-align: left;
