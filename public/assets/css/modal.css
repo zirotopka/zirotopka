@@ -159,7 +159,7 @@ option, option:hover, option:active ,option:focus,
 /*--Select--*/
 
 .bootstrap-select{
-	width: 17em !important;
+	width: 17.1em !important;
 	height: 3em !important;
 }
 
@@ -177,7 +177,7 @@ option, option:hover, option:active ,option:focus,
 
 @-moz-document url-prefix() {
 	.bootstrap-select button{
-	    padding-right: 2.6em!important;
+	    padding-right: 2.68em!important;
     }
 }
 

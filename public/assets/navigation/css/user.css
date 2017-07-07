@@ -48,12 +48,19 @@ body {
 	font-family: 'GilroyLight' !important;
 }
 
-a {
+a,a:hover, a:focus, a:active {
 	text-decoration: none!important;
 	outline: none!important;
 }
 
-a:hover, a:focus {
+button,
+button:hover,
+button:active,
+button:focus,
+input,
+input:hover,
+input:active,
+input:focus{
 	outline: none;
 }
 
