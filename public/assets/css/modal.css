@@ -197,7 +197,7 @@ option, option:hover, option:active ,option:focus,
 
 .open ul li a{
 	height: 100%;
-	padding: 1em 0 0 15% !important;
+	padding: 1.2em 0 0 15% !important;
 	font-size: 0.8em;
 }
 
