@@ -6,7 +6,7 @@
 			<a href=""> <img src=/ico/edit.png class="edit_btn" alt="Изменить профиль"></a>
 			<p class="p_marg">Номер телефона</p>
 
-			<input type="text" name="phone" class="phone-inp edit-inputs">
+			<input type="tel" name="phone" class="phone-inp edit-inputs" placeholder="+_(___)___-__-__">
 			<div style="height: 4em;" class="row mrg">	
 				<p class="p_marg">Дата рождения</p>
 				<div class="bstd">

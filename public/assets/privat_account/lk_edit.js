@@ -4,6 +4,11 @@ $( document ).ready(function() {
 		$('.show-hidden-form').attr('style','display:block;')
 	});
 
+	$(".phone-inp").inputmask('+9 (999) 999-99-99');
+	$(".birthdate-left").inputmask("99");
+	$(".birthdate-center").inputmask("99");
+	$(".birthdate-right").inputmask("9999");
+
 
 
 	$('body').on('change','#download-logos',function(){

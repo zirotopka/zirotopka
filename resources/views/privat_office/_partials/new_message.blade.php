@@ -22,12 +22,11 @@
 			<br>
 			<textarea name="" id="" cols="30" rows="10" placeholder="Ваш текст" class="msg_text"></textarea>
 			<div class="send_btn_align">
+				<input type="file" class="add_file" id="add_file">
+				<label for="add_file" class="lbl_fl"></label>
 				<input type="submit" value="ОТПРАВИТЬ" class="write_button msg_sendbutton" >
 			</div>
-				<input type="file" class="add_file" id="add_file">
-				
-				<label for="add_file" class="lbl_fl"></label>
-
+	
 		</form>
 	</div>
 @overwrite

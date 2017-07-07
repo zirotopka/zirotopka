@@ -53,9 +53,11 @@
 					</div>
 					<form action="" class="input_form">
 						<textarea name="" id="" cols="30" rows="10" class="send_back" placeholder="Ответить"></textarea>
-						<input type="submit" class="write_button snd_btn" value="Отправить">
-						<input type="file" class="add_file" id="add_file">
-						<label for="add_file" class="lbl_fl"></label>
+						<div style="text-align: right;">
+							<input type="file" class="add_file" id="add_file">
+							<label for="add_file" class="lbl_fl"></label>
+							<input type="submit" class="write_button snd_btn" value="Отправить">
+						</div>
 					</form>
 				</div>
 			</div>

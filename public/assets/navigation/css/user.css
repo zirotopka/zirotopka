@@ -35,6 +35,8 @@
 	src:url('/fonts/MuseoSansCyrl_900.otf');
 }
 
+::-webkit-file-upload-button { cursor:pointer; }
+
 
 html {
 	background-color: white !important;
@@ -363,7 +365,7 @@ button:hover {
 }
 
 .user_dropdown li a:hover{
-	border-left: 0.4em solid #FF9319;
+	border-left: 5px solid #FF9319!important;
 	background-color: #191919 !important;
 	color: white!important;
 	background-image: none;
@@ -448,8 +450,12 @@ button:focus {
 	position: absolute;
 	z-index: 1;
 	margin: 3% 0 0 53%;
-
 }
+
+.close span img{
+	font-size: 12px!important;
+}
+
 
 .prof_ico{
 	background: url('/ico/profile.png');
@@ -476,4 +482,14 @@ button:focus {
 	width: 1em;
 	height: 1em;
 	vertical-align: sub;
+}
+
+.swal2-modal{
+	min-width: 300px;
+	width: 15em;
+	height: 15em;
+	border-radius: 0;
+	background-color: rgba(245,137,50,0.9);
+	font-size: 1em;
+	font-family: GilroyLight; 
 }
