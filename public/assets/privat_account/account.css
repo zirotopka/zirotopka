@@ -267,10 +267,6 @@
 		margin: 0;		
 	}
 
-	.left-progrm-part{
-		text-align: left!important;
-	}
-
 	.select-side{
 		left: 14em;
 		text-align: center;
@@ -351,7 +347,7 @@
 		text-align: center;
 	}
 	.ddicc{
-		margin: 2.7em 0 0 15.46em !important;
+		margin: 2.7em 0 0 15.26em !important;
 	}
 	.send-progr-btn{
 		margin: 0;

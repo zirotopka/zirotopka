@@ -346,6 +346,17 @@ label:hover:before {
 @media screen and (max-width: 61.95em) {
 	.prog-bold-txt{
 		margin-left: 0;
-		text-align: center;
+	}
+	.bootstrap-select button{
+		padding-right: 2.65em!important;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.right-progrm-part{
+		display: none!important;
+	}
+	.left-progrm-part{
+		width: 100%!important;
 	}
 }
