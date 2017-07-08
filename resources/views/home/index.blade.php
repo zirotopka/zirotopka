@@ -14,6 +14,7 @@
 @overwrite
 
 @section("content")
-@include('home.registration')
-@include('home.login')
+	<div class="swal2-modal"></div>
+	@include('home.registration')
+	@include('home.login')
 @overwrite

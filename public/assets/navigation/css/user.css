@@ -501,10 +501,14 @@ button:focus {
 
 .swal2-modal{
 	min-width: 300px;
-	width: 15em;
-	height: 15em;
+	width: 34em;
+	height: 20em;
 	border-radius: 0;
-	background-color: rgba(245,137,50,0.9);
+	background-color: green;
 	font-size: 1em;
-	font-family: GilroyLight; 
+	font-family: GilroyLight;
+	background: url(/ico/R.png);
+	background-repeat: no-repeat;
+	background-size: 8em;
+	background-position: 22em 5em;
 }
