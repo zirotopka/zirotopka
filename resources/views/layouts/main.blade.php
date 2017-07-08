@@ -115,7 +115,7 @@
                                 </a>                            
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
-                                <a href="/message/1/1">
+                                <a href="/messages/1">
                                     <img class="envel" src="/ico/envelop.png" alt="envelop">
                                 </a>
                             </div>

@@ -89,7 +89,7 @@
 										<td class="box-cal {{$class}} {{$cal_class}}">
 											<span class="cal_hints">
 												@if ( !empty($difficult) )
-													@if ($program_day->interest ==1)
+													@if ($program_day->interest == 1)
 														<p style="text-align: center; margin-right: 10%;">Обязательный день</p>
 											  		@else
 														<p style="text-align: center; margin-right: 10%;">Необязательный день</p>

@@ -62,15 +62,12 @@ class MessageApiController extends Controller
         $rules = [
             'sender_id' => 'required|integer',
             'recipient_id' => 'required|integer',
-            'type' => 'required|in:1,2'
         ];
         $messages = [
             'sender_id.required' => 'Sender not found',
             'sender_id.integer' => 'Sender is not int',
             'recipient_id.required' => 'Recipient not found',
             'recipient_id.integer' => 'Recipient is not int',
-            'type.required' => 'Type not found',
-            'type.in' => 'Uncorrect type',
         ];
 
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -82,11 +79,10 @@ class MessageApiController extends Controller
         //Проверка пользователя
         //$user = $request->get('user');
         $user = Sentinel::getUser();
-        $type = $request->get('type'); 
         $recipient_id = $request->get('recipient_id');
         $sender_id = $request->get('sender_id');
 
-        if (($type = 1 && ($user->id != $sender_id)) || ($type = 2 && ($user->id != $recipient_id))) {
+        if ($user->id != $sender_id) {
             return response()->json(['code' => 406, 'text' => 'Uncorrect data id']);
         }
 
@@ -95,7 +91,7 @@ class MessageApiController extends Controller
         $message->sender_id = $sender_id;
         $message->subject = $request->get('subject');
         $message->text = $request->get('text');
-        $message->is_read = 1;
+        $message->is_read = 0;
         if ( $message->save() ) {
             return response()->json(['code' => 200, 'text' => 'Message is send', 'data' => $message->id]);
         } else {
