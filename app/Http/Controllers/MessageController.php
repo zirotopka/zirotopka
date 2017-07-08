@@ -62,7 +62,7 @@ class MessageController extends Controller
     {
         $user = Sentinel::getUser();
         $type = $request->get('type');
-        $message = Message::where('id','=',$id)->first();
+        $message = Message::where('id','=',$id)->with('outputs')->first();
 
         if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $user->id == $message->recipient_id)) {
              $data = [
