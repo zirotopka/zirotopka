@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/assets/jquery-ui-1.12.1.custom/jquery-ui.min.css">
     <link rel="stylesheet" href="/assets/css/layout.css">
     <link href="/assets/css/calendar.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.css">
     
 
 	<title>Reformator.ONE</title>

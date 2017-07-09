@@ -7,22 +7,24 @@ $( document ).ready(function() {
 		    type: "POST",
 		    url: '/api/message',
 		    data: data,
-		    //dataType: 'json',
+		    dataType: 'json',
 		    success: function (result) {
 				if (result['code'] == 200) {
-					// swal({
-					//   title: 'Auto close alert!',
-					//   text: 'I will close in 2 seconds.',
-					//   timer: 2000
-					// }).then(
-					//   function () {},
-					//   // handling the promise rejection
-					//   function (dismiss) {
-					//     if (dismiss === 'timer') {
-					//       console.log('I was closed by the timer')
-					//     }
-					//   }
-					// )
+					 swal({
+					   title: 'Auto регистрация alert!',
+					   text: 'I will close in 2 seconds.',
+					   showCloseButton: true,
+					   showConfirmButton: false,
+
+					 }).then(
+					   function () {},
+					   // handling the promise rejection
+					   function (dismiss) {
+					     if (dismiss === 'timer') {
+					       console.log('I was closed by the timer')
+					     }
+					   }
+					 )
 				} else {
 
 				}

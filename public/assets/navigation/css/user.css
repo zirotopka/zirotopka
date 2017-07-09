@@ -501,14 +501,35 @@ button:focus {
 
 .swal2-modal{
 	min-width: 300px;
+	min-height: 15em; 
 	width: 34em;
-	height: 20em;
-	border-radius: 0;
-	background-color: green;
+	height: 15em;
+	border-radius: 0 !important;
+	background-color: white !important;
 	font-size: 1em;
-	font-family: GilroyLight;
-	background: url(/ico/R.png);
-	background-repeat: no-repeat;
-	background-size: 8em;
-	background-position: 22em 5em;
+	background-image: url(/ico/R.png)!important;
+	background-repeat: no-repeat!important;
+	background-size: 8em!important;
+	background-position: 26em 1em!important;
+	z-index: 9999;
+	position: absolute;
+}
+
+.swal2-title{
+	color: #FF7F39!important;
+	font-size: 1.8em!important;
+	font-family: MuseoSansCyrl_500!important;
+	text-transform: uppercase!important;
+	margin-top: 2em!important;
+}
+
+.swal2-content{
+	color: #B1B1B1!important;
+	font-size: 1.4em!important;
+	font-family: MuseoSansCyrl_100!important;
+
+}
+
+.swal2-close{
+	color: #FF7F39!important;
 }
