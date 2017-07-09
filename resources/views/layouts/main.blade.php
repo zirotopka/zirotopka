@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/assets/jquery-ui-1.12.1.custom/jquery-ui.min.css">
     <link rel="stylesheet" href="/assets/css/layout.css">
     <link href="/assets/css/calendar.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.css">
     
 
 	<title>Reformator.ONE</title>
@@ -123,12 +123,11 @@
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     <div>
                                         <span class="user-name">{{$user->first_name}}</span>
-                                        <span class="user-name">{{$user->surname}}</span>
                                     </div>
                                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li><a href="/lk/{{$user->id}}">ЛИЧНЫЙ КАБИНЕТ</a></li>
+                                    <li><a href="/lk/{{$user->id}}">ПРОГРАММА ТРЕНИРОВОК</a></li>
                                     <li><a href="/lk/{{$user->id}}/edit">ПРОФИЛЬ</a></li>
                                     <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>

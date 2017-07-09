@@ -1,3 +1,7 @@
+var attachment_count = 0,
+	image_mime = ['image/jpeg','image/pjpeg','image/png'],
+	video_mime = ['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv'];
+
 $( document ).ready(function() {
 	//Отправляем новое сообщение
 	$('body').on('click','#send_new_message', function() {
@@ -7,24 +11,32 @@ $( document ).ready(function() {
 		    type: "POST",
 		    url: '/api/message',
 		    data: data,
-		    //dataType: 'json',
+		    dataType: 'json',
 		    success: function (result) {
 				if (result['code'] == 200) {
-					swal({
-					  title: 'Auto close alert!',
-					  text: 'I will close in 2 seconds.',
-					  timer: 2000
-					}).then(
-					  function () {},
-					  // handling the promise rejection
-					  function (dismiss) {
-					    if (dismiss === 'timer') {
-					      console.log('I was closed by the timer')
-					    }
-					  }
-					)
+					 swal({
+					   title: 'Ваше сообщение отправлено!',
+					   text: 'Тренер вскоре ответит вам',
+					   showCloseButton: true,
+					   showConfirmButton: false,
+					 }).then(
+					   function () {
+					    }, function (dismiss) {
+					    	location.href = '/messages/1';
+					 	}
+					 )
 				} else {
-
+					swal({
+					   title: 'Ошибка!',
+					   text: result['text'],
+					   showCloseButton: true,
+					   showConfirmButton: false,
+					 }).then(
+					   function () {
+					    }, function (dismiss) {
+					    	location.href = '/messages/1';
+					 	}
+					 )
 				}
 	    	},
 	    	error: function(data) {
@@ -58,9 +70,19 @@ $( document ).ready(function() {
 
 	$('body').on('change','.add_file', function() {
 		var file = this.files[0];
-		var formData = new FormData();
 
-		//if (file.length > 0) {
+		if (file != undefined) {
+			swal({
+	            title: "Загрузка файла!",
+	            text: "Ожидайте. Это может занять некоторое время",
+	            imageUrl: "/ico/spinner.gif",
+	            imageWidth: '50',
+	            imageHeight: '50',
+	            showConfirmButton: false
+	        });
+
+			var formData = new FormData();
+
 			formData.append( 'file', file );
 		    formData.append( 'destinationPath', '/messages/' );
 
@@ -71,19 +93,42 @@ $( document ).ready(function() {
 		        cache: false,
 		        processData: false, 
 		        contentType: false, 
-		        success: function( result ){
-		        	console.log(result);
-		    //         if (result['response'] = 200) {
-						// $('.logo-img').attr('src','/image/logos/'+result['url']);
-		    //         } else {
-		    //        		console.log('ОШИБКИ Загрузки фото');
-		    //         }
+		        success: function(result) {
+		        	if (result['code'] == 200) {
+						var attachment_container = $('#attachment-container'),
+							attachment_html = '';
+
+						attachment_html += '<div class="attachment-item">'; 
+						attachment_html += '<img class="attachment-img" src="' + result['preview'] + '">'; 
+						attachment_html += '<input type="hidden" name="attachment[' + attachment_count + ']" value="' + result['file_url'] + '">'; 
+						attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>'; 
+						attachment_html += '</div>'; 
+
+						attachment_container.append(attachment_html);
+
+						attachment_count++;
+
+						swal.close();
+					} else {
+						swal({
+						   title: 'Ошибка!',
+						   text: result['text'],
+						   showCloseButton: true,
+						   showConfirmButton: false,
+						})
+					}
+
 		        },
 		        error: function( jqXHR, textStatus, errorThrown ){
-		            console.log('ОШИБКИ AJAX запроса: ' + textStatus );
+		        	swal({
+					   title: 'Ошибка!',
+					   text: 'ОШИБКИ AJAX запроса: ' + textStatus,
+					   showCloseButton: true,
+					   showConfirmButton: false,
+					})
 		        }
 		    });
-		//}
+		}
 	});
 })
 

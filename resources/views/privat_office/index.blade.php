@@ -115,6 +115,9 @@
 												
 								@endforeach	
 							</tr>
+							<tr>
+								<td><{{gmdate("Y-m-d", $user->start_traiining_day)}}</td>
+							</tr>
 						</table>
 					</div>
 				</div>

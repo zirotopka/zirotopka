@@ -46,16 +46,21 @@ class FileApiController extends Controller
             $file->move($destinationPath, $fileName);
 
             $url = $destinationPath.$fileName;
+
             $mime_type = mime_content_type($url);
 
             if (in_array(mime_content_type($url),['image/jpeg','image/pjpeg','image/png'])) {
-            	// $image = Image::make($url)->resize(600, 800);
-	            // $image->save($url);
-            } elseif (in_array(mime_content_type($url),['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv'])) {
+            	$preview_url = $request->get('destinationPath').'preview_'.$fileName;
+            	$preview_full_url = public_path().$preview_url;
 
+            	$image = Image::make($url)->resize(56, 50);
+	            $image->save($preview_full_url);
+
+            } else {
+            	$preview_url = '/ico/video-default.png';
             }
 
-            return response()->json(['code' => 200, 'file_url' => $url, 'type' => $mime_type]);
+            return response()->json(['code' => 200, 'file_url' => $url, 'type' => $mime_type, 'preview' => $preview_url, 'file_name' => $fileName ]);
         } else {
             return response()->json(['code' => 404, 'text' => 'File not found']);
         }
