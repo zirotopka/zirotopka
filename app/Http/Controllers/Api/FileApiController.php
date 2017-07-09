@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;//Временно
 
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManagerStatic as Image;
 
 use App\File;
+use Validator;
 
 class FileApiController extends Controller
 {	
@@ -16,25 +18,46 @@ class FileApiController extends Controller
 	 */
     public function store_attachment(Request $request)
     {
-        //$user = $request->get('user');
-        $user = Sentinel::getUser();
+        if ($request->hasFile('file'))
+        {   
+        	$rules = [
+	            'file' => 'mimes:jpeg,pjpeg,png,mpeg,mp4,3gpp,3gpp2,x-flv,x-ms-wmv',
+	        ];
+	        $messages = [
+	            'file.mimes' => 'Incorrect mimetypes',
+	        ];
 
-        if (empty($user)) {
-            return response()->json(['code' => 404, 'text' => 'User not found']);
+	        $validator = Validator::make($request->all(), $rules, $messages);
+
+	        if ($validator->fails()) {
+	            return response()->json(['code' => 400, 'text' => 'Incorrect mimetypes']);
+	        }
+	       	//$user = $request->get('user');
+	        $user = Sentinel::getUser();
+
+	        if (empty($user)) {
+	            return response()->json(['code' => 404, 'text' => 'User not found']);
+	        }
+
+            $file = $request->file('file');
+
+            $fileName = time() . '-' . $file->getClientOriginalName();
+            $destinationPath = public_path().$request->get('destinationPath');
+            $file->move($destinationPath, $fileName);
+
+            $url = $destinationPath.$fileName;
+            $mime_type = mime_content_type($url);
+
+            if (in_array(mime_content_type($url),['image/jpeg','image/pjpeg','image/png'])) {
+            	// $image = Image::make($url)->resize(600, 800);
+	            // $image->save($url);
+            } elseif (in_array(mime_content_type($url),['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv'])) {
+
+            }
+
+            return response()->json(['code' => 200, 'file_url' => $url, 'type' => $mime_type]);
+        } else {
+            return response()->json(['code' => 404, 'text' => 'File not found']);
         }
-
-        // $type = $request->get('type');
-
-        // if (empty($type) || !in_array($type, [1,2])) {
-        //      return response()->json(['code' => 404, 'text' => 'Type not found']);
-        // }
-
-        // if ($type = 1) {
-        //     return response()->json(['code' => 200, 'text' => 'Output mesages', 'data' => $user->output_messages]);
-        // } else {
-        //     return response()->json(['code' => 200, 'text' => 'Income mesages', 'data' => $user->income_messages]);
-        // }
-
-        // return response()->json(['code' => 501]);
     }
 }

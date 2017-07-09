@@ -60,27 +60,30 @@ $( document ).ready(function() {
 		var file = this.files[0];
 		var formData = new FormData();
 
-		formData.append('logo',file);
+		//if (file.length > 0) {
+			formData.append( 'file', file );
+		    formData.append( 'destinationPath', '/messages/' );
 
-	    $.ajax({
-	        url: '/user/change_logo',
-	        type: 'POST',
-	        data: formData,
-	        cache: false,
-	        //dataType: 'json',
-	        processData: false, 
-	        contentType: false, 
-	        success: function( result ){
-	            if (result['response'] = 200) {
-					$('.logo-img').attr('src','/image/logos/'+result['url']);
-	            } else {
-	           		console.log('ОШИБКИ Загрузки фото');
-	            }
-	        },
-	        error: function( jqXHR, textStatus, errorThrown ){
-	            console.log('ОШИБКИ AJAX запроса: ' + textStatus );
-	        }
-	    });
+		    $.ajax({
+		        url: '/api/file/store_attachment',
+		        type: 'POST',
+		        data: formData,
+		        cache: false,
+		        processData: false, 
+		        contentType: false, 
+		        success: function( result ){
+		        	console.log(result);
+		    //         if (result['response'] = 200) {
+						// $('.logo-img').attr('src','/image/logos/'+result['url']);
+		    //         } else {
+		    //        		console.log('ОШИБКИ Загрузки фото');
+		    //         }
+		        },
+		        error: function( jqXHR, textStatus, errorThrown ){
+		            console.log('ОШИБКИ AJAX запроса: ' + textStatus );
+		        }
+		    });
+		//}
 	});
 })
 
