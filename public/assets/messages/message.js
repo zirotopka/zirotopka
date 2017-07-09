@@ -31,16 +31,16 @@ $( document ).ready(function() {
 					   text: result['text'],
 					   showCloseButton: true,
 					   showConfirmButton: false,
-					 }).then(
-					   function () {
-					    }, function (dismiss) {
-					    	location.href = '/messages/1';
-					 	}
-					 )
+					 });
 				}
 	    	},
 	    	error: function(data) {
-
+	    		swal({
+				   title: 'Ошибка!',
+				   text: 'ОШИБКИ AJAX запроса: ' + textStatus,
+				   showCloseButton: true,
+				   showConfirmButton: false,
+				})
             } 
 	  	});
 	});
@@ -63,7 +63,12 @@ $( document ).ready(function() {
 				}
 	    	},
 	    	error: function(data) {
-
+	    		swal({
+				   title: 'Ошибка!',
+				   text: 'ОШИБКИ AJAX запроса: ' + textStatus,
+				   showCloseButton: true,
+				   showConfirmButton: false,
+				})
             } 
 	  	});
 	});

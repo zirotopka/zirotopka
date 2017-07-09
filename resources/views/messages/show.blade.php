@@ -14,17 +14,20 @@
 		<p class="message_text">{{$message->text}}</p>
 	</div>
 	@if ($type == 2)
-		<form action="#" class="input_form" id="new_message_form">
+		<form action="#" id="new_message_form">
 			{{ csrf_field() }}
 			<input name="recipient_id" type="hidden" value="1">
 			<input name="sender_id" type="hidden" value="{{$user->id}}">
 			<input name="subject" type="hidden" value="{{$message->subject}}">
+			<br>
 			<textarea name="text" id="" cols="30" rows="10" class="send_back" placeholder="Ответить"></textarea>
-			<div style="text-align: right;">
-				<input type="file" class="add_file" id="add_file">
-				<label for="add_file" class="lbl_fl"></label>
-				<input type="button" class="write_button snd_btn" value="Отправить" id="send_new_message">
-			</div>
+			<div id="attachment-container"></div>
+			
 		</form>
+		<div style="text-align: right;">
+			<input type="file" class="add_file" id="add_file" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
+			<label for="add_file" class="lbl_fl"></label>
+			<input type="button" class="write_button snd_btn" value="Отправить" id="send_new_message">
+		</div>
 	@endif
 </div>
