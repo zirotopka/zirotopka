@@ -123,12 +123,11 @@
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     <div>
                                         <span class="user-name">{{$user->first_name}}</span>
-                                        <span class="user-name">{{$user->surname}}</span>
                                     </div>
                                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li><a href="/lk/{{$user->id}}">ЛИЧНЫЙ КАБИНЕТ</a></li>
+                                    <li><a href="/lk/{{$user->id}}">ПРОГРАММА ТРЕНИРОВОК</a></li>
                                     <li><a href="/lk/{{$user->id}}/edit">ПРОФИЛЬ</a></li>
                                     <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>
