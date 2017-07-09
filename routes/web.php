@@ -50,3 +50,4 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 });
 
 Route::get('api/user/email_store', ['uses' => 'Api\UserApiController@email_store']);
+Route::get('api/file/store_attachment', ['uses' => 'Api\FileApiController@store_attachment']);

@@ -10,19 +10,19 @@ $( document ).ready(function() {
 		    //dataType: 'json',
 		    success: function (result) {
 				if (result['code'] == 200) {
-					// swal({
-					//   title: 'Auto close alert!',
-					//   text: 'I will close in 2 seconds.',
-					//   timer: 2000
-					// }).then(
-					//   function () {},
-					//   // handling the promise rejection
-					//   function (dismiss) {
-					//     if (dismiss === 'timer') {
-					//       console.log('I was closed by the timer')
-					//     }
-					//   }
-					// )
+					swal({
+					  title: 'Auto close alert!',
+					  text: 'I will close in 2 seconds.',
+					  timer: 2000
+					}).then(
+					  function () {},
+					  // handling the promise rejection
+					  function (dismiss) {
+					    if (dismiss === 'timer') {
+					      console.log('I was closed by the timer')
+					    }
+					  }
+					)
 				} else {
 
 				}
@@ -54,6 +54,33 @@ $( document ).ready(function() {
 
             } 
 	  	});
+	});
+
+	$('body').on('change','.add_file', function() {
+		var file = this.files[0];
+		var formData = new FormData();
+
+		formData.append('logo',file);
+
+	    $.ajax({
+	        url: '/user/change_logo',
+	        type: 'POST',
+	        data: formData,
+	        cache: false,
+	        //dataType: 'json',
+	        processData: false, 
+	        contentType: false, 
+	        success: function( result ){
+	            if (result['response'] = 200) {
+					$('.logo-img').attr('src','/image/logos/'+result['url']);
+	            } else {
+	           		console.log('ОШИБКИ Загрузки фото');
+	            }
+	        },
+	        error: function( jqXHR, textStatus, errorThrown ){
+	            console.log('ОШИБКИ AJAX запроса: ' + textStatus );
+	        }
+	    });
 	});
 })
 
