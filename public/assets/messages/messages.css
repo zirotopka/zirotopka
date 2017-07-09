@@ -263,18 +263,22 @@ ul{
 
 .add_file{
 	display: inline-block!important;
-	width: 3em;
-	height: 3em;
+	width: 2em;
+	height: 2em;
 	margin: 0;
 	opacity: 0;
 }
 
+.add_file, .lbl_fl,.add_file:hover, .lbl_fl:hover{
+	cursor: pointer!important;
+}
+
 .lbl_fl{
-	background: url('/ico/attach_grey.png');
+	background: url('/ico/attach_dark.png');
 	background-repeat: no-repeat;
-	margin:0 0px -9px -36px;
-	width: 2em;
-	height: 2em;
+	margin:0 10px -9px -28px;
+	width: 1.5em;
+	height: 1.5em;
 	background-size: cover;
 }
 
@@ -404,12 +408,26 @@ ul{
 	height: 14em;
 	color: #A7A5A5;
 	font-size: 1.1em;
+	resize: none;
 }
 
 .snd_btn{
-	margin: 1em 0 3em 60.1%;
+	margin: 1em 20% 2em 0;
 	text-transform: uppercase;
+}
 
+.snd_btn:hover{
+	margin: 0.9em 20% 2em 0!important;
+	height: 3.6em;
+	width: 12.1em;
+	text-transform: uppercase;
+}
+
+.snd_btn:active{
+	margin: 0.9em 20% 2em 0!important;
+	text-transform: uppercase;
+	height: 3.6em;
+	width: 12.1em;
 }
 
 .send_btn_align{
@@ -542,9 +560,6 @@ ul{
 		width: 1.9em !important;
 		margin:  0 0 0.2em 0!important;
 	}
-	.input_form .add_file{
-		margin: 0 0 0 60%;
-	}
 }
 
 .send{
@@ -562,5 +577,9 @@ ul{
 .add_img{
 	width: 60% !important;
 	margin-left: 5px;
+}
+
+#show-message-container {
+	padding: 5em 0px 0px 0px;
 }
 

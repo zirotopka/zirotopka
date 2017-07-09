@@ -89,10 +89,10 @@
 										<td class="box-cal {{$class}} {{$cal_class}}">
 											<span class="cal_hints">
 												@if ( !empty($difficult) )
-													@if ($program_day->interest =1)
-														<p style="text-align: center;">Обязательный день</p>
+													@if ($program_day->interest == 1)
+														<p style="text-align: center; margin-right: 10%;">Обязательный день</p>
 											  		@else
-														<p style="text-align: center;">Необязательный день</p>
+														<p style="text-align: center; margin-right: 10%;">Необязательный день</p>
 											  		@endif
 											  		<p class="" style="display: inline-block; width: 65%;">Уровень сложности:</p>
 											  		<div style="display: inline-block; text-align: center; width: 30%">
@@ -114,6 +114,9 @@
 									@endif
 												
 								@endforeach	
+							</tr>
+							<tr>
+								<td><{{gmdate("Y-m-d", $user->start_traiining_day)}}</td>
 							</tr>
 						</table>
 					</div>
@@ -152,7 +155,7 @@
 									    	<img class="btn-play" src="/ico/play.png" alt="">
 									    @endif
 									</div>
-
+								<form action="">
 									<div class="otchet">
 										<div class="load-btn">
 											<img class="load" src="/ico/load.png" alt="">
@@ -173,7 +176,7 @@
 				<div class="send-proof col-lg-12">
 						<button type="submit" class="send-proof-file"> Отправить на проверку</button>
 				</div>
-
+			</form>
 
 				<!-- --------------------------------------------------------------- -->
 				<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">

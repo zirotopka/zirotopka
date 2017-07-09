@@ -218,7 +218,7 @@
 }
 
 .ddicc{
-	margin: 2.7em 0 0px 6.875em;
+	margin: 2.7em 0 0px 6.86em;
 }
 @media screen and (max-width: 47.95em) {
 	.choose_programe_form{
@@ -265,10 +265,6 @@
 	}
 	.drp-control{
 		margin: 0;		
-	}
-
-	.left-progrm-part{
-		text-align: left!important;
 	}
 
 	.select-side{
@@ -351,7 +347,7 @@
 		text-align: center;
 	}
 	.ddicc{
-		margin: 2.7em 0 0 15.46em !important;
+		margin: 2.7em 0 0 15.26em !important;
 	}
 	.send-progr-btn{
 		margin: 0;

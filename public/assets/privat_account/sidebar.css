@@ -22,7 +22,7 @@
 .left_edit_part ul li a {
 	text-decoration: none;
 	display: block;
-	padding: 1.2em 0 1.2em 0em;
+	padding: 1.1em 0 1.1em 0em!important;
 	outline: none;
 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
 	color: #f3efe0;
@@ -32,6 +32,8 @@
 	font-weight: bold;
 	-webkit-transition: background 0.3s, box-shadow 0.3s;
 	transition: background 0.3s, box-shadow 0.3s;
+	font-size: 0.9em !important;
+
 }
 
 .left_edit_part ul li:first-child a {
