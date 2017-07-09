@@ -93,22 +93,21 @@ class PrivatOfficeController extends Controller
      */
     public function personal_data_store($id,Request $request){
         $user = Sentinel::getUser();
-
         if (!empty($user)) {
             $rules = [
             //     'year' => 'date_format:Y',
             //     'month' => 'date_format:m',
             //     'day' => 'date_format:d',
-                'pasport_date' => 'date',
-                'growth' => 'numeric',
-                'weight' => 'numeric',
-                'pasport_number' => 'numeric',
+                'pasport_date' => 'date_format:Y-m-d|nullable',
+                'growth' => 'numeric|nullable',
+                'weight' => 'numeric|nullable',
+                'pasport_number' => 'numeric|nullable',
             ];
             $messages = [
             //     'year.date_format' => 'Введите год рождения',
             //     'month.date_format' => 'Введите месяц рождения',
             //     'day.date_format' => 'Введите день рождения',
-                'pasport_date.date' => 'Поле дата выдачи должно быть корректной формы',
+                'pasport_date.date_format' => 'Поле дата выдачи должно быть корректной формы',
                 'growth.numeric' => 'Рост указан неверно',
                 'weight.numeric' => 'Вес указан неверно',
                 'pasport_number.numeric' => 'Номер паспорта указан неверно',
@@ -139,7 +138,13 @@ class PrivatOfficeController extends Controller
             $user->pasport_name = $request->get('pasport_name');
             $user->pasport_number = $request->get('pasport_number');
             $user->pasport_series = $request->get('pasport_series');
-            $user->pasport_date = Carbon::parse($request->get('pasport_date'))->timestamp;
+
+            if ($request->has('pasport_date')) {
+                $user->pasport_date = Carbon::parse($request->get('pasport_date'))->timestamp;
+            } else {
+                $user->pasport_date = null;
+            }
+
             $user->pasport_issued = $request->get('pasport_issued');
             $user->city = $request->get('city');
 

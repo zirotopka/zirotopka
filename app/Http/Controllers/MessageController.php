@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use App\User;
 use App\Balance;
+use App\Message;
 
+use App\Http\Controllers\Api\MessageApiController;
 
 use Validator;
 
@@ -20,16 +22,21 @@ class MessageController extends Controller
     public function index($type)
     {   
         $user = Sentinel::getUser();
-        $data = [
-                'user' => $user,
-            ];
-        if ($type ==1) {
-            return view('privat_office._partials.output_message', $data);
-        }
-        else if ($type ==2) {
-            return view('privat_office._partials.inbox', $data);
+
+        $messages = [];
+
+        if ($type == 1) {
+            $messages = $user->output_messages;
+        } else {
+            $messages = $user->income_messages;
         }
 
+        $data = [
+            'user' => $user,
+            'messages' => $messages,
+            'type' => $type,
+        ];
+        return view('messages.inbox', $data);
     }
 
     /**
@@ -43,7 +50,7 @@ class MessageController extends Controller
         $data = [
             'user' => $user,
         ];
-        return view('privat_office._partials.new_message', $data);
+        return view('messages.new_message', $data);
     }
     /**
      * Display the specified resource.
@@ -51,13 +58,23 @@ class MessageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show($id, Request $request)
     {
-            $user = Sentinel::getUser();
-            $data = [
-                    'user' => $user,
-                ];
-            return view('privat_office._partials.output_message', $data);
-        
+        $user = Sentinel::getUser();
+        $type = $request->get('type');
+        $message = Message::where('id','=',$id)->with('outputs')->first();
+
+        if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $user->id == $message->recipient_id)) {
+             $data = [
+                'user' => $user,
+                'message' => $message,
+                'type' => $type,
+            ];
+            $view = view('messages.show', $data)->render();
+
+            return ['response' => 200, 'data' => $view];
+        }
+
+        return ['response' => 404, 'text' => 'Сообщение не найдено'];
     }
 }

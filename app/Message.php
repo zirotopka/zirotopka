@@ -11,11 +11,11 @@ class Message extends Model
 
     public function incomes()
     {
-        return $this->belongsTo('App\User', 'id', 'recipient_id');
+        return $this->belongsTo('App\User', 'recipient_id', 'id');
     }
 
     public function outputs()
     {
-        return $this->belongsTo('App\User', 'id', 'sender_id');
+        return $this->belongsTo('App\User',  'sender_id', 'id');
     }
 }
