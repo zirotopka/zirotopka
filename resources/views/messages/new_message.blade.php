@@ -23,12 +23,15 @@
 			<input name="sender_id" type="hidden" value="{{$user->id}}">
 			<input name="subject" type="text" placeholder="Тема:" class="msg_theme">
 			<br>
-			<textarea name="text" id="" cols="30" rows="10" placeholder="Ваш текст" class="msg_text"></textarea>
-			<div class="send_btn_align">
-				<input type="file" class="add_file" id="add_file">
-				<label for="add_file" class="lbl_fl"></label>
-				<input type="button" value="ОТПРАВИТЬ" class="write_button msg_sendbutton" id="send_new_message">
-			</div>
+			<textarea name="text" id="" cols="30" rows="10" placeholder="Ваш текст" class="msg_text">
+			</textarea>
+			<div id="attachment-container"></div>
+			
 		</form>
+		<div class="send_btn_align">
+			<input type="file" class="add_file" id="add_file" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
+			<label for="add_file" class="lbl_fl"></label>
+			<input type="button" value="ОТПРАВИТЬ" class="write_button msg_sendbutton" id="send_new_message">
+		</div>
 	</div>
 @overwrite
