@@ -23,10 +23,12 @@
 		<p class="cnt">МОЙ СЧЕТ</p>
 		<div class="row">
 			<div class="money ">
-				<p>МОЙ СЧЕТ:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }} <i class="fa fa-rub" aria-hidden="true"></i></p> 
+				<p>МОЙ СЧЕТ:&nbsp;{{ !empty($user->balance) ? $user->balance->sum : 0 }} 
 			</div>			
 		</div>
+		<?php echo $accruals->render(); ?>
 		<div class="table-scrolling col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
 			<table class="table balance_table">
 				<tr>
 					<th>№</th>

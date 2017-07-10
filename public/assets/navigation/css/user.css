@@ -499,6 +499,15 @@ button:focus {
 	vertical-align: sub;
 }
 
+
+.attachment-span{
+	display: none!important;
+}
+
+.attachment-img, .attachment-item{
+	display: inline-block;
+}
+
 .swal2-modal{
 	min-width: 300px;
 	min-height: 15em; 
@@ -533,3 +542,4 @@ button:focus {
 .swal2-close{
 	color: #FF7F39!important;
 }
+

@@ -105,7 +105,7 @@ td{
 }
 
 .table-scrolling{
-	margin: 3em 0 0 0;
+	margin: 0 0 0 0;
 	height: 60%;
 	overflow: scroll;
 	width: 95%;
@@ -247,4 +247,20 @@ td{
 .fa-rub{
 	font-size: 1em;
 	color: #F36D00;
+}
+
+.pagination{
+	margin-left: 84%;
+    margin-bottom: 0;
+}
+
+.pagination li span,.pagination li a{
+	border: none;
+	color: #B6B6B6;
+}
+
+.pagination li span, .pagination li a, .pagination li span:active,.pagination li a:hover{
+	background-color: white!important;
+	border:none;
+	color: #B6B6B6!important;
 }

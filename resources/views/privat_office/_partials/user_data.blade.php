@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 			<p class="orange-text">Номер телефона</p>
-			<p class="gray-text">{{$user->phone}}</p>
+			<p class="gray-text">{{!empty($user->phone) ? $user->phone : ''}}</p>
 			<p class="orange-text">Дата рождения</p>
 			<p class="gray-text">{{ !empty($user->birthday) ? DateTime::createFromFormat('Y-m-d H:i:s', $user->birthday)->format('Y-m-d') : '' }}</p>
 			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" style="padding: 0;">

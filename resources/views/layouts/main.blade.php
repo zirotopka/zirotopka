@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="/assets/css/layout.css">
     <link href="/assets/css/calendar.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.css">
+    <link rel="stylesheet" href="/assets/lightbox/dist/css/lightbox.min.css">
+
     
 
 	<title>Reformator.ONE</title>
@@ -44,7 +46,8 @@
                            <a href="/lk/{{$user->id}}/edit" class="profile_btns"><i class="prof_ico prof-disp"></i><p class="prof-disp">ПРОФИЛЬ</p></a> 
                         </li>
                         <li>
-                           <a href="/lk/{{$user->id}}/balance" class="profile_btns"><i class="wallet_ico prof-disp"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
+                           <a href="/lk/{{$user->id}}/balance" class="profile_btns"><i class="wallet_ico prof-disp" style="
+                           margin: 0 0 0 0.98em;"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
                         </li>
                         <li>
                             <a href="/lk/{{$user->id}}/faq" class="profile_btns help">
@@ -111,7 +114,7 @@
                                 <!-- </div> -->
                             </div>
                             <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" > <a href="/lk/{{$user->id}}/balance" class="wals">
-                                <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;&#8381;</p> 
+                                <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;</p> 
                                 </a>                            
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
@@ -194,7 +197,7 @@
     <script type="text/javascript" src="/assets/js/main.js"></script>
     <script type="text/javascript" src="/assets/js/calendar.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
-
+    <script type="text/javascript" src="/assets/lightbox/dist/js/lightbox.min.js"></script>
 
     
     @section('js')
