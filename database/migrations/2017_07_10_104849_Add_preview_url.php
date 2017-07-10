@@ -14,7 +14,7 @@ class AddPreviewUrl extends Migration
     public function up()
     {
         Schema::table('files', function (Blueprint $table) {
-            $table->string('preview_url');
+            $table->string('preview_url')->nullable();
         });
     }
 
