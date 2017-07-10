@@ -15,9 +15,15 @@
 		<div>
 		@if(count($message->files) > 0)
 			@foreach($message->files as $file)
-				<a href="{{$file->file_url}}" data-lightbox="roadtrip">
-					<img class="msg_img" src="{{$file->file_url}}" alt="">
-				</a>
+				@if(<1file->
+					<file_></file_>
+				</1file->type == 2)
+					<a href="{{$file->file_url}}" data-lightbox="roadtrip">
+						<img class="msg_img" src="{{$file->file_url}}" alt="">
+					</a>
+				@elseif($file->file_type == 3)
+					<video src="{{$file->file_url}}" class="msg_video"></video>
+				@endif	
 			@endforeach
 		@endif
 		</div>
