@@ -111,7 +111,7 @@
                                 <!-- </div> -->
                             </div>
                             <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" > <a href="/lk/{{$user->id}}/balance" class="wals">
-                                <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;&#8381;</p> 
+                                <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;</p> 
                                 </a>                            
                             </div>
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >

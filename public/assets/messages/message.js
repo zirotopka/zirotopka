@@ -57,5 +57,7 @@ $( document ).ready(function() {
             } 
 	  	});
 	});
+
+	$('.message_list').perfectScrollbar();
 })
 
