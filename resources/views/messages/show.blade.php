@@ -1,4 +1,4 @@
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mess_cont">
 	<div class="message_head">
 		<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
 			<img src="{{ !empty($message->outputs) && !empty($message->outputs->user_ava_url) ? '/image/logos/'.$message->outputs->user_ava_url : '/image/logos/default.jpg' }}" alt="" class="user_ava">	

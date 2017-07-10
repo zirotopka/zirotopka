@@ -250,7 +250,17 @@ td{
 }
 
 .pagination{
-	margin-left: 73.2%;
+	margin-left: 84%;
     margin-bottom: 0;
+}
 
+.pagination li span,.pagination li a{
+	border: none;
+	color: #B6B6B6;
+}
+
+.pagination li span, .pagination li a, .pagination li span:active,.pagination li a:hover{
+	background-color: white!important;
+	border:none;
+	color: #B6B6B6!important;
 }
