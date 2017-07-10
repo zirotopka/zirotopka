@@ -18,4 +18,9 @@ class Message extends Model
     {
         return $this->belongsTo('App\User',  'sender_id', 'id');
     }
+
+    public function files()
+    {
+        return $this->morphMany('App\File', 'owner');
+    }
 }
