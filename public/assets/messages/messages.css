@@ -261,8 +261,22 @@ ul{
 	outline: none;
 }
 
+.lb-close{
+	display: none!important;
+}
+
+.msg_img, .msg_video{
+	width: 150px;
+	height: 100px;
+	margin-top: 1em;
+}
+
+.message_cnt div{
+	letter-spacing: 1em;
+}
+
 .add_file{
-	display: inline-block!important;
+	display: none!important;
 	width: 2em;
 	height: 2em;
 	margin: 0;
@@ -396,6 +410,7 @@ ul{
 	font-size: 1.1em;
 	color: #3E3E3E;
 	line-height: 2em;
+	word-wrap: break-word;
 }
 
 .send_back{
@@ -560,6 +575,12 @@ ul{
 		width: 1.9em !important;
 		margin:  0 0 0.2em 0!important;
 	}
+	#show-message-container{
+		padding-left: 1em!important;
+	}
+	#attachment-container{
+		width: 90%!important;
+	}
 }
 
 .send{
@@ -580,6 +601,60 @@ ul{
 }
 
 #show-message-container {
-	padding: 8em 0px 0px 0px;
+	padding: 8em 0px 0px 4em;
 }
 
+.attachment-span{
+	display: none!important;
+}
+
+.attachment-img, .attachment-item{
+	display: inline-block;
+}
+#attachment-container{
+	width: 60%;
+    border-radius: 0 0 4px 4px;
+    margin: -5px 0 0 0;
+    padding: 0.5em 0 0 1em;
+}
+
+.attachment-item{
+	height: 4em;
+}
+
+.attachment-img-mask{
+    width: 56px;
+    height: 50px;
+    margin: 0em 0 0 -56px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    visibility: hidden;
+}
+
+.attachment-item:hover label{
+	visibility: visible;
+} 
+
+.attachment-item:not(first-child){
+	margin-left: 0.5em;
+}
+
+.fa-window-close{
+	float: right;
+	color: black;
+	cursor: pointer;
+}
+
+.msg_pagination{
+	background-color: #2C2C2C;
+	position: fixed;
+	width: 100%;
+	height: 3em;
+	margin-top: 74vh;
+}
+
+@-moz-document url-prefix() {
+	.msg_pagination{
+		margin-top: 76vh;
+	}
+}

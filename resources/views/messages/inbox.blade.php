@@ -37,6 +37,9 @@
 					@empty
 					@endforelse
 				</ul>
+			<div class="msg_pagination">
+				
+			</div>
 			</div>
 			<div class="col-lg-8 col-md-8" id="show-message-container">
 			</div>
