@@ -38,7 +38,7 @@
 					@endforelse
 				</ul>
 			<div class="msg_pagination">
-				
+				<?php echo $messages->render(); ?>
 			</div>
 			</div>
 			<div class="col-lg-8 col-md-8" id="show-message-container">

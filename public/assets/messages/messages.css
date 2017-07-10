@@ -648,9 +648,26 @@ ul{
 .msg_pagination{
 	background-color: #2C2C2C;
 	position: fixed;
-	width: 100%;
+	width: 27%;
 	height: 3em;
 	margin-top: 74vh;
+	text-align: center;
+}
+
+.msg_pagination .pagination{
+	margin: 0px auto!important;
+}
+.msg_pagination .pagination li span:hover{
+	background-color: #2C2C2C;
+}
+
+
+.msg_pagination .pagination li span,.msg_pagination .pagination li a{
+	border: 0;
+	color: #A9A9A9;
+	font-family: MuseoSansCyrl_300!important;
+	background-color: #2C2C2C;
+	cursor: pointer;
 }
 
 @-moz-document url-prefix() {
