@@ -102,11 +102,14 @@ $( document ).ready(function() {
 		        contentType: false, 
 		        success: function(result) {
 		        	if (result['code'] == 200) {
+		        		$(".msg_text").attr('style','border-radius:0;');
+		        		$("#attachment-container").attr('style','border-right: 0.1em solid #C5C5C5;border-left: 0.1em solid #C5C5C5;border-bottom: 0.1em solid #C5C5C5;')
 						var attachment_container = $('#attachment-container'),
 							attachment_html = '';
 
-						attachment_html += '<div class="attachment-item">'; 
-						attachment_html += '<img class="attachment-img" src="' + result['preview'] + '">'; 
+						attachment_html += '<div class="attachment-item" >'; 
+						attachment_html += '<img class="attachment-img" id="attachment-img" src="' + result['preview'] + '">';
+						attachment_html += '<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>';
 						attachment_html += '<input type="hidden" name="attachment[' + attachment_count + ']" value="' + result['file_url'] + '">'; 
 						attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>'; 
 						attachment_html += '</div>'; 
@@ -136,7 +139,12 @@ $( document ).ready(function() {
 		        }
 		    });
 		}
+
 	});
 	$('.message_list').perfectScrollbar();
+	$('.attachment-item').on('click',function(){
+		$('.attachment-item').remove();
+	});
+
 })
 

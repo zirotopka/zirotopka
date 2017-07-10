@@ -34,4 +34,5 @@
 			<input type="button" value="ОТПРАВИТЬ" class="write_button msg_sendbutton" id="send_new_message">
 		</div>
 	</div>
+	
 @overwrite
