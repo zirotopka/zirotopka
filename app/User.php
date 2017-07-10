@@ -45,11 +45,11 @@ class User extends CartalystUser
 
     public function income_messages()
     {
-        return $this->hasMany('App\Message', 'recipient_id', 'id')->orderBy('created_at','desc');
+        return $this->hasMany('App\Message', 'recipient_id', 'id')->with('files')->orderBy('created_at','desc');
     }
 
     public function output_messages()
     {
-        return $this->hasMany('App\Message', 'sender_id', 'id')->orderBy('created_at','desc');
+        return $this->hasMany('App\Message', 'sender_id', 'id')->with('files')->orderBy('created_at','desc');
     }
 }
