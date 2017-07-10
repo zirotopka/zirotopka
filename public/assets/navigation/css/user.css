@@ -508,6 +508,15 @@ button:focus {
 	display: inline-block;
 }
 
+.attachment-img{
+	height: 10em;
+	width: 10em;
+}
+
+.attachment-item:first-child{
+	margin: 1em 0 0 1em;
+}
+
 .swal2-modal{
 	min-width: 300px;
 	min-height: 15em; 

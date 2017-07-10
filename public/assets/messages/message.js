@@ -58,7 +58,9 @@ $( document ).ready(function() {
 		    	console.log(result);
 				if (result['response'] == 200) {
 					$('#show-message-container').html(result['data']);
-					$('.message_list').attr('style','display:none;')
+					if ( $(window).width() < 992) {
+						$('.message_list').attr('style','display:none;')
+					}
 				} else {
 
 				}

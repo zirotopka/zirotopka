@@ -12,6 +12,11 @@
 	<div class="message_cnt">
 		<p class="message_theme">{{$message->subject}}</p>
 		<p class="message_text">{{$message->text}}</p>
+		@if(count($message->file) > 0)
+			@foreach($files as $file)
+				<a href="{{$file->img}}" data-lightbox="roadtrip"></a>
+			@endforeach
+		@endif
 	</div>
 	@if ($type == 2)
 		<form action="#" id="new_message_form">
