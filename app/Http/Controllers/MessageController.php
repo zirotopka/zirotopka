@@ -26,9 +26,9 @@ class MessageController extends Controller
         $messages = [];
 
         if ($type == 1) {
-            $messages = $user->output_messages;
+            $messages = $user->output_messages()->paginate(10);
         } else {
-            $messages = $user->income_messages;
+            $messages = $user->income_messages()->paginate(10);
         }
 
         $data = [
