@@ -26,9 +26,9 @@ class MessageController extends Controller
         $messages = [];
 
         if ($type == 1) {
-            $messages = $user->output_messages;
+            $messages = $user->output_messages()->paginate(10);
         } else {
-            $messages = $user->income_messages;
+            $messages = $user->income_messages()->paginate(10);
         }
 
         $data = [
@@ -62,8 +62,8 @@ class MessageController extends Controller
     {
         $user = Sentinel::getUser();
         $type = $request->get('type');
-        $message = Message::where('id','=',$id)->with('outputs')->first();
-
+        $message = Message::where('id','=',$id)->with('outputs','files')->first();
+        
         if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $user->id == $message->recipient_id)) {
              $data = [
                 'user' => $user,

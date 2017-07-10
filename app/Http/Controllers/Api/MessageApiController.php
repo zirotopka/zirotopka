@@ -6,9 +6,11 @@ use Cartalyst\Sentinel\Laravel\Facades\Sentinel;//Временно
 use Illuminate\Http\Request;
 use App\User;
 use App\Message;
+use App\File;
 use App\Http\Controllers\Controller;
 
 use Validator;
+use DB;
 
 class MessageApiController extends Controller
 {   
@@ -61,6 +63,8 @@ class MessageApiController extends Controller
     {   
         $rules = [
             'sender_id' => 'required|integer',
+            'subject' => 'required',
+            'text' => 'required',
             'recipient_id' => 'required|integer',
         ];
         $messages = [
@@ -68,12 +72,14 @@ class MessageApiController extends Controller
             'sender_id.integer' => 'Sender is not int',
             'recipient_id.required' => 'Recipient not found',
             'recipient_id.integer' => 'Recipient is not int',
+            'subject.required' => 'Тема отсутствует',
+            'text.required' => 'Текст отсутствует',
         ];
 
         $validator = Validator::make($request->all(), $rules, $messages);
 
         if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
+            return response()->json(['code' => 400, 'text' => $validator->errors()->first()]);
         }
 
         //Проверка пользователя
@@ -93,6 +99,34 @@ class MessageApiController extends Controller
         $message->text = $request->get('text');
         $message->is_read = 0;
         if ( $message->save() ) {
+            if ($request->has('attachment')) {
+                DB::beginTransaction();
+                foreach ($request->get('attachment') as $file_url) {
+                    $file = new File;
+                    $file->file_url = $file_url;
+
+                    $file_name = basename($file_url);
+
+                    if (file_exists(public_path().'/messages/preview_'.$file_name)) {
+                         $file->preview_url = public_path().'/messages/preview_'.$file_name;
+                    }
+
+                    $mime_type = mime_content_type($file_url);
+
+                    if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
+                        $file->file_type = 2; 
+                    } elseif (in_array($mime_type,['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv'])) {
+                        $file->file_type = 3; 
+                    }
+
+                    $file->owner_type = 'message';
+                    $file->owner_id = $message->id;
+
+                    $file->save();
+                }
+                DB::commit();
+            }
+
             return response()->json(['code' => 200, 'text' => 'Message is send', 'data' => $message->id]);
         } else {
             return response()->json(['code' => 400, 'text' => 'Message is not save']);

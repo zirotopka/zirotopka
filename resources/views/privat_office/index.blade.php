@@ -116,7 +116,17 @@
 								@endforeach	
 							</tr>
 							<tr>
-								<td><{{gmdate("Y-m-d", $user->start_traiining_day)}}</td>
+
+								@foreach ( $programm_days as $program_day )
+									@php
+										$cal_class = '';
+										if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
+											$cal_class = 'hidden-xs hidden-sm';
+										}
+									@endphp
+										
+									<td class="cal_date">{{Carbon\Carbon::parse($user->start_training_day)->addDays($program_day->day)->format('m/d')}}</td>
+								@endforeach
 							</tr>
 						</table>
 					</div>
