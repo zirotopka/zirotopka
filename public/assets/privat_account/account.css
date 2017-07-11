@@ -30,6 +30,7 @@
 .cal_date{
 	font-size: 0.8em;
 	color: #b4b4b4;
+	padding-top: 0.1em;
 }
 
 .bg-warning{
@@ -226,6 +227,9 @@
 	margin: 2.7em 0 0px 6.86em;
 }
 @media screen and (max-width: 47.95em) {
+	.cal_date{
+		font-size: 0.7em!important;
+	}
 	.choose_programe_form{
 		padding: 0;
 	}

@@ -130,7 +130,7 @@
                                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li><a href="/lk/{{$user->id}}">ПРОГРАММА ТРЕНИРОВОК</a></li>
+                                    <li><a href="/lk/{{$user->id}}">ПРОГРАММА <b class="hidden-xs">ТРЕНИРОВОК</b></a></li>
                                     <li><a href="/lk/{{$user->id}}/edit">ПРОФИЛЬ</a></li>
                                     <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>

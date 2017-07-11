@@ -264,3 +264,9 @@ td{
 	border:none;
 	color: #B6B6B6!important;
 }
+
+@media screen and (max-width: 61.95em) {
+	.pagination{
+		margin-left: 60%!important;
+	}
+}

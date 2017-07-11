@@ -31,9 +31,9 @@
 
 			<table class="table balance_table">
 				<tr>
-					<th>№</th>
-					<th>ДАТА</th>
-					<th>ВРЕМЯ</th>
+					<th class="hidden-xs">№</th>
+					<th class="hidden-xs">ДАТА</th>
+					<th class="hidden-xs">ВРЕМЯ</th>
 					<th>ТИП ТРАНЗАКЦИИ</th>
 					<th>НАЗНАЧЕНИЕ</th>
 					<th>СУММА</th>
@@ -42,18 +42,18 @@
 				@forelse ($accruals as $accrual)
 					<?php $created_at = DateTime::createFromFormat('Y-m-d H:i:s', $accrual->created_at); ?>
 					<tr>
-						<td>{{$accrual->id}}</td>
-						<td>{{$created_at->format('Y-m-d')}}</td>
-						<td>{{$created_at->format('H:i:s')}}</td>
+						<td class="hidden-xs">{{$accrual->id}}</td>
+						<td class="hidden-xs">{{$created_at->format('Y-m-d')}}</td>
+						<td class="hidden-xs">{{$created_at->format('H:i:s')}}</td>
 						<td>{{!empty($accrual->type) ? $accrual->type->name : ''}}</td>
 						<td>{{$accrual->comment}}</td>
 						<td>{{number_format($accrual->sum,0,',',' ')}}</td>
 					</tr>
 				@empty
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td class="hidden-xs"></td>
+						<td class="hidden-xs"></td>
+						<td class="hidden-xs"></td>
 						<td class="text-center">Транзакции отсутствуют</td>
 						<td></td>
 						<td></td>
