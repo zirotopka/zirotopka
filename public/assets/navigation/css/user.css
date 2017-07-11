@@ -487,7 +487,7 @@ button:focus {
 .wallet_ico{
 	background: url('/ico/wallet.png');
 	background-size: cover;
-	width: 1em;
+	width: 14px;
 	height: 1em;
 }
 

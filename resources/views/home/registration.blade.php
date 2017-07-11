@@ -10,7 +10,7 @@
               <input class="reg_input" id="email" type="email" name="email" placeholder="Почта" required="required">
               <input class="reg_input" id="password" type="password" name="password" placeholder="Пароль" required="required">
             </p>
-            <div class="sex_chs">
+            <div class="sex_chs col-sm-12 col-xs-12">
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 left-sex">
                 Выберите пол:
               </div>

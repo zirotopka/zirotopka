@@ -12,6 +12,7 @@
 
 .logo-pos{
 	vertical-align: unset;
+	height: 33px;
 
 }
 
@@ -28,6 +29,7 @@
 
 .cal_date{
 	font-size: 0.8em;
+	color: #b4b4b4;
 }
 
 .bg-warning{
@@ -454,8 +456,8 @@
 }
 
 .profile_btns i{
-	width: 17px;
-	height: 17px;
+	width: 14px;
+	height: 14px;
 }
 
 .user-fln{

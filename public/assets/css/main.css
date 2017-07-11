@@ -121,6 +121,9 @@ hr{
 	.login_form .modal-content{
 	background-position: 95% 8em;
 	}
+	.right-sex{
+		padding: 0 0 0 0.3em!important;
+	}
 }
 
 /*------------------------------Registration Form---------------------------------*/

@@ -125,7 +125,7 @@
 										}
 									@endphp
 										
-									<td class="cal_date">{{Carbon\Carbon::parse($user->start_training_day)->addDays($program_day->day)->format('m/d')}}</td>
+									<td class="cal_date {{$cal_class}}">{{Carbon\Carbon::parse($user->start_training_day)->addDays($program_day->day)->format('d/m')}}</td>
 								@endforeach
 							</tr>
 						</table>
