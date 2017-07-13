@@ -227,6 +227,18 @@
 	margin: 2.7em 0 0px 6.86em;
 }
 @media screen and (max-width: 47.95em) {
+	.prog-descr{
+		margin: 1em 2em 1.5em 0.7em!important;
+	}
+
+	.prog-count{
+		margin: 1em 2em 0 0.5em!important;
+	}
+
+	.prog-name{
+		margin: 2em 2em 0 0.5em!important;
+	}
+
 	.cal_date{
 		font-size: 0.7em!important;
 	}
@@ -302,6 +314,17 @@
 }
 
 @media screen and (max-width: 61.95em) {
+	.prog-descr{
+		margin: 1em 2em 1.5em 0.7em!important;
+	}
+
+	.prog-count{
+		margin: 1em 2em 0 0.5em!important;
+	}
+
+	.prog-name{
+		margin: 2em 2em 0 0.5em!important;
+	}
 	.choose_programe_form{
 		padding: 0;
 	}
@@ -398,7 +421,7 @@
 
 .box-cal:hover span, .box-cal:hover{
 	display: table-cell;
-	background-color: #f36d00;
+	background-color: #f98749;
 
 }
 

@@ -92,10 +92,15 @@ th, td{
 	text-align: center;
 }
 
+tr{
+	width: 100%;
+}
+
 th{
 	border-bottom: 1px solid #B6B6B6;
 	color: #F98749;
 	font-family: MuseoSansCyrl_100;
+	border-top: none!important;
 }
 
 td{
@@ -110,7 +115,7 @@ td{
 	overflow: scroll;
 	width: 95%;
 	border: 1px solid #EAEAEA;
-
+	padding: 0;
 }
 
 /*-----------------------Balance-Modal-------------------*/
@@ -204,8 +209,8 @@ td{
 }
 
 .profile_btns i{
-	width: 17px;
-	height: 17px;
+	width: 1em;
+	height: 1em;
 }
 
 .user-fln{

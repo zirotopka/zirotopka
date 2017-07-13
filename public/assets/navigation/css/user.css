@@ -229,7 +229,7 @@ button:hover {
 }
 
 .envel{
-	width: 2.7em;
+	width: 2.5em;
 }
 
 .heart{
@@ -265,7 +265,7 @@ button:hover {
 		font-size: 14px;
 	}
 	.envel{
-		width: 3.5em;
+		width: 2.5em;
 		padding: 0;
 		margin: 0;
 	}
@@ -277,6 +277,7 @@ button:hover {
 	.user_dropdown{
 		width: 100%!important ;
 		margin: 0 0 0 0;
+		min-width: 157px;
 	}
 
 	.dropdown button div{
@@ -415,7 +416,7 @@ button:focus {
 
 .fa-caret-down{
 	position: absolute;
-	padding:6.2px;
+	padding:6.2px 0 0 0;
 }
 
 @-moz-document url-prefix() {
@@ -481,22 +482,30 @@ button:focus {
 
 .prof-disp{
 	display: inline-block;
-	margin: 0 0 0 0.5em;
+	margin: 0 0 0 7px;
 }
 
 .wallet_ico{
 	background: url('/ico/wallet.png');
 	background-size: cover;
-	width: 14px;
 	height: 1em;
 }
 
 .help_ico{
 	background: url('/ico/help.png');
+	margin-left: 3px;
 	background-size: cover;
 	width: 1em;
 	height: 1em;
-	vertical-align: sub;
+	vertical-align: text-top;
+}
+
+.prgr_ico{
+	background: url('/ico/prgrm.png');
+	margin: 0 0 0 26px!important;
+	background-size: 1em 1em;
+	width: 1em;
+	height: 1em;
 }
 
 .swal2-modal{

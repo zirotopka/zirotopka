@@ -554,10 +554,14 @@ ul{
 		width: 25%;
 		padding: 0!important;
 	}
+	
+.little_menu ul li .add_img{
+		width: 2.5em!important;
+	}
 
 	.little_menu ul li img{
 		padding: 11px 0 0 0;
-		width: 2em!important;
+		width: 1.8em!important;
 	}
 	.send{
 	padding: 0;
@@ -596,7 +600,7 @@ ul{
 }
 
 .add_img{
-	width: 60% !important;
+	width: 50% !important;
 	margin-left: 5px;
 }
 

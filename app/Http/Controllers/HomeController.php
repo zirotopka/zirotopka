@@ -10,14 +10,9 @@ use Carbon\Carbon;
 class HomeController extends Controller
 {
     public function index()
-    {		
-    	$user = User::select([
-    			'id',
-    			'first_name',
-    			'surname',
-    		]);
-    		
-    	$data = [
+    {	
+        $user = Sentinel::getUser();
+       	$data = [
     		'user' => $user,
     	];
 

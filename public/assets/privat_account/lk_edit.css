@@ -148,7 +148,7 @@ input{
 }
 
 .save-btn{
-	margin: 2em 0 0 0;
+	margin: 1em 0 0 0;
 	background-color: #F98749;
 	color: white;
 	border: none;
@@ -202,6 +202,7 @@ input{
 	height: 7.5em;
 	text-align: left;
 	word-wrap: break-word;
+	resize: none;
 }
 
 .show-hidden-form{
@@ -230,7 +231,7 @@ input{
 
 @media screen and (max-width: 61.95em) {
 	.m_usr_dscr{
-		padding: 0 0 0 2em;
+		padding: 0 0 0 1em;
 		text-align: left;
 	}
 	.right_edit_part{

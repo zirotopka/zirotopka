@@ -123,6 +123,7 @@
 										if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
 											$cal_class = 'hidden-xs hidden-sm';
 										}
+										$program_day->day=$program_day->day-1;
 									@endphp
 										
 									<td class="cal_date {{$cal_class}}">{{Carbon\Carbon::parse($user->start_training_day)->addDays($program_day->day)->format('d/m')}}</td>
@@ -150,7 +151,7 @@
 											<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
 										@endif 
 										@if ( !empty($programm_stage->time_exercive) )
-											<p class="prog-txt prog-count">Время выполнения:{{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
+											<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
 										@endif 
 										<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
 									</div>
