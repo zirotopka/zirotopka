@@ -70,7 +70,6 @@
                     <img src="/ico/REFORMATOR.png" alt="">
                 </div>
                 <div class="info_cont">
-                    <div class="info_first_string col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <ul>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n1">
                                 <img src="/ico/agenda.png" alt="">
@@ -85,8 +84,6 @@
                                 <p>Задания не требуют<br>специального оборудования<br>или похода в фитнес-клуб</p>
                             </li>
                         </ul>
-                    </div>
-                    <div class="info_second_string col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <ul>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n4">
                                 <img src="/ico/prize.png" alt="">
@@ -101,7 +98,6 @@
                                 <p>Возможность зарабатывать<br>деньги и заниматься спортом<br>в удовольстваие!</p>
                             </li>
                         </ul>
-                    </div>
                 </div>
                 <hr>
             </div>

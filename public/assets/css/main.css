@@ -348,7 +348,7 @@ ul li{
 .n5{
     background: url('/ico/5.png');
     background-position: 14.6em 2.5em;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;1em
 }
 
 .n6{
@@ -357,8 +357,17 @@ ul li{
     background-repeat: no-repeat;
 }
 
+.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p{
+	margin: 1.5em 0 0 0!important;
+}
+
+.n4, .n5, .n6{
+	margin: 3em 0 0 0;
+}
+
 .info_cont{
 	padding: 4.5em 0 0 0;
+	text-align: center;
 }
 
 .info_first_string ul li p, .info_second_string ul li p{
