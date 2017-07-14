@@ -155,7 +155,7 @@ ul li{
 
 .reg-screen{
 	background: url(/ico/regmg.png);
-	background-size: 100% 101vh;
+	background-size: 84vw 101vh;
 	height: 101vh;
 	background-repeat: no-repeat;
 	padding: 0;
@@ -191,8 +191,8 @@ ul li{
 
 .rl_btns{
 	display: inline-block;
-    width: 18em;
-    height: 4em;
+    width: 20vw;
+    height: 5vw;
     border-radius: 2em;
     font-family: MuseoSansCyrl_500;
 }
@@ -210,15 +210,15 @@ ul li{
 }
 
 .reg_btn:hover{
-	width: 18.2em;
-    height: 4.3em;
+	width: 20.2vw;
+    height: 5.3vw;
     margin: -0.2em 0 0 0.2em;
     background-color: #F98749;
 }
 
 .reg_btn:active{
-	width: 18.2em;
-    height: 4.3em;
+	width: 20.2vw;
+    height: 5.3vw;
     margin: -0.2em 0 0 0;
     background-color: #D9550E;
 }
@@ -229,15 +229,15 @@ ul li{
 }
 
 .log_btn:hover{
-	width: 18.2em;
-    height: 4.3em;
+	width: 20.2vw;
+    height: 5.3vw;
     margin: -0.2em -0.2em 0 0;
 	background-color: rgba(0,0,0,0);
 }
 
 .log_btn:active{
-	width: 18.2em;
-    height: 4.3em;
+	width: 20.2vw;
+    height: 5.3vw;
     margin: -0.2em -0.2em 0 0;
     border: none;
 	background-color: rgba(255,255,255,0.7);
@@ -289,7 +289,7 @@ ul li{
 
 /*-----------------------------Second Screen(Info_screen)----------*/
 .info-screen{
-	height: 100vh;
+	height: auto;
 	padding: 0;
 }
 
@@ -323,37 +323,37 @@ ul li{
 
 .n1{
     background: url('/ico/1.png');
-    background-position: 14.1em 1.75em;
+    background-position: 15.1vw 1.75em;
     background-repeat: no-repeat;
 }
 
 .n2{
     background: url('/ico/2 .png');
-    background-position: 14.6em 1.75em;
+    background-position: 15.6vw 1.75em;
     background-repeat: no-repeat;
 }
 
 .n3{
     background: url('/ico/3.png');
-    background-position: 14.6em 1.75em;
+    background-position: 15.6vw 1.75em;
     background-repeat: no-repeat;
 }
 
 .n4{
     background: url('/ico/4.png');
-    background-position: 13.3em 2.3em;
+    background-position: 14.3vw 2.3em;
     background-repeat: no-repeat;
 }
 
 .n5{
     background: url('/ico/5.png');
-    background-position: 14.6em 2.5em;
+    background-position: 15.6vw 2.5em;
     background-repeat: no-repeat;1em
 }
 
 .n6{
     background: url('/ico/6.png');
-    background-position: 14.5em 2.4em;
+    background-position: 15.5vw 2.4em;
     background-repeat: no-repeat;
 }
 
@@ -388,7 +388,7 @@ ul li{
 }
 
 .info-screen hr{
-	margin: 36em 0 0 40%;
+	margin: 35vw 0 0 40%;
 	width: 20%;
     box-shadow: 0px 1px 0px #F98749;
     border-bottom: 0.00000000000000000000411px solid #F98749;
@@ -401,7 +401,7 @@ ul li{
 /*-----------------------------Third Screen(Programm Screen)-----------------*/
 
 .programm-screen{
-	height: 100vh;
+	height: auto;
 	padding: 0;
 }
 
@@ -419,11 +419,11 @@ ul li{
 }
 
 .rone_start{
-	padding: 2.5em 0 0 6.5em;
+	padding: 3.5vw 0 0 6vw;
 }
 
 .rone_other_progr{
-	padding: 2.5em 0 0 0;
+	padding: 3.5vw 0 0 0;
 }
 
 .start{
@@ -445,7 +445,7 @@ ul li{
 }
 
 .first_progr_string ul li img, .second_progr_string ul li img{
-	width: 100%;
+	width: 21vw;
 }
 
 .second_progr_string{
@@ -463,9 +463,9 @@ ul li{
 
 .start_shader{
 	position: absolute;
-	margin:-36em 0 0 0;
+	margin:-39vw 0 0 0;
 	width: 75%;
-	height: 93%;
+	height: 39vw;
 	background-color: rgba(0,0,0,0.6);
 	z-index: 1;
 	display: none;
@@ -478,19 +478,19 @@ ul li{
 	margin: 1em 0 0 3vw;
 	font-family: MuseoSansCyrl_100;
 	font-weight: 100;
-	font-size: 1em;
+	font-size: 1.4vw;
 	width: 19vw;
 	word-wrap: break-word;
-	height: 33vh;
+	height: 18vw;
 }
 
 .start_shader h4{
-	font-family: MuseoSansCyrl_700;
-	font-size: 2.8em;
-	position: relative;
-	z-index: 2;
-	margin: 21vh 0 0 3vw;
-	color: #f98749;
+    font-family: MuseoSansCyrl_700;
+    font-size: 3vw;
+    position: relative;
+    z-index: 2;
+    margin: 10vw 0 0 3vw;
+    color: #f98749;
 }
 
 .start_shader button{
@@ -508,28 +508,27 @@ ul li{
 	float: right;
 }
 .pro_shader, .pow_shader, .run_shader, .runp_shader{
-	position: absolute;
-    margin: -17em 0 0 0;
-    width: 21vw;
-    height: 35vh;
-	background-color: rgba(0,0,0,0.6);
-	z-index: 1;
-	display: none;
+    position: absolute;
+    margin: -18.3vw 0 0 0;
+    width: 21.2vw;
+    height: 18.3vw;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
 }
 
 .run_shader{
-	height: 17.1em;
-	margin: -17.3em 0 0 0;
+	height: 18.4vw;
+	margin: -18.7vw 0 0 0;
 }
 
 .pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4{
-	font-family: MuseoSansCyrl_700;
-	font-size: 2em;
-	position: relative;
-	z-index: 2;
-	margin: 10vh 0 0 2vw;
-	color: white;	
-	width: 15vw;
+    font-family: MuseoSansCyrl_700;
+    font-size: 2vw;
+    position: relative;
+    z-index: 2;
+    margin: 4vw 0 0 2vw;
+    color: white;
+    width: 15vw;
 }
 
 .pro_shader p, .pow_shader p, .run_shader p, .runp_shader p{
@@ -539,14 +538,15 @@ ul li{
 	margin: 1em 0 0 2vw;
 	font-family: MuseoSansCyrl_100;
 	font-weight: 100;
-	font-size: 1em;
+	font-size: 1.4vw;
 	width: 16vw;
 	word-wrap: break-word;	
+	height: 5.5vw;
 }
 
 .pro_shader button, .pow_shader button, .run_shader button, .runp_shader button{
 	float: right;
-	margin: 2.5em 2.5em 0 0;
+	margin: 0 2.5em 0 0;
 	position: relative;
 	z-index: 2;
 }
@@ -557,20 +557,21 @@ ul li{
 
 /*----------------------------Forth Screen(Bonus)----------------------------*/
 .bonus-screen{
-	height: 100vh;
+	height: auto;
 	text-align: center;
 	padding: 4em 0 0 0;
 }
 .left_bonus_part{
-	padding: 7em 0 0 0;
+	padding: 8vw 0 0 0;
 }
 .right_bonus_part{
-	height: 25em;
-	padding: 6em 0 0 2em;
+	height: 35vw;
+	padding: 8vw 0 0 2em;
 	text-align: left;
 	background: url("/ico/mon2.png");
 	background-repeat: no-repeat;
-	background-position: 100% 0;
+	background-position: right;
+	background-size: 18vw;
 }
 
 .right_bonus_part p{
@@ -608,7 +609,7 @@ ul li{
 
 
 .bonus-screen hr{
-	margin: 33em 0 0 40%;
+	margin: 37vw 0 0 40%;
 	width: 20%;
     box-shadow: 0px 1px 0px #F98749;
     border-bottom: 0.00000000000000000000411px solid #F98749;
@@ -618,14 +619,16 @@ ul li{
 
 /*-----------------------------Fifth Screen(How-Screen)*/
 .how-screen{
-	height: 100vh;
+	height: auto;
 	text-align: center;
 	padding: 0;
 }
 
 .how_cnt{
 	margin: 7em 0 0 0;
-	height: 40vh;
+	height: auto;
+	display: inline-block;
+	min-height: 28vw;
 }
 
 
@@ -633,13 +636,13 @@ ul li{
 .choice{
 	background: url('/ico/choice.png');
 	background-repeat: no-repeat;
-    background-position: 7.5em 5.5em;
+    background-position: 6.5vw 5.5em;
 }
 
 .freedom{
 	background: url('/ico/freedom.png');
 	background-repeat: no-repeat;
-    background-position: 5em 5.5em;
+    background-position: 3.5vw 5.5em;
 }
 
 .freedom .orng{
@@ -649,7 +652,7 @@ ul li{
 .profit{
 	background: url('/ico/profit.png');
 	background-repeat: no-repeat;
-    background-position: 6em 5.5em;
+    background-position: 5vw 5.5em;
 }
 
 .orng{
@@ -671,7 +674,7 @@ ul li{
 	height: 4em;
 	width: 20em;
 	background-color: #F98749;
-	margin: 6em 0 0 0;
+	margin: 3em 0 0 0;
 	border: none;
 	border-radius: 2em;
 	font-family: MuseoSansCyrl_500;
@@ -680,18 +683,18 @@ ul li{
 .how-screen button:hover{
 	height: 4.2em;
 	width: 20.2em;
-	margin: 5.8em 0 0 0;
+	margin: 2.8em 0 0 0;
 }
 
 .how-screen button:active{
 	height: 4.2em;
 	width: 20.2em;
 	background-color: #D9550E;
-	margin: 5.8em 0 0 0;
+	margin: 2.8em 0 0 0;
 }
 
 .how-screen hr{
-	margin: 6em 0 0 40%;
+	margin: 6vw 0 0 40%;
 	width: 20%;
     box-shadow: 0px 1px 0px #F98749;
     border-bottom: 0.00000000000000000000411px solid #F98749;
@@ -801,7 +804,7 @@ ul li{
 
 /*-----------------------------Seventh Screen(questions-screen)-----------------*/
 .questions-screen{
-	height: 100vh;
+	height: auto;
 	text-align: center;
 	padding:4em 0 0 0;
 }
@@ -865,7 +868,7 @@ ul li{
 
 /*-----------------------------Eighth Screen(connect-screen)---------------*/
 .connect-screen{
-	height: 90vh;
+	height: auto;
 	background: url('/ico/unfootscr.png');
 	background-repeat: no-repeat;
 	background-size: 86vw 90vh;
@@ -886,6 +889,7 @@ ul li{
 	position: relative;
 	z-index: 2;
 	text-align: center;
+	height: 89vh;
 }
 
 .connect_content p{
@@ -948,7 +952,7 @@ ul li{
 /*-----------------------------------Footer-----------------------*/
 footer{
 	font-family: GilroyLight;
-	height: 30vh;
+	height: auto;
 	background-color: #282828;
 	margin: 0 0 -10px 0
 	padding: 0;

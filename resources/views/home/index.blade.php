@@ -26,7 +26,7 @@
                 <div class="reg_scr_content">
                     <div id="st-trigger-effects" class="hidden-md hidden-lg">
                         <button data-effect="st-effect-2" class="cdr-btn">
-                            <img src="/ico/menu.png" alt="">
+                            <img src="/ico/menu.png" alt="" style="width: 12vw;">
                         </button>
                     </div>
                     @if ($user = Sentinel::check())
@@ -170,7 +170,7 @@
             </div>
             <div class="how-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>КАК ЭТО РАБОТАЕТ</h2>
-                <div>
+                <div style="height: 100%;">
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt choice">
                         <img src="/ico/chs.png" alt="">
                         <p class="orng">Вы выбираете сами</p>
