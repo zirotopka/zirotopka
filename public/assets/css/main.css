@@ -704,7 +704,7 @@ ul li{
 
 /*-----------------------------Sixth Screen(comments-screen)------*/
 .comments-screen{
-	height: 97vh;
+	height: auto;
 	padding: 1em 0 0 0;
 	text-align: center;
 }
