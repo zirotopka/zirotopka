@@ -732,6 +732,12 @@ ul li{
 	width: 20em;
 }
 
+.swiper-slide video{
+	height: 20vw;
+    width: 240px;
+}
+
+
 .swiper-pagination-bullet{
 	border: 0.2em solid #F98749;
 	background: white!important;

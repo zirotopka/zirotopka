@@ -195,7 +195,7 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <video src="/video/trainings/birpie.mp4" width="240" height="300" class="video-js" controls></video>
+                            <video src="/video/trainings/birpie.mp4" class="video-js" controls></video>
                             <p class="comment_name">Пётр Пётр</p>
                             <p class="comment_who">Участник R'ONE pro</p>
                         </div>
