@@ -19,3 +19,10 @@
     background: none;
 }
 
+/*#video-modal .modal-dialog {
+    width: 80%;
+}
+*/
+#video-modal .modal-dialog {
+    display: inline-block;
+}

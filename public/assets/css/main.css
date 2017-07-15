@@ -1270,7 +1270,6 @@ div {
   margin:0 0 0.5em 0;
 }
 
-
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     position: absolute;

@@ -3,20 +3,22 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
-    <link href="http://vjs.zencdn.net/6.1.0/video-js.css" rel="stylesheet">
+    <!-- <link href="http://vjs.zencdn.net/6.1.0/video-js.css" rel="stylesheet"> -->
+    <link href="http://vjs.zencdn.net/6.2.0/video-js.css" rel="stylesheet">
     <link href="/assets/privat_account/account.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
-    <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
+    <!-- <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet"> -->
 @overwrite
 
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script src="http://vjs.zencdn.net/6.1.0/video.js"></script>
+    <!-- <script src="http://vjs.zencdn.net/6.1.0/video.js"></script> -->
     <script type="text/javascript" src="/assets/privat_account/account.js?123"></script>
     <script type="text/javascript" src="/assets/js/video-btn.js?123"></script>
-    <script type="text/javascript" src="/assets/js/video.js"></script>
-    <script src="//vjs.zencdn.net/5.19/video.min.js"></script>
+    <script type="text/javascript" src="/assets/js/video.js?{{ time() }}"></script>
+    <script src="http://vjs.zencdn.net/6.2.0/video.js"></script>
+    <!-- <script src="//vjs.zencdn.net/5.19/video.min.js"></script> -->
 @overwrite
 
 
@@ -191,43 +193,19 @@
 
 				<!-- --------------------------------------------------------------- -->
 				<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
-				  <div class="modal-dialog modal-lg" role="document">
+				  <div class="display-inline" role="document">
 				    <div class="modal-content">
 				      <div class="video-modal modal-body">
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					        <span aria-hidden="true">
-					        	<img src="/ico/close.png" alt="">	
-					        </span>
-				        </button>
-						<div class="videoContainer">
-							<p id="video-container"></p>
-							<!-- <div class="control">
-								<div class="progress">
-									<span class="bufferBar"></span>
-									<span class="timeBar"></span>
-								</div>
-								
-								<div class="btmControl">
-									
-									<div class="mainControl">
-										<a class="btnStop lvl3 btnmain" href="#" tabindex="0" title="Stop play"></a>
-										<a class="btnBck lvl2 btnmain" href="#" tabindex="0" title="Rewind"></a>
-										<a class="btnPlay lvl1 btnmain" href="#" tabindex="0" title="Play/Pause video"></a>
-										<a class="btnFwd lvl2 btnmain" href="#" tabindex="0" title="Fast forward"></a>
-										<a class="btnEnd lvl3 btnmain" href="#" tabindex="0" title="End video"></a>
-									</div>	
-
-									<div class="volume">
-										<div class="sound" title="Mute/Unmute sound"></div>
-										<span class="volumeCover" title="Set volume"></span>
-										<span class="volumeBar"></span>
-									</div>
-								</div>
-								
-							</div>
-							<div class="loading"></div> -->
-						</div>
-										
+				        <div class="video-container">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						        <span aria-hidden="true">
+						        	<img src="/ico/close.png" alt="">	
+						        </span>
+					        </button>
+				        	<video id="training-video" class="video-js vjs-default-skin" controls preload="none" data-setup='{ "playbackRates": [1, 1.5, 2] }'>
+							    <source src="" type="video/mp4">
+							</video>
+				        </div>			
 				      </div>
 				    </div>
 				  </div>
