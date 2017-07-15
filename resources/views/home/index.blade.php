@@ -376,6 +376,6 @@
             </footer>
         </div>
 	</div>
-	@include('home.registration')
+	@include('home.registration',['user' => $user, 'referral' => $referral])
 	@include('home.login')
 @overwrite

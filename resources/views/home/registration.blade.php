@@ -29,6 +29,23 @@
             </div>
             <input class="reg_input" id="first_name" type="text" name="first_name" placeholder="Имя" required="required">
             <input class="reg_input" id="surname" type="text" name="surname" placeholder="Фамилия" required="required"> 
+
+            @if (!empty($referral))
+              <input type="hidden" name="referer_code" value="{{$referral->referer_code}}"> 
+              <div class="enter_across reg_enter_across">
+                <hr>
+                <a href="">Вас пригласил</a>
+                <hr>
+              </div>
+              <div>
+                @if (!empty($referral->user_ava_url))
+                    <img src="{{'/image/logos/'.$user->user_ava_url}}" alt="" class="img-circle logo-img">
+                @else
+                    <img src="/image/logos/default.jpg" alt="" class="img-circle logo-img">
+                @endif
+                <span>{{$referral->surname.' '.$referral->first_name}}</span>
+              </div>
+            @endif
             
             <div class="enter_across reg_enter_across">
               <hr>

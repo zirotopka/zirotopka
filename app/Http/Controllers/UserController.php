@@ -8,6 +8,8 @@ use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Validator;
 use App\Balance;
 use App\Helpers\IP;
+use App\AdjancyList;
+use App\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -44,7 +46,6 @@ class UserController extends Controller
 	 * Регистрация пользователя
 	 */
     public function registration (Request $request) {
-
     	$rules = [
             'email' => 'required|email|unique:users,email',
             'first_name' => 'required',
@@ -107,6 +108,18 @@ class UserController extends Controller
                 'user_id' => $user->id,
                 'sum' => 0,
             ]);
+
+            //referer_code
+            if ($request->has('referer_code')) {
+                $referral = User::select('id')->where('referer_code','=',$request->get('referer_code'))->first();
+
+                if (!empty($referral) && ($user->id != $referral->id)) {
+                    $adjancy = new AdjancyList;
+                    $adjancy->user_id = $user->id;
+                    $adjancy->pid = $referral->id;
+                    $adjancy->save();
+                }
+            }
 
             Sentinel::authenticateAndRemember([ 'email' => $request->get('email'), 'password' => $request->get('password') ]);
 
