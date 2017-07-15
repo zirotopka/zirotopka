@@ -8,4 +8,5 @@ class AdjancyList extends Model
 {
     protected $table = 'adjancy_lists';
     protected $primaryKey = 'id';
+    public $timestamps = false;
 }
