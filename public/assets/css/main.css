@@ -30,13 +30,14 @@ ul li{
 
 .main_dropdown .dropdown-toggle i{
 	padding: 0!important;
+	font-size: 1.3vw;
 }
 
 
 
 .main_dropdown .user_dropdown{
 	background-color: rgba(0,0,0,0);
-	text-align: center;
+	text-align: left;
 	margin: 0 -3.5em  0 4em;
 }
 
@@ -45,7 +46,7 @@ ul li{
 }
 
 .main_dropdown .user_dropdown li a{
-	padding-left: 0!important;
+	padding-left: 37%!important;
 	font-size: 1vw;
 }
 .main_dropdown .user_dropdown li a:hover{
@@ -82,11 +83,11 @@ ul li{
 }
 
 .main_sidebar ul {
-	font-size: 1em;
-	margin: 0;
-	padding: 4em 0 0 0;
-	list-style: none;
-	text-align: center;
+    font-size: 1em;
+    margin: 0;
+    padding: 4em 0 0 20%;
+    list-style: none;
+    text-align: left;
 }
 
 
@@ -131,6 +132,7 @@ ul li{
 }
 
 .side_logo{
+	width: 10vw;
 }
 
 @media screen and (max-width: 61.95em) {
@@ -155,8 +157,9 @@ ul li{
 
 .reg-screen{
 	background: url(/ico/regmg.png);
-	background-size: 84vw 101vh;
-	height: 101vh;
+	background-size: 100% 100%;
+	min-height: 52vw;
+	max-height: 100vw;
 	background-repeat: no-repeat;
 	padding: 0;
 }
@@ -167,8 +170,8 @@ ul li{
 }
 
 .reg_scr_content .img-circle{
-	width: 7vw!important;
-	height: 7vw!important;
+	width: 5vw!important;
+	height: 5vw!important;
 }
 
 .reg_scr_content h1{
@@ -177,9 +180,9 @@ ul li{
 
 .reg_screen_shader{
 	width: 100%;
-    height: 101vh;
+    height: 100%;
     position: absolute;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.5);
 	z-index: 1;
 }
 
@@ -195,6 +198,7 @@ ul li{
     height: 5vw;
     border-radius: 2em;
     font-family: MuseoSansCyrl_500;
+	font-size: 1.4vw;
 }
 
 
@@ -251,6 +255,7 @@ ul li{
 
 .reg_scrn_txt h1{
 	letter-spacing: 2px;
+	margin: 0.8vw 0 0 0;
 }
 
 .reg_scrn_txt p{
@@ -295,7 +300,7 @@ ul li{
 
 .info_naming{
 	text-align: center;
-	padding: 3.5em 0 0 0;
+	padding: 2vw 0 0 0;
 	word-spacing: 0.5em;
 }
 
@@ -306,19 +311,21 @@ ul li{
 
 .info_naming img{
 	vertical-align: baseline;
+	width: 12vw;
 }
 
 .info_naming h2,.programm-screen h2, .bonus-screen h2,
 .how-screen h2,.comments-screen h2,.questions-screen h2{
 	color: #f98749;
 	font-family: GilroyBold;
-	font-size: 27px;
+	font-size: 1.9vw;
 }
 
 .info_first_string ul li, .info_second_string ul li{
 	display: inline-block;
 	text-align: center;
 	font-family: MuseoSansCyrl_100;
+	padding: 0;
 }
 
 .n1{
@@ -359,6 +366,11 @@ ul li{
 
 .n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p{
 	margin: 1.5em 0 0 0!important;
+	font-size: 1.1vw;
+}
+
+.n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img{
+	width: 10vw;
 }
 
 .n4, .n5, .n6{
@@ -366,7 +378,7 @@ ul li{
 }
 
 .info_cont{
-	padding: 4.5em 0 0 0;
+	padding: 4vw 0 0 0;
 	text-align: center;
 }
 
@@ -388,7 +400,7 @@ ul li{
 }
 
 .info-screen hr{
-	margin: 35vw 0 0 40%;
+	margin: 56vw 0 0 40%;
 	width: 20%;
     box-shadow: 0px 1px 0px #F98749;
     border-bottom: 0.00000000000000000000411px solid #F98749;
@@ -419,15 +431,15 @@ ul li{
 }
 
 .rone_start{
-	padding: 3.5vw 0 0 6vw;
+	padding: 2.5vw 0 0 6vw;
 }
 
 .rone_other_progr{
-	padding: 3.5vw 0 0 0;
+	padding: 2.5vw 0 0 0;
 }
 
 .start{
-	height: 39vw;
+	height: 38vw;
 }
 
 
@@ -445,7 +457,8 @@ ul li{
 }
 
 .first_progr_string ul li img, .second_progr_string ul li img{
-	width: 21vw;
+	width: 20.5vw;
+    height: 18.75vw;
 }
 
 .second_progr_string{
@@ -453,7 +466,7 @@ ul li{
 }
 
 .programm-screen hr{
-	margin: 2em 0 0 40%;
+	margin: 47vw 0 0 40%;
 	width: 20%;
     box-shadow: 0px 1px 0px #F98749;
     border-bottom: 0.00000000000000000000411px solid #F98749;
@@ -461,11 +474,13 @@ ul li{
     text-align: center;
 }
 
+
+
 .start_shader{
 	position: absolute;
-	margin:-39vw 0 0 0;
-	width: 75%;
-	height: 39vw;
+    margin: -38vw 0 0 0;
+    width: 73%;
+    height: 38vw;
 	background-color: rgba(0,0,0,0.6);
 	z-index: 1;
 	display: none;
@@ -509,16 +524,17 @@ ul li{
 }
 .pro_shader, .pow_shader, .run_shader, .runp_shader{
     position: absolute;
-    margin: -18.3vw 0 0 0;
-    width: 21.2vw;
-    height: 18.3vw;
+	margin: -18.5vw 0 0 0;
+    width: 20.5vw;
+    height: 18.5vw;
     background-color: rgba(0,0,0,0.6);
     z-index: 1;
+    display: none;
 }
 
 .run_shader{
-	height: 18.4vw;
-	margin: -18.7vw 0 0 0;
+    height: 18.5vw;
+    margin: -18.7vw 0 0 0;
 }
 
 .pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4{
@@ -552,14 +568,18 @@ ul li{
 }
 
 .pro_shader button:hover, .pow_shader button:hover, .run_shader button:hover, .runp_shader button:hover{
-	margin: 2.3em 2.3em 0 0;
+	margin: 0.3em 2.3em 0 0!important;
 }
 
+.pro_shader button:active, .pow_shader button:active, .run_shader button:active, .runp_shader button:active{
+	margin: 0.3em 2.3em 0 0!important;
+	background-color: white!important;
+}
 /*----------------------------Forth Screen(Bonus)----------------------------*/
 .bonus-screen{
 	height: auto;
 	text-align: center;
-	padding: 4em 0 0 0;
+	padding: 2em 0 0 0;
 }
 .left_bonus_part{
 	padding: 8vw 0 0 0;
@@ -578,7 +598,10 @@ ul li{
 	font-size: 1.1em;
 	font-family: MuseoSansCyrl_700;
 	color: #303030;
+}
 
+.left_bonus_part img{
+	width: 16vw;
 }
 
 .bonus_btn{
@@ -590,6 +613,7 @@ ul li{
 	color: #232323;
 	font-family: MuseoSansCyrl_500;
 	margin: 4em 0 0 0;
+	font-size: 1.2vw;
 }
 
 .bonus_btn:hover{
@@ -621,7 +645,7 @@ ul li{
 .how-screen{
 	height: auto;
 	text-align: center;
-	padding: 0;
+	padding: 3vw 0 0 0;
 }
 
 .how_cnt{
@@ -631,7 +655,9 @@ ul li{
 	min-height: 28vw;
 }
 
-
+.how_cnt img{
+	width: 16vw;
+}
 
 .choice{
 	background: url('/ico/choice.png');
@@ -671,24 +697,25 @@ ul li{
 }
 
 .how-screen button{
-	height: 4em;
-	width: 20em;
+	height: 4vw;
+	width: 22vw;
 	background-color: #F98749;
 	margin: 3em 0 0 0;
 	border: none;
 	border-radius: 2em;
 	font-family: MuseoSansCyrl_500;
+	font-size: 1.2vw;
 }
 
 .how-screen button:hover{
-	height: 4.2em;
-	width: 20.2em;
+	height: 4.2vw;
+	width: 22.2vw;
 	margin: 2.8em 0 0 0;
 }
 
 .how-screen button:active{
-	height: 4.2em;
-	width: 20.2em;
+	height: 4.2vw;
+	width: 22.2vw;
 	background-color: #D9550E;
 	margin: 2.8em 0 0 0;
 }
@@ -705,15 +732,14 @@ ul li{
 /*-----------------------------Sixth Screen(comments-screen)------*/
 .comments-screen{
 	height: auto;
-	padding: 1em 0 0 0;
+	padding: 3vw 0 0 0;
 	text-align: center;
 }
 
 .swiper-container{
 	margin: 3em 0 0 0;
-	height: 60vh;
+	height: 36vw;
 	width: 90%;
-	border: 0.1em solid #F98749;
 }
 
 .comment_name{
@@ -860,7 +886,7 @@ ul li{
 }
 
 .prg, .all{
-	margin: 4em 0 0 0;
+	margin: 3vw 0 4vw 0;
 }
 
 .zag{
@@ -878,7 +904,7 @@ ul li{
 	background: url('/ico/unfootscr.png');
 	background-repeat: no-repeat;
 	background-size: 86vw 90vh;
-	background-position: -32px 0;
+	background-position: -2.5vw 0;
 	margin: 0;
 	padding: 0;
 }
@@ -932,25 +958,26 @@ ul li{
 }
 
 .connect_btn{
-	height: 4em;
-	width: 18em;
+	height: 4vw;
+	width: 22vw;
 	border-radius: 2em;
 	border: none;
 	margin: 6em 0 0 0;
 	background-color: #F98749;
 	color: white;
+	font-size: 1.2vw;
 }
 
 .connect_btn:hover{
-	height: 4.2em;
-	width: 18.2em;
+	height: 4.2vw;
+	width: 22.2vw;;
 	margin: 5.8em -0.2 0 0;
 	background-color: #F98749!important;
 }
 
-.connect_btn:active{
-	height: 4.2em;
-	width: 18.2em;
+.connect_btn:active{	
+	height: 4.2vw;
+	width: 22.2vw;
 	margin: 5.8em -0.2 0 0;
 	background-color: #D9550E;
 }
@@ -965,10 +992,10 @@ footer{
 }
 
 .mission p{
-
+	line-height: 1.9vw;
 	color: white;
 	text-transform: uppercase;
-	font-size: 0.9em;
+	font-size: 0.9vw;
 }
 
 .mission img{
@@ -978,7 +1005,7 @@ footer{
 footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a{
 	text-decoration: none;
 	color: white;
-	font-size: 0.9em;
+	font-size: 0.9vw;
 	margin-top: 0.2em;
 }
 
@@ -1309,33 +1336,21 @@ div {
 
 
 /*---------------------Mobile version--------------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
 /*---------------------Reg Screen-------------------------*/
-	.reg-screen{
-		height: 50vh;
-		background-size: 100% 50vh;
-	}
-	
-	.reg-screen .reg_screen_shader{
-		height: 50vh;
-	}
 
 	.reg-screen .checked{
 		padding: 1em 2em 0 0!important;
 	}
 	
 	.reg_scrn_txt{
-		padding: 6.5em 0 0 0;
-	}
-
-	.reg_scrn_txt h1{
-		margin-top: 1em;
+		padding: 19vw 0 0 0;
 	}
 
 	.rg_btn{
-		font-size: 0.5em;
-		width: 19em;
-		height: 3.5em;
+    	font-size: 1.4vw;
+    	width: 25vw;
+    	height: 5vw;
 	}
 
 	.user-name{
@@ -1346,11 +1361,399 @@ div {
 		font-size: 1em;
 	}
 
+	.reg_log_btns{
+		margin: 3vw 3vw 0 0;
+	}
+
 	/*----------------------info screen----------------*/
 	.info-screen{
 	}
 
 	.programm_list{
 		background: none;	
+	}
+
+	.rone_start{
+		height: 39.5vw!important;
+		text-align: center;
+	}
+
+	.start{
+		height: 39.45vw;
+	}
+
+	.left_bonus_part img{
+		width: 25vw;
+	}
+
+	.right_bonus_part{
+		text-align: center;
+		background: none;
+	}
+
+	.bonus_btn{
+		width: 27em;
+    	height: 5em;
+	}
+	.bonus_btn:hover{
+		width: 27.2em;
+    	height: 5.2em;
+	}
+	.bonus_btn:active{
+		width: 27.2em;
+    	height: 5.2em;
+	}
+	.how-screen button{
+		height: 6vw;
+    	width: 35vw;
+    	font-size: 1.5vw;
+	}
+
+	.how-screen button:hover{
+		height: 6.2vw;
+    	width: 35.2vw;
+	}
+
+	.how-screen button:active{
+		height: 6.2vw;
+    	width: 35.2vw;
+	}
+
+	.swiper-slide{
+		font-size: 1.5vw;
+	}
+	
+	.swiper-slide video{
+		height: 30vw;
+	}
+
+	.connect-screen{
+	    background-size: 103% 90vw;
+	}
+
+	.swiper-container{
+		height: 43vw;
+	}
+
+	.connect_price{
+		background-position: 40vw 5px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.reg-screen{
+		height: 100vw;
+	}
+
+	.reg_log_btns {
+	    margin: 3vw 4vw 0 0;
+	    word-spacing: 2vw;
+	}
+
+	.cdr-btn {
+	    position: relative;
+	    z-index: 2;
+	    padding: 2vw 0 0 4vw;
+	    background-color: rgba(0,0,0,0);
+	}
+	.reg_scrn_txt {
+	    padding: 30vw 0 0 0;
+	}
+
+	.reg_scr_content h1 {
+	    font-size: 4vw;
+	}
+
+	.reg_scrn_txt p {
+	    font-size: 3vw;
+	}
+
+	.rg_btn {
+	    font-size: 2.2vw;
+	    width: 36vw;
+	    height: 7vw;
+		margin: 12vw 0 0 0;
+	}
+
+	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
+	    font-size: 5.9vw;
+        margin: 2em 0 1em 0;
+	}
+
+	.info_naming img {
+	    width: 41vw;
+	}
+
+	.n1 , .n2, .n3, .n4, .n5, .n6{
+	    margin-top: 10vw;
+	}
+
+	.pro_shader, .pow_shader, .run_shader, .runp_shader {
+	    margin: -37.5vw 0 0 0;
+	    width: 43.2vw;
+	    height: 37vw;
+	}
+
+	.pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4 {
+	    font-size: 5vw;
+	    margin: 4vw 0 0 2vw;
+	    width: 39vw;
+	}
+
+	.pro_shader p, .pow_shader p, .run_shader p, .runp_shader p {
+	    margin: 1em 0 0 2vw;
+	    font-weight: 100;
+	    font-size: 2.4vw;
+	    width: 39vw;
+	    height: 5.5vw;
+	}
+
+	.arrow {
+	    background: url(/ico/arrow.png);
+	    background-size: 2em;
+	    background-repeat: no-repeat;
+	    height: 2em;
+	    width: 2em;
+	}
+
+	.arrow:hover {
+	    background: url(/ico/arrow.png);
+	    background-size: 2.2em;
+	    background-repeat: no-repeat;
+	    height: 2.2em;
+	    width: 2.2em;
+	}
+
+	.arrow:active {
+	    background: url(/ico/arrow.png);
+	    background-size: 2.2em;
+	    background-repeat: no-repeat;
+	    height: 2.2em;
+	    width: 2.2em;
+	}
+	.n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img {
+	    width: 40vw;
+	}
+
+	.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p {
+	    margin: 1.5em 0 0 0!important;
+	    font-size: 5vw;
+	}
+	
+	.n1 {
+	    background: url(/ico/1.png);
+	    background-position: 53vw 2.75em;
+	    background-repeat: no-repeat;
+	    background-size: 17vw;
+	}
+	
+	.n2 {
+	    background-position: 59.6vw 3em;
+	}
+
+	.n3 {
+	    background-position: 60.6vw 2.75em;
+	}
+
+	.n4 {
+	    background-position: 58.3vw 3em;
+	}
+
+	.n5 {
+	    background-position: 58.3vw 3em;
+	}
+
+	.n6 {
+	    background-position: 58.3vw 3em;
+	}
+
+	.rone_start{
+		height: auto!important;
+	}
+
+	.start{
+		height: 100vw!important;
+	}
+
+	.start_shader {
+	    margin: -100vw 0 0px 14vw!important;
+	    width: 66.5%!important;
+	    height: 100vw!important;
+	}
+
+	.start_shader h4{
+		font-size: 6vw;
+	}
+
+	.start_shader p {
+	    margin: 1em 0 0 3vw!important;
+	    font-size: 3.4vw!important;
+	    width: 61vw!important;
+	    height: 62vw!important;
+	}
+
+	.start_shader button {
+	    margin: 0 1em 0 0;
+	}
+
+	.rone_other_progr{
+		text-align: center;
+	}
+
+	.first_progr_string ul, .second_progr_string ul{
+		padding:0!important;
+	}
+	.first_progr_string, .second_progr_string{
+		word-spacing: normal!important;
+	}
+	.first_progr_string ul li, .second_progr_string ul li{
+		width: 50%!important;
+	}
+
+	.first_progr_string ul li img, .second_progr_string ul li img {
+	    width: 43vw;
+	}
+
+	.runp{
+	    width: 44.5vw!important;
+	    margin: 0em 0 0 -0.3em!important;
+	}
+
+	.left_bonus_part img {
+	    width: 40vw!important;
+	}
+
+	.right_bonus_part{
+		height: auto!important;
+		padding: 8vw 0 0 0;
+	}
+
+	.bonus_btn {
+	    width: 47vw;
+	    height: 8vw;
+	    font-size: 3vw;
+	    margin: 7vw;
+	}
+	
+	.how_screen, .asd {
+		height: auto!important;
+		max-height: none!important;
+	}
+
+	.how_cnt{
+		margin:12vw 0 0 0;
+	}
+
+	.how_cnt img {
+   		width: 40vw!important;
+	}
+
+	.choice {
+	    background-position: 18.5vw 5.5em;
+	}
+
+	.freedom {
+	    background-position: 10.5vw 5.5em;
+	}
+
+	.profit {
+	    background-position: 13vw 5.5em;
+	}
+
+	.how-screen button {
+	    height: 10vw!important;
+	    font-size: 2.3vw!important;
+	    width: 50vw!important;
+	}
+
+	.how-screen hr {
+	    margin: 11vw 0 0vw 40%;
+	}
+
+	.swiper-container{
+		height: 55vw!important;
+	}
+
+	.left_quest, .right_quest {
+	    margin: 0;
+	}
+	
+	.ref, .prg, .ruls, .all{
+		margin: 10vw 0 0 0;
+	    padding: 0 0 0 11vw;
+	}
+	.connect-screen {
+		height: 90vw;
+	    background-size: 103vw 90vw!important;
+	}
+
+	.questions-screen img {
+		width: 7vw;
+	}
+
+	.left_quest ul li a, .right_quest ul li a {
+		font-size: 4vw;	
+	}
+
+	.left_quest ul .else, .right_quest ul .else {
+    	margin: 0.5em 0 15vw -4px;
+	}
+
+
+	.comments-screen hr {
+	    margin: 3em 0 0 40%;
+	}
+	
+	.ref, .zag, .ruls .zag{
+		font-size: 5vw;
+	}
+	.connect_screen_shader {
+	    height: 100%;
+	}
+
+	.connect_info{
+	    font-size: 3vw;
+	}
+
+	.questions-screen{
+		padding: 2em 0 0 0!important;
+	}
+	
+	.connect {
+	    font-size: 3em;
+	    letter-spacing: 1px;
+	    padding: 13vw 0 0 0;
+	}
+
+	.connect {
+	    font-size: 1.5em;
+	    letter-spacing: 1px;
+	    padding: 13vw 0 0 0;
+	}
+
+	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a {
+	    font-size: 3vw;
+	    margin-top: 0.2em;
+	}
+
+	.mission p {
+	    line-height: 3vw;
+	    color: white;
+	    text-transform: uppercase;
+	    font-size: 3vw;
+	}
+
+	.reg_f_s ul{
+		padding: 0 0 0 5vw;
+	}
+
+	.connect_btn{
+	    height: 10vw!important;
+	    font-size: 2.3vw!important;
+	    width: 50vw!important;
+	}
+
+	.connect_price {
+	    background-position: 25vw 5px!important;
 	}
 }

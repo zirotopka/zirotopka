@@ -76,17 +76,30 @@ $(document).ready(function(){
 	$('#open_reg').on('click',function(){
 		$('#login').modal('hide');
 	})
-    var mySwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      slidesPerView: 3,
-	  centeredSlides: true,
-      loop: true,
-	  pagination: '.swiper-pagination',
-	  paginationClickable: true,
- 	  nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-    });
+
+	if ($('body').width() <=992) {
+		var mySwiper = new Swiper ('.swiper-container', {
+	      // Optional parameters
+	      direction: 'horizontal',
+		  centeredSlides: true,
+		  pagination: '.swiper-pagination',
+		  paginationClickable: true,
+	 	  nextButton: '.swiper-button-next',
+	      prevButton: '.swiper-button-prev',
+	    });
+	} else {
+	    var mySwiper = new Swiper ('.swiper-container', {
+	      // Optional parameters
+	      direction: 'horizontal',
+	      slidesPerView: 3,
+		  centeredSlides: true,
+	      loop: true,
+		  pagination: '.swiper-pagination',
+		  paginationClickable: true,
+	 	  nextButton: '.swiper-button-next',
+	      prevButton: '.swiper-button-prev',
+	    });
+	};
 
     $('.start').on('mouseenter',function(){
     	$('.start_shader').attr('style',"display:block;");

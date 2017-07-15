@@ -26,7 +26,7 @@
                 <div class="reg_scr_content">
                     <div id="st-trigger-effects" class="hidden-md hidden-lg">
                         <button data-effect="st-effect-2" class="cdr-btn">
-                            <img src="/ico/menu.png" alt="" style="width: 12vw;">
+                            <img src="/ico/menu.png" alt="" style="width: 3vw;">
                         </button>
                     </div>
                     @if ($user = Sentinel::check())
@@ -65,36 +65,36 @@
                 </div>    
             </div>
             <div class="info-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="info_naming">
+                <div class="info_naming col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h2>ЧТО ТАКОЕ</h2>
                     <img src="/ico/REFORMATOR.png" alt="">
                 </div>
-                <div class="info_cont">
-                        <ul>
+                <div class="info_cont col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n1">
-                                <img src="/ico/agenda.png" alt="">
+                                <img src="/ico/agenda.svg" alt="">
                                 <p>Планы тренировок для<br>любого уровня подготовки</p>
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n2">
-                                <img src="/ico/instr.png" alt="">
+                                <img src="/ico/instr.svg" alt="">
                                 <p>Наглядные видео-инструкции<br>для всех заданий</p>
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n3">
-                                <img src="/ico/rn.png" alt="">
+                                <img src="/ico/rn.svg" alt="">
                                 <p>Задания не требуют<br>специального оборудования<br>или похода в фитнес-клуб</p>
                             </li>
                         </ul>
-                        <ul>
+                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n4">
-                                <img src="/ico/prize.png" alt="">
+                                <img src="/ico/prize.svg" alt="">
                                 <p>Рекомендации по питанию,<br>адаптированные к планам<br>тренировок</p>
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n5">
-                                <img src="/ico/people.png" alt="">
+                                <img src="/ico/people.svg" alt="">
                                 <p>Обратная связь от <br>тренерского состава</p>
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n6">
-                                <img src="/ico/lamp.png" alt="">
+                                <img src="/ico/lamp.svg" alt="">
                                 <p>Возможность зарабатывать<br>деньги и заниматься спортом<br>в удовольстваие!</p>
                             </li>
                         </ul>
@@ -103,8 +103,8 @@
             </div>
             <div class="programm-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>ПРОГРАММЫ</h2>
-                <div class="programm_list row">
-                    <div class="rone_start col-lg-5 col-md-5 col-sm-5">
+                <div class="programm_list">
+                    <div class="rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <img src="/ico/start.png" class="start" alt="">
                         <div class="start_shader">
                             <h4>R.ONE start</h4>
@@ -112,10 +112,10 @@
                             <button class="arrow" type="button"></button>
                         </div>
                     </div>
-                    <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7">
+                    <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
                         <div class="first_progr_string">
-                            <ul>
-                                <li>
+                            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <img src="/ico/pro.png" class="prog_imgs prop" alt="">
                                     <div class="pro_shader">
                                         <h4>R.ONE pro</h4>
@@ -123,7 +123,7 @@
                                         <button class="arrow" type="button"></button>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <img src="/ico/pow.png" class="prog_imgs powp" alt="">
                                     <div class="pow_shader">
                                         <h4>R.ONE power</h4>
@@ -134,16 +134,16 @@
                             </ul>
                         </div>
                         <div class="second_progr_string">
-                            <ul>
-                                <li>
-                                    <img src="/ico/run.png" class="prog_imgs runp" style="width: 103.5%; margin: 0.1em 0 0 -0.65em;" alt="">
+                            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <img src="/ico/run.png" class="prog_imgs runp" style="width: 21vw; margin: 0.1em 0 0 -0.65em;" alt="">
                                     <div class="run_shader">
                                         <h4>R.ONE run</h4>
                                         <p>Программа для новичков</p>
                                         <button class="arrow" type="button"></button>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <img src="/ico/run+.png" class="prog_imgs runpl" alt="">
                                     <div class="runp_shader">
                                         <h4>R.ONE run+</h4>
@@ -159,10 +159,10 @@
             </div>
             <div class="bonus-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>БОНУСЫ</h2>
-                <div class="col-lg-5 col-md-5 left_bonus_part">
-                    <img src="/ico/money.png" alt="">    
+                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 left_bonus_part">
+                    <img src="/ico/money.svg" alt="">    
                 </div>
-                <div class="col-lg-7 col-md-7 right_bonus_part">
+                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 right_bonus_part">
                     <p>ЗАНИМАЙТЕСЬ СПОРТОМ, ЗАРАБАТЫВАЙТЕ ДЕНЬГИ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ<br>БОНУСНОЙ СИСТЕМЫ ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
                     <button type="button" class="bonus_btn">ПОДРОБНЕЕ</button>
                 </div>
@@ -170,24 +170,24 @@
             </div>
             <div class="how-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>КАК ЭТО РАБОТАЕТ</h2>
-                <div style="height: 100%;">
+                <div style="height: 43vw; max-height: 504px;" class="asd">
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt choice">
-                        <img src="/ico/chs.png" alt="">
+                        <img src="/ico/chs.svg" alt="">
                         <p class="orng">Вы выбираете сами</p>
                         <p class="who_txt">Подходящий пан тренировок<br>в зависимости от подготовки.<br>Удобная дата начала тренировок.</p>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt freedom">
-                        <img src="/ico/frdm.png" alt="">
+                        <img src="/ico/frdm.svg" alt="">
                         <p class="orng">Свобода действий</p>
                         <p class="who_txt">Самостоятельное планирование<br>времени и места для выполнения<br>заданий. Объединение и мотивация<br>друзей и близких.</p>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt profit">
-                        <img src="/ico/prft.png" alt="">
+                        <img src="/ico/prft.svg" alt="">
                         <p class="orng">Возможность зарабатывать</p>
                         <p class="who_txt">Вознаграждения через бонусную<br>систему платформы. Поощрение<br>и подарки для самых активных.</p>
                     </div>
                 </div>
-                <button>ПРОБОВАТЬ БЕСПЛАТНО</button>
+                <button>ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                 <hr>
             </div>
             <div class="comments-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -221,7 +221,7 @@
             <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>ВОПРОСЫ И ОТВЕТЫ</h2>
                 <div class="col-lg-6 col-md-6 col-sm-6 left_quest">
-                    <div class="col-lg-12 col-md-12 col-sm-12 ref">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ref">
                         <div>
                             <img src="/ico/lightning.png" alt="">
                             <p class="zag">ВОПРОСЫ<br>О REFORMATOR.ONE</p>
@@ -243,7 +243,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 prg">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 prg">
                         <div>
                             <img src="/ico/gantel.png" alt="">
                             <p class="zag">ВОПРОСЫ О ПРОГРАММЕ<br>И ЗАДАНИЯХ</p>
@@ -267,7 +267,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 right_quest">
-                    <div class="col-lg-12 col-md-12 col-sm-12 ruls">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ruls">
                         <div>
                             <img src="/ico/prize1.png" alt="">
                             <p class="zag">ПРАВИЛА УЧАСТИЯ<br>В ПРОГРАММЕ</p>
@@ -289,7 +289,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 all">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
                         <div>
                             <img src="/ico/str.png" alt="">
                             <p class="zag">РАЗНОЕ<br>ОБЩИЕ ВОПРОСЫ</p>
@@ -323,7 +323,7 @@
                 </div>                
             </div>
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="col-lg-3 col-md-3 col-sm-3 mission">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
                     <img src="/ico/footer_logo.png" alt="">
                     <p>наша миссия<br>
                     в повышении качества жизни<br>
@@ -331,7 +331,7 @@
                     широкого круга населения<br>
                     в любительский спорт и зож</p>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 prgrm_list">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
                     <ul>
                         <li><a href="#">R.ONE START</a></li>
                         <li><a href="#">R.ONE PRO</a></li>
@@ -342,7 +342,7 @@
                          ПРОГРАММА</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 reg_f_s">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
                     <ul>
                         <li>
                             <a href="">РЕГИСТРАЦИЯ</a>
@@ -363,7 +363,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 ofrta">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
                     <ul>
                         <li>
                             <a href="#">ДОГОВОР ОФЕРТА</a>
