@@ -21,11 +21,12 @@ $( document ).ready(function() {
         if (data['response'] == 200) {
           
           var video = videojs("training-video");
+          console.log(video);
           video.src(data['data']);
           //video.load();
           //video.play();
 
-          video_modal_form.modal('show');
+          //video_modal_form.modal('show');
 //              videojs('exercive');
           video.load();
           video.play();

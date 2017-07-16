@@ -4,7 +4,7 @@
     @parent
     <!-- Добавлять css тут -->
     <!-- <link href="http://vjs.zencdn.net/6.1.0/video-js.css" rel="stylesheet"> -->
-    <link href="http://vjs.zencdn.net/6.2.0/video-js.css" rel="stylesheet">
+    <link href="http://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
     <link href="/assets/privat_account/account.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
     <!-- <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet"> -->
@@ -17,7 +17,7 @@
     <script type="text/javascript" src="/assets/privat_account/account.js?123"></script>
     <script type="text/javascript" src="/assets/js/video-btn.js?123"></script>
     <script type="text/javascript" src="/assets/js/video.js?{{ time() }}"></script>
-    <script src="http://vjs.zencdn.net/6.2.0/video.js"></script>
+    <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
     <!-- <script src="//vjs.zencdn.net/5.19/video.min.js"></script> -->
 @overwrite
 
@@ -193,18 +193,27 @@
 
 				<!-- --------------------------------------------------------------- -->
 				<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
-				  <div class="display-inline" role="document">
+				  <div class="display-inline width-eight-perc" role="document">
 				    <div class="modal-content">
 				      <div class="video-modal modal-body">
-				        <div class="video-container">
+				        <div id="video-container">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						        <span aria-hidden="true">
 						        	<img src="/ico/close.png" alt="">	
 						        </span>
 					        </button>
-				        	<video id="training-video" class="video-js vjs-default-skin" controls preload="none" data-setup='{ "playbackRates": [1, 1.5, 2] }'>
+					        <!--  <div id="training-video" class="video-js-responsive-container vjs-hd" style="width:80%">
+								<video id="example_video_1" class="video-js vjs-default-skin"
+								  controls preload="auto"
+								  poster="http://video-js.zencoder.com/oceans-clip.png"
+								  data-setup='{"responsive": true,"example_option":true}'>
+								 <source src="/video/trainings/jump.mp4" type="video/ogg">
+								</video>
+							 </div> -->
+
+				        	<!-- <video  class="video-js vjs-default-skin" controls preload="none" data-setup='{ "playbackRates": [1, 1.5, 2] }'>
 							    <source src="" type="video/mp4">
-							</video>
+							</video> -->
 				        </div>			
 				      </div>
 				    </div>
@@ -215,5 +224,64 @@
 			@include('layouts.choose_program_form')
 		@endif
 	</div>
+	<div class="video-js-responsive-container vjs-hd" style="width:80%">
+		<video id="training-video" class="video-js vjs-default-skin"
+		  controls preload="auto"
+		  poster="http://video-js.zencoder.com/oceans-clip.png"
+		  data-setup='{"responsive": true,"example_option":true}'>
+		 <source src="" type="video/ogg">
+		</video>
+	 </div>
+
 @overwrite
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="/assets/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <link href="/assets/bootstrap-select/dist/css/bootstrap-select.min.css" type="text/css" rel="stylesheet">
+	<link href="http://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
+</head>
+<body>
+	<style>
+		.video-js-responsive-container.vjs-hd {
+		    padding-top: 56.25%;
+		}
+		.video-js-responsive-container.vjs-sd {
+		    padding-top: 75%;
+		}
+		.video-js-responsive-container {
+		    width: 100%;
+		    position: relative;
+		}
+		.video-js-responsive-container .video-js {
+		    height: 100% !important; 
+		    width: 100% !important;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		}
+	</style>
+	<div class="container">
+		<div class="wrapper">
+			 <div class="video-js-responsive-container vjs-hd" style="width:80%">
+				<video id="example_video_1" class="video-js vjs-default-skin"
+				  controls preload="auto"
+				  poster="http://video-js.zencoder.com/oceans-clip.png"
+				  data-setup='{"responsive": true,"example_option":true}'>
+				 <source src="/video/trainings/jump.mp4" type="video/ogg">
+				</video>
+			 </div>
+	 	</div>
+	</div>
+	<script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
+</body>
+</html>
+ -->
 
