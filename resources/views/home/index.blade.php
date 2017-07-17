@@ -199,22 +199,14 @@
                 <h2>ОТЗЫВЫ</h2>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <video src="/video/trainings/birpie.mp4" class="video-js" controls></video>
+                        <div class="swiper-slide video_holder" data-id="{{}}">
+                            <img src="image/test/comment.png" alt="">
+                            <img src="/ico/play.png" alt="" class="ico_play">
                             <p class="comment_name">Пётр Пётр</p>
                             <p class="comment_who">Участник R'ONE pro</p>
+                            
                         </div>
-                        <div class="swiper-slide">
-                            <video></video>
-                            <p class="comment_name">Илья Петров</p>
-                            <p class="comment_who">Участник R'ONE power</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <video></video>
-                            <p class="comment_name">Ирина Пархоменко</p>
-                            <p class="comment_who">Участник R'ONE start</p>
-                        </div>
-                    </div>
+                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -381,6 +373,25 @@
             </footer>
         </div>
 	</div>
+
+    <div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
+        <div class="display-inline width-eight-perc" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <img src="/ico/close.png" alt="">   
+                    </span>
+                </button>
+                <div class="video-js-responsive-container vjs-hd" style="width:80%">
+                    <video id="training-video" class="video-js vjs-default-skin"
+                                     controls preload="auto"
+                                      data-setup='{"responsive": true,"example_option":true}'>
+                        <source src="" type="video/ogg">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
 	@include('home.registration',['user' => $user, 'referral' => $referral])
 	@include('home.login')
 @overwrite

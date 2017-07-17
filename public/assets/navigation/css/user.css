@@ -465,7 +465,7 @@ button:focus {
 .close{
 	position: absolute;
 	z-index: 1;
-	margin: 3% 0 0 53%;
+	margin: 3% 0 0 43%;
 }
 
 .close span img{

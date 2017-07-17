@@ -6,7 +6,7 @@
             </li>
             <br><br>
             <li>
-                <a href="" class="profile_btns">
+                <a href="" class="profile_btns" style="padding:1.7em 0 1em 4em!important">
 					<p>ГЛАВНАЯ</p>
                 </a> 
             </li>

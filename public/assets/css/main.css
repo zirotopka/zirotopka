@@ -85,7 +85,7 @@ ul li{
 .main_sidebar ul {
     font-size: 1em;
     margin: 0;
-    padding: 4em 0 0 20%;
+    padding: 4em 0 0 0;
     list-style: none;
     text-align: left;
 }
@@ -94,7 +94,7 @@ ul li{
 .main_sidebar ul li a {
 	text-decoration: none;
 	display: block;
-	padding: 1.1em 0 1.1em 0em!important;
+	padding: 0.9em 0 1em 4em !important;
 	outline: none;
 	color: #f3efe0;
 	text-transform: uppercase;
@@ -102,6 +102,7 @@ ul li{
 	letter-spacing: 1px;
 	font-weight: bold;
 	font-size: 0.9em !important;
+	height: 5em;
 
 }
 
@@ -133,6 +134,7 @@ ul li{
 
 .side_logo{
 	width: 10vw;
+	margin-left: 3em;
 }
 
 @media screen and (max-width: 61.95em) {
@@ -424,7 +426,7 @@ ul li{
 
 .programm_list{
 	height: 84%;
-	width: 101.4%;
+	width: 100%;
 	background: url('/ico/PO.png');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -483,7 +485,7 @@ ul li{
 .start_shader{
 	position: absolute;
     margin: -35vw 0 0 0;
-    width: 83%;
+    width: 84%;
     height: 35vw;
     background-color: rgba(0,0,0,0.6);
     z-index: 1;
@@ -573,6 +575,7 @@ ul li{
 	opacity: 0.2;
 	font-size: 18vw;
 	margin: 16vw 0 0 -4vw;
+	height: 20vw;
 }
 
 .pro_shader_gray p, .run_shader_gray p{
@@ -754,7 +757,7 @@ ul li{
 	height: 4vw;
 	width: 22vw;
 	background-color: #F98749;
-	margin: 3em 0 0 0;
+	margin: 1em 0 0 0;
 	border: none;
 	border-radius: 2em;
 	font-family: MuseoSansCyrl_500;
@@ -815,6 +818,14 @@ ul li{
 .swiper-slide video{
 	height: 20vw;
     width: 240px;
+    z-index: 1;
+}
+
+.ico_play{
+    position: absolute;
+    z-index: 2;
+    margin: 7vw 0 0 -12vw;
+    width: 9vw;
 }
 
 
@@ -966,7 +977,7 @@ ul li{
 
 .connect_screen_shader{
 	width: 100%;
-    height: 90vh;
+    height: 89.1vh;
     position: absolute;
 	background-color: rgba(50,50,50,0.6);
 	z-index: 1;
@@ -1448,6 +1459,23 @@ div {
 	    width: 36vw;
 	}
 
+	.start_shader {
+	    position: absolute;
+	    margin: -41vw 0 0 0;
+	    width: 87%;
+	    height: 41vw;
+	    background-color: rgba(0,0,0,0.6);
+	    z-index: 1;
+	    display: none;
+	}
+
+	.ico_play{
+	    margin: 12vw 0 0 -19vw;	
+	}
+
+	.programm-screen hr {
+	    margin: 51vw 0 0 40%!important;
+	}
 	.pro_shader_gray, .run_shader_gray {
 	    margin: -20vw 0 0 0;
 	    width: 25vw;
@@ -1548,11 +1576,15 @@ div {
 	}
 
 	.swiper-container{
-		height: 43vw;
+		height: 50vw;
 	}
 
 	.connect_price{
 		background-position: 40vw 5px;
+	}
+
+	.how_cnt{
+		margin: 4em 0 0 0;
 	}
 }
 
