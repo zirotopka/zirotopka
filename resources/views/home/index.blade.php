@@ -105,7 +105,8 @@
                 <h2>ПРОГРАММЫ</h2>
                 <div class="programm_list">
                     <div class="rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                        <img src="/ico/start.png" class="start" alt="">
+                        <img src="/ico/start.jpg" class="start" alt="">
+                        <div class="start_shader_gray"><p>ST</p></div>
                         <div class="start_shader">
                             <h4>R.ONE start</h4>
                             <p>Программа для новичков</p>
@@ -116,7 +117,8 @@
                         <div class="first_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <img src="/ico/pro.png" class="prog_imgs prop" alt="">
+                                    <img src="/ico/pro.jpg" class="prog_imgs prop" alt="">
+                                    <div class="pro_shader_gray"><p>PR</p></div>
                                     <div class="pro_shader">
                                         <h4>R.ONE pro</h4>
                                         <p>Программа для новичков</p>
@@ -124,7 +126,8 @@
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <img src="/ico/pow.png" class="prog_imgs powp" alt="">
+                                    <img src="/ico/power.jpg" class="prog_imgs powp" alt="">
+                                    <div class="pow_shader_gray"><p>PO</p></div>
                                     <div class="pow_shader">
                                         <h4>R.ONE power</h4>
                                         <p>Программа для новичков</p>
@@ -136,7 +139,8 @@
                         <div class="second_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <img src="/ico/run.png" class="prog_imgs runp" style="width: 21vw; margin: 0.1em 0 0 -0.65em;" alt="">
+                                    <img src="/ico/run.jpg" class="prog_imgs runp" alt="">
+                                    <div class="run_shader_gray"><p>RU</p></div>
                                     <div class="run_shader">
                                         <h4>R.ONE run</h4>
                                         <p>Программа для новичков</p>
@@ -144,7 +148,8 @@
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <img src="/ico/run+.png" class="prog_imgs runpl" alt="">
+                                    <img src="/ico/run+.jpg" class="prog_imgs runpl" alt="">
+                                    <div class="runp_shader_gray"><p>RU+</p></div>                    
                                     <div class="runp_shader">
                                         <h4>R.ONE run+</h4>
                                         <p>Программа для новичков</p>

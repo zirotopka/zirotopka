@@ -439,9 +439,13 @@ ul li{
 }
 
 .start{
-	height: 38vw;
+	height: 35vw;
+	width: 29vw;
 }
 
+.powp, .runpl{
+	margin: 0 0 0 1em;
+}
 
 .first_progr_string,.second_progr_string{
 	word-spacing: 1.6em;
@@ -458,7 +462,7 @@ ul li{
 
 .first_progr_string ul li img, .second_progr_string ul li img{
 	width: 20.5vw;
-    height: 18.75vw;
+    height: 17.1vw;
 }
 
 .second_progr_string{
@@ -478,12 +482,12 @@ ul li{
 
 .start_shader{
 	position: absolute;
-    margin: -38vw 0 0 0;
-    width: 73%;
-    height: 38vw;
-	background-color: rgba(0,0,0,0.6);
-	z-index: 1;
-	display: none;
+    margin: -35vw 0 0 0;
+    width: 83%;
+    height: 35vw;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+    display: none;
 }
 
 .start_shader p{
@@ -496,7 +500,7 @@ ul li{
 	font-size: 1.4vw;
 	width: 19vw;
 	word-wrap: break-word;
-	height: 18vw;
+	height: 14vw;
 }
 
 .start_shader h4{
@@ -522,26 +526,76 @@ ul li{
 	margin: -0.2em 3.8em 0 0;
 	float: right;
 }
+
 .pro_shader, .pow_shader, .run_shader, .runp_shader{
     position: absolute;
-	margin: -18.5vw 0 0 0;
-    width: 20.5vw;
-    height: 18.5vw;
+	width: 20.5vw;
+	margin: -17.1vw 0 0 1em;
+    height: 17.1vw;
     background-color: rgba(0,0,0,0.6);
-    z-index: 1;
+    z-index: 2;
     display: none;
 }
 
-.run_shader{
-    height: 18.5vw;
-    margin: -18.7vw 0 0 0;
+.pro_shader, .run_shader{
+	height: 17.1vw;
+    margin: -17.1vw 0 0 0;
+}
+
+.start_shader_gray, .pro_shader_gray, .pow_shader_gray,
+ .run_shader_gray, .runp_shader_gray{
+	position: absolute;
+	background-color: rgba(246, 135, 73,0.149);
+	z-index: 1;
+}
+
+.pro_shader_gray, .run_shader_gray{
+	margin: -17vw 0 0 0;
+	width: 20.5vw;
+	height: 17vw;
+}
+
+.pow_shader_gray, .runp_shader_gray{
+	margin: -17vw 0 0 1vw;
+	width: 20.5vw;
+	height: 17vw;
+}
+
+.start_shader_gray{
+	margin: -35vw 0 0 0;
+	height: 35vw;
+	width: 29vw;
+}
+
+.start_shader_gray p{
+	font-family: MuseoSansCyrl_900;
+	color: #fefefe;
+	opacity: 0.2;
+	font-size: 18vw;
+	margin: 16vw 0 0 -4vw;
+}
+
+.pro_shader_gray p, .run_shader_gray p{
+	font-family: MuseoSansCyrl_900;
+	color: #fefefe;
+	opacity: 0.2;
+	font-size: 9vw;
+	margin: 8vw 0 0 -1.5vw;
+}
+
+.pow_shader_gray p, .runp_shader_gray p{
+	font-family: MuseoSansCyrl_900;
+	color: #fefefe;
+	opacity: 0.2;
+	font-size: 9vw;
+	margin: 8vw 0 0 -1.5vw;
 }
 
 .pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4{
     font-family: MuseoSansCyrl_700;
     font-size: 2vw;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     margin: 4vw 0 0 2vw;
     color: white;
     width: 15vw;

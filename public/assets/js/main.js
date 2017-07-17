@@ -100,36 +100,36 @@ $(document).ready(function(){
 	      prevButton: '.swiper-button-prev',
 	    });
 	};
-
-    $('.start').on('mouseenter',function(){
+ 
+    $('.start_shader_gray').on('mouseenter',function(){
     	$('.start_shader').attr('style',"display:block;");
     });
     $('.start_shader').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
     });
 
-    $('.prop').on('mouseenter',function(){
+    $('.pro_shader_gray').on('mouseenter',function(){
     	$('.pro_shader').attr('style',"display:block;");
     });
     $('.pro_shader').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
     });
 
-    $('.powp').on('mouseenter',function(){
+    $('.pow_shader_gray').on('mouseenter',function(){
     	$('.pow_shader').attr('style',"display:block;");
     });
     $('.pow_shader').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
     });
 
-    $('.runp').on('mouseenter',function(){
+    $('.run_shader_gray').on('mouseenter',function(){
     	$('.run_shader').attr('style',"display:block;");
     });
     $('.run_shader').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
     });
 
-    $('.runpl').on('mouseenter',function(){
+    $('.runp_shader_gray').on('mouseenter',function(){
     	$('.runp_shader').attr('style',"display:block;");
     });
     $('.runp_shader').on('mouseleave',function(){
