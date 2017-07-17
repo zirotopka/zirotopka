@@ -1622,8 +1622,8 @@ div {
 	}
 
 	.pro_shader, .pow_shader, .run_shader, .runp_shader {
-	    margin: -59.2vw 0 0px 38px;
-	    width: 68.2vw;
+	    margin: -59.8vw 0 0px 0px;
+	    width: 85.2vw;
 	    height: 59vw;
 	}
 
@@ -1638,7 +1638,7 @@ div {
 	    font-weight: 100;
 	    font-size: 2.4vw;
 	    width: 39vw;
-	    height: 5.5vw;
+	    height: 5.7vw;
 	}
 
 	.arrow {
@@ -1708,6 +1708,7 @@ div {
 
 	.start{
 		height: 100vw!important;
+		width: 85vw;
 	}
 
 	.programm-screen hr {
@@ -1723,8 +1724,8 @@ div {
 	}
 
 	.start_shader {
-	    margin: -100vw 0 0px 17vw!important;
-	    width: 66.5%!important;
+	    margin: -100vw 0 0px 8vw!important;
+	    width: 83.5%!important;
 	    height: 100vw!important;
 	}
 
@@ -1749,34 +1750,26 @@ div {
 	}
 
 	.first_progr_string ul, .second_progr_string ul{
-		padding:0!important;
+		padding: 0vw 0 0 3vw!important;
 		margin:0px;
+
 	}
 	.first_progr_string, .second_progr_string{
 		word-spacing: normal!important;
 	}
 	.first_progr_string ul li, .second_progr_string ul li{
-		width: 100%!important;
+		width: 60vw!important;
 		height: 100%;
 	}
 
 	.first_progr_string ul li img, .second_progr_string ul li img {
-	    width: 74%;
-	    height: 100%;
+	    width: 85vw!important;
+	    height: 60vw;
 	    margin:1em 0 0 0;
-	}
-
-	.run_shader {
-	    margin: -60.2vw 0 0px 38px!important;
 	}
 
 	.first_progr_string, .second_progr_string{
 		height: auto;
-	}
-
-	.runp{
-	    width: 77%!important;
-	    margin: 1em 0 0 -8px!important
 	}
 
 	.left_bonus_part img {
@@ -1786,6 +1779,48 @@ div {
 	.right_bonus_part{
 		height: auto!important;
 		padding: 8vw 0 0 0;
+	}
+
+	.start_shader_gray {
+	    margin: -100vw 0 0 8vw;
+	    height: 100vw;
+	    width: 85vw;
+	}
+
+	.pro_shader_gray, .run_shader_gray {
+	    margin: -60vw 0 0 0;
+	    width: 85.5vw;
+	    height: 60vw;
+	}
+
+	.pow_shader_gray, .runp_shader_gray{
+	    margin: -60vw 0 0 0;
+	    width: 85.5vw;
+	    height: 60vw;
+	}
+
+	.pro_shader_gray p, .run_shader_gray p {
+	    font-family: MuseoSansCyrl_900;
+	    color: #fefefe;
+	    opacity: 0.2;
+	    font-size: 34vw;
+	    margin: 25vw 0 0 -50.5vw;
+	}
+
+	.pow_shader_gray p, .runp_shader_gray p{
+	    font-family: MuseoSansCyrl_900;
+	    color: #fefefe;
+	    opacity: 0.2;
+	    font-size: 34vw;
+	    margin: 25vw 0 0 -50.5vw;
+	}
+
+	.start_shader_gray p {
+	    font-family: MuseoSansCyrl_900;
+	    color: #fefefe;
+	    opacity: 0.2;
+	    font-size: 46vw;
+	    margin: 52vw 0 0 -42vw;
 	}
 
 	.bonus_btn {
