@@ -1556,7 +1556,7 @@ div {
 
 	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
 	    font-size: 5.9vw;
-        margin: 2em 0 1em 0;
+        margin: 0.5em 0 1em 0;
 	}
 
 	.info_naming img {
@@ -1654,6 +1654,18 @@ div {
 
 	.start{
 		height: 100vw!important;
+	}
+
+	.programm-screen hr {
+	    margin: 377vw 0 0 40%!important;
+	}
+
+	.bonus-screen hr {
+   		margin: 127vw 0 0 40%;
+	}
+
+	.info-screen hr {
+   		margin: 113.2em 0 0 40%;
 	}
 
 	.start_shader {
