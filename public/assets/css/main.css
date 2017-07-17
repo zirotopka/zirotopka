@@ -858,6 +858,7 @@ ul li{
 	text-align: left;
 	margin: 5em 0 0 0;
 	padding: 0 0 0 10%;
+	height: auto;
 }
 
 .left_quest ul li a, .right_quest ul li a{
@@ -1440,6 +1441,26 @@ div {
 }
 
 @media screen and (max-width: 767px) {
+	.user_dropdown{
+		min-width: 59px!important;
+	}
+	.main_dropdown .user_dropdown li a {
+	    padding: 4% 0 0 8% !important;
+	    font-size: 2vw;
+	    width: 10em;
+	}
+	.main_dropdown .user_dropdown li {
+	    height: 5vw;
+	}
+	.main_dropdown .user_dropdown {
+	    background-color: rgba(0,0,0,0);
+	    text-align: left;
+	    margin: -15px -1.4em 0 0;
+	    /* z-index: 2222312; */
+	    color: white;
+	    width: 1px!important;
+	}
+
 	.reg-screen{
 		height: 100vw;
 	}
@@ -1472,6 +1493,20 @@ div {
 	    width: 36vw;
 	    height: 7vw;
 		margin: 12vw 0 0 0;
+	}
+
+	.rg_btn:hover {
+	    font-size: 2.3vw;
+	    width: 36.2vw;
+	    height: 7.2vw;
+		margin: 11.8vw 0 0 0;
+	}
+
+	.rg_btn:active {
+	    font-size: 2.3vw;
+	    width: 36.2vw;
+	    height: 7.2vw;
+		margin: 11.8vw 0 0 0;
 	}
 
 	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
@@ -1687,7 +1722,8 @@ div {
 	}
 
 	.questions-screen img {
-		width: 7vw;
+		width: 8vw;
+		margin-left: 0!important;
 	}
 
 	.left_quest ul li a, .right_quest ul li a {
