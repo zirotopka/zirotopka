@@ -1433,7 +1433,69 @@ div {
 	}
 
 	.start{
-		height: 39.45vw;
+	    height: 41vw;
+	    width: 36vw;
+   	}
+
+	.first_progr_string ul li img, .second_progr_string ul li img {
+	    width: 25vw;
+	    height: 19.85vw;
+	}
+
+	.start_shader_gray {
+	    margin: -41vw 0 0 0;
+	    height: 41vw;
+	    width: 36vw;
+	}
+
+	.pro_shader_gray, .run_shader_gray {
+	    margin: -20vw 0 0 0;
+	    width: 25vw;
+	    height: 20vw;
+	}
+
+	.pow_shader_gray, .runp_shader_gray{
+	    margin: -20vw 0 0 1.5vw;
+	    width: 25.5vw;
+    	height: 20vw;
+	}
+
+	.pro_shader, .run_shader {
+	    height: 19.7vw;
+	    margin: -19.7vw 0 0 0;
+	    width: 25vw;
+	}
+
+	.pow_shader, .runp_shader {
+    height: 19.7vw;
+    margin: -19.7vw 0 0 1.9vw;
+    width: 25vw;
+	}
+
+	.pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4 {
+	    font-family: MuseoSansCyrl_700;
+	    font-size: 2vw;
+	    position: relative;
+	    z-index: 3;
+	    margin: 2vw 0 0 2vw;
+	    color: white;
+	    width: 20vw;
+	}
+
+	.pro_shader_gray p, .run_shader_gray p {
+	    font-family: MuseoSansCyrl_900;
+	    color: #fefefe;
+	    opacity: 0.2;
+	    font-size: 12vw;
+	    margin: 8vw 0 0 -1.5vw;
+	}
+
+	.pow_shader_gray p, .runp_shader_gray p {
+	    font-family: MuseoSansCyrl_900;
+	    color: #fefefe;
+	    opacity: 0.2;
+	    font-size: 12vw;
+	    margin: 8vw 0 0 -1.5vw;
 	}
 
 	.left_bonus_part img{
