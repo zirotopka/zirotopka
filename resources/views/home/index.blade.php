@@ -115,7 +115,7 @@
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
                         <div class="first_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <img src="/ico/pro.png" class="prog_imgs prop" alt="">
                                     <div class="pro_shader">
                                         <h4>R.ONE pro</h4>
@@ -123,7 +123,7 @@
                                         <button class="arrow" type="button"></button>
                                     </div>
                                 </li>
-                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <img src="/ico/pow.png" class="prog_imgs powp" alt="">
                                     <div class="pow_shader">
                                         <h4>R.ONE power</h4>
@@ -135,7 +135,7 @@
                         </div>
                         <div class="second_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <img src="/ico/run.png" class="prog_imgs runp" style="width: 21vw; margin: 0.1em 0 0 -0.65em;" alt="">
                                     <div class="run_shader">
                                         <h4>R.ONE run</h4>
@@ -143,7 +143,7 @@
                                         <button class="arrow" type="button"></button>
                                     </div>
                                 </li>
-                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <img src="/ico/run+.png" class="prog_imgs runpl" alt="">
                                     <div class="runp_shader">
                                         <h4>R.ONE run+</h4>

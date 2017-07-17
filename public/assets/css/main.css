@@ -1441,6 +1441,44 @@ div {
 }
 
 @media screen and (max-width: 767px) {
+	.st-effect-2.st-menu-open .st-pusher {
+	    -webkit-transform: translate3d(50%, 0, 0);
+	    transform: translate3d(50%, 0, 0);
+	}
+	.st-menu{
+		width: 50%;
+	}
+	.side_logo{
+		width: 35vw;
+	}
+	.reg_btn:hover{
+		width: 20.2vw;
+	    height: 5.8vw;
+	    margin: -0.2em 0 0 0.2em;
+	    background-color: #F98749;
+	}
+
+	.reg_btn:active{
+		width: 20.2vw;
+	    height: 5.8vw;
+	    margin: -0.2em 0 0 0;
+	    background-color: #D9550E;
+	}
+
+	.log_btn:hover{
+		width: 20.2vw;
+	    height: 5.8vw;
+	    margin: -0.2em -0.2em 0 0;
+		background-color: rgba(0,0,0,0);
+	}
+
+	.log_btn:active{
+		width: 20.2vw;
+	    height: 5.8vw;
+	    margin: -0.2em -0.2em 0 0;
+	    border: none;
+		background-color: rgba(255,255,255,0.7);
+	}
 	.user_dropdown{
 		min-width: 59px!important;
 	}
@@ -1488,6 +1526,13 @@ div {
 	    font-size: 3vw;
 	}
 
+	.rl_btns {
+	    width: 20vw;
+	    height: 5.5vw;
+	    border-radius: 2em;
+	    font-size: 1.6vw;
+	}
+
 	.rg_btn {
 	    font-size: 2.2vw;
 	    width: 36vw;
@@ -1523,9 +1568,9 @@ div {
 	}
 
 	.pro_shader, .pow_shader, .run_shader, .runp_shader {
-	    margin: -37.5vw 0 0 0;
-	    width: 43.2vw;
-	    height: 37vw;
+	    margin: -59.2vw 0 0px 38px;
+	    width: 68.2vw;
+	    height: 59vw;
 	}
 
 	.pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4 {
@@ -1603,6 +1648,8 @@ div {
 
 	.rone_start{
 		height: auto!important;
+		margin:0;
+		padding: 0;
 	}
 
 	.start{
@@ -1610,7 +1657,7 @@ div {
 	}
 
 	.start_shader {
-	    margin: -100vw 0 0px 14vw!important;
+	    margin: -100vw 0 0px 17vw!important;
 	    width: 66.5%!important;
 	    height: 100vw!important;
 	}
@@ -1631,26 +1678,39 @@ div {
 	}
 
 	.rone_other_progr{
+		padding: 0;
 		text-align: center;
 	}
 
 	.first_progr_string ul, .second_progr_string ul{
 		padding:0!important;
+		margin:0px;
 	}
 	.first_progr_string, .second_progr_string{
 		word-spacing: normal!important;
 	}
 	.first_progr_string ul li, .second_progr_string ul li{
-		width: 50%!important;
+		width: 100%!important;
+		height: 100%;
 	}
 
 	.first_progr_string ul li img, .second_progr_string ul li img {
-	    width: 43vw;
+	    width: 74%;
+	    height: 100%;
+	    margin:1em 0 0 0;
+	}
+
+	.run_shader {
+	    margin: -60.2vw 0 0px 38px!important;
+	}
+
+	.first_progr_string, .second_progr_string{
+		height: auto;
 	}
 
 	.runp{
-	    width: 44.5vw!important;
-	    margin: 0em 0 0 -0.3em!important;
+	    width: 77%!important;
+	    margin: 1em 0 0 -8px!important
 	}
 
 	.left_bonus_part img {
