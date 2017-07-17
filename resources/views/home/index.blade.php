@@ -319,7 +319,7 @@
                     <p class="connect">ПРИСОЕДИНИТЬСЯ!</p>
                     <p class="connect_info">ПОУЧИТЬ ДОСТУП К ПЛАТФОРМЕ REFORMATOR.ONE <br>В ТЕЧЕНИЕ ТЕСТОВОГО ПЕРИОДА СОВЕРШЕННО БЕСПЛАТНО</p>
                     <p class="connect_price">2500 руб. <b>0 руб.</b></p>
-                    <button class="connect_btn" type="button">ПРОБОВАТЬ БЕСПЛАТНО</button>
+                    <button class="connect_btn" type="button">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                 </div>                
             </div>
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

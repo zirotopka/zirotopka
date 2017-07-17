@@ -46,7 +46,7 @@ ul li{
 }
 
 .main_dropdown .user_dropdown li a{
-	padding-left: 37%!important;
+	padding: 7% 0 0 25% !important;
 	font-size: 1vw;
 }
 .main_dropdown .user_dropdown li a:hover{
@@ -194,11 +194,11 @@ ul li{
 
 .rl_btns{
 	display: inline-block;
-    width: 20vw;
-    height: 5vw;
-    border-radius: 2em;
-    font-family: MuseoSansCyrl_500;
-	font-size: 1.4vw;
+	width: 17vw;
+	height: 3.5vw;
+	border-radius: 2em;
+	font-family: MuseoSansCyrl_500;
+	font-size: 1.1vw;
 }
 
 
@@ -214,15 +214,15 @@ ul li{
 }
 
 .reg_btn:hover{
-	width: 20.2vw;
-    height: 5.3vw;
+	width: 17.2vw;
+    height: 3.8vw;
     margin: -0.2em 0 0 0.2em;
     background-color: #F98749;
 }
 
 .reg_btn:active{
-	width: 20.2vw;
-    height: 5.3vw;
+	width: 17.2vw;
+    height: 3.8vw;
     margin: -0.2em 0 0 0;
     background-color: #D9550E;
 }
@@ -233,15 +233,15 @@ ul li{
 }
 
 .log_btn:hover{
-	width: 20.2vw;
-    height: 5.3vw;
+	width: 17.2vw;
+    height: 3.8vw;
     margin: -0.2em -0.2em 0 0;
 	background-color: rgba(0,0,0,0);
 }
 
 .log_btn:active{
-	width: 20.2vw;
-    height: 5.3vw;
+	width: 17.2vw;
+    height: 3.8vw;
     margin: -0.2em -0.2em 0 0;
     border: none;
 	background-color: rgba(255,255,255,0.7);
@@ -268,26 +268,26 @@ ul li{
 
 .rg_btn{
 	margin: 5vw 0 0 0;
-    width: 30vw;
-    height: 5vw;
-    background-color: #F98749;
-    border: none;
-    border-radius: 2em;
-    font-size: 1.1vw;
-    font-family: MuseoSansCyrl_500;
+	width: 25vw;
+	height: 4vw;
+	background-color: #F98749;
+	border: none;
+	border-radius: 2em;
+	font-size: 1.1vw;
+	font-family: MuseoSansCyrl_500;
 }
 
 .rg_btn:hover{
-	margin:4.8em 0 0 0;
-	width: 30.2vw;
-	height: 5.2vw;
+	margin: 4.8vw 0 0 0;
+	width: 25.2vw;
+	height: 4.2vw;
 	background-color: #F98749;
 }
 
 .rg_btn:active{
-	margin:4.8em 0 0 0;
-	width: 30.2vw;
-	height: 5.2vw;
+	margin: 4.8em 0 0 0;
+	width: 25.2vw;
+	height: 4.2vw;
 	background-color: #D9550E;
 }
 
