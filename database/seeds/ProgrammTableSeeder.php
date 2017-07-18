@@ -7,6 +7,7 @@ use App\ProgrammDay;
 use App\ProgrammExercive;
 use App\ProgrammStage;
 use App\File;
+use App\Comments;
 
 use App\User;
 
@@ -27,6 +28,7 @@ class ProgrammTableSeeder extends Seeder
     	ProgrammExercive::truncate();
     	ProgrammStage::truncate();
         File::truncate();
+        Comments::truncate();
 
         AccrualType::truncate();
         Accrual::truncate();
@@ -62,6 +64,21 @@ class ProgrammTableSeeder extends Seeder
                 ]);
         	}
     	}
+
+        $comments_array = [
+            ['video' => '/video/trainings/birpie.mp4', 'img_holder' => '/image/test/comment.png', 'user' => 'Пётр Петрович', 'comment_text' => 'Участник R.ONE start'],
+            ['video' => '/video/trainings/birpie.mp4', 'img_holder' => '/image/test/comment.png', 'user' => 'Пётр Юриевич', 'comment_text' => 'Участник R.ONE pro'],
+            ['video' => '/video/trainings/birpie.mp4', 'img_holder' => '/image/test/comment.png', 'user' => 'Пётр Юриевич', 'comment_text' => 'Участник R.ONE pro'],
+        ];
+
+        foreach ( $comments_array as $comments_row) {
+            $comments = new Comments;
+            $comments->video = $comments_row['video'];
+            $comments->img_holder = $comments_row['img_holder'];
+            $comments->user = $comments_row['user'];
+            $comments->comment_text = $comments_row['comment_text'];
+            $comments->save();
+        }
 
         $trainings = [
             ['slug' => 'r.one_start','name' => 'R.ONE START','description' => 'Программа предназначенная для новичков'],

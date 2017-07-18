@@ -13,9 +13,10 @@ class CreateCommentTable extends Migration
      */
     public function up()
     {
-        Schema::create('comments_table', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('comment_video')->default(0);
+            $table->string('video')->default(0);
+            $table->string('img_holder')->default(0);
             $table->string('user')->default(0);
             $table->string('comment_text')->default(0);
         });
@@ -30,6 +31,7 @@ class CreateCommentTable extends Migration
     {
         Schema::table('comments_table', function (Blueprint $table) {
             $table->dropColumn('id');
+            $table->dropColumn('img_holder');
             $table->dropColumn('comment_video');
             $table->dropColumn('user');
             $table->dropColumn('comment_text');

@@ -197,20 +197,22 @@
             </div>
             <div class="comments-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>ОТЗЫВЫ</h2>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide video_holder" data-id="{{}}">
-                            <img src="image/test/comment.png" alt="">
-                            <img src="/ico/play.png" alt="" class="ico_play">
-                            <p class="comment_name">Пётр Пётр</p>
-                            <p class="comment_who">Участник R'ONE pro</p>
-                            
-                        </div>
-                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            @foreach($comments as $comment)
+                                <div class="swiper-slide video_holder" data-id="{{$comment->id}}">
+                                    <img src="{{$comment->img_holder}}" alt="">
+                                    <img src="/ico/play.png" alt="" class="ico_play">
+                                    <p class="comment_name">{{$comment->user}}</p>
+                                    <p class="comment_who">{{$comment->comment_text}}</p>
+                                </div>
+                            @endforeach    
+                         </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+            
                 <p class="watch_more">Смотреть больше отзывов</p>
                 <button class="arrow" type="button"></button>
                 <hr>

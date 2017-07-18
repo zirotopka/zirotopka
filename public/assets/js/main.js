@@ -139,16 +139,16 @@ $(document).ready(function(){
       $('body').on('click','.video_holder',function() {
     var video_modal_form = $('#video-modal'),
         thisContainer = jQuery(this),
- 			  exercive_id = thisContainer.data('id');
+ 			  comment_id = thisContainer.data('id');
 
  		jQuery.ajax({
       type: "post",
-      url: '/privat_office/get_exercive_video',
-      data: {exercive_id: exercive_id},
+      url: '/get_comment_video',
+      data: {comment_id: comment_id},
       success: function (data) {
         if (data['response'] == 200) {
           
-          var video = videojs("training-video");
+          var video = videojs("comment-video");
           video.src(data['data']);
           video_modal_form.modal('show');
           video.load();

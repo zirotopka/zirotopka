@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use App\User;
+use App\Comments;
 
 use Carbon\Carbon;
 
@@ -12,6 +13,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {	
         $user = Sentinel::getUser();
+        $comments = Comments::all();
         $referral = null;
 
         if ($request->has('referral')) {
@@ -20,9 +22,27 @@ class HomeController extends Controller
 
        	$data = [
     		'user' => $user,
+            'comments' => $comments,
     		'referral' => $referral,
     	];
 
     	return view('home.index', $data);
+    }
+
+    public function get_comment_video(Request $request) {
+        $comments_id = $request->get('comment_id');
+            
+
+        if ( !empty($comments_id ) ) {
+            $comments = Comments::where('id','=',$comments_id)->get();
+                                       
+            if ( !empty($comments) && count( $comments->video ) > 0 ){
+                return ['response' => 200, 'data' => $comments->video];
+            } else {
+                return ['response' => 500, 'data' => 'Не найден comments']; 
+            }
+        } else {
+             return ['response' => 500, 'data' => 'Не найден comments_id']; 
+        }
     }
 }
