@@ -136,36 +136,37 @@ $(document).ready(function(){
     	$(this).attr('style',"display:none;");
     });
 
-      $('body').on('click','.video_holder',function() {
-    var video_modal_form = $('#video-modal'),
-        thisContainer = jQuery(this),
- 			  comment_id = thisContainer.data('id');
+    $('body').on('click','.video_holder',function() {
+	    var video_modal_form = $('#video-modal'),
+	        thisContainer = jQuery(this),
+	 		comment_id = thisContainer.data('id');
 
- 		jQuery.ajax({
-      type: "post",
-      url: '/get_comment_video',
-      data: {comment_id: comment_id},
-      success: function (data) {
-        if (data['response'] == 200) {
-          
-          var video = videojs("comment-video");
-          video.src(data['data']);
-          video_modal_form.modal('show');
-          video.load();
-          video.play();
+	 	jQuery.ajax({
+	      type: "post",
+	      url: '/get_comment_video',
+	      data: {comment_id: comment_id},
+	      success: function (data) {
+	        if (data['response'] == 200) {
+	          
+	          var video = videojs("comment-video");
+	          video.src(data['data']);
+	          video_modal_form.modal('show');
+	          video.load();
+	          video.play();
 
-        } else {
-            alert('Видео не может быть загружено. Обратитесь в тех. поддержку.')
-        }
-      }
-    });
-  });
-  $("#video-modal").on('hide.bs.modal', function () {
-      var video = document.getElementsByTagName('video');
-      for (var i = 0; i < video.length; i++) {
-        video[i].load();
-      }
-  });
+	        } else {
+	            alert('Видео не может быть загружено. Обратитесь в тех. поддержку.')
+	        }
+	      }
+	    });
+	 });
+
+	 $("#video-modal").on('hide.bs.modal', function () {
+	      var video = document.getElementsByTagName('video');
+	      for (var i = 0; i < video.length; i++) {
+	        video[i].load();
+	      }
+	 });
 });
 
 Array.prototype.in_array = function(p_val) {
