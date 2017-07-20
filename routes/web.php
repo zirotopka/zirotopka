@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', ['uses' =>  'HomeController@index']);
 Route::post('/get_comment_video', [ 'uses' => 'HomeController@get_comment_video' ] );
 
 

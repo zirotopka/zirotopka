@@ -91,6 +91,7 @@
            <!-- content push wrapper -->
             <div class="st-pusher">
                 <div class="st-content"><!-- this is the wrapper for the content -->
+                @if ($user = Sentinel::check())
                     <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                         <!-- Top Navigation -->
                         <div class="codrops-top clearfix ">
@@ -104,7 +105,6 @@
                             <div class="col-lg-2 col-md-2 hidden-xs hidden-sm" style="height: 100%;">
                                 <a href="/" class="min-logo"></a>
                             </div>
-                       @if ($user = Sentinel::check())
                             <!-- <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs"> -->
                             <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs">
                                 <span class="nav-text" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
@@ -150,20 +150,12 @@
                                     <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>
                             </div>
-                        @else
-                            <div class="reg_log_btn">
-                                <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#registr">
-                                    Регистрация
-                                </button>
-                                <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#login">
-                                    Войти
-                                </button>
-                            </div>
-                        @endif
                         </div>
 
+                        
 
-                                           </div><!-- /st-content-inner -->
+                    </div><!-- /st-content-inner -->
+@endif
                     {{-- @include('layouts.reg_modal') --}}
                     @section("content")
 

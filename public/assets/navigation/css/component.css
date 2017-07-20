@@ -42,7 +42,7 @@ body,
 	opacity: 0;
 	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-	z-index: 2;
+	z-index: 3;
 }
 
 .st-menu-open .st-pusher::after {
@@ -177,8 +177,8 @@ body,
 
 @media screen and (max-width: 37em) {
 	.st-effect-2.st-menu-open .st-pusher {
-		-webkit-transform: translate3d(220px, 0, 0);
-		transform: translate3d(220px, 0, 0);
+		-webkit-transform: translate3d(50%, 0, 0);
+		transform: translate3d(50%, 0, 0);
 
 	}
 

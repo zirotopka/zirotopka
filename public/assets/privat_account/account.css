@@ -197,6 +197,16 @@
 	vertical-align: middle;
 }
 
+.otchet:hover .load-btn .load{
+	content: url('/ico/load_hov.png');
+	width: 3.1em;
+	margin-left: -0.1em;
+}
+
+.otchet:active .load-btn .load{
+	content: url('/ico/load_act.png');
+}
+
 .load-btn{
 	text-align: center;
 	margin: 1.5em 0 15em 0;
@@ -205,6 +215,7 @@
 .load{
 	width: 3em;
 	display: inline-block;
+	content: url("/ico/load.png");
 }
 
 .load{
@@ -311,6 +322,10 @@
 	.checkboxiki ul{
 		padding: 0!important;
 	}
+
+	.outlet {
+    width: 55%!important;
+}
 
 }
 

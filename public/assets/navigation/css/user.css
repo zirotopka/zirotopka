@@ -126,7 +126,7 @@ input:focus{
 	background-color: #282828;
 	position: fixed;
 	width: 100%;
-	z-index: 2;
+	z-index: 3;
 }
 .codrops-top a {
 	display: inline-block;
@@ -242,7 +242,6 @@ button:hover {
 
 @media screen and (max-width: 46.0625em) {
 	.column {
-
 		min-width: auto;
 		min-height: auto;
 		text-align: center;
@@ -277,7 +276,7 @@ button:hover {
 	.user_dropdown{
 		width: 100%!important ;
 		margin: 0 0 0 0;
-		min-width: 157px;
+		min-width: 160px;
 	}
 
 	.dropdown button div{
@@ -285,6 +284,15 @@ button:hover {
 	}
 	.codrops-header {
 		padding: 3em;
+	}
+
+	.st-menu {
+		width: 50%!important;
+	}
+
+	.st-effect-2.st-menu-open .st-pusher {
+		-webkit-transform: translate3d(50%, 0, 0)!important;
+		transform: translate3d(50%, 0, 0)!important;
 	}
 }
 
@@ -502,7 +510,7 @@ button:focus {
 
 .prgr_ico{
 	background: url('/ico/prgrm.png');
-	margin: 0 0 0 26px!important;
+	margin: 0 0 0 20px!important;
 	background-size: 1em 1em;
 	width: 1em;
 	height: 1em;

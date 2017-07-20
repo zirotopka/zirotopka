@@ -14,9 +14,20 @@ $(document).ready(function(){
 				}
 			}
 		} 
+		else{
+			if (offset.left > max_left_pos) {
+				if (FIREFOX) {	
+					cal.offset({left:max_left_pos});			
+				} else {
+					cal.offset({left:max_left_pos+1});
+				}
+			}	
+		}
+		
 		
 	});
 		
+
 
 
 	//------------------Каледраь формы------------------

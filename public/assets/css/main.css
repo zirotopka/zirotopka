@@ -55,10 +55,6 @@ ul li{
 	
 }
 
-#st-menu,.st-content-inner{
-	display: none;
-}
-
 .cdr-btn{
 	position: relative;
 	z-index: 2;
@@ -77,7 +73,6 @@ ul li{
 .main_sidebar{
 	height: 100%;
 	padding: 0;
-	width: 16.6666%;
 	background-color: #282828;
 	position: fixed;
 }
@@ -156,6 +151,10 @@ ul li{
 
 
 /*-----------------------------First screen(reg-screen)------------*/
+
+.rg_check_in{
+	margin: 4.2em 0 0 0;
+}
 
 .reg-screen{
 	background: url(/ico/regmg.png);
@@ -277,6 +276,7 @@ ul li{
 	border-radius: 2em;
 	font-size: 1.1vw;
 	font-family: MuseoSansCyrl_500;
+	font-weight: 500;
 }
 
 .rg_btn:hover{
@@ -372,7 +372,7 @@ ul li{
 }
 
 .n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img{
-	width: 10vw;
+	width: 9vw;
 }
 
 .n4, .n5, .n6{
@@ -436,6 +436,14 @@ ul li{
 	padding: 2.5vw 0 0 6vw;
 }
 
+.rone_start p{
+    position: absolute;
+    font-size: 3vw;
+    color: white;
+    margin: -6vw 0 0 4vw;
+    z-index: 2;
+}
+
 .rone_other_progr{
 	padding: 2.5vw 0 0 0;
 }
@@ -456,6 +464,14 @@ ul li{
 .first_progr_string ul li, .second_progr_string ul li{
 	display: inline-block;
 	width: 43.4%;
+}
+
+.first_progr_string ul li .prprp, .second_progr_string ul li .prprp{
+    position: absolute;
+    font-size: 2.3vw;
+    color: white;
+    margin: -4vw 0 0 2vw;
+    z-index: 2;
 }
 
 .first_progr_string ul, .second_progr_string ul{
@@ -488,7 +504,7 @@ ul li{
     width: 84%;
     height: 35vw;
     background-color: rgba(0,0,0,0.6);
-    z-index: 1;
+    z-index: 2;
     display: none;
 }
 
@@ -625,12 +641,14 @@ ul li{
 }
 
 .pro_shader button:hover, .pow_shader button:hover, .run_shader button:hover, .runp_shader button:hover{
-	margin: 0.3em 2.3em 0 0!important;
+	margin: 0 2.3em 0 0!important;
 }
 
 .pro_shader button:active, .pow_shader button:active, .run_shader button:active, .runp_shader button:active{
-	margin: 0.3em 2.3em 0 0!important;
+	margin: 0 2.3em 0 0!important;
 	background-color: white!important;
+	border: none;
+	color: white;
 }
 /*----------------------------Forth Screen(Bonus)----------------------------*/
 .bonus-screen{
@@ -713,19 +731,19 @@ ul li{
 }
 
 .how_cnt img{
-	width: 16vw;
+	width: 10vw;
 }
 
 .choice{
 	background: url('/ico/choice.png');
 	background-repeat: no-repeat;
-    background-position: 6.5vw 5.5em;
+    background-position: 8.5vw 6em;
 }
 
 .freedom{
 	background: url('/ico/freedom.png');
 	background-repeat: no-repeat;
-    background-position: 3.5vw 5.5em;
+    background-position: 6vw 6em;
 }
 
 .freedom .orng{
@@ -735,7 +753,7 @@ ul li{
 .profit{
 	background: url('/ico/profit.png');
 	background-repeat: no-repeat;
-    background-position: 5vw 5.5em;
+    background-position: 7vw 6em;
 }
 
 .orng{
@@ -762,19 +780,20 @@ ul li{
 	border-radius: 2em;
 	font-family: MuseoSansCyrl_500;
 	font-size: 1.2vw;
+	font-weight: 500;
 }
 
 .how-screen button:hover{
 	height: 4.2vw;
 	width: 22.2vw;
-	margin: 2.8em 0 0 0;
+	margin: 1em 0 0em 0;
 }
 
 .how-screen button:active{
 	height: 4.2vw;
 	width: 22.2vw;
 	background-color: #D9550E;
-	margin: 2.8em 0 0 0;
+	margin: 0.8em 0 0 0;
 }
 
 .how-screen hr{
@@ -812,7 +831,7 @@ ul li{
 }
 
 .swiper-slide{
-	width: 20em;
+	padding: 6% 0 0 0;
 }
 
 .swiper-slide video{
@@ -824,8 +843,12 @@ ul li{
 .ico_play{
     position: absolute;
     z-index: 2;
-    margin: 7vw 0 0 -12vw;
-    width: 9vw;
+    margin: 7vw 0 0 -10.5vw;
+    width: 5vw;
+}
+
+.ewwq{
+    margin: 1.7em 0 0 0;
 }
 
 
@@ -976,13 +999,21 @@ ul li{
 }
 
 .connect_screen_shader{
-	width: 100%;
+    width: 100%;
     height: 89.1vh;
     position: absolute;
-	background-color: rgba(50,50,50,0.6);
-	z-index: 1;
+    background-color: rgba(50,50,50,0.7);
+    z-index: 1;
 }
 
+.connect_screen_shader p {
+    font-size: 12.1vw;
+    font-family: MuseoSansCyrl_900;
+    margin: 13vw 0 0 -0.8vw;
+    opacity: 0.2;
+    color: white;
+}
+ 
 .connect_content{
 	position: relative;
 	z-index: 2;
@@ -1032,6 +1063,7 @@ ul li{
 	background-color: #F98749;
 	color: white;
 	font-size: 1.2vw;
+	font-weight: 500;
 }
 
 .connect_btn:hover{
@@ -1058,7 +1090,7 @@ footer{
 }
 
 .mission p{
-	line-height: 1.9vw;
+	line-height: 1.4vw;
 	color: white;
 	text-transform: uppercase;
 	font-size: 0.9vw;
@@ -1408,6 +1440,26 @@ div {
 		padding: 1em 2em 0 0!important;
 	}
 	
+	.reg-screen{
+		height: 69vw;
+	}
+
+	.info_cont {
+	    padding: 7vw 0 0 0;
+	}
+
+	.info_cont ul{
+		height: 20vw;
+	}
+
+	.info_naming {
+    	padding: 3vw 0 0 0;
+	}
+
+	.info-screen hr {
+	    margin: 70vw 0 0 40%;
+	}
+
 	.reg_scrn_txt{
 		padding: 19vw 0 0 0;
 	}
@@ -1419,7 +1471,25 @@ div {
 	}
 
 	.user-name{
-		font-size: 0.65em!important;
+		font-size: 1em!important;
+	}
+
+	.freedom {
+	    background: url(/ico/freedom.png);
+	    background-repeat: no-repeat;
+	    background-position: 2.5vw 4em;
+	}
+
+	.profit {
+	    background: url(/ico/profit.png);
+	    background-repeat: no-repeat;
+	    background-position: 5vw 4em;
+	}
+
+	.choice {
+	    background: url(/ico/choice.png);
+	    background-repeat: no-repeat;
+	    background-position: 7vw 4em;
 	}
 
 	.main_dropdown .dropdown-toggle i{
@@ -1474,8 +1544,20 @@ div {
 	}
 
 	.programm-screen hr {
-	    margin: 51vw 0 0 40%!important;
+	    margin: 60vw 0 0 40%!important;
 	}
+
+	.programm-screen h2 {
+	    text-align: center;
+	    margin: 3em 0 5vw 0;
+	}
+
+	.left_bonus_part {
+	    padding: 4vw 0 0 0;
+	}
+
+
+
 	.pro_shader_gray, .run_shader_gray {
 	    margin: -20vw 0 0 0;
 	    width: 25vw;
@@ -1527,7 +1609,11 @@ div {
 	}
 
 	.left_bonus_part img{
-		width: 25vw;
+		width: 20vw;
+	}
+
+	.how-screen{
+		padding: 4vw 0 0 0;
 	}
 
 	.right_bonus_part{
@@ -1551,6 +1637,17 @@ div {
 		height: 6vw;
     	width: 35vw;
     	font-size: 1.5vw;
+    	margin: 6vw 0 0 0;
+	}
+	.connect_screen_shader {
+	    height: 89.2vh;
+	}
+	.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p {
+	    font-size: 1.3vw;
+	}
+
+	.start_shader_gray p{
+	    margin: 22vw 0 0 -4vw;
 	}
 
 	.how-screen button:hover{
@@ -1565,10 +1662,14 @@ div {
 
 	.swiper-slide{
 		font-size: 1.5vw;
+	    padding: 3% 0 0 0;
 	}
 	
-	.swiper-slide video{
-		height: 30vw;
+	.comment_name {
+	    color: #F98749;
+	    font-family: MuseoSansCyrl_700;
+	    font-size: 1.3em;
+	    margin: 2vw 0 0 0;
 	}
 
 	.connect-screen{
@@ -1577,8 +1678,12 @@ div {
 
 	.swiper-container{
 		height: 50vw;
+		margin: 3.5vw auto!important;
 	}
 
+	.arrow{
+		margin: 0;
+	}
 	.connect_price{
 		background-position: 40vw 5px;
 	}
@@ -1586,9 +1691,49 @@ div {
 	.how_cnt{
 		margin: 4em 0 0 0;
 	}
+
+	footer{
+		height: 30vw;
+	}
+
+	.orng {
+	    font-family: MuseoSansCyrl_700!important;
+	    color: #f98749;
+	    font-size: 1.3em;
+	    margin: 1.65em 0 0 0;
+	}
+
+
+	.comments-screen hr {
+	    margin: 4em 0 0 40%;
+	}
+	.connect_screen_shader p {
+	    font-size: 14.7vw;
+	    font-family: MuseoSansCyrl_900;
+	    margin: 23vw 0 0 -0.8vw;
+	    opacity: 0.2;
+	    color: white;
+	}
 }
 
 @media screen and (max-width: 767px) {
+
+	.info_cont ul {
+	    height: 225vw;
+	}
+
+	.info_cont {
+	    padding: 0vw 0 0 0;
+	}
+
+	.info_naming {
+	    padding: 12vw 0 0 0;
+	}
+
+	footer {
+	    height: 130vw;
+	}
+
 	.st-effect-2.st-menu-open .st-pusher {
 	    -webkit-transform: translate3d(50%, 0, 0);
 	    transform: translate3d(50%, 0, 0);
@@ -1718,8 +1863,13 @@ div {
 	.pro_shader, .pow_shader, .run_shader, .runp_shader {
 	    margin: -59.8vw 0 0px 0px;
 	    width: 85.2vw;
-	    height: 59vw;
+	    height: 60vw;
 	}
+
+	.first_progr_string ul li .prprp, .second_progr_string ul li .prprp {
+    	font-size: 8vw;
+    	margin: -16vw 0 0 6vw;		
+	}	
 
 	.pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4 {
 	    font-size: 5vw;
@@ -1910,11 +2060,23 @@ div {
 	}
 
 	.start_shader_gray p {
-	    font-family: MuseoSansCyrl_900;
-	    color: #fefefe;
+	    font-family: MuseoSansCyrl_900!important;
+	    color: #fefefe!important;
 	    opacity: 0.2;
-	    font-size: 46vw;
-	    margin: 52vw 0 0 -42vw;
+	    font-size: 46vw!important;
+	    margin: 52vw 0 0 -7vw!important;
+	}
+
+	footer .prgrm_list {
+    	padding: 5.7em 0 0 0;
+	}
+
+	.rone_start p{
+	    position: absolute;
+	    font-size: 9vw;
+	    color: white;
+	    margin: -22vw 0 0 14vw;
+	    z-index: 2;
 	}
 
 	.bonus_btn {
@@ -1960,9 +2122,21 @@ div {
 	}
 
 	.swiper-container{
-		height: 55vw!important;
+		height: 120vw!important;
 	}
 
+	.ico_play {
+	    margin: 31vw 0 0 -46vw;
+	    width: 20vw;
+	}
+
+	.comment_who {
+	    font-size: 3.5em;
+	}
+
+	.comment_name {
+	    font-size: 4.3em;
+	}
 	.left_quest, .right_quest {
 	    margin: 0;
 	}
@@ -2027,10 +2201,11 @@ div {
 	}
 
 	.mission p {
-	    line-height: 3vw;
-	    color: white;
-	    text-transform: uppercase;
-	    font-size: 3vw;
+    line-height: 4vw;
+    color: white;
+    text-transform: uppercase;
+    font-size: 3vw;
+    padding: 0.5vw 0 0 0;
 	}
 
 	.reg_f_s ul{
@@ -2046,4 +2221,20 @@ div {
 	.connect_price {
 	    background-position: 25vw 5px!important;
 	}
+
+	.connect_screen_shader p {
+	    font-size: 14.8vw;
+	    font-family: MuseoSansCyrl_900;
+	    margin: 38vw 0 0 -0.8vw;
+	    opacity: 0.2;
+	    color: white;
+	}
+}
+
+#video-modal{
+	text-align: center!important;
+}
+
+.width-eight-perc{
+	margin:2vw auto;
 }

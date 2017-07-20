@@ -31,10 +31,10 @@ class HomeController extends Controller
 
     public function get_comment_video(Request $request) {
         $comments_id = $request->get('comment_id');
-            
+
 
         if ( !empty($comments_id ) ) {
-            $comments = Comments::where('id','=',$comments_id)->get();
+            $comments = Comments::where('id','=',$comments_id)->first();
                                        
             if ( !empty($comments) && count( $comments->video ) > 0 ){
                 return ['response' => 200, 'data' => $comments->video];
