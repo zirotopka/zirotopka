@@ -17,7 +17,6 @@
     <!-- Добавлять js тут -->
     <script type="text/javascript" src="/assets/js/main.js"></script>
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/js/video.js?{{ time() }}"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
 
 
@@ -206,14 +205,15 @@
                 <h2>ОТЗЫВЫ</h2>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            @foreach($comments as $comment)
+                            @forelse($comments as $comment)
                                 <div class="swiper-slide video_holder" data-id="{{$comment->id}}">
                                     <img src="{{$comment->img_holder}}" alt="">
                                     <img src="/ico/play.png" alt="" class="ico_play">
                                     <p class="comment_name">{{$comment->user}}</p>
                                     <p class="comment_who">{{$comment->comment_text}}</p>
                                 </div>
-                            @endforeach    
+                            @empty
+                            @endforelse
                          </div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-prev"></div>
@@ -394,7 +394,7 @@
                     </span>
                 </button>
                 <div class="video-js-responsive-container vjs-hd" style="width:80%">
-                    <video id="training-video" class="video-js vjs-default-skin"
+                    <video id="comment-video" class="video-js vjs-default-skin"
                                      controls preload="auto"
                                       data-setup='{"responsive": true,"example_option":true}'>
                         <source src="" type="video/ogg">
