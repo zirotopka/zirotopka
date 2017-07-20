@@ -501,7 +501,7 @@ ul li{
 .start_shader{
 	position: absolute;
     margin: -35vw 0 0 0;
-    width: 84%;
+    width: 84.5%;
     height: 35vw;
     background-color: rgba(0,0,0,0.6);
     z-index: 2;
@@ -592,6 +592,7 @@ ul li{
 	font-size: 18vw;
 	margin: 16vw 0 0 -4vw;
 	height: 20vw;
+	pointer-events: none;
 }
 
 .pro_shader_gray p, .run_shader_gray p{
@@ -600,6 +601,9 @@ ul li{
 	opacity: 0.2;
 	font-size: 9vw;
 	margin: 8vw 0 0 -1.5vw;
+	width: 1px;
+    height: 1px;
+    pointer-events: none;
 }
 
 .pow_shader_gray p, .runp_shader_gray p{
@@ -608,6 +612,9 @@ ul li{
 	opacity: 0.2;
 	font-size: 9vw;
 	margin: 8vw 0 0 -1.5vw;
+	width: 1px;
+    height: 1px;
+    pointer-events: none;
 }
 
 .pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4{
