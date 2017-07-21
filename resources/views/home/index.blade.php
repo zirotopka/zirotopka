@@ -100,8 +100,8 @@
                             </li>
                         </ul>
                 </div>
-                <hr>
             </div>
+            <hr class="disp_line">
             <div class="programm-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>ПРОГРАММЫ</h2>
                 <div class="programm_list">
@@ -166,8 +166,8 @@
                         </div>
                     </div>
                 </div>
-                <hr>
             </div>
+            <hr class="disp_line">
             <div class="bonus-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>БОНУСЫ</h2>
                 <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 left_bonus_part">
@@ -177,8 +177,8 @@
                     <p>ЗАНИМАЙТЕСЬ СПОРТОМ, ЗАРАБАТЫВАЙТЕ ДЕНЬГИ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ<br>БОНУСНОЙ СИСТЕМЫ ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
                     <button type="button" class="bonus_btn">ПОДРОБНЕЕ</button>
                 </div>
-                <hr>
             </div>
+            <hr class="disp_line">
             <div class="how-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>КАК ЭТО РАБОТАЕТ</h2>
                 <div style="height: 43vw; max-height: 504px;" class="asd">
@@ -199,8 +199,8 @@
                     </div>
                 </div>
                 <button>ПОПРОБОВАТЬ БЕСПЛАТНО</button>
-                <hr>
             </div>
+            <hr class="disp_line">
             <div class="comments-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>ОТЗЫВЫ</h2>
                     <div class="swiper-container">
@@ -222,8 +222,8 @@
             
                 <p class="watch_more">Смотреть больше отзывов</p>
                 <button class="arrow" type="button"></button>
-                <hr>
             </div>
+            <hr class="disp_line">
             <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>ВОПРОСЫ И ОТВЕТЫ</h2>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left_quest">

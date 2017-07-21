@@ -203,6 +203,10 @@
 	margin-left: -0.1em;
 }
 
+.otchet:hover .load-btn .load-text{
+    margin: -0.1em 0 0 1em;
+}
+
 .otchet:active .load-btn .load{
 	content: url('/ico/load_act.png');
 }

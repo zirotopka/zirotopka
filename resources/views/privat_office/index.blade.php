@@ -174,7 +174,7 @@
 											<img class="load" src="/ico/load.png" alt="">
 											<p class="load-text">Загрузить отчёт</p>
 										</div>
-										<input class="prof-file " type="file">
+										<input class="prof-file " type="file" title="Загрузить отчёт">
 									</div>
 										<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
 									</div>

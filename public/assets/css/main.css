@@ -9,6 +9,49 @@ ul li{
 }
 
 /*-----------------------------sidebar---------------------------*/
+@media screen and (min-width: 992px) {
+	.column{
+		visibility: hidden;
+		pointer-events: none;
+	}
+
+}
+
+.disp_line{
+	margin: 0 0 6vw 40%;
+	width: 20%;
+    box-shadow: 0px 1px 0px #F98749;;
+    border-bottom: 0.00000000000000000000411px solid #F98749;
+    position: relative;
+    text-align: center;
+}
+
+.st-menu ul li a {
+    padding: 1.8em 0 1.8em 5em!important;
+    text-align: left;
+}
+.open ul li {
+    height: 4.5em!important;
+}
+
+.usr_img_mn{
+	text-align: center;
+    margin: 0 0px 1em 0;
+
+}
+
+.prof-disp{
+	margin: 0!important;
+}
+
+.profile_btns p{
+	margin-left: 5px!important;
+}
+
+.lgn{
+    padding: 1.6em 0 1em 4em !important;
+}
+
 .checked{
 	float: right;
 	padding: 2em 4em 0 0;
@@ -80,7 +123,7 @@ ul li{
 .main_sidebar ul {
     font-size: 1em;
     margin: 0;
-    padding: 4em 0 0 0;
+    padding: 5em 0 0 0;
     list-style: none;
     text-align: left;
 }
@@ -89,7 +132,7 @@ ul li{
 .main_sidebar ul li a {
 	text-decoration: none;
 	display: block;
-	padding: 0.9em 0 1em 4em !important;
+	padding: 0.9em 0 1em 4em;
 	outline: none;
 	color: #f3efe0;
 	text-transform: uppercase;
@@ -183,7 +226,7 @@ ul li{
 	width: 100%;
     height: 100%;
     position: absolute;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.3);
 	z-index: 1;
 }
 
@@ -193,13 +236,13 @@ ul li{
 	text-align: center;
 }
 
-.rl_btns{
-	display: inline-block;
-	width: 17vw;
-	height: 3.5vw;
-	border-radius: 2em;
-	font-family: MuseoSansCyrl_500;
-	font-size: 1.1vw;
+.rl_btns {
+    display: inline-block;
+    width: 17vw;
+    height: 4.3vw;
+    border-radius: 2em;
+    font-family: MuseoSansCyrl_500;
+    font-size: 1.1vw;
 }
 
 
@@ -255,7 +298,7 @@ ul li{
 }
 
 .reg_scrn_txt h1{
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	margin: 0.8vw 0 0 0;
 }
 
@@ -269,14 +312,13 @@ ul li{
 
 .rg_btn{
 	margin: 5vw 0 0 0;
-	width: 24vw;
+	width: 20vw;
 	height: 4vw;
 	background-color: #F98749;
 	border: none;
 	border-radius: 2em;
 	font-size: 1.1vw;
 	font-family: MuseoSansCyrl_500;
-	font-weight: 500;
 }
 
 .rg_btn:hover{
@@ -296,7 +338,7 @@ ul li{
 
 /*-----------------------------Second Screen(Info_screen)----------*/
 .info-screen{
-	height: auto;
+	height: 95vh;
 	padding: 0;
 }
 
@@ -321,6 +363,8 @@ ul li{
 	color: #f98749;
 	font-family: GilroyBold;
 	font-size: 1.9vw;
+	margin: 0;
+	padding: 0;
 }
 
 .info_first_string ul li, .info_second_string ul li{
@@ -380,7 +424,7 @@ ul li{
 }
 
 .info_cont{
-	padding: 4vw 0 0 0;
+	padding: 5vw 0 0 0;
 	text-align: center;
 }
 
@@ -401,35 +445,31 @@ ul li{
 	height: 14em;
 }
 
-.info-screen hr{
-	margin: 56vw 0 0 40%;
-	width: 20%;
-    box-shadow: 0px 1px 0px #F98749;
-    border-bottom: 0.00000000000000000000411px solid #F98749;
-    position: relative;
-    text-align: center;
-}
 
 
 
 /*-----------------------------Third Screen(Programm Screen)-----------------*/
 
 .programm-screen{
-	height: auto;
+	height: 95vh;
 	padding: 0;
+    margin: 0 0 2.5vw 0;
+
 }
 
 .programm-screen h2{
 	text-align: center;
-	margin:3em 0 1em 0;
+	margin:0;
 }
 
-.programm_list{
-	height: 84%;
-	width: 100%;
-	background: url('/ico/PO.png');
-	background-size: cover;
-	background-repeat: no-repeat;
+.programm_list {
+    height: 100%;
+    width: 100%;
+    background: url(/ico/PO.png);
+    background-size: 100vw 79vh;
+    background-repeat: no-repeat;
+    background-position: -1vw 3vw;
+    padding: 3.5vw 0 0 0;
 }
 
 .rone_start{
@@ -485,15 +525,6 @@ ul li{
 
 .second_progr_string{
 	margin: 1.6em 0 0 0;
-}
-
-.programm-screen hr{
-	margin: 47vw 0 0 40%;
-	width: 20%;
-    box-shadow: 0px 1px 0px #F98749;
-    border-bottom: 0.00000000000000000000411px solid #F98749;
-    position: relative;
-    text-align: center;
 }
 
 
@@ -659,20 +690,20 @@ ul li{
 }
 /*----------------------------Forth Screen(Bonus)----------------------------*/
 .bonus-screen{
-	height: auto;
+	height: 95vh;
 	text-align: center;
-	padding: 2em 0 0 0;
+	padding: 0 0 0 0;
 }
 .left_bonus_part{
-	padding: 8vw 0 0 0;
+	padding: 14vw 0 0 0;
 }
 .right_bonus_part{
 	height: 35vw;
-	padding: 8vw 0 0 2em;
+	padding: 14vw 0 0 2.9em;
 	text-align: left;
 	background: url("/ico/mon2.png");
 	background-repeat: no-repeat;
-	background-position: right;
+	background-position: right 6vw;
 	background-size: 18vw;
 }
 
@@ -714,20 +745,12 @@ ul li{
 }
 
 
-.bonus-screen hr{
-	margin: 37vw 0 0 40%;
-	width: 20%;
-    box-shadow: 0px 1px 0px #F98749;
-    border-bottom: 0.00000000000000000000411px solid #F98749;
-    position: relative;
-    text-align: center;
-}
-
 /*-----------------------------Fifth Screen(How-Screen)*/
 .how-screen{
-	height: auto;
+	height: 95vh;
 	text-align: center;
-	padding: 3vw 0 0 0;
+	padding: 0 0 0 0;
+	margin: 0 0 2vw 0;
 }
 
 .how_cnt{
@@ -782,7 +805,7 @@ ul li{
 	height: 4vw;
 	width: 22vw;
 	background-color: #F98749;
-	margin: 1em 0 0 0;
+	margin: 0;
 	border: none;
 	border-radius: 2em;
 	font-family: MuseoSansCyrl_500;
@@ -793,35 +816,26 @@ ul li{
 .how-screen button:hover{
 	height: 4.2vw;
 	width: 22.2vw;
-	margin: 1em 0 0em 0;
+	margin: 0 0 0.2vw 0;
 }
 
 .how-screen button:active{
 	height: 4.2vw;
 	width: 22.2vw;
 	background-color: #D9550E;
-	margin: 0.8em 0 0 0;
-}
-
-.how-screen hr{
-	margin: 6vw 0 0 40%;
-	width: 20%;
-    box-shadow: 0px 1px 0px #F98749;
-    border-bottom: 0.00000000000000000000411px solid #F98749;
-    position: relative;
-    text-align: center;
+	margin: 0 0 0.2vw 0;
 }
 
 /*-----------------------------Sixth Screen(comments-screen)------*/
 .comments-screen{
-	height: auto;
-	padding: 3vw 0 0 0;
+	height: 95vh;
+	padding: 0 0 0 0;
 	text-align: center;
 }
 
 .swiper-container{
 	margin: 3em 0 0 0;
-	height: 36vw;
+	height: 33vw;
 	width: 90%;
 }
 
@@ -838,7 +852,7 @@ ul li{
 }
 
 .swiper-slide{
-	padding: 6% 0 0 0;
+	padding: 0 0 0 0;
 }
 
 .swiper-slide video{
@@ -850,8 +864,8 @@ ul li{
 .ico_play{
     position: absolute;
     z-index: 2;
-    margin: 7vw 0 0 -10.5vw;
-    width: 5vw;
+    margin: 100px 0 0 -150px;
+    width: 70px;
 }
 
 .ewwq{
@@ -919,21 +933,11 @@ ul li{
 	background-size: 3.2em;
 
 }
-
-.comments-screen hr{
-	margin: 5em 0 0 40%;
-	width: 20%;
-    box-shadow: 0px 1px 0px #F98749;;
-    border-bottom: 0.00000000000000000000411px solid #F98749;
-    position: relative;
-    text-align: center;
-}
-
 /*-----------------------------Seventh Screen(questions-screen)-----------------*/
 .questions-screen{
-	height: auto;
+	height: 95vh;
 	text-align: center;
-	padding:4em 0 0 0;
+	padding: 0 0 0 0;
 }
 
 .questions-screen img{
@@ -996,10 +1000,10 @@ ul li{
 
 /*-----------------------------Eighth Screen(connect-screen)---------------*/
 .connect-screen{
-	height: auto;
+	height: 95vh;
 	background: url('/ico/unfootscr.png');
 	background-repeat: no-repeat;
-	background-size: 86vw 90vh;
+	background-size: 100vw 95vh;
 	background-position: -2.5vw 0;
 	margin: 0;
 	padding: 0;
@@ -1007,7 +1011,7 @@ ul li{
 
 .connect_screen_shader{
     width: 100%;
-    height: 89.1vh;
+    height: 95vh;
     position: absolute;
     background-color: rgba(50,50,50,0.7);
     z-index: 1;
@@ -1452,17 +1456,14 @@ div {
 	}
 
 	.info_cont {
-	    padding: 7vw 0 0 0;
+	    padding: 10vw 0 0 0;
 	}
 
 	.info_cont ul{
 		height: 20vw;
 	}
 
-	.info_naming {
-    	padding: 3vw 0 0 0;
-	}
-
+	
 	.info-screen hr {
 	    margin: 70vw 0 0 40%;
 	}
@@ -1508,11 +1509,25 @@ div {
 	}
 
 	/*----------------------info screen----------------*/
-	.info-screen{
+	.programm_list {
+	    height: 100%;
+	    width: 100%;
+	    background: url(/ico/PO.png);
+	    background-size: 100vw 64vh;
+	    background-repeat: no-repeat;
+	    background-position: -1vw 3vw;
+	    padding: 3.5vw 0 0 0;
+	}
+	
+	.programm-screen{
+		margin:0;
 	}
 
-	.programm_list{
-		background: none;	
+
+	.bonus-screen {
+	    height: 91vh;
+	    text-align: center;
+	    padding: 0 0 0 0;
 	}
 
 	.rone_start{
@@ -1547,7 +1562,8 @@ div {
 	}
 
 	.ico_play{
-	    margin: 12vw 0 0 -19vw;	
+	    margin: 100px 0 0 -150px;	
+	    width: 6em;
 	}
 
 	.programm-screen hr {
@@ -1621,6 +1637,7 @@ div {
 
 	.how-screen{
 		padding: 4vw 0 0 0;
+		margin:0;
 	}
 
 	.right_bonus_part{
@@ -1647,7 +1664,7 @@ div {
     	margin: 6vw 0 0 0;
 	}
 	.connect_screen_shader {
-	    height: 89.2vh;
+	    height: 95vh;
 	}
 	.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p {
 	    font-size: 1.3vw;
@@ -1710,10 +1727,6 @@ div {
 	    margin: 1.65em 0 0 0;
 	}
 
-
-	.comments-screen hr {
-	    margin: 4em 0 0 40%;
-	}
 	.connect_screen_shader p {
 	    font-size: 14.7vw;
 	    font-family: MuseoSansCyrl_900;
@@ -1721,10 +1734,39 @@ div {
 	    opacity: 0.2;
 	    color: white;
 	}
+	.side_logo {
+	    width: 18vw;
+	    margin-left: 0;
+	}
 }
 
 @media screen and (max-width: 767px) {
+	.programm-screen {
+	    height: auto;
+	    margin: 0 0 7vw 0;
+	}
 
+	.bonus-screen {
+	    height: auto;
+	    text-align: center;
+	    padding: 0 0 0 0;
+	}
+
+	.how-screen {
+	    height: auto;
+	    margin: 0 0 10vw 0;
+	}
+
+	.comments-screen {
+	    height: auto;
+		margin: 0 0 13vw 0;
+	}
+
+	.info-screen{
+		height: auto;
+	    margin: 0 0 5vw 0;
+	}
+	
 	.info_cont ul {
 	    height: 225vw;
 	}
@@ -1750,6 +1792,7 @@ div {
 	}
 	.side_logo{
 		width: 35vw;
+		margin-left: 0;
 	}
 	.reg_btn:hover{
 		width: 20.2vw;
@@ -1961,19 +2004,6 @@ div {
 		height: 100vw!important;
 		width: 85vw;
 	}
-
-	.programm-screen hr {
-	    margin: 377vw 0 0 40%!important;
-	}
-
-	.bonus-screen hr {
-   		margin: 127vw 0 0 40%;
-	}
-
-	.info-screen hr {
-   		margin: 113.2em 0 0 40%;
-	}
-
 	.start_shader {
 	    margin: -100vw 0 0px 8vw!important;
 	    width: 83.5%!important;
@@ -2107,15 +2137,15 @@ div {
 	}
 
 	.choice {
-	    background-position: 18.5vw 5.5em;
+	    background-position: 15.5vw 6.5em;
 	}
 
 	.freedom {
-	    background-position: 10.5vw 5.5em;
+	    background-position: 7.5vw 6.5em;
 	}
 
 	.profit {
-	    background-position: 13vw 5.5em;
+	    background-position: 11vw 6.5em;
 	}
 
 	.how-screen button {
@@ -2124,16 +2154,12 @@ div {
 	    width: 50vw!important;
 	}
 
-	.how-screen hr {
-	    margin: 11vw 0 0vw 40%;
-	}
-
 	.swiper-container{
 		height: 120vw!important;
 	}
 
 	.ico_play {
-	    margin: 31vw 0 0 -46vw;
+    	margin: 100px 0 0 -150px;
 	    width: 20vw;
 	}
 
@@ -2170,11 +2196,6 @@ div {
     	margin: 0.5em 0 15vw -4px;
 	}
 
-
-	.comments-screen hr {
-	    margin: 3em 0 0 40%;
-	}
-	
 	.ref, .zag, .ruls .zag{
 		font-size: 5vw;
 	}
@@ -2187,7 +2208,7 @@ div {
 	}
 
 	.questions-screen{
-		padding: 2em 0 0 0!important;
+		padding: 1.5em 0 0 0!important;
 	}
 	
 	.connect {
@@ -2235,6 +2256,11 @@ div {
 	    margin: 38vw 0 0 -0.8vw;
 	    opacity: 0.2;
 	    color: white;
+	}
+
+	.st-menu ul li a {
+	    padding: 1.8em 0 1.8em 2.6em!important;
+	    text-align: left;
 	}
 }
 

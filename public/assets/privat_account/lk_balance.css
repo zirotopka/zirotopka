@@ -278,6 +278,9 @@ td{
 		width: 100%!important;
 	}
 	.replenish_btn{
-		margin: 3em 0 3em 5.5%;
+		margin: 3em 0 3em 0;
+	}
+	.blns_btns{
+		text-align: center;
 	}
 }

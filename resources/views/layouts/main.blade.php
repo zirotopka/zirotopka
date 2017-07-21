@@ -64,27 +64,27 @@
                 </nav>
             @else
                 <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
-        <ul>
-            <li>
-                <img src="/ico/main_logo.png" class="side_logo" alt="">
-            </li>
-            <br><br>
-            <li>
-                <a href="" class="profile_btns">
-                    <p>ГЛАВНАЯ</p>
-                </a> 
-            </li>
-            <li>
-                <a href="" class="profile_btns">
-                    <p>программа <br> тренировок</p>
-                </a> 
-            </li>
-            <li>
-                <a href="" class="profile_btns">
-                    <p>бонусная <br> программа</p>
-                </a> 
-            </li>
-        </ul>                
+                    <ul>
+                        <li>
+                            <img src="/ico/main_logo.png" class="side_logo" alt="">
+                        </li>
+                        <br><br>
+                        <li>
+                            <a href="" class="profile_btns">
+                                <p>ГЛАВНАЯ</p>
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="" class="profile_btns">
+                                <p>программа <br> тренировок</p>
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="" class="profile_btns">
+                                <p>бонусная <br> программа</p>
+                            </a> 
+                        </li>
+                    </ul>                
                 </nav>
             @endif
 <!-- Шапка сайта -->
@@ -151,11 +151,9 @@
                                 </ul>
                             </div>
                         </div>
-
-                        
-
                     </div><!-- /st-content-inner -->
-@endif
+
+                @endif
                     {{-- @include('layouts.reg_modal') --}}
                     @section("content")
 
