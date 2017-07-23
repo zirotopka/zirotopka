@@ -1,5 +1,7 @@
 <?php
 namespace App\Helpers;
+
+use App\Helpers\Curl;
 use App\YandexModel as YandexModel;
 
 class Yandex {
@@ -12,10 +14,14 @@ class Yandex {
 			if ($test) {
 				$dstAccount = env('YANDEX_TEST_CASH');
 				$file_path = self::_get_test_xml_path($dstAccount, $sum, $clientOrderId);
+				$url = env('YANDEX_TEST_SERVER');
 			} else {
 				$dstAccount = env('YANDEX_TEST_CASH'); //под вопросом пока
 				$file_path = self::_get_prod_xml_path($dstAccount, $sum, $clientOrderId);
+				$url = env('YANDEX_PRODUCTION_SERVER');
 			}
+
+
 
 			return ['response' => 200, 'text' => $file_path];
 		} else {
