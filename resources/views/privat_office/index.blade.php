@@ -168,18 +168,17 @@
 									    	<img class="btn-play" src="/ico/play.png" alt="">
 									    @endif
 									</div>
-								<form action="">
-									<div class="otchet">
+									<div class="otchet" data-programm-stage="{{$programm_stage->id}}">
+										<div class="attachment-container"></div>
 										<div class="load-btn">
 											<img class="load" src="/ico/load.png" alt="">
 											<p class="load-text">Загрузить отчёт</p>
 										</div>
-										<input class="prof-file " type="file" title="Загрузить отчёт">
+										<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
 									</div>
 										<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
 									</div>
 										<p class="load-text">Загрузить отчёт</p> -->
-
 								</form>
 							</div>
 						@endif
@@ -187,9 +186,8 @@
 					@endforelse
 				</div>		
 				<div class="send-proof col-lg-12">
-						<button type="submit" class="send-proof-file"> Отправить на проверку</button>
+					<button class="send-proof-file" id="send-proof-file"> Отправить на проверку</button>
 				</div>
-			</form>
 
 				<!-- --------------------------------------------------------------- -->
 				<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
