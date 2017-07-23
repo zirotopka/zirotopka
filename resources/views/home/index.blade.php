@@ -3,8 +3,12 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
+    <link href="http://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
     <link href="/assets/css/main.css" type="text/css" rel="stylesheet">
     <link href="/assets/swiper/swiper.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
+
+
 
 @overwrite
 
@@ -13,6 +17,8 @@
     <!-- Добавлять js тут -->
     <script type="text/javascript" src="/assets/js/main.js"></script>
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
+    <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
+
 
 @overwrite
 
@@ -21,41 +27,14 @@
 		@include('home.fixed-menu')
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>	
         <div class="home_content col-lg-10 col-md-10 col-sm-12 col-xs-12">
-            <div class="reg-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="reg_screen">
+          @if ($user = Sentinel::check())
+          @php
+              $class = '';
+              $class = 'rg_check_in';
+          @endphp
+            <div class="{{$class}} reg-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="reg_screen">
                 <div  class="reg_screen_shader"></div>                
                 <div class="reg_scr_content">
-                    <div id="st-trigger-effects" class="hidden-md hidden-lg">
-                        <button data-effect="st-effect-2" class="cdr-btn">
-                            <img src="/ico/menu.png" alt="" style="width: 3vw;">
-                        </button>
-                    </div>
-                    @if ($user = Sentinel::check())
-                        <div class="checked">
-                            @if (!empty($user->user_ava_url))
-                                <img src="{{'/image/logos/'.$user->user_ava_url}}" alt="" class="img-circle logo-img">
-                            @else
-                                <img src="/image/logos/default.jpg" alt="" class="img-circle logo-img">
-                            @endif
-                            <div class="dropdown main_dropdown">
-                                <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <div>
-                                        <span class="user-name">{{$user->first_name}}</span>
-                                    </div>
-                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                </button>
-                                <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li><a href="/lk/{{$user->id}}">ПРОГРАММА</a></li>
-                                    <li><a href="/lk/{{$user->id}}/edit">ПРОФИЛЬ</a></li>
-                                    <li><a href="/logout">ВЫЙТИ</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    @else            
-                        <div class="reg_log_btns">
-                            <button type="button" class="rl_btns reg_btn" data-toggle="modal" data-target="#registr">РЕГИСТРАЦИЯ</button>
-                            <button type="button" class="rl_btns log_btn" data-toggle="modal" data-target="#login">ВОЙТИ</button>
-                        </div>
-                    @endif
                     <div class="reg_scrn_txt">
                         <h1>ОНЛАЙН ПЛАТФОРМА</h1>
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
@@ -64,6 +43,28 @@
                     <button type="button" class="rg_btn" data-toggle="modal" data-target="#registr">ЗАРЕГИСТРИРОВАТЬСЯ</button>
                 </div>    
             </div>
+          @else
+            <div class="reg-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="reg_screen">
+                <div  class="reg_screen_shader"></div>                
+                <div class="reg_scr_content">
+                    <div id="st-trigger-effects" class="hidden-md hidden-lg">
+                        <button data-effect="st-effect-2" class="cdr-btn">
+                            <img src="/ico/menu.png" alt="" style="width: 3vw;">
+                        </button>
+                    </div>
+                        <div class="reg_log_btns">
+                            <button type="button" class="rl_btns reg_btn" data-toggle="modal" data-target="#registr">РЕГИСТРАЦИЯ</button>
+                            <button type="button" class="rl_btns log_btn" data-toggle="modal" data-target="#login">ВОЙТИ</button>
+                        </div>
+                    <div class="reg_scrn_txt">
+                        <h1>ОНЛАЙН ПЛАТФОРМА</h1>
+                        <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
+                        <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>
+                    </div>
+                    <button type="button" class="rg_btn" data-toggle="modal" data-target="#registr">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                </div>    
+            </div>
+          @endif
             <div class="info-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="info_naming col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h2>ЧТО ТАКОЕ</h2>
@@ -99,13 +100,15 @@
                             </li>
                         </ul>
                 </div>
-                <hr>
             </div>
+            <hr class="disp_line">
             <div class="programm-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>ПРОГРАММЫ</h2>
                 <div class="programm_list">
                     <div class="rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                        <img src="/ico/start.png" class="start" alt="">
+                        <img src="/ico/start.jpg" class="start" alt="">
+                        <p>R.ONE start</p>
+                        <div class="start_shader_gray"><p>ST</p></div>
                         <div class="start_shader">
                             <h4>R.ONE start</h4>
                             <p>Программа для новичков</p>
@@ -115,16 +118,20 @@
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
                         <div class="first_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <img src="/ico/pro.png" class="prog_imgs prop" alt="">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <img src="/ico/pro.jpg" class="prog_imgs prop" alt="">
+                                    <p class="prprp">R.ONE pro</p>
+                                    <div class="pro_shader_gray"><p>PR</p></div>
                                     <div class="pro_shader">
                                         <h4>R.ONE pro</h4>
                                         <p>Программа для новичков</p>
                                         <button class="arrow" type="button"></button>
                                     </div>
                                 </li>
-                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <img src="/ico/pow.png" class="prog_imgs powp" alt="">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <img src="/ico/power.jpg" class="prog_imgs powp" alt="">
+                                    <p class="prprp">R.ONE power</p>
+                                    <div class="pow_shader_gray"><p>PO</p></div>
                                     <div class="pow_shader">
                                         <h4>R.ONE power</h4>
                                         <p>Программа для новичков</p>
@@ -135,16 +142,20 @@
                         </div>
                         <div class="second_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <img src="/ico/run.png" class="prog_imgs runp" style="width: 21vw; margin: 0.1em 0 0 -0.65em;" alt="">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <img src="/ico/run.jpg" class="prog_imgs runp" alt="">
+                                    <p class="prprp">R.ONE run</p>
+                                    <div class="run_shader_gray"><p>RU</p></div>
                                     <div class="run_shader">
                                         <h4>R.ONE run</h4>
                                         <p>Программа для новичков</p>
                                         <button class="arrow" type="button"></button>
                                     </div>
                                 </li>
-                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <img src="/ico/run+.png" class="prog_imgs runpl" alt="">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <img src="/ico/run+.jpg" class="prog_imgs runpl" alt="">
+                                    <p class="prprp">R.ONE run+</p>
+                                    <div class="runp_shader_gray"><p>RU+</p></div>                    
                                     <div class="runp_shader">
                                         <h4>R.ONE run+</h4>
                                         <p>Программа для новичков</p>
@@ -155,8 +166,8 @@
                         </div>
                     </div>
                 </div>
-                <hr>
             </div>
+            <hr class="disp_line">
             <div class="bonus-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>БОНУСЫ</h2>
                 <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 left_bonus_part">
@@ -166,8 +177,8 @@
                     <p>ЗАНИМАЙТЕСЬ СПОРТОМ, ЗАРАБАТЫВАЙТЕ ДЕНЬГИ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ<br>БОНУСНОЙ СИСТЕМЫ ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
                     <button type="button" class="bonus_btn">ПОДРОБНЕЕ</button>
                 </div>
-                <hr>
             </div>
+            <hr class="disp_line">
             <div class="how-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>КАК ЭТО РАБОТАЕТ</h2>
                 <div style="height: 43vw; max-height: 504px;" class="asd">
@@ -183,44 +194,39 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt profit">
                         <img src="/ico/prft.svg" alt="">
-                        <p class="orng">Возможность зарабатывать</p>
+                        <p class="orng ewwq">Возможность зарабатывать</p>
                         <p class="who_txt">Вознаграждения через бонусную<br>систему платформы. Поощрение<br>и подарки для самых активных.</p>
                     </div>
                 </div>
                 <button>ПОПРОБОВАТЬ БЕСПЛАТНО</button>
-                <hr>
             </div>
+            <hr class="disp_line">
             <div class="comments-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>ОТЗЫВЫ</h2>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <video src="/video/trainings/birpie.mp4" class="video-js" controls></video>
-                            <p class="comment_name">Пётр Пётр</p>
-                            <p class="comment_who">Участник R'ONE pro</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <video></video>
-                            <p class="comment_name">Илья Петров</p>
-                            <p class="comment_who">Участник R'ONE power</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <video></video>
-                            <p class="comment_name">Ирина Пархоменко</p>
-                            <p class="comment_who">Участник R'ONE start</p>
-                        </div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            @forelse($comments as $comment)
+                                <div class="swiper-slide video_holder" data-id="{{$comment->id}}">
+                                    <img src="{{$comment->img_holder}}" alt="">
+                                    <img src="/ico/play.png" alt="" class="ico_play">
+                                    <p class="comment_name">{{$comment->user}}</p>
+                                    <p class="comment_who">{{$comment->comment_text}}</p>
+                                </div>
+                            @empty
+                            @endforelse
+                         </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
+            
                 <p class="watch_more">Смотреть больше отзывов</p>
                 <button class="arrow" type="button"></button>
-                <hr>
             </div>
+            <hr class="disp_line">
             <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>ВОПРОСЫ И ОТВЕТЫ</h2>
-                <div class="col-lg-6 col-md-6 col-sm-6 left_quest">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left_quest">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ref">
                         <div>
                             <img src="/ico/lightning.png" alt="">
@@ -266,7 +272,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 right_quest">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 right_quest">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ruls">
                         <div>
                             <img src="/ico/prize1.png" alt="">
@@ -314,12 +320,14 @@
                 </div>
             </div>
             <div class="connect-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div  class="connect_screen_shader"></div>
+                <div  class="connect_screen_shader">
+                    <p>REFORMATOR</p>
+                </div>
                 <div class="connect_content">
                     <p class="connect">ПРИСОЕДИНИТЬСЯ!</p>
                     <p class="connect_info">ПОУЧИТЬ ДОСТУП К ПЛАТФОРМЕ REFORMATOR.ONE <br>В ТЕЧЕНИЕ ТЕСТОВОГО ПЕРИОДА СОВЕРШЕННО БЕСПЛАТНО</p>
                     <p class="connect_price">2500 руб. <b>0 руб.</b></p>
-                    <button class="connect_btn" type="button">ПРОБОВАТЬ БЕСПЛАТНО</button>
+                    <button class="connect_btn" type="button">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                 </div>                
             </div>
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -376,6 +384,25 @@
             </footer>
         </div>
 	</div>
+
+    <div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
+        <div class="display-inline width-eight-perc" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <img src="/ico/close.png" alt="">   
+                    </span>
+                </button>
+                <div class="video-js-responsive-container vjs-hd" style="width:80%">
+                    <video id="comment-video" class="video-js vjs-default-skin"
+                                     controls preload="auto"
+                                      data-setup='{"responsive": true,"example_option":true}'>
+                        <source src="" type="video/ogg">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
 	@include('home.registration',['user' => $user, 'referral' => $referral])
 	@include('home.login')
 @overwrite

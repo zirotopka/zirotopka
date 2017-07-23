@@ -37,5 +37,5 @@ $( document ).ready(function() {
       for (var i = 0; i < video.length; i++) {
         video[i].load();
       }
-    });
+  });
 });

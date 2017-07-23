@@ -126,7 +126,7 @@ input:focus{
 	background-color: #282828;
 	position: fixed;
 	width: 100%;
-	z-index: 2;
+	z-index: 3;
 }
 .codrops-top a {
 	display: inline-block;
@@ -240,9 +240,27 @@ button:hover {
 	padding: 0;
 }
 
-@media screen and (max-width: 46.0625em) {
-	.column {
 
+@media screen and (max-width: 1199px) {
+	.dropdown {
+	    width: 25%!important;
+	}
+	.score {
+	    width: 16.67%!important;
+	}
+}
+
+@media screen and (max-width: 969px) {
+	.dropdown {
+	    width: 33.3%!important;
+	}
+}
+
+@media screen and (max-width: 46.0625em) {
+	.dropdown {
+	    width: 33.3%!important;
+	}
+	.column {
 		min-width: auto;
 		min-height: auto;
 		text-align: center;
@@ -277,7 +295,7 @@ button:hover {
 	.user_dropdown{
 		width: 100%!important ;
 		margin: 0 0 0 0;
-		min-width: 157px;
+		min-width: 160px;
 	}
 
 	.dropdown button div{
@@ -286,6 +304,15 @@ button:hover {
 	.codrops-header {
 		padding: 3em;
 	}
+
+	.st-menu {
+		width: 50%!important;
+	}
+
+	.st-effect-2.st-menu-open .st-pusher {
+		-webkit-transform: translate3d(50%, 0, 0)!important;
+		transform: translate3d(50%, 0, 0)!important;
+	}
 }
 
 
@@ -293,7 +320,7 @@ button:hover {
 .codrops-btn{
 	width: 100%;
 	height: 100%;
-	padding: 0.1em 0 0 0;
+	padding: 0 0 0 0;
 }
 
 .codrops-btn img{
@@ -338,6 +365,7 @@ button:hover {
 	text-align: center;
 	margin: 0;
 	height: 100%;
+	width: 19.3%;
 }
 
 .dropdown button{
@@ -346,6 +374,17 @@ button:hover {
 	text-align: center;
 	padding: 8px 0 0 0;
 }
+
+@media not all and (min-resolution:.001dpcm) { @media {
+   .dropdown button{ 
+		padding: 0 0 0 0;
+	}
+
+	.btn-play {
+		margin: 4vw 0 0 -13.5vw; 
+	}
+}}
+
 
 .dropdown button div{
 	height: 2em;
@@ -396,6 +435,7 @@ button:hover {
 
 .score{
 height: 100%;
+width: 14%;
 }
 
 .score p{
@@ -465,7 +505,7 @@ button:focus {
 .close{
 	position: absolute;
 	z-index: 1;
-	margin: 3% 0 0 53%;
+	margin: 3% 0 0 43%;
 }
 
 .close span img{
@@ -502,7 +542,7 @@ button:focus {
 
 .prgr_ico{
 	background: url('/ico/prgrm.png');
-	margin: 0 0 0 26px!important;
+	margin: 0 0 0 20px!important;
 	background-size: 1em 1em;
 	width: 1em;
 	height: 1em;

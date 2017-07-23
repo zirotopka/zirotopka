@@ -192,12 +192,12 @@ option, option:hover, option:active ,option:focus,
 }
 
 .open ul li{
-	height: 3em;
+	height: 4em;
 } 
 
 .open ul li a{
 	height: 100%;
-	padding: 1.2em 0 0 15% !important;
+	padding: 2em 0 0 15% !important;
 	font-size: 0.8em;
 }
 
@@ -350,11 +350,17 @@ label:hover:before {
 	}
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
 	.right-progrm-part{
 		display: none!important;
 	}
 	.left-progrm-part{
 		width: 100%!important;
+	}
+	.close span img {
+   		width: 1em!important;
+	}
+	#video-modal {
+    	margin: 23vw 0 0 0!important;
 	}
 }
