@@ -1,3 +1,5 @@
-$('body').scrollspy({ 
-		target: '.navbar',
+jQuery(document).ready(function(){
+	$('body').scrollspy({ 
+		target: '#Scrollspy',
 	});
+});
