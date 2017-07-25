@@ -15,7 +15,6 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script type="text/javascript" src="/assets/js/main.js"></script>
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
 
@@ -23,7 +22,7 @@
 @overwrite
 
 @section("content")
-	<div class="container-fluid">
+	<div class="container-fluid" >
 		@include('home.fixed-menu')
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>	
         <div class="home_content col-lg-10 col-md-10 col-sm-12 col-xs-12">
@@ -65,7 +64,7 @@
                 </div>    
             </div>
           @endif
-            <div class="info-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="info-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_2">
                 <div class="info_naming col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h2>ЧТО ТАКОЕ</h2>
                     <img src="/ico/REFORMATOR.png" alt="">
@@ -102,7 +101,7 @@
                 </div>
             </div>
             <hr class="disp_line">
-            <div class="programm-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="programm-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_3">
                 <h2>ПРОГРАММЫ</h2>
                 <div class="programm_list">
                     <div class="rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
@@ -168,7 +167,7 @@
                 </div>
             </div>
             <hr class="disp_line">
-            <div class="bonus-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="bonus-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_4">
                 <h2>БОНУСЫ</h2>
                 <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 left_bonus_part">
                     <img src="/ico/money.svg" alt="">    
@@ -179,7 +178,7 @@
                 </div>
             </div>
             <hr class="disp_line">
-            <div class="how-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="how-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_5">
                 <h2>КАК ЭТО РАБОТАЕТ</h2>
                 <div style="height: 43vw; max-height: 504px;" class="asd">
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt choice">
@@ -201,7 +200,7 @@
                 <button>ПОПРОБОВАТЬ БЕСПЛАТНО</button>
             </div>
             <hr class="disp_line">
-            <div class="comments-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="comments-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_6">
                 <h2>ОТЗЫВЫ</h2>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -224,7 +223,7 @@
                 <button class="arrow" type="button"></button>
             </div>
             <hr class="disp_line">
-            <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_7">
                 <h2>ВОПРОСЫ И ОТВЕТЫ</h2>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left_quest">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ref">
@@ -319,13 +318,13 @@
                     </div>
                 </div>
             </div>
-            <div class="connect-screen col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="connect-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_8">
                 <div  class="connect_screen_shader">
                     <p>REFORMATOR</p>
                 </div>
                 <div class="connect_content">
                     <p class="connect">ПРИСОЕДИНИТЬСЯ!</p>
-                    <p class="connect_info">ПОУЧИТЬ ДОСТУП К ПЛАТФОРМЕ REFORMATOR.ONE <br>В ТЕЧЕНИЕ ТЕСТОВОГО ПЕРИОДА СОВЕРШЕННО БЕСПЛАТНО</p>
+                    <p class="connect_info">ПОЛУЧИТЬ ДОСТУП К ПЛАТФОРМЕ REFORMATOR.ONE <br>В ТЕЧЕНИЕ ТЕСТОВОГО ПЕРИОДА СОВЕРШЕННО БЕСПЛАТНО</p>
                     <p class="connect_price">2500 руб. <b>0 руб.</b></p>
                     <button class="connect_btn" type="button">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                 </div>                
@@ -355,7 +354,7 @@
                         <li>
                             <a href="">РЕГИСТРАЦИЯ</a>
                         </li>
-                        <li>
+                        <li class="accsss">
                             <a href="">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
                         </li>
                         <li>

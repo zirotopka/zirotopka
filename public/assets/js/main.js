@@ -8,7 +8,10 @@ jQuery.ajaxSetup({
 
 $(document).ready(function(){
 //	$('html').perfectScrollbar();
+	$('body').scrollspy({ 
+		target: '#Scrollspy', 
 
+	});
 	$('#choose_programe_form').modal('show');
 	$('.selectpicker').on('changed.bs.select', function (e) {
 		var program_id = $('.selectpicker').val();

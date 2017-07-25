@@ -33,14 +33,14 @@
     </div>
 @else
     <div class="main_sidebar hidden-xs hidden-sm col-lg-2 col-md-2" style="height: 100%; padding: 0; z-index: 1">
-        <nav class="left_edit_part">
-            <ul>
+        <nav class="navbar" id="Scrollspy">
+            <ul class="nav">
                 <li>
                     <img src="/ico/main_logo.png" class="side_logo" alt="">
                 </li>
                 <br><br>
                 <li>
-                    <a href="" class="profile_btns" style="padding:1.7em 0 1em 4em!important">
+                    <a href="/" class="profile_btns" style="padding:1.7em 0 1em 4em!important">
                         <p>ГЛАВНАЯ</p>
                     </a> 
                 </li>
@@ -52,6 +52,46 @@
                 <li>
                     <a href="" class="profile_btns">
                         <p>бонусная <br> программа</p>
+                    </a> 
+                </li>
+                <li>
+                    <a href="#section_2" >
+                        <p>02 ОПИСАНИЕ</p>
+                    </a> 
+                </li>
+                <li>
+                    <a href="#section_3" >
+                        <p>03 ПРОГРАММЫ</p>
+                    </a> 
+                </li>
+                <li>
+                    <a href="#section_4" >
+                        <p>04 БОНУСЫ</p>
+                    </a> 
+                </li>
+                <li>
+                    <a href="#section_5" >
+                        <p>05 КАК РАБОТАЕТ</p>
+                    </a> 
+                </li>
+                <li>
+                    <a href="#section_6" >
+                        <p>06 ОТЗЫВЫ</p>
+                    </a> 
+                </li>
+                <li>
+                    <a href="#section_7" >
+                        <p>07 ВОПРОСЫ</p>
+                    </a> 
+                </li>
+                <li>
+                    <a href="#section_8" >
+                        <p>08 ДОСТУП</p>
+                    </a> 
+                </li>
+                <li>
+                    <a href="#section_8" >
+                        <p>НАВЕРХ</p>
                     </a> 
                 </li>
             </ul>                

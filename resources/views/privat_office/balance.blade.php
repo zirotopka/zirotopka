@@ -30,35 +30,38 @@
 		<div class="table-scrolling col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 			<table class="table balance_table">
-				<tr>
-					<th class="hidden-xs">№</th>
-					<th class="hidden-xs">ДАТА</th>
-					<th class="hidden-xs">ВРЕМЯ</th>
-					<th>ТИП ТРАНЗАКЦИИ</th>
-					<th>НАЗНАЧЕНИЕ</th>
-					<th>СУММА</th>
-				</tr>
-			
-				@forelse ($accruals as $accrual)
-					<?php $created_at = DateTime::createFromFormat('Y-m-d H:i:s', $accrual->created_at); ?>
+				<thead>
 					<tr>
-						<td class="hidden-xs">{{$accrual->id}}</td>
-						<td class="hidden-xs">{{$created_at->format('Y-m-d')}}</td>
-						<td class="hidden-xs">{{$created_at->format('H:i:s')}}</td>
-						<td>{{!empty($accrual->type) ? $accrual->type->name : ''}}</td>
-						<td>{{$accrual->comment}}</td>
-						<td>{{number_format($accrual->sum,0,',',' ')}}</td>
+						<th class="hidden-xs">№</th>
+						<th class="hidden-xs">ДАТА</th>
+						<th class="hidden-xs">ВРЕМЯ</th>
+						<th>ТИП ТРАНЗАКЦИИ</th>
+						<th>НАЗНАЧЕНИЕ</th>
+						<th>СУММА</th>
 					</tr>
-				@empty
-					<tr>
-						<td class="hidden-xs"></td>
-						<td class="hidden-xs"></td>
-						<td class="hidden-xs"></td>
-						<td class="text-center">Транзакции отсутствуют</td>
-						<td></td>
-						<td></td>
-					</tr>
-				@endforelse
+				</thead>
+				<tbody>
+					@forelse ($accruals as $accrual)
+						<?php $created_at = DateTime::createFromFormat('Y-m-d H:i:s', $accrual->created_at); ?>
+						<tr>
+							<td class="hidden-xs">{{$accrual->id}}</td>
+							<td class="hidden-xs">{{$created_at->format('Y-m-d')}}</td>
+							<td class="hidden-xs">{{$created_at->format('H:i:s')}}</td>
+							<td>{{!empty($accrual->type) ? $accrual->type->name : ''}}</td>
+							<td>{{$accrual->comment}}</td>
+							<td>{{number_format($accrual->sum,0,',',' ')}}</td>
+						</tr>
+					@empty
+						<tr>
+							<td class="hidden-xs"></td>
+							<td class="hidden-xs"></td>
+							<td class="hidden-xs"></td>
+							<td class="text-center">Транзакции отсутствуют</td>
+							<td></td>
+							<td></td>
+						</tr>
+					@endforelse
+				</tbody>
 			</table>
 		</div>
 		<div class="blns_btns">

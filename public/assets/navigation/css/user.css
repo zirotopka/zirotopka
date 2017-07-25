@@ -46,6 +46,7 @@ body {
 	background: white !important;
 	font-weight: bold !important;
 	font-family: 'GilroyLight' !important;
+	position: relative;
 }
 
 a,a:hover, a:focus, a:active {

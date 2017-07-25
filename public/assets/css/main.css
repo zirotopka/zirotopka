@@ -18,12 +18,13 @@ ul li{
 }
 
 .disp_line{
-	margin: 0 0 6vw 40%;
-	width: 20%;
-    box-shadow: 0px 1px 0px #F98749;;
+    margin: 0 0 6vw 40%;
+    width: 20%;
+    box-shadow: none;
     border-bottom: 0.00000000000000000000411px solid #F98749;
     position: relative;
     text-align: center;
+    opacity: 0.5;
 }
 
 .st-menu ul li a {
@@ -259,14 +260,14 @@ ul li{
 
 .reg_btn:hover{
 	width: 17.2vw;
-    height: 3.8vw;
+    height: 4.5vw;
     margin: -0.2em 0 0 0.2em;
     background-color: #F98749;
 }
 
 .reg_btn:active{
 	width: 17.2vw;
-    height: 3.8vw;
+    height: 4.5vw;
     margin: -0.2em 0 0 0;
     background-color: #D9550E;
 }
@@ -278,14 +279,14 @@ ul li{
 
 .log_btn:hover{
 	width: 17.2vw;
-    height: 3.8vw;
+    height: 4.5vw;
     margin: -0.2em -0.2em 0 0;
 	background-color: rgba(0,0,0,0);
 }
 
 .log_btn:active{
 	width: 17.2vw;
-    height: 3.8vw;
+    height: 4.5vw;
     margin: -0.2em -0.2em 0 0;
     border: none;
 	background-color: rgba(255,255,255,0.7);
@@ -323,14 +324,14 @@ ul li{
 
 .rg_btn:hover{
 	margin: 4.8vw 0 0 0;
-	width: 25.2vw;
+	width: 20.2vw;
 	height: 4.2vw;
 	background-color: #F98749;
 }
 
 .rg_btn:active{
 	margin: 4.8em 0 0 0;
-	width: 25.2vw;
+	width: 20.2vw;
 	height: 4.2vw;
 	background-color: #D9550E;
 }
@@ -340,6 +341,7 @@ ul li{
 .info-screen{
 	height: 95vh;
 	padding: 0;
+	margin: 3vh 0 0 0;
 }
 
 .info_naming{
@@ -955,7 +957,7 @@ ul li{
 
 .left_quest, .right_quest{
 	text-align: left;
-	margin: 5em 0 0 0;
+	margin: 18vh 0 0 0;
 	padding: 0 0 0 10%;
 	height: auto;
 }
@@ -1000,10 +1002,10 @@ ul li{
 
 /*-----------------------------Eighth Screen(connect-screen)---------------*/
 .connect-screen{
-	height: 95vh;
+	height: 85vh;
 	background: url('/ico/unfootscr.png');
 	background-repeat: no-repeat;
-	background-size: 100vw 95vh;
+	background-size: 100vw 85vh;
 	background-position: -2.5vw 0;
 	margin: 0;
 	padding: 0;
@@ -1011,7 +1013,7 @@ ul li{
 
 .connect_screen_shader{
     width: 100%;
-    height: 95vh;
+    height: 85vh;
     position: absolute;
     background-color: rgba(50,50,50,0.7);
     z-index: 1;
@@ -1098,6 +1100,7 @@ footer{
 	background-color: #282828;
 	margin: 0 0 -10px 0
 	padding: 0;
+	height: 40vh;
 }
 
 .mission p{
@@ -1105,6 +1108,7 @@ footer{
 	color: white;
 	text-transform: uppercase;
 	font-size: 0.9vw;
+	margin: 3vh 0 0 0;
 }
 
 .mission img{
@@ -1123,15 +1127,18 @@ footer .prgrm_list ul li{
 }
 
 footer .prgrm_list{
-	padding: 1.7em 0 0 0;
+	padding: 2.5em 0 0 0;
+	line-height: 1.6em;
 }
 
 footer .prgrm_list .bonus{
 	margin: 1em 0 0 0;
+	line-height: 1em;
 }
 
 .reg_f_s{
-	padding: 1.7em 0 0 0;
+	padding: 2.2em 0 0 0;
+	line-height: 2em;
 }
 
 .reg_f_s img{
@@ -1141,7 +1148,15 @@ footer .prgrm_list .bonus{
 }
 
 .ofrta{
-	padding: 1.7em 0 0 0;
+	padding: 2.5em 0 0 0;
+}
+
+.accsss{
+	line-height: 1em;
+}
+
+#section_2, #section_3, #section_4, #section_5, #section_6, #section_7{
+	
 }
 
 /*-----------------------------Login form------------------------*/
