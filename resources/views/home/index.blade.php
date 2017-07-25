@@ -15,6 +15,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
+
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
 

@@ -34,7 +34,7 @@
 @else
     <div class="main_sidebar hidden-xs hidden-sm col-lg-2 col-md-2" style="height: 100%; padding: 0; z-index: 1">
         <nav class="navbar" id="Scrollspy">
-            <ul class="nav">
+            <ul class="nav nav-pills nav-stacked" data-spy="affix">
                 <li>
                     <img src="/ico/main_logo.png" class="side_logo" alt="">
                 </li>
