@@ -2084,6 +2084,7 @@ div {
 	    background-repeat: no-repeat;
 	    height: 2.2em;
 	    width: 2.2em;
+	    margin: -0.2em -0.2em 0 0!important;
 	}
 
 	.arrow:active {
@@ -2314,7 +2315,7 @@ div {
 
 	.how-screen button {
 	    height: 10vw!important;
-	    font-size: 0.7em!important;
+	    font-size: 0.6em!important;
 	    width: 50vw!important;
 	}
 
@@ -2362,7 +2363,7 @@ div {
 	}
 
 	.ref, .zag, .ruls .zag{
-		font-size: 5vw;
+		font-size: 5vw!important;
 	}
 	.connect_screen_shader {
 	    height: 100%;
