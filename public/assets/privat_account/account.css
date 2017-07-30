@@ -541,3 +541,23 @@
     list-style: none;
     text-align: center;
 }
+
+@media not all and (min-resolution:.001dpcm) { @media {
+	.btn-play {
+	    margin: 4vw 0 0 -13.5vw;
+	}
+
+	@media screen and (max-width: 767px) {
+		.btn-play {
+			    margin:14vw 0 0 -56vw;
+
+			}
+	
+	}
+	@media screen and (max-width: 991px) {
+		.btn-play {
+			    margin:6vw 0 0 -29vw;
+			}
+	
+	}
+}}

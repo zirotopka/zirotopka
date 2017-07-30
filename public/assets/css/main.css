@@ -370,14 +370,14 @@ ul li{
 
 .rg_btn:hover{
 	margin: 4.8vw 0 0 0;
-	width: 20.2vw;
+	width: 22.2vw;
 	height: 4.2vw;
 	background-color: #ff8a18;
 }
 
 .rg_btn:active{
 	margin: 4.8em 0 0 0;
-	width: 20.2vw;
+	width: 22.2vw;
 	height: 4.2vw;
 	background-color: #D9550E;
 }
@@ -603,6 +603,7 @@ ul li{
 	width: 19vw;
 	word-wrap: break-word;
 	height: 14vw;
+	pointer-events: none;
 }
 
 .start_shader h4{
@@ -612,6 +613,7 @@ ul li{
     z-index: 2;
     margin: 6vw 0 0 3vw;
     color: #ff8a18;
+    pointer-events: none;
 }
 
 .start_shader button{
@@ -709,6 +711,7 @@ ul li{
     margin: 2.5vw 0 0 2vw;
     color: white;
     width: 15vw;
+	pointer-events: none;
 }
 
 .pro_shader p, .pow_shader p, .run_shader p, .runp_shader p{
@@ -722,6 +725,7 @@ ul li{
 	width: 16vw;
 	word-wrap: break-word;	
 	height: 4.5vw;
+	pointer-events: none;
 }
 
 .pro_shader button, .pow_shader button, .run_shader button, .runp_shader button{
@@ -929,6 +933,7 @@ ul li{
     z-index: 2;
     margin: 38% 0 0 -59%;
     width: 30%;
+    cursor: pointer;
 }
 
 .ewwq{
@@ -973,13 +978,30 @@ ul li{
 
     
 .start-arrow{
-	margin: 4em 0 0 23em!important;
+	margin: 4em 0 0 23vw!important;
+	height: 4.6em;
+    width: 4.6em;
+    background-size: 4.6em;
 }
 
     
+.start-arrow:hover{
+    height: 4.6em;
+    width: 4.6em;
+    background-size: 4.6vw;
+    margin: 3.5em 0 0 24vw !important;}
+
+    
+.start-arrow:active{
+    margin: 3.5em 0 0 24vw !important;}
+    
 .progr-arrow{
-	margin: 1em 0 0 15em!important;
+	margin: 1em 0 0 15vw!important;
 }
+
+.arrow:hover ~ .watch_more{
+	margin: 111111em;
+} 
 
 .arrow{
 	background: url('/ico/arrow.png');
@@ -989,7 +1011,7 @@ ul li{
 	width: 3em;
 	display: inline-block;
 	border-radius: 10em;
-	margin: 2em 0 0 1em;
+	margin: 2em 0 0 1vw;
 	vertical-align: bottom;
 	cursor: pointer;
 }
@@ -997,7 +1019,7 @@ ul li{
 .arrow:hover{
 	height: 3.2em;
 	width: 3.2em;
-	margin: 1.8em -0.2em 0 1em;
+	margin: 1.8em -0.2em 0 1vw;
 	background-color: white;
 	background: url('/ico/arrow.png');
 	background-size: 3.2em;
@@ -1007,7 +1029,7 @@ ul li{
 	background: url('/ico/ntbtn.png');
 	height: 3.2em;
 	width: 3.2em;
-	margin: 1.8em -0.2em 0 1em;
+	margin: 1.8em -0.2em 0 1vw;
 	background-color: #c4c4c4;
 	background-size: 3.2em;
 
@@ -1057,6 +1079,7 @@ ul li{
 	color: #afafaf;
 	list-style: none;
 	font-size: 1.05em;
+	cursor: pointer;
 }
 .right_quest{
 	background: url('/ico/qw.png');
@@ -2462,15 +2485,15 @@ div {
 	}
 
 	.arrow:hover {
-	    height: 4.7em;
-	    width: 4.7em;
-	    background-size: 4.7em;
+	    height: 4.2em;
+	    width: 4.2em;
+	    background-size: 4.2em;
 	}
 
 	.arrow:active {
-	    height: 4.7em;
-	    width: 4.7em;
-	    background-size: 4.7em;
+	    height: 4.2em;
+	    width: 4.2em;
+	    background-size: 4.2em;
 	}
 
 	.questions-screen img {
@@ -2624,3 +2647,7 @@ div {
 	    height: 35vh;
 	}
 }
+
+/*------------------------Safari Only--------------------*/
+@media not all and (min-resolution:.001dpcm) { @media {
+}}
