@@ -3,6 +3,10 @@ input{
 }
 /*--------------Right part--------------*/
 
+.st-content{
+	overflow-y: hidden;
+}
+
 .right_edit_part{
 	height: 100%;
 	padding: 7em 0 0 0;
@@ -272,7 +276,6 @@ td{
 
 @media screen and (max-width: 61.95em) {
 	.pagination{
-		margin-left: 60%!important;
 	}
 	.table-scrolling{
 		width: 100%!important;
@@ -282,5 +285,91 @@ td{
 	}
 	.blns_btns{
 		text-align: center;
+	}
+}
+
+
+thead{
+	position: fixed;
+	background: white;
+    width: 78.95vw;
+   	height: 4em;
+}
+
+.tb_nm{
+	width: 5.5vw!important;
+}
+
+.tb_dt{
+	width: 12.1vw!important;
+}
+
+.tb_tm{
+	width: 9.6vw!important;
+}
+
+.tp_trz{
+    width: 13.6vw!important;
+}
+
+.tb_znc{
+    width: 30.85vw;
+}
+
+.tb_sm{
+    width: 7vw!important;
+}
+
+@media screen and (max-width: 767px) {
+	.pagination {
+	    margin-left: 55%!important;
+	}
+	thead{
+		position: fixed;
+		background: white;
+	    width: 100vw;
+	   	height: 4em;
+	}
+	.tb_znc{
+	    width: 45vw!important;
+	}
+
+	.tb_sm{
+	    width: 6vw!important;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	thead{
+		position: fixed;
+		background: white;
+	    width: 100vw;
+	   	height: 4em;
+	}
+	.tb_nm{
+		width: 7.1vw;
+	}
+
+	.tb_dt{
+		width: 15.3vw;
+	}
+
+	.tb_tm{
+		width: 9.6vw;
+	}
+
+	.tp_trz{
+	    width: 17vw;
+	}
+
+	.tb_znc{
+	    width: 38.85vw;
+	}
+
+	.tb_sm{
+	    width: 9vw!important;
+	}
+	.pagination {
+	    margin-left: 80%;
 	}
 }

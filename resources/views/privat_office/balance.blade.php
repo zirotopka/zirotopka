@@ -32,15 +32,23 @@
 			<table class="table balance_table">
 				<thead>
 					<tr>
-						<th class="hidden-xs">№</th>
-						<th class="hidden-xs">ДАТА</th>
-						<th class="hidden-xs">ВРЕМЯ</th>
-						<th>ТИП ТРАНЗАКЦИИ</th>
-						<th>НАЗНАЧЕНИЕ</th>
-						<th>СУММА</th>
+						<th class="hidden-xs tb_nm">№</th>
+						<th class="hidden-xs tb_dt">ДАТА</th>
+						<th class="hidden-xs tb_tm">ВРЕМЯ</th>
+						<th class="tp_trz">ТИП ТРАНЗАКЦИИ</th>
+						<th class="tb_znc">НАЗНАЧЕНИЕ</th>
+						<th class="tb_sm">СУММА</th>
 					</tr>
 				</thead>
 				<tbody>
+						<tr>
+							<td class="hidden-xs"></td>
+							<td class="hidden-xs"></td>
+							<td class="hidden-xs"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
 					@forelse ($accruals as $accrual)
 						<?php $created_at = DateTime::createFromFormat('Y-m-d H:i:s', $accrual->created_at); ?>
 						<tr>
