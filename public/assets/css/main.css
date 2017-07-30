@@ -1649,6 +1649,7 @@ div {
 	    height: 91vh;
 	    text-align: center;
 	    padding: 0 0 0 0;
+        margin: 5vw 0 2vw 0;
 	}
 
 	.rone_start{
@@ -1785,7 +1786,7 @@ div {
     	margin: 6vw 0 0 0;
 	}
 	.connect_screen_shader {
-	    height: 95vh;
+	    height: 85vh;
 	}
 	.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p {
 	    font-size: 1.3vw;
