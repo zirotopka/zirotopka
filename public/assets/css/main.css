@@ -1683,8 +1683,13 @@ div {
 	    display: none;
 	}
 
+	.comm_img_hldr {
+	    min-width: 200px;
+	    width: 30%;
+	}
+
 	.ico_play{
-	    margin: 100px 0 0 -150px;	
+	    margin: 150px 0 0 -18em;
 	    width: 6em;
 	}
 
