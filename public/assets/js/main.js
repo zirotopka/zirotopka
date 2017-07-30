@@ -105,37 +105,47 @@ $(document).ready(function(){
  
     $('.start_shader_gray').on('mouseenter',function(){
     	$('.start_shader').attr('style',"display:block;");
+    	$('.prg1').attr('style',"display:none;");
     });
     $('.start_shader').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
+    	$('.prg1').attr('style',"display:block;");
     });
 
     $('.pro_shader_gray').on('mouseenter',function(){
     	$('.pro_shader').attr('style',"display:block;");
+    	$('.prg2').attr('style',"display:none;");
     });
     $('.pro_shader').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
+    	$('.prg2').attr('style',"display:block;");
     });
 
     $('.pow_shader_gray').on('mouseenter',function(){
     	$('.pow_shader').attr('style',"display:block;");
+    	$('.prg3').attr('style',"display:none;");
     });
     $('.pow_shader').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
+    	$('.prg3').attr('style',"display:block;");
     });
 
     $('.run_shader_gray').on('mouseenter',function(){
     	$('.run_shader').attr('style',"display:block;");
+    	$('.prg4').attr('style',"display:none;");
     });
     $('.run_shader').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
+    	$('.prg4').attr('style',"display:block;");
     });
 
     $('.runp_shader_gray').on('mouseenter',function(){
     	$('.runp_shader').attr('style',"display:block;");
+    	$('.prg5').attr('style',"display:none;");
     });
     $('.runp_shader').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
+    	$('.prg5').attr('style',"display:block;");
     });
 
       $('body').on('click','.video_holder',function() {

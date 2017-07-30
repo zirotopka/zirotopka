@@ -4,8 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">    
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 	<link href="/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="/assets/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
@@ -30,7 +29,7 @@
     @show
 	
 </head>
-<body>
+<body id="top">
         <div id="st-container" class="st-container">
             @if ($user = Sentinel::check())
                 <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
@@ -154,7 +153,6 @@
                     </div><!-- /st-content-inner -->
 
                 @endif
-                    {{-- @include('layouts.reg_modal') --}}
                     @section("content")
 
                     @show 

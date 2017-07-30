@@ -16,7 +16,7 @@
                         <p class="prof-disp" style="margin-left: 1px;">ПРОГРАММА</p></a> 
                 </li>
                 <li>
-                    <a href="/lk/{{$user->id}}/edit" class="profile_btns lgn"><i class="prof_ico prof-disp"></i><p class="prof-disp">ПРОФИЛЬ</p></a> 
+                    <a href="/lk/{{$user->id}}/edit" class="profile_btns lgn"><i class="prof_ico prof-disp"></i><p class="prof-disp" style="margin-left: 9px!important;">ПРОФИЛЬ</p></a> 
                 </li>
                 <li>
                     <a href="/lk/{{$user->id}}/balance" class="profile_btns lgn"><i class="wallet_ico prof-disp" style="
@@ -33,8 +33,8 @@
     </div>
 @else
     <div class="main_sidebar hidden-xs hidden-sm col-lg-2 col-md-2" style="height: 100%; padding: 0; z-index: 1">
-        <nav class="navbar" id="Scrollspy">
-            <ul class="nav nav-pills nav-stacked" data-spy="affix">
+        <nav class="navbar spy-active" id="Scrollspy">
+            <ul class="nav">
                 <li>
                     <img src="/ico/main_logo.png" class="side_logo" alt="">
                 </li>
@@ -45,57 +45,72 @@
                     </a> 
                 </li>
                 <li>
-                    <a href="" class="profile_btns">
+                    <a href="" class="profile_btns" id="prgr_l_mn">
                         <p>программа <br> тренировок</p>
                     </a> 
                 </li>
                 <li>
-                    <a href="" class="profile_btns">
+                    <a href="" class="profile_btns" id="bns_l_mn">
                         <p>бонусная <br> программа</p>
                     </a> 
                 </li>
                 <li>
-                    <a href="#section_2" >
+                    <p class="fm_line">|</p>
+                    <a href="#section_2" class="spy_sections" >
                         <p>02 ОПИСАНИЕ</p>
                     </a> 
+                    <p class="fm_line">|</p>
                 </li>
                 <li>
-                    <a href="#section_3" >
+                    <p class="fm_line">|</p>
+                    <a href="#section_3" class="spy_sections">
                         <p>03 ПРОГРАММЫ</p>
                     </a> 
+                    <p class="fm_line">|</p>
                 </li>
                 <li>
-                    <a href="#section_4" >
+                    <p class="fm_line">|</p>
+                    <a href="#section_4" class="spy_sections">
                         <p>04 БОНУСЫ</p>
                     </a> 
+                    <p class="fm_line">|</p>
                 </li>
                 <li>
-                    <a href="#section_5" >
+                    <p class="fm_line">|</p>
+                    <a href="#section_5" class="spy_sections">
                         <p>05 КАК РАБОТАЕТ</p>
                     </a> 
+                    <p class="fm_line">|</p>
                 </li>
                 <li>
-                    <a href="#section_6" >
+                    <p class="fm_line">|</p>
+                    <a href="#section_6" class="spy_sections">
                         <p>06 ОТЗЫВЫ</p>
                     </a> 
+                    <p class="fm_line">|</p>
                 </li>
                 <li>
-                    <a href="#section_7" >
+                    <p class="fm_line">|</p>
+                    <a href="#section_7" class="spy_sections">
                         <p>07 ВОПРОСЫ</p>
                     </a> 
+                    <p class="fm_line">|</p>
                 </li>
                 <li>
-                    <a href="#section_8" >
+                    <p class="fm_line">|</p>
+                    <a href="#section_8" class="spy_sections">
                         <p>08 ДОСТУП</p>
                     </a> 
+                    <p class="fm_line">|</p>
+
                 </li>
-                <li>
-                    <a href="#section_8" >
+                    <a href="#top" class="spy_sections top_section" >
                         <p>НАВЕРХ</p>
-                    </a> 
-                </li>
+                    </a>
+
             </ul>                
         </nav>
     </div>
+
 
 @endif

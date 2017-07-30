@@ -106,7 +106,7 @@ ul,li {
 
 .send_btn{
 	border: none;
-	background-color: #F98749;
+	background-color: #ff8a18;
 	border-radius: 4px;
 	color: white;
 	margin: 1em 0 0 0;
@@ -181,6 +181,6 @@ ul,li {
 
 .faq_back:hover{
 	text-decoration:none;
-	color: #F98749!important;
+	color: #ff8a18!important;
 	font-size: 1.2em;
 }

@@ -15,7 +15,6 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
 
@@ -107,12 +106,12 @@
                 <div class="programm_list">
                     <div class="rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <img src="/ico/start.jpg" class="start" alt="">
-                        <p>R.ONE start</p>
+                        <p class="prg1">R.ONE start</p>
                         <div class="start_shader_gray"><p>ST</p></div>
                         <div class="start_shader">
                             <h4>R.ONE start</h4>
                             <p>Программа для новичков</p>
-                            <button class="arrow" type="button"></button>
+                            <a class="arrow start-arrow" ></a>
                         </div>
                     </div>
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -120,22 +119,22 @@
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <img src="/ico/pro.jpg" class="prog_imgs prop" alt="">
-                                    <p class="prprp">R.ONE pro</p>
+                                    <p class="prprp prg2">R.ONE pro</p>
                                     <div class="pro_shader_gray"><p>PR</p></div>
                                     <div class="pro_shader">
                                         <h4>R.ONE pro</h4>
                                         <p>Программа для новичков</p>
-                                        <button class="arrow" type="button"></button>
+                                        <a class="arrow progr-arrow"></a>
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <img src="/ico/power.jpg" class="prog_imgs powp" alt="">
-                                    <p class="prprp">R.ONE power</p>
+                                    <p class="prprp prg3">R.ONE power</p>
                                     <div class="pow_shader_gray"><p>PO</p></div>
                                     <div class="pow_shader">
                                         <h4>R.ONE power</h4>
                                         <p>Программа для новичков</p>
-                                        <button class="arrow" type="button"></button>
+                                        <a class="arrow progr-arrow"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -144,22 +143,22 @@
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <img src="/ico/run.jpg" class="prog_imgs runp" alt="">
-                                    <p class="prprp">R.ONE run</p>
+                                    <p class="prprp prg4">R.ONE run</p>
                                     <div class="run_shader_gray"><p>RU</p></div>
                                     <div class="run_shader">
                                         <h4>R.ONE run</h4>
                                         <p>Программа для новичков</p>
-                                        <button class="arrow" type="button"></button>
+                                        <a class="arrow progr-arrow"></a>
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <img src="/ico/run+.jpg" class="prog_imgs runpl" alt="">
-                                    <p class="prprp">R.ONE run+</p>
+                                    <p class="prprp prg5">R.ONE run+</p>
                                     <div class="runp_shader_gray"><p>RU+</p></div>                    
                                     <div class="runp_shader">
                                         <h4>R.ONE run+</h4>
                                         <p>Программа для новичков</p>
-                                        <button class="arrow" type="button"></button>
+                                        <a class="arrow progr-arrow"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -189,7 +188,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt freedom">
                         <img src="/ico/frdm.svg" alt="">
-                        <p class="orng">Свобода действий</p>
+                        <p class="orng frdsd">Свобода действий</p>
                         <p class="who_txt">Самостоятельное планирование<br>времени и места для выполнения<br>заданий. Объединение и мотивация<br>друзей и близких.</p>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt profit">
@@ -206,9 +205,9 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             @forelse($comments as $comment)
-                                <div class="swiper-slide video_holder" data-id="{{$comment->id}}">
-                                    <img src="{{$comment->img_holder}}" alt="">
-                                    <img src="/ico/play.png" alt="" class="ico_play">
+                                <div class="swiper-slide" >
+                                    <img src="{{$comment->img_holder}}" alt="" class="comm_img_hldr video_holder" data-id="{{$comment->id}}">
+                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr">
                                     <p class="comment_name">{{$comment->user}}</p>
                                     <p class="comment_who">{{$comment->comment_text}}</p>
                                 </div>
@@ -221,7 +220,7 @@
                     </div>
             
                 <p class="watch_more">Смотреть больше отзывов</p>
-                <button class="arrow" type="button"></button>
+                <a class="arrow" type="button"></a>
             </div>
             <hr class="disp_line">
             <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_7">

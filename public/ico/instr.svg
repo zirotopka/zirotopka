@@ -3,7 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 295.2 295.2" style="enable-background:new 0 0 295.2 295.2;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#F98749;}
+	.st0{fill:#FF8A18;}
 	.st1{fill:#333333;}
 </style>
 <rect x="19" y="57.1" class="st0" width="152.4" height="104.8"/>
@@ -20,6 +20,6 @@
 <rect x="19" y="176.2" class="st1" width="257.1" height="9.5"/>
 <path class="st1" d="M95.2,200H19v52.4h76.2V200z M85.7,242.9H28.6v-33.3h57.1C85.7,209.5,85.7,242.9,85.7,242.9z"/>
 <rect x="19" y="266.7" class="st1" width="257.1" height="9.5"/>
-<path class="st1" d="M109.5,200v52.4h76.2V200H109.5z M176.2,242.9H119v-33.3h57.1V242.9z"/>
-<path class="st1" d="M200,252.4h76.2V200H200V252.4z M209.5,209.5h57.1v33.3h-57.1L209.5,209.5L209.5,209.5z"/>
+<path class="st1" d="M109.5,200v52.4h76.2V200H109.5z M176.2,242.9H119v-33.3h57.1L176.2,242.9L176.2,242.9z"/>
+<path class="st1" d="M200,252.4h76.2V200H200V252.4z M209.5,209.5h57.1v33.3h-57.1V209.5L209.5,209.5z"/>
 </svg>
