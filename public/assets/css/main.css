@@ -1890,6 +1890,12 @@ div {
 	    width: 18vw;
 	    margin-left: 0;
 	}
+	footer .prgrm_list {
+	    line-height: 1.2em;
+	}
+	footer .prgrm_list .bonus {
+	    line-height: 1em;
+	}
 }
 
 @media screen and (max-width: 767px) {
