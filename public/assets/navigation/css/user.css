@@ -1,44 +1,44 @@
 
 @font-face{
 	font-family:'GilroyLight'; 
-	src:url('/fonts/Radomir Tinkov - Gilroy-Light.otf');
+	src:url('/fonts/Radomir Tinkov - Gilroy-Light.otf') format("opentype");
 }
 
 @font-face{
 	font-family:'GilroyBold'; 
-	src:url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.otf');
+	src:url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.otf') format("opentype");
 }
 
 @font-face{
 	font-family:'MuseoSansCyrl'; 
-	src:url('/fonts/ofont.ru_Microsoft Sans Serif.ttf');
+	src:url('/fonts/ofont.ru_Microsoft Sans Serif.ttf') format("truetype");
 }
 
 @font-face{
 	font-family:'MuseoSansCyrl_100'; 
-	src:url('/fonts/MuseoSansCyrl_100.otf');
+	src:url('/fonts/MuseoSansCyrl_100.otf') format("opentype");
 }
 @font-face{
 	font-family:'MuseoSansCyrl_300'; 
-	src:url('/fonts/MuseoSansCyrl_300.otf');
+	src:url('/fonts/MuseoSansCyrl_300.otf') format("opentype");
 }
 @font-face{
 	font-family:'MuseoSansCyrl_500'; 
-	src:url('/fonts/MuseoSansCyrl_500.otf');
+	src:url('/fonts/MuseoSansCyrl_500.otf') format("opentype");
 }
 @font-face{
 	font-family:'MuseoSansCyrl_700'; 
-	src:url('/fonts/MuseoSansCyrl_700.otf');
+	src:url('/fonts/MuseoSansCyrl_700.otf') format("opentype");
 }
 
 @font-face{
 	font-family:'MuseoSansCyrl_900'; 
-	src:url('/fonts/MuseoSansCyrl_900.otf');
+	src:url('/fonts/MuseoSansCyrl_900.otf') format("opentype");
 }
 
 @font-face{
 	font-family:'GubiaBlack'; 
-	src:url('/fonts/GubiaBlack.otf');
+	src:url('/fonts/GubiaBlack.otf') format("opentype");
 }
 
 ::-webkit-file-upload-button { cursor:pointer; }
