@@ -2561,13 +2561,19 @@ div {
 	    background-size: 4vw;
 	}
 
+	.comments-screen .arrow:hover {
+		margin: 1.9em -0.5em 0 1.4vw!important;
+	}
+
+	.comments-screen .arrow:active {
+		margin: 1.9em -0.5em 0 1.4vw!important;
+	}
 	.arrow:hover {
 	    height: 4.2em;
 	    width: 4.2em;
 	    background-size: 4.2em;
 	    margin: 3.8em 0 0 23vw!important;
 	}
-
 	.arrow:active {
 	    height: 4.2em;
 	    width: 4.2em;
