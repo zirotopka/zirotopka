@@ -66,11 +66,12 @@ ul li{
     margin: 0 0 0 40%;
     width: 20%;
     box-shadow: none;
-    border-bottom: 0.00000000000000000000411px solid #ff8a18;
+    border-bottom: 1px solid #ff8a18;
     position: relative;
     text-align: center;
     opacity: 0.4;
     border-top: none;
+    float: left;
 }
 
 .st-menu ul li a {
