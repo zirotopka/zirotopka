@@ -1,15 +1,15 @@
 
 @font-face{
 	font-family:'GilroyLight'; 
-	src: 	local('GilroyLight'),
-			url('/fonts/Radomir Tinkov - Gilroy-Light.otf'),
+	src:url('/fonts/Radomir Tinkov - Gilroy-Light.otf');
+	src:local('GilroyLight'),
 			url('/fonts/Radomir Tinkov - Gilroy-Light.ttf') format("truetype");
 }
 
 @font-face{
 	font-family:'GilroyBold'; 
+	src:url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.otf');
 	src:local('GilroyBold'),
-		url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.otf'),
 		url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.ttf') format("truetype");
 }
 
@@ -20,35 +20,35 @@
 
 @font-face{
 	font-family:'MuseoSansCyrl_100'; 
-	src:local('MuseoSansCyrl_100')
-		url('/fonts/MuseoSansCyrl_100.otf'),
+	src:url('/fonts/MuseoSansCyrl_100.otf');
+	src:local('MuseoSansCyrl_100'),
 		url('/fonts/MuseoSansCyrl_100.ttf') format("truetype");
 }
 @font-face{
 	font-family:'MuseoSansCyrl_300'; 
-	src:url('/fonts/MuseoSansCyrl_300.otf'),
-		url('/fonts/MuseoSansCyrl_300.ttf') format("truetype");
+	src:url('/fonts/MuseoSansCyrl_300.otf');
+	src:url('/fonts/MuseoSansCyrl_300.ttf') format("truetype");
 }
 @font-face{
 	font-family:'MuseoSansCyrl_500'; 
-	src:url('/fonts/MuseoSansCyrl_500.otf'),
-		url('/fonts/MuseoSansCyrl_500.ttf') format("truetype");
+	src:url('/fonts/MuseoSansCyrl_500.otf');
+	src:url('/fonts/MuseoSansCyrl_500.ttf') format("truetype");
 }
 @font-face{
 	font-family:'MuseoSansCyrl_700'; 
-	src:url('/fonts/MuseoSansCyrl_700.otf'),
-		url('/fonts/MuseoSansCyrl_700.ttf') format("truetype");}
+	src:url('/fonts/MuseoSansCyrl_700.otf');
+	src:url('/fonts/MuseoSansCyrl_700.ttf') format("truetype");}
 
 @font-face{
 	font-family:'MuseoSansCyrl_900'; 
-	src:url('/fonts/MuseoSansCyrl_900.otf'),
-		url('/fonts/MuseoSansCyrl_900.ttf') format("truetype");
+	src:url('/fonts/MuseoSansCyrl_900.otf');
+	src:url('/fonts/MuseoSansCyrl_900.ttf') format("truetype");
 }
 
 @font-face{
 	font-family:'GubiaBlack'; 
-	src:url('/fonts/GubiaBlack.otf'),
-		url('/fonts/GubiaBlack.ttf') format("truetype");
+	src:url('/fonts/GubiaBlack.otf');
+	src:url('/fonts/GubiaBlack.ttf') format("truetype");
 
 }
 
