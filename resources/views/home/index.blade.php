@@ -206,8 +206,8 @@
                         <div class="swiper-wrapper">
                             @forelse($comments as $comment)
                                 <div class="swiper-slide" >
-                                    <img src="{{$comment->img_holder}}" alt="" class="comm_img_hldr video_holder" data-id="{{$comment->id}}">
-                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr">
+                                    <img src="{{$comment->img_holder}}" alt="" class="comm_img_hldr video_holder" >
+                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr" data-id="{{$comment->id}}">
                                     <p class="comment_name">{{$comment->user}}</p>
                                     <p class="comment_who">{{$comment->comment_text}}</p>
                                 </div>
