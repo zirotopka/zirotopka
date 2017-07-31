@@ -2310,6 +2310,11 @@ div {
 
 	footer .prgrm_list {
     	padding: 5.7em 0 0 0;
+		line-height: 1.5em;
+	}
+	
+	footer .prgrm_list	.bonus{
+		line-height: 1em;
 	}
 
 	.rone_start p{
