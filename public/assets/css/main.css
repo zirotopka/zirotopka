@@ -40,13 +40,13 @@ ul li{
 }
 
 .fm_line{
-    margin: 0.15em 0 -0.3em 8.58em!important;
+    margin: 0.15em 0 -0.08em 8.58em!important;
 	color: #818181!important;
 	display: none;
 }
 
 .top_section{
-	padding: 0.5em 0 0 6.1em!important;
+	padding: 0.5em 0 0 5.75vw!important;
 }
 
 .st-menu{
@@ -74,7 +74,7 @@ ul li{
 }
 
 .st-menu ul li a {
-    padding: 1.8em 0 1.8em 5em!important;
+    padding: 1.2em 0 1.7em 5em!important;
     text-align: left;
 }
 .open ul li {
@@ -88,6 +88,7 @@ ul li{
 }
 
 .prof-disp{
+    vertical-align: middle;
 	margin: 0!important;
 }
 
@@ -96,7 +97,7 @@ ul li{
 }
 
 .lgn{
-    padding: 1.6em 0 1em 4em !important;
+    padding: 1.5em 0 1em 4em !important;
 }
 
 .checked{
@@ -187,7 +188,7 @@ ul li{
 	letter-spacing: 1px;
 	font-weight: bold;
 	font-size: 0.9vw !important;
-	height: 5em;
+	height: 4.35em;
 
 }
 
@@ -204,8 +205,20 @@ ul li{
 .main_sidebar p{
 	font-family: GilroyLight!important;
 	color: white;
-	font-size: 1.1vw !important;
+	font-size: 11px!important;
 	word-wrap: break-word;
+
+}
+
+.sc{
+	margin:0.3em 0 0 0;
+}
+
+.spy_sections p{
+	margin: 0;
+}
+
+.profile_btns p{
 	margin: 0;
 }
 
@@ -464,7 +477,7 @@ ul li{
 }
 
 .n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img{
-	width: 9vw;
+	width: 7vw;
 }
 
 .n4, .n5, .n6{
@@ -545,9 +558,6 @@ ul li{
 	margin: 0 0 0 1em;
 }
 
-.first_progr_string,.second_progr_string{
-	word-spacing: 1.6em;
-}
 
 .first_progr_string ul li, .second_progr_string ul li{
 	display: inline-block;
@@ -819,7 +829,7 @@ ul li{
 }
 
 .how_cnt img{
-	width: 9vw;
+	width: 8vw;
 }
 
 .choice{
@@ -896,7 +906,7 @@ ul li{
 }
 
 .swiper-container{
-	margin: 3em 0 0 0;
+	margin: 2.7em 0 0 0;
 	height: 72%;
 	width: 92%;
 }
@@ -1032,6 +1042,7 @@ ul li{
 	margin: 1.8em -0.2em 0 1vw;
 	background-color: #c4c4c4;
 	background-size: 3.2em;
+	background-color: rgba(255,255,255,0.1)!important;
 
 }
 /*-----------------------------Seventh Screen(questions-screen)-----------------*/
@@ -1102,6 +1113,11 @@ ul li{
 	font-size: 1.4vw;
 }
 
+.prg .zag, .all .zag{
+    font-size: 1.4vw;
+    margin: -0.2em 0 0.7em 0;
+}
+
 .left_quest ul li a, .right_quest ul li a {
 	font-size: 1.1vw;
 }
@@ -1145,14 +1161,14 @@ ul li{
 
 .connect{
 	font-family: GilroyBold;
-	font-size: 2em;
+	font-size: 2vw;
 	letter-spacing: 1px;
 	padding: 5em 0 0 0;
 }
 
 .connect_info{
 	font-family: MuseoSansCyrl_500;
-	font-size: 1.5em;
+	font-size: 1.65vw;
 	margin: 2em 0 0 0;
 	font-weight: 500;
 }
@@ -1160,7 +1176,7 @@ ul li{
 .connect_price{
 	font-family: MuseoSansCyrl_700;
 	color: #c3c3c3!important;
-	font-size: 1.55em;
+	font-size: 2vw;
 	margin: 1em 0 0 0;
 	background: url(/ico/fc_line.png);
 	background-repeat: no-repeat;
@@ -1188,15 +1204,15 @@ ul li{
 .connect_btn:hover{
 	height: 4.2vw;
 	width: 22.2vw;;
-	margin: 5.8em -0.2 0 0;
+	margin: 5.8em -0.2vw 0 0;
 	background-color: #ff8a18!important;
 }
 
 .connect_btn:active{	
 	height: 4.2vw;
 	width: 22.2vw;
-	margin: 5.8em -0.2 0 0;
-	background-color: #D9550E;
+	margin: 5.8em -0.2vw 0 0;
+	background-color: #D9550E!important;
 }
 
 /*-----------------------------------Footer-----------------------*/
@@ -1205,15 +1221,15 @@ footer{
 	height: auto;
 	background-color: #282828;
 	margin: 0 0 -10px 0;
-    padding: 2rem 0 0 0px;
-	height: 22vw;
+    padding: 2rem 0 0 0px!important;
+	height: 24vw;
 }
 
 .mission p{
 	line-height: 1.4vw;
 	color: white;
 	text-transform: uppercase;
-	font-size: 0.9vw;
+	font-size: 1vw;
 	margin: 3vh 0 0 0;
 }
 
@@ -1224,7 +1240,7 @@ footer{
 footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a{
 	text-decoration: none;
 	color: white;
-	font-size: 0.9vw;
+	font-size: 1vw;
 	margin-top: 0.2em;
 }
 
@@ -1234,17 +1250,17 @@ footer .prgrm_list ul li{
 
 footer .prgrm_list{
 	padding: 2.5em 0 0 0;
-	line-height: 1.6em;
+	line-height: 2.5vw;
 }
 
 footer .prgrm_list .bonus{
 	margin: 1em 0 0 0;
-	line-height: 1em;
+	line-height: 1.5em;
 }
 
 .reg_f_s{
 	padding: 2.2em 0 0 0;
-	line-height: 2em;
+	line-height: 3em;
 }
 
 .reg_f_s img{
@@ -1255,10 +1271,15 @@ footer .prgrm_list .bonus{
 
 .ofrta{
 	padding: 2.5em 0 0 0;
+    line-height: 2.5em;
+}
+
+#pltks{
+	line-height: 1.5em;
 }
 
 .accsss{
-	line-height: 1em;
+	line-height: 1.5em;
 }
 
 #section_2, #section_3, #section_4, #section_5, #section_6, #section_7{
@@ -1530,7 +1551,7 @@ div {
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
     content: '';
-    width: 0.7em;
+    width: 0.73em;
     height: 0.7em;
     background: #ff8a18;
     position: absolute;
@@ -1568,6 +1589,9 @@ div {
 @media screen and (max-width: 992px) {
 /*---------------------Reg Screen-------------------------*/
 
+	.right_bonus_part p {
+	    font-size: 2.1vw;
+	}
 	.reg-screen .checked{
 		padding: 1em 2em 0 0!important;
 	}
@@ -1689,7 +1713,7 @@ div {
 	}
 
 	.ico_play{
-	    margin: 150px 0 0 -18em;
+	    margin: 90px 0 0 -12em;
 	    width: 6em;
 	}
 
@@ -1870,7 +1894,7 @@ div {
 @media screen and (max-width: 767px) {
 	.programm-screen {
 	    height: auto;
-	    margin: 0 0 7vw 0;
+	    margin: 0 0 15vw 0;
 	}
 
 	.who_txt {
@@ -1885,21 +1909,27 @@ div {
 	    height: auto;
 	    text-align: center;
 	    padding: 0 0 0 0;
+	    margin: 0 0 15vw 0;
+	}
+
+	.disp_line {
+	    margin: 0 0 0 30%;
+	    width: 40%;
 	}
 
 	.how-screen {
 	    height: auto;
-	    margin: 0 0 10vw 0;
+	    margin: 0 0 15vw 0;
 	}
 
 	.comments-screen {
 	    height: auto;
-		margin: 0 0 13vw 0;
+		margin: 0 0 15vw 0;
 	}
 
 	.info-screen{
 		height: auto;
-	    margin: 0 0 5vw 0;
+	    margin: 0 0 15vw 0;
 	}
 	
 	.info_cont ul {
@@ -2012,29 +2042,27 @@ div {
 	}
 
 	.rg_btn {
-	    font-size: 2.2vw;
-	    width: 40vw;
-	    height: 8vw;
+	    font-size: 0.6em;
+	    width: 50vw;
+	    height: 10vw;
 	    margin: 12vw 0 0 0;
 	}
 
 	.rg_btn:hover {
-	    font-size: 2.3vw;
-	    width: 40.2vw;
-	    height: 8.2vw;
+	    width: 50.2vw;
+	    height: 10.2vw;
 		margin: 11.8vw 0 0 0;
 	}
 
 	.rg_btn:active {
-	    font-size: 2.3vw;
-	    width: 40.2vw;
-	    height: 8.2vw;
+	    width: 50.2vw;
+	    height: 10.2vw;
 		margin: 11.8vw 0 0 0;
 	}
 
 	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
 	    font-size: 5.9vw;
-	    margin: 1em 0 1em 0;
+	    margin: 15vw 0 1em 0;
 	}
 
 	.info_naming img {
@@ -2057,17 +2085,18 @@ div {
 	}	
 
 	.pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4 {
-	    font-size: 5vw;
-	    margin: 4vw 0 0 2vw;
-	    width: 39vw;
+	    margin: 6vw 0 0 8vw;
+	    width: 70vw;
+	    font-size: 7vw;
+	    text-align: left;
 	}
 
 	.pro_shader p, .pow_shader p, .run_shader p, .runp_shader p {
-	    margin: 1em 0 0 2vw;
+	    margin: 0.5em 0 0 8vw;
 	    font-weight: 100;
-	    font-size: 3vw;
+	    font-size: 5vw;
 	    width: 75vw;
-	    height: 32vw;
+	    height: 25vw;
 	    text-align: left;
 	}
 
@@ -2086,20 +2115,21 @@ div {
 
 	.arrow:hover {
 	    background: url(/ico/arrow.png);
-	    background-size: 2.2em;
+	    background-size: 4.2em;
 	    background-repeat: no-repeat;
-	    height: 2.2em;
-	    width: 2.2em;
-	    margin: -0.2em -0.2em 0 0!important;
+	    height: 4.2em;
+	    width: 4.2em;
+	    margin: -1.2em 0px 0 11.8em!important;
 	}
 
 	.arrow:active {
 	    background: url(/ico/ntbtn.png);
-	    background-size: 2.2em;
+	    background-size: 4.2em;
 	    background-repeat: no-repeat;
-	    height: 2.2em;
-	    width: 2.2em;
-	}
+	    height: 4.2em;
+	    width: 4.2em;
+	    margin: -1.2em 0px 0 11.8em!important;
+  	}
 	.n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img {
 	    width: 40vw;
 	}
@@ -2153,21 +2183,21 @@ div {
 	}
 
 	.start-arrow {
-	    margin: 14em 0 0 10em!important;
+	    margin: 12em 0 0 10em!important;
 		width: 4.5em;
 		height: 4.5em;
 		background-size: 4.5em;
 	}
 
 	.start-arrow:hover {
-	    margin: 17em 0 0 12em!important;
+	    margin: 11.8em 0 0 10.2em!important;
 		width: 4.7em;
 		height: 4.7em;
 		background-size: 4.7em;
 	}
 
 	.start-arrow:active {
-	    margin: 17em 0 0 12em!important;
+	    margin: 11.8em 0 0 10.2em!important;
 		width: 4.7em;
 		height: 4.7em;
 		background-size: 4.7em;
@@ -2182,14 +2212,16 @@ div {
 
 
 	.start_shader h4{
-		font-size: 6vw;
+	    font-size: 7vw;
+	    text-align: left;
+	    margin: 14vw 0 0 8vw;
 	}
 
 	.start_shader p {
-	    margin: 1em 0 0 3vw!important;
-	    font-size: 3.4vw!important;
+	    margin: 0.5em 0 0 8vw!important;
+	    font-size: 5vw!important;
 	    width: 61vw!important;
-	    height: 62vw!important;
+	    height: 52vw!important;
 	}
 
 	.start_shader button {
@@ -2288,12 +2320,24 @@ div {
 	}
 
 	.bonus_btn {
-	    width: 52vw;
+	    width: 50vw;
 	    height: 10vw;
-	    font-size: 3vw;
-	    margin: 7vw 0 5vw 0px;
+	    font-size: 0.6em;
+	    margin: 7vw 0 0 0px;
 	}
 	
+	.bonus_btn:hover {
+	    width: 50.4vw;
+	    height: 10.4vw;
+	    margin: 6.6vw 0 0 0px;
+	}
+
+	.bonus_btn:active {
+	    width: 50.4vw;
+	    height: 10.4vw;
+	    margin: 6.6vw 0 0 0px;
+	}
+
 	.how_screen, .asd {
 		height: auto!important;
 		max-height: none!important;
@@ -2323,6 +2367,19 @@ div {
 	    height: 10vw!important;
 	    font-size: 0.6em!important;
 	    width: 50vw!important;
+   		margin: 6vw 0 0 0;
+	}
+
+	.how-screen button:hover {
+	    height: 10.4vw!important;
+	    width: 50.4vw!important;
+		margin: 5.6vw 0 0 0;
+	}
+
+	.how-screen button:active {
+	    height: 10.4vw!important;
+	    width: 50.4vw!important;
+		margin: 5.6vw 0 0 0;
 	}
 
 	.swiper-container{
@@ -2330,7 +2387,7 @@ div {
 	}
 
 	.ico_play {
-    	margin: 100px 0 0 -150px;
+    	margin: 87px 0 0 -130px;
 	    width: 20vw;
 	}
 
@@ -2347,7 +2404,7 @@ div {
 	
 	.ref, .prg, .ruls, .all{
 		margin: 10vw 0 0 0;
-	    padding: 0 0 0 11vw;
+	    padding: 0 0 0 7vw;
 	}
 	.connect-screen {
 	    height: 65vh;
@@ -2415,9 +2472,21 @@ div {
 
 	.connect_btn{
 	    height: 10vw!important;
-	    font-size: 2.3vw!important;
+	    font-size: 0.6em!important;
 	    width: 50vw!important;
 	}
+
+	.connect_btn:hover{
+	    height: 10.4vw!important;
+	    width: 50.4vw!important;
+        margin: 5.6em 0 0 0!important;
+	}
+
+	.connect_btn:active{
+	    height: 10.4vw!important;
+	    width: 50.4vw!important;
+        margin: 5.6em 0 0 0!important;
+    }
 
 	.connect_price {
 	    background-position: 19vw 5px!important;
@@ -2471,7 +2540,8 @@ div {
 	}
 
 	.comment_name {
-	    font-size: 1.8vw;
+		font-size: 1.6vw;
+	    margin: 1vw 0 0 0;	
 	}
 
 	.swiper-container {
@@ -2495,18 +2565,32 @@ div {
 	    height: 4.2em;
 	    width: 4.2em;
 	    background-size: 4.2em;
+	    margin: 3.8em 0 0 23vw!important;
 	}
 
 	.arrow:active {
 	    height: 4.2em;
 	    width: 4.2em;
 	    background-size: 4.2em;
+		margin: 3.8em 0 0 23vw!important;
+	}
+
+	.progr-arrow:hover {
+	    margin: 0.8em 0 0 15vw!important;
+	}
+	
+	.progr-arrow:active {
+	    margin: 0.8em 0 0 15vw!important;
 	}
 
 	.questions-screen img {
 	    display: inline-block;
 	    vertical-align: top;
 	    width: 2vw;
+	}
+
+	.connect {
+	    padding: 4vw;
 	}
 }
 
@@ -2573,7 +2657,7 @@ div {
 	}
 
 	.swiper-container {
-	    margin: 12% 0 0 0;
+	    margin: 9% 0 0 0;
 	    height: 60%;
 	    width: 94%;
 	}
