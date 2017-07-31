@@ -1161,14 +1161,14 @@ ul li{
 
 .connect{
 	font-family: GilroyBold;
-	font-size: 2vw;
+	font-size: 2em;
 	letter-spacing: 1px;
 	padding: 5em 0 0 0;
 }
 
 .connect_info{
 	font-family: MuseoSansCyrl_500;
-	font-size: 1.65vw;
+	font-size: 1.2em;
 	margin: 2em 0 0 0;
 	font-weight: 500;
 }
@@ -1176,7 +1176,7 @@ ul li{
 .connect_price{
 	font-family: MuseoSansCyrl_700;
 	color: #c3c3c3!important;
-	font-size: 2vw;
+	font-size: 1.55em;
 	margin: 1em 0 0 0;
 	background: url(/ico/fc_line.png);
 	background-repeat: no-repeat;
@@ -1250,7 +1250,7 @@ footer .prgrm_list ul li{
 
 footer .prgrm_list{
 	padding: 2.5em 0 0 0;
-	line-height: 2.5vw;
+	line-height: 2.5em;
 }
 
 footer .prgrm_list .bonus{
@@ -2587,10 +2587,6 @@ div {
 	    display: inline-block;
 	    vertical-align: top;
 	    width: 2vw;
-	}
-
-	.connect {
-	    padding: 4vw;
 	}
 }
 
