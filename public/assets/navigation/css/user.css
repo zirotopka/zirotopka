@@ -1,16 +1,13 @@
 
 @font-face{
 	font-family:'GilroyLight'; 
-	src:url('/fonts/Radomir Tinkov - Gilroy-Light.otf');
-	src:local('GilroyLight'),
-			url('/fonts/Radomir Tinkov - Gilroy-Light.ttf') format("truetype");
-}
+	src: url('/fonts/Radomir Tinkov - Gilroy-Light.eot');
+	src: local('☺'), url('/fonts/Radomir Tinkov - Gilroy-Light.woff') format('woff'), url('/fonts/Radomir Tinkov - Gilroy-Light.ttf') format('truetype'), url('/fonts/Radomir Tinkov - Gilroy-Light.svg') format('svg');}
 
 @font-face{
 	font-family:'GilroyBold'; 
-	src:url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.otf');
-	src:local('GilroyBold'),
-		url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.ttf') format("truetype");
+	src: url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.eot');
+	src: local('☺'), url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.woff') format('woff'), url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.ttf') format('truetype'), url('/fonts/Radomir Tinkov - Gilroy-ExtraBold.svg') format('svg');
 }
 
 @font-face{
@@ -20,35 +17,34 @@
 
 @font-face{
 	font-family:'MuseoSansCyrl_100'; 
-	src:url('/fonts/MuseoSansCyrl_100.otf');
-	src:local('MuseoSansCyrl_100'),
-		url('/fonts/MuseoSansCyrl_100.ttf') format("truetype");
+	src: url('/fonts/MuseoSansCyrl_100.eot');
+	src: local('☺'), url('/fonts/MuseoSansCyrl_100.woff') format('woff'), url('/fonts/MuseoSansCyrl_100.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_100.svg') format('svg');
 }
 @font-face{
 	font-family:'MuseoSansCyrl_300'; 
-	src:url('/fonts/MuseoSansCyrl_300.otf');
-	src:url('/fonts/MuseoSansCyrl_300.ttf') format("truetype");
+	src: url('/fonts/MuseoSansCyrl_300.eot');
+	src: local('☺'), url('/fonts/MuseoSansCyrl_300.woff') format('woff'), url('/fonts/MuseoSansCyrl_300.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_300.svg') format('svg');
 }
 @font-face{
 	font-family:'MuseoSansCyrl_500'; 
-	src:url('/fonts/MuseoSansCyrl_500.otf');
-	src:url('/fonts/MuseoSansCyrl_500.ttf') format("truetype");
+	src: url('/fonts/MuseoSansCyrl_500.eot');
+	src: local('☺'), url('/fonts/MuseoSansCyrl_500.woff') format('woff'), url('/fonts/MuseoSansCyrl_500.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_500.svg') format('svg');
 }
 @font-face{
 	font-family:'MuseoSansCyrl_700'; 
-	src:url('/fonts/MuseoSansCyrl_700.otf');
-	src:url('/fonts/MuseoSansCyrl_700.ttf') format("truetype");}
-
+	src: url('/fonts/MuseoSansCyrl_700.eot');
+	src: local('☺'), url('/fonts/MuseoSansCyrl_700.woff') format('woff'), url('/fonts/MuseoSansCyrl_700.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_700.svg') format('svg');
+}
 @font-face{
 	font-family:'MuseoSansCyrl_900'; 
-	src:url('/fonts/MuseoSansCyrl_900.otf');
-	src:url('/fonts/MuseoSansCyrl_900.ttf') format("truetype");
+	src: url('/fonts/MuseoSansCyrl_900.eot');
+	src: local('☺'), url('/fonts/MuseoSansCyrl_900.woff') format('woff'), url('/fonts/MuseoSansCyrl_900.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_900.svg') format('svg');
 }
 
 @font-face{
 	font-family:'GubiaBlack'; 
-	src:url('/fonts/GubiaBlack.otf');
-	src:url('/fonts/GubiaBlack.ttf') format("truetype");
+	src: url('/fonts/GubiaBlack.eot');
+	src: local('☺'), url('/fonts/GubiaBlack.woff') format('woff'), url('/fonts/GubiaBlack.ttf') format('truetype'), url('/fonts/GubiaBlack.svg') format('svg');
 
 }
 
