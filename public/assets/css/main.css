@@ -205,7 +205,7 @@ ul li{
 .main_sidebar p{
 	font-family: GilroyLight!important;
 	color: white;
-	font-size: 11px!important;
+	font-size: 0.8vw!important;
 	word-wrap: break-word;
 
 }
@@ -2743,4 +2743,7 @@ div {
 
 /*------------------------Safari Only--------------------*/
 @media not all and (min-resolution:.001dpcm) { @media {
+	.right_bonus_part {
+	   padding: 14vw 0 0 1vw;
+	}
 }}
