@@ -4,7 +4,7 @@
       <div class="modal-body">
         <h4 >ВХОД</h4>
         <div class="user_data" style="height: 350px;">
-          <form action="/login"" method="POST">
+          <form action="/login" method="POST">
             {{ csrf_field() }}
             
             <input class="login_input" id="email" type="email" name="email" placeholder="Почта" required="required">

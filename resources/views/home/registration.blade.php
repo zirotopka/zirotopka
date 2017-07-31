@@ -4,7 +4,7 @@
       <div class="modal-body">
         <h3>ПРИСОЕДИНЯЙТЕСЬ!</h3>
         <div class="user_data">
-          <form action="/register"" method="POST">
+          <form action="/register" method="POST">
             {{ csrf_field() }}
             <p>
               <input class="reg_input" id="email" type="email" name="email" placeholder="Почта" required="required">

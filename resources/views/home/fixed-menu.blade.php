@@ -102,8 +102,7 @@
                         <p>08 ДОСТУП</p>
                     </a> 
                     <p class="fm_line">|</p>
-
-                </li class="sc">
+                </li>
                     <a href="#top" class="spy_sections top_section" >
                         <p>НАВЕРХ</p>
                     </a>
