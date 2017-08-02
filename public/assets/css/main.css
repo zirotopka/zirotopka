@@ -2728,15 +2728,15 @@ div {
 	.programm_list {
 	    background-size: 103% 75%;
 	    background-position: -1vw 3vw;
-	    padding: 7.5vw 0 0 0;
+	    padding: 3.5vw 0 0 0;
 		margin: 5% 0 0 0;
 	}
 	.left_bonus_part {
-	    padding: 23% 0 0 0;
+	    padding: 14% 0 0 0;
 	}
 	.right_bonus_part {
 	    height: 80%;
-	    padding: 24% 0 0 2.9em;
+	    padding: 15% 0 0 2.9em;
 	    background-position: right 75%;
 	    background-size: 18vw;
 	}
@@ -2749,7 +2749,7 @@ div {
 	}
 
 	.how_cnt {
-	    margin: 20% 0 0 0;
+	    margin: 10% 0 4% 0;
 	}
 
 	.swiper-container {
@@ -2760,7 +2760,7 @@ div {
 
 	.comments-screen {
 	    height: 95vh;
-	    padding: 9% 0 0 0;
+	    padding: 6% 0 0 0;
 	}
 
 	.comm_img_hldr {
@@ -2774,7 +2774,7 @@ div {
 	}
 	.left_quest, .right_quest {
 	    text-align: left;
-	    margin: 12% 0 0 0;
+	    margin: 10% 0 0 0;
 	    padding: 0 0 0 10%;
 	    height: auto;
 	}
