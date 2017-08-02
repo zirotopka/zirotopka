@@ -179,7 +179,7 @@ return [
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
 
         Barryvdh\Debugbar\ServiceProvider::class,
-
+        PulkitJalan\GeoIP\GeoIPServiceProvider::class,
     ],
 
     /*
@@ -233,6 +233,7 @@ return [
         'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
         'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'GeoIP' => PulkitJalan\GeoIP\Facades\GeoIP::class,
     ],
 
 ];

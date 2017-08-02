@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Helpers\Yandex;
+use GeoIP;
 
 class Test extends Command
 {
@@ -40,6 +41,11 @@ class Test extends Command
     {
         $answ = Yandex::send_payments(123, 1000, '', true);
 
-        dd($answ);
+        //$cert = openssl smime -sign -signer вашклиентскийсерт.cer -inkey private.key -nochain -nocerts -outform PEM -nodetach -passin pass:password_for_private_key
+        $cert = openssl_pkcs7_sign($answ['text'],public_path().'/signed.txt','/Users/olegstolin/Sites/zirotopka/SSL/certnew.cer','/Users/olegstolin/Sites/zirotopka/SSL/private.key',[]);
+        dd($cert);
+        // $geo = new GeoIp;
+        // $geo->setIp('178.219.244.202');
+        // dd($geo->getCity());
     }
 }
