@@ -263,8 +263,26 @@ td{
 	.replenish_btn{
 		margin: 3em 0 3em 0;
 	}
+
+	.replenish_btn:hover {
+    	margin: 2.8em 0 3.2em -0.2em;
+	}
+
+	.replenish_btn:active {
+	    margin: 2.8em 0 3.2em -0.2em;
+	}
 	.blns_btns{
 		text-align: center;
+	}
+	.black_btn:hover {
+	    height: 3.7em;
+	    width: 12.2em;
+	    margin: 2.8em -0.6% 0 3%;
+	}
+	.black_btn:active {
+	    height: 3.7em;
+	    width: 12.2em;
+	    margin: 2.8em -0.6% 0 3%;
 	}
 }
 
@@ -352,4 +370,8 @@ thead{
 	.pagination {
 	    margin-left: 80%;
 	}
+}
+
+@media not all and (min-resolution:.001dpcm) { @media {
+	
 }

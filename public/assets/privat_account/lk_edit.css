@@ -154,7 +154,7 @@ input{
 }
 
 .save-btn:hover{
-	margin: 0.8em 0 3em 0;
+	margin: 2.8em 0 3em 0;
 	width: 11.2em;
 	height: 3.7em;
 }
@@ -310,3 +310,14 @@ input{
 
 
 
+@media screen and (max-width: 767px) {
+	.save-btn {
+		margin:3em 0 3em 0;
+	}
+	.save-btn:hover {
+		margin:2.6em 0 3.4em 0;
+	}
+	.save-btn:active {
+		margin:2.6em 0 3.4em 0;
+	}
+}

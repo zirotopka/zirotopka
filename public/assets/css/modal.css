@@ -45,6 +45,7 @@
 	vertical-align: super !important;
 	text-decoration: underline;
 	text-decoration-color: #454545;
+	cursor: default;
 }
 
 
@@ -342,9 +343,7 @@ label:hover:before {
 
 
 @media screen and (max-width: 61.95em) {
-	.prog-bold-txt{
-		margin-left: 0;
-	}
+
 	.bootstrap-select button{
 		padding-right: 2.65em!important;
 	}

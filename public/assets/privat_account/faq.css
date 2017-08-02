@@ -64,7 +64,7 @@ ul,li {
 }
 
 .access_block, .programm_block, .immunity_block, .questions_block{
-	margin: 2em 0 0 0;
+	margin: 1em 0 0 0;
 }
 
 /*------------------------------FAQ-Lists-------------------------*/
@@ -102,6 +102,7 @@ ul,li {
 	border:0.1em solid #c6c6c6;
 	border-radius: 4px; 
 	height: 2.5em;
+	display: block;
 }
 
 .send_btn{
@@ -112,14 +113,20 @@ ul,li {
 	margin: 1em 0 0 0;
 	width: 10em;
 	height: 3em;
-}
-
-.send_btn:hover{
-	background-color: #FF7930;
+	display: block;
 }
 
 .send_btn:active{
+	margin: 0.8em 0 0 0;
+	width: 10.2em;
+	height: 3.2em;
+	background-color: #FF7930;
+}
 
+.send_btn::hover{
+	margin: 0.8em 0 0 0;
+	width: 10.2em;
+	height: 3.2em;
 }
 @media screen and (max-width: 61.95em) {
 	.questions_block ul{ 

@@ -39,7 +39,7 @@
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
                         <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>
                     </div>
-                    <button type="button" class="rg_btn" data-toggle="modal" data-target="#registr">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                    <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
                 </div>    
             </div>
           @else
@@ -60,7 +60,7 @@
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
                         <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>
                     </div>
-                    <button type="button" class="rg_btn" data-toggle="modal" data-target="#registr">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                    <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
                 </div>    
             </div>
           @endif
@@ -86,7 +86,7 @@
                         </ul>
                         <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n4">
-                                <img src="/ico/prize.svg" alt="">
+                                <img src="/ico/feed.svg" alt="">
                                 <p>Рекомендации по питанию,<br>адаптированные к планам<br>тренировок</p>
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n5">
@@ -173,18 +173,18 @@
                     <img src="/ico/money.svg" alt="">    
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 right_bonus_part">
-                    <p>ЗАНИМАЙТЕСЬ СПОРТОМ, ЗАРАБАТЫВАЙТЕ ДЕНЬГИ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ<br>БОНУСНОЙ СИСТЕМЫ ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
+                    <p>ЗАНИМАЙТЕСЬ СПОРТОМ,<br class="visible-xs"> ЗАРАБАТЫВАЙТЕ ДЕНЬГИ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ<br>БОНУСНОЙ СИСТЕМЫ<br class="visible-xs"> ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
                     <button type="button" class="bonus_btn">ПОДРОБНЕЕ</button>
                 </div>
             </div>
             <hr class="disp_line">
             <div class="how-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_5">
                 <h2>КАК ЭТО РАБОТАЕТ</h2>
-                <div style="height: 43vw; max-height: 504px;" class="asd">
+                <div style="height: 43vw; max-height: 470px;" class="asd">
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt choice">
                         <img src="/ico/chs.svg" alt="">
                         <p class="orng">Вы выбираете сами</p>
-                        <p class="who_txt">Подходящий пан тренировок<br>в зависимости от подготовки.<br>Удобная дата начала тренировок.</p>
+                        <p class="who_txt">Подходящий план тренировок<br>в зависимости от подготовки.<br>Удобная дата начала тренировок.</p>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt freedom">
                         <img src="/ico/frdm.svg" alt="">
@@ -220,7 +220,7 @@
                     </div>
             
                 <p class="watch_more">Смотреть больше отзывов</p>
-                <a class="arrow" type="button"></a>
+                <a class="arrow2" type="button"></a>
             </div>
             <hr class="disp_line">
             <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_7">
@@ -228,7 +228,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left_quest">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ref">
                         <div>
-                            <img src="/ico/lightning.png" alt="">
+                            <img src="/ico/lightning.svg" alt="">
                             <p class="zag">ВОПРОСЫ<br>О REFORMATOR.ONE</p>
                         </div>
                         <div>
@@ -250,7 +250,7 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 prg">
                         <div>
-                            <img src="/ico/gantel.png" alt="">
+                            <img src="/ico/prgrms.svg" alt="">
                             <p class="zag">ВОПРОСЫ О ПРОГРАММЕ<br>И ЗАДАНИЯХ</p>
                         </div>
                         <div>
@@ -274,7 +274,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 right_quest">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ruls">
                         <div>
-                            <img src="/ico/prize1.png" alt="">
+                            <img src="/ico/prize1.svg" alt="">
                             <p class="zag">ПРАВИЛА УЧАСТИЯ<br>В ПРОГРАММЕ</p>
                         </div>
                         <div>
@@ -296,7 +296,7 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
                         <div>
-                            <img src="/ico/str.png" alt="">
+                            <img src="/ico/str.svg" alt="">
                             <p class="zag">РАЗНОЕ<br>ОБЩИЕ ВОПРОСЫ</p>
                         </div>
                         <div>

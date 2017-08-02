@@ -37,7 +37,7 @@
 				<input type="text" name="pasport_name" class="edit-inputs pasp_id col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="ФИО" value="{{$user->pasport_name}}">
 				<input type="text" name="pasport_number" class="edit-inputs pasp_numb col-lg-2 col-md-2 col-sm-2 col-xs-2" placeholder="№" value="{{$user->pasport_number}}">
 				<input type="text" name="pasport_series" class="edit-inputs pasp_series col-lg-4 col-md-4 col-sm-4 col-xs-4" placeholder="серия" value="{{$user->pasport_series}}">
-				<input type="date" name="pasport_date" class="edit-inputs pasp_date col-lg-6 col-md-6 col-sm-6 col-xs-6" placeholder="дата выдачи" value="{{!empty($user->pasport_date) ?  gmdate("Y-m-d", $user->pasport_date) : ''}}">
+				<input type="date" name="pasport_date" class="edit-inputs pasp_date col-lg-6 col-md-6 col-sm-6 col-xs-6" placeholder="дд/мм/гггг" value="{{!empty($user->pasport_date) ?  gmdate("d-m-Y", $user->pasport_date) : ''}}">
 				<textarea type="text" name="pasport_issued" class="edit-inputs pasp_who col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="кем выдан">{{$user->pasport_issued}}</textarea>
 			</div>
 		</div>
