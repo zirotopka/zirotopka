@@ -25,10 +25,6 @@ input{
 
 }
 
-.img-circle{
-	width: 7em !important;
-	height: 7em !important;
-}
 
 .m_usr_img{
 
@@ -158,7 +154,7 @@ input{
 }
 
 .save-btn:hover{
-	margin: 0.8em 0 3em 0;
+	margin: 2.8em 0 3em 0;
 	width: 11.2em;
 	height: 3.7em;
 }
@@ -288,7 +284,7 @@ input{
 .profile_btns p{
 	font-family: MuseoSansCyrl_300!important;
 	color: white;
-	font-size: 1.1em!important;
+	font-size: 1em!important;
 }
 
 .profile_btns i{
@@ -305,26 +301,6 @@ input{
 	width: 110px;
 	height: 110px;
 }
-.profile_btns{
-
-	text-decoration: none;
-	display: block;
-	padding: 2em 0 2em 0em!important;
-	outline: none;
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	color: #f3efe0;
-	text-transform: uppercase;
-	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	letter-spacing: 1px;
-	font-weight: bold;
-	-webkit-transition: background 0.3s, box-shadow 0.3s;
-	transition: background 0.3s, box-shadow 0.3s;
-	color: #f3efe0;
-	text-transform: uppercase;
-	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	letter-spacing: 1px;
-	font-weight: bold;
-}
 
 .left_edit_part ul {
     font-size: 17px;
@@ -334,3 +310,14 @@ input{
 
 
 
+@media screen and (max-width: 767px) {
+	.save-btn {
+		margin:3em 0 3em 0;
+	}
+	.save-btn:hover {
+		margin:2.6em 0 3.4em 0;
+	}
+	.save-btn:active {
+		margin:2.6em 0 3.4em 0;
+	}
+}

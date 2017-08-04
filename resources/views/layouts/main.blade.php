@@ -195,7 +195,6 @@
     <script type="text/javascript" src="/assets/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>    
     <script type="text/javascript" src="/assets/js/perfect-scrollbar.jquery.min.js"></script>
-    <script src="/assets/js/scrollspy.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/classie.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/sidebarEffects.js"></script>
     <script type="text/javascript" src="/assets/js/calendar.js"></script>

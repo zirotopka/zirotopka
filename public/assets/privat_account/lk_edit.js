@@ -8,7 +8,7 @@ $( document ).ready(function() {
 	$(".birthdate-left").inputmask("99");
 	$(".birthdate-center").inputmask("99");
 	$(".birthdate-right").inputmask("9999");
-
+	
 
 
 	$('body').on('change','#download-logos',function(){

@@ -3,6 +3,7 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
+    <link href="/assets/home/reg-log_form.css" type="text/css" rel="stylesheet">
     <link href="http://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
     <link href="/assets/css/main.css" type="text/css" rel="stylesheet">
     <link href="/assets/swiper/swiper.min.css" type="text/css" rel="stylesheet">
@@ -15,6 +16,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
+    <script src="/assets/home/index-scrollspy.js"></script>
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
 
@@ -39,7 +41,7 @@
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
                         <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>
                     </div>
-                    <button type="button" class="rg_btn" data-toggle="modal" data-target="#registr">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                    <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
                 </div>    
             </div>
           @else
@@ -60,7 +62,7 @@
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
                         <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>
                     </div>
-                    <button type="button" class="rg_btn" data-toggle="modal" data-target="#registr">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                    <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
                 </div>    
             </div>
           @endif
@@ -86,7 +88,7 @@
                         </ul>
                         <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n4">
-                                <img src="/ico/prize.svg" alt="">
+                                <img src="/ico/feed.svg" alt="">
                                 <p>Рекомендации по питанию,<br>адаптированные к планам<br>тренировок</p>
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n5">
@@ -173,18 +175,18 @@
                     <img src="/ico/money.svg" alt="">    
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 right_bonus_part">
-                    <p>ЗАНИМАЙТЕСЬ СПОРТОМ, ЗАРАБАТЫВАЙТЕ ДЕНЬГИ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ<br>БОНУСНОЙ СИСТЕМЫ ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
-                    <button type="button" class="bonus_btn">ПОДРОБНЕЕ</button>
+                    <p>ЗАНИМАЙТЕСЬ СПОРТОМ,<br class="visible-xs"> ЗАРАБАТЫВАЙТЕ ДЕНЬГИ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ<br>БОНУСНОЙ СИСТЕМЫ<br class="visible-xs"> ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
+                    <button type="button" class="bonus_btn" onclick="location.href='/bonus';">ПОДРОБНЕЕ</button>
                 </div>
             </div>
             <hr class="disp_line">
             <div class="how-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_5">
                 <h2>КАК ЭТО РАБОТАЕТ</h2>
-                <div style="height: 43vw; max-height: 504px;" class="asd">
+                <div style="height: 43vw; max-height: 470px;" class="asd">
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt choice">
                         <img src="/ico/chs.svg" alt="">
                         <p class="orng">Вы выбираете сами</p>
-                        <p class="who_txt">Подходящий пан тренировок<br>в зависимости от подготовки.<br>Удобная дата начала тренировок.</p>
+                        <p class="who_txt">Подходящий план тренировок<br>в зависимости от подготовки.<br>Удобная дата начала тренировок.</p>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 how_cnt freedom">
                         <img src="/ico/frdm.svg" alt="">
@@ -197,7 +199,7 @@
                         <p class="who_txt">Вознаграждения через бонусную<br>систему платформы. Поощрение<br>и подарки для самых активных.</p>
                     </div>
                 </div>
-                <button>ПОПРОБОВАТЬ БЕСПЛАТНО</button>
+                <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
             </div>
             <hr class="disp_line">
             <div class="comments-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_6">
@@ -206,8 +208,8 @@
                         <div class="swiper-wrapper">
                             @forelse($comments as $comment)
                                 <div class="swiper-slide" >
-                                    <img src="{{$comment->img_holder}}" alt="" class="comm_img_hldr video_holder" data-id="{{$comment->id}}">
-                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr">
+                                    <img src="{{$comment->img_holder}}" alt="" class="comm_img_hldr video_holder" >
+                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr" data-id="{{$comment->id}}">
                                     <p class="comment_name">{{$comment->user}}</p>
                                     <p class="comment_who">{{$comment->comment_text}}</p>
                                 </div>
@@ -220,7 +222,7 @@
                     </div>
             
                 <p class="watch_more">Смотреть больше отзывов</p>
-                <a class="arrow" type="button"></a>
+                <a class="arrow2" type="button"></a>
             </div>
             <hr class="disp_line">
             <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_7">
@@ -228,7 +230,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left_quest">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ref">
                         <div>
-                            <img src="/ico/lightning.png" alt="">
+                            <img src="/ico/lightning.svg" alt="">
                             <p class="zag">ВОПРОСЫ<br>О REFORMATOR.ONE</p>
                         </div>
                         <div>
@@ -250,7 +252,7 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 prg">
                         <div>
-                            <img src="/ico/gantel.png" alt="">
+                            <img src="/ico/prgrms.svg" alt="">
                             <p class="zag">ВОПРОСЫ О ПРОГРАММЕ<br>И ЗАДАНИЯХ</p>
                         </div>
                         <div>
@@ -274,7 +276,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 right_quest">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ruls">
                         <div>
-                            <img src="/ico/prize1.png" alt="">
+                            <img src="/ico/prize1.svg" alt="">
                             <p class="zag">ПРАВИЛА УЧАСТИЯ<br>В ПРОГРАММЕ</p>
                         </div>
                         <div>
@@ -296,7 +298,7 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
                         <div>
-                            <img src="/ico/str.png" alt="">
+                            <img src="/ico/str.svg" alt="">
                             <p class="zag">РАЗНОЕ<br>ОБЩИЕ ВОПРОСЫ</p>
                         </div>
                         <div>
@@ -326,7 +328,7 @@
                     <p class="connect">ПРИСОЕДИНИТЬСЯ!</p>
                     <p class="connect_info">ПОЛУЧИТЬ ДОСТУП К ПЛАТФОРМЕ REFORMATOR.ONE <br>В ТЕЧЕНИЕ ТЕСТОВОГО ПЕРИОДА СОВЕРШЕННО БЕСПЛАТНО</p>
                     <p class="connect_price">2500 руб. <b>0 руб.</b></p>
-                    <button class="connect_btn" type="button">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
+                    <button class="connect_btn" type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                 </div>                
             </div>
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -375,7 +377,7 @@
                         <li>
                             <a href="#">ДОГОВОР ОФЕРТА</a>
                         </li>
-                        <li>
+                        <li id="pltks">
                             <a href="#">ПОЛИТИКА<br>КОНФЕДИЦИАЛЬНОСТИ</a>
                         </li>
                     </ul>

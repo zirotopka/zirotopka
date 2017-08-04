@@ -21,7 +21,7 @@
 .left_edit_part ul li a {
 	text-decoration: none;
 	display: block;
-	padding: 1.1em 0 1.1em 0em!important;
+	padding: 1.8em 0 1.9em 0em;
 	outline: none;
 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
 	color: #f3efe0;
@@ -31,7 +31,7 @@
 	font-weight: bold;
 	-webkit-transition: background 0.3s, box-shadow 0.3s;
 	transition: background 0.3s, box-shadow 0.3s;
-	font-size: 0.9em !important;
+	font-size: 0.8em!important;
 
 }
 
@@ -52,7 +52,7 @@
 .left_edit_part p{
 	font-family: GilroyLight!important;
 	color: white;
-	font-size: 1.1em !important;
+	font-size: 1em !important;
 	vertical-align: bottom;
 }
 

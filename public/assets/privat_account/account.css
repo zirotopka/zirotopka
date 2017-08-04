@@ -242,6 +242,12 @@
 .ddicc{
 	margin: 2.7em 0 0px 6.86em;
 }
+
+.logo a{
+	text-decoration: none;
+	color:#282828;
+}
+
 @media screen and (max-width: 47.95em) {
 	.prog-descr{
 		margin: 1em 2em 1.5em 0.7em!important;
@@ -311,26 +317,42 @@
 	.ddicc{
 		margin: 2.7em 0 0 15.46em !important;
 	}
-	.send-progr-btn{
-		margin: 0;
-		width: 17em!important;
-	}
-	.send-progr-btn:hover{
-		margin: 0;
-		width: 17em!important;
-	}
-	.send-progr-btn:active{
-		margin: 0;
-		width: 17em!important;
-	}
 	.checkboxiki ul{
 		padding: 0!important;
 	}
 
 	.outlet {
     width: 55%!important;
+	}
 }
 
+@media screen and (max-width: 767px) {
+	.send-progr-btn{
+	    margin: 0 0 0 13vw;
+		width: 50vw;
+		height: 10vw;
+		font-size: 0.6em;
+	}
+	.send-progr-btn:hover{
+	    margin: -0.4vw 0 0 13vw;
+		width: 50.4vw;
+		height: 10.4vw;
+		font-size: 0.6em;
+	}
+	.send-progr-btn:active{
+	    margin: -0.4vw 0 0 13vw;
+		width: 50.4vw;
+		height: 10.4vw;
+		font-size: 0.6em;
+	}
+	
+	.prog-bold-txt {
+	    text-align: center;
+	    margin-left: 0;
+	}
+	.checkboxiki{
+		padding: 0 0 0 2vw;
+	}
 }
 
 @media screen and (max-width: 61.95em) {
@@ -400,18 +422,6 @@
 	}
 	.ddicc{
 		margin: 2.7em 0 0 15.26em !important;
-	}
-	.send-progr-btn{
-		margin: 0;
-		width: 17em!important;
-	}
-	.send-progr-btn:hover{
-		margin: 0;
-		width: 17em!important;
-	}
-	.send-progr-btn:active{
-		margin: 0;
-		width: 17em!important;
 	}
 	.checkboxiki ul{
 		padding: 0!important;
@@ -483,6 +493,7 @@
 .prof-disp{
 	display: inline-block;
 	margin: 0 0 0 0.5em;
+	vertical-align: -webkit-baseline-middle;
 }
 
 .img-circle{
@@ -549,8 +560,7 @@
 
 	@media screen and (max-width: 767px) {
 		.btn-play {
-			    margin:14vw 0 0 -56vw;
-
+			    margin: 14vw 0 0 -56vw!important;
 			}
 	
 	}

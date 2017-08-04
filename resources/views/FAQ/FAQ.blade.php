@@ -118,7 +118,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="questions_block">
+				<div class="programm_block">
 					<div class="title_block">
 						<img src="/ico/faq_star.png" alt="" class="faq_ico">
 						<p class="faq_title">ОБЩИЕ ВОПРОСЫ</p>
@@ -140,7 +140,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="questions_block">
+				<div class="programm_block">
 					<div class="title_block">
 						<img src="/ico/bonus.png" alt="" class="faq_ico">
 						<p class="faq_title">ОБЩИЕ ВОПРОСЫ</p>

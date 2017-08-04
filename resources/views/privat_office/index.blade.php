@@ -26,8 +26,10 @@
 <!--Логотип-->
 	<div class="main-content container-fluid">
 		<div class="logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<img class="logo-pos" src="/ico/R'ONE logo.png" alt="">
-			<b>.START</b>
+			<a href="/">
+				<img class="logo-pos" src="/ico/R'ONE logo.png" alt="">
+				<b>.START</b>
+			</a>
 		</div>
 <!--Календарь-->
 		@if ( !empty($user->current_programm_id) )

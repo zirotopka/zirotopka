@@ -63,8 +63,12 @@ ul,li {
 	color: #FF9319 !important;
 }
 
-.access_block, .programm_block, .immunity_block, .questions_block{
-	margin: 2em 0 0 0;
+.access_block, .programm_block, .immunity_block{
+	margin: 1.9em 0 0 0;
+}
+
+.questions_block{
+	margin: 1em 0 0 0;
 }
 
 /*------------------------------FAQ-Lists-------------------------*/
@@ -102,6 +106,7 @@ ul,li {
 	border:0.1em solid #c6c6c6;
 	border-radius: 4px; 
 	height: 2.5em;
+	display: block;
 }
 
 .send_btn{
@@ -109,17 +114,23 @@ ul,li {
 	background-color: #ff8a18;
 	border-radius: 4px;
 	color: white;
-	margin: 1em 0 0 0;
+	margin: 2em 0 0 0;
 	width: 10em;
 	height: 3em;
-}
-
-.send_btn:hover{
-	background-color: #FF7930;
+	display: block;
 }
 
 .send_btn:active{
+	margin: 0.8em 0 0 0;
+	width: 10.2em;
+	height: 3.2em;
+	background-color: #FF7930;
+}
 
+.send_btn::hover{
+	margin: 0.8em 0 0 0;
+	width: 10.2em;
+	height: 3.2em;
 }
 @media screen and (max-width: 61.95em) {
 	.questions_block ul{ 
@@ -146,26 +157,6 @@ ul,li {
 .img-circle{
 	width: 110px;
 	height: 110px;
-}
-.profile_btns{
-
-	text-decoration: none;
-	display: block;
-	padding: 2em 0 2em 0em!important;
-	outline: none;
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	color: #f3efe0;
-	text-transform: uppercase;
-	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	letter-spacing: 1px;
-	font-weight: bold;
-	-webkit-transition: background 0.3s, box-shadow 0.3s;
-	transition: background 0.3s, box-shadow 0.3s;
-	color: #f3efe0;
-	text-transform: uppercase;
-	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	letter-spacing: 1px;
-	font-weight: bold;
 }
 
 .left_edit_part ul {

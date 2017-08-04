@@ -8,7 +8,11 @@ jQuery.ajaxSetup({
 
 $(document).ready(function(){
 //	$('html').perfectScrollbar();
-
+	$(".rg_btn").click(function() {
+	    $('html,body').animate({
+	        scrollTop: $("#section_2").offset().top},
+	        800);
+	});
 
 
 	$('#choose_programe_form').modal('show');
@@ -107,7 +111,7 @@ $(document).ready(function(){
     	$('.start_shader').attr('style',"display:block;");
     	$('.prg1').attr('style',"display:none;");
     });
-    $('.start_shader').on('mouseleave',function(){
+    $('.start_shader, .start_shader h4, .start_shader p').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
     	$('.prg1').attr('style',"display:block;");
     });
@@ -116,7 +120,7 @@ $(document).ready(function(){
     	$('.pro_shader').attr('style',"display:block;");
     	$('.prg2').attr('style',"display:none;");
     });
-    $('.pro_shader').on('mouseleave',function(){
+    $('.pro_shader, .pro_shader h4, .pro_shader p').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
     	$('.prg2').attr('style',"display:block;");
     });
@@ -125,7 +129,7 @@ $(document).ready(function(){
     	$('.pow_shader').attr('style',"display:block;");
     	$('.prg3').attr('style',"display:none;");
     });
-    $('.pow_shader').on('mouseleave',function(){
+    $('.pow_shader, .pow_shader h4, .pow_shader p').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
     	$('.prg3').attr('style',"display:block;");
     });
@@ -134,7 +138,7 @@ $(document).ready(function(){
     	$('.run_shader').attr('style',"display:block;");
     	$('.prg4').attr('style',"display:none;");
     });
-    $('.run_shader').on('mouseleave',function(){
+    $('.run_shader, .run_shader h4, .run_shader p').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
     	$('.prg4').attr('style',"display:block;");
     });
@@ -143,12 +147,12 @@ $(document).ready(function(){
     	$('.runp_shader').attr('style',"display:block;");
     	$('.prg5').attr('style',"display:none;");
     });
-    $('.runp_shader').on('mouseleave',function(){
+    $('.runp_shader, .runp_shader h4, .runp_shader p').on('mouseleave',function(){
     	$(this).attr('style',"display:none;");
     	$('.prg5').attr('style',"display:block;");
     });
 
-      $('body').on('click','.video_holder',function() {
+      $('body').on('click','.ico_play',function() {
     var video_modal_form = $('#video-modal'),
         thisContainer = jQuery(this),
  			  comment_id = thisContainer.data('id');
@@ -205,6 +209,3 @@ function in_array(needle, haystack, strict) {	// Checks if a value exists in an 
 
 	return found;
 }
-
-
-
