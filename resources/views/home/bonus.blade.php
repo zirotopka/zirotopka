@@ -12,7 +12,7 @@
     <!-- Добавлять js тут -->
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="/assets/home/bonus-scrollspy.js"></script>
-    <script type="text/javascript" src="/assets/home/bonus.js"></script>
+    <script type="text/javascript" src="/assets/home/bonus.js?{{time()}}"></script>
 
 
 @overwrite
