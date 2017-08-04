@@ -13,8 +13,6 @@
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="/assets/home/bonus-scrollspy.js"></script>
     <script type="text/javascript" src="/assets/home/bonus.js"></script>
-
-
 @overwrite
 
 @section("content")
@@ -205,5 +203,4 @@
     </div>
     @include('home.registration',['user' => $user, 'referral' => $referral])
     @include('home.login')
-
 @overwrite
