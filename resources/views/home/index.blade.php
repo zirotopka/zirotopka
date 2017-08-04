@@ -3,6 +3,7 @@
 @section('css')
     @parent
     <!-- Добавлять css тут -->
+    <link href="/assets/home/reg-log_form.css" type="text/css" rel="stylesheet">
     <link href="http://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
     <link href="/assets/css/main.css" type="text/css" rel="stylesheet">
     <link href="/assets/swiper/swiper.min.css" type="text/css" rel="stylesheet">
@@ -15,6 +16,7 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
+    <script src="/assets/home/index-scrollspy.js"></script>
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
 
@@ -174,7 +176,7 @@
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 right_bonus_part">
                     <p>ЗАНИМАЙТЕСЬ СПОРТОМ,<br class="visible-xs"> ЗАРАБАТЫВАЙТЕ ДЕНЬГИ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ<br>БОНУСНОЙ СИСТЕМЫ<br class="visible-xs"> ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
-                    <button type="button" class="bonus_btn">ПОДРОБНЕЕ</button>
+                    <button type="button" class="bonus_btn" onclick="location.href='/bonus';">ПОДРОБНЕЕ</button>
                 </div>
             </div>
             <hr class="disp_line">
@@ -197,7 +199,7 @@
                         <p class="who_txt">Вознаграждения через бонусную<br>систему платформы. Поощрение<br>и подарки для самых активных.</p>
                     </div>
                 </div>
-                <button>ПОПРОБОВАТЬ БЕСПЛАТНО</button>
+                <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
             </div>
             <hr class="disp_line">
             <div class="comments-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_6">
@@ -326,7 +328,7 @@
                     <p class="connect">ПРИСОЕДИНИТЬСЯ!</p>
                     <p class="connect_info">ПОЛУЧИТЬ ДОСТУП К ПЛАТФОРМЕ REFORMATOR.ONE <br>В ТЕЧЕНИЕ ТЕСТОВОГО ПЕРИОДА СОВЕРШЕННО БЕСПЛАТНО</p>
                     <p class="connect_price">2500 руб. <b>0 руб.</b></p>
-                    <button class="connect_btn" type="button">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
+                    <button class="connect_btn" type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                 </div>                
             </div>
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

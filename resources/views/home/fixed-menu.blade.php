@@ -40,7 +40,7 @@
                 </li>
                 <br><br>
                 <li>
-                    <a href="/" class="profile_btns" style="padding:1.5em 0 1em 4em!important">
+                    <a href="/" class="profile_btns" id="mn_l_mn" style="padding:1.5em 0 1em 4em!important">
                         <p>ГЛАВНАЯ</p>
                     </a> 
                 </li>
@@ -50,59 +50,98 @@
                     </a> 
                 </li>
                 <li>
-                    <a href="" class="profile_btns" id="bns_l_mn">
+                    <a href="/bonus" class="profile_btns" id="bns_l_mn">
                         <p>бонусная <br> программа</p>
                     </a> 
                 </li>
-                <li class="sc">
-                    <p class="fm_line">|</p>
-                    <a href="#section_2" class="spy_sections" >
-                        <p>02 ОПИСАНИЕ</p>
-                    </a> 
-                    <p class="fm_line">|</p>
-                </li>
-                <li class="sc">
-                    <p class="fm_line">|</p>
-                    <a href="#section_3" class="spy_sections">
-                        <p>03 ПРОГРАММЫ</p>
-                    </a> 
-                    <p class="fm_line">|</p>
-                </li>
-                <li class="sc">
-                    <p class="fm_line">|</p>
-                    <a href="#section_4" class="spy_sections">
-                        <p>04 БОНУСЫ</p>
-                    </a> 
-                    <p class="fm_line">|</p>
-                </li>
-                <li class="sc">
-                    <p class="fm_line">|</p>
-                    <a href="#section_5" class="spy_sections">
-                        <p>05 КАК РАБОТАЕТ</p>
-                    </a> 
-                    <p class="fm_line">|</p>
-                </li>
-                <li class="sc"> 
-                    <p class="fm_line">|</p>
-                    <a href="#section_6" class="spy_sections">
-                        <p>06 ОТЗЫВЫ</p>
-                    </a> 
-                    <p class="fm_line">|</p>
-                </li>
-                <li class="sc">
-                    <p class="fm_line">|</p>
-                    <a href="#section_7" class="spy_sections">
-                        <p>07 ВОПРОСЫ</p>
-                    </a> 
-                    <p class="fm_line">|</p>
-                </li>
-                <li class="sc">
-                    <p class="fm_line">|</p>
-                    <a href="#section_8" class="spy_sections">
-                        <p>08 ДОСТУП</p>
-                    </a> 
-                    <p class="fm_line">|</p>
-                </li>
+                <div class="index_spy">
+                    <li class="sc">
+                        <p class="fm_line">|</p>
+                        <a href="#section_2" class="spy_sections" >
+                            <p>02 ОПИСАНИЕ</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc">
+                        <p class="fm_line">|</p>
+                        <a href="#section_3" class="spy_sections">
+                            <p>03 ПРОГРАММЫ</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc">
+                        <p class="fm_line">|</p>
+                        <a href="#section_4" class="spy_sections">
+                            <p>04 БОНУСЫ</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc">
+                        <p class="fm_line">|</p>
+                        <a href="#section_5" class="spy_sections">
+                            <p>05 КАК РАБОТАЕТ</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc"> 
+                        <p class="fm_line">|</p>
+                        <a href="#section_6" class="spy_sections">
+                            <p>06 ОТЗЫВЫ</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc">
+                        <p class="fm_line">|</p>
+                        <a href="#section_7" class="spy_sections">
+                            <p>07 ВОПРОСЫ</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc">
+                        <p class="fm_line">|</p>
+                        <a href="#section_8" class="spy_sections">
+                            <p>08 ДОСТУП</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                </div>
+                <div class="bonus_spy">
+                    <li class="sc">
+                        <p class="fm_line">|</p>
+                        <a href="#bonus_2" class="spy_sections">
+                            <p>03 КАК РАБОТАЕТ</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc">
+                        <p class="fm_line">|</p>
+                        <a href="#bonus_3" class="spy_sections">
+                            <p>04 О НАС</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc">
+                        <p class="fm_line">|</p>
+                        <a href="#bonus_4" class="spy_sections">
+                            <p>05 О СЕРВИСЕ</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc"> 
+                        <p class="fm_line">|</p>
+                        <a href="#bonus_5" class="spy_sections">
+                            <p>06 ВОПРОСЫ</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc">
+                        <p class="fm_line">|</p>
+                        <a href="#bonus_6" class="spy_sections">
+                            <p>06 ПРИСОЕДИНИТЬСЯ</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                </div>
                     <a href="#top" class="spy_sections top_section" >
                         <p>НАВЕРХ</p>
                     </a>

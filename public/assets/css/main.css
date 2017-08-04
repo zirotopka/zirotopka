@@ -16,6 +16,9 @@ ul li{
 	list-style: none;
 }
 
+.bonus_spy{
+	display: none;
+}
 
 .spy_sections{
 	height: 1em!important;
@@ -191,10 +194,6 @@ ul li{
 	font-size: 0.9vw !important;
 	height: 4.35em;
 
-}
-
-.main_sidebar ul li:first-child a {
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
 }
 
 .main_sidebar ul li a:hover {
@@ -1319,311 +1318,6 @@ footer .prgrm_list .bonus{
 	
 }
 
-/*-----------------------------Login form------------------------*/
-.modal-dialog{
-	margin: 7em auto;
-}
-
-.login_form{
-		width: 32em;
-	}
-
-.login_form .modal-content{
-border-radius: 0;
-background: url("/ico/R.png");
-background-repeat: no-repeat;
-background-size: 11em;
-background-color: white;
-background-position: 20em 8em;
-text-align: center;
-}
-
-.login_form .modal-content .modal-body h4,.reg_modal .modal-content .modal-body h3 {
-	color: #ff8a18;
-	font-family: MuseoSansCyrl_900;
-	font-size: 1.4em;
-	margin: 1.5em 0 0 0;
-}
-
-.login_input{
-	background-color: white;
-	border-radius: 3px;
-	border: 0.1em solid #B3B3B3;
-	color: #81868F;
-	width: 75%;
-	height: 3em;
-	font-size: 1em;
-	padding: 0 0 0 2em;
-}
-
-.login_form .modal-content .modal-body .user_data #email{
-	margin: 3em 0 0 0;
-}
-
-.login_form .modal-content .modal-body .user_data #password{
-	margin: 0.5em 0 0 0;
-}
-
-.login_btn{
-	background-color: #ff8a18;
-	border: none;
-	border-radius: 2em;
-	width: 75%;
-	height: 3em;
-	color: white;
-	margin: 2em 0 0 0;
-	font-family: MuseoSansCyrl_100;
-	font-size: 0.88em;
-}
-
-.login_btn:hover{
-	width: 76%!important;
-	height: 3.1em!important;
-	margin: 1.9em 0 0 0;
-}
-
-.login_btn:active{
-	width: 76%!important;
-	height: 3.1em!important;
-	margin: 1.9em 0 0 0;
-	background-color: #D9550E;
-
-}
-
-.login_form .modal-content .modal-body a{
-	color: #81868F;
-	font-family: MuseoSansCyrl_100;
-	text-decoration: none;
-	display: block;
-	margin: 1.5em 0 0 0;
-	padding: 0;
-}
-
-hr{
-	margin: 0 0 0.2em 0;
-	width: 25%;
-	border-bottom: 0.00000000000000000000411px solid #81868F;
-	box-shadow: 0px 1px 0px #81868F;
-}
-.enter_across{
-	text-align: center;
-}
-
-
-.enter_across a, .enter_across hr{
-	display: inline-block !important;
-}
-
-.enter_across a{
-	color: #81868F !important;	
-	text-decoration: none;
-	pointer-events: none;
-}
-
-.vk_fs a img{
-	width: 3em;
-	display: inline-block;
-
-}
-
-.vk_fs a{
-	margin: 1em 0 0 0!important;
-	display: inline-block!important;
-	width: 15%;
-}
-
-@media screen and (max-width: 46.0625em) {
-	.login_form{
-		width: 95%;
-	}
-	hr{
-		width: 23%;
-	}
-	.login_form .modal-content{
-	background-position: 95% 8em;
-	}
-	.right-sex{
-		padding: 0 0 0 0.3em!important;
-	}
-}
-
-/*------------------------------Registration Form---------------------------------*/
-
-.reg_modal{
-	width: 32em;
-}
-
-.reg_modal .modal-content{
-	height: 36em;
-	text-align: center;
-	border-radius: 0;
-	background: url("/ico/R.png");
-	background-repeat: no-repeat;
-	background-size: 11em;
-	background-color: white;
-	background-position: 20em 9.75em;
-
-}
-
-.reg_input{
-	background-color: white;
-	border-radius: 3px;
-	border: 0.1em solid #B3B3B3;
-	color: #81868F;
-	width: 65%;
-	height: 2.5em;
-	font-size: 1em;
-	padding: 0 0 0 2em;
-}
-
-.reg_modal .modal-content .modal-body .user_data #email{
-	margin: 2em 0 0 0;
-}
-
-.reg_modal .modal-content .modal-body .user_data #password,#first_name ,#surname ,#phone{
-	margin: 0.5em 0 0 0;
-}
-
-.sex_chs{
-	height: 1em;
-
-}
-
-.sex, .sex p, .sex input{
-	display: inline-block;
-	font-family: MuseoSansCyrl_100;
-}
-
-.left-sex{
-	text-align: right;
-	padding: 0.2em 0 0 0;
-	color: #81868F;
-	font-family: MuseoSansCyrl_100;
-	margin: 0;
-}
-
-.right-sex{
-	text-align: left;
-	margin: 0;
-}
-
-.sex p{
-	vertical-align: middle;
-	color: #81868F;
-	margin: 0.2em 0 0 1.2em;
-}
-
-.sex{
-	width: 4em;
-}
-
-.registr_btn{
-	background-color: #ff8a18;
-	border: none;
-	border-radius: 2em;
-	width: 65%;
-	height: 3.5em;
-	color: white;
-	margin: 1.5em 0 0 0;
-	font-family: MuseoSansCyrl_100;
-	font-size: 0.88em;
-}
-
-.registr_btn:hover{
-	width: 66%!important;
-	height: 3.7em;
-	margin: 1.3em 0 0 0;
-}
-
-.registr_btn:active{
-	width: 66%!important;
-	height: 3.7em;
-	margin: 1.3em 0 0 0;
-	background-color: #D9550E;
-}
-
-.reg_enter_across{
-	margin: 1em 0 0 0;
-}
-
-.reg_enter_across hr{
-	width: 16%;
-}
-
-div {
-  margin:0 0 0.5em 0;
-}
-
-[type="radio"]:checked,
-[type="radio"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
-}
-[type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
-    position: relative;
-    cursor: pointer;
-    line-height: 20px;
-    display: inline-block;
-    color: #666;
-    top: -0.3em;
-}
-[type="radio"]:checked + label:before,
-[type="radio"]:not(:checked) + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1em;
-    height: 1em;
-    border: 1px solid #B3B3B3;
-    border-radius: 100%;
-    background: #fff;
-}
-[type="radio"]:checked + label:after,
-[type="radio"]:not(:checked) + label:after {
-    content: '';
-    width: 0.73em;
-    height: 0.7em;
-    background: #ff8a18;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    border-radius: 100%;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-}
-@media not all and (min-resolution:.001dpcm) { @media {
-
-	[type="radio"]:checked + label:after,
-	[type="radio"]:not(:checked) + label:after {
-	    width: 0.71em;
-	}
-}}
-[type="radio"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-[type="radio"]:checked + label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-
-@media screen and (max-width: 46.0625em) {
-	.reg_modal{
-		width: 95%;
-	}
-
-	.reg_modal .modal-content{
-		background-position: 90% 9.75em;
-
-	}
-}
-
 
 /*---------------------Mobile version--------------------*/
 @media screen and (max-width: 992px) {
@@ -1649,10 +1343,6 @@ div {
 	}
 
 	
-	.info-screen hr {
-	    margin: 70vw 0 0 40%;
-	}
-
 	.reg_scrn_txt{
 		padding: 19vw 0 0 0;
 	}
@@ -1754,10 +1444,6 @@ div {
 	.ico_play{
 	    margin: 90px 0 0 -12em;
 	    width: 6em;
-	}
-
-	.programm-screen hr {
-	    margin: 60vw 0 0 40%!important;
 	}
 
 	.programm-screen h2 {
@@ -1906,10 +1592,6 @@ div {
 		margin: 4em 0 0 0;
 	}
 
-	footer{
-		height: 30vw;
-	}
-
 	.orng {
 	    font-family: MuseoSansCyrl_700!important;
 	    color: #ff8a18;
@@ -1928,6 +1610,12 @@ div {
 	    width: 18vw;
 	    margin-left: 0;
 	}
+
+	footer{
+		height: 30vw;
+	}
+
+
 	footer .prgrm_list {
 	    line-height: 1.2em;
 	}
@@ -2560,6 +2248,9 @@ div {
 
 	.reg_f_s ul{
 		padding: 0 0 0 5vw;
+	}
+	footer .prgrm_list ul li{
+		padding: 0;
 	}
 
 	.connect_btn{

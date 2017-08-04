@@ -63,7 +63,11 @@ ul,li {
 	color: #FF9319 !important;
 }
 
-.access_block, .programm_block, .immunity_block, .questions_block{
+.access_block, .programm_block, .immunity_block{
+	margin: 1.9em 0 0 0;
+}
+
+.questions_block{
 	margin: 1em 0 0 0;
 }
 
