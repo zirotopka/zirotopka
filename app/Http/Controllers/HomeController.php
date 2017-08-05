@@ -11,7 +11,7 @@ use Carbon\Carbon;
 class HomeController extends Controller
 {
     public function index(Request $request)
-    {	
+    {	 
         $user = Sentinel::getUser();
         $comments = Comments::all();
         $referral = null;

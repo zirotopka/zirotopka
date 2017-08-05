@@ -42,14 +42,13 @@ class Test extends Command
         $answ = Yandex::send_payments(123, 1000, '', true);
 
         //$cert = openssl smime -sign -signer вашклиентскийсерт.cer -inkey private.key -nochain -nocerts -outform PEM -nodetach -passin pass:password_for_private_key
+        
+        print(public_path().'/signed.txt');
         $cert = openssl_pkcs7_sign($answ['text'],
                                    public_path().'/signed.txt',
-                                   public_path().'/SSL/certnew.cer',
-                                   public_path().'/SSL/private.key',
+                                   'file://'.realpath('./SSL/certnew.cer'),
+                                   ['file://'.realpath('./SSL/private.key'), 'Gorchel'],
                                    [], PKCS7_NOSIGS);
         dd($cert);
-        // $geo = new GeoIp;
-        // $geo->setIp('178.219.244.202');
-        // dd($geo->getCity());
     }
 }

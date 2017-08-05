@@ -92,9 +92,12 @@ class UserController extends Controller
             $user->phone = $request->get("phone");
             $user->user_ip = $_SERVER["REMOTE_ADDR"];
             $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
-            $user->ip = $request->ip();
+
+            $clientIp = $request->ip();
+            $user->ip = $clientIp;
+
             //Сделать сохранение timezone
-            $user->timezone = 'Africa/Nairobi';
+            $user->timezone = IP::get_client_timezone($clientIp);
             $user->save();
 
             $activation = Activation::create($user);
