@@ -43,7 +43,8 @@
                             Начиная со 2 линии Вы получаете пассивный доход<br>от партнёров Вашей команды. Так же Ваши участники<br>следующей за вами линии тоже начинают получать<br>доход от тех людей, которых пригласили в проект Вы<br>или участники вашей линии.
                         </p>
                     </div>
-                    <div class="how-images col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <img src="/ico/mbonus.svg" class="mobimg visible-xs">
+                    <div class="hidden-xs how-images col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <ul>
                             <li>
                                 <h2>

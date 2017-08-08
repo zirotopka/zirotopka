@@ -760,7 +760,7 @@ footer .prgrm_list .bonus{
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
 	.bonus-content hr {
-	    margin: 0 0 15vw 43%;
+	    margin: 0 0 18vw 43%;
 	}
 
 .bons-screen {
@@ -820,7 +820,7 @@ footer .prgrm_list .bonus{
 	height: auto;
 	padding: 0;
 	text-align: center;
-    margin:0 0 15vw 0;
+    margin:0 0 0 0;
 }
 
 	.how-content {
@@ -890,7 +890,10 @@ footer .prgrm_list .bonus{
 	.ab-ct{
 		margin:10% 0 0 0;
 	}
-
+	.mobimg{
+	    width: 170%;
+	    margin: 0 0 0 -42%;
+	}
 .bons-pay-screen {
 	height: auto;
 	padding: 0;
