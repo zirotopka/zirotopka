@@ -978,11 +978,11 @@ ul li{
 	    height: 4.6em;
 	    width: 4.6em;
 	    background-size: 4.6vw;
-	    margin: 3.5em 0 0 24vw !important;}
+	    margin: 3.8em 0 0 22.8vw !important;}
 
 	    
 	.start-arrow:active{
-	    margin: 3.5em 0 0 24vw !important;}
+	    margin: 3.8em 0 0 22.8vw !important;}
 	    
 	.progr-arrow{
 		margin: 1em 0 0 15vw!important;
@@ -1039,7 +1039,7 @@ ul li{
 	.arrow:hover{
 		height: 3.2em;
 		width: 3.2em;
-		margin: 1.5em -0.5em 0 1vw;
+		margin: 1.8em 0 0 1vw;
 		background-color: white;
 		background: url('/ico/arrow1.svg');
 		background-size: 3.2em;
@@ -1049,7 +1049,7 @@ ul li{
 		background: url('/ico/arrow1-2.svg');
 		height: 3.2em;
 		width: 3.2em;
-		margin: 1.8em -0.2em 0 1vw;
+		margin: 1.8em 0 0 1vw;
 		background-color: #c4c4c4;
 		background-size: 3.2em;
 		background-color: rgba(255,255,255,0.1)!important;
