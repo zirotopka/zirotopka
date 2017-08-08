@@ -77,7 +77,7 @@
                             </li>
                         </ul>
                     </div>
-                        @include('home.arrows-img')
+                    <img src="/ico/bonuss.svg" class="carrows hidden-xs">
                 </div>
                 <hr>
                 <div class="bons-about-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_3">
@@ -90,7 +90,7 @@
                         <div class="ab-ct col-xs-12 col-sm-4 col-md-4 col-lg-4">
                             <img src="/ico/garanty.svg" class="about-icons">
                             <p>
-                                Мы используем <br class="visible-sm">SSL-сертификат для<br>безопасности передачи<br> персональных данных<br>и защиты всех платежей
+                                Мы используем <br class="visible-sm">SSL-сертификат<br class="visible-md"> для<br class="hidden-md">безопасности передачи<br> персональных данных<br>и защиты всех платежей
                             </p>
                         </div>
                         <div class="ab-ct col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -121,7 +121,7 @@
                 <hr>
                 <div class="bons-question-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_5">
                     <h2>ВОПРОСЫ И ОТВЕТЫ</h2>
-                    <div class="quest_left col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="quest_left col-xs-12 col-sm-5 col-md-5 col-lg-5">
                         <ul>
                             <li style="line-height: 2.6vw;" class="two_lines">Lorem ispum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod.</li>
                             <li>Lorem ispum dolor sit amet</li>
@@ -130,7 +130,7 @@
                             <li>Lorem ispum dolor sit amet</li>
                         </ul>
                     </div>
-                    <div class="quest_right col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="quest_right col-xs-12 col-sm-7 col-md-7 col-lg-7">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus iaculis tellus, id feugiat purus pharetra vitae. Nulla facilisi. Sed at condimentum augue, at interdum leo. Maecenas eu interdum ipsum, id aliquam nibh. Nam molestie velit et turpis rutrum, quis rutrum leo accumsan. Vivamus nec laoreet enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec justo rutrum, vehicula magna in, tempus metus.</p>
                     </div>
                     <p class="qwston">?</p>

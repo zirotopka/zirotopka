@@ -79,7 +79,7 @@
                             </a> 
                         </li>
                         <li>
-                            <a href="" class="profile_btns">
+                            <a href="/bonus" class="profile_btns">
                                 <p>бонусная <br> программа</p>
                             </a> 
                         </li>

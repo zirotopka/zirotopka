@@ -7,16 +7,17 @@
 
 <!-- Left part -->
           <div class="left-progrm-part col-lg-5 col-md-5 col-sm-5 col-xs-5">
-            <p class="prog-bold-txt">ВЫБЕРИТЕ ПРОГРАММУ</p>
-            <img src="/ico/drop-ico.png" alt="" class="ddicc">
-            <br>
-            <select class="selectpicker" name="program_id" id="program_id" >
-              @foreach ($programs as $program )
-                <option value="{{$program->id}}">{{$program->name}} </option>  
+             <p class="prog-bold-txt">ВЫБЕРИТЕ ПРОГРАММУ</p>
+             <div class="cntrt">
+                <img src="/ico/drop-ico.png" alt="" class="ddicc">
+                <br>
+                <select class="selectpicker" name="program_id" id="program_id" >
+                  @foreach ($programs as $program )
+                    <option value="{{$program->id}}">{{$program->name}} </option>  
 
-              @endforeach
-            </select>
-            
+                  @endforeach
+                </select>
+            </div>
             <br>
           <p class="prog-bold-txt slate">ВЫБЕРИТЕ ДАТУ <br>начала тренировок</p>
           <div class="progr-drop">      
@@ -32,20 +33,22 @@
               <li>
                 <input type="checkbox" id="check1" required> 
                 <label for="check1">
-                  <a class="" href="#">Мне больше 14.</a>
                 </label>
+                  <a class="" href="#">Мне больше 14.</a>
+
               </li>
               <li>
                 <input type="checkbox" id="check2" required>
                 <label for="check2">
-                  <a class="" href="#">Ознакомился(-ась) с офертой.</a>
                 </label>
+                  <a class="" href="#">Ознакомился(-ась) с офертой.</a>
+
               </li>
               <li>
                 <input type="checkbox" id="check3" required>    
                 <label for="check3">
-                  <a class="" href="#">Ознакомился(-ась) с политикой<br> конфиденциальности.</a>             
                 </label>
+                  <a class="" href="#">Ознакомился(-ась) с политикой<br> конфиденциальности.</a>
               </li>
             </ul>
           </div>

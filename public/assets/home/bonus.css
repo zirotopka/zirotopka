@@ -30,7 +30,7 @@ ul li{
 
 .spy_sections{
 	height: 1em!important;
-	padding: 0 0 0 5em!important;
+	padding: 0 0 0 4.7em!important;
 	display: none!important;
 	background-color: transparent!important;
 
@@ -51,7 +51,7 @@ ul li{
 }
 
 .fm_line{
-    margin: 0.15em 0 -0.08em 8.58em!important;
+    margin: 0.1vw 0 0.1vw 8.58em!important;
 	color: #818181!important;
 	display: none;
 }
@@ -192,7 +192,7 @@ ul li{
 .main_sidebar ul li a {
 	text-decoration: none;
 	display: block;
-	padding: 1.4vw 0 1em 4em;
+	padding: 0.8vw 0 1em 4em;
 	outline: none;
 	color: #f3efe0;
 	text-transform: uppercase;
@@ -219,7 +219,7 @@ ul li{
 }
 
 .sc{
-	margin:0.3em 0 0 0;
+	margin:0.5vw 0 0 0;
 }
 
 .spy_sections p{
@@ -278,7 +278,7 @@ ul li{
 }
 
 h2{
-	font-size: 3em;
+	font-size: 2.5em;
     text-align: center;
     font-family: GilroyBold;
     color: #ff8a18;
@@ -339,19 +339,18 @@ h2{
 
 .reg_btn:active{
     background-color: #d9550e;
-    margin: 3% 2em 0 -0.1em;
+    margin: 3% 2em 0 -0.2vw;
    	width: 17.2vw;
 	height: 4.8vw;
 }
 
 .abo_btn{
-	border: 0.2em solid #626262;
+    border: 0.1em solid #7f7f7f;
 	background-color: #f3f3f3;
 	color: #232323;
 }
 
 .abo_btn:hover{
-	border: 0.2em solid #626262;
 	background-color: #f3f3f3;
 	color: #232323;
    	width: 17.2vw;
@@ -360,7 +359,6 @@ h2{
 }
 
 .abo_btn:active{
-	border: 0.2em solid #626262;
 	background-color: #cccccc;
 	color: #232323;
    	width: 17.2vw;
@@ -413,7 +411,9 @@ h2{
 
 .how-images ul li h2{
     text-align: left;
-    margin: 0 0 0.3em 0.3em;
+    margin: 0 0 0.3em 0.4em;
+	font-family: MuseoSansCyrl_700;
+	font-size: 700;
 }
 
 .arrw p{
@@ -448,15 +448,19 @@ h2{
     margin: 0 2.5em -3.5em 0;
 }
 
-#liness{
-	width: 100%;
-	height: 100%;
+.carrows{
+	margin: -40% 0px 0 -15%;
+    width: 123%;
 }
 
 .how-images{
 	height: auto;
 	padding: 0;
-	margin: 5% 0 0 0;
+	margin: 5% 0 0 2%;
+}
+
+.mob_bns{
+	display: none;
 }
 
 /*-------------------------third screen-----------*/
@@ -584,6 +588,10 @@ h2{
     color: #ff8a18;
 }
 
+.quest_right p{
+	width: 90%;
+}
+
 /*-------------------------sixth screen-----------*/
 .bons-connect-screen{
 	padding: 0;
@@ -601,7 +609,7 @@ h2{
 .connect_screen_shader{
 	z-index: 2;
 	height: 45.1vw;
-    background-color: rgba(50,50,50,0.7);
+    background-color: rgba(50,50,50,0.8);
     position: absolute;
 }
 
@@ -616,6 +624,7 @@ h2{
 .connect_content{
 	position: relative;
 	z-index: 3;
+	margin:0;
 }
 
 .connect{
@@ -660,7 +669,7 @@ h2{
 	margin: 4% 0 0 0;
 	background-color: #ff8a18;
 	color: white;
-	font-size: 1.2vw;
+	font-size: 1.1vw;
 	font-weight: 500;
     font-family: MuseoSansCyrl_500;
 }
@@ -830,15 +839,47 @@ footer .prgrm_list .bonus{
 	    margin: 0 0 0.3em -7vw;
 	}
 
-	svg{
-		display: none;
+	.mob_bns {
+	    display: block;
+	    height: 170%;
+	    margin: -4% 0 0 -63%;
+	    width: 220%;
+	    position: absolute;
 	}
 
-.bons-about-screen {
-	height: auto;
-	padding: 0;
-	margin: 0 0 15vw 0;
-}
+	.arrw p{
+		display: inline-block;
+	}
+
+	.black-arrow {
+	    width: 6em;
+	    margin: 21% 13.5vw 39% 0;
+	    transform: rotate(90deg);
+	    display: inline-block;
+	}
+
+	.how-images ul li {
+	    display: block;
+	}
+
+	.king {
+	    width: 15vw;
+	    margin: 0 -10.5vw 0 0;
+	}
+
+	.holp p{
+		display: inline-block;
+	}
+
+	.holop{
+		display: inline-block;
+	}
+
+	.bons-about-screen {
+		height: auto;
+		padding: 0;
+		margin: 0 0 15vw 0;
+	}
 
 	.bons-about-screen p {
 	    font-size: 4.5vw;
@@ -1074,8 +1115,9 @@ footer{
 	    margin: 0 3vw -3.5vw 0;
 	}
 
-	svg{
-		width: 90vw;
+	.carrows {
+	    margin: -41% 0px 0 -15%;
+	    width: 125%;
 	}
 
 .bons-about-screen {
@@ -1127,6 +1169,8 @@ footer{
 	.qwston {
 	    font-size: 42vw;
 	}
+
+
 
 .bons-connect-screen {
     height: 56vw;
@@ -1181,11 +1225,16 @@ footer {
 	    line-height: 1em;
 	}
 
+	.carrows {
+	    margin: -38% 0px 0 -12%;
+	    width: 118%;
+	}
+
 }
 
 @media screen and (min-width: 1200px) {
 	h2{
-		font-size: 3vw;
+		font-size: 2.5vw;
 	}
 
 	.bons-screen{
@@ -1219,7 +1268,7 @@ footer {
 
 	.holop{
 		width: 5vw;
-	    margin: 0 2.5vw 0 0;
+	    margin: 50% 2.5vw 0 0;
 	}
 	.black-arrow{
 		width: 12vw;
@@ -1241,7 +1290,12 @@ footer {
 
 	.holp p {
 	    font-size: 1.3vw;
-	    margin: 0 0 0 -1.2vw;
+	    margin: 0 0 -44% -1.4vw;
+	}
+
+	.carrows {
+	    margin: -39% 0px 0 -13%;
+	    width: 122%;
 	}
 .bons-about-screen {
     height: 50vw;

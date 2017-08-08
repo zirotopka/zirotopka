@@ -111,6 +111,7 @@ td{
 	border-bottom: 1px solid #EAEAEA;
 	font-family: MuseoSansCyrl_100;
 	color: #3E3E3E;
+    padding: 8px 1.6em!important;
 }
 
 .table-scrolling{
@@ -299,11 +300,12 @@ thead{
 }
 
 .tb_dt{
-	width: 12.1vw!important;
+	width: 15.1vw!important;
 }
 
 .tb_tm{
 	width: 9.6vw!important;
+    padding: 0 1em 0 0!important;
 }
 
 .tp_trz{
@@ -311,11 +313,12 @@ thead{
 }
 
 .tb_znc{
-    width: 30.85vw;
+    width: 27.85vw;
 }
 
 .tb_sm{
     width: 7vw!important;
+    padding: 0 1em 0 0!important;
 }
 
 @media screen and (max-width: 767px) {
@@ -335,6 +338,9 @@ thead{
 	.tb_sm{
 	    width: 6vw!important;
 	}
+	td {
+	    padding: 8px!important;
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -349,7 +355,7 @@ thead{
 	}
 
 	.tb_dt{
-		width: 15.3vw;
+	    width: 23.1vw!important;
 	}
 
 	.tb_tm{
@@ -365,7 +371,7 @@ thead{
 	}
 
 	.tb_sm{
-	    width: 9vw!important;
+	    width: 25vw!important;
 	}
 	.pagination {
 	    margin-left: 80%;
