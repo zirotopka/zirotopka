@@ -50,7 +50,7 @@
                 <div class="reg_scr_content">
                     <div id="st-trigger-effects" class="hidden-md hidden-lg">
                         <button data-effect="st-effect-2" class="cdr-btn">
-                            <img src="/ico/menu.png" alt="" style="width: 3vw;">
+                            <img src="/ico/menu.png" alt="" style="width: 5vw;">
                         </button>
                     </div>
                         <div class="reg_log_btns">
