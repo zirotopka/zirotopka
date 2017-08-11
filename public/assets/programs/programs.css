@@ -278,7 +278,7 @@ ul li{
 }
 
 h2{
-	font-size: 2.5em;
+	font-size: 2.5vw;
     text-align: center;
     font-family: GilroyBold;
     color: #ff8a18;
@@ -351,14 +351,14 @@ h2{
 	display: inline-block;
 	color: #ff8a18;
 	font-family: GilroyBold;
-	vertical-align: baseline;
+	vertical-align: sub;
 }
 
 .rst_ctn{
     font-family: MuseoSansCyrl_100;
 	color: #232323;
     line-height: 2em;
-	font-size: 1vw;
+	font-size: 1.2vw;
 }	
 
 .rstart-img-cnt{
@@ -393,20 +393,20 @@ h2{
     border-radius: 6vw;
     background-color: #ff8a18;
     color: white;
-    margin: 6vw 0 0 0;
+    margin: 1vw 0 0 0;
     font-size: 1.1vw;
 }
 
 .rstart-txt-cnt button:hover{
     width: 23.2vw;
     height: 4.7vw;
-    margin: 5.9vw 0 -0.1vw -0.1vw;
+    margin: 0.9vw 0 -0.1vw -0.1vw;
 }
 
 .rstart-txt-cnt button:active{
     width: 23.2vw;
     height: 4.7vw;
-    margin: 5.9vw 0 -0.1vw -0.1vw;
+    margin: 0.9vw 0 -0.1vw -0.1vw;
     background-color: #d9550e;
 }
 
@@ -414,9 +414,9 @@ h2{
 /*-----------------------------------------Second-screen--------------------*/
 .tcount-screen{
 	padding: 0;
-	margin: 0;
+	margin: 2.5vw 0 0 0;
 	text-align: center;
-	height: 40vw;
+	height: 40.6vw;
 }
 
 .prgr_name_st{
@@ -446,11 +446,606 @@ h2{
 	padding: 17% 0 0 0;
 }
 
+/*----------------------------------------Third screen--------------------------*/
+
+.info-screen{
+	height: 43vw;
+	margin: 0 0 4vw 0;
+}
+
+.swiper-container{
+	height: 90%;
+}
+
+.content-slide{
+    padding: 4vw 0 0 0;
+}
+
+.cs-head{
+	color: #ff8a18!important;
+	font-size: 2.5vw!important;
+}
+
+.content-slide p{
+	font-family: MuseoSansCyrl_100;
+    font-size: 1.2vw;
+    color: #232323;
+    word-spacing: 0.4vw;
+    letter-spacing: 0.1vw;
+    margin: 0.43vw 0 0 0;
+}
+
+.content-slide button{
+    width: 23vw;
+    height: 4.5vw;
+    border-radius: 6vw;
+    background-color: #ff8a18;
+    color: white;
+    margin: 4vw 0 0 0;
+    font-size: 1.1vw;
+}
+
+.content-slide button:hover{
+    width: 23.2vw;
+    height: 4.7vw;
+    margin: 3.9vw 0 -0.1vw -0.1vw;
+}
+
+.content-slide button:active{
+    width: 23.2vw;
+    height: 4.7vw;
+    margin: 3.9vw 0 -0.1vw -0.1vw;
+    background-color: #d9550e;
+}
+
+.bbrdr{
+    border: 0.1em solid #3E474F;
+    margin: 9vw 0 0 4.5vw;
+    width: 85%;
+}
+
+.ico_play {
+    position: absolute;
+    z-index: 2;
+    margin: 9% 0 0 -23vw;
+    width: 20%;
+    cursor: pointer;
+}
+
+.upr_d{
+    font-size: 1.3vw;
+    text-align: center;
+    margin: 0.5vw 0 0.5vw 0;
+}
+
+/*-----------------------------------4 screen-----------------------------*/
+.ruls-screen{
+	height: 50vw;
+	text-align: center;
+
+}
+
+.ruls-screen p{
+    font-family: MuseoSansCyrl_100;
+    color: #232323;
+    font-size: 1.5vw;
+    margin: 6vw 0 0 0;
+    word-spacing: 0.5vw;
+    letter-spacing: 0.1vw;
+}
+
+.ruls-screen img{
+	width: 8vw;
+	margin: 10vw 0 0 0;
+}
+
+.img-txt{
+    font-family: MuseoSansCyrl_300!important;
+    margin: 2vw 0 0 0!important;
+    letter-spacing: normal!important;
+    word-spacing: normal!important;
+}
+
+.comm_img_hldr{
+    width: 100%;
+    margin: -4vw 0 0 -2vw;
+}
+	/*-----------------------------Eighth Screen(connect-screen)---------------*/
+	.connect-screen{
+	    height: 46vw;
+	    background: url(/ico/unfootscr.png);
+	    background-repeat: no-repeat;
+	    background-size: 115%;
+	    background-position: 60% 0;
+	    margin: 0;
+	    padding: 0 0 0 0;
+	}
+
+	.connect_screen_shader{
+	    width: 100%;
+	    height: 46.1vw;
+	    position: absolute;
+	    background-color: rgba(50,50,50,0.83);
+	    z-index: 1;
+	}
+
+	.connect_screen_shader p {
+	    font-size: 19.1vw;
+	    font-family: GubiaBlack;
+	    margin: 13% 0 0 -0.8vw;
+	    opacity: 0.2;
+	    color: white;
+	}
+	 
+	.connect_content{
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		height: 60vw;
+	}
+
+	.connect_content p{
+		color: white;
+	}
+
+	.connect {
+	    font-family: GilroyBold;
+	    font-size: 2.9vw;
+	    letter-spacing: 1px;
+	    padding: 7vw 0 0 0;
+	}
+
+	.connect_info{
+		font-family: MuseoSansCyrl_500;
+		font-size: 2vw;
+		margin: 2em 0 0 0;
+		font-weight: 500;
+	}
+
+	.connect_price{
+		font-family: MuseoSansCyrl_700;
+		color: #c3c3c3!important;
+		font-size: 1.55em;
+		margin: 1em 0 0 0;
+		background: url(/ico/fc_line.png);
+		background-repeat: no-repeat;
+		background-position: 33vw 5px;
+	}
+
+	.connect_price b{
+		color: white!important;
+		font-size: 1.6em!important;
+	}
+
+	.connect_btn{
+		height: 4.5vw;
+		width: 24vw;
+		border-radius: 2em;
+		border: none;
+		margin: 6em 0 0 0;
+		background-color: #ff8a18;
+		color: white;
+		font-size: 1.1vw;
+		font-weight: 500;
+	    font-family: MuseoSansCyrl_500;
+	}
+
+	.connect_btn:hover{
+		height: 4.7vw;
+		width: 24.2vw;;
+		margin: 5.8em -0.2vw 0 0;
+		background-color: #ff8a18!important;
+	}
+
+	.connect_btn:active{	
+		height: 4.7vw;
+		width: 24.2vw;
+		margin: 5.8em -0.2vw 0 0;
+		background-color: #D9550E!important;
+	}
+	/*-----------------------------------Footer-----------------------*/
+	footer{
+		font-family: GilroyLight;
+		background-color: #282828;
+		margin: 0 0 -10px 0;
+	    padding: 2rem 0 0 0px!important;
+		height: 28vw;
+	}
+
+	.mission p{
+		line-height: 1.6vw;
+		color: white;
+		text-transform: uppercase;
+		font-size: 1vw;
+		margin: 3vh 0 0 0;
+	}
+
+	.mission img{
+		margin: 2.15em 0 2.15em 0;
+	}
+
+	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a{
+		text-decoration: none;
+		color: white;
+		font-size: 1vw;
+		margin-top: 0.2em;
+	}
+
+	footer .prgrm_list ul li{
+		padding-left: 28%;
+	}
+
+	footer .prgrm_list{
+		padding: 2.5em 0 0 0;
+		line-height: 2.6vw;
+	}
+
+	footer .prgrm_list .bonus{
+		margin: 1em 0 0 0;
+		line-height: 1.5em;
+	}
+
+	.reg_f_s{
+		padding: 2.2em 0 0 0;
+		line-height: 3.3vw;
+	}
+
+	.reg_f_s img{
+		display: inline-block;
+		width: 3em;
+		margin: 2em 0 0 0.5em;	
+	}
+
+	.ofrta{
+		padding: 2.5em 0 0 0;
+	    line-height: 2.5vw;
+	}
+
+	#pltks{
+		line-height: 1.5em;
+	}
+
+	.accsss{
+		line-height: 1.5em;
+	}
+
+	.home_content hr{
+	    margin: 0 0 8em 40%;
+	    width: 20%;
+	    box-shadow: none;
+	    border-bottom: 1px solid #ff8a18;
+	    position: relative;
+	    text-align: center;
+	    opacity: 0.4;
+	    border-top: none;
+	    float: left;
+	}
+
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
+
+	.rstart-txt-cnt button {
+		height: 6vw;
+		width: 35vw;
+	    font-size: 1.5vw;
+	}
+
+	.rstart-txt-cnt button:hover {
+		height: 6.2vw;
+		width: 35.2vw;
+	}
+
+	.rstart-txt-cnt button:active {
+		height: 6.2vw;
+		width: 35.2vw;
+	}
+
+	.rst_ctn {
+	   font-size: 1.7vw;
+	}
+
+	.rstart-img-cnt p {
+	    font-size: 1.5vw;
+	    margin: 1vw 0 10% 0;
+	}
+
+	.for_whm p {
+	    font-size: 3.5vw;
+	}
+
+	.for_whm img {
+	    width: 11vw;
+	}
+
+	h2{
+		font-size: 3.5vw;
+	}
+
+	.info-screen {
+	    height: auto;
+	}
+
+	.upr_d {
+	    font-size: 2vw;
+	}
+	
+	.content-slide p {
+	    font-size: 2vw;
+	}
+
+	.content-slide {
+	    text-align: center;
+	}
+	.prgr_name_st {
+	    font-size: 47vw;
+	    margin: -8% 0 0 0;
+	}
+
+	.tcount-screen {
+	    height: 50vw;
+	}
+
+	.home_content hr {
+	    margin: 0 0 4.5em 40%;
+	}
+
+	.frs_imgs {
+	    width: 7vw;
+	}
+
+	.content-slide button {
+	    width: 35vw;
+	    height: 6vw;
+	    font-size: 1.5vw;
+	}
+
+	.content-slide button:hover {
+	    width: 35.2vw;
+	    height: 6.2vw;
+	}
+
+	.content-slide button:active {
+	    width: 35.2vw;
+	    height: 6.2vw;
+	}
+
+	.cs-head {
+	    font-size: 4vw!important;
+	}
+
+	.ruls-screen p {
+	    font-size: 2vw;
+	}
+
+	.ruls-screen {
+	    height: 57vw;
+	}
+	.content-slide {
+	    padding: 0 0 8vw 0;
+	}
+
+	.ico_play {
+	    position: absolute;
+	    z-index: 2;
+	    margin: 9% 0 0 -44vw;
+	    width: 20%;
+	}
+
+	.connect-screen {
+	    height: 51vh;
+	    background-size: 187vw!important;
+	    background-position: -17em;
+	}
+
+	.questions-screen img {
+	    margin-left: -0.4vw!important;
+	}
+
+	.left_quest ul li a, .right_quest ul li a {
+		font-size: 4vw;	
+	}
+
+	.left_quest ul .else, .right_quest ul .else {
+    	margin: 0.5em 0 15vw -4px;
+	}
+
+	.ref, .zag, .ruls .zag{
+		font-size: 5vw!important;
+	}
+
+	.connect_screen_shader {
+	    height: 100%;
+	}
+
+	.connect_info{
+	    font-size: 3vw;
+	    margin: 3em 0 0 0;
+	}
+
+	.questions-screen{
+		padding: 0 0 0 0!important;
+		height: auto;
+	}
+	
+	.connect {
+	    font-size: 3em;
+	    letter-spacing: 1px;
+	    padding: 13vw 0 0 0;
+	}
+
+	.connect {
+	    font-size: 1.5em;
+	    letter-spacing: 1px;
+	    padding: 19vw 0 0 0;
+	}
+
+	.connect_btn{
+		height: 6vw;
+		width: 35vw;
+		font-size: 1.5vw;
+	}
+
+	.connect_btn:hover{
+		height: 6.2vw;
+		width: 35.2vw;
+	}
+
+	.connect_btn:active{
+		height: 6.2vw;
+		width: 35.2vw;
+	}
+
+	.connect_price {
+	    background-position: 25vw 7px;
+	}
+
+	.connect_screen_shader p {
+	    font-size: 22.2vw;
+	    margin: 27% 0 0 -0.8vw;
+	}
+
+footer{
+	height: auto;
+	margin:0 0 5vw 0;
+}
+
+	footer .prgrm_list {
+	    padding: 8.8em 0 0 0;
+		line-height: 2.5em;
+
+	}
+	
+	footer .prgrm_list	.bonus{
+		line-height: 1em;
+	}
+
+	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a {
+	    font-size: 3vw;
+	    margin-top: 0.2em;
+	}
+
+	.mission p {
+	    line-height: 4vw;
+	    color: white;
+	    text-transform: uppercase;
+	    font-size: 3vw;
+	    padding: 0.5vw 0 0 4vw;
+	}
+
+	.reg_f_s ul{
+		padding: 0 0 0 8vw;
+	}
+	footer .prgrm_list ul li{
+		padding: 0;
+	}
+
 }
 
 @media screen and (min-width : 720px) and (max-device-width : 991px) {
+	.startimg {
+	    height: 55vw;
+	}
+
+	.rstart-txt-cnt button {
+	    width: 26vw;
+	    height: 5.5vw;
+	    margin: 2vw 0 0 0;
+	    font-size: 1.2vw;
+	}
+
+	.rstart-txt-cnt button:hover {
+	    width: 26.2vw;
+	    height: 5.7vw;
+    	margin: 1.9vw 0 -0.1vw -0.1vw;
+	    font-size: 1.2vw;
+	}
+
+	.rstart-txt-cnt button:active {
+	    width: 26.2vw;
+	    height: 5.7vw;
+    	margin: 1.9vw 0 -0.1vw -0.1vw;
+	    font-size: 1.2vw;
+	}
+
+	.prgr_name_st {
+	    font-family: GubiaBlack;
+	    font-size: 47vw;
+	    margin: -8% 0 0 0;
+	}
+	.tcount-screen {
+	    height: 48.6vw;
+	}
+
+	.info-screen {
+	    height: 50vw;
+	}
+	.connect_content {
+	    height: 44vw;
+	}
+	.connect_price {
+	    background-position: 39vw 5px;
+	}
+
+	.connect_screen_shader p {
+	    font-size: 22.1vw;
+	    margin: 10% 0 0 0vw;
+	}
+
+	.content-slide p{
+		font-size: 1.5vw;	
+	}
+	.ruls-screen p{
+		font-size: 1.7vw;
+	}
+
+	footer{
+		height: 32vw;
+	}
 }
 
 @media screen and (min-width: 1200px) {
+	.swiper-pagination-bullet {
+	    border: 0.2em solid #ff8a18;
+	    width: 1.5vw!important;
+	    height: 1.5vw!important;
+	}
+	.swiper-button-prev {
+	    background: url(/ico/left_arr.png)!important;
+	    background-size: 1.5vw!important;
+	    background-repeat: no-repeat!important;
+	    height: 3.5vw!important;
+	}
+
+	.swiper-button-next {
+	    background: url(/ico/right_arr.png)!important;
+	    background-size: 1.5vw!important;
+	    background-repeat: no-repeat!important;
+	    height: 3.5vw!important;
+	}
+
+	.tcount-screen {
+	    margin: 0.4vw 0 0 0;
+		height: 38.4vw;
+	}
+
+	.info-screen {
+		margin: 0 0 2.7vw 0px;
+	}
+
+	.ruls-screen img {
+	    width: 8vw;
+	}
+	
+	.connect_price {
+	    background-position: 34vw 10px;
+	    font-size: 1.5vw;
+	}
+
+	footer{
+	    height: 24vw;
+	}
+
+	.ico_play {
+	    margin: 7% 0 0 -24vw;
+	}
+
 }

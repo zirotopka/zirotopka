@@ -28,7 +28,7 @@
                         <img src="/ico/R'ONE logo.png" alt="">
                         <p>START</p>
                     </div>
-                    <div class="rstart-txt-cnt col-sm-7 col-md-7 col-lg-7">
+                    <div class="rstart-txt-cnt col-xs-7 col-sm-7 col-md-7 col-lg-7">
                         <div class="for_whm">
                             <p>ДЛЯ КОГО</p>
                             <img src="/ico/14+.svg">
@@ -38,7 +38,7 @@
                         </p>
                         <button type="button">ПРОБОВАТЬ БЕСПЛАТНО</button>
                     </div>
-                    <div class="rstart-img-cnt col-sm-5 col-md-5 col-lg-5">
+                    <div class="rstart-img-cnt col-xs-5 col-sm-5 col-md-5 col-lg-5">
                         <img src="/ico/easy_lvl.svg" class="frs_imgs">
                         <p>начальный уровень</p>
                         <br>
@@ -53,19 +53,19 @@
             </div>
             <div class="tcount-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <p class="prgr_name_st">START</p>
-                <div class="pdd col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <p class="tc_d">28</p>
                     <p class="tc_t">ДНЕЙ</p>
                 </div>
-                <div class="pdd col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <p class="tc_d">20</p>
                     <p class="tc_t">ТРЕНИРОВОК</p>
                 </div>
-                <div class="pdd col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <p class="tc_d">8</p>
                     <p class="tc_t">ВЫХОДНЫХ</p>
                 </div>
-                <div class="pdd col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <p class="tc_d">50</p>
                     <p class="tc_t">ЗАДАНИЙ</p>
                 </div>
@@ -76,17 +76,33 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" >
-                            <div class="video_slide">
-                                <img src="" alt="" class="comm_img_hldr video_holder" >
-                                <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr" data-id="">
+                            <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                                <div class="bbrdr">
+                                    <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
+                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr" data-id="">
+                                    <p class="upr_d">30 минут каждый обязательный день</p>
+                                </div>
                             </div>
-                            <div class="content-slide">
-                                <p>БЕГ</p>
-                                <p>Здесь будет более детальное описание<br>конкретных групп заданий, на какие<br>группы мышц и т.д.Здесь будет более<br> детальное описаниеконкретных групп<br> заданий, на какие группы мышц и т.д.</p>
+                            <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                                <p class="cs-head">БЕГ</p>
+                                <p>Здесь будет более детальное описание<br class="hidden-xs">конкретных групп заданий, на какие<br class="hidden-xs">группы мышц и т.д.Здесь будет более<br class="hidden-xs"> детальное описаниеконкретных групп<br class="hidden-xs"> заданий, на какие группы мышц и т.д.</p>
                                 <button type="button">ПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
-                    </div>
+                        <div class="swiper-slide" >
+                            <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                                <div class="bbrdr">
+                                    <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
+                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr" data-id="">
+                                    <p class="upr_d">30 минут каждый обязательный день</p>
+                                </div>
+                            </div>
+                            <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                                <p class="cs-head">БЕГ</p>
+                                <p>Здесь будет более детальное описание<br class="hidden-xs">конкретных групп заданий, на какие<br class="hidden-xs">группы мышц и т.д.Здесь будет более<br class="hidden-xs"> детальное описаниеконкретных групп<br class="hidden-xs"> заданий, на какие группы мышц и т.д.</p>
+                                <button type="button">ПРОБОВАТЬ БЕСПЛАТНО</button> 
+                            </div>
+                        </div>                    </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -95,25 +111,108 @@
             <hr>
             <div class="ruls-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h2>ПРАВИЛА</h2>
-                <p>Выплнение заданийподтверждается только с помощью отчёта в форме видео<br>или принтскрина экрана. Поэтому для того чтобы принять участие в проекте<br> Вам понадобится:</p>
-                <div class=" col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <img src="" alt="">
-                    <p>Пк, телефон<br>или планшет</p>
+                <p>Выплнение заданий подтверждается только с помощью отчёта в форме видео<br>или принтскрина экрана. Поэтому для того чтобы принять участие в проекте<br> Вам понадобится:</p>
+                <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <img src="/ico/responsive.svg" alt="">
+                    <p class="img-txt">Пк, телефон<br>или планшет</p>
                 </div>
-                <div class=" col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <img src="" alt="">
-                    <p>Интернет</p>
+                <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <img src="/ico/worldwide .svg" alt="">
+                    <p class="img-txt">Интернет</p>
                 </div>
-                <div class=" col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <img src="" alt="">
-                    <p>Пара кроссовок</p>
+                <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <img src="/ico/sneaker-for-running.svg" alt="">
+                    <p class="img-txt">Пара кроссовок</p>
                 </div>
-                <div class=" col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <img src="" alt="">
-                    <p>Хорошее<br>настроение</p>
+                <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <img src="/ico/smile.svg" alt="">
+                    <p class="img-txt">Хорошее<br>настроение</p>
+                </div>
+            </div>
+            <div class="connect-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_8">
+                <div  class="connect_screen_shader">
+                    <p>REFORMATOR</p>
+                </div>
+                <div class="connect_content">
+                    <p class="connect">ПРИСОЕДИНИТЬСЯ!</p>
+                    <p class="connect_info">ПОЛУЧИТЬ ДОСТУП К ПЛАТФОРМЕ REFORMATOR.ONE <br>В ТЕЧЕНИЕ ТЕСТОВОГО ПЕРИОДА СОВЕРШЕННО БЕСПЛАТНО</p>
+                    <p class="connect_price">2500 руб. <b>0 руб.</b></p>
+                    <button class="connect_btn" type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
+                </div>                
+            </div>
+            <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
+                    <img src="/ico/footer_logo.png" alt="">
+                    <p>наша миссия<br>
+                    в повышении качества жизни<br>
+                    общества через вовлечение<br>
+                    широкого круга населения<br>
+                    в любительский спорт и зож</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
+                    <ul>
+                        <li><a href="#">R.ONE START</a></li>
+                        <li><a href="#">R.ONE PRO</a></li>
+                        <li><a href="#">R.ONE RUNNER</a></li>
+                        <li><a href="#">R.ONE RUNNER +</a></li>
+                        <li><a href="#">R.ONE POWER</a></li>
+                        <li class="bonus"><a href="#" >БОНУСНАЯ<br>
+                         ПРОГРАММА</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
+                    <ul class="rgese">
+                        <li>
+                            <a href="">РЕГИСТРАЦИЯ</a>
+                        </li>
+                        <li class="accsss">
+                            <a href="">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/ico/fb.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="/ico/vk.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="/ico/inst.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
+                    <ul>
+                        <li>
+                            <a href="#">ДОГОВОР ОФЕРТА</a>
+                        </li>
+                        <li id="pltks">
+                            <a href="#">ПОЛИТИКА<br>КОНФЕДИЦИАЛЬНОСТИ</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
+        <div class="display-inline width-eight-perc" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <img src="/ico/close.png" alt="">   
+                    </span>
+                </button>
+                <div class="video-js-responsive-container vjs-hd" style="width:80%">
+                    <video id="comment-video" class="video-js vjs-default-skin"
+                                     controls preload="auto"
+                                      data-setup='{"responsive": true,"example_option":true}'>
+                        <source src="" type="video/ogg">
+                    </video>
                 </div>
             </div>
         </div>
     </div>
+
     @include('home.registration',['user' => $user, 'referral' => $referral])
 @overwrite

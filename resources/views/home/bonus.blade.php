@@ -136,69 +136,69 @@
                     </div>
                     <p class="qwston">?</p>
                 </div>
-                <div class="bons-connect-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_6">
-                <div  class="connect_screen_shader">
-                    <p>REFORMATOR</p>
+                <div class="connect-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_8">
+                    <div  class="connect_screen_shader">
+                        <p>REFORMATOR</p>
+                    </div>
+                    <div class="connect_content">
+                        <p class="connect">ПРИСОЕДИНИТЬСЯ!</p>
+                        <p class="connect_info">ПОЛУЧИТЬ ДОСТУП К ПЛАТФОРМЕ REFORMATOR.ONE <br>В ТЕЧЕНИЕ ТЕСТОВОГО ПЕРИОДА СОВЕРШЕННО БЕСПЛАТНО</p>
+                        <p class="connect_price">2500 руб. <b>0 руб.</b></p>
+                        <button class="connect_btn" type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
+                    </div>                
                 </div>
-                <div class="connect_content">
-                    <p class="connect">ПРИСОЕДИНИТЬСЯ!</p>
-                    <p class="connect_info">ПОЛУЧИТЬ ДОСТУП К ПЛАТФОРМЕ REFORMATOR.ONE <br>В ТЕЧЕНИЕ ТЕСТОВОГО ПЕРИОДА СОВЕРШЕННО БЕСПЛАТНО</p>
-                    <p class="connect_price">2500 руб. <b>0 руб.</b></p>
-                    <button class="connect_btn" type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
-                </div> 
-                </div>
-            <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
-                    <img src="/ico/footer_logo.png" alt="">
-                    <p>наша миссия<br>
-                    в повышении качества жизни<br>
-                    общества через вовлечение<br>
-                    широкого круга населения<br>
-                    в любительский спорт и зож</p>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
-                    <ul>
-                        <li><a href="#">R.ONE START</a></li>
-                        <li><a href="#">R.ONE PRO</a></li>
-                        <li><a href="#">R.ONE RUNNER</a></li>
-                        <li><a href="#">R.ONE RUNNER +</a></li>
-                        <li><a href="#">R.ONE POWER</a></li>
-                        <li class="bonus"><a href="#" >БОНУСНАЯ<br>
-                         ПРОГРАММА</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
-                    <ul>
-                        <li>
-                            <a href="">РЕГИСТРАЦИЯ</a>
-                        </li>
-                        <li class="accsss">
-                            <a href="">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/ico/fb.png" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="/ico/vk.png" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="/ico/inst.png" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
-                    <ul>
-                        <li>
-                            <a href="#">ДОГОВОР ОФЕРТА</a>
-                        </li>
-                        <li id="pltks">
-                            <a href="#">ПОЛИТИКА<br>КОНФЕДИЦИАЛЬНОСТИ</a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+                <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
+                        <img src="/ico/footer_logo.png" alt="">
+                        <p>наша миссия<br>
+                        в повышении качества жизни<br>
+                        общества через вовлечение<br>
+                        широкого круга населения<br>
+                        в любительский спорт и зож</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
+                        <ul>
+                            <li><a href="#">R.ONE START</a></li>
+                            <li><a href="#">R.ONE PRO</a></li>
+                            <li><a href="#">R.ONE RUNNER</a></li>
+                            <li><a href="#">R.ONE RUNNER +</a></li>
+                            <li><a href="#">R.ONE POWER</a></li>
+                            <li class="bonus"><a href="#" >БОНУСНАЯ<br>
+                             ПРОГРАММА</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
+                        <ul>
+                            <li>
+                                <a href="">РЕГИСТРАЦИЯ</a>
+                            </li>
+                            <li class="accsss">
+                                <a href="">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="/ico/fb.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="/ico/vk.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="/ico/inst.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
+                        <ul>
+                            <li>
+                                <a href="#">ДОГОВОР ОФЕРТА</a>
+                            </li>
+                            <li id="pltks">
+                                <a href="#">ПОЛИТИКА<br>КОНФЕДИЦИАЛЬНОСТИ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>

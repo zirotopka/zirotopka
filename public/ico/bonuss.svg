@@ -3,6 +3,11 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
 <style type="text/css">
+	@font-face{
+		font-family:'MuseoSansCyrl_500'; 
+		src: url('/fonts/MuseoSansCyrl_500.eot');
+		src: local('☺'), url('/fonts/MuseoSansCyrl_500.woff') format('woff'), url('/fonts/MuseoSansCyrl_500.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_500.svg') format('svg');
+	}
 	.st0{fill:#FFFFFF;}
 	.st1{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;}
 	.st2{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:12.2629,12.2629;}

@@ -45,7 +45,7 @@
                     </a> 
                 </li>
                 <li>
-                    <a href="" class="profile_btns" id="prgr_l_mn">
+                    <a href="/program" class="profile_btns" id="prgr_l_mn">
                         <p>программа <br> тренировок</p>
                     </a> 
                 </li>

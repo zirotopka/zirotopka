@@ -381,7 +381,7 @@ ul li{
 	.info-screen{
 		height: 65vw;
 		padding: 0;
-		margin: 0 0 0 0;
+	    margin: 3vw 0 0 0;
 	}
 
 	.info_naming{
@@ -456,6 +456,7 @@ ul li{
 		margin: 1.5em 0 0 0!important;
 		font-size: 1.2vw;
 	    font-family: MuseoSansCyrl_100;
+	    width: 100%;
 	}
 
 	.n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img{
@@ -741,11 +742,11 @@ ul li{
 		margin: 3% 0 1vw 0;
 	}
 	.left_bonus_part{
-		padding: 11vw 0 0 0;
+		padding: 9vw 0 0 0;
 	}
 	.right_bonus_part{
 	    height: 35vw;
-	    padding: 13vw 0 0 1.8vw;
+	    padding: 11vw 0 0 1.8vw;
 	    text-align: left;
 	    background: url(/ico/mon2.png);
 	    background-repeat: no-repeat;
@@ -793,7 +794,7 @@ ul li{
 
 	/*-----------------------------Fifth Screen(How-Screen)*/
 	.how-screen{
-		height: 69vw;
+		height: 68vw;
 		text-align: center;
 		padding: 9.5% 0 0 0;
 		margin: 3% 0 1vw 0;
@@ -851,8 +852,8 @@ ul li{
 	}
 
 	.how-screen button{
-		height: 4vw;
-		width: 22vw;
+	    height: 4.5vw;
+	    width: 24vw;
 		background-color: #ff8a18;
 		margin: 0;
 		border: none;
@@ -863,14 +864,14 @@ ul li{
 	}
 
 	.how-screen button:hover{
-		height: 4.2vw;
-		width: 22.2vw;
+		height: 4.7vw;
+		width: 24.2vw;
 		margin: -0.2vw 0 0 0;
 	}
 
 	.how-screen button:active{
-		height: 4.2vw;
-		width: 22.2vw;
+		height: 4.7vw;
+		width: 24.2vw;
 		background-color: #D9550E;
 		margin: -0.2vw 0 0 0;
 	}
@@ -893,6 +894,7 @@ ul li{
 		color: #ff8a18;
 		font-family: MuseoSansCyrl_700;
 		font-size: 1.3em;
+	    margin: 2vw 0 0.5vw 0;
 	}
 
 	.comment_who{
@@ -989,10 +991,6 @@ ul li{
 		margin: 1em 0 0 15vw!important;
 	}
 
-	.arrow:hover ~ .watch_more{
-		margin: 111111em;
-	} 
-
 	.arrow2{
 		background: url('/ico/arrow.svg');
 		background-size: 4vw;
@@ -1001,26 +999,26 @@ ul li{
 		width: 4vw;
 		display: inline-block;
 		border-radius: 10em;
-		margin: 2em 0 0 1vw;
+		margin: 2vw 0 0 1vw;
 		cursor: pointer;
 	}
 
 	.arrow2:hover{
-		height: 4.2em;
-		width: 4.2em;
-	    margin: 1.8em -0.2em 0 1vw;
+		height: 4.2vw;
+		width: 4.2vw;
+	    margin: 1.8vw -0.1vw 0 0.9vw;
 		background-color: white;
 		background: url('/ico/arrow.svg');
-		background-size: 4.2em;
+		background-size: 4.2vw;
 	}
 
 	.arrow2:active{
 		background: url('/ico/arrow2.svg');
-		height: 4.2em;
-		width: 4.2em;
-	    margin: 1.8em -0.2em 0 1vw;
+		height: 4.2vw;
+		width: 4.2vw;
+	    margin: 1.8vw -0.1vw 0 0.9vw;
 		background-color: #c4c4c4;
-		background-size: 4.2em;
+		background-size: 4.2vw;
 		background-color: rgba(255,255,255,0.1)!important;
 	}
 
@@ -1073,8 +1071,9 @@ ul li{
 
 	.questions-screen img{
 	    display: inline-block;
-	    vertical-align: super;
-	    width: 3vw;
+	    vertical-align: baseline;
+	    height: 2.9vw;
+	    margin-left: -1.2vw;
 	}
 
 	.prg img{
@@ -1208,8 +1207,8 @@ ul li{
 	}
 
 	.connect_btn{
-		height: 4vw;
-		width: 22vw;
+		height: 4.5vw;
+		width: 24vw;
 		border-radius: 2em;
 		border: none;
 		margin: 6em 0 0 0;
@@ -1221,15 +1220,15 @@ ul li{
 	}
 
 	.connect_btn:hover{
-		height: 4.2vw;
-		width: 22.2vw;;
+		height: 4.7vw;
+		width: 24.2vw;;
 		margin: 5.8em -0.2vw 0 0;
 		background-color: #ff8a18!important;
 	}
 
 	.connect_btn:active{	
-		height: 4.2vw;
-		width: 22.2vw;
+		height: 4.7vw;
+		width: 24.2vw;
 		margin: 5.8em -0.2vw 0 0;
 		background-color: #D9550E!important;
 	}
@@ -1325,7 +1324,7 @@ ul li{
 	.questions-screen img {
 	    display: inline-block;
 	    vertical-align: baseline;
-	    width: 10.5vw;
+	    height: 10.45vw;
 	}
 
 	.programm-screen {
@@ -1905,7 +1904,7 @@ ul li{
 	}
 
 	.questions-screen img {
-		margin-left: 0!important;
+	    margin-left: -0.4vw!important;
 	}
 
 	.left_quest ul li a, .right_quest ul li a {
@@ -1959,7 +1958,7 @@ ul li{
 	}
 
 	.reg_f_s ul{
-		padding: 0 0 0 5vw;
+		padding: 0 0 0 8vw;
 	}
 	footer .prgrm_list ul li{
 		padding: 0;
@@ -2005,6 +2004,11 @@ ul li{
 	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
 		font-size: 3.5vw;
 	}
+
+	.questions-screen img {
+	    height: 4.2vw;
+	}
+
 	.reg-screen {
 	    background-size: 129% 100%;
 	    height: 80vw;
@@ -2373,7 +2377,7 @@ ul li{
 
 /*-----------------------Fifth-screen---------------------------------*/
 	.bonus-screen {
-	    height: 50.5vw;
+	    height: 48.5vw;
 	}
 
 /*-----------------------Sixth-screen---------------------------------*/
@@ -2404,14 +2408,14 @@ ul li{
 	}
 
 	.arrow2:hover {
-	    margin: 2em 0 -0.5em 0.6vw;
+    	margin: 1.7em -0.2vw -0.2em 0.8vw;
 	    height: 4.4vw;
 	    width: 4.4vw;
 	    background-size: 4.4vw;
 	}
 
 	.arrow2:active {
-	    margin: 2em 0 -0.5em 0.6vw;
+	    margin: 1.7em -0.2vw -0.2em 0.8vw;
 	    height: 4.4vw;
 	    width: 4.4vw;
 	    background-size: 4.4vw;

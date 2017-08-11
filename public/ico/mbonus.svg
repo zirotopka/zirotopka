@@ -3,13 +3,33 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
 <style type="text/css">
+	@font-face{
+		font-family:'MuseoSansCyrl-300'; 
+		src: url('/fonts/MuseoSansCyrl_300.eot');
+		src: local('☺'), url('/fonts/MuseoSansCyrl_300.woff') format('woff'), url('/fonts/MuseoSansCyrl_300.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_300.svg') format('svg');
+	}
+	@font-face{
+		font-family:'MuseoSansCyrl-500'; 
+		src: url('/fonts/MuseoSansCyrl_500.eot');
+		src: local('☺'), url('/fonts/MuseoSansCyrl_500.woff') format('woff'), url('/fonts/MuseoSansCyrl_500.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_500.svg') format('svg');
+	}
+	@font-face{
+		font-family:'MuseoSansCyrl-700'; 
+		src: url('/fonts/MuseoSansCyrl_700.eot');
+		src: local('☺'), url('/fonts/MuseoSansCyrl_700.woff') format('woff'), url('/fonts/MuseoSansCyrl_700.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_700.svg') format('svg');
+	}
+	@font-face{
+		font-family:'MuseoSansCyrl-900'; 
+		src: url('/fonts/MuseoSansCyrl_900.eot');
+		src: local('☺'), url('/fonts/MuseoSansCyrl_900.woff') format('woff'), url('/fonts/MuseoSansCyrl_900.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_900.svg') format('svg');
+	}
 	.st0{fill:#FFFFFF;}
 	.st1{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;}
 	.st2{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:11.7701,11.7701;}
 	.st3{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:11.7234,11.7234;}
 	.st4{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:11.4566,11.4566;}
 	.st5{fill:#FF8A18;}
-	.st6{font-family:'MuseoSansCyrl_500';}
+	.st6{font-family:'MuseoSansCyrl-500';}
 	.st7{font-size:31.614px;}
 	.st8{fill:#A9B2BA;}
 	.st9{fill:none;stroke:#A9B2BA;stroke-width:2;stroke-miterlimit:10;}
@@ -29,13 +49,13 @@
 	.st23{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:12.387,12.387;}
 	.st24{fill:#FF8A18;}
 	.st25{fill:#FF8A18;}
-	.st26{fill:#FF8A18;}
+	.st26{fill:#2F2F2F;}
 	.st27{fill:#FF8A18;}
-	.st28{font-family:'MuseoSansCyrl_300';}
+	.st28{font-family:'MuseoSansCyrl-300';}
 	.st29{font-size:24.4343px;}
-	.st30{font-family:'MuseoSansCyrl_900';}
+	.st30{font-family:'MuseoSansCyrl-900';}
 	.st31{font-size:89.7028px;}
-	.st32{font-family:'MuseoSansCyrl_700';}
+	.st32{font-family:'MuseoSansCyrl-700';}
 	.st33{font-size:30px;}
 </style>
 <g>
