@@ -75,7 +75,8 @@ class Test extends Command
         $process = proc_open(
             'openssl smime -sign -signer ' . $certificate .
                     ' -inkey ' . $privkey .
-                    ' -nochain -nocerts -outform PEM -nodetach',
+                    ' -nochain -nocerts -outform PEM -nodetach 
+                    -passin pass:Gorchel',
             $descriptorspec, $pipes);
 
         if (is_resource($process)) {
