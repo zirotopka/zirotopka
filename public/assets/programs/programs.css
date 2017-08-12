@@ -374,7 +374,7 @@ h2{
 	margin: 1vw 0 20% 0;
     font-family: MuseoSansCyrl_100;
    	color: #232323;
-   	font-size: 1vw;
+   	font-size: 1.2vw;
 }
 
 .sex{
@@ -395,6 +395,8 @@ h2{
     color: white;
     margin: 1vw 0 0 0;
     font-size: 1.1vw;
+    position: relative;
+    z-index: 2;
 }
 
 .rstart-txt-cnt button:hover{
@@ -425,6 +427,7 @@ h2{
     color: rgba(157, 157, 157, 0.1);
     position: absolute;
     margin: -7% 0 0 0;
+    z-index: 1;
 }
 
 .tc_d, .tc_t{
@@ -510,6 +513,18 @@ h2{
     margin: 9% 0 0 -23vw;
     width: 20%;
     cursor: pointer;
+}
+
+.ico_play:hover {
+	width: 20.2%;
+	margin: 8.8% 0 0 -23vw;
+}
+
+.ico_play:active {
+	width: 20.2%;
+	margin: 8.8% 0 0 -23vw;
+	border-radius: 10vw;
+	background-color: rgba(255,255,255,0.5);
 }
 
 .upr_d{
@@ -724,27 +739,32 @@ h2{
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
 
 	.rstart-txt-cnt button {
-		height: 6vw;
+		height: 7vw;
 		width: 35vw;
-	    font-size: 1.5vw;
+	    font-size: 1.9vw;
 	}
 
 	.rstart-txt-cnt button:hover {
-		height: 6.2vw;
+		height: 7.2vw;
 		width: 35.2vw;
 	}
 
 	.rstart-txt-cnt button:active {
-		height: 6.2vw;
+		height: 7.2vw;
 		width: 35.2vw;
 	}
 
-	.rst_ctn {
-	   font-size: 1.7vw;
+	.tc_t {
+	    font-size: 2.5vw;
+	    margin: -3vw 0 0 0;
 	}
 
-	.rstart-img-cnt p {
-	    font-size: 1.5vw;
+	.rst_ctn {
+	   font-size: 2vw;
+	}
+
+	.rstart-img-cnt p{
+	    font-size: 2vw;
 	    margin: 1vw 0 10% 0;
 	}
 
@@ -789,7 +809,7 @@ h2{
 	}
 
 	.frs_imgs {
-	    width: 7vw;
+	    width: 10vw;
 	}
 
 	.content-slide button {
@@ -817,7 +837,7 @@ h2{
 	}
 
 	.ruls-screen {
-	    height: 57vw;
+	    height: 60vw;
 	}
 	.content-slide {
 	    padding: 0 0 8vw 0;
@@ -828,6 +848,16 @@ h2{
 	    z-index: 2;
 	    margin: 9% 0 0 -44vw;
 	    width: 20%;
+	}
+
+	.ico_play:hover {
+	    margin: 8.8% 0 0 -44.05vw;
+	    width: 20.5%;
+	}
+
+	.ico_play:active {
+	    margin: 8.8% 0 0 -44.05vw;
+	    width: 20.5%;
 	}
 
 	.connect-screen {
@@ -903,9 +933,12 @@ h2{
 	    margin: 27% 0 0 -0.8vw;
 	}
 
+.swiper-slide {
+    padding: 0 0 0 1vw;
+}
+
 footer{
-	height: auto;
-	margin:0 0 5vw 0;
+	height: 120vw;
 }
 
 	footer .prgrm_list {
@@ -971,6 +1004,19 @@ footer{
 	    font-size: 47vw;
 	    margin: -8% 0 0 0;
 	}
+
+	.ico_play {
+	    margin: 9% 0 0 -28vw;
+	}
+
+	.ico_play:hover {
+	    margin: 8.8% 0 0 -28.05vw;
+	}
+
+	.ico_play:active {
+	    margin: 8.8% 0 0 -28.05vw;
+	}
+
 	.tcount-screen {
 	    height: 48.6vw;
 	}
@@ -1048,4 +1094,11 @@ footer{
 	    margin: 7% 0 0 -24vw;
 	}
 
+	.ico_play:hover{
+		margin: 6.8% 0 0 -24.05vw;
+	}
+
+	.ico_play:active{
+		margin: 6.8% 0 0 -24.05vw;
+	}
 }

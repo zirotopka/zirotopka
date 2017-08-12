@@ -11,7 +11,7 @@
                         <li>
                            <a href="/lk/{{$user->id}}" class="profile_btns">
                                 <i class="prgr_ico prof-disp"></i>
-                                <p class="prof-disp" style="margin-left: 1px;">ПРОГРАММА</p></a> 
+                                <p class="prof-disp" style="margin-left: 1px!important;">ПРОГРАММА</p></a> 
                         </li>
                         <li>
                            <a href="/lk/{{$user->id}}/edit" class="profile_btns">
@@ -19,7 +19,7 @@
                                 <p class="prof-disp" style="margin-left: 2px;">ПРОФИЛЬ</p></a> 
                         </li>
                         <li>
-                           <a href="/lk/{{$user->id}}/balance" class="profile_btns"><i class="wallet_ico prof-disp" style="width: 15px; margin: 0 0 0 10px"></i><p class="prof-disp" style="margin-left: 5px;">МОЙ СЧЁТ</p></a> 
+                           <a href="/lk/{{$user->id}}/balance" class="profile_btns"><i class="wallet_ico prof-disp" style="margin: 0 0 0 0.98em; width: 1em; height: 0.9em;"></i><p class="prof-disp" style="margin-left: 5px;">МОЙ СЧЁТ</p></a> 
                         </li>
                         <li>
                             <a href="/lk/{{$user->id}}/faq" class="profile_btns help">

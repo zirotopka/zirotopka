@@ -207,16 +207,6 @@ td{
 	background: none;
 }
 
-.profile_btns p{
-	font-family: MuseoSansCyrl_300!important;
-	color: white;
-	font-size: 1.2em!important;
-}
-
-.profile_btns i{
-	width: 1em;
-	height: 1em;
-}
 
 .user-fln{
 	font-size: 17px!important;
@@ -309,16 +299,16 @@ thead{
 }
 
 .tp_trz{
-    width: 13.6vw!important;
+    width: 22.6vw!important;
 }
 
 .tb_znc{
-    width: 27.85vw;
+    width: 12.85vw;
 }
 
 .tb_sm{
-    width: 7vw!important;
-    padding: 0 1em 0 0!important;
+    width: 13vw!important;
+    padding: 0 0 0 5vw!important;
 }
 
 @media screen and (max-width: 767px) {
@@ -371,10 +361,16 @@ thead{
 	}
 
 	.tb_sm{
-	    width: 25vw!important;
+	    width: 30vw!important;
 	}
 	.pagination {
 	    margin-left: 80%;
+	}
+}
+
+@media screen and (min-device-width : 768px) and (max-device-width : 991px){
+	.tb_nm {
+	    width: 9.5%!important;
 	}
 }
 

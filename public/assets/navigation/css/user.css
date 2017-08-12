@@ -530,8 +530,9 @@ button:focus {
 .prof_ico{
 	background: url('/ico/profile.png');
 	background-size: cover;
-	width: 1em;
-	height: 1em;
+	width: 0.95em;
+	height: 0.95em;
+	background-repeat: no-repeat;
 }
 
 .prof-disp{

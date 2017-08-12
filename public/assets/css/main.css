@@ -894,7 +894,7 @@ ul li{
 		color: #ff8a18;
 		font-family: MuseoSansCyrl_700;
 		font-size: 1.3em;
-	    margin: 2vw 0 0.5vw 0;
+	    margin: 2.5vw 0 1vw 0;
 	}
 
 	.comment_who{
@@ -925,6 +925,17 @@ ul li{
 	    margin: 38% 0 0 -59%;
 	    width: 30%;
 	    cursor: pointer;
+	}
+
+	.ico_play:hover{
+		width: 30.5%;
+	    margin: 37.8% 0 0 -59.2%;
+	}
+
+	.ico_play:active{
+		width: 30.5%;
+	    margin: 37.8% 0 0 -59.2%;
+	    content: url("/ico/hov-play.svg");
 	}
 
 	.ewwq{
@@ -964,7 +975,6 @@ ul li{
 		font-family: MuseoSansCyrl_100;
 		color: #737272;
 		font-size: 2vw;
-		letter-spacing: 1px;
 		vertical-align: text-bottom;
 	}
 
@@ -1282,7 +1292,7 @@ ul li{
 
 	.reg_f_s img{
 		display: inline-block;
-		width: 3em;
+		width: 3.5em;
 		margin: 2em 0 0 0.5em;	
 	}
 
@@ -1376,7 +1386,7 @@ ul li{
 	}
 	
 	.info_cont ul {
-	    height: 225vw;
+	    height: auto;
 	}
 
 	.info_cont {
@@ -1385,7 +1395,7 @@ ul li{
 
 
 	footer {
-	    height: auto;
+	    height: 130vw;
 	}
 
 	.st-effect-2.st-menu-open .st-pusher {
@@ -1877,8 +1887,19 @@ ul li{
 	}
 
 	.ico_play {
-	    margin: 100px 0 0 -148px;
+	    margin: 100px 0 0 -150px;
 	    width: 20%;
+	}
+
+	.ico_play:hover {
+		margin: 99px 0 0 -151px;
+	    width: 20.5%;
+	}
+
+	.ico_play:active {
+		margin: 99px 0 0 -151px;
+	    width: 20.5%;
+	    content: url("/ico/hov-play.svg");
 	}
 
 	.comment_who {
@@ -1895,7 +1916,7 @@ ul li{
 	
 	.ref, .prg, .ruls, .all{
 		margin: 10vw 0 0 0;
-	    padding: 0 0 0 7vw;
+	    padding: 0 0 0 5%;
 	}
 	.connect-screen {
 	    height: 65vh;
@@ -2023,11 +2044,15 @@ ul li{
 	    font-size: 3vw;
 	}
 
+	.rl_btns{
+		font-size: 1.2vw;
+	}
+
 	.rg_btn {
 	    margin: 5vw 0 0 0;
 	    width: 26vw;
 	    height: 5vw;
-	    font-size: 2vw;
+	    font-size: 1.2vw;
 	}
 
 	.rg_btn:hover {
@@ -2201,12 +2226,12 @@ ul li{
 	}
 
 	.swiper-container {
-	    height: 74vw;
+	    height: 76vw;
 	}
 
 	.comment_name {
 	    font-size: 2em;
-	    margin: 1vw 0 0 0;
+	    margin: 2vw 0 0.5vw 0;
 	}
 
 	.comment_who {
@@ -2216,6 +2241,17 @@ ul li{
 	.ico_play {
 	    margin: 21% 0 0 -33%;
 	    width: 17%;
+	}
+
+	.ico_play:hover {
+	    margin: 20.8% 0 0 -33.05%;
+	    width: 17.2%;
+	}
+
+	.ico_play:active {
+	    margin: 20.8% 0 0 -33.05%;
+	    width: 17.2%;
+	  	content: url("/ico/hov-play.svg");
 	}
 
 	.watch_more {
@@ -2392,6 +2428,8 @@ ul li{
 	.comments-screen {
 	    padding: 7.4% 0 0 0;
 		height: 56vw;
+	    margin: 3% 0 6.5vw 0;
+
 	}
 
 	.ico_play {
@@ -2399,12 +2437,23 @@ ul li{
 	    width: 25%;
 	}
 
+	.ico_play:hover {
+	    margin: 32.8% 0 0 -52.1%;
+	    width: 25.4%;
+	}
+
+	.ico_play:active {
+	    margin: 32.8% 0 0 -52.1%;
+	    width: 25.4%;
+	    content: url("/ico/hov-play.svg");
+	}
+
 	.swiper-button-next {
 	    right: -1% !important;
 	}
 
 	.swiper-container {
-	    height: 35vw;
+	    height: 38vw;
 	}
 
 	.arrow2:hover {

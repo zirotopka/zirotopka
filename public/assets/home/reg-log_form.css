@@ -304,3 +304,10 @@ div {
 
 	}
 }
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px){
+	[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+	    width: 0.6em;
+	    height: 0.6em;
+	}
+}

@@ -24,7 +24,7 @@
 @overwrite
 
 @section("content")
-	<div class="container-fluid" >
+	<div class="container-fluid">
 		@include('home.fixed-menu')
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>	
         <div class="home_content col-lg-10 col-md-10 col-sm-12 col-xs-12">
@@ -82,18 +82,19 @@
                                 <p>Наглядные видео-инструкции<br>для всех заданий</p>
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n3">
-                                <img src="/ico/rn.svg" alt="">
-                                <p>Задания не требуют<br>специального оборудования<br>или похода в фитнес-клуб</p>
+                                <img src="/ico/people.svg" alt="">
+                                <p>Обратная связь от <br>тренерского состава</p>
                             </li>
+     
                         </ul>
                         <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n4">
                                 <img src="/ico/feed.svg" alt="">
                                 <p>Рекомендации по питанию,<br>адаптированные к планам<br>тренировок</p>
                             </li>
-                            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n5">
-                                <img src="/ico/people.svg" alt="">
-                                <p>Обратная связь от <br>тренерского состава</p>
+                       <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n5">
+                                <img src="/ico/rn.svg" alt="">
+                                <p>Задания не требуют<br>специального оборудования<br>или похода в фитнес-клуб</p>
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n6">
                                 <img src="/ico/lamp.svg" alt="">
@@ -209,7 +210,7 @@
                             @forelse($comments as $comment)
                                 <div class="swiper-slide" >
                                     <img src="{{$comment->img_holder}}" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr" data-id="{{$comment->id}}">
+                                    <img src="/ico/play.svg" alt="" class="ico_play" class="comm_pl_hldr" data-id="{{$comment->id}}">
                                     <p class="comment_name">{{$comment->user}}</p>
                                     <p class="comment_who">{{$comment->comment_text}}</p>
                                 </div>

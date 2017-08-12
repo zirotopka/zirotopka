@@ -4,7 +4,7 @@
 	 viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
 <style type="text/css">
 	@font-face{
-		font-family:'MuseoSansCyrl_500'; 
+		font-family:'MuseoSansCyrl-500'; 
 		src: url('/fonts/MuseoSansCyrl_500.eot');
 		src: local('☺'), url('/fonts/MuseoSansCyrl_500.woff') format('woff'), url('/fonts/MuseoSansCyrl_500.ttf') format('truetype'), url('/fonts/MuseoSansCyrl_500.svg') format('svg');
 	}

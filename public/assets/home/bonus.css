@@ -447,9 +447,8 @@ h2{
     margin: 0 2.5em -3.5em 0;
 }
 
-.carrows{
-	margin: -40% 0px 0 -15%;
-    width: 123%;
+#crws{
+	margin: -30vw 0 0 0;
 }
 
 .how-images{
@@ -757,7 +756,7 @@ footer .prgrm_list .bonus{
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
 	.bonus-content hr {
-	    margin: 0 0 18vw 43%;
+	    margin: 0 0 18vw 40%;
 	}
 
 .bons-screen {
@@ -770,12 +769,12 @@ footer .prgrm_list .bonus{
 }
 
 	.bons-screen h1 {
-	    font-size: 5.5vw;
+	    font-size: 4vw;
 	    margin: 23.5% 0 0 0;
 	}
 
 	.bons-screen p {
-	    font-size: 4.5vw;
+	    font-size: 3.5vw;
 		line-height: 5vw;
 	    margin: 8% 0 0 0;
 	}
@@ -819,6 +818,10 @@ footer .prgrm_list .bonus{
 	text-align: center;
     margin:0 0 0 0;
 }
+
+	.about-icon-content {
+	    margin: 3% 0 0 0;
+	}
 
 	.how-content {
 	    font-size: 3.5vw;
@@ -945,6 +948,11 @@ footer .prgrm_list .bonus{
 	    font-size: 50em;
 	    margin: -34% 0 0 56%;
 	}
+
+	.quest_right p {
+	    width: 90%;
+	    margin: 0 0 0 5%;
+	}
 .connect-screen {
 	    height: 51vh;
 	    background-size: 187vw!important;
@@ -998,7 +1006,7 @@ footer .prgrm_list .bonus{
 	}
 
 footer{
-	height: auto;
+	height: 125vw;
 }
 
 	footer .prgrm_list {
@@ -1099,17 +1107,20 @@ footer{
 
 	.black-arrow {
 	    width: 14vw;
-	    margin: 0 2.3vw -3vw 0;
+	    margin: 0 2.1vw -3vw 0;
 	}
 
 	.holop {
 	    width: 7vw;
 	    margin: 0 1vw -3.5vw 0;
 	}
+	
+	.carrows{
+		width: 103vw;
+	}
 
-	.carrows {
-	    margin: -41% 0px 0 -15%;
-	    width: 125%;
+	#crws {
+	    margin: -37vw 0 0 -12vw;
 	}
 
 .bons-about-screen {
@@ -1276,10 +1287,6 @@ footer {
 	    margin: 0 2.5vw 0 0;
 	}
 
-	svg{
-		width: 73vw;
-		height: 16vw;
-	}
 	.how-images ul li h2 {
 	    margin: 0 0 0.3vw 0.9vw;
 	}
@@ -1296,7 +1303,7 @@ footer {
 
 	.carrows {
 	    margin: -39% 0px 0 -13%;
-	    width: 122%;
+	    width: 121%;
 	}
 .bons-about-screen {
     height: 50vw;
@@ -1404,7 +1411,6 @@ footer {
 	.reg_f_s img {
 	    display: inline-block;
 	    width: 3.5vw;
-	    margin: 2vw 0 0 0;
 	}
 
 	.ofrta {
