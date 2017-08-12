@@ -69,12 +69,12 @@
                         </li>
                         <br><br>
                         <li>
-                            <a href="" class="profile_btns">
+                            <a href="/" class="profile_btns">
                                 <p>ГЛАВНАЯ</p>
                             </a> 
                         </li>
                         <li>
-                            <a href="" class="profile_btns">
+                            <a href="/program" class="profile_btns">
                                 <p>программа <br> тренировок</p>
                             </a> 
                         </li>

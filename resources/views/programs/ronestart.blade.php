@@ -22,6 +22,15 @@
         @include('home.fixed-menu')
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>   
         <div class="home_content col-lg-10 col-md-10 col-sm-12 col-xs-12">
+        @if ($user = Sentinel::check())
+        
+        @else
+            <div id="st-trigger-effects" class="hidden-md hidden-lg">
+                <button data-effect="st-effect-2" class="cdr-btn">
+                    <img src="/ico/menu.svg" alt="" style="width: 3vw;">
+                </button>
+            </div>
+        @endif
             <div class="rstart-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="frs-left col-xs-12 col-sm-7 col-md-7 col-lg-7">
                     <div class="rstart-logo">
