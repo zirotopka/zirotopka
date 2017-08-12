@@ -6,6 +6,8 @@ use Illuminate\Console\Command;
 use App\Helpers\Yandex;
 use GeoIP;
 
+use App\Classes\Yandex\CommonHTTP3Example;
+
 class Test extends Command
 {
     /**
@@ -41,18 +43,25 @@ class Test extends Command
     {
         $answ = Yandex::send_payments(123, 1000, '', true);
 
-        $certificate = 'file://'.realpath('./SSL/201639.cer');
-        $privkey = 'file://'.realpath('./SSL/private.key');
+        // $certificate = 'file://'.realpath('./SSL/test.cer');
+        // $privkey = 'file://'.realpath('./SSL/test.key');
 
-        $pkcs7 = $this->sign('wvwvekkeve',$certificate, $privkey);
+        // $pkcs7 = $this->sign($answ['text'],$certificate, $privkey);
 
-        dd($pkcs7);
+        // dd($pkcs7);
 
         // $cert = openssl_pkcs7_sign($answ['text'],
         //                            public_path().'/signed.txt',
         //                            'file://'.realpath('./SSL/201639.cer'),
         //                            ['file://'.realpath('./SSL/private.key'), 'Gorchel'],
         //                            [], PKCS7_NOSIGS);
+
+        try {
+            $instance = new CommonHTTP3Example();
+            $instance->runExample($answ['text']);
+        } catch (Exception $e) {
+            echo "Exception thrown: " . $e;
+        }
         
     }
 
@@ -75,8 +84,7 @@ class Test extends Command
         $process = proc_open(
             'openssl smime -sign -signer ' . $certificate .
                     ' -inkey ' . $privkey .
-                    ' -nochain -nocerts -outform PEM -nodetach 
-                    -passin pass:Gorchel',
+                    ' -nochain -nocerts -outform PEM -nodetach',
             $descriptorspec, $pipes);
 
         if (is_resource($process)) {
