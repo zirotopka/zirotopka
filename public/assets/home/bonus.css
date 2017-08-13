@@ -597,7 +597,7 @@ h2{
 	    height: 46vw;
 	    background: url(/ico/unfootscr.png);
 	    background-repeat: no-repeat;
-	    background-size: 115%;
+	    background-size: 118%;
 	    background-position: 60% 0;
 	    margin: 0;
 	    padding: 0 0 0 0;
@@ -1321,10 +1321,6 @@ footer {
 	}
 
 @-moz-document url-prefix() {
-	.carrows {
-	    margin: 0 0px 0 -13%;
-	    width: 121%;
-	}
 
 	.black-arrow{
 		margin: 0 2.1vw 0 0;
