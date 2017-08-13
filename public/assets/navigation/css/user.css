@@ -339,6 +339,7 @@ button:hover {
 
 .codrops-btn img{
 	padding: 0 3.8em 0 0;
+	width: 6vw;
 }
 .min-logo{
 	background: url('/ico/min-logo.png');
