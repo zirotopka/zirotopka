@@ -941,6 +941,9 @@ h2{
     padding: 0 0 0 1vw;
 }
 
+.bbrdr{
+	height: auto;
+}
 footer{
 	height: 128vw;
 }
