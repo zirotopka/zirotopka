@@ -566,7 +566,7 @@ h2{
 
 .quest_left ul li:before{
     content: '';
-    background: url(/ico/list-type.png);
+    background: url(/ico/list-type.svg);
     display: inline-block;
     height: 0.7em;
     width: 0.8em;
@@ -576,7 +576,7 @@ h2{
 
 .quest_left ul li:hover:before{
     content: '';
-    background: url('/ico/list-type-hov.png');
+    background: url('/ico/list-type-hov.svg');
     display: inline-block;
     height: 0.7em;
     width: 0.8em;
@@ -1317,7 +1317,7 @@ footer {
 
 	.carrows {
 	    margin: -39% 0px 0 -13%;
-	    width: 121%;
+	    width: 123%;
 	}
 
 @-moz-document url-prefix() {

@@ -35,7 +35,7 @@
                 <div class="frs-left col-xs-12 col-sm-7 col-md-7 col-lg-7">
                     <div class="rstart-logo">
                         <img src="/ico/R'ONE logo.png" alt="">
-                        <p>START</p>
+                        <p> START</p>
                     </div>
                     <div class="rstart-txt-cnt col-xs-7 col-sm-7 col-md-7 col-lg-7">
                         <div class="for_whm">
@@ -45,7 +45,7 @@
                         <p class="rst_ctn">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus iaculis tellus, id feugiat purus pharetra vitae. Nulla facilisi. Sed at condimentum augue, at interdum leo. Maecenas eu interdum ipsum, id aliquam nibh. Nam molestie velit et turpis rutrum, quis rutrum leo accumsan. Vivamus nec laoreet enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec justo rutrum, vehicula magna in, tempus metus.
                         </p>
-                        <button type="button" data-toggle="modal" data-target="#registr">ПРОБОВАТЬ БЕСПЛАТНО</button>
+                        <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                     </div>
                     <div class="rstart-img-cnt col-xs-5 col-sm-5 col-md-5 col-lg-5">
                         <img src="/ico/easy_lvl.svg" class="frs_imgs">
@@ -95,7 +95,7 @@
                             <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
                                 <p class="cs-head">БЕГ</p>
                                 <p>Здесь будет более детальное описание<br class="hidden-xs">конкретных групп заданий, на какие<br class="hidden-xs">группы мышц и т.д.Здесь будет более<br class="hidden-xs"> детальное описаниеконкретных групп<br class="hidden-xs"> заданий, на какие группы мышц и т.д.</p>
-                                <button type="button" data-toggle="modal" data-target="#registr">ПРОБОВАТЬ БЕСПЛАТНО</button> 
+                                <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
                         <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
