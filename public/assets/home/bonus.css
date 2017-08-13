@@ -435,12 +435,13 @@ h2{
 .king{
 	width: 6em;
 	margin: 0 2.5em 0 0;
+	height: 10.5vw;
 }
 
 .black-arrow{
 	width: 12em;
     margin: 0 2.4em -3em 0;
-
+	height: 2.5vw;
 }
 
 .holop{
@@ -1287,6 +1288,7 @@ footer {
 	.king{
 		width: 6vw;
 	    margin: 0 2.5vw 0 0;
+	    height: 10.5vw;
 	}
 
 	.holop{
@@ -1296,6 +1298,7 @@ footer {
 	.black-arrow{
 		width: 12vw;
 	    margin: 0 2.5vw 0 0;
+	    height: 2.5vw;
 	}
 
 	.how-images ul li h2 {
