@@ -268,7 +268,12 @@ button:hover {
 	.dropdown {
 	    width: 33.3%!important;
 	}
+	.codrops-btn img{
+		width: 6em!important;
+	}
 }
+
+
 
 @media screen and (max-width: 46.0625em) {
 	.dropdown {
@@ -339,7 +344,7 @@ button:hover {
 
 .codrops-btn img{
 	padding: 0 3.8em 0 0;
-	width: 6vw;
+	width: 6em;
 }
 .min-logo{
 	background: url('/ico/min-logo.png');
