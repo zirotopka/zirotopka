@@ -1177,6 +1177,12 @@ footer{
 	    font-size: 42vw;
 	}
 
+@-moz-document url-prefix() {
+
+	.black-arrow{
+		margin: 0 1.2vw -3vw 0;
+	}
+}
 
 
 .connect-screen {
@@ -1309,6 +1315,18 @@ footer {
 	    margin: -39% 0px 0 -13%;
 	    width: 121%;
 	}
+
+@-moz-document url-prefix() {
+	.carrows {
+	    margin: 0 0px 0 -13%;
+	    width: 121%;
+	}
+
+	.black-arrow{
+		margin: 0 2.1vw 0 0;
+	}
+}
+
 .bons-about-screen {
     height: 50vw;
 }
