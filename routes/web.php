@@ -51,6 +51,10 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	    'index', 'show', 'store','update', 'destroy'
 	]]);
 
+	Route::group(['middleware' => ['admin']], function () {
+		Route::get('admin', ['uses' => 'Admin\HomeController@index']);
+	});
+
 });
 
 Route::get('api/user/email_store', ['uses' => 'Api\UserApiController@email_store']);
