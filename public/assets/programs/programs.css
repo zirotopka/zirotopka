@@ -471,10 +471,8 @@ h2{
 
 .content-slide p{
 	font-family: MuseoSansCyrl_100;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
     color: #232323;
-    word-spacing: 0.4vw;
-    letter-spacing: 0.1vw;
     margin: 0.43vw 0 0 0;
 }
 
@@ -523,8 +521,7 @@ h2{
 .ico_play:active {
 	width: 20.2%;
 	margin: 8.8% 0 0 -23vw;
-	border-radius: 10vw;
-	background-color: rgba(255,255,255,0.5);
+	background: url("/ico/hov-paly.svg");
 }
 
 .upr_d{
@@ -532,6 +529,12 @@ h2{
     text-align: center;
     margin: 0.5vw 0 0.5vw 0;
 }
+
+
+.snick{
+	width: 10vw!important;
+}
+
 
 /*-----------------------------------4 screen-----------------------------*/
 .ruls-screen{
@@ -545,8 +548,6 @@ h2{
     color: #232323;
     font-size: 1.5vw;
     margin: 6vw 0 0 0;
-    word-spacing: 0.5vw;
-    letter-spacing: 0.1vw;
 }
 
 .ruls-screen img{
@@ -555,12 +556,14 @@ h2{
 }
 
 .img-txt{
-    font-family: MuseoSansCyrl_300!important;
     margin: 2vw 0 0 0!important;
     letter-spacing: normal!important;
     word-spacing: normal!important;
 }
 
+.snick-txt{
+	margin: 0.1vw 0 0 0!important;
+}
 .comm_img_hldr{
     width: 100%;
     margin: -4vw 0 0 -2vw;

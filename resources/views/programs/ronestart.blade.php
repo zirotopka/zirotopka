@@ -120,7 +120,7 @@
             <hr>
             <div class="ruls-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h2>ПРАВИЛА</h2>
-                <p>Выполнение заданий подтверждается только с помощью отчёта в форме видео<br>или принтскрина экрана. Поэтому для того чтобы принять участие в проекте<br> Вам понадобится:</p>
+                <p>Выполнение заданий подтверждается только с помощью отчёта в форме видео или принтскрина экрана.<br> Поэтому для того чтобы принять участие в проекте  Вам понадобится:</p>
                 <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <img src="/ico/responsive.svg" alt="">
                     <p class="img-txt">Пк, телефон<br>или планшет</p>
@@ -130,8 +130,8 @@
                     <p class="img-txt">Интернет</p>
                 </div>
                 <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                    <img src="/ico/sneaker-for-running.svg" alt="">
-                    <p class="img-txt">Пара кроссовок</p>
+                    <img class="snick" src="/ico/sneaker-for-running.svg" alt="">
+                    <p class="img-txt snick-txt">Пара кроссовок</p>
                 </div>
                 <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <img src="/ico/smile.svg" alt="">
