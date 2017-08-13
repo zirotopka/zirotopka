@@ -95,7 +95,7 @@
                             <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
                                 <p class="cs-head">БЕГ</p>
                                 <p>Здесь будет более детальное описание<br class="hidden-xs">конкретных групп заданий, на какие<br class="hidden-xs">группы мышц и т.д.Здесь будет более<br class="hidden-xs"> детальное описаниеконкретных групп<br class="hidden-xs"> заданий, на какие группы мышц и т.д.</p>
-                                <button type="button">ПРОБОВАТЬ БЕСПЛАТНО</button> 
+                                <button type="button" data-toggle="modal" data-target="#registr">ПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
                         <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
@@ -109,7 +109,7 @@
                             <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
                                 <p class="cs-head">БЕГ</p>
                                 <p>Здесь будет более детальное описание<br class="hidden-xs">конкретных групп заданий, на какие<br class="hidden-xs">группы мышц и т.д.Здесь будет более<br class="hidden-xs"> детальное описаниеконкретных групп<br class="hidden-xs"> заданий, на какие группы мышц и т.д.</p>
-                                <button type="button">ПРОБОВАТЬ БЕСПЛАТНО</button> 
+                                <button type="button" data-toggle="modal" data-target="#registr">ПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>                    </div>
                     <div class="swiper-pagination"></div>
