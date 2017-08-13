@@ -45,7 +45,7 @@
                         <p class="rst_ctn">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus iaculis tellus, id feugiat purus pharetra vitae. Nulla facilisi. Sed at condimentum augue, at interdum leo. Maecenas eu interdum ipsum, id aliquam nibh. Nam molestie velit et turpis rutrum, quis rutrum leo accumsan. Vivamus nec laoreet enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec justo rutrum, vehicula magna in, tempus metus.
                         </p>
-                        <button type="button">ПРОБОВАТЬ БЕСПЛАТНО</button>
+                        <button type="button" data-toggle="modal" data-target="#registr">ПРОБОВАТЬ БЕСПЛАТНО</button>
                     </div>
                     <div class="rstart-img-cnt col-xs-5 col-sm-5 col-md-5 col-lg-5">
                         <img src="/ico/easy_lvl.svg" class="frs_imgs">
