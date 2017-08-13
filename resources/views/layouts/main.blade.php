@@ -96,7 +96,7 @@
                         <div class="codrops-top clearfix ">
                             <div id="st-trigger-effects" class="column col-lg-1 col-md-1 col-sm-4 col-xs-4">
                                 <button data-effect="st-effect-2" class="codrops-btn">
-                                    <img src="/ico/menu.png" alt="">
+                                    <img src="/ico/menu.svg" alt="">
                                 </button>
                             </div>
                             <div class="col-lg-1 hidden-md hidden-sm hidden-xs">
