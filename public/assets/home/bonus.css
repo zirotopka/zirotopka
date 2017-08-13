@@ -321,7 +321,8 @@ h2{
     font-size: 1.1vw;
     margin:4% 0 0 0;
     cursor: pointer;
-
+	position: relative;
+	z-index: 2;
 }
 
 .reg_btn{
@@ -371,7 +372,7 @@ h2{
     width: 65%;
     top: -7%;
 	margin: 0 0 0 -10.7%;
-	z-index: 2;
+	z-index: 1;
 }
 
 /*-------------------------------------------second-screen--------------*/
@@ -751,7 +752,10 @@ footer .prgrm_list .bonus{
 	line-height: 1.5em;
 }
 
-
+.carrwos{
+	position: relative;
+	z-index: 1;
+}
 
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){

@@ -84,11 +84,11 @@
                 <h2>ПОДРОБНЕЕ</h2>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" >
+                        <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
                             <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
                                 <div class="bbrdr">
                                     <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr" data-id="">
+                                    <img src="/ico/play.svg" alt="" class="ico_play" class="comm_pl_hldr" data-id="">
                                     <p class="upr_d">30 минут каждый обязательный день</p>
                                 </div>
                             </div>
@@ -98,11 +98,11 @@
                                 <button type="button">ПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
-                        <div class="swiper-slide" >
+                        <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
                             <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
                                 <div class="bbrdr">
                                     <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr" data-id="">
+                                    <img src="/ico/play.svg" alt="" class="ico_play" class="comm_pl_hldr" data-id="">
                                     <p class="upr_d">30 минут каждый обязательный день</p>
                                 </div>
                             </div>
