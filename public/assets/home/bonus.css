@@ -243,8 +243,9 @@ ul li{
 }
 
 .side_logo{
-	width: 10vw;
-	margin-left: 3em;
+	width: 16vw;
+	position: absolute;
+	margin: -7em 0 0 0;
 }
 
 @media screen and (max-width: 61.95em) {
@@ -765,9 +766,10 @@ footer .prgrm_list .bonus{
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
 
-	.side_logo {
-	    width: 35vw;
-	    margin-left: 0;
+	.side_logo{
+		width: 35vw;
+	    position: absolute;
+	    margin: -1em 0 0 -5em;
 	}
 
 	.bonus-content hr {
@@ -1059,11 +1061,11 @@ footer{
 
 
 @media screen and (min-width : 720px) and (max-device-width : 991px) {
-	.side_logo {
-	    width: 18vw;
-	    margin-left: 0em;
-	}
-
+.side_logo {
+    width: 16vw;
+    position: absolute;
+    margin: -2em 0 0 -64px;
+}
 .bons-screen {
 	background-size: 59.5em 21em;
 	background-repeat: no-repeat;

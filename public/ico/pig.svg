@@ -8,6 +8,7 @@
 		src: url('/fonts/GubiaBlack.eot');
 		src: local('☺'), url('/fonts/GubiaBlack.woff') format('woff'), url('/fonts/GubiaBlack.ttf') format('truetype'), url('/fonts/GubiaBlack.svg') format('svg');
 	}
+	
 	.st0{fill:#84D1C8;}
 	.st1{opacity:0.3;fill:#DBAB65;}
 	.st2{opacity:0.6;fill:#EAD5CA;}

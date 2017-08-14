@@ -298,12 +298,15 @@ option, option:hover, option:active ,option:focus,
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-	content: url('/ico/check.png');
-	position: absolute;
-	left: .3em;
-	font-size: 1em;
-	transition: all .2s;
-	top: 0;
+    content: ' ';
+    position: absolute;
+    background: url(/ico/check.svg);
+    left: .3em;
+    height: 1.2em;
+    width: 0.9em;
+    transition: all .2s;
+    top: 0;
+    background-size: cover;
 }
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {

@@ -243,10 +243,10 @@ ul li{
 }
 
 .side_logo{
-	width: 10vw;
-	margin-left: 3em;
+	width: 16vw;
+	position: absolute;
+	margin: -7em 0 0 0;
 }
-
 @media screen and (max-width: 61.95em) {
 	.codrops-btn{
 		display: block;
@@ -746,9 +746,10 @@ h2{
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
 
-	.side_logo {
-	    width: 35vw;
-	    margin-left: 0;
+	.side_logo{
+		width: 35vw;
+	    position: absolute;
+	    margin: -1em 0 0 -5em;
 	}
 
 	.frs-left {
@@ -1001,11 +1002,12 @@ footer{
 
 }
 
-@media only screen (min-device-width : 720px) and (max-device-width : 991px) {
-	.side_logo {
-	    width: 18vw;
-	    margin-left: 0em;
-	}
+@media only screen and (max-device-width: 991px) and (min-width: 720px) {
+.side_logo {
+    width: 16vw;
+    position: absolute;
+    margin: -2em 0 0 -64px;
+}
 
 	.frs-left {
 	    margin: 8% 0 0 0;
@@ -1059,7 +1061,7 @@ footer{
 	}
 
 	.ico_play {
-	    margin: 9% 0 0 -28vw;
+	    margin: 9% 0 0 -26vw;
 	}
 
 	.ico_play:hover {

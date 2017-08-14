@@ -231,8 +231,9 @@ ul li{
 }
 
 .side_logo{
-	width: 10vw;
-	margin-left: 3em;
+	width: 16vw;
+	position: absolute;
+	margin: -7em 0 0 0;
 }
 
 	.rg_check_in{
@@ -1408,7 +1409,8 @@ ul li{
 	}
 	.side_logo{
 		width: 35vw;
-		margin-left: 0;
+	    position: absolute;
+	    margin: -1em 0 0 -5em;
 	}
 	.reg_btn:hover{
 		width: 20.2vw;
@@ -2028,6 +2030,12 @@ ul li{
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 991px) and (orientation: portrait){
+.side_logo {
+    width: 16vw;
+    position: absolute;
+    margin: -2em 0 0 -64px;
+}
+
 	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
 		font-size: 3.5vw;
 	}

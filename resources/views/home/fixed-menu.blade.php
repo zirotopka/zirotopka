@@ -36,7 +36,7 @@
         <nav class="navbar spy-active" id="Scrollspy">
             <ul class="nav">
                 <li>
-                    <img src="/ico/main_logo.png" class="side_logo" alt="">
+                    <img src="/ico/min-logo.svg" class="side_logo" alt="">
                 </li>
                 <br><br>
                 <li>
