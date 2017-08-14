@@ -45,7 +45,6 @@
 	font-family:'GubiaBlack'; 
 	src: url('/fonts/GubiaBlack.eot');
 	src: local('☺'), url('/fonts/GubiaBlack.woff') format('woff'), url('/fonts/GubiaBlack.ttf') format('truetype'), url('/fonts/GubiaBlack.svg') format('svg');
-
 }
 
 ::-webkit-file-upload-button { cursor:pointer; }
@@ -270,6 +269,11 @@ button:hover {
 	}
 }
 
+@media screen and (max-width: 767px){
+	.codrops-btn img {
+	    margin: 0 0 0 13vw!important;
+	}	
+}
 
 
 @media screen and (max-width: 46.0625em) {
@@ -342,6 +346,7 @@ button:hover {
 .codrops-btn img{
 	padding: 0 3.8em 0 0;
 	width: 5.5em;
+    margin: 0 0 0 3vw;
 }
 .min-logo{
 	background: url('/ico/min-logo.png');
@@ -601,3 +606,8 @@ button:focus {
 	color: #FF7F39!important;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+	.iimtxt{
+		margin: 0 0 0 -9.5em!important;
+	}
+}

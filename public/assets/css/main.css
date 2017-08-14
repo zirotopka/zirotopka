@@ -1540,6 +1540,11 @@ ul li{
     	display: none!important;		
 	}	
 
+
+	.left_quest ul, .right_quest ul{
+		padding: 0 0 0 15.5vw;
+	}
+
 	.pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4 {
 	    margin: 6vw 0 0 8vw;
 	    width: 70vw;
@@ -2022,7 +2027,7 @@ ul li{
 	}
 }
 
-@media screen and (min-device-width : 768px) and (max-device-width : 991px){
+@media only screen and (min-device-width : 768px) and (max-device-width : 991px) and (orientation: portrait){
 	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
 		font-size: 3.5vw;
 	}
@@ -2078,6 +2083,9 @@ ul li{
     height: 72vw;
 }
 
+	.info_cont {
+	    padding: 6% 0 0 0;
+	}
 
 .programm-screen {
     height: 73.5vw;

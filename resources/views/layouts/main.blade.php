@@ -106,7 +106,7 @@
                             </div>
                             <!-- <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs"> -->
                             <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs">
-                                <span class="nav-text" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
+                                <span class="nav-text iimtxt" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
                                     <?php 
                                         $empty_hearts = 5;

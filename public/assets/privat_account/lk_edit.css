@@ -311,4 +311,11 @@ input{
 	.save-btn:active {
 		margin:2.6em 0 3.4em 0;
 	}
+	.pasport {
+	    margin: 1.5em 0 0 0;
+	}
+
+	.rt-info p {
+	    margin: 0 0 0.5em 0.1vw;
+	}
 }

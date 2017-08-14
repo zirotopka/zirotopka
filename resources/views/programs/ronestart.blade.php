@@ -23,11 +23,14 @@
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>   
         <div class="home_content col-lg-10 col-md-10 col-sm-12 col-xs-12">
         @if ($user = Sentinel::check())
-        
+          @php
+              $class = '';
+              $class = 'rg_check_in';
+          @endphp
         @else
             <div id="st-trigger-effects" class="hidden-md hidden-lg">
                 <button data-effect="st-effect-2" class="cdr-btn">
-                    <img src="/ico/menu.svg" alt="" style="width: 3vw;">
+                    <img src="/ico/menu.svg" alt="" style="width: 3.5vw;">
                 </button>
             </div>
         @endif
@@ -120,7 +123,8 @@
             <hr>
             <div class="ruls-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h2>ПРАВИЛА</h2>
-                <p>Выполнение заданий подтверждается только с помощью отчёта в форме видео или принтскрина экрана.<br> Поэтому для того чтобы принять участие в проекте  Вам понадобится:</p>
+                <p>Выполнение заданий подтверждается только с помощью отчёта в форме видео<br class="vi              $class = 'rg_check_in';
+                $class = 'rg_check_in';"> или принтскрина экрана.<br class="hidden-xs"> Поэтому для того чтобы принять участие в проекте  Вам понадобится:</p>
                 <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <img src="/ico/responsive.svg" alt="">
                     <p class="img-txt">Пк, телефон<br>или планшет</p>

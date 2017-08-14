@@ -20,6 +20,10 @@ body{
 	margin: 0;
 }
 
+.rg_check_in{
+	margin: 4.2em 0 0 0;
+}
+
 ul li{
 	list-style: none;
 }
@@ -388,8 +392,8 @@ h2{
 }
 
 .rstart-txt-cnt button{
-    width: 23vw;
-    height: 4.5vw;
+    width: 22vw;
+    height: 4vw;
     border-radius: 6vw;
     background-color: #ff8a18;
     color: white;
@@ -400,14 +404,14 @@ h2{
 }
 
 .rstart-txt-cnt button:hover{
-    width: 23.2vw;
-    height: 4.7vw;
+    width: 22.2vw;
+    height: 4.2vw;
     margin: 0.9vw 0 -0.1vw -0.1vw;
 }
 
 .rstart-txt-cnt button:active{
-    width: 23.2vw;
-    height: 4.7vw;
+    width: 22.2vw;
+    height: 4.2vw;
     margin: 0.9vw 0 -0.1vw -0.1vw;
     background-color: #d9550e;
 }
@@ -452,7 +456,7 @@ h2{
 /*----------------------------------------Third screen--------------------------*/
 
 .info-screen{
-	height: 43vw;
+	height: 44vw;
 	margin: 0 0 4vw 0;
 }
 
@@ -477,8 +481,8 @@ h2{
 }
 
 .content-slide button{
-    width: 23vw;
-    height: 4.5vw;
+    width: 22vw;
+    height: 4.2vw;
     border-radius: 6vw;
     background-color: #ff8a18;
     color: white;
@@ -487,14 +491,14 @@ h2{
 }
 
 .content-slide button:hover{
-    width: 23.2vw;
-    height: 4.7vw;
+    width: 22.2vw;
+    height: 4.2vw;
     margin: 3.9vw 0 -0.1vw -0.1vw;
 }
 
 .content-slide button:active{
-    width: 23.2vw;
-    height: 4.7vw;
+    width: 22.2vw;
+    height: 4.2vw;
     margin: 3.9vw 0 -0.1vw -0.1vw;
     background-color: #d9550e;
 }
@@ -503,7 +507,6 @@ h2{
     border: 0.1em solid #3E474F;
     margin: 9vw 0 0 4.5vw;
     width: 85%;
-    height: 24vw;
 }
 
 .ico_play {
@@ -528,7 +531,8 @@ h2{
 .upr_d{
     font-size: 1.3vw;
     text-align: center;
-    margin: 0.5vw 0 0.5vw 0;
+    margin: 0.5vw 0 1.5vw 0;
+    font-family: MuseoSansCyrl_100;
 }
 
 
@@ -740,22 +744,39 @@ h2{
 	    float: left;
 	}
 
-@media screen and (min-device-width : 320px) and (max-device-width : 767px){
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px){
+
+	.side_logo {
+	    width: 35vw;
+	    margin-left: 0;
+	}
+
+	.frs-left {
+	    margin: 8% 0 0 0;
+	}
+
+	.cdr-btn img{
+		width: 5vw!important;
+	}
+
+	.cdr-btn{
+		margin: 4vw 0 0 4vw;
+	}
 
 	.rstart-txt-cnt button {
-		height: 7vw;
-		width: 35vw;
-	    font-size: 1.9vw;
+		height: 10vw;
+		width: 50vw;
+	    font-size: 2.5vw;
 	}
 
 	.rstart-txt-cnt button:hover {
-		height: 7.2vw;
-		width: 35.2vw;
+		height: 10.2vw;
+		width: 50.2vw;
 	}
 
 	.rstart-txt-cnt button:active {
-		height: 7.2vw;
-		width: 35.2vw;
+		height: 10.2vw;
+		width: 50.2vw;
 	}
 
 	.tc_t {
@@ -817,19 +838,19 @@ h2{
 	}
 
 	.content-slide button {
-	    width: 35vw;
-	    height: 6vw;
-	    font-size: 1.5vw;
+	    width: 50vw;
+	    height: 10vw;
+	    font-size: 2.5vw;
 	}
 
 	.content-slide button:hover {
-	    width: 35.2vw;
-	    height: 6.2vw;
+	    width: 50.2vw;
+	    height: 10.2vw;
 	}
 
 	.content-slide button:active {
-	    width: 35.2vw;
-	    height: 6.2vw;
+	    width: 50.2vw;
+	    height: 10.2vw;
 	}
 
 	.cs-head {
@@ -865,9 +886,9 @@ h2{
 	}
 
 	.connect-screen {
-	    height: 51vh;
-	    background-size: 187vw!important;
-	    background-position: -17em;
+		height: 65vh;
+	    background-size: 240vw!important;
+	    background-position: -23em;
 	}
 
 	.questions-screen img {
@@ -913,19 +934,19 @@ h2{
 	}
 
 	.connect_btn{
-		height: 6vw;
-		width: 35vw;
-		font-size: 1.5vw;
+	    height: 10vw;
+	    width: 50vw;
+	    font-size: 2.4vw;
 	}
 
 	.connect_btn:hover{
-		height: 6.2vw;
-		width: 35.2vw;
+		height: 10.2vw;
+		width: 50.2vw;
 	}
 
 	.connect_btn:active{
-		height: 6.2vw;
-		width: 35.2vw;
+		height: 10.2vw;
+		width: 50.2vw;
 	}
 
 	.connect_price {
@@ -980,32 +1001,57 @@ footer{
 
 }
 
-@media screen and (min-width : 720px) and (max-device-width : 991px) {
+@media only screen (min-device-width : 720px) and (max-device-width : 991px) {
+	.side_logo {
+	    width: 18vw;
+	    margin-left: 0em;
+	}
+
+	.frs-left {
+	    margin: 8% 0 0 0;
+	}
 	.startimg {
 	    height: 55vw;
 	}
 
 	.rstart-txt-cnt button {
-	    width: 26vw;
-	    height: 5.5vw;
 	    margin: 2vw 0 0 0;
+	    width: 26vw;
+	    height: 5vw;
 	    font-size: 1.2vw;
 	}
 
 	.rstart-txt-cnt button:hover {
 	    width: 26.2vw;
-	    height: 5.7vw;
+	    height: 5.2vw;
     	margin: 1.9vw 0 -0.1vw -0.1vw;
 	    font-size: 1.2vw;
 	}
 
 	.rstart-txt-cnt button:active {
 	    width: 26.2vw;
-	    height: 5.7vw;
+	    height: 5.2vw;
     	margin: 1.9vw 0 -0.1vw -0.1vw;
 	    font-size: 1.2vw;
 	}
 
+	.content-slide button{
+	    width: 26vw;
+	    height: 5vw;
+	    font-size: 1.2vw;
+	}
+
+	.content-slide button:hover{
+	    width: 26.2vw;
+	    height: 5.2vw;
+	    font-size: 1.2vw;
+	}
+
+	.content-slide button:active{
+	    width: 26.2vw;
+	    height: 5.2vw;
+	    font-size: 1.2vw;
+	}
 	.prgr_name_st {
 	    font-family: GubiaBlack;
 	    font-size: 47vw;

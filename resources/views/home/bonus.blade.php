@@ -21,7 +21,10 @@
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>   
         <div class="home_content col-lg-10 col-md-10 col-sm-12 col-xs-12">
         @if ($user = Sentinel::check())
-        
+          @php
+              $class = '';
+              $class = 'rg_check_in';
+          @endphp
         @else
             <div id="st-trigger-effects" class="hidden-md hidden-lg">
                 <button data-effect="st-effect-2" class="cdr-btn">

@@ -12,6 +12,10 @@ body{
 	font-size: 100%;
 }
 
+.rg_check_in{
+	margin: 4.2em 0 0 0;
+}
+
 .st-content{
 	overflow: hidden!important;
 }
@@ -315,7 +319,7 @@ h2{
 .reg_btn, .abo_btn{
     display: inline-block;
     width: 17vw;
-    height: 4.6vw;
+    height: 4.3vw;
     border-radius: 2em;
     font-family: MuseoSansCyrl_500;
     font-size: 1.1vw;
@@ -334,14 +338,14 @@ h2{
     background-color: #ff8a18;
     margin: 3% 2em 0 -0.2vw;
    	width: 17.2vw;
-	height: 4.8vw;
+	height: 4.5vw;
 }
 
 .reg_btn:active{
     background-color: #d9550e;
     margin: 3% 2em 0 -0.2vw;
    	width: 17.2vw;
-	height: 4.8vw;
+	height: 4.5vw;
 }
 
 .abo_btn{
@@ -354,7 +358,7 @@ h2{
 	background-color: #f3f3f3;
 	color: #232323;
    	width: 17.2vw;
-	height: 4.8vw;
+	height: 4.5vw;
 	margin: 3% -0.1vw 0 -0.1vw;
 }
 
@@ -362,7 +366,7 @@ h2{
 	background-color: #cccccc;
 	color: #232323;
    	width: 17.2vw;
-	height: 4.8vw;
+	height: 4.5vw;
 	margin: 3% -0.1vw 0 -0.1vw;
 }
 
@@ -760,6 +764,12 @@ footer .prgrm_list .bonus{
 
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
+
+	.side_logo {
+	    width: 35vw;
+	    margin-left: 0;
+	}
+
 	.bonus-content hr {
 	    margin: 0 0 18vw 40%;
 	}
@@ -959,9 +969,9 @@ footer .prgrm_list .bonus{
 	    margin: 0 0 0 5%;
 	}
 .connect-screen {
-	    height: 51vh;
-	    background-size: 187vw!important;
-	    background-position: -17em;
+	    height: 65vh;
+	    background-size: 213vw!important;
+	    background-position: -22em;
 	}
 
 	.connect_screen_shader p {
@@ -982,19 +992,20 @@ footer .prgrm_list .bonus{
 	}
 
 	.connect_btn{
-		height: 6vw;
-		width: 35vw;
-		font-size: 1.5vw;
+	    height: 10vw;
+	    width: 50vw;
+	    font-size: 0.8em;
+	    border-radius: 10vw;
 	}
 
 	.connect_btn:hover{
-		height: 6.2vw;
-		width: 35.2vw;
+		height: 10.2vw;
+		width: 50.2vw;
 	}
 
 	.connect_btn:active{
-		height: 6.2vw;
-		width: 35.2vw;
+		height: 10.2vw;
+		width: 50.2vw;
 	}
 
 	.connect_price {
@@ -1048,6 +1059,10 @@ footer{
 
 
 @media screen and (min-width : 720px) and (max-device-width : 991px) {
+	.side_logo {
+	    width: 18vw;
+	    margin-left: 0em;
+	}
 
 .bons-screen {
 	background-size: 59.5em 21em;
@@ -1188,11 +1203,11 @@ footer{
 
 
 .connect-screen {
-    height: 50vw;
+    height: 55.4vw;
 }
 
 	.connect_screen_shader {
-	    height: 50.1vw;
+	    height: 55.5vw;
 	    width: 100%;
 	}
 
@@ -1204,26 +1219,18 @@ footer{
 	    font-size: 22.4vw;
 	    margin: 11% 0 0 -0.8vw;
 	}
-	
-	.connect_btn {
-	    height: 5vw;
-	    width: 25vw;
-	    margin: 4% 0 0 0;
-	    font-size: 1.2vw;
-	}
-	.connect_btn:hover {
-		height: 5.4vw;
-		width: 25.4vw;
-		margin: 3.8% 0 -0.2vw 0;
-	    background-color: #ff8a18;
+
+	.connect {
+	    font-size: 3.5vw;
+	    padding: 8vw 0 0 0;
 	}
 
-	.connect_btn:active {
-		height: 5.4vw;
-		width: 25.4vw;
-		margin: 3.8% 0 -0.2vw 0;
-	    background-color: #d9550e;
+	.connect_info {
+	    font-size: 2.5vw;
 	}
+
+
+
 
 footer {
     height: 35vw;
@@ -1246,7 +1253,7 @@ footer {
 	    line-height: 2.5vw;
 	}
 	footer .prgrm_list .bonus {
-	    line-height: 1em;
+	    line-height: 1.5em;
 	}
 
 	.carrows {
