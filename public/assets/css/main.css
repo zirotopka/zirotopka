@@ -398,7 +398,7 @@ ul li{
 
 	.info_naming img{
 		vertical-align: baseline;
-		width: 20%;
+		width: 20.9%;
 	}
 
 	.info_naming h2,.programm-screen h2, .bonus-screen h2,
@@ -1522,7 +1522,7 @@ ul li{
 	}
 
 	.info_naming img {
-	    width: 41vw;
+	    width: 51vw;
 	}
 
 	.n1 , .n2, .n3, .n4, .n5, .n6{
@@ -2029,7 +2029,7 @@ ul li{
 	}
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 991px) and (orientation: portrait){
+@media only screen and (min-width : 768px) and (max-width : 991px) and (orientation: portrait){
 .side_logo {
     width: 16vw;
     position: absolute;
@@ -2109,7 +2109,7 @@ ul li{
 
 	.info_naming img {
 	    vertical-align: baseline;
-	    width: 23.552%;
+	    width: 23.6%;
 	}
 
 	.info_cont {

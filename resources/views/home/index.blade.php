@@ -69,7 +69,7 @@
             <div class="info-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_2">
                 <div class="info_naming col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h2>ЧТО ТАКОЕ</h2>
-                    <img src="/ico/REFORMATOR.png" alt="">
+                    <img src="/ico/REFORMATOR.svg" alt="">
                 </div>
                 <div class="info_cont col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
