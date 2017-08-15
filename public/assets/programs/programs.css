@@ -245,7 +245,7 @@ ul li{
 .side_logo{
 	width: 16vw;
 	position: absolute;
-	margin: -7em 0 0 0;
+	margin: -8vw 0 0 0;
 }
 @media screen and (max-width: 61.95em) {
 	.codrops-btn{

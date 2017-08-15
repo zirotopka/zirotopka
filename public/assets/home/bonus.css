@@ -245,7 +245,7 @@ ul li{
 .side_logo{
 	width: 16vw;
 	position: absolute;
-	margin: -7em 0 0 0;
+	margin: -8vw 0 0 0;
 }
 
 @media screen and (max-width: 61.95em) {
@@ -1101,7 +1101,7 @@ footer{
 .bons-how-screen {
     background-position: right 21vw;
     margin: 0 0 4vw 0;
-    height: 74vw;
+    height: 68vw;
     background-size: 24em;
     padding: 1% 0 0 5%;
 }
@@ -1326,7 +1326,7 @@ footer {
 
 	.carrows {
 	    margin: -39% 0px 0 -13%;
-	    width: 123%;
+	    width: 122%;
 	}
 
 @-moz-document url-prefix() {
@@ -1337,7 +1337,7 @@ footer {
 }
 
 .bons-about-screen {
-    height: 50vw;
+    height: 47vw;
 }
 
 	.about-icons {

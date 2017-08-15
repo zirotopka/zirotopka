@@ -10,7 +10,7 @@ $(document).ready(function(){
 				if (FIREFOX) {	
 					cal.offset({left:max_left_pos-10});			
 				} else {
-					cal.offset({left:max_left_pos-14});
+					cal.offset({left:max_left_pos+0.5});
 				}
 			}
 		} 
