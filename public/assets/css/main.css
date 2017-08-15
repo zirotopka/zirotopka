@@ -1108,7 +1108,7 @@ ul li{
 	}
 
 	.left_quest ul li, .right_quest ul li{
-		list-style: url('/ico/ar.png');
+		list-style: url('/ico/list-type.svg');
 		margin-left: 0.6vw;
 		font-family: MuseoSansCyrl_100;
 		font-size: 1em;

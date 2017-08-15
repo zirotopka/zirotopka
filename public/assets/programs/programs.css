@@ -359,10 +359,12 @@ h2{
 }
 
 .rst_ctn{
-    font-family: MuseoSansCyrl_100;
+    font-family: MuseoSansCyrl_300;
 	color: #232323;
     line-height: 2em;
 	font-size: 1.2vw;
+	word-wrap: break-word; 
+	font-weight: 100;
 }	
 
 .rstart-img-cnt{
@@ -376,9 +378,10 @@ h2{
 
 .rstart-img-cnt p{
 	margin: 1vw 0 20% 0;
-    font-family: MuseoSansCyrl_100;
+    font-family: MuseoSansCyrl_300;
    	color: #232323;
    	font-size: 1.2vw;
+   	font-weight: 100;
 }
 
 .sex{
@@ -474,10 +477,11 @@ h2{
 }
 
 .content-slide p{
-	font-family: MuseoSansCyrl_100;
+	font-family: MuseoSansCyrl_300;
     font-size: 1.3vw;
     color: #232323;
     margin: 0.43vw 0 0 0;
+    font-weight: 100;
 }
 
 .content-slide button{
@@ -532,7 +536,8 @@ h2{
     font-size: 1.3vw;
     text-align: center;
     margin: 0.5vw 0 1.5vw 0;
-    font-family: MuseoSansCyrl_100;
+    font-family: MuseoSansCyrl_300;
+    font-weight: 100;
 }
 
 
@@ -549,10 +554,11 @@ h2{
 }
 
 .ruls-screen p{
-    font-family: MuseoSansCyrl_100;
+    font-family: MuseoSansCyrl_300;
     color: #232323;
     font-size: 1.5vw;
     margin: 6vw 0 0 0;
+    font-weight: 100;
 }
 
 .ruls-screen img{
