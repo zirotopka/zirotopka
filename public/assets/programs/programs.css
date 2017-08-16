@@ -1109,10 +1109,10 @@ footer{
 
 @media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
 		.connect_price {
-		    background-position: 30vw 5px;
+		    background-position: 28vw 5px;
 		}
 		.connect-screen{
-			background-size: 140vw;
+			background-size: 125vw;
 		}
 	}
 }
