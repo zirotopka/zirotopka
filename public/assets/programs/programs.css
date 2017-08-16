@@ -1029,6 +1029,10 @@ footer{
 	    height: 55vw;
 	}
 
+	.pdd {
+	    padding: 14vw 0 0 0;
+	}
+
 	.rstart-txt-cnt button {
 	    margin: 2vw 0 0 0;
 	    width: 26vw;
@@ -1098,6 +1102,12 @@ footer{
 	.connect_price {
 	    background-position: 39vw 5px;
 	}
+
+@media not all and (min-resolution:.001dpcm) { @media {
+		.connect_price {
+		    background-position: 10vw 5px;
+	}
+}
 
 	.connect_screen_shader p {
 	    font-size: 22.1vw;
