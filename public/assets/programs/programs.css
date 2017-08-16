@@ -538,7 +538,7 @@ h2{
 .upr_d{
     font-size: 1.3vw;
     text-align: center;
-    margin: 0.5vw 0 1.5vw 0;
+    margin: 1vw 0 1vw 0;
     font-family: MuseoSansCyrl_300;
     font-weight: 100;
 }
@@ -1097,33 +1097,31 @@ footer{
 	    height: 50vw;
 	}
 	.connect_content {
-	    height: 44vw;
+	    height: 56vw;
+	}
+
+	.connect-screen{
+		height: 56vw;
 	}
 	.connect_price {
 	    background-position: 39vw 5px;
 	}
 
-@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
-		.connect_price {
-		    background-position: 32vw 5px;
-		}
-	}
-}
 
-@media not all and (min-resolution:.001dpcm) { @media {
-		.connect_price {
-		    background-position: 38vw 5px;
-		}
+	.connect{
+		padding: 12vw 0 0 0;
 	}
-}
 
+	.connect_screen_shader {
+		height: 56.1vw;
+	}
 	.connect_screen_shader p {
 	    font-size: 22.1vw;
-	    margin: 10% 0 0 0vw;
+	    margin: 13% 0 0 0vw;
 	}
 
 	.content-slide p{
-		font-size: 1.5vw;	
+		font-size: 1.3vw;	
 	}
 	.ruls-screen p{
 		font-size: 1.7vw;

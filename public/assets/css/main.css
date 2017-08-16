@@ -2083,6 +2083,9 @@ footer{
 .side_logo {
     width: 85%;
 }
+	.profile_btns p{
+	    font-size: 0.64em;
+	}
 
 	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
 		font-size: 3.5vw;

@@ -1210,11 +1210,11 @@ footer{
 
 
 .connect-screen {
-    height: 55.4vw;
+    height: 56vw;
 }
 
 	.connect_screen_shader {
-	    height: 55.5vw;
+	    height: 56.1vw;
 	    width: 100%;
 	}
 
@@ -1222,14 +1222,18 @@ footer{
 	    background-position: 39vw 5px;
 	}
 
+	.connect_screen_shader{
+		height: 56.1vw;
+	}
+
 	.connect_screen_shader p {
 	    font-size: 22.4vw;
-	    margin: 11% 0 0 -0.8vw;
+	    margin: 13% 0 0 -0.8vw;
 	}
 
 	.connect {
 	    font-size: 3.5vw;
-	    padding: 8vw 0 0 0;
+	    padding: 12vw 0 0 0;
 	}
 
 	.connect_info {
