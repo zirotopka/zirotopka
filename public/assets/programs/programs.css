@@ -1120,13 +1120,6 @@ footer{
 	}
 }
 
-@media not all and (min-resolution:.001dpcm) { @media {
-		.connect_price {
-		    background-position: 38vw 5px;
-		}
-	}
-}
-
 	.connect{
 		padding: 12vw 0 0 0;
 	}
