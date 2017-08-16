@@ -1107,17 +1107,20 @@ footer{
 	    background-position: 39vw 5px;
 	}
 
-
-@media not all and (min-resolution:.001dpcm) { @media {
+@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
 		.connect_price {
-		    background-position: 37vw 5px;
+		    background-position: 30vw 5px;
+		}
+		.connect-screen{
+			background-size: 140vw;
 		}
 	}
 }
 
-@media only screen and (orientation: landscape){
-	.connect-screen{
-		background-size: 140vw;
+@media not all and (min-resolution:.001dpcm) { @media {
+		.connect_price {
+		    background-position: 38vw 5px;
+		}
 	}
 }
 
