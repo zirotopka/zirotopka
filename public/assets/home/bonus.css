@@ -1067,7 +1067,23 @@ footer{
 }
 
 
-@media screen and (min-width : 720px) and (max-device-width : 991px) {
+@media@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
+		.connect_price {
+		    background-position: 33vw 5px;
+		}
+		.connect-screen{
+			background-size: 125vw;
+		}
+		.ico_play {
+		    margin: 9% 0 0 -21.5vw;
+		}
+		.holop{
+			margin: 0 0 -3.5em 0;
+		}
+		.black-arrow {
+		    margin: 0 0 -3em 0;
+		}
+} screen and (min-width : 720px) and (max-device-width : 991px) {
 .side_logo {
     width: 85%;
 }
@@ -1239,7 +1255,23 @@ footer{
 	.connect_info {
 	    font-size: 2.5vw;
 	}
-
+@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
+		.connect_price {
+		    background-position: 33vw 5px;
+		}
+		.connect-screen{
+			background-size: 125vw;
+		}
+		.ico_play {
+		    margin: 9% 0 0 -21.5vw;
+		}
+		.holop{
+			margin: 0 0 -3.5em 0;
+		}
+		.black-arrow {
+		    margin: 0 0 -3em 0;
+		}
+}
 
 
 
