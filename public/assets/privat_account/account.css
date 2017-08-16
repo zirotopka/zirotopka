@@ -138,8 +138,7 @@
 	height: 5.2vw;
 	width: 5.2vw;
 	margin: -9.6vw 0 0 -2.6vw;
-	border-radius: 10vw;
-	background-color: rgba(255,255,255,0.5);
+	content: url("/ico/hov-play.svg");
 }
 
 .video-btn, .video-btn:hover{
