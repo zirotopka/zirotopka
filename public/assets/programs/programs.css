@@ -243,7 +243,7 @@ ul li{
 }
 
 .side_logo{
-    width: 100%;
+    width: 85%;
 	text-align: center;
 }
 @media screen and (max-width: 61.95em) {
@@ -758,7 +758,7 @@ h2{
 @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
 
 	.side_logo{
-		width: 100%;
+		width: 85%;
 	    margin: 0;
 	}
 
@@ -1020,7 +1020,7 @@ footer{
 
 @media only screen and (max-device-width: 991px) and (min-width: 720px) {
 .side_logo {
-    width: 100%;
+    width: 85%;
 }
 	.frs-left {
 	    margin: 8% 0 0 0;
@@ -1105,7 +1105,7 @@ footer{
 
 @media not all and (min-resolution:.001dpcm) { @media {
 		.connect_price {
-		    background-position: 30vw 5px;
+		    background-position: 32vw 5px;
 	}
 }
 
