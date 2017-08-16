@@ -1267,9 +1267,11 @@ footer{
 		}
 		.holop{
 			margin: 0 0 -3.5em 0;
+			width: 4em;
 		}
 		.black-arrow {
 		    margin: 0 0 -3em 0;
+		    width: 11em;
 		}
 }
 
