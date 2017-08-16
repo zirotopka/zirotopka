@@ -1103,7 +1103,7 @@ footer{
 	    background-position: 39vw 5px;
 	}
 
-@media not all and (min-resolution:.001dpcm) { @media {
+@media not all and (min-resolution:.001dpcm) { @media only screen and (max-height: 1023px) {
 		.connect_price {
 		    background-position: 32vw 5px;
 	}
