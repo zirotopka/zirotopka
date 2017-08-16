@@ -1107,6 +1107,19 @@ footer{
 	    background-position: 39vw 5px;
 	}
 
+@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
+		.connect_price {
+		    background-position: 32vw 5px;
+		}
+	}
+}
+
+@media not all and (min-resolution:.001dpcm) { @media {
+		.connect_price {
+		    background-position: 38vw 5px;
+		}
+	}
+}
 
 	.connect{
 		padding: 12vw 0 0 0;
