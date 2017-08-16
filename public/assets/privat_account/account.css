@@ -605,13 +605,29 @@
 		.btn-play {
 			    margin: 14vw 0 0 -56vw!important;
 			}
+
+		.btn-play:hover {
+			    margin: 14.1vw 0 0 -56.1vw!important;
+			}
+		
+		.btn-play:active {
+			    margin: 14.1vw 0 0 -56.1vw!important;
+			}
 	
 	}
 	@media screen and (max-width: 991px) {
 		.btn-play {
 			    margin:6vw 0 0 -29vw;
 			}
-	
+
+		.btn-play:hover {
+			    margin:6.1vw 0 0 -29.1vw;
+			}
+		
+		.btn-play {
+			    margin:6.1vw 0 0 -29.1vw;
+			}
+
 	}
 }}
 
