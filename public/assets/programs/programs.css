@@ -1105,7 +1105,7 @@ footer{
 
 @media not all and (min-resolution:.001dpcm) { @media {
 		.connect_price {
-		    background-position: 10vw 5px;
+		    background-position: 35vw 5px;
 	}
 }
 
