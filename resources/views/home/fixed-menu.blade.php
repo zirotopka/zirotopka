@@ -35,7 +35,7 @@
     <div class="main_sidebar hidden-xs hidden-sm col-lg-2 col-md-2" style="height: 100%; padding: 0; z-index: 1">
         <nav class="navbar spy-active" id="Scrollspy">
             <ul class="nav">
-                <li>
+                <li style="text-align: center;">
                     <img src="/ico/min-logo.svg" class="side_logo" alt="">
                 </li>
                 <br><br>

@@ -247,10 +247,10 @@ ul{
 
 
 .write_button:hover, add_file{
-	margin: 1em 0 0.1em 0!important;
+    margin: 0.9em 0.1em 0.1em -0.2em!important;
 }
 
-.write_button:acive{
+.write_button:active{
 	height: 3.6em;
 	width: 12.1em;
 	background-color: #d9550e	;

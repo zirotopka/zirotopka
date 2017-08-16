@@ -243,9 +243,8 @@ ul li{
 }
 
 .side_logo{
-	width: 16vw;
-	position: absolute;
-	margin: -8vw 0 0 0;
+    width: 14vw;
+	text-align: center;
 }
 
 @media screen and (max-width: 61.95em) {
@@ -328,6 +327,7 @@ h2{
     cursor: pointer;
 	position: relative;
 	z-index: 2;
+	font-weight: 500;
 }
 
 .reg_btn{
@@ -459,9 +459,10 @@ h2{
 }
 
 .how-images{
-	height: auto;
-	padding: 0;
-	margin: 5% 0 0 2%;
+    height: auto;
+    padding: 0 0 0 1%;
+    margin: 5% 0 0 0%;
+    width: 100%;
 }
 
 .mob_bns{
@@ -709,9 +710,10 @@ footer{
 	margin: 3vh 0 0 0;
 }
 
-.mission img{
-	margin: 2.15em 0 2.15em 0;
-}
+	.mission img{
+	    margin: 2.15em 0 2.15em -0.85em;
+	    width: 19vw;
+	}
 
 footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a{
 	text-decoration: none;
@@ -767,9 +769,8 @@ footer .prgrm_list .bonus{
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
 
 	.side_logo{
-		width: 35vw;
-	    position: absolute;
-	    margin: -1em 0 0 -5em;
+		width: 40vw;
+	    margin: 0;
 	}
 
 	.bonus-content hr {
@@ -799,7 +800,7 @@ footer .prgrm_list .bonus{
 	.reg_btn, .abo_btn {
 	    width: 30vw;
 	    height: 8vw;
-	    font-size: 2.3vw;
+	    font-size: 0.8em;
 	    margin: 12% 0 0 0;
 	}
 	.reg_btn{
@@ -972,7 +973,7 @@ footer .prgrm_list .bonus{
 	}
 .connect-screen {
 	    height: 65vh;
-	    background-size: 213vw!important;
+	    background-size: 250vw!important;
 	    background-position: -22em;
 	}
 
@@ -1024,7 +1025,7 @@ footer .prgrm_list .bonus{
 	}
 
 footer{
-	height: 125vw;
+	height: 145vw;
 }
 
 	footer .prgrm_list {
@@ -1043,11 +1044,11 @@ footer{
 	}
 
 	.mission p {
-    line-height: 4vw;
-    color: white;
-    text-transform: uppercase;
-    font-size: 3vw;
-    padding: 0.5vw 0 0 4vw;
+	    line-height: 4vw;
+	    color: white;
+	    text-transform: uppercase;
+	    font-size: 3vw;
+	    padding: 0.5vw 0 0 4vw;
 	}
 
 	.reg_f_s ul{
@@ -1057,14 +1058,18 @@ footer{
 	footer .prgrm_list ul li {
 	    padding-left: 0;
 	}
+
+	.mission img {
+	    margin: 2.15em 0 2.15em 1vw;
+	    width: 50vw;
+	}
+
 }
 
 
 @media screen and (min-width : 720px) and (max-device-width : 991px) {
 .side_logo {
-    width: 16vw;
-    position: absolute;
-    margin: -2em 0 0 -64px;
+    width: 21vw;
 }
 .bons-screen {
 	background-size: 59.5em 21em;
@@ -1138,8 +1143,8 @@ footer{
 	}
 	
 	.carrows{
- 		width: 114vw;
-	    margin: -39% 0 0 -12%;
+	    width: 119%;
+	    margin: -38% 0 0 -12%;
 	}
 
 	#crws {
@@ -1242,6 +1247,10 @@ footer {
 	    line-height: 1.7vw;
 	    margin: 2vh 0 0 0;
 	}
+
+	.mission img {
+	    margin: 2.15em 0 0.15em -0.5em;
+	}
 }
 
 
@@ -1326,7 +1335,7 @@ footer {
 
 	.carrows {
 	    margin: -39% 0px 0 -13%;
-	    width: 122%;
+	    width: 120%;
 	}
 
 @-moz-document url-prefix() {

@@ -468,6 +468,14 @@
 	.send-proof-file{
 		width: 50%!important;
 	}
+
+	.send-proof-file:hover{
+		width: 51%!important;
+	}
+
+	.send-proof-file:active{
+		width: 51%!important;
+	}
 }
 .c-orange {
 	color: #ff9319;

@@ -175,7 +175,7 @@ ul li{
 .main_sidebar ul {
     font-size: 1em;
     margin: 0;
-    padding: 5em 0 0 0;
+    padding: 4em 0 0 0;
     list-style: none;
     text-align: left;
 }
@@ -231,9 +231,8 @@ ul li{
 }
 
 .side_logo{
-	width: 16vw;
-	position: absolute;
-	margin: -8vw 0 0 0;
+    width: 14vw;
+	text-align: center;
 }
 
 	.rg_check_in{
@@ -1108,10 +1107,20 @@ ul li{
 	}
 
 	.left_quest ul li, .right_quest ul li{
-		list-style: url('/ico/list-type.svg');
 		margin-left: 0.6vw;
 		font-family: MuseoSansCyrl_100;
 		font-size: 1em;
+	}
+
+	.left_quest ul li a:before, .right_quest ul li a:before{
+	    content: ' ';
+	    position: absolute;
+	    background: url(/ico/list-type.svg);
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    height: 0.7vw;
+	    width: 0.7vw;
+	    margin: 0.4em 0 0 -1em;
 	}
 
 	.left_quest ul .else, .right_quest ul .else{
@@ -1122,6 +1131,11 @@ ul li{
 		font-size: 1.05em;
 		cursor: pointer;
 	}
+
+	.left_quest ul .else:before, .right_quest ul .else:before{
+		background: none;
+	}
+
 	.right_quest{
 		background: url('/ico/qw.png');
 		background-repeat: no-repeat;
@@ -1182,7 +1196,7 @@ ul li{
 		position: relative;
 		z-index: 2;
 		text-align: center;
-		height: 60vw;
+		height: 45vw;
 	}
 
 	.connect_content p{
@@ -1245,71 +1259,74 @@ ul li{
 		background-color: #D9550E!important;
 	}
 	/*-----------------------------------Footer-----------------------*/
-	footer{
-		font-family: GilroyLight;
-		height: auto;
-		background-color: #282828;
-		margin: 0 0 -10px 0;
-	    padding: 2rem 0 0 0px!important;
-		height: 28vw;
-	}
+/*-------------------------footer----------------*/
+footer{
+	font-family: GilroyLight;
+	height: auto;
+	background-color: #282828;
+	margin: 0 0 -10px 0;
+    padding: 2rem 0 0 0px!important;
+	height: 24vw;
+}
 
-	.mission p{
-		line-height: 1.6vw;
-		color: white;
-		text-transform: uppercase;
-		font-size: 1vw;
-		margin: 3vh 0 0 0;
-	}
+.mission p{
+	line-height: 1.4vw;
+	color: white;
+	text-transform: uppercase;
+	font-size: 1vw;
+	margin: 3vh 0 0 0;
+}
 
 	.mission img{
-		margin: 2.15em 0 2.15em 0;
+	    margin: 2.15em 0 2.15em -0.85em;
+	    width: 19vw;
 	}
 
-	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a{
-		text-decoration: none;
-		color: white;
-		font-size: 1vw;
-		margin-top: 0.2em;
-	}
+footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a{
+	text-decoration: none;
+	color: white;
+	font-size: 1vw;
+	margin-top: 0.2em;
+}
 
-	footer .prgrm_list ul li{
-		padding-left: 28%;
-	}
+footer .prgrm_list ul li{
+	padding-left: 28%;
+}
 
-	footer .prgrm_list{
-		padding: 2.5em 0 0 0;
-		line-height: 2.6vw;
-	}
+footer .prgrm_list{
+	padding: 2.5em 0 0 0;
+	line-height: 2.5em;
+}
 
-	footer .prgrm_list .bonus{
-		margin: 1em 0 0 0;
-		line-height: 1.5em;
-	}
+footer .prgrm_list .bonus{
+	margin: 1em 0 0 0;
+	line-height: 1.5em;
+}
 
-	.reg_f_s{
-		padding: 2.2em 0 0 0;
-		line-height: 3.3vw;
-	}
+.reg_f_s{
+	padding: 2.2em 0 0 0;
+	line-height: 3em;
+}
 
-	.reg_f_s img{
-		display: inline-block;
-		width: 3.5em;
-		margin: 2em 0 0 0.5em;	
-	}
+.reg_f_s img{
+	display: inline-block;
+	width: 3em;
+	margin: 2em 0 0 0.5em;	
+}
 
-	.ofrta{
-		padding: 2.5em 0 0 0;
-	    line-height: 2.5vw;
-	}
+.ofrta{
+	padding: 2.5em 0 0 0;
+    line-height: 2.5em;
+}
 
-	#pltks{
-		line-height: 1.5em;
-	}
+#pltks{
+	line-height: 1.5em;
+}
 
-	.accsss{
-		line-height: 1.5em;
-	}
+.accsss{
+	line-height: 1.5em;
+}
+
 
 
 @media screen and (max-width: 61.95em) {
@@ -1333,6 +1350,7 @@ ul li{
 }
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
+
 	.questions-screen img {
 	    display: inline-block;
 	    vertical-align: baseline;
@@ -1408,9 +1426,8 @@ ul li{
 		width: 50%;
 	}
 	.side_logo{
-		width: 35vw;
-	    position: absolute;
-	    margin: -1em 0 0 -5em;
+		width: 40vw;
+	    margin: 0;
 	}
 	.reg_btn:hover{
 		width: 20.2vw;
@@ -1928,8 +1945,8 @@ ul li{
 	}
 	.connect-screen {
 	    height: 65vh;
-	    background-size: 199vw 66vh!important;
-	    background-position: -10em;
+	    background-size: 250vw!important;
+	    background-position: -16em;
 	}
 
 	.questions-screen img {
@@ -1961,6 +1978,12 @@ ul li{
 		height: auto;
 	}
 	
+	.left_quest ul li a:before, .right_quest ul li a:before {
+	    height: 2vw;
+	    width: 2vw;
+	    margin: 0.6em 0 0 -1em;
+	}
+
 	.connect {
 	    font-size: 3em;
 	    letter-spacing: 1px;
@@ -1971,6 +1994,27 @@ ul li{
 	    font-size: 1.5em;
 	    letter-spacing: 1px;
 	    padding: 19vw 0 0 0;
+	}
+
+footer{
+	height: 145vw;
+}
+
+	#pltks {
+	    line-height: 1em;
+	}
+
+	.accsss{
+		line-height: 1em;
+	}
+
+	.reg_f_s {
+	    padding: 2.2em 0 0 0;
+	    line-height: 2.5em;
+	}
+
+	.ofrta {
+	    padding: 2.1em 0 0 0;
 	}
 
 	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a {
@@ -1989,8 +2033,14 @@ ul li{
 	.reg_f_s ul{
 		padding: 0 0 0 8vw;
 	}
-	footer .prgrm_list ul li{
-		padding: 0;
+
+	footer .prgrm_list ul li {
+	    padding-left: 0;
+	}
+
+	.mission img {
+	    margin: 2.15em 0 2.15em 1vw;
+	    width: 50vw;
 	}
 
 	.connect_btn{
@@ -2031,9 +2081,7 @@ ul li{
 
 @media only screen and (min-width : 768px) and (max-width : 991px) and (orientation: portrait){
 .side_logo {
-    width: 16vw;
-    position: absolute;
-    margin: -2em 0 0 -64px;
+    width: 21vw;
 }
 
 	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
@@ -2319,6 +2367,12 @@ ul li{
 	    font-size: 1.8vw;
 	}
 
+	.left_quest ul li a:before, .right_quest ul li a:before {
+	    height: 1.1vw;
+	    width: 1.1vw;
+	    margin: 0.3em 0 0 -1em;
+	}
+
 	.connect_screen_shader {
 	    width: 100%;
 	    height: 55.6vw;
@@ -2355,7 +2409,7 @@ ul li{
 	}
 	
 	.mission img {
-	    margin: 2.15em 0 0.15em 0;
+	    margin: 2.15em 0 0.15em -0.5em;
 	}
 
 	footer .prgrm_list {
@@ -2492,6 +2546,9 @@ ul li{
 	    padding: 6% 0 0 0;
 	}
 
+	.left_quest ul .else, .right_quest ul .else{
+	    margin: 0.3em 0 0 -1em;
+	}	
 	.connect-screen {
 	    height: 46vw;
 	    background-size: 115%;

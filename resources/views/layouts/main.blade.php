@@ -65,7 +65,7 @@
                 <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
                     <ul>
                         <li>
-                            <img src="/ico/main_logo.png" class="side_logo" alt="">
+                            <img src="/ico/min-logo.svg" class="side_logo" alt="">
                         </li>
                         <br><br>
                         <li>

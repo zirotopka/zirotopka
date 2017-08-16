@@ -243,9 +243,8 @@ ul li{
 }
 
 .side_logo{
-	width: 16vw;
-	position: absolute;
-	margin: -8vw 0 0 0;
+    width: 14vw;
+	text-align: center;
 }
 @media screen and (max-width: 61.95em) {
 	.codrops-btn{
@@ -404,6 +403,8 @@ h2{
     font-size: 1.1vw;
     position: relative;
     z-index: 2;
+    font-family: MuseoSansCyrl_500;
+	font-weight: 500;
 }
 
 .rstart-txt-cnt button:hover{
@@ -492,6 +493,8 @@ h2{
     color: white;
     margin: 4vw 0 0 0;
     font-size: 1.1vw;
+    font-family: MuseoSansCyrl_500;
+	font-weight: 500;
 }
 
 .content-slide button:hover{
@@ -672,26 +675,28 @@ h2{
 		margin: 5.8em -0.2vw 0 0;
 		background-color: #D9550E!important;
 	}
-	/*-----------------------------------Footer-----------------------*/
+	/*-------------------------footer----------------*/
 	footer{
 		font-family: GilroyLight;
+		height: auto;
 		background-color: #282828;
 		margin: 0 0 -10px 0;
 	    padding: 2rem 0 0 0px!important;
-		height: 28vw;
+		height: 24vw;
 	}
 
 	.mission p{
-		line-height: 1.6vw;
+		line-height: 1.4vw;
 		color: white;
 		text-transform: uppercase;
 		font-size: 1vw;
 		margin: 3vh 0 0 0;
 	}
 
-	.mission img{
-		margin: 2.15em 0 2.15em 0;
-	}
+		.mission img{
+		    margin: 2.15em 0 2.15em -0.85em;
+		    width: 19vw;
+		}
 
 	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a{
 		text-decoration: none;
@@ -706,7 +711,7 @@ h2{
 
 	footer .prgrm_list{
 		padding: 2.5em 0 0 0;
-		line-height: 2.6vw;
+		line-height: 2.5em;
 	}
 
 	footer .prgrm_list .bonus{
@@ -716,7 +721,7 @@ h2{
 
 	.reg_f_s{
 		padding: 2.2em 0 0 0;
-		line-height: 3.3vw;
+		line-height: 3em;
 	}
 
 	.reg_f_s img{
@@ -727,7 +732,7 @@ h2{
 
 	.ofrta{
 		padding: 2.5em 0 0 0;
-	    line-height: 2.5vw;
+	    line-height: 2.5em;
 	}
 
 	#pltks{
@@ -753,13 +758,12 @@ h2{
 @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
 
 	.side_logo{
-		width: 35vw;
-	    position: absolute;
-	    margin: -1em 0 0 -5em;
+		width: 40vw;
+	    margin: 0;
 	}
 
 	.frs-left {
-	    margin: 8% 0 0 0;
+	    margin: 10% 0 0 0;
 	}
 
 	.cdr-btn img{
@@ -773,7 +777,7 @@ h2{
 	.rstart-txt-cnt button {
 		height: 10vw;
 		width: 50vw;
-	    font-size: 2.5vw;
+	    font-size: 0.8em;
 	}
 
 	.rstart-txt-cnt button:hover {
@@ -847,7 +851,7 @@ h2{
 	.content-slide button {
 	    width: 50vw;
 	    height: 10vw;
-	    font-size: 2.5vw;
+	    font-size: 0.8em;
 	}
 
 	.content-slide button:hover {
@@ -893,9 +897,9 @@ h2{
 	}
 
 	.connect-screen {
-		height: 65vh;
-	    background-size: 240vw!important;
-	    background-position: -23em;
+	    height: 65vh;
+	    background-size: 80em!important;
+	    background-position: -22em;
 	}
 
 	.questions-screen img {
@@ -943,7 +947,7 @@ h2{
 	.connect_btn{
 	    height: 10vw;
 	    width: 50vw;
-	    font-size: 2.4vw;
+	    font-size: 0.8em;
 	}
 
 	.connect_btn:hover{
@@ -973,17 +977,17 @@ h2{
 	height: auto;
 }
 footer{
-	height: 128vw;
+	height: 145vw;
 }
 
 	footer .prgrm_list {
-	    padding: 8.8em 0 0 0;
+	    padding: 23.5vw 0 0 0;
 		line-height: 2.5em;
 
 	}
 	
 	footer .prgrm_list	.bonus{
-		line-height: 1em;
+		line-height: 1.5em;
 	}
 
 	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a {
@@ -1002,19 +1006,22 @@ footer{
 	.reg_f_s ul{
 		padding: 0 0 0 8vw;
 	}
-	footer .prgrm_list ul li{
-		padding: 0;
+
+	footer .prgrm_list ul li {
+	    padding-left: 0;
+	}
+
+	.mission img {
+	    margin: 2.15em 0 2.15em 1vw;
+	    width: 50vw;
 	}
 
 }
 
 @media only screen and (max-device-width: 991px) and (min-width: 720px) {
 .side_logo {
-    width: 16vw;
-    position: absolute;
-    margin: -2em 0 0 -64px;
+    width: 21vw;
 }
-
 	.frs-left {
 	    margin: 8% 0 0 0;
 	}
@@ -1106,6 +1113,10 @@ footer{
 
 	footer{
 		height: 32vw;
+	}
+
+	.mission img {
+	    margin: 2.15em 0 0.15em -0.5em;
 	}
 }
 

@@ -334,7 +334,7 @@
             </div>
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
-                    <img src="/ico/footer_logo.png" alt="">
+                    <img src="/ico/min-logo.svg" alt="">
                     <p>наша миссия<br>
                     в повышении качества жизни<br>
                     общества через вовлечение<br>
@@ -348,7 +348,7 @@
                         <li><a href="#">R.ONE RUNNER</a></li>
                         <li><a href="#">R.ONE RUNNER +</a></li>
                         <li><a href="#">R.ONE POWER</a></li>
-                        <li class="bonus"><a href="#" >БОНУСНАЯ<br>
+                        <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
                          ПРОГРАММА</a></li>
                     </ul>
                 </div>
