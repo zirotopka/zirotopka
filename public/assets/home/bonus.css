@@ -916,6 +916,14 @@ footer .prgrm_list .bonus{
 	.carrows{
 		width: 90%;
 	}
+
+	.holop{
+		width: 4em;
+	}
+
+	.black-arrow{
+		width: 11em;
+	}
 .bons-pay-screen {
 	height: auto;
 	padding: 0;
