@@ -1,6 +1,10 @@
 input{
 	cursor: pointer;
 }
+
+html{
+	overflow: hidden;
+}
 /*--------------Right part--------------*/
 
 .st-content{

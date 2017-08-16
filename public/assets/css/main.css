@@ -2265,8 +2265,13 @@ footer{
 	    font-size: 1.8vw;
 	}
 
+	.how_cnt{
+		padding: 0;
+	}
+
 	.how_cnt img {
 	    width: 10vw;
+
 	}
 
 	.orng {
