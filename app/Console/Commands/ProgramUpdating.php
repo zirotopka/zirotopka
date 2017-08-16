@@ -40,14 +40,35 @@ class ProgramUpdating extends Command
      */
     public function handle()
     {
-        $users = User::select([
+        $users_query = User::select([
             'id',
             'last_updated_at',
             'timezone'
-        ])->where('status','=',1);
+        ]);
+        //->where('status','=',1);
 
-        // $users->chunk(100, function(){
+        $users_query->chunk(100, function($users){
+            foreach($users as $user) {
+                if (!empty($user->timezone)) {
+                    $timezone = $user->timezone;
+                } else {
+                    $timezone = 'Africa/Nairobi';
+                }
+                $now = Carbon::now($timezone);
 
-        // })
+                if (!empty($user->last_updated_at)) {    
+                    $nowDay = $now->day;
+                    $last_updated_at = Carbon::parse($user->last_updated_at);
+                    $lastDay = $last_updated_at->day;
+
+                    if ($nowDay > $lastDay) {
+                        
+                    }
+                } else {
+                    $user->last_updated_at = $now;
+                    $user->save();
+                }
+            }
+        });
     }
 }

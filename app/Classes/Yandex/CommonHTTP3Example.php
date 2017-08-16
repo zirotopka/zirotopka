@@ -617,7 +617,7 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         $this->verifyCommonResponseAttributes($root);
     }
 
-    public function runExample($request) {
+    public function runExample($request, $certificate, $privkey) {
         /**
          * Операция "Проверка заказа"
          */
@@ -626,59 +626,72 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         // $req = $this->createCheckOrderRequestXMLDocument();
         // echo $req;
 
-        $certificate = public_path().'/yandexSslTest/prod.crt';
-        $privkey = public_path().'/yandexSslTest/prod.key';
+        // $req = $this->sign($request, $certificate, $privkey);
+        // // проверка XML запроса сервером
+        // $req = $this->verify($req, $certificate);
+        
+        // $this->verifyCheckOrderRequestXMLDocument($req);
 
-        $req = $this->sign($request, $certificate, $privkey);
-        dd($req);
+        // // формирование NVP запроса
+        // $nvp = $this->createCheckOrderNVP();
+        // foreach ($nvp as $key => $value) {
+        //     echo $key . '=' . $value . "\n";
+        // }
+        // // проверка NVP запроса
+        // $this->verifyCheckOrderNVP($nvp);
 
-        // проверка XML запроса сервером
-        $req = $this->verify($req, 'client.crt');
-        echo $req;
-        $this->verifyCheckOrderRequestXMLDocument($req);
+        // // формирование ответа клиенту
+        // $resp = $this->createCheckOrderResponseXMLDocument();
+        // echo $resp;
 
-        // формирование NVP запроса
-        $nvp = $this->createCheckOrderNVP();
-        foreach ($nvp as $key => $value) {
-            echo $key . '=' . $value . "\n";
-        }
-        // проверка NVP запроса
-        $this->verifyCheckOrderNVP($nvp);
-
-        // формирование ответа клиенту
-        $resp = $this->createCheckOrderResponseXMLDocument();
-        echo $resp;
-
-        // проверка ответа клиентом
-        $this->verifyCheckOrderResponseXMLDocument($resp);
+        // // проверка ответа клиентом
+        // $this->verifyCheckOrderResponseXMLDocument($resp);
 
         /**
          * Операция "Уведомление об оплате"
          */
 
         // формирование XML запроса
-        $req = $this->createPaymentAvisoRequestXMLDocument();
-        echo $req;
-        $req = $this->sign($req, 'client.crt', 'client.key');
-        echo $req;
+        // $req = $this->createPaymentAvisoRequestXMLDocument();
+        // echo $req;
+        $req = $this->sign($request, $certificate, $privkey);
+        dd($req);
+        $ch = curl_init();
+ 
+        curl_setopt($ch, CURLOPT_URL, "https://bo-demo02.yamoney.ru:9094/webservice/deposition/api/testDeposition");
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/pkcs7-mime'));
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $req);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($ch, CURLOPT_SSLCERT, $certificate);
+        curl_setopt($ch, CURLOPT_SSLKEY, $privkey);
+        curl_setopt($ch, CURLOPT_SSLKEYPASSWD,'Gorchel');
 
-        // проверка запроса XML сервером
-        $req = $this->verify($req, 'client.crt');
-        echo $req;
-        $this->verifyPaymentAvisoRequestXMLDocument($req);
+        $result = curl_exec( $ch );
+        curl_close( $ch );
 
-        // формирование NVP запроса
-        $nvp = $this->createPaymentAvisoNVP();
-        echo $nvp;
-        // проверка NVP запроса
-        $this->createPaymentAvisoNVP($nvp);
+        dd($result);
 
-        // формирование ответа клиенту
-        $resp = $this->createPaymentAvisoResponseXMLDocument();
-        echo $resp;
+        // $req = $this->verify($req, $certificate);
+        // dd($req);
+        // $this->verifyPaymentAvisoRequestXMLDocument($req);
 
-        // проверка ответа клиентом
-        $this->verifyPaymentAvisoResponseXMLDocument($resp);
+        // // формирование NVP запроса
+        // $nvp = $this->createPaymentAvisoNVP();
+        // echo $nvp;
+        // // проверка NVP запроса
+        // $this->createPaymentAvisoNVP($nvp);
+
+        // // формирование ответа клиенту
+        // $resp = $this->createPaymentAvisoResponseXMLDocument();
+        // echo $resp;
+
+        // // проверка ответа клиентом
+        // $this->verifyPaymentAvisoResponseXMLDocument($resp);
     }
 
 }

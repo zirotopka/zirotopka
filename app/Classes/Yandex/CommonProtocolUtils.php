@@ -59,7 +59,7 @@ class CommonProtocolUtils {
         $process = proc_open(
             'openssl smime -sign -signer ' . $certificate .
                     ' -inkey ' . $privkey .
-                    ' -nochain -nocerts -outform PEM -nodetach -passin pass:Gorchel',
+                    ' -passin pass:Gorchel -nochain -nocerts -outform PEM -nodetach',
             $descriptorspec, $pipes);
 
         if (is_resource($process)) {
@@ -109,9 +109,9 @@ class CommonProtocolUtils {
             $resCode = proc_close($process);
             if ($resCode != 0) {
                 if ($resCode == 2 || $resCode == 4) {
-                    throw new ErrorException('Signature verification failed');
+                    throw new \Exception('Signature verification failed');
                 } else {
-                    throw new ErrorException('OpenSSL call failed:' . $resCode . '\n' . $content);
+                    throw new \Exception('OpenSSL call failed:' . $resCode . '\n' . $content);
                 }
             }
             return $content;

@@ -337,12 +337,4 @@ class HTTPGP3Example extends CommonProtocolUtils {
 
 }
 
-// main()
-try {
-    $instance = new HTTPGP3Example();
-    $instance->runExample();
-} catch (Exception $e) {
-    echo "Exception thrown: " . $e;
-}
-
 ?>
