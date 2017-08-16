@@ -231,7 +231,7 @@ ul li{
 }
 
 .side_logo{
-    width: 14vw;
+    width: 100%;
 	text-align: center;
 }
 
@@ -1426,7 +1426,7 @@ footer .prgrm_list .bonus{
 		width: 50%;
 	}
 	.side_logo{
-		width: 40vw;
+		width: 100%;
 	    margin: 0;
 	}
 	.reg_btn:hover{
@@ -2081,7 +2081,7 @@ footer{
 
 @media only screen and (min-width : 768px) and (max-width : 991px) and (orientation: portrait){
 .side_logo {
-    width: 21vw;
+    width: 100%;
 }
 
 	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {

@@ -243,7 +243,7 @@ ul li{
 }
 
 .side_logo{
-    width: 14vw;
+    width: 100%;
 	text-align: center;
 }
 
@@ -769,7 +769,7 @@ footer .prgrm_list .bonus{
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
 
 	.side_logo{
-		width: 40vw;
+		width: 100%;
 	    margin: 0;
 	}
 
@@ -1069,7 +1069,7 @@ footer{
 
 @media screen and (min-width : 720px) and (max-device-width : 991px) {
 .side_logo {
-    width: 21vw;
+    width: 100%;
 }
 .bons-screen {
 	background-size: 59.5em 21em;

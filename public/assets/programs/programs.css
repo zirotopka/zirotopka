@@ -243,7 +243,7 @@ ul li{
 }
 
 .side_logo{
-    width: 14vw;
+    width: 100%;
 	text-align: center;
 }
 @media screen and (max-width: 61.95em) {
@@ -758,7 +758,7 @@ h2{
 @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
 
 	.side_logo{
-		width: 40vw;
+		width: 100%;
 	    margin: 0;
 	}
 
@@ -1020,7 +1020,7 @@ footer{
 
 @media only screen and (max-device-width: 991px) and (min-width: 720px) {
 .side_logo {
-    width: 21vw;
+    width: 100%;
 }
 	.frs-left {
 	    margin: 8% 0 0 0;
