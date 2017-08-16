@@ -593,12 +593,6 @@ h2{
 	    padding: 0 0 0 0;
 	}
 
-@media only screen and (orientation: landscape){
-	.connect-screen{
-		background-size: 135vw;
-	}
-}
-
 	.connect_screen_shader{
 	    width: 100%;
 	    height: 46.1vw;
@@ -1118,6 +1112,12 @@ footer{
 		.connect_price {
 		    background-position: 37vw 5px;
 		}
+	}
+}
+
+@media only screen and (orientation: landscape){
+	.connect-screen{
+		background-size: 140vw;
 	}
 }
 
