@@ -20,20 +20,13 @@
         @include('home.fixed-menu')
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>   
         <div class="home_content col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <div class="bonus-content">
         @if ($user = Sentinel::check())
           @php
               $class = '';
               $class = 'rg_check_in';
           @endphp
-        @else
-            <div id="st-trigger-effects" class="hidden-md hidden-lg">
-                <button data-effect="st-effect-2" class="cdr-btn">
-                    <img src="/ico/menu.svg" alt="" style="width: 5vw;">
-                </button>
-            </div>
-        @endif
-            <div class="bonus-content">
-                <div class="rg_check_in bons-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="{{$class}} bons-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h1>ЗАРАБАТЫВАЙТЕ ВМЕСТЕ<br>С НАШЕЙ БОНУСНОЙ ПРОГРАММОЙ</h1>
                     <p>Вы начинаете заниматься спортом<br>по любой программе на платформе,<br>приглашаете друзей и сразу зарабатываете</p>
                     <button type="button" class="reg_btn" data-toggle="modal" data-target="#registr">
@@ -44,6 +37,25 @@
                     </button>
                     <img src="/ico/pig.svg" class="pig hidden-xs">
                 </div>
+        @else
+            <div id="st-trigger-effects" class="hidden-md hidden-lg">
+                <button data-effect="st-effect-2" class="cdr-btn">
+                    <img src="/ico/menu.svg" alt="" style="width: 5vw;">
+                </button>
+            </div>
+
+                <div class="bons-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1>ЗАРАБАТЫВАЙТЕ ВМЕСТЕ<br>С НАШЕЙ БОНУСНОЙ ПРОГРАММОЙ</h1>
+                    <p>Вы начинаете заниматься спортом<br>по любой программе на платформе,<br>приглашаете друзей и сразу зарабатываете</p>
+                    <button type="button" class="reg_btn" data-toggle="modal" data-target="#registr">
+                        РЕГИСТРАЦИЯ
+                    </button>
+                    <button type="button" class="abo_btn">
+                        ПОДРОБНЕЕ
+                    </button>
+                    <img src="/ico/pig.svg" class="pig hidden-xs">
+                </div>
+        @endif
                     <hr>
                 <div class="bons-how-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_2">
                     <h2>КАК ЭТО РАБОТАЕТ</h2>

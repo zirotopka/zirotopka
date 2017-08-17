@@ -1274,7 +1274,7 @@ footer{
 	background-color: #282828;
 	margin: 0 0 -10px 0;
     padding: 2rem 0 0 0px!important;
-	height: 24vw;
+	height: 27vw;
 }
 
 .mission p{
@@ -1303,17 +1303,17 @@ footer .prgrm_list ul li{
 
 footer .prgrm_list{
 	padding: 2.5em 0 0 0;
-	line-height: 2.5em;
+	line-height: 1.5em;
 }
 
 footer .prgrm_list .bonus{
 	margin: 1em 0 0 0;
-	line-height: 1.5em;
+	line-height: 1em;
 }
 
 .reg_f_s{
 	padding: 2.2em 0 0 0;
-	line-height: 3em;
+	line-height: 2em;
 }
 
 .reg_f_s img{
@@ -1324,15 +1324,15 @@ footer .prgrm_list .bonus{
 
 .ofrta{
 	padding: 2.5em 0 0 0;
-    line-height: 2.5em;
+    line-height: 2em;
 }
 
 #pltks{
-	line-height: 1.5em;
+	line-height: 1em;
 }
 
 .accsss{
-	line-height: 1.5em;
+	line-height: 1em;
 }
 
 
@@ -1696,10 +1696,10 @@ footer .prgrm_list .bonus{
 	.start{
 		height: 100vw!important;
 		width: 85vw;
-		margin: 0 0 0 6.5vw;
+		margin: 0 0 0 6.8vw;
 	}
 	.start_shader {
-	    margin: -100vw 0 0px 6.5vw!important;
+	    margin: -100vw 0 0px 6.8vw!important;
 	    width: 85.2%!important;
 	    height: 100vw!important;
 	    display: block!important;
@@ -1952,9 +1952,9 @@ footer .prgrm_list .bonus{
 	    padding: 0 0 0 5%;
 	}
 	.connect-screen {
-	    height: 65vh;
-	    background-size: 250vw!important;
-	    background-position: -16em;
+		height: 65vh;
+	    background-size: 68em!important;
+	    background-position: -21em;
 	}
 
 	.questions-screen img {
