@@ -8,10 +8,6 @@ html{
 	overflow-y: scroll!important;
 }
 
-body{
-	font-size: 100%;
-}
-
 .rg_check_in{
 	margin: 4.2em 0 0 0;
 }
@@ -1181,7 +1177,7 @@ footer{
 
 	.holop {
 	    width: 7vw;
-	    margin: 0 1vw -3.5vw 0;
+	    margin: 0 1vw -1.5vw 0;
 	}
 	
 	.carrows{

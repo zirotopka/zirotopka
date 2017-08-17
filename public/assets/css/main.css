@@ -183,7 +183,7 @@ ul li{
 .main_sidebar ul {
     font-size: 1em;
     margin: 0;
-    padding: 3.5em 0 0 0;
+    padding: 4.5em 0 0 0;
     list-style: none;
     text-align: left;
 }
@@ -630,7 +630,7 @@ ul li{
 	.pro_shader, .pow_shader, .run_shader, .runp_shader{
 	    position: absolute;
 		width: 20.5vw;
-		margin: -17.1vw 0 0 1em;
+		margin: -17.2vw 0 0 1em;
 	    height: 17.1vw;
 	    background-color: rgba(0,0,0,0.6);
 	    z-index: 2;
@@ -656,7 +656,7 @@ ul li{
 	}
 
 	.pow_shader_gray, .runp_shader_gray{
-		margin: -17vw 0 0 1vw;
+	    margin: -17vw 0 0 1.36vw;
 		width: 20.5vw;
 		height: 17vw;
 	}

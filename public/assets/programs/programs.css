@@ -8,10 +8,6 @@ html{
 	overflow-y: scroll!important;
 }
 
-body{
-	font-size: 100%;
-}
-
 .st-content{
 	overflow: hidden!important;
 }
@@ -343,7 +339,7 @@ h2{
 }
 
 .frs-left{
-	margin: 4% 0 0 0;
+	margin: 5% 0 0 0;
     padding: 0 0 0 3vw;
 }
 

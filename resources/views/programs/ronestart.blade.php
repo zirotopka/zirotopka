@@ -34,7 +34,7 @@
                 </button>
             </div>
         @endif
-            <div class="rstart-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="rg_check_in rstart-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="frs-left col-xs-12 col-sm-7 col-md-7 col-lg-7">
                     <div class="rstart-logo">
                         <img src="/ico/R'ONE logo.png" alt="">
