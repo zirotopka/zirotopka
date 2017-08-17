@@ -1101,15 +1101,13 @@ footer{
 		.holop{
 			margin: 0 0 -3.5em 0;
 		}
+		.carrows{
+			width: 96%;
+			margin: 1em 0 0 0;
+		}
 	}
 } 
 
-@media not all and (min-resolution:.001dpcm) {
-	.carrows{
-		width: 96%;
-		margin: 1em 0 0 0;
-	}
-}
 .side_logo {
     width: 85%;
 }
