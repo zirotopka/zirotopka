@@ -8,6 +8,10 @@ html{
 	overflow: hidden!important;
 }
 
+.index_spy{
+	display: none;
+}
+
 .st-content, .st-pusher, .st-container, .container-fluid{
 	margin: 0;
 }
@@ -179,7 +183,7 @@ ul li{
 .main_sidebar ul {
     font-size: 1em;
     margin: 0;
-    padding: 4em 0 0 0;
+    padding: 3.5em 0 0 0;
     list-style: none;
     text-align: left;
 }
@@ -235,7 +239,7 @@ ul li{
 }
 
 .side_logo{
-    width: 100%;
+    width: 85%;
 	text-align: center;
 }
 
