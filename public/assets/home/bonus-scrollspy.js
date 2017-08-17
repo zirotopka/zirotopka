@@ -10,7 +10,7 @@ jQuery(document).ready(function(){
 			$('.spy_sections').attr('style','display: none!important;');
 			$('.bonus_spy').attr('style','display: block!important;');
 			$('#prgr_l_mn').attr('style','display: block;');
-			$('#mn_l_mn').attr('style','display: list-item;');
+			$('#mn_l_mn').attr('style','display: block; padding: 1.5em 0 1em 4em!important;');
 		};		
 	});
 

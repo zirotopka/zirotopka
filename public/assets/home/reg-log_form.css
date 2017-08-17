@@ -265,15 +265,15 @@ div {
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
     content: '';
-    width: 0.73em;
-    height: 0.7em;
-    background: #ff8a18;
+    width: 0.90em;
+    height: 0.85em;
+    background: url(/ico/crl.svg);
     position: absolute;
-    top: 2px;
-    left: 2px;
-    border-radius: 100%;
+    top: 0.067em;
+    left: 0.074em;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
+    background-repeat: no-repeat;
 }
 @media not all and (min-resolution:.001dpcm) { @media {
 
@@ -302,5 +302,12 @@ div {
 	.reg_modal .modal-content{
 		background-position: 90% 9.75em;
 
+	}
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px){
+	[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+	    width: 0.6em;
+	    height: 0.6em;
 	}
 }

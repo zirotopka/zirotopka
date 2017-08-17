@@ -64,7 +64,7 @@ ul,li {
 }
 
 .access_block, .programm_block, .immunity_block{
-	margin: 1.9em 0 0 0;
+	margin: 3em 0 0 0;
 }
 
 .questions_block{
@@ -91,7 +91,7 @@ ul,li {
 }
 
 .asn_faq_block{
-	margin: 5em 0 0 0;
+	margin: 5em 0 5vw 0;
 	font-family: MuseoSansCyrl_100;
 	color: #000000b3;
 }
@@ -120,34 +120,26 @@ ul,li {
 	display: block;
 }
 
+.send_btn:hover{
+    margin: 1.9em 0 0 -0.1vw;
+	width: 10.2em;
+	height: 3.2em;
+}
+
 .send_btn:active{
-	margin: 0.8em 0 0 0;
+    margin: 1.9em 0 0 -0.1vw;
 	width: 10.2em;
 	height: 3.2em;
 	background-color: #FF7930;
 }
 
-.send_btn::hover{
-	margin: 0.8em 0 0 0;
-	width: 10.2em;
-	height: 3.2em;
-}
+
 @media screen and (max-width: 61.95em) {
 	.questions_block ul{ 
 		padding: 0;
 	}
 }
 
-.profile_btns p{
-	font-family: MuseoSansCyrl_300!important;
-	color: white;
-	font-size: 1.2em!important;
-}
-
-.profile_btns i{
-	width: 1em;
-	height: 1em;
-}
 
 .user-fln{
 	font-size: 17px!important;

@@ -24,7 +24,7 @@
 @overwrite
 
 @section("content")
-	<div class="container-fluid" >
+	<div class="container-fluid">
 		@include('home.fixed-menu')
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>	
         <div class="home_content col-lg-10 col-md-10 col-sm-12 col-xs-12">
@@ -50,7 +50,7 @@
                 <div class="reg_scr_content">
                     <div id="st-trigger-effects" class="hidden-md hidden-lg">
                         <button data-effect="st-effect-2" class="cdr-btn">
-                            <img src="/ico/menu.png" alt="" style="width: 3vw;">
+                            <img src="/ico/menu1.svg" alt="" style="width: 5vw;margin: 3vw 0 0 3vw;">
                         </button>
                     </div>
                         <div class="reg_log_btns">
@@ -69,7 +69,7 @@
             <div class="info-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_2">
                 <div class="info_naming col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h2>ЧТО ТАКОЕ</h2>
-                    <img src="/ico/REFORMATOR.png" alt="">
+                    <img src="/ico/REFORMATOR.svg" alt="">
                 </div>
                 <div class="info_cont col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -82,18 +82,19 @@
                                 <p>Наглядные видео-инструкции<br>для всех заданий</p>
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n3">
-                                <img src="/ico/rn.svg" alt="">
-                                <p>Задания не требуют<br>специального оборудования<br>или похода в фитнес-клуб</p>
+                                <img src="/ico/people.svg" alt="">
+                                <p>Обратная связь от <br>тренерского состава</p>
                             </li>
+     
                         </ul>
                         <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n4">
                                 <img src="/ico/feed.svg" alt="">
                                 <p>Рекомендации по питанию,<br>адаптированные к планам<br>тренировок</p>
                             </li>
-                            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n5">
-                                <img src="/ico/people.svg" alt="">
-                                <p>Обратная связь от <br>тренерского состава</p>
+                       <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n5">
+                                <img src="/ico/rn.svg" alt="">
+                                <p>Задания не требуют<br>специального оборудования<br>или похода в фитнес-клуб</p>
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 n6">
                                 <img src="/ico/lamp.svg" alt="">
@@ -113,7 +114,7 @@
                         <div class="start_shader">
                             <h4>R.ONE start</h4>
                             <p>Программа для новичков</p>
-                            <a class="arrow start-arrow" ></a>
+                            <a href="/program" class="arrow start-arrow" ></a>
                         </div>
                     </div>
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -126,7 +127,7 @@
                                     <div class="pro_shader">
                                         <h4>R.ONE pro</h4>
                                         <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow"></a>
+                                        <a class="arrow progr-arrow" href="/program"></a>
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -136,7 +137,7 @@
                                     <div class="pow_shader">
                                         <h4>R.ONE power</h4>
                                         <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow"></a>
+                                        <a class="arrow progr-arrow" href="/program"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -150,7 +151,7 @@
                                     <div class="run_shader">
                                         <h4>R.ONE run</h4>
                                         <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow"></a>
+                                        <a class="arrow progr-arrow" href="/program"></a>
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -160,7 +161,7 @@
                                     <div class="runp_shader">
                                         <h4>R.ONE run+</h4>
                                         <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow"></a>
+                                        <a class="arrow progr-arrow" href="/program"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -209,7 +210,7 @@
                             @forelse($comments as $comment)
                                 <div class="swiper-slide" >
                                     <img src="{{$comment->img_holder}}" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.png" alt="" class="ico_play" class="comm_pl_hldr" data-id="{{$comment->id}}">
+                                    <img src="/ico/play.svg" alt="" class="ico_play" class="comm_pl_hldr" data-id="{{$comment->id}}">
                                     <p class="comment_name">{{$comment->user}}</p>
                                     <p class="comment_who">{{$comment->comment_text}}</p>
                                 </div>
@@ -333,7 +334,7 @@
             </div>
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
-                    <img src="/ico/footer_logo.png" alt="">
+                    <img src="/ico/min-logo.svg" alt="">
                     <p>наша миссия<br>
                     в повышении качества жизни<br>
                     общества через вовлечение<br>
@@ -347,12 +348,12 @@
                         <li><a href="#">R.ONE RUNNER</a></li>
                         <li><a href="#">R.ONE RUNNER +</a></li>
                         <li><a href="#">R.ONE POWER</a></li>
-                        <li class="bonus"><a href="#" >БОНУСНАЯ<br>
+                        <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
                          ПРОГРАММА</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
-                    <ul>
+                    <ul class="rgese">
                         <li>
                             <a href="">РЕГИСТРАЦИЯ</a>
                         </li>

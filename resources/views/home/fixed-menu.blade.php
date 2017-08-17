@@ -20,7 +20,7 @@
                 </li>
                 <li>
                     <a href="/lk/{{$user->id}}/balance" class="profile_btns lgn"><i class="wallet_ico prof-disp" style="
-                           margin: 0 0 0 0.98em; width: 16px;"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
+                           margin: 0 0 0 0.98em; width: 1em; height: 0.9em;"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
                 </li>
                 <li>
                     <a href="/lk/{{$user->id}}/faq" class="profile_btns help lgn">
@@ -35,8 +35,8 @@
     <div class="main_sidebar hidden-xs hidden-sm col-lg-2 col-md-2" style="height: 100%; padding: 0; z-index: 1">
         <nav class="navbar spy-active" id="Scrollspy">
             <ul class="nav">
-                <li>
-                    <img src="/ico/main_logo.png" class="side_logo" alt="">
+                <li style="text-align: center;">
+                    <img src="/ico/min-logo.svg" class="side_logo" alt="">
                 </li>
                 <br><br>
                 <li>
@@ -45,7 +45,7 @@
                     </a> 
                 </li>
                 <li>
-                    <a href="" class="profile_btns" id="prgr_l_mn">
+                    <a href="/program" class="profile_btns" id="prgr_l_mn">
                         <p>программа <br> тренировок</p>
                     </a> 
                 </li>

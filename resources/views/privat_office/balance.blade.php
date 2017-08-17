@@ -52,12 +52,12 @@
 					@forelse ($accruals as $accrual)
 						<?php $created_at = DateTime::createFromFormat('Y-m-d H:i:s', $accrual->created_at); ?>
 						<tr>
-							<td class="hidden-xs">{{$accrual->id}}</td>
-							<td class="hidden-xs">{{$created_at->format('Y-m-d')}}</td>
-							<td class="hidden-xs">{{$created_at->format('H:i:s')}}</td>
-							<td>{{!empty($accrual->type) ? $accrual->type->name : ''}}</td>
-							<td>{{$accrual->comment}}</td>
-							<td>{{number_format($accrual->sum,0,',',' ')}}</td>
+							<td class="hidden-xs tb_nm">{{$accrual->id}}</td>
+							<td class="hidden-xs tb_dt">{{$created_at->format('Y-m-d')}}</td>
+							<td class="hidden-xs tb_tm">{{$created_at->format('H:i:s')}}</td>
+							<td class="tp_trz">{{!empty($accrual->type) ? $accrual->type->name : ''}}</td>
+							<td class="tb_znc">{{$accrual->comment}}</td>
+							<td class="tb_sm">{{number_format($accrual->sum,0,',',' ')}}</td>
 						</tr>
 					@empty
 						<tr>

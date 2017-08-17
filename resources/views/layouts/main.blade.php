@@ -51,7 +51,7 @@
                         </li>
                         <li>
                            <a href="/lk/{{$user->id}}/balance" class="profile_btns"><i class="wallet_ico prof-disp" style="
-                           margin: 0 0 0 0.98em; width: 16px;"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
+                           margin: 0 0 0 0.98em; width: 1.1em;"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
                         </li>
                         <li>
                             <a href="/lk/{{$user->id}}/faq" class="profile_btns help">
@@ -65,21 +65,21 @@
                 <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
                     <ul>
                         <li>
-                            <img src="/ico/main_logo.png" class="side_logo" alt="">
+                            <img src="/ico/min-logo.svg" class="side_logo" alt="">
                         </li>
                         <br><br>
                         <li>
-                            <a href="" class="profile_btns">
+                            <a href="/" class="profile_btns">
                                 <p>ГЛАВНАЯ</p>
                             </a> 
                         </li>
                         <li>
-                            <a href="" class="profile_btns">
+                            <a href="/program" class="profile_btns">
                                 <p>программа <br> тренировок</p>
                             </a> 
                         </li>
                         <li>
-                            <a href="" class="profile_btns">
+                            <a href="/bonus" class="profile_btns">
                                 <p>бонусная <br> программа</p>
                             </a> 
                         </li>
@@ -96,7 +96,7 @@
                         <div class="codrops-top clearfix ">
                             <div id="st-trigger-effects" class="column col-lg-1 col-md-1 col-sm-4 col-xs-4">
                                 <button data-effect="st-effect-2" class="codrops-btn">
-                                    <img src="/ico/menu.png" alt="">
+                                    <img src="/ico/menu1.svg" alt="">
                                 </button>
                             </div>
                             <div class="col-lg-1 hidden-md hidden-sm hidden-xs">
@@ -106,7 +106,7 @@
                             </div>
                             <!-- <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs"> -->
                             <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs">
-                                <span class="nav-text" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
+                                <span class="nav-text iimtxt" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
                                     <?php 
                                         $empty_hearts = 5;

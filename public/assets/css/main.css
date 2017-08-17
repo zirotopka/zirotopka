@@ -166,7 +166,7 @@ ul li{
 }
 
 .main_sidebar{
-	height: 100%;
+	height: 85%;
 	padding: 0;
 	background-color: #282828;
 	position: fixed;
@@ -175,7 +175,7 @@ ul li{
 .main_sidebar ul {
     font-size: 1em;
     margin: 0;
-    padding: 5em 0 0 0;
+    padding: 4em 0 0 0;
     list-style: none;
     text-align: left;
 }
@@ -184,7 +184,7 @@ ul li{
 .main_sidebar ul li a {
 	text-decoration: none;
 	display: block;
-	padding: 0.9em 0 1em 4em;
+    padding: 0.9em 0 1.2em 4em;
 	outline: none;
 	color: #f3efe0;
 	text-transform: uppercase;
@@ -231,1023 +231,1035 @@ ul li{
 }
 
 .side_logo{
-	width: 10vw;
-	margin-left: 3em;
-}
-
-@media screen and (max-width: 61.95em) {
-	.main_sidebar{
-	}
-	.codrops-btn{
-		display: block;
-	}
-	.office_sidebar{
-		display: none;
-	}
-}
-
-.home_content{
-	margin:0;
-	padding: 0;
-}
-
-
-
-/*-----------------------------First screen(reg-screen)------------*/
-
-.rg_check_in{
-	margin: 4.2em 0 0 0;
-}
-
-.reg-screen{
-	background: url(/ico/regmg.png);
-	background-size: 100% 100%;
-	min-height: 52vw;
-	max-height: 100vw;
-	background-repeat: no-repeat;
-	padding: 0;
-}
-
-.reg_scr_content #st-trigger-effects{
-	display: inline-block;
-	float: left;
-}
-
-.reg_scr_content .img-circle{
-	width: 5vw!important;
-	height: 5vw!important;
-}
-
-.reg_scr_content h1{
-	font-size: 3vw;
-}
-
-.reg_screen_shader{
-	width: 100%;
-    height: 100%;
-    position: absolute;
-	background-color: rgba(0,0,0,0.5);
-	z-index: 1;
-}
-
-.reg_scr_content{
-	z-index: 2;
-	position: relative;
-	text-align: center;
-}
-
-.rl_btns {
-    display: inline-block;
-    width: 17vw;
-    height: 4.3vw;
-    border-radius: 2em;
-    font-family: MuseoSansCyrl_500;
-    font-size: 1.1vw;
-}
-
-
-.reg_log_btns{
-	float: right;
-	word-spacing: 2em;
-	margin: 3em 3em 0 0;
-}
-
-.reg_btn{
-	background-color: #ff8a18;
-	border: none;
-}
-
-.reg_btn:hover{
-	width: 17.2vw;
-    height: 4.5vw;
-    margin: -0.2em 0 0 0.2em;
-    background-color: #ff8a18;
-}
-
-.reg_btn:active{
-	width: 17.2vw;
-    height: 4.5vw;
-    margin: -0.2em 0 0 0;
-    background-color: #D9550E;
-}
-
-.log_btn{
-	background-color: rgba(0,0,0,0);
-	border: 0.2em solid white;
-}
-
-.log_btn:hover{
-	width: 17.2vw;
-    height: 4.5vw;
-    margin: -0.2em -0.2em 0 0;
-	background-color: rgba(0,0,0,0);
-}
-
-.log_btn:active{
-	width: 17.2vw;
-    height: 4.5vw;
-    margin: -0.2em -0.2em 0 0;
-    border: none;
-	background-color: rgba(255,255,255,0.7);
-}
-
-.reg_scrn_txt{
-	padding: 16vw 0 0 0;
-	font-family: GilroyBold;
-	color: white;
-}
-
-.reg_scrn_txt h1{
-	letter-spacing: 1px;
-	margin: 0.8vw 0 0 0;
-}
-
-.reg_scrn_txt p{
-	font-family: GilroyLight;
-	font-size: 2vw;
-    font-weight: 100;
-    margin: 1em 0 0 0;
-    letter-spacing: 1px;
-}
-
-.rg_btn{
-	margin: 5vw 0 0 0;
-	width: 22vw;
-	height: 4vw;
-	background-color: #ff8a18;
-	border: none;
-	border-radius: 2em;
-	font-size: 1.1vw;
-	font-family: MuseoSansCyrl_500;
-	font-weight: 500;
-}
-
-.rg_btn:hover{
-	margin: 4.8vw 0 0 0;
-	width: 22.2vw;
-	height: 4.2vw;
-	background-color: #ff8a18;
-}
-
-.rg_btn:active{
-	margin: 4.8vw 0 0 0;
-	width: 22.2vw;
-	height: 4.2vw;
-	background-color: #D9550E;
-}
-
-
-/*-----------------------------Second Screen(Info_screen)----------*/
-.info-screen{
-	height: 95vh;
-	padding: 0;
-	margin: 5vh 0 0 0;
-}
-
-.info_naming{
-	text-align: center;
-	padding: 2vw 0 0 0;
-	word-spacing: 0.5em;
-}
-
-.info_naming h2, .info_naming img{
-	display: inline-block;
-}
-
-
-.info_naming img{
-	vertical-align: baseline;
-	width: 12vw;
-}
-
-.info_naming h2,.programm-screen h2, .bonus-screen h2,
-.how-screen h2,.comments-screen h2,.questions-screen h2{
-	color: #ff8a18;
-	font-family: GilroyBold;
-	font-size: 1.9vw;
-	margin: 0;
-	padding: 0;
-}
-
-.info_first_string ul li, .info_second_string ul li{
-	display: inline-block;
-	text-align: center;
-	font-family: MuseoSansCyrl_100;
-	padding: 0;
-}
-
-.n1{
-    background: url('/ico/1.png');
-    background-position: 15.1vw 1.75em;
-    background-repeat: no-repeat;
-}
-
-.n2{
-    background: url('/ico/2 .png');
-    background-position: 15.6vw 1.75em;
-    background-repeat: no-repeat;
-}
-
-.n3{
-    background: url('/ico/3.png');
-    background-position: 15.6vw 1.75em;
-    background-repeat: no-repeat;
-}
-
-.n4{
-    background: url('/ico/4.png');
-    background-position: 14.3vw 2.3em;
-    background-repeat: no-repeat;
-}
-
-.n5{
-    background: url('/ico/5.png');
-    background-position: 15.6vw 2.5em;
-    background-repeat: no-repeat;1em
-}
-
-.n6{
-    background: url('/ico/6.png');
-    background-position: 15.5vw 2.4em;
-    background-repeat: no-repeat;
-}
-
-.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p{
-	margin: 1.5em 0 0 0!important;
-	font-size: 1.1vw;
-}
-
-.n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img{
-	width: 7vw;
-}
-
-.n4, .n5, .n6{
-	margin: 3em 0 0 0;
-}
-
-.info_cont{
-	padding: 5vw 0 0 0;
-	text-align: center;
-}
-
-.info_first_string ul li p, .info_second_string ul li p{
-	margin-top: 2em;
-}
-
-.info_first_string ul li img{
-	height: 90px;
-}
-
-.info_first_string{
-	height: 14em;
-}
-
-.info_second_string{
-	margin: 2em 0 0 0;
-	height: 14em;
-}
-
-
-
-
-/*-----------------------------Third Screen(Programm Screen)-----------------*/
-
-.programm-screen{
-	height: 95vh;
-	padding: 5vw 0 0 0;
-    margin: 0 0 2.5vw 0;
-
-}
-
-.programm-screen h2{
-	text-align: center;
-	margin:0;
-}
-
-.programm_list {
-    height: 100%;
     width: 100%;
-    background-size: 100vw 79vh;
-    background-repeat: no-repeat;
-    background-position: -1vw 3vw;
-    padding: 2vw 0 0 0;
-}
-
-.rone_start{
-	padding: 2.5vw 0 0 6vw;
-}
-
-.rone_start p{
-    position: absolute;
-    font-size: 3vw;
-    color: white;
-    margin: -6vw 0 0 4vw;
-    z-index: 2;
-}
-
-.rone_other_progr{
-	padding: 2.5vw 0 0 0;
-}
-
-.start{
-	height: 35vw;
-	width: 29vw;
-}
-
-.powp, .runpl{
-	margin: 0 0 0 1em;
-}
-
-
-.first_progr_string ul li, .second_progr_string ul li{
-	display: inline-block;
-	width: 43.4%;
-}
-
-.first_progr_string ul li .prprp, .second_progr_string ul li .prprp{
-    position: absolute;
-    font-size: 2.3vw;
-    color: white;
-    margin: -4vw 0 0 2vw;
-    z-index: 2;
-	pointer-events: none;
-}
-
-.prg1{
-	pointer-events: none;
-}
-
-.first_progr_string ul, .second_progr_string ul{
-	padding-left: 0.3em;
-}
-
-.first_progr_string ul li img, .second_progr_string ul li img{
-	width: 20.5vw;
-    height: 17.1vw;
-}
-
-.second_progr_string{
-	margin: 1.6em 0 0 0;
-}
-
-
-
-.start_shader{
-	position: absolute;
-    margin: -35vw 0 0 0;
-    width: 29vw;
-    height: 35vw;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 2;
-    display: none;
-}
-
-.start_shader p{
-	position: relative;
-	z-index: 2;
-	color: white;
-	margin: 1em 0 0 3vw;
-	font-family: MuseoSansCyrl_100;
-	font-weight: 100;
-	font-size: 1.4vw;
-	width: 19vw;
-	word-wrap: break-word;
-	height: 14vw;
-	pointer-events: none;
-}
-
-.start_shader h4{
-    font-family: MuseoSansCyrl_700;
-    font-size: 3vw;
-    position: relative;
-    z-index: 2;
-    margin: 6vw 0 0 3vw;
-    color: #ff8a18;
-    pointer-events: none;
-}
-
-.start_shader button{
-	margin: 0 4em 0 0;
-	float: right;
-}
-
-.start_shader button:hover{
-	margin: -0.2em 3.8em 0 0;
-	float: right;
-}
-
-.start_shader button:active{
-	margin: -0.2em 3.8em 0 0;
-	float: right;
-}
-
-.pro_shader, .pow_shader, .run_shader, .runp_shader{
-    position: absolute;
-	width: 20.5vw;
-	margin: -17.1vw 0 0 1em;
-    height: 17.1vw;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 2;
-    display: none;
-}
-
-.pro_shader, .run_shader{
-	height: 17.1vw;
-    margin: -17.1vw 0 0 0;
-}
-
-.start_shader_gray, .pro_shader_gray, .pow_shader_gray,
- .run_shader_gray, .runp_shader_gray{
-	position: absolute;
-	background-color: rgba(246, 135, 73,0.149);
-	z-index: 1;
-}
-
-.pro_shader_gray, .run_shader_gray{
-	margin: -17vw 0 0 0;
-	width: 20.5vw;
-	height: 17vw;
-}
-
-.pow_shader_gray, .runp_shader_gray{
-	margin: -17vw 0 0 1vw;
-	width: 20.5vw;
-	height: 17vw;
-}
-
-.start_shader_gray{
-	margin: -35vw 0 0 0;
-	height: 35vw;
-	width: 29vw;
-}
-
-.start_shader_gray p{
-	font-family: MuseoSansCyrl_900;
-	color: #fefefe;
-	opacity: 0.2;
-	font-size: 18vw;
-	margin: 16vw 0 0 -1vw;
-	height: 20vw;
-	pointer-events: none;
-}
-
-.pro_shader_gray p, .run_shader_gray p{
-	font-family: MuseoSansCyrl_900;
-	color: #fefefe;
-	opacity: 0.2;
-	font-size: 9vw;
-	margin: 8vw 0 0 -0.8vw;
-	width: 1px;
-    height: 1px;
-    pointer-events: none;
-}
-
-.pow_shader_gray p, .runp_shader_gray p{
-	font-family: MuseoSansCyrl_900;
-	color: #fefefe;
-	opacity: 0.2;
-	font-size: 9vw;
-	margin: 8vw 0 0 -1.5vw;
-	width: 1px;
-    height: 1px;
-    pointer-events: none;
-}
-
-.pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4{
-    font-family: MuseoSansCyrl_700;
-    font-size: 2vw;
-    position: relative;
-    z-index: 3;
-    margin: 2.5vw 0 0 2vw;
-    color: white;
-    width: 15vw;
-	pointer-events: none;
-}
-
-.pro_shader p, .pow_shader p, .run_shader p, .runp_shader p{
-	position: relative;
-	z-index: 2;
-	color: white;
-	margin: 1em 0 0 2vw;
-	font-family: MuseoSansCyrl_100;
-	font-weight: 100;
-	font-size: 1.4vw;
-	width: 16vw;
-	word-wrap: break-word;	
-	height: 4.5vw;
-	pointer-events: none;
-}
-
-.pro_shader button, .pow_shader button, .run_shader button, .runp_shader button{
-	float: right;
-	margin: 0 2.5em 0 0;
-	position: relative;
-	z-index: 2;
-}
-
-.pro_shader button:hover, .pow_shader button:hover, .run_shader button:hover, .runp_shader button:hover{
-	margin: 0 2.3em 0 0!important;
-}
-
-.pro_shader button:active, .pow_shader button:active, .run_shader button:active, .runp_shader button:active{
-	margin: 0 2.3em 0 0!important;
-	background-color: white!important;
-	border: none;
-	color: white;
-}
-/*----------------------------Forth Screen(Bonus)----------------------------*/
-.bonus-screen{
-	height: 80vh;
-	text-align: center;
-	padding: 5vw 0 0 0;
-	margin: 0 0 1vw 0;
-}
-.left_bonus_part{
-	padding: 9vw 0 0 0;
-}
-.right_bonus_part{
-	height: 35vw;
-	padding: 10vw 0 0 2.9em;
-	text-align: left;
-	background: url("/ico/mon2.png");
-	background-repeat: no-repeat;
-	background-position: right 2vw;
-	background-size: 18vw;
-}
-
-.right_bonus_part p{
-	font-size: 1.1vw;
-	font-family: MuseoSansCyrl_700;
-	color: #303030;
-}
-
-.left_bonus_part img{
-	width: 16vw;
-}
-
-.bonus_btn{
-	width: 20vw;
-	height: 4vw;
-	background-color: rgba(0,0,0,0);
-	border: 0.1em solid #4D4D4D;
-	border-radius: 2em;
-	color: #232323;
-	font-family: MuseoSansCyrl_500;
-	margin: 4em 0 0 0;
-	font-size: 1.2vw;
-}
-
-.bonus_btn:hover{
-	width: 20.2vw;
-	height: 4.2vw;
-	background-color: rgba(0,0,0,0);
-	margin: 3.8em 0em 0 -0.1em;
-}
-
-.bonus_btn:active{
-	width: 20.2vw;
-	height: 4.2vw;
-	background-color: #DFDFDF;
-	border:none;
-	margin: 3.8em 0em 0 -0.1em;
-}
-
-
-/*-----------------------------Fifth Screen(How-Screen)*/
-.how-screen{
-	height: 95vh;
-	text-align: center;
-	padding: 3vw 0 0 0;
-	margin: 3vw 0 2vw 0;
-}
-
-.how_cnt{
-	margin: 7em 0 0 0;
-	height: auto;
-	display: inline-block;
-	min-height: 28vw;
-}
-
-.how_cnt img{
-	width: 8vw;
-}
-
-.choice{
-	background: url('/ico/choice.png');
-	background-repeat: no-repeat;
-    background-position: 50% 6em;
-    background-size: 43%;
-}
-
-.freedom{
-	background: url('/ico/freedom.png');
-	background-repeat: no-repeat;
-    background-position: 50% 6em;
-    background-size: 60%;
-}
-
-.freedom .orng{
-	margin-top: 1.7em;
-}
-
-.profit{
-	background: url('/ico/profit.png');
-	background-repeat: no-repeat;
-    background-position: 50% 6em;
-    background-size: 50%;
-}
-
-.orng{
-	font-family: MuseoSansCyrl_700!important;
-	color: #ff8a18;
-	font-size: 1.4vw;
-	margin: 2em 0 0 0;
-}
-
-.who_txt{
-	font-family: MuseoSansCyrl_100;
-	color: black;
-	font-size: 1.1vw;
-	margin: 1em 0 0 0;
-	font-weight: 100;
-}
-
-.how-screen button{
-	height: 4vw;
-	width: 22vw;
-	background-color: #ff8a18;
-	margin: 0;
-	border: none;
-	border-radius: 2em;
-	font-family: MuseoSansCyrl_500;
-	font-size: 1.2vw;
-	font-weight: 500;
-}
-
-.how-screen button:hover{
-	height: 4.2vw;
-	width: 22.2vw;
-	margin: -0.2vw 0 0 0;
-}
-
-.how-screen button:active{
-	height: 4.2vw;
-	width: 22.2vw;
-	background-color: #D9550E;
-	margin: -0.2vw 0 0 0;
-}
-
-/*-----------------------------Sixth Screen(comments-screen)------*/
-.comments-screen{
-	height: 95vh;
-	padding: 3vw 0 0 0;
-	margin: 3vw 0 5vw 0;
 	text-align: center;
 }
 
-.swiper-container{
-	margin: 2.7em 0 0 0;
-	height: 72%;
-	width: 92%;
-}
+	.rg_check_in{
+		margin: 4.2em 0 0 0;
+	}
 
-.comment_name{
-	color: #ff8a18;
-	font-family: MuseoSansCyrl_700;
-	font-size: 1.3em;
-}
+	.reg-screen{
+	    background: url(/ico/regmg.png);
+	    background-size: 110% 100%;
+	    height: 60vw;
+	    background-repeat: no-repeat;
+	    padding: 0;
+	    background-position: 50% 0px;
+	}
 
-.comment_who{
-	font-family: MuseoSansCyrl_300;
-	color: #232323;
-	font-size: 1.2em;
-}
+	.reg_scr_content #st-trigger-effects{
+		display: inline-block;
+		float: left;
+	}
 
-.swiper-slide{
-	padding: 2vw 0 0 0!important;
+	.reg_scr_content .img-circle{
+		width: 5vw!important;
+		height: 5vw!important;
+	}
 
-}
+	.reg_scr_content h1{
+		font-size: 3vw;
+	}
 
-.comm_img_hldr{
-	min-width: 226px;
-	width: 50%;
-}
+	.reg_screen_shader{
+		width: 100%;
+	    height: 100%;
+	    position: absolute;
+		background-color: rgba(0,0,0,0.6);
+		z-index: 1;
+	}
 
-.swiper-slide video{
-	height: 20vw;
-    width: 240px;
-    z-index: 1;
-}
+	.reg_scr_content{
+		z-index: 2;
+		position: relative;
+		text-align: center;
+	}
 
-.ico_play{
-    position: absolute;
-    z-index: 2;
-    margin: 38% 0 0 -59%;
-    width: 30%;
-    cursor: pointer;
-}
-
-.ewwq{
-    margin: 2em 0 0 0;
-}
-
-.frdsd{
-	margin-top: 2em!important;
-}
+	.rl_btns {
+	    display: inline-block;
+	    width: 17vw;
+	    height: 4.3vw;
+	    border-radius: 2em;
+	    font-family: MuseoSansCyrl_500;
+	    font-size: 1.1vw;
+        font-weight: 500;
+	}
 
 
-.swiper-pagination-bullet{
-	border: 0.2em solid #ff8a18;
-	background: white!important;
-	width: 1em!important;
-	height: 1em!important;
-}
+	.reg_log_btns{
+		float: right;
+		word-spacing: 2em;
+		margin: 3em 3em 0 0;
+	}
 
-.swiper-pagination-bullet-active{
-	background-color: #ff8a18!important;
-}
+	.reg_btn{
+		background-color: #ff8a18;
+		border: none;
+	}
 
-.swiper-button-prev{
-	background: url('/ico/left_arr.png')!important;
-	background-size: 1em!important;
-	background-repeat: no-repeat!important;
-}
+	.reg_btn:hover{
+		width: 17.2vw;
+	    height: 4.5vw;
+	    margin: -0.2em 0 0 0.2em;
+	    background-color: #ff8a18;
+	}
 
-.swiper-button-next{
-	background: url('/ico/right_arr.png')!important;
-	background-size: 1em!important;
-	background-repeat: no-repeat!important;
-}
+	.reg_btn:active{
+		width: 17.2vw;
+	    height: 4.5vw;
+	    margin: -0.2em 0 0 0;
+	    background-color: #D9550E;
+	}
 
-.watch_more{
-	display: inline-block;
-	font-family: MuseoSansCyrl_100;
-	color: #737272;
-	font-size: 1.2em;
-	letter-spacing: 1px;
-}
+	.log_btn{
+		background-color: rgba(0,0,0,0);
+		border: 0.2em solid white;
+	}
 
-    
-.start-arrow{
-	margin: 4em 0 0 23vw!important;
-	height: 4.6em;
-    width: 4.6em;
-    background-size: 4.6em;
-}
+	.log_btn:hover{
+		width: 17.2vw;
+	    height: 4.5vw;
+	    margin: -0.2em -0.2em 0 0;
+		background-color: rgba(0,0,0,0);
+	}
 
-    
-.start-arrow:hover{
-    height: 4.6em;
-    width: 4.6em;
-    background-size: 4.6vw;
-    margin: 3.5em 0 0 24vw !important;}
+	.log_btn:active{
+		width: 17.2vw;
+	    height: 4.5vw;
+	    margin: -0.2em -0.2em 0 0;
+	    border: none;
+		background-color: rgba(255,255,255,0.7);
+	}
 
-    
-.start-arrow:active{
-    margin: 3.5em 0 0 24vw !important;}
-    
-.progr-arrow{
-	margin: 1em 0 0 15vw!important;
-}
+	.reg_scrn_txt{
+	    padding: 20% 0 0 0;
+	    font-family: GilroyBold;
+	    color: white;
+	}
 
-.arrow:hover ~ .watch_more{
-	margin: 111111em;
-} 
+	.reg_scrn_txt h1{
+		letter-spacing: 1px;
+		margin: 0.8vw 0 0 0;
+	}
 
-.arrow2{
-	background: url('/ico/arrow.svg');
-	background-size: 4em;
-	background-repeat: no-repeat;
-	height: 4em;
-	width: 4em;
-	display: inline-block;
-	border-radius: 10em;
-	margin: 2em 0 0 1vw;
-	vertical-align: bottom;
-	cursor: pointer;
-}
+	.reg_scrn_txt p{
+		font-family: GilroyLight;
+		font-size: 2vw;
+	    font-weight: 100;
+	    margin: 1em 0 0 0;
+	    letter-spacing: 1px;
+	}
 
-.arrow2:hover{
-	height: 4.2em;
-	width: 4.2em;
-    margin: 1.8em -0.2em 0 1vw;
-	background-color: white;
-	background: url('/ico/arrow.svg');
-	background-size: 4.2em;
-}
+	.rg_btn{
+		margin: 5vw 0 0 0;
+		width: 22vw;
+		height: 4vw;
+		background-color: #ff8a18;
+		border: none;
+		border-radius: 2em;
+		font-size: 1.1vw;
+		font-family: MuseoSansCyrl_500;
+		font-weight: 500;
+	}
 
-.arrow2:active{
-	background: url('/ico/arrow2.svg');
-	height: 4.2em;
-	width: 4.2em;
-    margin: 1.8em -0.2em 0 1vw;
-	background-color: #c4c4c4;
-	background-size: 4.2em;
-	background-color: rgba(255,255,255,0.1)!important;
-}
+	.rg_btn:hover{
+		margin: 4.8vw 0 0 0;
+		width: 22.2vw;
+		height: 4.2vw;
+		background-color: #ff8a18;
+	}
 
-.arrow{
-	background: url('/ico/arrow1.svg');
-	background-size: 3em;
-	background-repeat: no-repeat;
-	height: 3em;
-	width: 3em;
-	display: inline-block;
-	border-radius: 10em;
-	margin: 2em 0 0 1vw;
-	vertical-align: bottom;
-	cursor: pointer;
-}
+	.rg_btn:active{
+		margin: 4.8vw 0 0 0;
+		width: 22.2vw;
+		height: 4.2vw;
+		background-color: #D9550E;
+	}
 
-.arrow:hover{
-	height: 3.2em;
-	width: 3.2em;
-	margin: 1.5em -0.5em 0 1vw;
-	background-color: white;
-	background: url('/ico/arrow1.svg');
-	background-size: 3.2em;
-}
+	/*-----------------------------Second Screen(Info_screen)----------*/
+	.info-screen{
+		height: 65vw;
+		padding: 0;
+	    margin: 3vw 0 0 0;
+	}
 
-.arrow:active{
-	background: url('/ico/arrow1-2.svg');
-	height: 3.2em;
-	width: 3.2em;
-	margin: 1.8em -0.2em 0 1vw;
-	background-color: #c4c4c4;
-	background-size: 3.2em;
-	background-color: rgba(255,255,255,0.1)!important;
-}
-/*-----------------------------Seventh Screen(questions-screen)-----------------*/
-.questions-screen{
-	height: 95vh;
-	text-align: center;
-	padding: 3vw 0 0 0;
-    margin: 3vw 0 5vw 0;
-}
+	.info_naming{
+		text-align: center;
+		padding: 7% 0 0 0;
+		word-spacing: 0.5em;
+	}
 
-.questions-screen img{
-	display: inline-block;
-	vertical-align: top;
-}
+	.info_naming h2, .info_naming img{
+		display: inline-block;
+	}
 
-.prg img{
-	margin-left: -0.6em;
-}
 
-.zag{
-	display: inline-block;
-}
+	.info_naming img{
+		vertical-align: baseline;
+		width: 20.9%;
+	}
 
-.left_quest, .right_quest{
-	text-align: left;
-	margin: 15vh 0 0 0;
-	padding: 0 0 0 10%;
-	height: auto;
-}
+	.info_naming h2,.programm-screen h2, .bonus-screen h2,
+	.how-screen h2,.comments-screen h2,.questions-screen h2{
+		color: #ff8a18;
+		font-family: GilroyBold;
+		font-size: 2.5vw;
+		margin: 0;
+		padding: 0;
+	}
 
-.left_quest ul li a, .right_quest ul li a{
-	color: #232323;
-}
+	.info_first_string ul li, .info_second_string ul li{
+		display: inline-block;
+		text-align: center;
+		font-family: MuseoSansCyrl_100;
+		padding: 0;
+	}
 
-.left_quest ul li, .right_quest ul li{
-	list-style: url('/ico/ar.png');
-	margin-left: 0.6vw;
-	font-family: MuseoSansCyrl_100;
-	font-size: 1em;
-}
+	.n1{
+	    background: url('/ico/1.png');
+	    background-position: 15.1vw 1.75em;
+	    background-repeat: no-repeat;
+	}
 
-.left_quest ul .else, .right_quest ul .else{
-	margin: 0.5em 0 0 -4px;
-	font-family: MuseoSansCyrl_500;
-	color: #afafaf;
-	list-style: none;
-	font-size: 1.05em;
-	cursor: pointer;
-}
-.right_quest{
-	background: url('/ico/qw.png');
-	background-repeat: no-repeat;
-	background-position: right;
+	.n2{
+	    background: url('/ico/2 .png');
+	    background-position: 15.6vw 1.75em;
+	    background-repeat: no-repeat;
+	}
 
-}
+	.n3{
+	    background: url('/ico/3.png');
+	    background-position: 15.6vw 1.75em;
+	    background-repeat: no-repeat;
+	}
 
-.prg, .all{
-	margin: 3vw 0 4vw 0;
-}
+	.n4{
+	    background: url('/ico/4.png');
+	    background-position: 14.3vw 2.3em;
+	    background-repeat: no-repeat;
+	}
 
-.zag{
-	font-family: MuseoSansCyrl_700;
-	color: #ff8a18;
-}
+	.n5{
+	    background: url('/ico/5.png');
+	    background-position: 15.6vw 2.5em;
+	    background-repeat: no-repeat;1em
+	}
 
-.ref .zag, .ruls .zag{
-	margin-top: 0.6em;
-	font-size: 1.4vw;
-}
+	.n6{
+	    background: url('/ico/6.png');
+	    background-position: 15.5vw 2.4em;
+	    background-repeat: no-repeat;
+	}
 
-.prg .zag, .all .zag{
-    font-size: 1.4vw;
-    margin: -0.2em 0 0.7em 0;
-}
+	.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p{
+		margin: 1.5em 0 0 0!important;
+		font-size: 1.2vw;
+	    font-family: MuseoSansCyrl_100;
+	    width: 100%;
+	}
 
-.left_quest ul li a, .right_quest ul li a {
-	font-size: 1.1vw;
-}
-/*-----------------------------Eighth Screen(connect-screen)---------------*/
-.connect-screen{
-	height: 85vh;
-	background: url('/ico/unfootscr.png');
-	background-repeat: no-repeat;
-	background-size: 100vw 85vh;
-	background-position: -2.5vw 0;
-	margin: 0;
-	padding: 0 0 0 0;
-}
+	.n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img{
+		width: 7vw;
+	}
 
-.connect_screen_shader{
-    width: 100%;
-    height: 85vh;
-    position: absolute;
-    background-color: rgba(50,50,50,0.7);
-    z-index: 1;
-}
+	.n4, .n5, .n6{
+    	margin: 10% 0 0 0;
+    }
 
-.connect_screen_shader p {
-    font-size: 19.1vw;
-    font-family: GubiaBlack;
-    margin: 8vw 0 0 -0.8vw;
-    opacity: 0.2;
-    color: white;
-}
- 
-.connect_content{
-	position: relative;
-	z-index: 2;
-	text-align: center;
-	height: 88vh;
-}
+	.info_cont{
+    	padding: 10% 0 0 0;
+    	text-align: center;
+	}
 
-.connect_content p{
-	color: white;
-}
+	.info_first_string ul li p, .info_second_string ul li p{
+		margin-top: 2em;
+	}
 
-.connect{
-	font-family: GilroyBold;
-	font-size: 2em;
-	letter-spacing: 1px;
-	padding: 5em 0 0 0;
-}
+	.info_first_string ul li img{
+		height: 90px;
+	}
 
-.connect_info{
-	font-family: MuseoSansCyrl_500;
-	font-size: 1.2em;
-	margin: 2em 0 0 0;
-	font-weight: 500;
-}
+	.info_first_string{
+		height: 14em;
+	}
 
-.connect_price{
-	font-family: MuseoSansCyrl_700;
-	color: #c3c3c3!important;
-	font-size: 1.55em;
-	margin: 1em 0 0 0;
-	background: url(/ico/fc_line.png);
-	background-repeat: no-repeat;
-	background-position: 34vw 5px;
-}
+	.info_second_string{
+		margin: 2em 0 0 0;
+		height: 14em;
+	}
 
-.connect_price b{
-	color: white!important;
-	font-size: 1.6em!important;
-}
+	/*-----------------------------Third Screen(Programm Screen)-----------------*/
 
-.connect_btn{
-	height: 4vw;
-	width: 22vw;
-	border-radius: 2em;
-	border: none;
-	margin: 6em 0 0 0;
-	background-color: #ff8a18;
-	color: white;
-	font-size: 1.2vw;
-	font-weight: 500;
-    font-family: MuseoSansCyrl_500;
-}
+	.programm-screen{
+		height: 64.5vw;
+	    margin: 3% 0 0 0;
+	    padding: 9% 0 0 0;
+	}
 
-.connect_btn:hover{
-	height: 4.2vw;
-	width: 22.2vw;;
-	margin: 5.8em -0.2vw 0 0;
-	background-color: #ff8a18!important;
-}
+	.programm-screen h2{
+		text-align: center;
+		margin:0;
+	}
 
-.connect_btn:active{	
-	height: 4.2vw;
-	width: 22.2vw;
-	margin: 5.8em -0.2vw 0 0;
-	background-color: #D9550E!important;
-}
+	.programm_list {
+	    height: 100%;
+	    width: 100%;
+	    background-size: 100vw 79vh;
+	    background-repeat: no-repeat;
+	    background-position: -1vw 3vw;
+	    padding: 7% 0 0 0;
+	}
 
-/*-----------------------------------Footer-----------------------*/
+	.rone_start{
+		padding: 2.5vw 0 0 6vw;
+	}
+
+	.rone_start p{
+	    position: absolute;
+	    font-size: 3vw;
+	    color: white;
+	    margin: -6vw 0 0 4vw;
+	    z-index: 2;
+	}
+
+	.rone_other_progr{
+		padding: 2.5vw 0 0 0;
+	}
+
+	.start{
+    	height: 35.2vw;
+		width: 29vw;
+	}
+
+	.powp, .runpl{
+		margin: 0 0 0 1em;
+	}
+
+
+	.first_progr_string ul li, .second_progr_string ul li{
+		display: inline-block;
+		width: 43.4%;
+	}
+
+	.first_progr_string ul li .prprp, .second_progr_string ul li .prprp{
+	    position: absolute;
+	    font-size: 2.3vw;
+	    color: white;
+	    margin: -4vw 0 0 2vw;
+	    z-index: 2;
+		pointer-events: none;
+	}
+
+	.prg1{
+		pointer-events: none;
+	}
+
+	.first_progr_string ul, .second_progr_string ul{
+		padding-left: 0.3em;
+	}
+
+	.first_progr_string ul li img, .second_progr_string ul li img{
+		width: 20.5vw;
+	    height: 17.1vw;
+	}
+
+	.second_progr_string{
+		margin: 1.6em 0 0 0;
+	}
+
+
+
+	.start_shader{
+		position: absolute;
+	    margin: -35vw 0 0 0;
+	    width: 29vw;
+	    height: 35vw;
+	    background-color: rgba(0,0,0,0.6);
+	    z-index: 2;
+	    display: none;
+	}
+
+	.start_shader p{
+		position: relative;
+		z-index: 2;
+		color: white;
+		margin: 1em 0 0 3vw;
+		font-family: MuseoSansCyrl_100;
+		font-weight: 100;
+		font-size: 1.4vw;
+		width: 19vw;
+		word-wrap: break-word;
+		height: 14vw;
+		pointer-events: none;
+	}
+
+	.start_shader h4{
+	    font-family: MuseoSansCyrl_700;
+	    font-size: 3vw;
+	    position: relative;
+	    z-index: 2;
+	    margin: 6vw 0 0 3vw;
+	    color: #ff8a18;
+	    pointer-events: none;
+	}
+
+	.start_shader button{
+		margin: 0 4em 0 0;
+		float: right;
+	}
+
+	.start_shader button:hover{
+		margin: -0.2em 3.8em 0 0;
+		float: right;
+	}
+
+	.start_shader button:active{
+		margin: -0.2em 3.8em 0 0;
+		float: right;
+	}
+
+	.pro_shader, .pow_shader, .run_shader, .runp_shader{
+	    position: absolute;
+		width: 20.5vw;
+		margin: -17.1vw 0 0 1em;
+	    height: 17.1vw;
+	    background-color: rgba(0,0,0,0.6);
+	    z-index: 2;
+	    display: none;
+	}
+
+	.pro_shader, .run_shader{
+		height: 17.1vw;
+	    margin: -17.1vw 0 0 0;
+	}
+
+	.start_shader_gray, .pro_shader_gray, .pow_shader_gray,
+	 .run_shader_gray, .runp_shader_gray{
+		position: absolute;
+		background-color: rgba(246, 135, 73,0.149);
+		z-index: 1;
+	}
+
+	.pro_shader_gray, .run_shader_gray{
+		margin: -17vw 0 0 0;
+		width: 20.5vw;
+		height: 17vw;
+	}
+
+	.pow_shader_gray, .runp_shader_gray{
+		margin: -17vw 0 0 1vw;
+		width: 20.5vw;
+		height: 17vw;
+	}
+
+	.start_shader_gray{
+		margin: -35vw 0 0 0;
+		height: 35vw;
+		width: 29vw;
+	}
+
+	.start_shader_gray p{
+		font-family: MuseoSansCyrl_900;
+		color: #fefefe;
+		opacity: 0.2;
+		font-size: 18vw;
+		margin: 16vw 0 0 -1vw;
+		height: 20vw;
+		pointer-events: none;
+	}
+
+	.pro_shader_gray p, .run_shader_gray p{
+		font-family: MuseoSansCyrl_900;
+		color: #fefefe;
+		opacity: 0.2;
+		font-size: 9vw;
+		margin: 8vw 0 0 -0.8vw;
+		width: 1px;
+	    height: 1px;
+	    pointer-events: none;
+	}
+
+	.pow_shader_gray p, .runp_shader_gray p{
+		font-family: MuseoSansCyrl_900;
+		color: #fefefe;
+		opacity: 0.2;
+		font-size: 9vw;
+		margin: 8vw 0 0 -1.5vw;
+		width: 1px;
+	    height: 1px;
+	    pointer-events: none;
+	}
+
+	.pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4{
+	    font-family: MuseoSansCyrl_700;
+	    font-size: 2vw;
+	    position: relative;
+	    z-index: 3;
+	    margin: 2.5vw 0 0 2vw;
+	    color: white;
+	    width: 15vw;
+		pointer-events: none;
+	}
+
+	.pro_shader p, .pow_shader p, .run_shader p, .runp_shader p{
+		position: relative;
+		z-index: 2;
+		color: white;
+		margin: 1em 0 0 2vw;
+		font-family: MuseoSansCyrl_100;
+		font-weight: 100;
+		font-size: 1.4vw;
+		width: 16vw;
+		word-wrap: break-word;	
+		height: 4.5vw;
+		pointer-events: none;
+	}
+
+	.pro_shader button, .pow_shader button, .run_shader button, .runp_shader button{
+		float: right;
+		margin: 0 2.5em 0 0;
+		position: relative;
+		z-index: 2;
+	}
+
+	.pro_shader button:hover, .pow_shader button:hover, .run_shader button:hover, .runp_shader button:hover{
+		margin: 0 2.3em 0 0!important;
+	}
+
+	.pro_shader button:active, .pow_shader button:active, .run_shader button:active, .runp_shader button:active{
+		margin: 0 2.3em 0 0!important;
+		background-color: white!important;
+		border: none;
+		color: white;
+	}
+
+	/*----------------------------Forth Screen(Bonus)----------------------------*/
+	.bonus-screen{
+		height: 51vw;
+		text-align: center;
+		padding: 9.5% 0 0 0;
+		margin: 3% 0 1vw 0;
+	}
+	.left_bonus_part{
+		padding: 9vw 0 0 0;
+	}
+	.right_bonus_part{
+	    height: 35vw;
+	    padding: 11vw 0 0 1.8vw;
+	    text-align: left;
+	    background: url(/ico/mon2.png);
+	    background-repeat: no-repeat;
+	    background-position: right 6vw;
+	    background-size: 18vw;
+	}
+
+	.right_bonus_part p{
+	    font-size: 1.4vw;
+	    font-family: MuseoSansCyrl_700;
+	    color: #303030;
+	    line-height: 1.7em;
+	}
+
+	.left_bonus_part img{
+		width: 19vw;
+	}
+
+	.bonus_btn{
+		width: 20vw;
+		height: 4vw;
+		background-color: rgba(0,0,0,0);
+		border: 0.1em solid #4D4D4D;
+		border-radius: 2em;
+		color: #232323;
+		font-family: MuseoSansCyrl_500;
+		margin: 4em 0 0 0;
+		font-size: 1.1vw;
+		font-weight: 500;
+	}
+
+	.bonus_btn:hover{
+		width: 20.2vw;
+		height: 4.2vw;
+		background-color: rgba(0,0,0,0);
+		margin: 3.8em 0em 0 -0.1em;
+	}
+
+	.bonus_btn:active{
+		width: 20.2vw;
+		height: 4.2vw;
+		background-color: #DFDFDF;
+		border:none;
+		margin: 3.8em 0em 0 -0.1em;
+	}
+
+	/*-----------------------------Fifth Screen(How-Screen)*/
+	.how-screen{
+		height: 68vw;
+		text-align: center;
+		padding: 9.5% 0 0 0;
+		margin: 3% 0 1vw 0;
+	}
+
+	.how_cnt{
+		margin: 7em 0 0 0;
+		height: auto;
+		display: inline-block;
+		min-height: 28vw;
+	}
+
+	.how_cnt img{
+		width: 8vw;
+	}
+
+	.choice{
+		background: url('/ico/choice.png');
+		background-repeat: no-repeat;
+	    background-position: 50% 6em;
+	    background-size: 43%;
+	}
+
+	.freedom{
+		background: url('/ico/freedom.png');
+		background-repeat: no-repeat;
+	    background-position: 50% 6em;
+	    background-size: 60%;
+	}
+
+	.freedom .orng{
+		margin-top: 1.7em;
+	}
+
+	.profit{
+		background: url('/ico/profit.png');
+		background-repeat: no-repeat;
+	    background-position: 50% 6em;
+	    background-size: 50%;
+	}
+
+	.orng{
+		font-family: MuseoSansCyrl_700!important;
+		color: #ff8a18;
+		font-size: 1.6vw;
+		margin: 2em 0 0 0;
+	}
+
+	.who_txt{
+		font-family: MuseoSansCyrl_100;
+		color: black;
+		font-size: 1.3vw;
+		margin: 1em 0 0 0;
+		font-weight: 100;
+	}
+
+	.how-screen button{
+	    height: 4.5vw;
+	    width: 24vw;
+		background-color: #ff8a18;
+		margin: 0;
+		border: none;
+		border-radius: 2em;
+		font-family: MuseoSansCyrl_500;
+		font-size: 1.1vw;
+		font-weight: 500;
+	}
+
+	.how-screen button:hover{
+		height: 4.7vw;
+		width: 24.2vw;
+		margin: -0.2vw 0 0 0;
+	}
+
+	.how-screen button:active{
+		height: 4.7vw;
+		width: 24.2vw;
+		background-color: #D9550E;
+		margin: -0.2vw 0 0 0;
+	}
+
+	/*-----------------------------Sixth Screen(comments-screen)------*/
+	.comments-screen{
+		height: 71vw;
+		padding: 10% 0 0 0;
+		margin: 3% 0 1vw 0;
+		text-align: center;
+	}
+
+	.swiper-container{
+		margin: 2.7em 0 0 0;
+		height: 43vw;
+		width: 92%;
+	}
+
+	.comment_name{
+		color: #ff8a18;
+		font-family: MuseoSansCyrl_700;
+		font-size: 1.3em;
+	    margin: 2.5vw 0 1vw 0;
+	}
+
+	.comment_who{
+		font-family: MuseoSansCyrl_300;
+		color: #232323;
+		font-size: 1.2em;
+	}
+
+	.swiper-slide{
+		padding: 2vw 0 0 0!important;
+
+	}
+
+	.comm_img_hldr{
+		min-width: 226px;
+		width: 20vw;
+	}
+
+	.swiper-slide video{
+		height: 20vw;
+	    width: 240px;
+	    z-index: 1;
+	}
+
+	.ico_play{
+	    position: absolute;
+	    z-index: 2;
+	    margin: 38% 0 0 -59%;
+	    width: 30%;
+	    cursor: pointer;
+	}
+
+	.ico_play:hover{
+		width: 30.5%;
+	    margin: 37.8% 0 0 -59.2%;
+	}
+
+	.ico_play:active{
+		width: 30.5%;
+	    margin: 37.8% 0 0 -59.2%;
+	    content: url("/ico/hov-play.svg");
+	}
+
+	.ewwq{
+	    margin: 2em 0 0 0;
+	}
+
+	.frdsd{
+		margin-top: 2em!important;
+	}
+
+
+	.swiper-pagination-bullet{
+		border: 0.2em solid #ff8a18;
+		background: white!important;
+		width: 1em!important;
+		height: 1em!important;
+	}
+
+	.swiper-pagination-bullet-active{
+		background-color: #ff8a18!important;
+	}
+
+	.swiper-button-prev{
+		background: url('/ico/left_arr.png')!important;
+		background-size: 1em!important;
+		background-repeat: no-repeat!important;
+	}
+
+	.swiper-button-next{
+		background: url('/ico/right_arr.png')!important;
+		background-size: 1em!important;
+		background-repeat: no-repeat!important;
+	}
+
+	.watch_more{
+		display: inline-block;
+		font-family: MuseoSansCyrl_100;
+		color: #737272;
+		font-size: 2vw;
+		vertical-align: text-bottom;
+	}
+
+	    
+	.start-arrow{
+		margin: 4em 0 0 23vw!important;
+		height: 4.6em;
+	    width: 4.6em;
+	    background-size: 4.6em;
+	}
+
+	    
+	.start-arrow:hover{
+	    height: 4.6em;
+	    width: 4.6em;
+	    background-size: 4.6vw;
+	    margin: 3.8em 0 0 22.8vw !important;}
+
+	    
+	.start-arrow:active{
+	    margin: 3.8em 0 0 22.8vw !important;}
+	    
+	.progr-arrow{
+		margin: 1em 0 0 15vw!important;
+	}
+
+	.arrow2{
+		background: url('/ico/arrow.svg');
+		background-size: 4vw;
+		background-repeat: no-repeat;
+		height: 4vw;
+		width: 4vw;
+		display: inline-block;
+		border-radius: 10em;
+		margin: 2vw 0 0 1vw;
+		cursor: pointer;
+	}
+
+	.arrow2:hover{
+		height: 4.2vw;
+		width: 4.2vw;
+	    margin: 1.8vw -0.1vw 0 0.9vw;
+		background-color: white;
+		background: url('/ico/arrow.svg');
+		background-size: 4.2vw;
+	}
+
+	.arrow2:active{
+		background: url('/ico/arrow2.svg');
+		height: 4.2vw;
+		width: 4.2vw;
+	    margin: 1.8vw -0.1vw 0 0.9vw;
+		background-color: #c4c4c4;
+		background-size: 4.2vw;
+		background-color: rgba(255,255,255,0.1)!important;
+	}
+
+	.arrow{
+		background: url('/ico/arrow1.svg');
+		background-size: 3em;
+		background-repeat: no-repeat;
+		height: 3em;
+		width: 3em;
+		display: inline-block;
+		border-radius: 10em;
+		margin: 2em 0 0 1vw;
+		vertical-align: bottom;
+		cursor: pointer;
+	}
+
+	.arrow:hover{
+		height: 3.2em;
+		width: 3.2em;
+		margin: 1.8em 0 0 1vw;
+		background-color: white;
+		background: url('/ico/arrow1.svg');
+		background-size: 3.2em;
+	}
+
+	.arrow:active{
+		background: url('/ico/arrow1-2.svg');
+		height: 3.2em;
+		width: 3.2em;
+		margin: 1.8em 0 0 1vw;
+		background-color: #c4c4c4;
+		background-size: 3.2em;
+		background-color: rgba(255,255,255,0.1)!important;
+	}
+
+	.swiper-button-prev{
+		left: 0!important;		
+	}
+
+	.swiper-button-next{
+		right: -1.8%!important;
+	}
+	/*-----------------------------Seventh Screen(questions-screen)-----------------*/
+	.questions-screen{
+		height: 64vw;
+		text-align: center;
+		padding: 8.5% 0 0 0;
+		margin: 3% 0 5vw 0;
+	}
+
+	.questions-screen img{
+	    display: inline-block;
+	    vertical-align: baseline;
+	    height: 2.9vw;
+	    margin-left: -1.2vw;
+	}
+
+	.prg img{
+		margin-left: -0.6em;
+	}
+
+	.zag{
+		display: inline-block;
+	}
+
+	.left_quest, .right_quest{
+	    text-align: left;
+	    margin: 10% 0 0 0;
+	    padding: 0 0 0 10%;
+	    height: auto;
+	}
+
+	.left_quest ul li a, .right_quest ul li a{
+		color: #232323;
+	}
+
+	.left_quest ul li, .right_quest ul li{
+		margin-left: 0.6vw;
+		font-family: MuseoSansCyrl_100;
+		font-size: 1em;
+	}
+
+	.left_quest ul li a:before, .right_quest ul li a:before{
+	    content: ' ';
+	    position: absolute;
+	    background: url(/ico/list-type.svg);
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    height: 0.7vw;
+	    width: 0.7vw;
+	    margin: 0.4em 0 0 -1em;
+	}
+
+	.left_quest ul .else, .right_quest ul .else{
+		margin: 0.5em 0 0 -4px;
+		font-family: MuseoSansCyrl_500;
+		color: #afafaf;
+		list-style: none;
+		font-size: 1.05em;
+		cursor: pointer;
+	}
+
+	.left_quest ul .else:before, .right_quest ul .else:before{
+		background: none;
+	}
+
+	.right_quest{
+		background: url('/ico/qw.png');
+		background-repeat: no-repeat;
+		background-position: right;
+
+	}
+
+	.prg, .all{
+		margin: 3vw 0 4vw 0;
+	}
+
+	.zag{
+		font-family: MuseoSansCyrl_700;
+		color: #ff8a18;
+	}
+
+	.ref .zag, .ruls .zag{
+		margin-top: 0.6em;
+		font-size: 1.4vw;
+	}
+
+	.prg .zag, .all .zag{
+	    font-size: 1.4vw;
+	    margin: -0.2em 0 0.7em 0;
+	}
+
+	.left_quest ul li a, .right_quest ul li a {
+		font-size: 1.1vw;
+	}
+	/*-----------------------------Eighth Screen(connect-screen)---------------*/
+	.connect-screen{
+	    height: 46vw;
+	    background: url(/ico/unfootscr.png);
+	    background-repeat: no-repeat;
+	    background-size: 118%;
+	    background-position: 60% 0;
+	    margin: 0;
+	    padding: 0 0 0 0;
+	}
+
+	.connect_screen_shader{
+	    width: 100%;
+	    height: 46.1vw;
+	    position: absolute;
+	    background-color: rgba(50,50,50,0.83);
+	    z-index: 1;
+	}
+
+	.connect_screen_shader p {
+	    font-size: 19.1vw;
+	    font-family: GubiaBlack;
+	    margin: 13% 0 0 -0.8vw;
+	    opacity: 0.2;
+	    color: white;
+	}
+	 
+	.connect_content{
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		height: 45vw;
+	}
+
+	.connect_content p{
+		color: white;
+	}
+
+	.connect {
+	    font-family: GilroyBold;
+	    font-size: 2.9vw;
+	    letter-spacing: 1px;
+	    padding: 7vw 0 0 0;
+	}
+
+	.connect_info{
+		font-family: MuseoSansCyrl_500;
+		font-size: 2vw;
+		margin: 2em 0 0 0;
+		font-weight: 500;
+	}
+
+	.connect_price{
+		font-family: MuseoSansCyrl_700;
+		color: #c3c3c3!important;
+		font-size: 1.55em;
+		margin: 1em 0 0 0;
+		background: url(/ico/fc_line.png);
+		background-repeat: no-repeat;
+		background-position: 31vw 5px;
+	}
+
+	.connect_price b{
+		color: white!important;
+		font-size: 1.6em!important;
+	}
+
+	.connect_btn{
+		height: 4.5vw;
+		width: 24vw;
+		border-radius: 2em;
+		border: none;
+		margin: 6em 0 0 0;
+		background-color: #ff8a18;
+		color: white;
+		font-size: 1.1vw;
+		font-weight: 500;
+	    font-family: MuseoSansCyrl_500;
+	}
+
+	.connect_btn:hover{
+		height: 4.7vw;
+		width: 24.2vw;;
+		margin: 5.8em -0.2vw 0 0;
+		background-color: #ff8a18!important;
+	}
+
+	.connect_btn:active{	
+		height: 4.7vw;
+		width: 24.2vw;
+		margin: 5.8em -0.2vw 0 0;
+		background-color: #D9550E!important;
+	}
+	/*-----------------------------------Footer-----------------------*/
+/*-------------------------footer----------------*/
 footer{
 	font-family: GilroyLight;
 	height: auto;
@@ -1265,9 +1277,10 @@ footer{
 	margin: 3vh 0 0 0;
 }
 
-.mission img{
-	margin: 2.15em 0 2.15em 0;
-}
+	.mission img{
+	    margin: 2.15em 0 2.15em -0.85em;
+	    width: 19vw;
+	}
 
 footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a{
 	text-decoration: none;
@@ -1314,317 +1327,36 @@ footer .prgrm_list .bonus{
 	line-height: 1.5em;
 }
 
-#section_2, #section_3, #section_4, #section_5, #section_6, #section_7{
-	
-}
 
 
-/*---------------------Mobile version--------------------*/
-@media screen and (max-width: 992px) {
-/*---------------------Reg Screen-------------------------*/
-
-	.right_bonus_part p {
-	    font-size: 2.1vw;
+@media screen and (max-width: 61.95em) {
+	.main_sidebar{
 	}
-	.reg-screen .checked{
-		padding: 1em 2em 0 0!important;
+	.codrops-btn{
+		display: block;
 	}
-	
-	.reg-screen{
-		height: 69vw;
-	}
-
-	.info_cont {
-	    padding: 10vw 0 0 0;
-	}
-
-	.info_cont ul{
-		height: 20vw;
-	}
-
-	
-	.reg_scrn_txt{
-		padding: 19vw 0 0 0;
-	}
-
-	.rg_btn{
-    	font-size: 1.4vw;
-    	width: 25vw;
-    	height: 5vw;
-	}
-
-	.user-name{
-		font-size: 1em!important;
-	}
-
-	.freedom {
-	    background: url(/ico/freedom.png);
-	    background-repeat: no-repeat;
-	    background-position: 2.5vw 4em;
-	}
-
-	.profit {
-	    background: url(/ico/profit.png);
-	    background-repeat: no-repeat;
-	    background-position: 5vw 4em;
-	}
-
-	.choice {
-	    background: url(/ico/choice.png);
-	    background-repeat: no-repeat;
-	    background-position: 7vw 4em;
-	}
-
-	.main_dropdown .dropdown-toggle i{
-		font-size: 1em;
-	}
-
-	.reg_log_btns{
-		margin: 3vw 3vw 0 0;
-	}
-
-	/*----------------------info screen----------------*/
-	.programm_list {
-	    height: 100%;
-	    width: 100%;
-	    background-size: 100vw 64vh;
-	    background-repeat: no-repeat;
-	    background-position: -1vw 3vw;
-	    padding: 3.5vw 0 0 0;
-	}
-	
-	.programm-screen{
-		margin:0;
-	}
-
-
-	.bonus-screen {
-	    height: 91vh;
-	    text-align: center;
-	    padding: 0 0 0 0;
-        margin: 6vw 0 2vw 0;
-	}
-
-	.rone_start{
-		height: 39.5vw!important;
-		text-align: center;
-	}
-
-	.start{
-	    height: 41vw;
-	    width: 36vw;
-   	}
-
-	.first_progr_string ul li img, .second_progr_string ul li img {
-	    width: 25vw;
-	    height: 19.85vw;
-	}
-
-	.start_shader_gray {
-	    margin: -41vw 0 0 0;
-	    height: 41vw;
-	    width: 36vw;
-	}
-
-	.start_shader {
-	    position: absolute;
-	    margin: -41vw 0 0 0;
-	    width: 87%;
-	    height: 41vw;
-	    background-color: rgba(0,0,0,0.6);
-	    z-index: 1;
-	    display: none;
-	}
-
-	.comm_img_hldr {
-	    min-width: 200px;
-	    width: 30%;
-	}
-
-	.ico_play{
-	    margin: 90px 0 0 -12em;
-	    width: 6em;
-	}
-
-	.programm-screen h2 {
-	    text-align: center;
-	    margin: 3em 0 5vw 0;
-	}
-
-	.left_bonus_part {
-	    padding: 4vw 0 0 0;
-	}
-
-
-
-	.pro_shader_gray, .run_shader_gray {
-	    margin: -20vw 0 0 0;
-	    width: 25vw;
-	    height: 20vw;
-	}
-
-	.pow_shader_gray, .runp_shader_gray{
-	    margin: -20vw 0 0 1.5vw;
-	    width: 25.5vw;
-    	height: 20vw;
-	}
-
-	.pro_shader, .run_shader {
-	    height: 19.7vw;
-	    margin: -19.7vw 0 0 0;
-	    width: 25vw;
-	}
-
-	.pow_shader, .runp_shader {
-    height: 19.7vw;
-    margin: -19.7vw 0 0 1.9vw;
-    width: 25vw;
-	}
-
-	.pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4 {
-	    font-family: MuseoSansCyrl_700;
-	    font-size: 2vw;
-	    position: relative;
-	    z-index: 3;
-	    margin: 2vw 0 0 2vw;
-	    color: white;
-	    width: 20vw;
-	}
-
-	.pro_shader_gray p, .run_shader_gray p {
-	    font-family: MuseoSansCyrl_900;
-	    color: #fefefe;
-	    opacity: 0.2;
-	    font-size: 12vw;
-	    margin: 8vw 0 0 -1.5vw;
-	}
-
-	.pow_shader_gray p, .runp_shader_gray p {
-	    font-family: MuseoSansCyrl_900;
-	    color: #fefefe;
-	    opacity: 0.2;
-	    font-size: 12vw;
-	    margin: 8vw 0 0 -1.5vw;
-	}
-
-	.left_bonus_part img{
-		width: 20vw;
-	}
-
-	.how-screen{
-		padding: 4vw 0 0 0;
-		margin:0;
-	}
-
-	.right_bonus_part{
-		text-align: center;
-		background: none;
-	}
-
-	.bonus_btn{
-		width: 27em;
-    	height: 5em;
-	}
-	.bonus_btn:hover{
-		width: 27.2em;
-    	height: 5.2em;
-	}
-	.bonus_btn:active{
-		width: 27.2em;
-    	height: 5.2em;
-	}
-	.how-screen button{
-		height: 6vw;
-    	width: 35vw;
-    	font-size: 1.5vw;
-    	margin: 6vw 0 0 0;
-	}
-	.connect_screen_shader {
-	    height: 85vh;
-	}
-	.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p {
-	    font-size: 1.3vw;
-	}
-
-	.start_shader_gray p{
-	    margin: 22vw 0 0 -4vw;
-	}
-
-	.how-screen button:hover{
-		height: 6.2vw;
-    	width: 35.2vw;
-	}
-
-	.how-screen button:active{
-		height: 6.2vw;
-    	width: 35.2vw;
-	}
-
-	.swiper-slide{
-		font-size: 1.5vw;
-	    padding: 3% 0 0 0;
-	}
-	
-	.comment_name {
-	    color: #ff8a18;
-	    font-family: MuseoSansCyrl_700;
-	    font-size: 1.3em;
-	    margin: 2vw 0 0 0;
-	}
-
-	.connect-screen{
-	    background-size: 103% 90vw;
-	}
-
-	.swiper-container{
-		height: 50vw;
-		margin: 3.5vw auto!important;
-	}
-
-	.arrow{
-		margin: 0;
-	}
-	.connect_price{
-		background-position: 40vw 5px;
-	}
-
-	.how_cnt{
-		margin: 4em 0 0 0;
-	}
-
-	.orng {
-	    font-family: MuseoSansCyrl_700!important;
-	    color: #ff8a18;
-	    font-size: 1.3em;
-	    margin: 1.65em 0 0 0;
-	}
-
-	.connect_screen_shader p {
-	    font-size: 14.7vw;
-	    font-family: MuseoSansCyrl_900;
-	    margin: 23vw 0 0 -0.8vw;
-	    opacity: 0.2;
-	    color: white;
-	}
-	.side_logo {
-	    width: 18vw;
-	    margin-left: 0;
-	}
-
-	footer{
-		height: 30vw;
-	}
-
-
-	footer .prgrm_list {
-	    line-height: 1.2em;
-	}
-	footer .prgrm_list .bonus {
-	    line-height: 1em;
+	.office_sidebar{
+		display: none;
 	}
 }
 
-@media screen and (max-width: 767px) {
+.home_content{
+	margin:0;
+	padding: 0;
+}
+
+#video-modal{
+	text-align: center!important;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px){
+
+	.questions-screen img {
+	    display: inline-block;
+	    vertical-align: baseline;
+	    height: 10.45vw;
+	}
+
 	.programm-screen {
 	    height: auto;
 	    margin: 0 0 20vw 0;
@@ -1635,8 +1367,12 @@ footer .prgrm_list .bonus{
 	    font-size: 1.1em;
  	   }
 
+	.orng {
+	    font-size: 5.5vw;
+	}
+	
 	.right_bonus_part p {
-	    font-size: 1.1em;
+	    font-size: 4.5vw;
 	}
 
 	.bonus-screen {
@@ -1666,11 +1402,11 @@ footer .prgrm_list .bonus{
 	.info-screen{
 		padding: 0;
 		height: auto;
-	    margin: 15vw 0 20vw 0;
+	    margin: 0 0 20vw 0;
 	}
 	
 	.info_cont ul {
-	    height: 225vw;
+	    height: auto;
 	}
 
 	.info_cont {
@@ -1679,7 +1415,7 @@ footer .prgrm_list .bonus{
 
 
 	footer {
-	    height: auto;
+	    height: 130vw;
 	}
 
 	.st-effect-2.st-menu-open .st-pusher {
@@ -1690,8 +1426,8 @@ footer .prgrm_list .bonus{
 		width: 50%;
 	}
 	.side_logo{
-		width: 35vw;
-		margin-left: 0;
+		width: 85%;
+	    margin: 0;
 	}
 	.reg_btn:hover{
 		width: 20.2vw;
@@ -1779,7 +1515,7 @@ footer .prgrm_list .bonus{
 	}
 
 	.rg_btn {
-	    font-size: 0.6em;
+	    font-size: 3vw;
 	    width: 50vw;
 	    height: 10vw;
 	    margin: 12vw 0 0 0;
@@ -1798,12 +1534,12 @@ footer .prgrm_list .bonus{
 	}
 
 	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
-	    font-size: 5.9vw;
+	    font-size: 7vw;
 	    margin: 20vw 0 1em 0;
 	}
 
 	.info_naming img {
-	    width: 41vw;
+	    width: 51vw;
 	}
 
 	.n1 , .n2, .n3, .n4, .n5, .n6{
@@ -1823,6 +1559,11 @@ footer .prgrm_list .bonus{
     	display: none!important;		
 	}	
 
+
+	.left_quest ul, .right_quest ul{
+		padding: 0 0 0 15.5vw;
+	}
+
 	.pro_shader h4, .pow_shader h4, .run_shader h4, .runp_shader h4 {
 	    margin: 6vw 0 0 8vw;
 	    width: 70vw;
@@ -1841,33 +1582,35 @@ footer .prgrm_list .bonus{
 
 	.arrow2 {
 	    background: url(/ico/arrow.svg);
-	    background-size: 2em;
+	    background-size: 3em;
 	    background-repeat: no-repeat;
-	    height: 2em;
-	    width: 2em;
-	    vertical-align: middle;
+	    height: 3em;
+	    width: 3em;
+        vertical-align: bottom;
 	}
+
 
 	.watch_more {
 	    vertical-align: sub;
+	    font-size: 4vw;
 	}
 
 	.arrow2:hover {
 	    background: url(/ico/arrow.svg);
-	    background-size: 4.2em;
+	    background-size: 3.2em;
 	    background-repeat: no-repeat;
-	    height: 4.2em;
-	    width: 4.2em;
-	    margin: -1.2em 0px 0 11.8em!important;
-	}
+	    height: 3.2em;
+	    width: 3.2em;
+    	margin: 1.8em -0.5vw 0 0.8vw;
+   	}
 
 	.arrow2:active {
 	    background: url(/ico/arrow2.svg);
-	    background-size: 4.2em;
+	    background-size: 3.2em;
 	    background-repeat: no-repeat;
-	    height: 4.2em;
-	    width: 4.2em;
-	    margin: -1.2em 0px 0 11.8em!important;
+	    height: 3.2em;
+	    width: 3.2em;
+    	margin: 1.8em -0.5vw 0 0.8vw;
   	}
 
 	.arrow {
@@ -1885,7 +1628,7 @@ footer .prgrm_list .bonus{
 	    background-repeat: no-repeat;
 	    height: 4.2em;
 	    width: 4.2em;
-	    margin: -1.2em 0px 0 11.8em!important;
+	    margin: -0.2vw 0px 0 49.8vw!important;
 	}
 
 	.arrow:active {
@@ -1894,7 +1637,7 @@ footer .prgrm_list .bonus{
 	    background-repeat: no-repeat;
 	    height: 4.2em;
 	    width: 4.2em;
-	    margin: -1.2em 0px 0 11.8em!important;
+	    margin: -0.2vw 0px 0 49.8vw!important;
   	}
 
 	.n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img {
@@ -1945,37 +1688,38 @@ footer .prgrm_list .bonus{
 	.start{
 		height: 100vw!important;
 		width: 85vw;
+		margin: 0 0 0 6.5vw;
 	}
 	.start_shader {
-	    margin: -100vw 0 0px 7.5vw!important;
+	    margin: -100vw 0 0px 6.5vw!important;
 	    width: 85.2%!important;
 	    height: 100vw!important;
 	    display: block!important;
 	}
 
 	.start-arrow {
-	    margin: 12em 0 0 12em!important;
+		margin: 56vw 0 0 60.5vw !important;
 		width: 4em;
 		height: 4em;
 		background-size: 4em;
 	}
 
 	.start-arrow:hover {
-	    margin: 11.8em 0 0 12.2em!important;
+	    margin: 55.8vw 0 0 60.2vw!important;
 		width: 4.2em;
 		height: 4.2em;
 		background-size: 4.2em;
 	}
 
 	.start-arrow:active {
-	    margin: 11.8em 0 0 12.2em!important;
+	    margin: 55.8vw 0 0 60.2vw!important;
 		width: 4.2em;
 		height: 4.2em;
 		background-size: 4.2em;
 	}
 
 	.progr-arrow {
-	    margin: -1em 0px 0 12em!important;
+	    margin: 0vw 0 0 50vw!important;
 		height: 4em;
 		width: 4em;
 		background-size: 4em;
@@ -2034,10 +1778,11 @@ footer .prgrm_list .bonus{
 	.right_bonus_part{
 		height: auto!important;
 		padding: 8vw 0 0 0;
+		text-align: center;
 	}
 
 	.start_shader_gray {
-	    margin: -100vw 0 0 8vw;
+	    margin: -100vw 0 0 6.5vw;
 	    height: 100vw;
 	    width: 85vw;
 	}
@@ -2079,7 +1824,7 @@ footer .prgrm_list .bonus{
 	}
 
 	footer .prgrm_list {
-    	padding: 5.7em 0 0 0;
+	    padding: 7.3em 0 0 0;
 		line-height: 1.5em;
 	}
 	
@@ -2132,15 +1877,15 @@ footer .prgrm_list .bonus{
 	}
 
 	.choice {
-	    background-position: 15.5vw 6.5em;
+ 		background-position: 20.5vw 7.5em;
 	}
 
 	.freedom {
-	    background-position: 7.5vw 6.5em;
+	    background-position: 16.5vw 6.5em;
 	}
 
 	.profit {
-	    background-position: 11vw 6.5em;
+	    background-position: 20vw 25vw;
 	}
 
 	.how-screen button {
@@ -2163,20 +1908,32 @@ footer .prgrm_list .bonus{
 	}
 
 	.swiper-container{
-		height: 120vw!important;
+	    height: 65vh;
 	}
 
 	.ico_play {
-    	margin: 87px 0 0 -130px;
-	    width: 20vw;
+	    margin: 100px 0 0 -150px;
+	    width: 20%;
+	}
+
+	.ico_play:hover {
+		margin: 99px 0 0 -151px;
+	    width: 20.5%;
+	}
+
+	.ico_play:active {
+		margin: 99px 0 0 -151px;
+	    width: 20.5%;
+	    content: url("/ico/hov-play.svg");
 	}
 
 	.comment_who {
-	    font-size: 3.5em;
+	    font-size: 5.5vw;
 	}
 
 	.comment_name {
-	    font-size: 4.3em;
+	    font-size: 6.5vw;
+	    margin: 3vw 0 0 0;
 	}
 	.left_quest, .right_quest {
 	    margin: 0;
@@ -2184,17 +1941,16 @@ footer .prgrm_list .bonus{
 	
 	.ref, .prg, .ruls, .all{
 		margin: 10vw 0 0 0;
-	    padding: 0 0 0 7vw;
+	    padding: 0 0 0 5%;
 	}
 	.connect-screen {
 	    height: 65vh;
-	    background-size: 199vw 66vh!important;
-	    background-position: -10em;
+	    background-size: 250vw!important;
+	    background-position: -16em;
 	}
 
 	.questions-screen img {
-		width: 8vw;
-		margin-left: 0!important;
+	    margin-left: -0.4vw!important;
 	}
 
 	.left_quest ul li a, .right_quest ul li a {
@@ -2214,6 +1970,7 @@ footer .prgrm_list .bonus{
 
 	.connect_info{
 	    font-size: 3vw;
+	    margin: 3em 0 0 0;
 	}
 
 	.questions-screen{
@@ -2221,6 +1978,12 @@ footer .prgrm_list .bonus{
 		height: auto;
 	}
 	
+	.left_quest ul li a:before, .right_quest ul li a:before {
+	    height: 2vw;
+	    width: 2vw;
+	    margin: 0.6em 0 0 -1em;
+	}
+
 	.connect {
 	    font-size: 3em;
 	    letter-spacing: 1px;
@@ -2233,24 +1996,51 @@ footer .prgrm_list .bonus{
 	    padding: 19vw 0 0 0;
 	}
 
+footer{
+	height: 145vw;
+}
+
+	#pltks {
+	    line-height: 1em;
+	}
+
+	.accsss{
+		line-height: 1em;
+	}
+
+	.reg_f_s {
+	    padding: 2.2em 0 0 0;
+	    line-height: 2.5em;
+	}
+
+	.ofrta {
+	    padding: 2.1em 0 0 0;
+	}
+
 	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a {
 	    font-size: 3vw;
 	    margin-top: 0.2em;
 	}
 
 	.mission p {
-    line-height: 4vw;
-    color: white;
-    text-transform: uppercase;
-    font-size: 3vw;
-    padding: 0.5vw 0 0 0;
+	    line-height: 4vw;
+	    color: white;
+	    text-transform: uppercase;
+	    font-size: 3vw;
+	    padding: 0.5vw 0 0 4vw;
 	}
 
 	.reg_f_s ul{
-		padding: 0 0 0 5vw;
+		padding: 0 0 0 8vw;
 	}
-	footer .prgrm_list ul li{
-		padding: 0;
+
+	footer .prgrm_list ul li {
+	    padding-left: 0;
+	}
+
+	.mission img {
+	    margin: 2.15em 0 2.15em 1vw;
+	    width: 50vw;
 	}
 
 	.connect_btn{
@@ -2272,12 +2062,12 @@ footer .prgrm_list .bonus{
     }
 
 	.connect_price {
-	    background-position: 19vw 5px!important;
+	    background-position: 24vw 5px!important;
 	}
 
 	.connect_screen_shader p {
-	    font-size: 14.8vw;
-	    font-family: MuseoSansCyrl_900;
+	    font-size: 22.3vw;
+	    font-family: GubiaBlack;
 	    margin: 38vw 0 0 -0.8vw;
 	    opacity: 0.2;
 	    color: white;
@@ -2289,299 +2079,517 @@ footer .prgrm_list .bonus{
 	}
 }
 
-#video-modal{
-	text-align: center!important;
+@media only screen and (min-width : 768px) and (max-width : 991px) and (orientation: portrait){
+.side_logo {
+    width: 85%;
 }
-
-.width-eight-perc{
-	margin:2vw auto;
-}
-
-@media(min-width:1200px){
-	.reg-screen{
-		background: url(/ico/regmg.png);
-		background-size: 100% 100%;
-		background-position: 0;
-		min-height: 52vw;
-		max-height: 100vw;
-		background-repeat: no-repeat;
-		padding: 0;
-	}
-	.ico_play {
-	    position: absolute;
-	    z-index: 2;
-	    margin: 32% 0 0 -44%;
-	    width: 20%;
-	}
-	.comm_img_hldr {
-	    min-width: 226px;
-	    width: 70%;
+	.profile_btns p{
+	    font-size: 0.64em;
 	}
 
-	.comment_who {
-	    font-size: 1.3vw;
-		font-family: MuseoSansCyrl_700!important;
-	}
-
-	.comment_name {
-		font-size: 1.4vw;
-	    margin: 1vw 0 0 0;	
-	    font-family: MuseoSansCyrl_700!important;
-	}
-
-	.swiper-container {
-	    height: 34vw;
-	}
-
-	.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
-	    font-size: 1.5em;
-	}
-	.watch_more {
-	    font-size: 2em;
-	}
-
-	.arrow {
-	    height: 4vw;
-	    width: 4vw;
-	    background-size: 4vw;
-	}
-
-	.comments-screen .arrow:hover {
-		margin: 1.9em -0.5em 0 1.4vw!important;
-	}
-
-	.comments-screen .arrow:active {
-		margin: 1.9em -0.5em 0 1.4vw!important;
-	}
-	.arrow:hover {
-	    height: 4.2em;
-	    width: 4.2em;
-	    background-size: 4.2em;
-	    margin: 3.8em 0 0 23vw!important;
-	}
-	.arrow:active {
-	    height: 4.2em;
-	    width: 4.2em;
-	    background-size: 4.2em;
-		margin: 3.8em 0 0 23vw!important;
-	}
-
-	.progr-arrow:hover {
-	    margin: 0.8em 0 0 15vw!important;
-	}
-	
-	.progr-arrow:active {
-	    margin: 0.8em 0 0 15vw!important;
+	.info_naming h2, .programm-screen h2, .bonus-screen h2, .how-screen h2, .comments-screen h2, .questions-screen h2 {
+		font-size: 3.5vw;
 	}
 
 	.questions-screen img {
-	    display: inline-block;
-	    vertical-align: top;
-	    width: 2vw;
+	    height: 4.2vw;
 	}
-}
 
-@media(min-height:800px) and (max-width: 1500px){
 	.reg-screen {
-	    background: url(/ico/regmg.png);
-	    background-size: 130% 100%;
-	    background-position: -11rem;
-	    min-height: 52vw;
-	    max-height: 100vw;
-	    background-repeat: no-repeat;
-	    padding: 0;
-	    height: 100vh;
+	    background-size: 129% 100%;
+	    height: 80vw;
+	    background-position: 35% 0px;
+	}
+
+	.reg_scr_content h1 {
+	    font-size: 4vw;
+	}
+
+	.reg_scrn_txt p {
+	    font-size: 3vw;
+	}
+
+	.rl_btns{
+		font-size: 1.2vw;
+	}
+
+	.rg_btn {
+	    margin: 5vw 0 0 0;
+	    width: 26vw;
+	    height: 5vw;
+	    font-size: 1.2vw;
+	}
+
+	.rg_btn:hover {
+	    margin: 4.8vw 0 0 0;
+	    width: 26.2vw;
+	    height: 5.2vw;
+	    font-size: 2vw;		
+	}
+
+	.rg_btn:active {
+	    margin: 4.8vw 0 0 0;
+	    width: 26.2vw;
+	    height: 5.2vw;
+	    font-size: 2vw;		
 	}
 
 	.reg_scrn_txt {
 	    padding: 25% 0 0 0;
 	}
 
-	.rg_btn {
-	    margin: 10% 0 0 0;
-	}
+.info-screen {
+    height: 72vw;
+}
 
 	.info_cont {
-    padding: 7vw 0 0 0;
-	    text-align: center;
-	}
-
-	.n4, .n5, .n6 {
-	    margin: 10% 0 0 0;
-	}
-	.info_naming {
-	    text-align: center;
-	    padding: 5% 0 0 0;
-	}
-	.programm-screen {
-	    padding: 6% 0 0 0;
-	}
-	.programm_list {
-	    background-size: 103% 75%;
-	    background-position: -1vw 3vw;
-	    padding: 3.5vw 0 0 0;
-		margin: 5% 0 0 0;
-	}
-	.left_bonus_part {
-	    padding: 14% 0 0 0;
-	}
-	.right_bonus_part {
-	    height: 80%;
-	    padding: 15% 0 0 2.9em;
-	    background-position: right 75%;
-	    background-size: 18vw;
-	}
-	.bonus-screen{
-		padding: 9% 0 0 0;
-	}
-
-	.how-screen {
-	    padding: 9% 0 0 0;
-	}
-
-	.how_cnt {
-	    margin: 10% 0 4% 0;
-	}
-
-	.swiper-container {
-	    margin: 9% 0 0 0;
-	    height: 72%;
-	    width: 94%;
-	}
-
-	.comments-screen {
-	    height: 95vh;
 	    padding: 6% 0 0 0;
 	}
 
-	.comm_img_hldr {
-	    width: 88%;
-	}
-	.ico_play {
-	    position: absolute;
-	    z-index: 2;
-	    margin: 39% 0 0 -59%;
-	    width: 30%;
-	}
-	.left_quest, .right_quest {
-	    text-align: left;
-	    margin: 10% 0 0 0;
-	    padding: 0 0 0 10%;
-	    height: auto;
-	}
-	.questions-screen {
-	    padding: 5% 0 0 0;
-	}
-	.prg, .all {
-	    margin: 30% 0 4vw 0;
-	}
-	.connect-screen {
-	    height: 65vh;
-	    background-size: 102% 100%;
-	    background-position: -0.6em;
-		margin: 0 0 0 -1px;
-	}
-
-	.connect_screen_shader {
-	    height: 65vh;
-	}
-
-	.connect_content {
-	    height: 100%;
+.programm-screen {
+    height: 73.5vw;
+    padding: 6% 0 0 0;
+}
+	.n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img {
+	    width: 8vw;
 	}
 
 	.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p {
-	    font-size: 1.3vw;
+	    font-size: 1.8vw;
+	}
+
+	.info_naming img {
+	    vertical-align: baseline;
+	    width: 23.6%;
+	}
+
+	.info_cont {
+	    padding: 5% 0 0 0;
+	}
+
+	.start {
+	    height: 42.2vw;
+	    width: 36vw;
+	}
+
+	.first_progr_string ul li img, .second_progr_string ul li img {
+	    width: 25.5vw;
+	    height: 20.5vw;
+	}
+
+	.start_shader_gray {
+	    margin: -42.2vw 0 0 0;
+	    height: 42.3vw;
+	    width: 36vw;
+	}
+
+	.pro_shader_gray, .run_shader_gray {
+	    margin: -20.5vw 0 0 0;
+	    width: 25.5vw;
+	    height: 20.6vw;
+	}
+
+	.pow_shader_gray, .runp_shader_gray {
+	    margin: -20.45vw 0 0 1.9vw;
+	    width: 25.4vw;
+	    height: 20.5vw;
+	}
+
+	.start_shader_gray p {
+	    margin: 23.4vw 0 0 -1vw;
+	}
+
+	.pow_shader_gray p, .runp_shader_gray p {
+	    margin: 11vw 0 0 -0.7vw;
+	}
+
+	.pro_shader_gray p, .run_shader_gray p {
+	    margin: 11.5vw 0 0 -0.8vw;
+	}
+
+	.start_shader {
+	    margin: -42.3vw 0 0 0;
+	    width: 36vw;
+	    height: 42.4vw;
+	}
+
+	.start-arrow {
+	    margin: 5em 0 0 27vw!important;
+	}
+
+	.start-arrow:hover {
+	    margin: 4.8em 0 0 26.8vw!important;
+	}
+
+	.pro_shader, .run_shader {
+	    height: 20.6vw;
+	    margin: -20.5vw 0 0 -0.05vw;
+	    width: 25.6vw;
+	}
+
+	.pow_shader, .runp_shader {
+	    width: 25.5vw;
+	    margin: -20.5vw 0 0 1em;
+	    height: 20.6vw;
+	}
+
+	.progr-arrow {
+	    margin: 2em 0 0 18vw!important;
+	}
+
+	.progr-arrow:hover {
+	    margin: 1.8em 0 0 17.8vw!important;
+	}
+
+	.progr-arrow:active {
+	    margin: 1.8em 0 0 17.8vw!important;
+	}
+
+
+	.left_bonus_part {
+	    padding: 5vw 0 0 0;
+	}
+
+	.bonus-screen {
+	    height: 71vw;
+	}
+
+	.right_bonus_part {
+	    height: 26vw;
+	    padding: 4vw 0 0 1.8vw;
+	    text-align: center;
+	    background: none;
+	    background-repeat: no-repeat;
+	    background-position: right 0vw;
+	    background-size: 18vw;
 	}
 
 	.right_bonus_part p {
-	    font-size: 1.5vw;
+	    font-size: 1.8vw;
 	}
 
-	.who_txt {
-	    font-size: 1.3vw;
+	.how_cnt{
+		padding: 0;
+	}
+
+	.how_cnt img {
+	    width: 10vw;
+
 	}
 
 	.orng {
-		font-size: 1.5vw;
+	    font-size: 2vw;
 	}
 
-	.zag {
-		font-size: 1.5em;
+	.who_txt {
+	    font-size: 1.7vw;
+	}
+
+	.how-screen {
+	    height: 74vw;
+	}
+
+	.asd{
+		height: 45vw!important;
+	}
+
+	.comm_img_hldr {
+	    min-width: 226px;
+	    width: 46vw;
+	}
+
+	.swiper-container {
+	    height: 76vw;
+	}
+
+	.comment_name {
+	    font-size: 2em;
+	    margin: 2vw 0 0.5vw 0;
+	}
+
+	.comment_who {
+	    font-size: 1.7em;
+	}
+
+	.ico_play {
+	    margin: 21% 0 0 -33%;
+	    width: 17%;
+	}
+
+	.ico_play:hover {
+	    margin: 20.8% 0 0 -33.05%;
+	    width: 17.2%;
+	}
+
+	.ico_play:active {
+	    margin: 20.8% 0 0 -33.05%;
+	    width: 17.2%;
+	  	content: url("/ico/hov-play.svg");
+	}
+
+	.watch_more {
+	    font-size: 2.5vw;
+	}
+
+	.arrow2 {
+	    background-size: 6vw;
+	    height: 6vw;
+	    width: 6vw;
+	}
+
+	.arrow2:hover {
+	    background-size: 6.4vw;
+	    height: 6.4vw;
+	    width: 6.4vw;
+		margin:1.8em 0 0 0.7vw;
+	}
+
+	.arrow2:active {
+	    background-size: 6.4vw;
+	    height: 6.4vw;
+	    width: 6.4vw;
+		margin:1.8em 0 0 0.7vw;
+	}
+
+	.comments-screen {
+	    height: 110vw;
+	}
+
+	.left_quest, .right_quest {
+	    margin: 5% 0 0 0;
+	}
+
+	.questions-screen {
+	    height: 70vw;
+	}
+
+	.prg .zag, .all .zag {
+	    font-size: 2vw;
+	}
+
+	.ref .zag, .ruls .zag {
+	    font-size: 2vw;
 	}
 
 	.left_quest ul li a, .right_quest ul li a {
-	    font-size: 1.3vw;
+	    font-size: 1.8vw;
+	}
+
+	.left_quest ul li a:before, .right_quest ul li a:before {
+	    height: 1.1vw;
+	    width: 1.1vw;
+	    margin: 0.3em 0 0 -1em;
+	}
+
+	.connect_screen_shader {
+	    width: 100%;
+	    height: 55.6vw;
+	}
+
+	.connect-screen {
+	    height: 55.4vw;
+	}
+
+	.connect_screen_shader p {
+	    font-size: 22.4vw;
+	    margin: 12% 0 0 -0.8vw;
+	}
+
+	.connect {
+	    font-size: 3.5vw;
+	    padding: 8vw 0 0 0;
+	}
+
+	.connect_info {
+	    font-size: 2.5vw;
+	}
+
+	.connect_price {
+	    background-position: 36vw 10px;
+	}
+
+	.connect_content {
+	    height: 55vw;
+	}
+
+	footer {
+	    height: 34vw;
+	}
+	
+	.mission img {
+	    margin: 2.15em 0 0.15em -0.5em;
+	}
+
+	footer .prgrm_list {
+	    line-height: 2.4vw;
+	}
+
+	footer .prgrm_list .bonus {
+	    margin: 1em 0 0 0;
+	    line-height: 0.8em;
+	}
+
+	.rgese{
+		padding: 0 0 0 8vw;
+	}
+}
+
+
+@media screen and (min-width: 1201px) {
+
+/*----------------------First-screen----------------------------------*/
+	.reg-screen {
+	    background-size: 108%;
+	    height: 56.32vw;
+	    background-position: 0;
+	}
+
+	.rg_btn {
+	    margin: 8vw 0 0 0;
+	}
+
+	.rg_btn:hover {
+	    margin: 7.8vw 0 0 0;
+	}
+
+	.rg_btn:active {
+	    margin: 7.8vw 0 0 0;
+	}
+
+/*----------------------Second-screen---------------------------------*/
+	.info-screen {
+	    height: 56vw;
+	}
+	
+	.info_naming {
+	    padding: 5% 0 0 0;
+	}
+	
+	.info_cont {
+	    padding: 5% 0 0 0;
+	}
+
+	.programm-screen {
+	    padding: 5.8% 0 0 0;
+	}
+
+/*----------------------Third-screen---------------------------------*/
+	.programm-screen {
+	    height: 56vw;
+	}
+
+	.programm_list {
+		padding: 4% 0 0 0;
+	}
+	.first_progr_string ul li img, .second_progr_string ul li img {
+	    height: 17.24vw;
+	}
+
+/*-----------------------Forth screen---------------------------------*/
+	.bonus-screen {
+	    padding: 5.7% 0 0 0;
+	}
+
+/*-----------------------Fifth-screen---------------------------------*/
+	.bonus-screen {
+	    height: 48.5vw;
+	}
+
+/*-----------------------Sixth-screen---------------------------------*/
+
+	.how-screen {
+	    padding: 7.5% 0 0 0;
+	    height: 55.5vw;
+	}
+
+/*------------------------Seventh-screen------------------------------*/
+
+	.comments-screen {
+	    padding: 7.4% 0 0 0;
+		height: 56vw;
+	    margin: 3% 0 6.5vw 0;
+
+	}
+
+	.ico_play {
+	    margin: 33% 0 0 -52%;
+	    width: 25%;
+	}
+
+	.ico_play:hover {
+	    margin: 32.8% 0 0 -52.1%;
+	    width: 25.4%;
+	}
+
+	.ico_play:active {
+	    margin: 32.8% 0 0 -52.1%;
+	    width: 25.4%;
+	    content: url("/ico/hov-play.svg");
+	}
+
+	.swiper-button-next {
+	    right: -1% !important;
+	}
+
+	.swiper-container {
+	    height: 38vw;
+	}
+
+	.arrow2:hover {
+    	margin: 1.7em -0.2vw -0.2em 0.8vw;
+	    height: 4.4vw;
+	    width: 4.4vw;
+	    background-size: 4.4vw;
+	}
+
+	.arrow2:active {
+	    margin: 1.7em -0.2vw -0.2em 0.8vw;
+	    height: 4.4vw;
+	    width: 4.4vw;
+	    background-size: 4.4vw;
+	}
+/*-----------------------------Eights-screen---------------------------*/
+	.questions-screen {
+	    height: 51vw;
+	    padding: 6% 0 0 0;
+	}
+
+	.left_quest ul .else, .right_quest ul .else{
+	    margin: 0.3em 0 0 -1em;
+	}	
+	.connect-screen {
+	    height: 46vw;
+	    background-size: 115%;
+	    background-position: -11vw 0;
+	}
+
+	.connect_screen_shader {
+	    height: 46.1vw;
+	}
+
+	.connect_price {
+	    font-size: 2vw;
+	    background-position: 33vw 13px;	
+	}
+
+	.ofrta {
+	    line-height: 2.8vw;
+	}
+
+	.connect_screen_shader p {
+	    font-size: 18.7vw;
+	    margin: 10vw 0 0 -0.8vw;
+	}
+
+	.comment_name {
+	    font-size: 2vw;
+	}
+
+	.comment_who {
+	    font-size: 1.7vw;
 	}
 
 	.left_quest ul .else, .right_quest ul .else {
 	    font-size: 1.3vw;
-	}
-
-	footer {
-	    background-color: #282828;
-	    margin: 0 0 -10px -1px;
-	    padding: 4rem 0 0 0px;
-	    height: 35vh;
-	}
-}
-
-/*------------------------Safari Only--------------------*/
-@media not all and (min-resolution:.001dpcm) { @media {
-	.right_bonus_part {
-	   padding: 14vw 0 0 1vw;
-	}
-}}
-
-@media(min-width: 768px) and (max-width: 1024px) and (min-height: 1024px) and (max-height: 1366px){
-	.reg-screen {
-	    height: 75vw!important;
-	}
-
-	.info-screen {
-	    height: 53vh;
-	}
-	
-	.programm-screen {
-	    height: 60vh;
-	}
-	.bonus-screen {
-	    height: 50vh;
-	}
-	.left_bonus_part {
-	    padding: 10% 0 0 0;
-	}
-	.right_bonus_part {
-	    padding: 9% 0 0 0.9em;
-	}
-	.how-screen {
-	    height: 59vh;
-	}
-	.comm_img_hldr {
-	    width: 50%;
-	}
-	.ico_play {
-	    position: absolute;
-	    z-index: 2;
-	    margin: 23% 0 0 -33%;
-	    width: 16%;
-	}
-	.swiper-container {
-	    margin: 9% 0 0 0;
-	    height: 85%;
-	    width: 94%;
-	}
-
-	.comments-screen {
-	    height: 71vh;
-	}
-	.questions-screen {
-	    height: 58vh;
-	}
-	.connect-screen {
-	    height: 50vh;
-	}
-	.connect_screen_shader {
-	    height: 50vh;
 	}
 }

@@ -1,6 +1,10 @@
 input{
 	cursor: pointer;
 }
+
+html{
+	overflow: hidden;
+}
 /*--------------Right part--------------*/
 
 .st-content{
@@ -111,6 +115,7 @@ td{
 	border-bottom: 1px solid #EAEAEA;
 	font-family: MuseoSansCyrl_100;
 	color: #3E3E3E;
+    padding: 8px 1.6em!important;
 }
 
 .table-scrolling{
@@ -206,16 +211,6 @@ td{
 	background: none;
 }
 
-.profile_btns p{
-	font-family: MuseoSansCyrl_300!important;
-	color: white;
-	font-size: 1.2em!important;
-}
-
-.profile_btns i{
-	width: 1em;
-	height: 1em;
-}
 
 .user-fln{
 	font-size: 17px!important;
@@ -299,23 +294,25 @@ thead{
 }
 
 .tb_dt{
-	width: 12.1vw!important;
+	width: 15.1vw!important;
 }
 
 .tb_tm{
 	width: 9.6vw!important;
+    padding: 0 1em 0 0!important;
 }
 
 .tp_trz{
-    width: 13.6vw!important;
+    width: 22.6vw!important;
 }
 
 .tb_znc{
-    width: 30.85vw;
+    width: 12.85vw;
 }
 
 .tb_sm{
-    width: 7vw!important;
+    width: 13vw!important;
+    padding: 0 0 0 5vw!important;
 }
 
 @media screen and (max-width: 767px) {
@@ -335,6 +332,9 @@ thead{
 	.tb_sm{
 	    width: 6vw!important;
 	}
+	td {
+	    padding: 8px!important;
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -349,7 +349,7 @@ thead{
 	}
 
 	.tb_dt{
-		width: 15.3vw;
+	    width: 23.1vw!important;
 	}
 
 	.tb_tm{
@@ -365,10 +365,16 @@ thead{
 	}
 
 	.tb_sm{
-	    width: 9vw!important;
+	    width: 30vw!important;
 	}
 	.pagination {
 	    margin-left: 80%;
+	}
+}
+
+@media screen and (min-device-width : 768px) and (max-device-width : 991px){
+	.tb_nm {
+	    width: 9.5%!important;
 	}
 }
 

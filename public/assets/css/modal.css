@@ -42,7 +42,7 @@
 
 .checkboxiki a{
 	color: #454545;
-	vertical-align: super !important;
+	vertical-align: sub !important;
 	text-decoration: underline;
 	text-decoration-color: #454545;
 	cursor: default;
@@ -279,6 +279,7 @@ option, option:hover, option:active ,option:focus,
   position: relative;
   padding: 0 0 0 1.95em;
   cursor: pointer;
+  vertical-align: top;
 }
 
 /* checkbox aspect */
@@ -297,12 +298,15 @@ option, option:hover, option:active ,option:focus,
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-	content: url('/ico/check.png');
-	position: absolute;
-	left: .3em;
-	font-size: 1em;
-	transition: all .2s;
-	top: 0;
+    content: ' ';
+    position: absolute;
+    background: url(/ico/check.svg);
+    left: .3em;
+    height: 1.2em;
+    width: 0.9em;
+    transition: all .2s;
+    top: 0;
+    background-size: cover;
 }
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {
@@ -360,5 +364,22 @@ label:hover:before {
 	}
 	#video-modal {
     	margin: 23vw 0 0 0!important;
+	}
+
+	.progr-drop{
+	    margin: 0 auto;
+	    text-align: center;
+	}
+
+	.cntrt{
+	    margin: 0 auto;
+	    text-align: center;
+	}
+	.checkboxiki ul {
+	    width: 110vw;
+	}
+
+	.ddicc {
+	    margin: 2.7em 0 0 6.8em !important;
 	}
 }

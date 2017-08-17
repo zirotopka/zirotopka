@@ -128,6 +128,19 @@
 	position: absolute;
 }
 
+.btn-play:hover{
+	height: 5.2vw;
+	width: 5.2vw;
+	margin: -9.6vw 0 0 -2.6vw;
+}
+
+.btn-play:active{
+	height: 5.2vw;
+	width: 5.2vw;
+	margin: -9.6vw 0 0 -2.6vw;
+	content: url("/ico/hov-play.svg");
+}
+
 .video-btn, .video-btn:hover{
 	width: 100%;
 	background: url(/video/vdo-img1.png);
@@ -290,6 +303,16 @@
 		width: 20vw !important;
 		margin:  -37vw 0 0 -2em !important;
 	}
+	.btn-play:hover{
+		height: 20.2vw !important;
+		width: 20.2vw !important;
+		margin:  -37.1vw 0 0 -2.02em !important;
+	}
+	.btn-play:active{
+		height: 20.2vw !important;
+		width: 20.2vw !important;
+		margin:  -37.1vw 0 0 -2.02em !important;
+	}
 	.video-btn, .video-btn:hover{
 		height: 55vw !important;
 	}
@@ -315,7 +338,7 @@
 		text-align: center;
 	}
 	.ddicc{
-		margin: 2.7em 0 0 15.46em !important;
+		margin: 2.7em 0 0 15.46em;
 	}
 	.checkboxiki ul{
 		padding: 0!important;
@@ -328,22 +351,22 @@
 
 @media screen and (max-width: 767px) {
 	.send-progr-btn{
-	    margin: 0 0 0 13vw;
+	    margin: 7vw 0 0 13vw;
 		width: 50vw;
 		height: 10vw;
-		font-size: 0.6em;
+		font-size: 0.7em;
 	}
 	.send-progr-btn:hover{
-	    margin: -0.4vw 0 0 13vw;
+	    margin: 6.4vw 0 0 13vw;
 		width: 50.4vw;
 		height: 10.4vw;
-		font-size: 0.6em;
+		font-size: 0.7em;
 	}
 	.send-progr-btn:active{
-	    margin: -0.4vw 0 0 13vw;
+	    margin: 6.4vw 0 0 13vw;
 		width: 50.4vw;
 		height: 10.4vw;
-		font-size: 0.6em;
+		font-size: 0.7em;
 	}
 	
 	.prog-bold-txt {
@@ -397,12 +420,23 @@
 		margin: -21vw 0 0 -8vw;
 	}
 
+	.btn-play:hover{
+		height: 13.2vw;
+		width: 13.2vw;
+		margin: -21.1vw 0 0 -8.1vw;
+	}
+
+	.btn-play:active{
+		height: 13.2vw;
+		width: 13.2vw;
+		margin: -21.1vw 0 0 -8.1vw;
+	}
+
 	.video-btn, .video-btn:hover{
 		height: 28vw;
 	}
 	.send-proof-file{
 		width: 100%!important;
-		padding: 0;
 	}
 	.send-proof-file:active{
 		width: 100%!important;
@@ -421,7 +455,7 @@
 		text-align: center;
 	}
 	.ddicc{
-		margin: 2.7em 0 0 15.26em !important;
+		margin: 2.7em 0 0 15.26em;
 	}
 	.checkboxiki ul{
 		padding: 0!important;
@@ -429,6 +463,19 @@
 
 }
 
+@media screen and (min-device-width : 768px) and (max-device-width : 991px){
+	.send-proof-file{
+		width: 50%!important;
+	}
+
+	.send-proof-file:hover{
+		width: 51%!important;
+	}
+
+	.send-proof-file:active{
+		width: 51%!important;
+	}
+}
 .c-orange {
 	color: #ff9319;
 }
@@ -508,15 +555,10 @@
 
 
 .profile_btns p{
-	font-family: MuseoSansCyrl_300!important;
 	color: white;
-	font-size: 0.83em!important;
+	font-size: 1em!important;
 }
 
-.profile_btns i{
-	width: 14px;
-	height: 14px;
-}
 
 .user-fln{
 	font-size: 17px!important;
@@ -562,12 +604,34 @@
 		.btn-play {
 			    margin: 14vw 0 0 -56vw!important;
 			}
+
+		.btn-play:hover {
+			    margin: 14.1vw 0 0 -56.1vw!important;
+			}
+		
+		.btn-play:active {
+			    margin: 14.1vw 0 0 -56.1vw!important;
+			}
 	
 	}
 	@media screen and (max-width: 991px) {
 		.btn-play {
 			    margin:6vw 0 0 -29vw;
 			}
-	
+
+		.btn-play:hover {
+			    margin:6.1vw 0 0 -29.1vw;
+			}
+		
+		.btn-play {
+			    margin:6.1vw 0 0 -29.1vw;
+			}
+
 	}
 }}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px){
+	.program {
+	    margin: 0 0 1em 0;
+	}
+}

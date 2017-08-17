@@ -167,7 +167,7 @@
 									    @if (!empty($preview))
 									    	<img src="{{ $preview->file_url }}" alt="" style="width: 100%;">
 									    	<div class="mask"></div>
-									    	<img class="btn-play" src="/ico/play.png" alt="">
+									    	<img class="btn-play" src="/ico/play.svg" alt="">
 									    @endif
 									</div>
 									<div class="otchet" data-programm-stage="{{$programm_stage->id}}">

@@ -96,6 +96,7 @@ input{
 	color: #b6b6b6;
 	font-family: MuseoSansCyrl_100;
 	font-size: 1em;
+	margin: 0 0 0 0.1vw;
 }
 
 .p_marg{
@@ -261,8 +262,8 @@ input{
 		text-align: left;
 	}
 
-	.city{
-		margin: 1em 0 0 0;
+	.city {
+	    margin: 7vw 0 0 0;
 	}
 	.rt-info{
 		margin: 0!important;
@@ -281,16 +282,6 @@ input{
 		margin: 2.5em 0 0 0!important;
 	}
 
-.profile_btns p{
-	font-family: MuseoSansCyrl_300!important;
-	color: white;
-	font-size: 1em!important;
-}
-
-.profile_btns i{
-	width: 1em;
-	height: 1em;
-}
 
 .user-fln{
 	font-size: 17px!important;
@@ -319,5 +310,12 @@ input{
 	}
 	.save-btn:active {
 		margin:2.6em 0 3.4em 0;
+	}
+	.pasport {
+	    margin: 1.5em 0 0 0;
+	}
+
+	.rt-info p {
+	    margin: 0 0 0.5em 0.1vw;
 	}
 }

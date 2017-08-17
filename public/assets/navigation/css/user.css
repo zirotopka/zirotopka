@@ -45,7 +45,6 @@
 	font-family:'GubiaBlack'; 
 	src: url('/fonts/GubiaBlack.eot');
 	src: local('☺'), url('/fonts/GubiaBlack.woff') format('woff'), url('/fonts/GubiaBlack.ttf') format('truetype'), url('/fonts/GubiaBlack.svg') format('svg');
-
 }
 
 ::-webkit-file-upload-button { cursor:pointer; }
@@ -270,6 +269,13 @@ button:hover {
 	}
 }
 
+@media screen and (max-width: 767px){
+	.codrops-btn img {
+	    margin: 0 0 0 13vw!important;
+	}	
+}
+
+
 @media screen and (max-width: 46.0625em) {
 	.dropdown {
 	    width: 33.3%!important;
@@ -339,13 +345,16 @@ button:hover {
 
 .codrops-btn img{
 	padding: 0 3.8em 0 0;
+	width: 5.5em;
+    margin: 0 0 0 3vw;
 }
 .min-logo{
-	background: url('/ico/min-logo.png');
-	background-repeat: no-repeat;
-	background-position: 0 40%;
-	width: 100%;
-	height: 100%;
+	background: url(/ico/min-logo.svg);
+    background-repeat: no-repeat;
+    background-position: -7px 17px;
+    width: 100%;
+    height: 100%;
+    background-size: 9.1em;
 }	
 
 .hearts{
@@ -530,8 +539,9 @@ button:focus {
 .prof_ico{
 	background: url('/ico/profile.png');
 	background-size: cover;
-	width: 1em;
-	height: 1em;
+	width: 0.95em;
+	height: 0.95em;
+	background-repeat: no-repeat;
 }
 
 .prof-disp{
@@ -597,3 +607,8 @@ button:focus {
 	color: #FF7F39!important;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+	.iimtxt{
+		margin: 0 0 0 -10em!important;
+	}
+}
