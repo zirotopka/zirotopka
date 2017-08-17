@@ -3,14 +3,12 @@ jQuery(document).ready(function(){
 		if ($("#Scrollspy ul li").hasClass("active")) {
 			$('.spy_sections').attr('style','display: block!important;');
 			$('.bonus_spy').attr('style','display: block!important;');
-			$('#prgr_l_mn').attr('style','display: none;');
-			$('#mn_l_mn').attr('style','display: none;');
+			$('#bns_l_mn').attr('style','border-left: 0.4em solid #F36D00;')
 		}
 		else {
 			$('.spy_sections').attr('style','display: none!important;');
 			$('.bonus_spy').attr('style','display: block!important;');
-			$('#prgr_l_mn').attr('style','display: block;');
-			$('#mn_l_mn').attr('style','display: block; padding: 1.5em 0 1em 4em!important;');
+			$('#bns_l_mn').attr('style','border-left: none;')
 		};		
 	});
 

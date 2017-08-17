@@ -152,7 +152,7 @@
                     </div>
                     <p class="qwston">?</p>
                 </div>
-                <div class="connect-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_8">
+                <div class="connect-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="bonus_6">
                     <div  class="connect_screen_shader">
                         <p>REFORMATOR</p>
                     </div>

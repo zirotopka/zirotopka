@@ -49,17 +49,20 @@ ul li{
 	color: white!important;
 }
 
+.active{
+	margin: 0 0 -0.9em 0!important;
+}
+
 .active .fm_line{
 	display: block;
 	color: white!important;
 }
 
 .fm_line{
-    margin: 0.1vw 0 0.1vw 8.58em!important;
+    margin: 0.15em 0 -0.2em 8.58em!important;
 	color: #818181!important;
 	display: none;
 }
-
 .top_section{
 	padding: 0.5em 0 0 5.75vw!important;
 }

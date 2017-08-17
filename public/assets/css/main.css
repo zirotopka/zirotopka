@@ -37,6 +37,10 @@ ul li{
 	color: white!important;
 }
 
+.active{
+	margin: 0 0 -1em 0!important;
+}
+
 .active .fm_line{
 	display: block;
 	color: white!important;
@@ -211,7 +215,7 @@ ul li{
 }
 
 .sc{
-	margin:0.3em 0 0 0;
+	margin:1em 0 0 0;
 }
 
 .spy_sections p{
@@ -2485,6 +2489,20 @@ footer{
 	    height: 17.24vw;
 	}
 
+	.pro_shader, .run_shader{
+		height: 17.24vw;
+	    margin: -17.24vw 0 0 0;
+	}
+
+
+	.pow_shader_gray, .runp_shader_gray {
+		height: 17.24vw;
+	    margin: -17.2vw 0 0 1vw;
+	}
+
+	.pro_shader_gray, .run_shader_gray{
+	    margin: -17.2vw 0 0 0;
+	}
 /*-----------------------Forth screen---------------------------------*/
 	.bonus-screen {
 	    padding: 5.7% 0 0 0;
