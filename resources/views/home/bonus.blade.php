@@ -124,15 +124,15 @@
                             <img src="/ico/smartphone.png" class="smartphone">
                         </div>
                     </div>
-                    <div class="pay_left col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                        <p>
-                            Мы готовы доверять денежные вопросы только<br class="hidden-xs">надёжным партнёрам, при этом хотим<br class="hidden-xs">чтобы все выплаты были доступны для участников<br class="hidden-xs">как можно быстрее. <br class="hidden-xs">Поэтому используем удобные сервисы Яндекс.
-                        </p>
-                    </div>
                     <div class="pay_right hidden-xs col-sm-6 col-md-6 col-lg-6">
                         <div class="mfc">
                             <img src="/ico/smartphone.png" class="smartphone">
                         </div>
+                    </div>
+                    <div class="pay_left col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <p>
+                            Мы готовы доверять денежные вопросы только<br class="hidden-xs">надёжным партнёрам, при этом хотим<br class="hidden-xs">чтобы все выплаты были доступны для участников<br class="hidden-xs">как можно быстрее. <br class="hidden-xs">Поэтому используем удобные сервисы Яндекс.
+                        </p>
                     </div>
                 </div>
                 <hr>
