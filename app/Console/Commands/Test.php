@@ -56,8 +56,8 @@ class Test extends Command
         //                            ['file://'.realpath('./SSL/private.key'), 'Gorchel'],
         //   
 
-        $certificate = public_path().'/yandexSslTest/client.cer';
-        $privkey = public_path().'/yandexSslTest/private.key';                     
+        $certificate = public_path().'/yandexSslTest/client.crt';
+        $privkey = public_path().'/yandexSslTest/client.key';                     
 
         try {
             $instance = new CommonHTTP3Example();

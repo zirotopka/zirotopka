@@ -105,7 +105,7 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         return $result;
     }
 
-    private function writeCommonRequestAttributes(DOMElement $root, \DOMDocument $doc) {
+    private function writeCommonRequestAttributes(\DOMElement $root, \DOMDocument $doc) {
         $root->setAttribute("requestDatetime", $this->formatDatetime($this->requestDatetime));
         $root->setAttribute("invoiceId", $this->invoiceId);
         $root->setAttribute("shopId", $this->shopId);
@@ -120,7 +120,7 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         $root->setAttribute("shopSumBankPaycash", $this->shopSumBankPaycash);
         $root->setAttribute("customerNumber", $this->customerNumber);
         $customParam = $doc->createElement("param");
-        //$customParam = new DOMElement("param");
+        //$customParam = new \DOMElement("param");
         $customParam->setAttribute("key", $this->customParamName);
         $customParam->setAttribute("val", $this->customParamValue);
         $root->appendChild($customParam);
@@ -173,8 +173,7 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         $xml = new \DOMDocument("1.0", "UTF-8");
         $root = $xml->createElement("checkOrderRequest");
         $xml->appendChild($root);
-
-        dd($xml);
+        
         $this->writeCommonRequestAttributes($root, $xml);
         return $xml->saveXML();
     }
@@ -215,7 +214,7 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         return $nvp;
     }
 
-    private function writeCommonResponseAttributes(DOMElement $root) {
+    private function writeCommonResponseAttributes(\DOMElement $root) {
         $root->setAttribute("performedDatetime", $this->formatDatetime($this->performedDatetime));
         $root->setAttribute("code", number_format($this->code));
         $root->setAttribute("invoiceId", $this->invoiceId);
@@ -249,134 +248,134 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         return $xml->saveXML();
     }
 
-    private function verifyCommonRequestAttributes(DOMElement $root) {
+    private function verifyCommonRequestAttributes(\DOMElement $root) {
         $requestDatetime = $root->getAttribute("requestDatetime");
         if ($requestDatetime == '') {
-            throw new DOMException("requestDatetime missing");
+            throw new \DOMException("requestDatetime missing");
         }
         if (strtotime($requestDatetime) != $this->requestDatetime) {
-            throw new DOMException("requestDatetime wrong");
+            throw new \DOMException("requestDatetime wrong");
         }
 
         $invoiceId = $root->getAttribute("invoiceId");
         if ($invoiceId == '') {
-            throw new DOMException("invoiceId missing");
+            throw new \DOMException("invoiceId missing");
         }
         if ($invoiceId != $this->invoiceId) {
-            throw new DOMException("invoiceId wrong");
+            throw new \DOMException("invoiceId wrong");
         }
 
         $shopId = $root->getAttribute("shopId");
         if ($shopId == '') {
-            throw new DOMException("shopId missing");
+            throw new \DOMException("shopId missing");
         }
         if ($shopId != $this->shopId) {
-            throw new DOMException("shopId wrong");
+            throw new \DOMException("shopId wrong");
         }
 
         $shopArticleId = $root->getAttribute("shopArticleId");
         if ($shopArticleId == '') {
-            throw new DOMException("shopArticleId missing");
+            throw new \DOMException("shopArticleId missing");
         }
         if ($shopArticleId != $this->shopArticleId) {
-            throw new DOMException("shopArticleId wrong");
+            throw new \DOMException("shopArticleId wrong");
         }
 
         $orderCreatedDatetime = $root->getAttribute("orderCreatedDatetime");
         if ($orderCreatedDatetime == '') {
-            throw new DOMException("orderCreatedDatetime missing");
+            throw new \DOMException("orderCreatedDatetime missing");
         }
         if (strtotime($orderCreatedDatetime) != $this->orderCreatedDatetime) {
-            throw new DOMException("orderCreatedDatetime wrong");
+            throw new \DOMException("orderCreatedDatetime wrong");
         }
 
         $paymentPayerCode = $root->getAttribute("paymentPayerCode");
         if ($paymentPayerCode == '') {
-            throw new DOMException("paymentPayerCode missing");
+            throw new \DOMException("paymentPayerCode missing");
         }
         if ($paymentPayerCode != $this->paymentPayerCode) {
-            throw new DOMException("paymentPayerCode wrong");
+            throw new \DOMException("paymentPayerCode wrong");
         }
 
         $orderSumAmount = $root->getAttribute("orderSumAmount");
         if ($orderSumAmount == '') {
-            throw new DOMException("orderSumAmount missing");
+            throw new \DOMException("orderSumAmount missing");
         }
         if ($orderSumAmount != $this->orderSumAmount) {
-            throw new DOMException("orderSumAmount wrong");
+            throw new \DOMException("orderSumAmount wrong");
         }
 
         $orderSumCurrencyPaycash = $root->getAttribute("orderSumCurrencyPaycash");
         if ($orderSumCurrencyPaycash == '') {
-            throw new DOMException("orderSumCurrencyPaycash missing");
+            throw new \DOMException("orderSumCurrencyPaycash missing");
         }
         if ($orderSumCurrencyPaycash != $this->orderSumCurrencyPaycash) {
-            throw new DOMException("orderSumCurrencyPaycash wrong");
+            throw new \DOMException("orderSumCurrencyPaycash wrong");
         }
 
         $orderSumBankPaycash = $root->getAttribute("orderSumBankPaycash");
         if ($orderSumBankPaycash == '') {
-            throw new DOMException("orderSumBankPaycash missing");
+            throw new \DOMException("orderSumBankPaycash missing");
         }
         if ($orderSumBankPaycash != $this->orderSumBankPaycash) {
-            throw new DOMException("orderSumBankPaycash wrong");
+            throw new \DOMException("orderSumBankPaycash wrong");
         }
 
         $shopSumAmount = $root->getAttribute("shopSumAmount");
         if ($shopSumAmount == '') {
-            throw new DOMException("shopSumAmount missing");
+            throw new \DOMException("shopSumAmount missing");
         }
         if ($shopSumAmount != $this->shopSumAmount) {
-            throw new DOMException("shopSumAmount wrong");
+            throw new \DOMException("shopSumAmount wrong");
         }
 
         $shopSumCurrencyPaycash = $root->getAttribute("shopSumCurrencyPaycash");
         if ($shopSumCurrencyPaycash == '') {
-            throw new DOMException("shopSumCurrencyPaycash missing");
+            throw new \DOMException("shopSumCurrencyPaycash missing");
         }
         if ($shopSumCurrencyPaycash != $this->shopSumCurrencyPaycash) {
-            throw new DOMException("shopSumCurrencyPaycash wrong");
+            throw new \DOMException("shopSumCurrencyPaycash wrong");
         }
 
         $shopSumBankPaycash = $root->getAttribute("shopSumBankPaycash");
         if ($shopSumBankPaycash == '') {
-            throw new DOMException("shopSumBankPaycash missing");
+            throw new \DOMException("shopSumBankPaycash missing");
         }
         if ($shopSumBankPaycash != $this->shopSumBankPaycash) {
-            throw new DOMException("shopSumBankPaycash wrong");
+            throw new \DOMException("shopSumBankPaycash wrong");
         }
 
         $customerNumber = $root->getAttribute("customerNumber");
         if ($customerNumber == '') {
-            throw new DOMException("customerNumber missing");
+            throw new \DOMException("customerNumber missing");
         }
         if ($customerNumber != $this->customerNumber) {
-            throw new DOMException("customerNumber wrong");
+            throw new \DOMException("customerNumber wrong");
         }
 
         foreach ($root->childNodes as $node) {
             if ($node->nodeName == 'param' && $node->nodeType == XML_ELEMENT_NODE) {
                 $key = $node->getAttribute("key");
                 if ($key == '') {
-                    throw new DOMException("param.key missing");
+                    throw new \DOMException("param.key missing");
                 }
                 $value = $node->getAttribute("val");
                 if ($value == '') {
-                    throw new DOMException("param.value missing");
+                    throw new \DOMException("param.value missing");
                 }
 
                 if ($key != $this->customParamName) {
-                    throw new DOMException($this->customParamName . " wrong");
+                    throw new \DOMException($this->customParamName . " wrong");
                 }
 
                 if ($value != $this->customParamValue) {
-                    throw new DOMException($this->customParamValue . " wrong");
+                    throw new \DOMException($this->customParamValue . " wrong");
                 }
 
                 return;
             }
         }
-        throw new DOMException(" element 'param' missing");
+        throw new \DOMException(" element 'param' missing");
     }
 
     private function verifyCommonRequestNVP(array $nvp) {
@@ -493,37 +492,37 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         }
     }
 
-    private function verifyCommonResponseAttributes(DOMElement $root) {
+    private function verifyCommonResponseAttributes(\DOMElement $root) {
         $performedDatetime = $root->getAttribute("performedDatetime");
         if ($performedDatetime == '') {
-            throw new DOMException("performedDatetime missing");
+            throw new \DOMException("performedDatetime missing");
         }
         if (strtotime($performedDatetime) != $this->performedDatetime) {
-            throw new DOMException("performedDatetime wrong");
+            throw new \DOMException("performedDatetime wrong");
         }
 
         $code = $root->getAttribute("code");
         if ($code == '') {
-            throw new DOMException("code missing");
+            throw new \DOMException("code missing");
         }
         if ((int) $code != $this->code) {
-            throw new DOMException("code wrong");
+            throw new \DOMException("code wrong");
         }
 
         $invoiceId = $root->getAttribute("invoiceId");
         if ($invoiceId == '') {
-            throw new DOMException("invoiceId missing");
+            throw new \DOMException("invoiceId missing");
         }
         if ($invoiceId != $this->invoiceId) {
-            throw new DOMException("invoiceId wrong");
+            throw new \DOMException("invoiceId wrong");
         }
 
         $shopId = $root->getAttribute("shopId");
         if ($shopId == '') {
-            throw new DOMException("shopId missing");
+            throw new \DOMException("shopId missing");
         }
         if ($shopId != $this->shopId) {
-            throw new DOMException("shopId wrong");
+            throw new \DOMException("shopId wrong");
         }
     }
 
@@ -560,10 +559,10 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         $this->verifyCommonRequestAttributes($root);
         $paymentDateTime = $root->getAttribute("paymentDateTime");
         if ($paymentDateTime == '') {
-            throw new DOMException("paymentDateTime missing");
+            throw new \DOMException("paymentDateTime missing");
         }
         if (strtotime($paymentDateTime) != $this->paymentDateTime) {
-            throw new DOMException("paymentDateTime wrong");
+            throw new \DOMException("paymentDateTime wrong");
         }
     }
 
@@ -575,10 +574,10 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         $this->verifyCommonRequestNVP($nvp);
         $paymentDateTime = $nvp["paymentDateTime"];
         if ($paymentDateTime == '') {
-            throw new DOMException("paymentDateTime missing");
+            throw new \DOMException("paymentDateTime missing");
         }
         if (strtotime($paymentDateTime) != $this->paymentDateTime) {
-            throw new DOMException("paymentDateTime wrong");
+            throw new \DOMException("paymentDateTime wrong");
         }
 
         $md5 = $nvp["md5"];
@@ -600,10 +599,10 @@ class CommonHTTP3Example extends CommonProtocolUtils {
         if (!empty($this->message)) {
             $message = $root->getAttribute("message");
             if ($message == '') {
-                throw new DOMException("message missing");
+                throw new \DOMException("message missing");
             }
             if ($message != $this->message) {
-                throw new DOMException("message wrong");
+                throw new \DOMException("message wrong");
             }
         }
     }
@@ -623,16 +622,15 @@ class CommonHTTP3Example extends CommonProtocolUtils {
          */
 
         // формирование XML запроса
-        // $req = $this->createCheckOrderRequestXMLDocument();
-        // echo $req;
+        $req = $this->createCheckOrderRequestXMLDocument();
 
-        // $req = $this->sign($request, $certificate, $privkey);
-        // // проверка XML запроса сервером
+        // $req = $this->sign($req, $certificate, $privkey);
+        // // // проверка XML запроса сервером
         // $req = $this->verify($req, $certificate);
         
         // $this->verifyCheckOrderRequestXMLDocument($req);
-
-        // // формирование NVP запроса
+        //         dd($req);
+        // // // формирование NVP запроса
         // $nvp = $this->createCheckOrderNVP();
         // foreach ($nvp as $key => $value) {
         //     echo $key . '=' . $value . "\n";
@@ -652,10 +650,10 @@ class CommonHTTP3Example extends CommonProtocolUtils {
          */
 
         // формирование XML запроса
-        // $req = $this->createPaymentAvisoRequestXMLDocument();
-        // echo $req;
-        $req = $this->sign($request, $certificate, $privkey);
-        dd($req);
+        $req = $this->createPaymentAvisoRequestXMLDocument();
+
+        $req = $this->sign($req, $certificate, $privkey);
+
         $ch = curl_init();
  
         curl_setopt($ch, CURLOPT_URL, "https://bo-demo02.yamoney.ru:9094/webservice/deposition/api/testDeposition");

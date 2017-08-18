@@ -72,6 +72,8 @@ class CommonProtocolUtils {
 
             $pkcs7 = stream_get_contents($pipes[1]);
             fclose($pipes[1]);
+
+
             $resCode = proc_close($process);
             if ($resCode != 0) {
                 throw new \Exception('OpenSSL call failed:' . $resCode . "\n" . $pkcs7);
@@ -107,6 +109,7 @@ class CommonProtocolUtils {
             $content = stream_get_contents($pipes[1]);
             fclose($pipes[1]);
             $resCode = proc_close($process);
+
             if ($resCode != 0) {
                 if ($resCode == 2 || $resCode == 4) {
                     throw new \Exception('Signature verification failed');
