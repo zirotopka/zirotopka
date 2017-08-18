@@ -1,35 +1,73 @@
 @extends('admin.layouts.main')
 
+@section('css')
+    @parent
+@overwrite
+
 @section('js')
     @parent
-
 @overwrite
 
 @section("content")
-
-    <ol class="breadcrumb">
-        <li><a href="/users">Пользователи</a></li>
-    </ol>
-    <div class="box-widget widget-module">
-
-        <div class="widget-head clearfix">
-            <span class="h-icon"><i class="fa fa-bars"></i></span>
-            <h4>Данные пользователя</h4>
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/users/add" class="btn btn-sm btn-info"><i class="fa fa-plus"></i>&nbsp;&nbsp;Добавить</a>
         </div>
-
-        <div class="widget-container" style="display: block;">
-            <div class="widget-block">
-                <div class="tab-content" style="padding-top:20px;">
-                    
-                </div>
-            </div>
-        </div>
-
     </div>
 
-@overwrite
-
-@section('js')
-    @parent
-
+    <div class="row">
+        @if(count($users) == 0)
+            <div class="alert alert-warning">
+                Пользователей не найдено
+            </div>
+        @else
+            <form method="GET">
+                <table class="table table-striped" id="users-table">
+                    <thead>
+                        <th>#</th>
+                        <th>Имя</th>
+                        <th>E-Mail</th>
+                        <th>Роль</th>
+                        <th>Текущая программа</th>
+                        <th>Статус</th>
+                        <th>Действия</th>
+                    </thead>
+                    <tbody>
+                        @foreach($users as $user)
+                            <tr>
+                                <td>{{ $user->id }}</td>
+                                <td><a href="/users/{{ $user->id }}/default">{{ $user->surname }} {{ $user->first_name }}  {{ $user->last_name }}</a></td>
+                                <td>
+                                    <?php $role = $user->roles->first() ?>
+                                    @if (!empty($role))
+                                        {{ $role->name }}
+                                    @endif
+                                </td>
+                                <td>
+                                    @if (!empty($user->current_program))
+                                        {{$user->current_program->name}}
+                                    @endif
+                                </td>
+                                <td class="tc-center nowrap">
+                                    <div class="users-toolbar" role="toolbar">        
+                                        <div class="btn-group" role="group">
+                                            @if($user->status)
+                                                <a href="#" data-id="{{$user->id}}" class="btn btn-warning btn-sm m-user-disable">Отключить</a>
+                                            @else
+                                                <a href="#" data-id="{{$user->id}}" class="btn btn-success btn-sm m-user-enable">Включить</a>
+                                            @endif
+                                        </div>
+                                        <div class="btn-group" role="group">
+                                            <a href="#" data-id="{{$user->id}}" class="btn btn-default btn-danger btn-sm m-user-delete">Удалить</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </form>
+            {!! $users->render() !!}
+        @endif
+    </div>
 @overwrite

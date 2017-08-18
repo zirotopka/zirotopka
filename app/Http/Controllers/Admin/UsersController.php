@@ -16,6 +16,11 @@ use App\Http\Controllers\Controller;
 class UsersController extends Controller
 {	
     public function index(Request $request) {
-    	return view('admin.users.index');
+    	$users = User::select([
+    		'id','email','first_name','last_name','surname',
+    		'current_programm_id','status',
+    	])->with('roles','current_program')->paginate(20);
+
+    	return view('admin.users.index',['users' => $users]);
     }
 }

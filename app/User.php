@@ -52,4 +52,9 @@ class User extends CartalystUser
     {
         return $this->hasMany('App\Message', 'sender_id', 'id')->with('files')->orderBy('created_at','desc');
     }
+
+    public function current_program()
+    {
+        return $this->belongsTo('App\Programm','current_programm_id');
+    }
 }
