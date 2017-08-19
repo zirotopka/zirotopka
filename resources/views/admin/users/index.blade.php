@@ -11,12 +11,12 @@
 @overwrite
 
 @section("content")
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-md-12">
             <a href="/users/add" class="btn btn-sm btn-info"><i class="fa fa-plus"></i>&nbsp;&nbsp;Добавить</a>
         </div>
     </div>
-
+ -->
     <div class="row">
         @if(count($users) == 0)
             <div class="alert alert-warning">
