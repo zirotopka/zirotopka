@@ -62,7 +62,7 @@
                     <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#section_4" class="spy_sections">
-                            <p>04 БОНУСЫ</p>
+                            <p>04 БОНУСНАЯ</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>

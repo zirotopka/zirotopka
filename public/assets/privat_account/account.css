@@ -600,6 +600,14 @@
 	    margin: 4vw 0 0 -13.5vw;
 	}
 
+	.btn-play:hover {
+	    margin: 4.1vw 0 0 -13.6vw;
+	}
+
+	.btn-play:active {
+	    margin: 4.1vw 0 0 -13.6vw;
+	}
+
 	@media screen and (max-width: 767px) {
 		.btn-play {
 			    margin: 14vw 0 0 -56vw!important;
@@ -623,7 +631,7 @@
 			    margin:6.1vw 0 0 -29.1vw;
 			}
 		
-		.btn-play {
+		.btn-play:active {
 			    margin:6.1vw 0 0 -29.1vw;
 			}
 

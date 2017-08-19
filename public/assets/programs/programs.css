@@ -383,14 +383,14 @@ h2{
 }
 
 .frs_imgs{
-	width: 5vw;
+	width: 4.5vw;
 }
 
 .rstart-img-cnt p{
 	margin: 1vw 0 20% 0;
     font-family: MuseoSansCyrl_300;
    	color: #232323;
-   	font-size: 1.2vw;
+   	font-size: 1.1vw;
    	font-weight: 100;
 }
 
@@ -453,6 +453,8 @@ h2{
     font-family: MuseoSansCyrl_700;
     font-weight: 700;
     color: #ff8a18;
+    z-index: 2;
+    position: relative;
 }
 
 .tc_d{
@@ -663,8 +665,8 @@ h2{
 	}
 
 	.connect_btn{
-		height: 4.5vw;
-		width: 24vw;
+		height: 4.2vw;
+		width: 22vw;
 		border-radius: 2em;
 		border: none;
 		margin: 6em 0 0 0;
@@ -676,15 +678,15 @@ h2{
 	}
 
 	.connect_btn:hover{
-		height: 4.7vw;
-		width: 24.2vw;;
+		height: 4.4vw;
+		width: 22.2vw;;
 		margin: 5.8em -0.2vw 0 0;
 		background-color: #ff8a18!important;
 	}
 
 	.connect_btn:active{	
-		height: 4.7vw;
-		width: 24.2vw;
+		height: 4.4vw;
+		width: 22.2vw;
 		margin: 5.8em -0.2vw 0 0;
 		background-color: #D9550E!important;
 	}
@@ -845,8 +847,8 @@ h2{
 	    text-align: center;
 	}
 	.prgr_name_st {
-	    font-size: 47vw;
-	    margin: -8% 0 0 0;
+		font-size: 44vw;
+		margin: -5% 0 0 0;
 	}
 
 	.tcount-screen {
@@ -911,7 +913,7 @@ h2{
 
 	.connect-screen {
 	    height: 65vh;
-	    background-size: 80em!important;
+	    background-size: 86em!important;
 	    background-position: -22em;
 	}
 
@@ -1204,14 +1206,15 @@ footer{
 	}
 
 	.ico_play {
-	    margin: 7% 0 0 -24vw;
+	    margin: 7% 0 0 -23vw;
 	}
 
 	.ico_play:hover{
-		margin: 6.8% 0 0 -24.05vw;
+		margin: 6.8% 0 0 -23.05vw;
 	}
 
 	.ico_play:active{
-		margin: 6.8% 0 0 -24.05vw;
+		margin: 6.8% 0 0 -23.05vw;
+		content: url(/ico/hov-play.svg);
 	}
 }

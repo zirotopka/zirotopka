@@ -175,7 +175,9 @@ option, option:hover, option:active ,option:focus,
 	padding-bottom: 0.2em;
 	margin: 0;
 }
-
+.bootstrap-select button:hover{
+	color:#7d7d7d!important;
+}
 @-moz-document url-prefix() {
 	.bootstrap-select button{
 	    padding-right: 2.68em!important;
@@ -380,6 +382,26 @@ label:hover:before {
 	}
 
 	.ddicc {
-	    margin: 2.7em 0 0 6.8em !important;
+	    margin: 2.7em 0 0 7.8em !important;
 	}
+
+	.bootstrap-select{
+		width: 19.1em !important;
+		height: 3em !important;
+	}
+
+	.select-side{
+	    margin: 0.2em 0 0 2.2em!important;
+	}
+
+	.drp-control{
+		width: 19.1em;
+	}
+
+	.progr-drop {
+	    position: relative;
+	    width: 19.1em;
+	}
+
+
 }
