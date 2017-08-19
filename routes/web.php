@@ -55,6 +55,7 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	Route::group(['middleware' => ['admin']], function () {
 		Route::get('admin', ['uses' => 'Admin\HomeController@index']);
 		Route::resource('admin/users', 'Admin\UsersController');
+		Route::resource('admin/accruals', 'Admin\AccrualsController');
 	});
 
 });
