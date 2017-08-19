@@ -265,15 +265,15 @@ div {
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
     content: '';
-    width: 0.90em;
-    height: 0.85em;
     background: url(/ico/crl.svg);
     position: absolute;
-    top: 0.067em;
-    left: 0.074em;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+    background-size: 0.78em!important;
+    background-position: 2px 2px;
 }
 @media not all and (min-resolution:.001dpcm) { @media {
 
@@ -307,7 +307,9 @@ div {
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
 	[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
-	    width: 0.6em;
-	    height: 0.6em;
+	    width: 1em;
+	    height: 1em;
+	    background-position: 1px 1px;
+	    background-size: 0.75em;
 	}
 }
