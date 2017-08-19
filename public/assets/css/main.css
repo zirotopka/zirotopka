@@ -1841,7 +1841,7 @@ footer .prgrm_list .bonus{
 	}
 
 	footer .prgrm_list {
-	    padding: 7.5em 0 0 0;
+	    padding: 7em 0 0 0;
 		line-height: 1.5em;
 	}
 	
@@ -1969,6 +1969,10 @@ footer .prgrm_list .bonus{
 
 	.questions-screen img {
 	    margin-left: -0.4vw!important;
+	}
+
+	.zg_prgr {
+	    height: 12vw!important;
 	}
 
 	.left_quest ul li a, .right_quest ul li a {
