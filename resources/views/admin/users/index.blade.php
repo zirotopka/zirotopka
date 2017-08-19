@@ -54,9 +54,9 @@
                                     <div class="users-toolbar" role="toolbar">        
                                         <div class="btn-group" role="group">
                                             @if($user->status)
-                                                <a href="#" data-id="{{$user->id}}" class="btn btn-warning btn-sm m-user-disable">Отключить</a>
+                                                <a href="#" data-id="{{$user->id}}" data-status="0" class="btn btn-warning btn-sm m-user-status">Отключить</a>
                                             @else
-                                                <a href="#" data-id="{{$user->id}}" class="btn btn-success btn-sm m-user-enable">Включить</a>
+                                                <a href="#" data-id="{{$user->id}}" data-status="1" class="btn btn-success btn-sm m-user-status">Включить</a>
                                             @endif
                                         </div>
                                         <div class="btn-group" role="group">

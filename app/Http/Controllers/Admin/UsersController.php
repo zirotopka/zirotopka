@@ -31,4 +31,18 @@ class UsersController extends Controller
 
         return response()->json(true);
     }
+
+    public function change_status($id, Request $request)
+    {	
+    	$user = User::findOrFail($id);
+
+    	if (!empty($user)) {
+    		$user->status = $request->get('status');
+    		$user->save();
+
+    		return response()->json(true);
+    	} else {
+    		return response()->json(false);
+    	}
+    }
 }
