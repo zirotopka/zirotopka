@@ -24,6 +24,12 @@ class UsersController extends Controller
     	return view('admin.users.index',['users' => $users]);
     }
 
+    public function show($id) {
+    	$user = User::findOrFail($id);
+
+    	return view('admin.users.show',['user' => $user]);
+    }
+
     public function destroy($id)
     {	
         $user = User::findOrFail($id);
