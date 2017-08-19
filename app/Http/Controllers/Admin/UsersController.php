@@ -23,4 +23,12 @@ class UsersController extends Controller
 
     	return view('admin.users.index',['users' => $users]);
     }
+
+    public function destroy($id)
+    {	
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return response()->json(true);
+    }
 }

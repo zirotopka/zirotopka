@@ -5,6 +5,8 @@
 @overwrite
 
 @section('js')
+    <script type="text/javascript" src="/assets/js/admin/users.js?{{time()}}"></script>
+
     @parent
 @overwrite
 
@@ -36,7 +38,7 @@
                         @foreach($users as $user)
                             <tr>
                                 <td>{{ $user->id }}</td>
-                                <td><a href="/users/{{ $user->id }}/default">{{ $user->surname }} {{ $user->first_name }}  {{ $user->last_name }}</a></td>
+                                <td><a href="/admin/users/{{ $user->id }}">{{ $user->surname }} {{ $user->first_name }}  {{ $user->last_name }}</a></td>
                                 <td>
                                     <?php $role = $user->roles->first() ?>
                                     @if (!empty($role))
