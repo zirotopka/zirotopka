@@ -192,7 +192,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 how_cnt freedom">
                         <img src="/ico/frdm.svg" alt="">
                         <p class="orng frdsd">Свобода действий</p>
-                        <p class="who_txt">Самостоятельное планирование<br>времени и места для выполнения<br>заданий. Объединение и мотивация<br>друзей и близких.</p>
+                        <p class="who_txt">Самостоятельное планирование<br>времени и места для выполнения<br>заданий. Объединение<br class="visible-xs"> и мотивация<br>друзей и близких.</p>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 how_cnt profit">
                         <img src="/ico/prft.svg" alt="">
