@@ -52,6 +52,13 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	    'index', 'show', 'store','update', 'destroy'
 	]]);
 
+	Route::group(['middleware' => ['admin']], function () {
+		Route::get('admin', ['uses' => 'Admin\HomeController@index']);
+		Route::resource('admin/users', 'Admin\UsersController');
+		Route::post('admin/change_status/{id}', ['uses' => 'Admin\UsersController@change_status']);
+		Route::resource('admin/accruals', 'Admin\AccrualsController');
+	});
+
 });
 
 Route::get('api/user/email_store', ['uses' => 'Api\UserApiController@email_store']);

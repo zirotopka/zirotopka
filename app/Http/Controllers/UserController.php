@@ -15,6 +15,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManagerStatic as Image;
 
+use Carbon\Carbon;
+
 class UserController extends Controller
 {	
 
@@ -92,9 +94,14 @@ class UserController extends Controller
             $user->phone = $request->get("phone");
             $user->user_ip = $_SERVER["REMOTE_ADDR"];
             $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
-            $user->ip = $request->ip();
+
+            $clientIp = $request->ip();
+            $user->ip = $clientIp;
+
             //Сделать сохранение timezone
-            $user->timezone = 'Africa/Nairobi';
+            $timezone = IP::get_client_timezone($clientIp);
+            $user->timezone = $timezone;
+            $user->last_updated_at = Carbon::now($timezone);
             $user->save();
 
             $activation = Activation::create($user);

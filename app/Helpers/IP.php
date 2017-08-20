@@ -6,22 +6,16 @@ use App\Helpers\Curl;
 
 class IP
 {	
-	public static function get_client_ip() {
-	    $ipaddress = '';
-	    if (getenv('HTTP_CLIENT_IP'))
-	        $ipaddress = getenv('HTTP_CLIENT_IP');
-	    else if(getenv('HTTP_X_FORWARDED_FOR'))
-	        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
-	    else if(getenv('HTTP_X_FORWARDED'))
-	        $ipaddress = getenv('HTTP_X_FORWARDED');
-	    else if(getenv('HTTP_FORWARDED_FOR'))
-	        $ipaddress = getenv('HTTP_FORWARDED_FOR');
-	    else if(getenv('HTTP_FORWARDED'))
-	        $ipaddress = getenv('HTTP_FORWARDED');
-	    else if(getenv('REMOTE_ADDR'))
-	        $ipaddress = getenv('REMOTE_ADDR');
-	    else
-	        $ipaddress = null;
-	    return $ipaddress;
+	public static function get_client_timezone($ip) {
+	    $response_json = Curl::request('http://ip-api.com/json/'.$ip.'?lang=ru');
+	    $response = json_decode($response_json);
+
+	    $timezone = 'Africa/Nairobi';
+
+	    if (!empty($response) && !empty($response->status) && ($response->status == 'success')) {
+	    	$timezone = $response->timezone;
+	    }
+
+	    return $timezone;
 	}
 }
