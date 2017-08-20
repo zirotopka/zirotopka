@@ -2105,6 +2105,11 @@ footer{
 .side_logo {
     width: 85%;
 }
+
+	.zg_prgr {
+	    height: 4.5vw!important;
+	}
+
 	.profile_btns p{
 	    font-size: 0.64em;
 	}
