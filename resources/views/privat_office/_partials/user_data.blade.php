@@ -15,6 +15,14 @@
 				<p class="orange-text">Вес</p>
 				<p class="gray-text">{{$user->weight}} кг.</p>
 			</div>
+			<div class="pd col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p class="orange-text">Реферальная ссылка</p>
+				<p class="gray-text">{{$user->referer_code}}</p>
+			</div>
+			<div class="pd col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p class="orange-text">Яндекс кошелёк</p>
+				<p class="gray-text">{{$user->wallet}}</p>
+			</div>
 		</div>
 		<div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
 			<p class="orange-text">Город проживания</p>

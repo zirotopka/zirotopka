@@ -24,15 +24,21 @@
 					<p class="col-lg-2 col-md-2 col-sm-4 col-xs-4 rgt">Вес</p>
 					<input type="text" name="weight" class="edit-inputs hw-cls col-lg-4 col-md-4 col-sm-4 col-xs-4" value="{{$user->weight}}">
 					<p class="col-lg-6 col-md-6 col-sm-4 col-xs-4 lft">кг.</p>
+			</div>
+			<br>
+			<div class="yandex_wallet">
+				<p>Яндекс кошелёк</p>
+				<input class="edit-inputs" type="text" value="{{$user->wallet}}">	
+				
 			</div>	
 			
 		</div>			
 		<div class="row col-lg-8 col-md-8 col-sm-8 col-xs-12 rt-info">
-			<div class="city col-xs-12 col-sm-12">
+			<div class="city col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<p>Город проживания</p>
 				<input type="text" name="city" class="edit-inputs" value="{{$user->city}}">
 			</div>
-			<div class="pasport col-xs-12 col-sm-12">
+			<div class="pasport col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<p>Паспортные данные</p>
 				<input type="text" name="pasport_name" class="edit-inputs pasp_id col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="ФИО" value="{{$user->pasport_name}}">
 				<input type="text" name="pasport_number" class="edit-inputs pasp_numb col-lg-2 col-md-2 col-sm-2 col-xs-2" placeholder="№" value="{{$user->pasport_number}}">
