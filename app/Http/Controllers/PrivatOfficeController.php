@@ -20,6 +20,13 @@ class PrivatOfficeController extends Controller
     {		
     	$user = Sentinel::getUser();
 
+        //Оплата програм
+        if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
+            $sum = $user->current_program->cost;
+
+            return view('privat_office._program_pay', ['user' => $user, 'sum' => $sum]);
+        }
+
         $programs = Programm::select('id','description','name')
                             ->get();
 
