@@ -22,6 +22,8 @@
     <input name="orderNumber" value="abc1111111" type="hidden"/>
     <input name="cps_phone" value="{{$user->phone}}" type="hidden"/>
     <input name="cps_email" value="{{$user->email}}" type="hidden"/>
+    <input name="shopSuccessURL" value="{{env('APP_URL').'/lk/'.$user->id.'/yaPay?type=success'}}" type="hidden"/>
+    <input name="shopFailURL" value="{{env('APP_URL').'/lk/'.$user->id.'/yaPay?type=fail'}}" type="hidden"/>
   <input type="submit" value="Заплатить"/>
 </form>
 @overwrite
