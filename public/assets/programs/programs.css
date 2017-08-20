@@ -12,6 +12,10 @@ body{
 	font-size: 100%;
 }
 
+.st-content-inner {
+    font-size: 140%;
+}
+
 .st-content{
 	overflow: hidden!important;
 }
@@ -21,7 +25,11 @@ body{
 }
 
 .rg_check_in{
-	margin: 4.2em 0 0 0;
+	margin: 3.2em 0 0 0!important;
+}
+
+.main_sidebar ul{
+	padding: 6em 0 0 0!important;
 }
 
 ul li{
@@ -49,17 +57,20 @@ ul li{
 	color: white!important;
 }
 
+.active{
+	margin: 0 0 -0.9em 0!important;
+}
+
 .active .fm_line{
 	display: block;
 	color: white!important;
 }
 
 .fm_line{
-    margin: 0.1vw 0 0.1vw 8.58em!important;
+    margin: 0.15em 0 -0.2em 8.58em!important;
 	color: #818181!important;
 	display: none;
 }
-
 .top_section{
 	padding: 0.5em 0 0 5.75vw!important;
 }
@@ -340,7 +351,7 @@ h2{
 }
 
 .frs-left{
-	margin: 4% 0 0 0;
+	margin: 5% 0 0 0;
     padding: 0 0 0 3vw;
 }
 
@@ -372,14 +383,14 @@ h2{
 }
 
 .frs_imgs{
-	width: 5vw;
+	width: 4.5vw;
 }
 
 .rstart-img-cnt p{
 	margin: 1vw 0 20% 0;
     font-family: MuseoSansCyrl_300;
    	color: #232323;
-   	font-size: 1.2vw;
+   	font-size: 1.1vw;
    	font-weight: 100;
 }
 
@@ -442,6 +453,8 @@ h2{
     font-family: MuseoSansCyrl_700;
     font-weight: 700;
     color: #ff8a18;
+    z-index: 2;
+    position: relative;
 }
 
 .tc_d{
@@ -652,8 +665,8 @@ h2{
 	}
 
 	.connect_btn{
-		height: 4.5vw;
-		width: 24vw;
+		height: 4.2vw;
+		width: 22vw;
 		border-radius: 2em;
 		border: none;
 		margin: 6em 0 0 0;
@@ -665,15 +678,15 @@ h2{
 	}
 
 	.connect_btn:hover{
-		height: 4.7vw;
-		width: 24.2vw;;
+		height: 4.4vw;
+		width: 22.2vw;;
 		margin: 5.8em -0.2vw 0 0;
 		background-color: #ff8a18!important;
 	}
 
 	.connect_btn:active{	
-		height: 4.7vw;
-		width: 24.2vw;
+		height: 4.4vw;
+		width: 22.2vw;
 		margin: 5.8em -0.2vw 0 0;
 		background-color: #D9550E!important;
 	}
@@ -834,8 +847,8 @@ h2{
 	    text-align: center;
 	}
 	.prgr_name_st {
-	    font-size: 47vw;
-	    margin: -8% 0 0 0;
+		font-size: 44vw;
+		margin: -5% 0 0 0;
 	}
 
 	.tcount-screen {
@@ -900,7 +913,7 @@ h2{
 
 	.connect-screen {
 	    height: 65vh;
-	    background-size: 80em!important;
+	    background-size: 86em!important;
 	    background-position: -22em;
 	}
 
@@ -983,7 +996,7 @@ footer{
 }
 
 	footer .prgrm_list {
-	    padding: 23.5vw 0 0 0;
+	    padding: 23vw 0 0 0;
 		line-height: 2.5em;
 
 	}
@@ -1014,7 +1027,7 @@ footer{
 	}
 
 	.mission img {
-	    margin: 2.15em 0 2.15em 1vw;
+	    margin: 6vw 0 6.5vw 1vw;
 	    width: 50vw;
 	}
 
@@ -1193,14 +1206,15 @@ footer{
 	}
 
 	.ico_play {
-	    margin: 7% 0 0 -24vw;
+	    margin: 7% 0 0 -23vw;
 	}
 
 	.ico_play:hover{
-		margin: 6.8% 0 0 -24.05vw;
+		margin: 6.8% 0 0 -23.05vw;
 	}
 
 	.ico_play:active{
-		margin: 6.8% 0 0 -24.05vw;
+		margin: 6.8% 0 0 -23.05vw;
+		content: url(/ico/hov-play.svg);
 	}
 }

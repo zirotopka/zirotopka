@@ -20,19 +20,30 @@
         @include('home.fixed-menu')
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>   
         <div class="home_content col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <div class="bonus-content">
         @if ($user = Sentinel::check())
           @php
               $class = '';
               $class = 'rg_check_in';
           @endphp
+                <div class="{{$class}} bons-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1>ЗАРАБАТЫВАЙТЕ ВМЕСТЕ<br>С НАШЕЙ БОНУСНОЙ ПРОГРАММОЙ</h1>
+                    <p>Вы начинаете заниматься спортом<br>по любой программе на платформе,<br>приглашаете друзей и сразу зарабатываете</p>
+                    <button type="button" class="reg_btn" data-toggle="modal" data-target="#registr">
+                        РЕГИСТРАЦИЯ
+                    </button>
+                    <button type="button" class="abo_btn">
+                        ПОДРОБНЕЕ
+                    </button>
+                    <img src="/ico/pig.svg" class="pig hidden-xs">
+                </div>
         @else
             <div id="st-trigger-effects" class="hidden-md hidden-lg">
                 <button data-effect="st-effect-2" class="cdr-btn">
                     <img src="/ico/menu.svg" alt="" style="width: 5vw;">
                 </button>
             </div>
-        @endif
-            <div class="bonus-content">
+
                 <div class="bons-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h1>ЗАРАБАТЫВАЙТЕ ВМЕСТЕ<br>С НАШЕЙ БОНУСНОЙ ПРОГРАММОЙ</h1>
                     <p>Вы начинаете заниматься спортом<br>по любой программе на платформе,<br>приглашаете друзей и сразу зарабатываете</p>
@@ -44,6 +55,7 @@
                     </button>
                     <img src="/ico/pig.svg" class="pig hidden-xs">
                 </div>
+        @endif
                     <hr>
                 <div class="bons-how-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_2">
                     <h2>КАК ЭТО РАБОТАЕТ</h2>
@@ -124,15 +136,15 @@
                             <img src="/ico/smartphone.png" class="smartphone">
                         </div>
                     </div>
-                    <div class="pay_left col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                        <p>
-                            Мы готовы доверять денежные вопросы только<br class="hidden-xs">надёжным партнёрам, при этом хотим<br class="hidden-xs">чтобы все выплаты были доступны для участников<br class="hidden-xs">как можно быстрее. <br class="hidden-xs">Поэтому используем удобные сервисы Яндекс.
-                        </p>
-                    </div>
                     <div class="pay_right hidden-xs col-sm-6 col-md-6 col-lg-6">
                         <div class="mfc">
                             <img src="/ico/smartphone.png" class="smartphone">
                         </div>
+                    </div>
+                    <div class="pay_left col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <p>
+                            Мы готовы доверять денежные вопросы только<br class="hidden-xs">надёжным партнёрам, при этом хотим<br class="hidden-xs">чтобы все выплаты были доступны для участников<br class="hidden-xs">как можно быстрее. <br class="hidden-xs">Поэтому используем удобные сервисы Яндекс.
+                        </p>
                     </div>
                 </div>
                 <hr>
@@ -152,7 +164,7 @@
                     </div>
                     <p class="qwston">?</p>
                 </div>
-                <div class="connect-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_8">
+                <div class="connect-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="bonus_6">
                     <div  class="connect_screen_shader">
                         <p>REFORMATOR</p>
                     </div>

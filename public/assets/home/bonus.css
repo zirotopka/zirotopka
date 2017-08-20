@@ -12,8 +12,12 @@ body{
 	font-size: 100%;
 }
 
+.st-content-inner {
+    font-size: 140%;
+}
+
 .rg_check_in{
-	margin: 4.2em 0 0 0;
+	margin: 3.2em 0 15vw 0!important;
 }
 
 .st-content{
@@ -22,6 +26,10 @@ body{
 
 .st-content, .st-pusher, .st-container, .container-fluid{
 	margin: 0;
+}
+
+.main_sidebar ul{
+	padding: 6em 0 0 0!important;
 }
 
 ul li{
@@ -49,13 +57,17 @@ ul li{
 	color: white!important;
 }
 
+.active{
+	margin: 0 0 -1vw 0!important;
+}
+
 .active .fm_line{
 	display: block;
 	color: white!important;
 }
 
 .fm_line{
-    margin: 0.1vw 0 0.1vw 8.58em!important;
+    margin: 0.15em 0 -0.2em 8.58em!important;
 	color: #818181!important;
 	display: none;
 }
@@ -223,7 +235,7 @@ ul li{
 }
 
 .sc{
-	margin:0.5vw 0 0 0;
+	margin:1vw 0 0 0;
 }
 
 .spy_sections p{
@@ -438,7 +450,7 @@ h2{
 }
 
 .king{
-	width: 6em;
+	width: 5.7em;
 	margin: 0 2.5em 0 0;
 	height: 10.5vw;
 }
@@ -509,6 +521,7 @@ h2{
 	font-size: 1.4em;
 	line-height: 1.8em;
     margin: 21% 0 0 0;
+    padding: 0;
 }
 
 .pay_right{
@@ -556,6 +569,10 @@ h2{
 .quest_left ul{
 	padding: 0;
     line-height: 5em;
+}
+
+.ab-ct{
+	padding: 0;
 }
 
 .quest_left ul li, .quest_right p{
@@ -767,7 +784,9 @@ footer .prgrm_list .bonus{
 
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
-
+.rg_check_in{
+	margin: 3.2em 0 15vw 0!important;
+}
 	.side_logo{
 		width: 85%;
 	    margin: 0;
@@ -907,6 +926,7 @@ footer .prgrm_list .bonus{
 
 	.ab-ct{
 		margin:10% 0 0 0;
+		padding: 0;
 	}
 	.mobimg{
 	    width: 170%;
@@ -923,6 +943,10 @@ footer .prgrm_list .bonus{
 
 	.black-arrow{
 		width: 11em;
+	}
+
+	.king{
+		margin:0;
 	}
 .bons-pay-screen {
 	height: auto;
@@ -955,6 +979,7 @@ footer .prgrm_list .bonus{
 	    font-size: 4.5vw;
 	    line-height: 6.2vw;
 	    margin: 0 0 0 0;
+	    padding: 0;
 	}
 
 .bons-question-screen {
@@ -1041,7 +1066,7 @@ footer{
 }
 
 	footer .prgrm_list {
-	    padding: 23.5vw 0 0 0;
+	    padding: 23vw 0 0 0;
 		line-height: 2.5em;
 
 	}
@@ -1072,10 +1097,26 @@ footer{
 	}
 
 	.mission img {
-	    margin: 2.15em 0 2.15em 1vw;
+	    margin: 6vw 0 6.5vw 1vw;
 	    width: 50vw;
 	}
 
+}
+
+@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
+		.connect_price {
+		    background-position: 33vw 5px;
+		}
+		.connect-screen{
+			background-size: 125vw;
+		}
+		.ico_play {
+		    margin: 9% 0 0 -21.5vw;
+		}
+		.holop{
+			margin: 0 0 -3.5em 0;
+		}
+	}
 }
 
 @media screen and (min-width : 720px) and (max-device-width : 991px) {
@@ -1096,6 +1137,26 @@ footer{
 	}
 } 
 
+@media not all and (min-resolution:.001dpcm) {
+	.carrows{
+		width: 97%;
+		margin: 1em 0 0 0;
+	}
+
+	.holop{
+		width: 6vw;
+		margin: 0 1vw 0 0;
+	}
+
+	.king{
+		width: 6vw;
+		margin: 0 3vw 0.5vw 0;
+	}
+
+	.arrow{
+		width: 13vw;
+	}
+}
 .side_logo {
     width: 85%;
 }
@@ -1156,7 +1217,7 @@ footer{
 	}
 
 	.king {
-	    width: 8vw;
+	    width: 7vw;
 	    margin: 0 3vw 0 0;
 	}
 
@@ -1167,7 +1228,7 @@ footer{
 
 	.holop {
 	    width: 7vw;
-	    margin: 0 1vw -3.5vw 0;
+	    margin: 0 1vw -1.5vw 0;
 	}
 	
 	.carrows{

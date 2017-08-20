@@ -1,6 +1,7 @@
 @extends('admin.layouts.main')
 
 @section('css')
+    <link rel="stylesheet" href="/assets/admin/accruals.css">
     @parent
 @overwrite
 

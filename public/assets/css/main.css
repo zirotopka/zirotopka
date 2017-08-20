@@ -8,6 +8,10 @@ html{
 	overflow: hidden!important;
 }
 
+.index_spy{
+	display: none;
+}
+
 .st-content, .st-pusher, .st-container, .container-fluid{
 	margin: 0;
 }
@@ -35,6 +39,10 @@ ul li{
 
 .active a p{
 	color: white!important;
+}
+
+.active{
+	margin: 0 0 -1em 0!important;
 }
 
 .active .fm_line{
@@ -175,7 +183,7 @@ ul li{
 .main_sidebar ul {
     font-size: 1em;
     margin: 0;
-    padding: 4em 0 0 0;
+    padding: 4.5em 0 0 0;
     list-style: none;
     text-align: left;
 }
@@ -211,7 +219,7 @@ ul li{
 }
 
 .sc{
-	margin:0.3em 0 0 0;
+	margin:1em 0 0 0;
 }
 
 .spy_sections p{
@@ -231,7 +239,7 @@ ul li{
 }
 
 .side_logo{
-    width: 100%;
+    width: 85%;
 	text-align: center;
 }
 
@@ -622,8 +630,8 @@ ul li{
 	.pro_shader, .pow_shader, .run_shader, .runp_shader{
 	    position: absolute;
 		width: 20.5vw;
-		margin: -17.1vw 0 0 1em;
-	    height: 17.1vw;
+		margin: -17.2vw 0 0 1em;
+	    height: 17.2vw;
 	    background-color: rgba(0,0,0,0.6);
 	    z-index: 2;
 	    display: none;
@@ -648,7 +656,7 @@ ul li{
 	}
 
 	.pow_shader_gray, .runp_shader_gray{
-		margin: -17vw 0 0 1vw;
+	    margin: -17vw 0 0 1.36vw;
 		width: 20.5vw;
 		height: 17vw;
 	}
@@ -1088,11 +1096,20 @@ ul li{
 	}
 
 	.prg img{
-		margin-left: -0.6em;
+		margin-left: -1.5em;
+	}
+	
+	.zg_prgr{
+		height: 3.5vw!important;
+		vertical-align: text-bottom!important;
 	}
 
 	.zag{
 		display: inline-block;
+	}
+
+	.prg .zag{
+	    margin: -0.2em 0 0.7em -0.15em!important;
 	}
 
 	.left_quest, .right_quest{
@@ -1266,7 +1283,7 @@ footer{
 	background-color: #282828;
 	margin: 0 0 -10px 0;
     padding: 2rem 0 0 0px!important;
-	height: 24vw;
+	height: 27vw;
 }
 
 .mission p{
@@ -1295,17 +1312,17 @@ footer .prgrm_list ul li{
 
 footer .prgrm_list{
 	padding: 2.5em 0 0 0;
-	line-height: 2.5em;
+	line-height: 1.5em;
 }
 
 footer .prgrm_list .bonus{
 	margin: 1em 0 0 0;
-	line-height: 1.5em;
+	line-height: 1em;
 }
 
 .reg_f_s{
 	padding: 2.2em 0 0 0;
-	line-height: 3em;
+	line-height: 2em;
 }
 
 .reg_f_s img{
@@ -1315,16 +1332,16 @@ footer .prgrm_list .bonus{
 }
 
 .ofrta{
-	padding: 2.5em 0 0 0;
-    line-height: 2.5em;
+	padding: 2em 0 0 0;
+    line-height: 2em;
 }
 
 #pltks{
-	line-height: 1.5em;
+	line-height: 1em;
 }
 
 .accsss{
-	line-height: 1.5em;
+	line-height: 1em;
 }
 
 
@@ -1364,11 +1381,11 @@ footer .prgrm_list .bonus{
 	}
 
 	.who_txt {
-	    font-size: 1.1em;
+	    font-size: 2vw;
  	   }
 
 	.orng {
-	    font-size: 5.5vw;
+	    font-size: 2.1vw;
 	}
 	
 	.right_bonus_part p {
@@ -1491,7 +1508,7 @@ footer .prgrm_list .bonus{
 	.cdr-btn {
 	    position: relative;
 	    z-index: 2;
-	    padding: 2vw 0 0 4vw;
+	    padding: 1.6vw 0 0 4vw;
 	    background-color: rgba(0,0,0,0);
 	}
 	.reg_scrn_txt {
@@ -1641,12 +1658,12 @@ footer .prgrm_list .bonus{
   	}
 
 	.n1 img, .n2 img, .n3 img, .n4 img, .n5 img, .n6 img {
-	    width: 40vw;
+	    width: 15vw;
 	}
 
 	.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p {
 	    margin: 1.5em 0 0 0!important;
-	    font-size: 1.1em;
+	    font-size: 2.1vw;
 	    font-family: MuseoSansCyrl_100;
 	    font-weight: 100;
 		
@@ -1688,10 +1705,10 @@ footer .prgrm_list .bonus{
 	.start{
 		height: 100vw!important;
 		width: 85vw;
-		margin: 0 0 0 6.5vw;
+		margin: 0 0 0 6.8vw;
 	}
 	.start_shader {
-	    margin: -100vw 0 0px 6.5vw!important;
+	    margin: -100vw 0 0px 6.8vw!important;
 	    width: 85.2%!important;
 	    height: 100vw!important;
 	    display: block!important;
@@ -1824,7 +1841,7 @@ footer .prgrm_list .bonus{
 	}
 
 	footer .prgrm_list {
-	    padding: 7.3em 0 0 0;
+	    padding: 30.5vw 0 0 0;
 		line-height: 1.5em;
 	}
 	
@@ -1870,22 +1887,23 @@ footer .prgrm_list .bonus{
 
 	.how_cnt{
 		margin:12vw 0 0 0;
+		padding: 0.3vw 0 0.3vw 0;
 	}
 
 	.how_cnt img {
-   		width: 40vw!important;
+   		width: 20vw!important;
 	}
 
 	.choice {
- 		background-position: 20.5vw 7.5em;
+	    background-position: 9.5vw 3.5em;
 	}
 
 	.freedom {
-	    background-position: 16.5vw 6.5em;
+	    background-position: 6.5vw 3.5em;
 	}
 
 	.profit {
-	    background-position: 20vw 25vw;
+	    background-position: 8vw 13vw;
 	}
 
 	.how-screen button {
@@ -1944,13 +1962,17 @@ footer .prgrm_list .bonus{
 	    padding: 0 0 0 5%;
 	}
 	.connect-screen {
-	    height: 65vh;
-	    background-size: 250vw!important;
-	    background-position: -16em;
+		height: 65vh;
+	    background-size: 70em!important;
+	    background-position: -21em;
 	}
 
 	.questions-screen img {
 	    margin-left: -0.4vw!important;
+	}
+
+	.zg_prgr {
+	    height: 12vw!important;
 	}
 
 	.left_quest ul li a, .right_quest ul li a {
@@ -2014,7 +2036,7 @@ footer{
 	}
 
 	.ofrta {
-	    padding: 2.1em 0 0 0;
+	    padding: 2.3em 0 0 0;
 	}
 
 	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a {
@@ -2027,7 +2049,7 @@ footer{
 	    color: white;
 	    text-transform: uppercase;
 	    font-size: 3vw;
-	    padding: 0.5vw 0 0 4vw;
+	    padding: 5.5vw 0 0 4vw;
 	}
 
 	.reg_f_s ul{
@@ -2039,7 +2061,7 @@ footer{
 	}
 
 	.mission img {
-	    margin: 2.15em 0 2.15em 1vw;
+	    margin: 7vw 0 7.5vw 1vw;
 	    width: 50vw;
 	}
 
@@ -2083,6 +2105,11 @@ footer{
 .side_logo {
     width: 85%;
 }
+
+	.zg_prgr {
+	    height: 4.5vw!important;
+	}
+
 	.profile_btns p{
 	    font-size: 0.64em;
 	}
@@ -2195,6 +2222,10 @@ footer{
 	    height: 20.5vw;
 	}
 
+	.pro_shader, .pow_shader, .run_shader, .runp_shader{
+		display: block!important;		
+	}
+
 	.start_shader_gray p {
 	    margin: 23.4vw 0 0 -1vw;
 	}
@@ -2211,8 +2242,13 @@ footer{
 	    margin: -42.3vw 0 0 0;
 	    width: 36vw;
 	    height: 42.4vw;
+		display: block!important;
 	}
 
+	.cdr-btn {
+	    padding: 1.5em 0 0 1.5em;
+	}
+	
 	.start-arrow {
 	    margin: 5em 0 0 27vw!important;
 	}
@@ -2485,6 +2521,20 @@ footer{
 	    height: 17.24vw;
 	}
 
+	.pro_shader, .run_shader{
+		height: 17.24vw;
+	    margin: -17.24vw 0 0 0;
+	}
+
+
+	.pow_shader_gray, .runp_shader_gray {
+		height: 17.24vw;
+	    margin: -17.2vw 0 0 1.05vw;
+	}
+
+	.pro_shader_gray, .run_shader_gray{
+	    margin: -17.2vw 0 0 0;
+	}
 /*-----------------------Forth screen---------------------------------*/
 	.bonus-screen {
 	    padding: 5.7% 0 0 0;
@@ -2555,7 +2605,7 @@ footer{
 	}
 
 	.left_quest ul .else, .right_quest ul .else{
-	    margin: 0.3em 0 0 -1em;
+	    margin: 0.3em 0 0 -0.25em;
 	}	
 	.connect-screen {
 	    height: 46vw;
@@ -2573,7 +2623,7 @@ footer{
 	}
 
 	.ofrta {
-	    line-height: 2.8vw;
+	    line-height: 2.4vw;
 	}
 
 	.connect_screen_shader p {

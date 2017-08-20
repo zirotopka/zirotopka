@@ -2,13 +2,13 @@ jQuery(document).ready(function(){
 	$(window).scroll(function(){
 		if ($("#Scrollspy ul li").hasClass("active")) {
 			$('.spy_sections').attr('style','display: block!important;');
-			$('#prgr_l_mn').attr('style','display: none;');
-			$('#bns_l_mn').attr('style','display: none;');
+			$('.index_spy').attr('style','display: block!important;');
+			$('#mn_l_mn').attr('style','border-left: 0.4em solid #F36D00; padding: 1.5em 0 1em 4em!important;')
 		}
 		else {
 			$('.spy_sections').attr('style','display: none!important;');
-			$('#prgr_l_mn').attr('style','display: block;');
-			$('#bns_l_mn').attr('style','display: block;');
+			$('.index_spy').attr('style','display: none!important;');
+			$('#mn_l_mn').attr('style','border-left: none; padding: 1.5em 0 1em 4em!important;')
 		};		
 	});
 

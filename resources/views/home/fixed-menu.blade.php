@@ -44,16 +44,6 @@
                         <p>ГЛАВНАЯ</p>
                     </a> 
                 </li>
-                <li>
-                    <a href="/program" class="profile_btns" id="prgr_l_mn">
-                        <p>программа <br> тренировок</p>
-                    </a> 
-                </li>
-                <li>
-                    <a href="/bonus" class="profile_btns" id="bns_l_mn">
-                        <p>бонусная <br> программа</p>
-                    </a> 
-                </li>
                 <div class="index_spy">
                     <li class="sc">
                         <p class="fm_line">|</p>
@@ -72,7 +62,7 @@
                     <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#section_4" class="spy_sections">
-                            <p>04 БОНУСЫ</p>
+                            <p>04 БОНУСНАЯ</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
@@ -105,6 +95,16 @@
                         <p class="fm_line">|</p>
                     </li>
                 </div>
+                <li>
+                    <a href="/program" class="profile_btns" id="prgr_l_mn">
+                        <p>программа <br> тренировок</p>
+                    </a> 
+                </li>
+                <li>
+                    <a href="/bonus" class="profile_btns" id="bns_l_mn">
+                        <p>бонусная <br> программа</p>
+                    </a> 
+                </li>
                 <div class="bonus_spy">
                     <li class="sc">
                         <p class="fm_line">|</p>

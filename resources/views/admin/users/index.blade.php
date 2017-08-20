@@ -1,6 +1,8 @@
 @extends('admin.layouts.main')
 
 @section('css')
+    <link rel="stylesheet" href="/assets/admin/users.css">
+
     @parent
 @overwrite
 
