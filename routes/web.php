@@ -60,11 +60,11 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	});
 
 	//Yandex
-	Route::post('/yandex/checkURL', ['uses' => 'Api\YandexController@checkURL']);
-	Route::post('/yandex/checkURLTest', ['uses' => 'Api\YandexController@checkURLTest']);
+	Route::post('/yandex/CheckURL', ['uses' => 'Api\YandexController@checkURL']);
+	Route::post('/yandex/CheckURLTest', ['uses' => 'Api\YandexController@checkURLTest']);
 
-	Route::post('/yandex/avisoURL', ['uses' => 'Api\YandexController@avisoURL']);
-	Route::post('/yandex/avisoURLTest', ['uses' => 'Api\YandexController@avisoURLTest']);
+	Route::post('/yandex/AvisoURL', ['uses' => 'Api\YandexController@avisoURL']);
+	Route::post('/yandex/AvisoURLTest', ['uses' => 'Api\YandexController@avisoURLTest']);
 
 	Route::post('api/yandex/payment_aviso_test', ['uses' => 'Api\YandexController@paymentAvisoURLTest']);
 	Route::post('api/yandex/payment_aviso', ['uses' => 'Api\YandexController@paymentAvisoURL']);
