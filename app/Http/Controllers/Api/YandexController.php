@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Http\Controllers\Controller;
 
+use Log;
+
 class YandexController extends Controller
 {   
     // public function checkURL(Request $request)
