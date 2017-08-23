@@ -71,8 +71,8 @@ Route::post('api/private_office/store_training', ['uses' => 'Api\PrivateOfficeAp
 
 
 //Yandex
-Route::post('/yandex/CheckURL', ['uses' => 'Api\YandexController@checkURL']);
-Route::post('/yandex/CheckURLTest', ['uses' => 'Api\YandexController@checkURLTest']);
+Route::any('yandex/CheckURL', ['uses' => 'Api\YandexController@checkURL']);
+Route::any('yandex/CheckURLTest', ['uses' => 'Api\YandexController@checkURLTest']);
 
-Route::post('/yandex/AvisoURL', ['uses' => 'Api\YandexController@avisoURL']);
-Route::post('/yandex/AvisoURLTest', ['uses' => 'Api\YandexController@avisoURLTest']);
+Route::any('yandex/AvisoURL', ['uses' => 'Api\YandexController@avisoURL']);
+Route::any('yandex/AvisoURLTest', ['uses' => 'Api\YandexController@avisoURLTest']);
