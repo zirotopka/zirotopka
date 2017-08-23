@@ -16,7 +16,7 @@
     <input name="shopId" value="147658" type="hidden"/>
     <input name="scid" value="557261" type="hidden"/>
     {{-- <input name="sum" value="{{$sum}}" type="hidden"> --}}
-    <input name="sum" value="1" type="hidden">
+    <input name="sum" value="100.00" type="hidden">
     <input name="customerNumber" value="{{md5(uniqid())}}" type="hidden"/>
     <input name="paymentType" value="AC" type="hidden"/>
     <input name="cps_phone" value="{{$user->phone}}" type="hidden"/>
