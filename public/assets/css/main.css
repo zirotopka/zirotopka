@@ -2436,6 +2436,18 @@ footer{
 	    margin: 12% 0 0 -0.8vw;
 	}
 
+@media not all and (min-resolution:.001dpcm) { @media {
+			.connect_screen_shader p {
+		    font-size: 18vw!important;
+		}
+	}
+}
+
+@-moz-document url-prefix() {
+	.connect_screen_shader p {
+	    font-size: 20.4vw!important;
+	}
+}
 	.connect {
 	    font-size: 3.5vw;
 	    padding: 8vw 0 0 0;
