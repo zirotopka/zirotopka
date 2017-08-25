@@ -29,7 +29,7 @@
 	@if ($type == 2)
 		<form action="#" id="new_message_form">
 			{{ csrf_field() }}
-			<input name="recipient_id" type="hidden" value="1">
+			<input name="recipient_id" type="hidden" value="{{$message->sender_id}}">
 			<input name="sender_id" type="hidden" value="{{$user->id}}">
 			<input name="subject" type="hidden" value="{{$message->subject}}">
 			<br>

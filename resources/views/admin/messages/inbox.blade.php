@@ -4,13 +4,16 @@
     @parent
     <!-- Добавлять css тут -->
     <link href="/assets/messages/messages.css" type="text/css" rel="stylesheet">
+	<link href="/assets/swiper/swiper.min.css" type="text/css" rel="stylesheet">
 
 @overwrite
 
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script type="text/javascript" src="/assets/messages/message.js"></script>    
+    <script type="text/javascript" src="/assets/messages/message_admin.js"></script>
+	<script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
+
 
 @overwrite
 @section("content")
