@@ -60,7 +60,7 @@ class FileApiController extends Controller
             	$preview_url = '/ico/video-default.png';
             }
 
-            return response()->json(['code' => 200, 'file_url' => $request->get('destinationPath'), 'type' => $mime_type, 'preview' => $preview_url, 'file_name' => $fileName ]);
+            return response()->json(['code' => 200, 'file_url' => $request->get('destinationPath').$fileName, 'type' => $mime_type, 'preview' => $preview_url, 'file_name' => $fileName ]);
         } else {
             return response()->json(['code' => 404, 'text' => 'File not found']);
         }
