@@ -42,7 +42,7 @@ class FileApiController extends Controller
             $file = $request->file('file');
 
             $fileName = time() . '-' . $file->getClientOriginalName();
-            $destinationPath = $request->get('destinationPath');
+            $destinationPath = public_path().$request->get('destinationPath');
             $file->move($destinationPath, $fileName);
 
             $url = $destinationPath.$fileName;
