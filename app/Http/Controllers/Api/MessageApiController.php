@@ -162,7 +162,7 @@ class MessageApiController extends Controller
 							$file->preview_url = '/messages/preview_'.$file_name;
 						}
 
-						$mime_type = mime_content_type($file_url);
+						$mime_type = mime_content_type(public_path().$file_url);
 
 						if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
 							$file->file_type = 2;
