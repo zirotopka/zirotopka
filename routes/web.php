@@ -59,9 +59,20 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 		Route::resource('admin/accruals', 'Admin\AccrualsController');
 	});
 
+	Route::post('api/yandex/payment_aviso_test', ['uses' => 'Api\YandexController@paymentAvisoURLTest']);
+	Route::post('api/yandex/payment_aviso', ['uses' => 'Api\YandexController@paymentAvisoURL']);
+
 });
 
 Route::get('api/user/email_store', ['uses' => 'Api\UserApiController@email_store']);
 Route::post('api/file/store_attachment', ['uses' => 'Api\FileApiController@store_attachment']);
 
 Route::post('api/private_office/store_training', ['uses' => 'Api\PrivateOfficeApiController@store_training']);
+
+
+//Yandex
+Route::any('yandex/CheckURL', ['uses' => 'Api\YandexController@checkURL']);
+Route::any('yandex/CheckURLTest', ['uses' => 'Api\YandexController@checkURLTest']);
+
+Route::any('yandex/AvisoURL', ['uses' => 'Api\YandexController@avisoURL']);
+Route::any('yandex/AvisoURLTest', ['uses' => 'Api\YandexController@avisoURLTest']);

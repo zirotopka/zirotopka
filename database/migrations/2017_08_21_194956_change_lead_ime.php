@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class LeadTimeChange extends Migration
+class ChangeLeadIme extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,14 @@ class LeadTimeChange extends Migration
      * @return void
      */
     public function up()
-    {
+    {   
+
         Schema::table('programm_days', function (Blueprint $table) {
-            $table->string('lead_time');
+            $table->dropColumn('lead_time');
+        });
+
+        Schema::table('programm_days', function (Blueprint $table) {
+            $table->string('lead_time')->nullable();
         });
     }
 
@@ -26,7 +31,11 @@ class LeadTimeChange extends Migration
     public function down()
     {
         Schema::table('programm_days', function (Blueprint $table) {
-            $table->dropColumn('lead_time');
+            $table->integer('lead_time');
+        });
+
+        Schema::table('programm_days', function (Blueprint $table) {
+            $table->dropColumn('lead_time')->nullable();
         });
     }
 }
