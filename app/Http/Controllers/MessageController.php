@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
 use Illuminate\Http\Request;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use App\User;
 use App\Balance;
 use App\Message;
+
+use DB;
+use App\Quotation;
 
 use App\Http\Controllers\Api\MessageApiController;
 
@@ -108,7 +112,14 @@ class MessageController extends Controller
                 'message' => $message,
                 'type' => $type,
             ];
-            $view = view('messages.show', $data)->render();
+
+			$user_role = DB::table('role_users')->where('user_id', '=', $user->id)->first();
+
+			if ($user_role->role_id == 4) {
+				$view = view('admin.messages.show', $data)->render();
+			} else {
+				$view = view('messages.show', $data)->render();
+			}
 
             return ['response' => 200, 'data' => $view];
         }
