@@ -113,14 +113,14 @@ class MessageApiController extends Controller
 							$file = new File;
 							$file->file_url = $file_url;
 
-							$file_name = basename($file_url);
+							$file_name = basename(public_path().$file_url);
 
 							if (file_exists(public_path() . '/messages/preview_' . $file_name))
 							{
-								$file->preview_url = public_path() . '/messages/preview_' . $file_name;
+								$file->preview_url = '/messages/preview_' . $file_name;
 							}
 
-							$mime_type = mime_content_type($file_url);
+							$mime_type = mime_content_type(public_path().$file_url);
 
 							if (in_array($mime_type, ['image/jpeg', 'image/pjpeg', 'image/png']))
 							{
@@ -156,10 +156,10 @@ class MessageApiController extends Controller
 						$file = new File;
 						$file->file_url = $file_url;
 
-						$file_name = basename($file_url);
+						$file_name = basename(public_path().$file_url);
 
 						if (file_exists(public_path().'/messages/preview_'.$file_name)) {
-							$file->preview_url = public_path().'/messages/preview_'.$file_name;
+							$file->preview_url = '/messages/preview_'.$file_name;
 						}
 
 						$mime_type = mime_content_type($file_url);

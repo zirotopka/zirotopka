@@ -51,7 +51,7 @@ class PrivateOfficeApiController extends Controller
                 if ($training->save()) {
                     DB::beginTransaction();
                     foreach ($stage_url as $file_url) {
-                        $file_name = basename($file_url);
+                        $file_name = basename(public_path().$file_url);
 
                         $file = new File;
                         $file->file_url = '/trainings/'.$file_name;
@@ -60,7 +60,7 @@ class PrivateOfficeApiController extends Controller
                              $file->preview_url = '/trainings/preview_'.$file_name;
                         }
 
-                        $mime_type = mime_content_type($file_url);
+                        $mime_type = mime_content_type(public_path().$file_url);
 
                         if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
                             $file->file_type = 2; 
