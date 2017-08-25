@@ -23,8 +23,6 @@ class MessageController extends Controller
     {   
         $user = Sentinel::getUser();
 
-        $messages = [];
-
         if ($type == 1) {
             $messages = $user->output_messages()->paginate(10);
         } else {
@@ -39,6 +37,26 @@ class MessageController extends Controller
         return view('messages.inbox', $data);
     }
 
+	public function index_admin($type)
+	{
+		$user = Sentinel::getUser();
+
+		if ($type == 1) {
+			$messages = Message::where('sender_id','=',1)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
+
+		} else {
+			$messages = Message::where('recipient_id','=',1)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
+		}
+
+		$data = [
+			'user' => $user,
+			'messages' => $messages,
+			'type' => $type,
+		];
+
+		return view('admin.messages.inbox', $data);
+	}
+
     /**
      * Show the form for creating a new resource.
      *
@@ -52,6 +70,26 @@ class MessageController extends Controller
         ];
         return view('messages.new_message', $data);
     }
+
+	public function sendAll(Request $request)
+	{
+		$user = Sentinel::getUser();
+		$data = [
+			'user' => $user,
+			'recipient_id' => -1
+		];
+		return view('admin.messages.new_message', $data);
+	}
+
+	public function create_admin($recipient_id, Request $request)
+	{
+		$user = Sentinel::getUser();
+		$data = [
+			'user' => $user,
+			'recipient_id' => $recipient_id
+		];
+		return view('admin.messages.new_message', $data);
+	}
     /**
      * Display the specified resource.
      *
@@ -77,4 +115,24 @@ class MessageController extends Controller
 
         return ['response' => 404, 'text' => 'Сообщение не найдено'];
     }
+
+	public function show_admin($id, Request $request)
+	{
+		$user = Sentinel::getUser();
+		$type = $request->get('type');
+		$message = Message::where('id','=',$id)->with('outputs','files')->first();
+
+		if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $user->id == $message->recipient_id)) {
+			$data = [
+				'user' => $user,
+				'message' => $message,
+				'type' => $type,
+			];
+			$view = view('admin.messages.show', $data)->render();
+
+			return ['response' => 200, 'data' => $view];
+		}
+
+		return ['response' => 404, 'text' => 'Сообщение не найдено'];
+	}
 }

@@ -92,47 +92,100 @@ class MessageApiController extends Controller
             return response()->json(['code' => 406, 'text' => 'Uncorrect data id']);
         }
 
-        $message = new Message;
-        $message->recipient_id = $recipient_id;
-        $message->sender_id = $sender_id;
-        $message->subject = $request->get('subject');
-        $message->text = $request->get('text');
-        $message->is_read = 0;
-        if ( $message->save() ) {
-            if ($request->has('attachment')) {
-                DB::beginTransaction();
-                foreach ($request->get('attachment') as $file_url) {
-                    $file = new File;
-                    $file->file_url = $file_url;
+        if ($recipient_id == -1) {
 
-                    $file_name = basename($file_url);
+        	$allUsers = User::select('id')->get();
+        	foreach ($allUsers as $target) {
 
-                    if (file_exists(public_path().'/messages/preview_'.$file_name)) {
-                         $file->preview_url = public_path().'/messages/preview_'.$file_name;
-                    }
+				$message = new Message;
+				$message->recipient_id = $target->id;
+				$message->sender_id = $sender_id;
+				$message->subject = $request->get('subject');
+				$message->text = $request->get('text');
+				$message->is_read = 0;
+				if ( $message->save() )
+				{
+					if ($request->has('attachment'))
+					{
+						DB::beginTransaction();
+						foreach ($request->get('attachment') as $file_url)
+						{
+							$file = new File;
+							$file->file_url = $file_url;
 
-                    $mime_type = mime_content_type($file_url);
+							$file_name = basename($file_url);
 
-                    if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
-                        $file->file_type = 2; 
-                    } elseif (in_array($mime_type,['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv'])) {
-                        $file->file_type = 3; 
-                    }
+							if (file_exists(public_path() . '/messages/preview_' . $file_name))
+							{
+								$file->preview_url = public_path() . '/messages/preview_' . $file_name;
+							}
 
-                    $file->owner_type = 'message';
-                    $file->owner_id = $message->id;
+							$mime_type = mime_content_type($file_url);
 
-                    $file->save();
-                }
-                DB::commit();
-            }
+							if (in_array($mime_type, ['image/jpeg', 'image/pjpeg', 'image/png']))
+							{
+								$file->file_type = 2;
+							} elseif (in_array($mime_type, ['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv']))
+							{
+								$file->file_type = 3;
+							}
 
-            return response()->json(['code' => 200, 'text' => 'Message is send', 'data' => $message->id]);
-        } else {
-            return response()->json(['code' => 400, 'text' => 'Message is not save']);
-        }
+							$file->owner_type = 'message';
+							$file->owner_id = $message->id;
+
+							$file->save();
+						}
+						DB::commit();
+					}
+				}
+			}
+
+			return response()->json(['code' => 200, 'text' => 'Message is send', 'data' => $message->id]);
+
+		} else {
+			$message = new Message;
+			$message->recipient_id = $recipient_id;
+			$message->sender_id = $sender_id;
+			$message->subject = $request->get('subject');
+			$message->text = $request->get('text');
+			$message->is_read = 0;
+			if ( $message->save() ) {
+				if ($request->has('attachment')) {
+					DB::beginTransaction();
+					foreach ($request->get('attachment') as $file_url) {
+						$file = new File;
+						$file->file_url = $file_url;
+
+						$file_name = basename($file_url);
+
+						if (file_exists(public_path().'/messages/preview_'.$file_name)) {
+							$file->preview_url = public_path().'/messages/preview_'.$file_name;
+						}
+
+						$mime_type = mime_content_type($file_url);
+
+						if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
+							$file->file_type = 2;
+						} elseif (in_array($mime_type,['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv'])) {
+							$file->file_type = 3;
+						}
+
+						$file->owner_type = 'message';
+						$file->owner_id = $message->id;
+
+						$file->save();
+					}
+					DB::commit();
+				}
+
+				return response()->json(['code' => 200, 'text' => 'Message is send', 'data' => $message->id]);
+			} else {
+				return response()->json(['code' => 400, 'text' => 'Message is not save']);
+			}
+		}
+
+
     }
-
     /**
      * Display the specified resource.
      *

@@ -57,6 +57,19 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 		Route::resource('admin/users', 'Admin\UsersController');
 		Route::post('admin/change_status/{id}', ['uses' => 'Admin\UsersController@change_status']);
 		Route::resource('admin/accruals', 'Admin\AccrualsController');
+
+		//Message
+		Route::get('admin/messages/sendAll', ['uses' => 'MessageController@sendAll']);
+		Route::get('admin/messages/new/{id}', ['uses' => 'MessageController@create_admin']);
+		Route::get('admin/messages/{type}', ['uses' => 'MessageController@index_admin']);
+		Route::get('admin/message/{id}', ['uses' => 'MessageController@show_admin']);
+
+		Route::get('admin/tasks', ['uses' => 'Admin\TaskController@index'])->name('tasks');
+		Route::post('admin/tasks', ['uses' => 'Admin\TaskController@post_index']);
+		Route::get('admin/tasks/{id}/{status}', ['uses' => 'Admin\TaskController@change_status']);
+		Route::get('admin/tasks/{id}', ['uses' => 'Admin\TaskController@task']);
+
+
 	});
 
 	Route::post('api/yandex/payment_aviso_test', ['uses' => 'Api\YandexController@paymentAvisoURLTest']);

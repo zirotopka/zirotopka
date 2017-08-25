@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         $roles = [
         	['name' => 'Клиент', 'slug' => 'client'],
-        	['name' => 'Мэнеджер', 'slug' => 'manager'],
+        	['name' => 'Менеджер', 'slug' => 'manager'],
         	['name' => 'Админ', 'slug' => 'admin'],
         ];
 
