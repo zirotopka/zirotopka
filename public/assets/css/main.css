@@ -2195,25 +2195,25 @@ footer{
 	}
 
 	.start {
-	    height: 42.2vw;
-	    width: 36vw;
+	    height: 43.2vw;
+	    width: 37vw;
 	}
 
 	.first_progr_string ul li img, .second_progr_string ul li img {
 	    width: 25.5vw;
-	    height: 20.5vw;
+	    height: 20.89vw;
 	}
 
 	.start_shader_gray {
-	    margin: -42.2vw 0 0 0;
-	    height: 42.3vw;
-	    width: 36vw;
+	    margin: -43.2vw 0 0 0;
+	    height: 43.3vw;
+	    width: 37vw;
 	}
 
 	.pro_shader_gray, .run_shader_gray {
-	    margin: -20.5vw 0 0 0;
+	    margin: -20.89vw 0 0 0;
 	    width: 25.5vw;
-	    height: 20.6vw;
+	    height: 20.89vw;
 	}
 
 	.pow_shader_gray, .runp_shader_gray {
@@ -2239,9 +2239,9 @@ footer{
 	}
 
 	.start_shader {
-	    margin: -42.3vw 0 0 0;
-	    width: 36vw;
-	    height: 42.4vw;
+	    margin: -43.3vw 0 0 0;
+	    width: 37vw;
+	    height: 43.4vw;
 		display: block!important;
 	}
 
@@ -2258,15 +2258,15 @@ footer{
 	}
 
 	.pro_shader, .run_shader {
-	    height: 20.6vw;
-	    margin: -20.5vw 0 0 -0.05vw;
-	    width: 25.6vw;
+	    height: 20.89vw;
+	    margin: -20.89vw 0 0 -0.05vw;
+	    width: 25.5vw;
 	}
 
 	.pow_shader, .runp_shader {
 	    width: 25.5vw;
-	    margin: -20.5vw 0 0 1em;
-	    height: 20.6vw;
+	    margin: -20.89vw 0 0 1em;
+	    height: 20.89vw;
 	}
 
 	.progr-arrow {
@@ -2415,6 +2415,11 @@ footer{
 	    height: 1.1vw;
 	    width: 1.1vw;
 	    margin: 0.3em 0 0 -1em;
+	}
+
+	.prg img {
+	    margin-left: -0.8em;
+	    margin-right: 0.2em;
 	}
 
 	.connect_screen_shader {
