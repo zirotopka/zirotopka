@@ -2102,6 +2102,12 @@ footer{
 }
 
 @media only screen and (min-width : 768px) and (max-width : 991px) and (orientation: portrait){
+@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
+			.connect_screen_shader p {
+		    font-size: 20vw!important;
+		}
+	}
+}
 .side_logo {
     width: 85%;
 }
@@ -2436,12 +2442,6 @@ footer{
 	    margin: 12% 0 0 -0.8vw;
 	}
 
-@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
-			.connect_screen_shader p {
-		    font-size: 20vw!important;
-		}
-	}
-}
 
 @-moz-document url-prefix() {
 	.connect_screen_shader p {
