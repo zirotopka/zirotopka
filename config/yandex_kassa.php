@@ -94,7 +94,7 @@ return [
             'url' => '/yandex_kassa/cancelOrder'
         ],
         'paymentAviso' => [
-            'url' => '/yandex_kassa/paymentAviso',
+            'url' => '/yandex/AvisoURLTest',
         ]
     ],
 ];
