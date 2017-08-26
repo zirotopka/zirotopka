@@ -180,6 +180,7 @@ return [
 
         Barryvdh\Debugbar\ServiceProvider::class,
         PulkitJalan\GeoIP\GeoIPServiceProvider::class,
+        Artem328\LaravelYandexKassa\YandexKassaServiceProvider::class,
     ],
 
     /*
@@ -234,6 +235,7 @@ return [
         'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'GeoIP' => PulkitJalan\GeoIP\Facades\GeoIP::class,
+        'YandexKassa' => Artem328\LaravelYandexKassa\Facades\YandexKassa::class,
     ],
 
 ];
