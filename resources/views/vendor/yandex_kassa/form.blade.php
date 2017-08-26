@@ -7,12 +7,7 @@
 <form action="{{yandex_kassa_form_action()}}" method="{{yandex_kassa_form_method()}}" class="form-horizontal">
     <input name="scId" type="hidden" value="{{yandex_kassa_sc_id()}}">
     <input name="shopId" type="hidden" value="{{yandex_kassa_shop_id()}}">
-    <div class="form-group">
-        <label for="yandex_money_sum" class="control-label col-sm-2">{{trans('yandex_kassa::form.label.sum')}}</label>
-        <div class="col-sm-10">
-            <input name="sum" id="yandex_money_sum" value="100.00" type="hidden">
-        </div>
-    </div>
+    <input name="sum" id="yandex_money_sum" value="100.00" type="hidden">
     <div class="form-group">
         <label for="yandex_money_customer_number" class="control-label col-sm-2">{{trans('yandex_kassa::form.label.customer_number')}}</label>
         <div class="col-sm-10">
