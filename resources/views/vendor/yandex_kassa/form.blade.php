@@ -8,17 +8,12 @@
     <input name="scId" type="hidden" value="{{yandex_kassa_sc_id()}}">
     <input name="shopId" type="hidden" value="{{yandex_kassa_shop_id()}}">
     <input name="sum" id="yandex_money_sum" value="100.00" type="hidden">
-    <div class="form-group">
-        <label for="yandex_money_customer_number" class="control-label col-sm-2">{{trans('yandex_kassa::form.label.customer_number')}}</label>
-        <div class="col-sm-10">
-            <input name="customerNumber" id="yandex_money_customer_number" type="text" class="form-control">
-        </div>
-    </div>
+    <input name="customerNumber" id="yandex_money_customer_number" type="hidden" class="form-control" value="{{ $user->id }}">
     <input name="paymentType" value="AC" type="hidden"/>
     <input name="cps_phone" value="{{$user->phone}}" type="hidden"/>
     <input name="cps_email" value="{{$user->email}}" type="hidden"/>
-    <input name="shopSuccessURL" value="{{env('APP_URL').'/yandex/answer/'.$user->id.'?type=success'}}" type="hidden"/>
-    <input name="shopFailURL" value="{{env('APP_URL').'/yandex/answer/'.$user->id.'?type=fail'}}" type="hidden"/>
+    <input name="shopSuccessURL" value="{{env('APP_URL').'/yandex/answer'}}" type="hidden"/>
+    <input name="shopFailURL" value="{{env('APP_URL').'/lk/'.$user->id}}" type="hidden"/>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" class="btn btn-primary">{{trans('yandex_kassa::form.button.pay')}}</button>
