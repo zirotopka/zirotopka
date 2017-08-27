@@ -1,10 +1,12 @@
 <?php
-    namespace App\Listeners;
+namespace App\Listeners;
 
-    use Artem328\LaravelYandexKassa\Events\BeforeCheckOrderResponse;
+use Artem328\LaravelYandexKassa\Events\BeforeCheckOrderResponse;
 
-    class CheckOrderRequisites
-    {
+use \Log;
+
+class CheckOrderRequisites
+{
     /**
      * @param \Artem328\LaravelYandexKassa\Events\BeforeCheckOrderResponse
      * @return array|null

@@ -3,7 +3,7 @@
 namespace App\Listeners;
 
 use Artem328\LaravelYandexKassa\Events\BeforePaymentAvisoResponse;
-use Log;
+use \Log;
 
 class ChangeOrderStatusWhenPaymentSuccessful
 {
