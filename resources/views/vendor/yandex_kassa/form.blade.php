@@ -17,8 +17,8 @@
     <input name="paymentType" value="AC" type="hidden"/>
     <input name="cps_phone" value="{{$user->phone}}" type="hidden"/>
     <input name="cps_email" value="{{$user->email}}" type="hidden"/>
-    <input name="shopSuccessURL" value="{{env('APP_URL').'/lk/'.$user->id.'/yaPay?type=success'}}" type="hidden"/>
-    <input name="shopFailURL" value="{{env('APP_URL').'/lk/'.$user->id.'/yaPay?type=fail'}}" type="hidden"/>
+    <input name="shopSuccessURL" value="{{env('APP_URL').'/yandex/answer/'.$user->id.'?type=success'}}" type="hidden"/>
+    <input name="shopFailURL" value="{{env('APP_URL').'/yandex/answer/'.$user->id.'?type=fail'}}" type="hidden"/>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" class="btn btn-primary">{{trans('yandex_kassa::form.button.pay')}}</button>

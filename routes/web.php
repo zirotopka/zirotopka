@@ -75,6 +75,7 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	Route::post('api/yandex/payment_aviso_test', ['uses' => 'Api\YandexController@paymentAvisoURLTest']);
 	Route::post('api/yandex/payment_aviso', ['uses' => 'Api\YandexController@paymentAvisoURL']);
 
+	Route::get('yandex/answer/{id}', ['uses' => 'Api\YandexController@yandexPay']);
 });
 
 Route::get('api/user/email_store', ['uses' => 'Api\UserApiController@email_store']);
