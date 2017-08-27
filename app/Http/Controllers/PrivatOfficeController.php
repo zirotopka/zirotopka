@@ -37,7 +37,9 @@ class PrivatOfficeController extends Controller
                 $sum = $sum * 0.9;
             }
 
-            return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum]);
+            $shopArticle = env('YANDEX_KASSA_PROGRAM_ID');
+
+            return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum, 'shopArticle' => $shopArticle]);
         }
 
         $current_program_day = 0;

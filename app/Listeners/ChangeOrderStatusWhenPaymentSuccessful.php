@@ -24,10 +24,11 @@ class ChangeOrderStatusWhenPaymentSuccessful
                 $accruals = new Accrual;
                 $accruals->sum = $event->request->get('orderSumAmount');
                 $accruals->type_id = 1;
-                $accruals->user_id = $user->user_id;
+                $accruals->user_id = $user->id;
                 $accruals->balance_id = null;
                 $accruals->comment = 'Оплата программы';
                 $accruals->accruals_yandex_json = json_encode($event->request->all());
+                $accruals->accruals_good_type = 1ж//Программа
 
                 if ($accruals->save()) {
                     $user->is_programm_pay = 1;

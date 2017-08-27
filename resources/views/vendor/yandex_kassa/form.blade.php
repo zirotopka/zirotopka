@@ -8,6 +8,7 @@
     <input name="scId" type="hidden" value="{{yandex_kassa_sc_id()}}">
     <input name="shopId" type="hidden" value="{{yandex_kassa_shop_id()}}">
     <input name="sum" id="yandex_money_sum" value="{{$sum}}" type="hidden">
+    <input name="shopArticleId" type="hidden" class="form-control" value="{{ $shopArticle }}">
     <input name="customerNumber" id="yandex_money_customer_number" type="hidden" class="form-control" value="{{ $user->id }}">
     <input name="paymentType" value="AC" type="hidden"/>
     <input name="cps_phone" value="{{$user->phone}}" type="hidden"/>
