@@ -16,6 +16,18 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\Event' => [
             'App\Listeners\EventListener',
         ],
+
+        'Artem328\LaravelYandexKassa\Events\BeforeCheckOrderResponse' => [
+            'App\Listeners\CheckOrderRequisites',
+            // You can add more than one listener and every
+            // listener can return own parameters. Incoming
+            // parameters WILL NOT extend. But response
+            // parameters WILL override in listeners order
+            // 'App\Listeneres\AddCheckOrderRecord',
+        ],
+        'Artem328\LaravelYandexKassa\Events\BeforePaymentAvisoResponse' => [
+            'App\Listeners\ChangeOrderStatusWhenPaymentSuccessful',
+        ],
     ];
 
     /**
