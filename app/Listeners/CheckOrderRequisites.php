@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Listeners;
 
 use Artem328\LaravelYandexKassa\Events\BeforeCheckOrderResponse;
