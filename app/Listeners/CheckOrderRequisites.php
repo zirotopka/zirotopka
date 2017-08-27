@@ -2,6 +2,7 @@
 namespace App\Listeners;
 
 use Artem328\LaravelYandexKassa\Events\BeforeCheckOrderResponse;
+use App\User;
 
 use \Log;
 
@@ -14,19 +15,23 @@ class CheckOrderRequisites
     public function handle(BeforeCheckOrderResponse $event)
     {   
         Log::info(json_encode($event->request->all()));
-        // If you have some custom validation of payment form
-        // You can change response parameters before controller
-        // will show it
-        if ($event->request->get('customField') != '1') {
-            $event->responseParameters['code'] = 100;
-            $event->responseParameters['message'] = 'Some checkbox was not checked';
-            // You must to return response parameters array,
-            // for apply changes
-            return $event->responseParameters;
+        if ( $event->request->has('customerNumber') ) {
+           $user = User::find(intval($event->request->get('customerNumber'))); 
+
+            if (!empty($user) && !empty($user->current_programm_id) && empty($user->is_programm_pay)) {
+                $sum = $user->current_program->cost;
+
+                if (intval($sum) == intval($event->request->get('orderSumAmount'))) {
+                    return $event->responseParameters;
+                } else {
+                    $event->responseParameters['code'] = 100;
+                    $event->responseParameters['message'] = 'Сумма оплаты не совпадает с суммой программы';
+
+                    return $event->responseParameters;
+                }
+            }
         }
 
-        // If there's no parameters changes
-        // just return null or empty array
         return null;
     }
 }
