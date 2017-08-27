@@ -21,6 +21,11 @@ class CheckOrderRequisites
 
             if (!empty($user) && !empty($user->current_programm_id) && empty($user->is_programm_pay)) {
                 $sum = $user->current_program->cost;
+                $parents = $user->parents;
+
+                if (count($parents) > 0) {
+                    $sum = $sum * 0.9;
+                }
 
                 if (intval($sum) == intval($event->request->get('orderSumAmount'))) {
                     return $event->responseParameters;

@@ -31,6 +31,11 @@ class PrivatOfficeController extends Controller
         //Оплата програм
         if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
             $sum = $user->current_program->cost;
+            $parents = $user->parents;
+
+            if (count($parents) > 0) {
+                $sum = $sum * 0.9;
+            }
 
             return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum]);
         }
