@@ -28,7 +28,7 @@ class ChangeOrderStatusWhenPaymentSuccessful
                 $accruals->balance_id = null;
                 $accruals->comment = 'Оплата программы';
                 $accruals->accruals_yandex_json = json_encode($event->request->all());
-                $accruals->accruals_good_type = 1ж//Программа
+                $accruals->accruals_good_type = 1;//Программа
 
                 if ($accruals->save()) {
                     $user->is_programm_pay = 1;
