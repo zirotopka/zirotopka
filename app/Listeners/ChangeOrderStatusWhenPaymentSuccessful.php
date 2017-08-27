@@ -32,9 +32,16 @@ class ChangeOrderStatusWhenPaymentSuccessful
 
                 if ($accruals->save()) {
                     $user->is_programm_pay = 1;
+                    $user->status = 1;
                     $user->save();
+                } else {
+                    Log::warning('Счет не сохранен');
                 }
+            } else {
+                Log::warning('Пользователь не найден');
             }
+        } else {
+             Log::warning('Невалидный ответ');
         }
     }
 }
