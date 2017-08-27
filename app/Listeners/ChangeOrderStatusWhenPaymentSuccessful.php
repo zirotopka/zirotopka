@@ -4,7 +4,7 @@ namespace App\Listeners;
 
 use Artem328\LaravelYandexKassa\Events\BeforePaymentAvisoResponse;
 use App\User;
-use App\Accruals;
+use App\Accrual;
 use \Log;
 
 class ChangeOrderStatusWhenPaymentSuccessful
@@ -21,7 +21,7 @@ class ChangeOrderStatusWhenPaymentSuccessful
         if ($event->request->isValidHash()) {
             $user = User::find(intval($event->request->get('customerNumber'))); 
             if (!empty($user)) {
-                $accruals = new Accruals;
+                $accruals = new Accrual;
                 $accruals->sum = $event->request->get('orderSumAmount');
                 $accruals->type_id = 1;
                 $accruals->user_id = $user->user_id;
