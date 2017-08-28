@@ -4,6 +4,7 @@
     @parent
     <link href="/assets/privat_account/pay-modal.css" type="text/css" rel="stylesheet">
 
+
 @overwrite
 
 @section('js')

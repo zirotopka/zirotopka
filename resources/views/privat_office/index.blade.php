@@ -7,6 +7,7 @@
     <link href="http://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
     <link href="/assets/privat_account/account.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
+
     <!-- <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet"> -->
 @overwrite
 

@@ -27,6 +27,29 @@
 	font-size: 1vw;
 }
 
+.profile_btns{
+	text-decoration: none;
+	display: block;
+    padding: 1.35em 0 1.55em 0em!important;
+	outline: none;
+	color: #f3efe0;
+	text-transform: uppercase;
+	text-shadow: 0 0 1px rgba(255,255,255,0.1);
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 0.9vw!important;
+	box-shadow: none!important;
+}
+
+.user-fln{
+    font-family: MuseoSansCyrl_100;
+    font-size: 0.9vw;
+}
+
+.prof-disp {
+    vertical-align: middle;
+}
+
 .price{
 	margin:2.5vw 0 0 0;
 }
