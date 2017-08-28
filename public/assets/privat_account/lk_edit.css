@@ -530,6 +530,8 @@ input{
 	
 	.hw-cls {
 	    width: 4vw;
+<<<<<<< HEAD
+=======
 	}
 
 	.yadik {
@@ -542,5 +544,16 @@ input{
 	}
 	.wh-line {
 	    margin: 1em 0 0 3px;
+>>>>>>> d45b1291f54e5875e49b7f7917a6625c9676498d
 	}
+
+	.yadik {
+	    height: 4vw;
+		font-size: 1vw;
+	}
+
+	.row{
+		padding:0;
+	}
+
 }
