@@ -256,6 +256,7 @@ input{
 .wh-line{
 	width: 1vw;
 	display: inline-block;
+    margin: 1em 0 0 3px;
 }
 
 .day, .month, .year{
@@ -539,5 +540,7 @@ input{
 	.row{
 		padding:0;
 	}
-
+	.wh-line {
+	    margin: 1em 0 0 3px;
+	}
 }
