@@ -51,4 +51,9 @@ class YandexController extends Controller
         Log::info(json_encode($request->all()));
     }
 
+    public function yandexPay(Request $request)
+    {   
+        dd($request->all());
+    }
+
 }

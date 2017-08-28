@@ -31,8 +31,15 @@ class PrivatOfficeController extends Controller
         //Оплата програм
         if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
             $sum = $user->current_program->cost;
+            $parents = $user->parents;
 
-            return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum]);
+            if (count($parents) > 0) {
+                $sum = $sum * 0.9;
+            }
+
+            $shopArticle = env('YANDEX_KASSA_PROGRAM_ID');
+
+            return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum, 'shopArticle' => $shopArticle]);
         }
 
         $current_program_day = 0;
@@ -68,6 +75,59 @@ class PrivatOfficeController extends Controller
 
     	return view('privat_office.index', $data);
     }
+
+	public function index_admin($id)
+	{
+		$user = User::where('id', $id)->first();
+
+		//Выбор программы
+		if ( empty($user->current_programm_id) ) {
+			$programs = Programm::select('id','description','name')
+				->get();
+
+			return view('privat_office._partials._choose_program_form', ['user' => $user, 'programs' => $programs]);
+		}
+
+		//Оплата програм
+		if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
+			$sum = $user->current_program->cost;
+
+			return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum]);
+		}
+
+		$current_program_day = 0;
+		$programm_days = 0;
+		$programm_stages = 0;
+
+		if ( !empty($user->current_programm_id) ) {
+			$programm_days = ProgrammDay::select('id','day','status','interest','lead_time', 'difficult')
+				->where('programm_id','=',$user->current_programm_id)
+				->orderBy('day')->get();
+
+			if (!empty($user->current_day)) {
+				$current_program_day = $programm_days->whereStrict('day',$user->current_day)->first();
+
+				if (!empty($current_program_day)) {
+					$programm_stages = ProgrammStage::select('id','exercise_id','status','description', 'repeat_count','time_exercive')
+						->where('programm_day_id','=',$current_program_day->id)
+						->with('exercive')
+						->get();
+				}
+			}
+		}
+
+		$difficult_array = ProgrammDay::$difficult_array;
+
+		$data = [
+			'user' => $user,
+			'programm_days' => $programm_days,
+			'difficult_array' => $difficult_array,
+			'programm_stages' => $programm_stages,
+			'current_program_day' => $current_program_day,
+		];
+
+		return view('privat_office.index', $data);
+	}
 
     /**
      * Получаем видео по тренировке 

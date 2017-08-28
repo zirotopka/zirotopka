@@ -16,13 +16,13 @@ $( document ).ready(function() {
 				if (result['code'] == 200) {
 					 swal({
 					   title: 'Ваше сообщение отправлено!',
-					   text: 'Тренер вскоре ответит вам',
+					   text: 'Успешно отправлено',
 					   showCloseButton: true,
 					   showConfirmButton: false,
 					 }).then(
 					   function () {
 					    }, function (dismiss) {
-					    	location.href = '/messages/1';
+					    	location.href = '/admin/messages/1';
 					 	}
 					 )
 				} else {
@@ -72,7 +72,7 @@ $( document ).ready(function() {
 				   showCloseButton: true,
 				   showConfirmButton: false,
 				})
-            }
+            } 
 	  	});
 	});
 	$('body').on('change','.add_file', function() {
@@ -98,27 +98,27 @@ $( document ).ready(function() {
 		        type: 'POST',
 		        data: formData,
 		        cache: false,
-		        processData: false,
-		        contentType: false,
+		        processData: false, 
+		        contentType: false, 
 		        success: function(result) {
 		        	if (result['code'] == 200) {
 		        		$(".msg_text").attr('style','border-radius:0;');
 		        		$("#attachment-container").attr('style','border-right: 0.1em solid #C5C5C5;border-left: 0.1em solid #C5C5C5;border-bottom: 0.1em solid #C5C5C5;')
 						var attachment_container = $('#attachment-container'),
 							attachment_html = '';
-						if (result['file_type']= 2) {
-							attachment_html += '<div class="attachment-item" >';
+						if (result['file_type']= 2) {	
+							attachment_html += '<div class="attachment-item" >'; 
 							attachment_html += '<img class="attachment-img" id="attachment-img" src="' + result['preview'] + '">';
 							attachment_html += '<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>';
-							attachment_html += '<input type="hidden" name="attachment[' + attachment_count + ']" value="' + result['file_url'] + '">';
-							attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>';
-							attachment_html += '</div>';
+							attachment_html += '<input type="hidden" name="attachment[' + attachment_count + ']" value="' + result['file_url'] + '">'; 
+							attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>'; 
+							attachment_html += '</div>'; 
 						} else if (result['file_type'] = 3) {
-							attachment_html += '<div class="attachment-item" >';
+							attachment_html += '<div class="attachment-item" >'; 
 							attachment_html += '<img class="attachment-img" src="/ico/video-default.png">';
 							attachment_html += '<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>';
-							attachment_html += '<input type="hidden" name="attachment[' + attachment_count + ']" value="' + result['file_url'] + '">';
-							attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>';
+							attachment_html += '<input type="hidden" name="attachment[' + attachment_count + ']" value="' + result['file_url'] + '">'; 
+							attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>'; 
 							attachment_html += '</div>';
 						}
 						attachment_container.append(attachment_html);

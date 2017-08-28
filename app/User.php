@@ -38,6 +38,16 @@ class User extends CartalystUser
         return $this->hasOne('App\Balance','user_id');
     }
 
+    public function parents()
+    {
+        return $this->belongsToMany('App\User','adjancy_lists','user_id','pid');
+    }
+
+    public function children()
+    {
+        return $this->belongsToMany('App\User','adjancy_lists','pid','user_id');
+    }
+
     public function accruals()
     {
         return $this->hasMany('App\Accrual','user_id');

@@ -39,6 +39,12 @@
                 <li>
                     <a href="/admin/accruals" class="profile_btns"><p class="prof-disp">Счета</p></a> 
                 </li>
+                <li>
+                    <a href="/admin/messages/2" class="profile_btns"><p class="prof-disp">Сообщения</p></a>
+                </li>
+                <li>
+                    <a href="/admin/tasks" class="profile_btns"><p class="prof-disp">Задания</p></a>
+                </li>
             </ul>
         </nav>
 <!-- Шапка сайта -->

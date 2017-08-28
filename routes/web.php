@@ -57,11 +57,25 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 		Route::resource('admin/users', 'Admin\UsersController');
 		Route::post('admin/change_status/{id}', ['uses' => 'Admin\UsersController@change_status']);
 		Route::resource('admin/accruals', 'Admin\AccrualsController');
+
+		//Message
+		Route::get('admin/messages/sendAll', ['uses' => 'MessageController@sendAll']);
+		Route::get('admin/messages/new/{id}', ['uses' => 'MessageController@create_admin']);
+		Route::get('admin/messages/{type}', ['uses' => 'MessageController@index_admin']);
+		Route::get('admin/message/{id}', ['uses' => 'MessageController@show_admin']);
+
+		Route::get('admin/tasks', ['uses' => 'Admin\TaskController@index'])->name('tasks');
+		Route::post('admin/tasks', ['uses' => 'Admin\TaskController@post_index']);
+		Route::get('admin/tasks/{id}/{status}', ['uses' => 'Admin\TaskController@change_status']);
+		Route::get('admin/tasks/{id}', ['uses' => 'Admin\TaskController@task']);
+
+
 	});
 
 	Route::post('api/yandex/payment_aviso_test', ['uses' => 'Api\YandexController@paymentAvisoURLTest']);
 	Route::post('api/yandex/payment_aviso', ['uses' => 'Api\YandexController@paymentAvisoURL']);
 
+	Route::get('yandex/answer', ['uses' => 'Api\YandexController@yandexPay']);
 });
 
 Route::get('api/user/email_store', ['uses' => 'Api\UserApiController@email_store']);
@@ -71,8 +85,8 @@ Route::post('api/private_office/store_training', ['uses' => 'Api\PrivateOfficeAp
 
 
 //Yandex
-Route::any('yandex/CheckURL', ['uses' => 'Api\YandexController@checkURL']);
-Route::any('yandex/CheckURLTest', ['uses' => 'Api\YandexController@checkURLTest']);
+// Route::any('yandex/CheckURL', ['uses' => 'Api\YandexController@checkURL']);
+// Route::any('yandex/CheckURLTest', ['uses' => 'Api\YandexController@checkURLTest']);
 
-Route::any('yandex/AvisoURL', ['uses' => 'Api\YandexController@avisoURL']);
-Route::any('yandex/AvisoURLTest', ['uses' => 'Api\YandexController@avisoURLTest']);
+// Route::any('yandex/AvisoURL', ['uses' => 'Api\YandexController@avisoURL']);
+// Route::any('yandex/AvisoURLTest', ['uses' => 'Api\YandexController@avisoURLTest']);

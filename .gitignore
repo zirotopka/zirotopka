@@ -11,3 +11,4 @@ npm-debug.log
 .env
 private.key1
 request.csr
+/public/messages

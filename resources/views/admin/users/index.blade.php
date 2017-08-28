@@ -25,52 +25,94 @@
                 Пользователей не найдено
             </div>
         @else
-            <form method="GET">
-                <table class="table table-striped" id="users-table">
-                    <thead>
-                        <th>#</th>
-                        <th>Имя</th>
-                        <th>E-Mail</th>
-                        <th>Роль</th>
-                        <th>Текущая программа</th>
-                        <th>Статус</th>
-                        <th>Действия</th>
-                    </thead>
-                    <tbody>
-                        @foreach($users as $user)
-                            <tr>
-                                <td>{{ $user->id }}</td>
-                                <td><a href="/admin/users/{{ $user->id }}">{{ $user->surname }} {{ $user->first_name }}  {{ $user->last_name }}</a></td>
-                                <td>
-                                    <?php $role = $user->roles->first() ?>
-                                    @if (!empty($role))
-                                        {{ $role->name }}
+            <table class="table table-striped" id="users-table">
+                <thead>
+                <th>#</th>
+                <th>Имя</th>
+                <th>E-Mail</th>
+                <th>Роль</th>
+                <th>Текущая программа</th>
+                <th>Статус</th>
+                <th>Действия</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <form method="post">
+                        {{ csrf_field() }}
+                        <td></td>
+                        <td><input name="name" placeholder="Имя" value="{{$placeholders['name']}}"></td>
+                        <td><input name="email" placeholder="Email" value="{{$placeholders['email']}}"></td>
+                        <td>
+                            <select name="role">
+                                <option value=""
+                                        @if ($placeholders['role'] == '')
+                                        selected
+                                        @endif
+                                >Выбрать...</option>
+                                @foreach ($roles as $role)
+                                    <option value="{{$role->id}}"
+                                    @if ($placeholders['role'] == $role->id)
+                                        selected
                                     @endif
-                                </td>
-                                <td>
-                                    @if (!empty($user->current_program))
-                                        {{$user->current_program->name}}
+                                    >{{$role->name}}</option>
+                                @endforeach
+                            </select>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="/admin/users" class="btn btn-default btn-default btn-sm">Сброс</a>
+                        </td>
+                        <td>
+                            <button class="btn btn-default btn-success btn-sm">Поиск</button>
+                        </td>
+                    </form>
+
+                </tr>
+                @foreach($users as $user)
+                    <tr>
+                        <td>{{ $user->id }}</td>
+                        <td>
+                            <a href="/admin/users/{{ $user->id }}">{{ $user->surname }} {{ $user->first_name }}  {{ $user->last_name }}</a>
+                        </td>
+                        <td>
+                            @if (!empty($user->email))
+                                {{$user->email}}
+                            @endif
+                        </td>
+                        <td>
+							<?php $role = $user->roles->first() ?>
+                            @if (!empty($role))
+                                {{ $role->name }}
+                            @endif
+                        </td>
+                        <td>
+                            @if (!empty($user->current_program))
+                                {{$user->current_program->name}}
+                            @endif
+                        </td>
+                        <td class="tc-center nowrap">
+                            <div class="users-toolbar" role="toolbar">
+                                <div class="btn-group" role="group">
+                                    @if($user->status)
+                                        <a href="#" data-id="{{$user->id}}" data-status="0"
+                                           class="btn btn-warning btn-sm m-user-status">Отключить</a>
+                                    @else
+                                        <a href="#" data-id="{{$user->id}}" data-status="1"
+                                           class="btn btn-success btn-sm m-user-status">Включить</a>
                                     @endif
-                                </td>
-                                <td class="tc-center nowrap">
-                                    <div class="users-toolbar" role="toolbar">        
-                                        <div class="btn-group" role="group">
-                                            @if($user->status)
-                                                <a href="#" data-id="{{$user->id}}" data-status="0" class="btn btn-warning btn-sm m-user-status">Отключить</a>
-                                            @else
-                                                <a href="#" data-id="{{$user->id}}" data-status="1" class="btn btn-success btn-sm m-user-status">Включить</a>
-                                            @endif
-                                        </div>
-                                        <div class="btn-group" role="group">
-                                            <a href="#" data-id="{{$user->id}}" class="btn btn-default btn-danger btn-sm m-user-delete">Удалить</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </form>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a href="#" data-id="{{$user->id}}"
+                                   class="btn btn-default btn-danger btn-sm m-user-delete">Удалить</a>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
             {!! $users->render() !!}
         @endif
     </div>
