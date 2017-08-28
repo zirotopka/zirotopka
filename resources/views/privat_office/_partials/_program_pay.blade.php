@@ -2,15 +2,18 @@
 
 @section('css')
     @parent
+    <link href="/assets/privat_account/pay-modal.css" type="text/css" rel="stylesheet">
 
 @overwrite
 
 @section('js')
     @parent
+    <script type="text/javascript" src="/assets/privat_account/pay-modal.js?123"></script>
+
 
 @overwrite
 
 @section("content")
-<h1 style="padding-top: 40px">Оплатить программу</h1>
+
 @include('yandex_kassa::form')
 @overwrite

@@ -1,0 +1,96 @@
+.modal-dialog {
+    width: 60vw;
+}
+
+.modal-content{
+    text-align: center;
+    width: 100%;
+    background: url(/ico/R.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 11.8vw;
+    background-position: 44vw 5.5vw;
+}
+
+.test{
+	margin: 4vw 0 2vw 0;
+}
+
+.orang-txt{
+    font-family: MuseoSansCyrl_900;
+	color: #ff8a18;
+	font-size: 2vw;
+}
+
+.gray-text{
+    font-family: MuseoSansCyrl_100;
+	font-size: 1vw;
+}
+
+.price{
+	margin:2.5vw 0 0 0;
+}
+
+.link{
+	color: #fefefe;
+	width: 22vw;
+	height: 4vw;
+	border-radius: 4em;
+	border: none;
+	background-color: #ff8a18; 
+	margin: 2.5vw 0 3vw 0;
+	font-size: 1.2vw;
+    font-family: MuseoSansCyrl_300;
+}
+
+.link:hover {
+	width: 22.2vw;
+	height: 4.2vw;
+	margin: 2.4vw 0 2.9vw 0;
+}
+
+.link:active {
+	width: 22.2vw;
+	height: 4.2vw;
+	margin: 2.4vw 0 2.9vw 0;
+	background-color: #D9550E;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px){
+	.modal-dialog {
+	    width: 80vw;
+	    margin: 1vw auto;
+	}
+
+	.orang-txt {
+	    font-family: MuseoSansCyrl_900;
+	    color: #ff8a18;
+	    font-size: 3vw;
+	}
+
+	.gray-text{
+	    font-family: MuseoSansCyrl_100;
+		font-size: 1.5vw;
+	}
+
+	.link {
+	    width: 25vw;
+	    height: 5vw;
+	    font-size: 1.6vw;
+	}
+
+	.link:hover {
+	    width: 25.5vw;
+	    height: 5.5vw;
+	    font-size: 1.6vw;
+    	margin: 2.2vw 0 3vw 0;
+	}
+
+	.link:active {
+	    width: 25.5vw;
+	    height: 5.5vw;
+	    font-size: 1.6vw;
+    	margin: 2.2vw 0 3vw 0;
+	}
+
+}

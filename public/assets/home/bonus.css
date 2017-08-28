@@ -534,9 +534,9 @@ h2{
 }
 
 .mfc{
-    background: url(/ico/mfc.svg);
+    background: url(/ico/mfc.png);
     height: 100%;
-    background-size: 72%;
+    background-size: 95%;
     background-repeat: no-repeat;
     background-position: 32% 13%;
 }
