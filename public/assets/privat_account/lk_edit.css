@@ -4,7 +4,67 @@ input{
 	cursor: pointer;
 }
 
+.pd{
+	padding: 0;
+}
+
+.pd div{
+	padding: 0;
+}
+
+.ltt{
+	width: 4.4em;
+}
+
+.rtt{
+	width: 8em;
+}
+
+.lwh .orange-text{
+	margin: 0 1.6em 0 0.6em;
+}
+
+.rwh .orange-text{
+	margin: 0 1em 0 0.6em;
+}
+
+.rwh{
+    margin: 0em 0 0 -2.4em;
+}
+
+.hw hr{
+    width: 2vw;
+    margin: 0.7em 0 0px -1em;
+	border-width: 0.1em;
+	border-color: #b6b6b6;
+}
+
+.orngln{
+	border-color: #fddbca;
+    margin: 1em 0 1.5em 0;
+}
+
+.ctt{
+    width: 10em;
+    text-align: right;
+    font-weight: 100;
+    margin: 0 3em 0.4em 0em;
+}
+
+.rf{
+	color: black!important;
+}
+
+.gray-lit-text{
+	font-size: 0.8vw;
+	color: #cbcbcb;
+	display: inline-flex;
+}
+
 /*---------------------Right edit part------------------------*/
+.show-hidden-form{
+	display: none;
+}
 
 .right_edit_part{
 	height: 100%;
@@ -69,7 +129,7 @@ input{
 }
 
 /*-------------Инфо о себе----------------*/
-.lft-info{
+.lft-info, .rt-info{
 	padding: 0;
 }
 
@@ -90,16 +150,24 @@ input{
 }
 
 .lft-info p{
-	color: #b6b6b6;
-	font-family: MuseoSansCyrl_100;
-	font-size: 1em;
+    color: #b6b6b6;
+    font-family: MuseoSansCyrl_100;
+    font-size: 1.1em;
+    display: inline-block;
+    width: 4.2em;
+    text-align: right;
+	margin: 0 3em 1em 0;
 }
 
 .rt-info p{
 	color: #b6b6b6;
 	font-family: MuseoSansCyrl_100;
 	font-size: 1em;
-	margin: 0 0 0 0.1vw;
+	margin: 0 3em 0 0;
+	display: inline-block;
+	width: 7.6vw;
+	text-align: right;
+	padding: 0;
 }
 
 .p_marg{
@@ -112,11 +180,14 @@ input{
 
 .edit-inputs{
     background-color: white;
-    border-radius: 5px;
+    border-radius: 3px;
     border: 1px solid #b6b6b6;
     height: 2em;
-	text-align: center;
-	color: #b6b6b6;
+    text-align: center;
+    color: #b6b6b6;
+    width: 21.5vw;
+    height: 2.5vw;
+    margin: 0 0 1.5em 0;
 }
 
 .birthdate-left{
@@ -134,10 +205,97 @@ input{
 	border-left: none;
 }
 
+.customSelect{
+	width: 5vw;
+	height: 2.5vw;
+	border: 1px solid #b6b6b6;
+	border-radius: 3px;
+	margin: 0 0 1.5em 0;
+	padding: 0.4vw;
+    color: #b6b6b6;
+}
+
+.birthday{
+	width: 8vw;
+}
+
+.dss:after{
+	position: absolute;
+    content: ' ';
+    background: url(/ico/drop-ico.png);
+    background-size: 0.5em;
+    background-repeat: no-repeat;
+    width: 2vw;
+    height: 2.5vw;
+    margin: -0.4em 0 0 2.5vw;
+    background-position: 50% 50%;
+    border-left: 1px solid #c6c6c6;
+	pointer-events: none;
+}
+
+.birthday:after{
+	position: absolute;
+    content: ' ';
+    background: url(/ico/drop-ico.png);
+    background-size: 0.5em;
+    background-repeat: no-repeat;
+    width: 2vw;
+    height: 2.5vw;
+    margin: -0.4em 0 0 -1.6vw;
+    background-position: 50% 50%;
+    border-left: 1px solid #c6c6c6;
+	pointer-events: none;
+}
+
 .hw-cls{
+	display: inline-block;
+	width: 4vw;
+	padding: 0;
+}
+
+.wh-line{
+	width: 1vw;
 	display: inline-block;
 }
 
+.day, .month, .year{
+	width: 
+}
+
+.yad{
+	margin: 0 3vw 0 0;
+}
+
+.yadik{
+    width: 15vw;
+    height: 3vw;
+    border-radius: 4px;
+    font-size: 1em;
+	font-family: MuseoSansCyrl_300;
+	font-weight: 300;
+}
+
+.user-data-ctn{
+	margin:1.5em 0 0 0;
+}
+
+.or{
+	margin: 0 3vw 0 3vw;
+}
+
+.qw{
+    margin: 0.6vw 3.2em 0 0!important;
+}
+
+.sg{
+	width: 0!important;
+    margin: 0.6vw 0 0 1em!important;
+}
+
+.wq{
+    width: 3vw!important;
+    margin: 0.6vw 1vw 0 0!important;
+}
 
 .inline-box{
 	display: inline-block;
@@ -167,48 +325,6 @@ input{
 	background-color: #d9550e;
 }
 
-/*-----------------------Паспортные данные------------------*/
-
-.city{
-	margin: 2em 0 0 0;
-}
-
-.pasport{
-	margin: 1em 0 0 0;
-	width: 28em;
-}
-
-.pasport input{
-	border-radius: 0;
-}
-
-.pasp_id{
-	border-bottom: none;
-	border-radius: 4px 4px 0 0 !important;
-	text-align: left;
-}
-
-.pasp_numb{
-	border-right: none;
-}
-
-.pasp_series{
-	border-right: none;
-}
-
-.pasp_who{
-	border-top: none;
-	border-radius: 0 0 4px 4px!important;
-	height: 7.5em;
-	text-align: left;
-	word-wrap: break-word;
-	resize: none;
-}
-
-.show-hidden-form{
-	display: none;
-}
-
 /*--------------User data-------------*/
 .mrg{
 	margin: 0!important;
@@ -220,99 +336,79 @@ input{
 
 .orange-text{
 	color: #ff8a18;
-	font-family: MuseoSansCyrl_100;
+	font-family: MuseoSansCyrl_300;
+	display: inline-block;
+	text-align: right;
+	font-size: 1.1em;
+	font-weight: 100;
+    margin: 0 3em 0 0;
+
 }
 
 .gray-text{
-	color: #C5C5C5;
-	font-family: MuseoSansCyrl_100;
-	font-style: oblique 1em;
+	color: #b6b6b6;
+	font-family: MuseoSansCyrl_300;
+	font-size: 1.1em;
+	display: inline-block;
 }
-
-@media screen and (max-width: 61.95em) {
-	.m_usr_dscr{
-		padding: 0 0 0 1em;
-		text-align: left;
-	}
-	.right_edit_part{
-		padding: 0;
-		margin: 7em auto;
-		text-align: center;
-		background-position: 50% 0;
-	}
-	.m_usr_img{
-		text-align: right;
-	}
-	.right_edit_part .row{
-		margin: 2em 0 0 0;
-	}
-	.pasport{
-		width: 100%;
-	}
-	.save-btn{
-		margin-bottom: 3em;
-	}
-	.bstd{
-		width: 100%; 
-		margin: 0 0 0 17%;		
-	}
-
-	.rgt{
-		text-align: right;
-	}
-
-	.lft{
-		text-align: left;
-	}
-
-	.city {
-	    margin: 7vw 0 0 0;
-	}
-	.rt-info{
-		margin: 0!important;
-	}
-	#load_photo_txt{
-		width:7.5em;
-	}
-
-	.ld_img{
-		background-position: left;
-	}
-
-
-}
-	.rac{
-		margin: 2.5em 0 0 0!important;
-	}
-
-
-.user-fln{
-	font-size: 17px!important;
-	font-family: MuseoSansCyrl_300!important;
-}
-
-.img-circle{
-	width: 110px;
-	height: 110px;
-}
-
-.left_edit_part ul {
-    font-size: 17px;
-    list-style: none;
-    text-align: center;
-}
-
 
 
 @media screen and (max-width: 767px) {
+	.gray-lit-text{
+		text-align: center;
+		margin: 0.2em 0 4em 0;
+	}
+	.mb-cct{
+		width: 100%!important;
+		margin: 0 0 0 -1em;
+	}
+
+	.mb-cct .gray-text{
+		width: 100%;
+	}
+
+	.ctn{
+		margin: 0 0 0 -1em;
+	}
+
+	.lwh .orange-text, .rwh .orange-text{
+		margin: 0;
+	}
+
+	.gray-text{
+		display: block;	
+		text-align: center;
+	}
+
+	.rwh{
+		margin:0;
+		text-align: center;
+	}
+
+	.orange-text{
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+
+	.pd{
+		width: 46%;
+		text-align: left!important;
+	}
+	.right_edit_part {
+	    background-position: -1em 8em;
+	}
+	.right_edit_part {
+	    padding: 7em 0 0 3em;
+	}
 	.save-btn {
-		margin:3em 0 3em 0;
+		margin:3em 0 3em 20%;
 	}
 	.save-btn:hover {
-		margin:2.6em 0 3.4em 0;
+		margin:2.6em 0 3.4em 20%;
 	}
 	.save-btn:active {
-		margin:2.6em 0 3.4em 0;
+		margin:2.6em 0 3.4em 20%;
 	}
 	.pasport {
 	    margin: 1.5em 0 0 0;
@@ -321,4 +417,127 @@ input{
 	.rt-info p {
 	    margin: 0 0 0.5em 0.1vw;
 	}
+	.m_usr_dscr {
+	    padding: 0;
+	}
+	.m_usr_img {
+	    width: 47%;
+	}
+
+	.edit-inputs{
+	    width: 40vw;
+	    height: 8.5vw;
+	}
+
+	.mbbg p{
+		margin: 0 6.2em 0 0;
+	}
+
+	.bdd{
+		width: 7.1em!important;
+	    margin: 0 1em 0 0!important;
+	}
+
+	.customSelect{
+	    height: 8.5vw;	
+		width: 11vw;
+	    text-align: center;
+	}
+
+	.npd{
+		margin: 0;
+	}
+
+	.customSelect:after{
+		background: none;
+		border: none;
+	}
+
+	.birthday:after{
+		background: none;
+		border: none;
+	}
+
+	.birthday {
+	    width: 13vw;
+	}
+
+	.inp-yadik{
+	    margin: 5% 0 5% 21%;
+	}
+
+	.yadik {
+	    width: 45vw;
+	    height: 11vw;
+	    margin: 5% 0 0 18%;
+	}
+
+	.txt-con{
+		margin: 0.2em 0 0em 0;
+	    font-size: 1em;
+	}
+
+	.wq {
+	    width: 6vw!important;
+	    margin: 0.6vw 14vw 0 0!important;
+	}
+	
+}
+@media only screen and (min-width : 768px) and (max-width : 991px) and (orientation: portrait){
+	.gray-lit-text {
+	    font-size: 1em;
+	    color: #cbcbcb;
+	    display: inline-flex;
+	    font-size: 0.8em;
+	    width: 15em;
+	}
+
+	.edit-inputs{
+		width: 17.5vw;
+		height: 3.5vw;
+	}
+
+	.rt-info p{
+		width: 13.6vw;
+	}
+
+	.phone-inp{
+		width: 23vw;
+	}
+
+	.wh-line {
+	    width: 0.5vw;
+	    margin: 3.2% 0 0 0;
+	}
+
+	.customSelect{
+		height: 3.5vw;
+		width: 5.8vw;
+	}
+
+	.birthday{
+		width: 8vw;
+	}
+
+	.birthday:after{
+		margin-top: 0;
+	}
+
+	.dss:after{
+	    margin: 0 0 0 1.6em;
+	}
+	
+	.hw-cls {
+	    width: 4vw;
+	}
+
+	.yadik {
+	    height: 4vw;
+		font-size: 1vw;
+	}
+
+	.row{
+		padding:0;
+	}
+
 }

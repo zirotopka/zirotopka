@@ -11,11 +11,12 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-
+    <script type="text/javascript" src="/assets/css/jquery.customSelect.min.js"></script>   
     <script type="text/javascript" src="/assets/js/inputmask/inputmask.min.js"></script>
 	<script type="text/javascript" src="/assets/js/inputmask/jquery.inputmask.min.js"></script>
     <script type="text/javascript" src="/assets/js/inputmask/inputmask.phone.extensions.min.js"></script>
-    <script type="text/javascript" src="/assets/privat_account/lk_edit.js"></script>    
+    <script type="text/javascript" src="/assets/privat_account/lk_edit.js"></script>
+     
 
 @overwrite
 
