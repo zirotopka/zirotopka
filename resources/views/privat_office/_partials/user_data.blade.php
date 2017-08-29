@@ -1,6 +1,6 @@
 <div class="user-data-content">
 	<p id="myself_info">ИНФОРМАЦИЯ О СЕБЕ</p>
-	<img src=/ico/edit.png class="edit_btn" alt="Изменить профиль">
+	<a href=""><img src=/ico/edit.png class="edit_btn" alt="Изменить профиль"></a>
 	<div class="row">
 		<div class="pd ctn col-lg-5 col-md-5 col-sm-6 col-xs-6">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

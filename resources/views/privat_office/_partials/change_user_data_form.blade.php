@@ -2,7 +2,7 @@
 	<form action="{{'/lk/'.$user->id.'/'}}" method="POST" class="show-hidden-form">
 	    {{ csrf_field() }}
 		<p id="myself_info">ИНФОРМАЦИЯ О СЕБЕ</p>
-		<a href=""> <img src=/ico/edit.png class="edit_btn" alt="Изменить профиль"></a>
+		<img src=/ico/edit.png class="edit_btn" alt="Изменить профиль">
 		<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 lft-info">
 				<div>
@@ -30,7 +30,7 @@
 					<select name="year" id="years" class="birthday"></select>
 				</div>
 				<div class="pd mb-cct npd col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+					<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
 						<p class="qw col-lg-3 col-md-3 col-sm-3 col-xs-3">Рост</p>
 						<input type="text" name="growth" class="edit-inputs hw-cls col-lg-3 col-md-3 col-sm-3 col-xs-3" value="{{$user->growth}}">
 						<p class="qw sg col-lg-3 col-md-3 col-sm-3 col-xs-3">см.</p>

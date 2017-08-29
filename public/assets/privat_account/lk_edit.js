@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 	$('.edit_btn').on('click',function(){
-		$('.user-data-content').attr('style','display:none;')
-		$('.show-hidden-form').attr('style','display:block;')
+		$('.user-data-content').attr('style','display:block;')
+		$('.show-hidden-form').attr('style','display:none;')
 	});
 
 	$(".phone-inp").inputmask('+9 (999) 999-99-99');

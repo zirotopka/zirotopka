@@ -63,7 +63,7 @@ input{
 
 /*---------------------Right edit part------------------------*/
 .show-hidden-form{
-	display: none;
+	display: block;
 }
 
 .right_edit_part{
@@ -227,7 +227,7 @@ input{
     background-repeat: no-repeat;
     width: 2vw;
     height: 2.5vw;
-    margin: -0.4em 0 0 2.5vw;
+    margin: -0.4em 0 0 1.8vw;
     background-position: 50% 50%;
     border-left: 1px solid #c6c6c6;
 	pointer-events: none;
@@ -307,7 +307,7 @@ input{
 }
 
 .save-btn{
-	margin: 3em 0 3em 0;
+	margin: 1em 0 3em 0;
 	background-color: #ff8a18;
 	color: white;
 	border: none;
@@ -333,6 +333,7 @@ input{
 
 .user-data-content{
 	padding: 1.5em 0 0 0;
+	display: none;
 }
 
 .orange-text{
@@ -534,7 +535,7 @@ input{
 	.hw-cls {
 	    width: 4vw;
 	}
-	
+
 	.wh-line {
 	    margin: 1em 0 0 3px;
 	}
@@ -548,4 +549,39 @@ input{
 		padding:0;
 	}
 
+}
+
+
+@media screen and (min-width : 992px) and (max-width : 1199px){
+	.wh-line{
+		width: 0vw;
+	}
+
+	.rt-info p{
+	    width: 9.6vw;
+	}
+
+	.edit-inputs{
+	    width: 19vw!important;
+	}
+
+	.yadik{
+		font-size: 0.9em;
+	}
+
+	.hw-cls{
+		width: 4.2vw!important;
+	}
+
+	.rt-info{
+		padding: 0 0 0 1vw;
+	}
+
+	.phone-inp{
+		width: 21.7vw!important;
+	}
+
+	.dss:after{
+	    margin: -0.4em 0 0 1.3vw;
+	}
 }
