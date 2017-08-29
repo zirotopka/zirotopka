@@ -82,7 +82,7 @@
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
 	.modal-dialog {
 	    width: 80vw;
-	    margin: 1vw auto;
+	    margin: 5vw auto;
 	}
 
 	.orang-txt {
@@ -116,4 +116,16 @@
     	margin: 2.2vw 0 3vw 0;
 	}
 
+	.modal-content {
+	    background-size: 14.8vw;
+	    background-position: 53vw 7.5vw;
+	}
+
+	.user-fln{
+		font-size: 0.9em!important;
+	}
+
+	.profile_btns{
+		font-size: 0.9em!important;
+	}
 }

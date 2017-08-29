@@ -358,7 +358,9 @@ input{
 	.gray-lit-text{
 		text-align: center;
 		margin: 0.2em 0 4em 0;
+	    font-size: 0.9em;
 	}
+
 	.mb-cct{
 		width: 100%!important;
 		margin: 0 0 0 -1em;
@@ -435,8 +437,8 @@ input{
 	}
 
 	.bdd{
-		width: 7.1em!important;
-	    margin: 0 1em 0 0!important;
+	    width: 7.2em!important;
+	    margin: 0 0.8em 0 0!important;
 	}
 
 	.customSelect{
@@ -471,6 +473,7 @@ input{
 	    width: 45vw;
 	    height: 11vw;
 	    margin: 5% 0 0 18%;
+		font-size: 0.9em;
 	}
 
 	.txt-con{
@@ -530,21 +533,10 @@ input{
 	
 	.hw-cls {
 	    width: 4vw;
-<<<<<<< HEAD
-=======
 	}
-
-	.yadik {
-	    height: 4vw;
-		font-size: 1vw;
-	}
-
-	.row{
-		padding:0;
-	}
+	
 	.wh-line {
 	    margin: 1em 0 0 3px;
->>>>>>> d45b1291f54e5875e49b7f7917a6625c9676498d
 	}
 
 	.yadik {

@@ -309,7 +309,7 @@ div {
 	[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
 	    width: 1em;
 	    height: 1em;
-	    background-position: 1px 1px;
+	    background-position: 2px 2px;
 	    background-size: 0.75em;
 	}
 }
