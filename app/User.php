@@ -67,4 +67,9 @@ class User extends CartalystUser
     {
         return $this->belongsTo('App\Programm','current_programm_id');
     }
+
+    public function current_program_day_status()
+    {
+        return $this->belongsTo('App\ProgrammDay','current_day')->select('status');
+    }
 }

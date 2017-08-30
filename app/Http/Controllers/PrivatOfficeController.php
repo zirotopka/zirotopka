@@ -28,18 +28,22 @@ class PrivatOfficeController extends Controller
             return view('privat_office._partials._choose_program_form', ['user' => $user, 'programs' => $programs]);
         }
 
+        $currentProgramDayStatus = $user->current_program_day_status;
+
         //Оплата програм
-        if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
-            $sum = $user->current_program->cost;
-            $parents = $user->parents;
+        if (!empty($currentProgramDayStatus->status)) {
+            if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
+                $sum = $user->current_program->cost;
+                $parents = $user->parents;
 
-            if (count($parents) > 0) {
-                $sum = $sum * 0.9;
+                if (count($parents) > 0) {
+                    $sum = $sum * 0.9;
+                }
+
+                $shopArticle = env('YANDEX_KASSA_PROGRAM_ID');
+
+                return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum, 'shopArticle' => $shopArticle]);
             }
-
-            $shopArticle = env('YANDEX_KASSA_PROGRAM_ID');
-
-            return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum, 'shopArticle' => $shopArticle]);
         }
 
         $current_program_day = 0;
