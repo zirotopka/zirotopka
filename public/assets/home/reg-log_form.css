@@ -272,7 +272,7 @@ div {
     background-repeat: no-repeat;
     height: 1em;
     width: 1em;
-    background-size: 0.78em!important;
+    background-size: 0.74em!important;
     background-position: 2px 2px;
 }
 @media not all and (min-resolution:.001dpcm) { @media {
@@ -309,7 +309,7 @@ div {
 	[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
 	    width: 1em;
 	    height: 1em;
-	    background-position: 1px 1px;
+	    background-position: 2px 2px;
 	    background-size: 0.75em;
 	}
 }

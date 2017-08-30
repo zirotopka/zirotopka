@@ -109,7 +109,7 @@ ul li{
 }
 
 .lgn{
-    padding: 1.5em 0 1em 4em !important;
+    padding: 1.3em 0 1em 6em!important;
 }
 
 .checked{
@@ -2102,12 +2102,13 @@ footer{
 }
 
 @media only screen and (min-width : 768px) and (max-width : 991px) and (orientation: portrait){
-@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
-			.connect_screen_shader p {
-		    font-size: 20vw!important;
-		}
+@media not all and (min-resolution:.001dpcm) { @media{
+	.connect_screen_shader p {
+	    font-size: 19vw!important;
 	}
 }
+}
+
 .side_logo {
     width: 85%;
 }

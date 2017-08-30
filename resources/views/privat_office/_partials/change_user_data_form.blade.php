@@ -1,52 +1,66 @@
-<form action="{{'/lk/'.$user->id.'/'}}" method="POST" class="show-hidden-form">
-    {{ csrf_field() }}
-	<div class="row">
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 lft-info">
-			<p id="myself_info">ИНФОРМАЦИЯ О СЕБЕ</p>
-			<a href=""> <img src=/ico/edit.png class="edit_btn" alt="Изменить профиль"></a>
-			<p class="p_marg">Номер телефона</p>
-
-			<input type="tel" name="phone" class="phone-inp edit-inputs" placeholder="+_(___)___-__-__" value="{{!empty($user->phone) ? $user->phone : ''}}">
-			<div style="height: 4em;" class="row mrg">	
-				<p class="p_marg">Дата рождения</p>
-				<div class="bstd">
-					<input type="text" name="day" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 birthdate-left edit-inputs" placeholder="дд" value="{{ !empty($user->birthday) ? DateTime::createFromFormat('Y-m-d H:i:s', $user->birthday)->format('d') : '' }}">
-					<input type="text" name="month" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 birthdate-center edit-inputs" placeholder="мм" value="{{ !empty($user->birthday) ? DateTime::createFromFormat('Y-m-d H:i:s', $user->birthday)->format('m') : '' }}">
-					<input type="text" name="year" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 birthdate-right edit-inputs" placeholder="гггг" value="{{ !empty($user->birthday) ? DateTime::createFromFormat('Y-m-d H:i:s', $user->birthday)->format('Y') : '' }}">
+<div class="user-data-ctn">
+	<form action="{{'/lk/'.$user->id.'/'}}" method="POST" class="show-hidden-form">
+	    {{ csrf_field() }}
+		<p id="myself_info">ИНФОРМАЦИЯ О СЕБЕ</p>
+		<img src=/ico/edit.png class="edit_btn" alt="Изменить профиль">
+		<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 lft-info">
+				<div>
+					<p>Фамилия</p>
+					<input type="text" name="surname" class="edit-inputs" value="{{$user->surname}}">
+				</div>
+				<div>
+					<p>Имя</p>
+					<input type="text" name="name" class="edit-inputs" value="{{$user->first_name}}">
+				</div>
+				<div>
+					<p>Город</p>
+					<input type="text" name="city" class="edit-inputs" value="{{$user->city}}">
 				</div>
 			</div>
-			<div class="row rac">
-					<p class="col-lg-2 col-md-2 col-sm-4 col-xs-4 rgt">Рост</p>
-					<input type="text" name="growth" class="edit-inputs hw-cls col-lg-4 col-md-4 col-sm-4 col-xs-4" value="{{$user->growth}}">
-					<p class="col-lg-6 col-md-6 col-sm-4 col-xs-4 lft">см.</p>
-			</div>	
-			<div class="row">
-					<p class="col-lg-2 col-md-2 col-sm-4 col-xs-4 rgt">Вес</p>
-					<input type="text" name="weight" class="edit-inputs hw-cls col-lg-4 col-md-4 col-sm-4 col-xs-4" value="{{$user->weight}}">
-					<p class="col-lg-6 col-md-6 col-sm-4 col-xs-4 lft">кг.</p>
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 rt-info">
+				<div class="mbbg">
+					<p>Телефон</p>
+					<input type="tel" name="phone" class="phone-inp edit-inputs" placeholder="+_(___)___-__-__" value="{{!empty($user->phone) ? $user->phone : ''}}">
+				</div>
+				<div class="pd mb-cct npd col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<p class="bdd">Дата рождения</p>
+					<select name="day" id="days" class="dss"></select>
+					<select name="month" id="months" class="birthday"></select>
+					<select name="year" id="years" class="birthday"></select>
+				</div>
+				<div class="pd mb-cct npd col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+						<p class="qw col-lg-3 col-md-3 col-sm-3 col-xs-3">Рост</p>
+						<input type="text" name="growth" class="edit-inputs hw-cls col-lg-3 col-md-3 col-sm-3 col-xs-3" value="{{$user->growth}}">
+						<p class="qw sg col-lg-3 col-md-3 col-sm-3 col-xs-3">см.</p>
+					</div>
+					<hr class="wh-line col-lg-1 col-md-1 col-sm-1 hidden-xs">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<p class="qw wq col-lg-1 col-md-1 col-sm-1 col-xs-1">Вес</p>
+						<input type="text" name="weight" class="edit-inputs hw-cls col-lg-3 col-md-3 col-sm-3 col-xs-3" value="{{$user->weight}}">
+						<p class="qw sg col-lg-3 col-md-3 col-sm-3 col-xs-3">кг.</p>
+					</div>
+				</div>
 			</div>
-			<br>
-			<div class="yandex_wallet">
-				<p>Яндекс кошелёк</p>
-				<input class="edit-inputs" type="text" value="{{$user->wallet}}">	
-				
-			</div>	
+			<hr class="orngln col-lg-10 col-md-10 col-sm-10 col-xs-10">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: 0.7em 0 0 0;">
+				<p class="gray-text yad">Яндекс - кошелек</p>
+				<input class="edit-inputs inp-yadik" type="text" value="{{$user->wallet}}">
+				<p class="gray-text yad or">или</p>
+				<button type="button" class="yadik">ЗАВЕСТИ КОШЕЛЕК</button>
+			</div>
+			<hr class="orngln col-lg-10 col-md-10 col-sm-10 col-xs-10">
+			<div class="pd mb-cct col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p class="rf ctt gray-text">Реферальная ссылка</p>
+				<p class="orange-text">{{!empty($user->referer_code) ? $user->referer_code : 'Здесь будет реферальная ссылка'}}</p>
+				<p class="gray-lit-text txt-con">Если Вы хотите зарабатывать, то поделитесь этой ссылкой<br class="hidden-xs"> с друзьями. При регистрации они должны указать эту ссылку. </p>
+			</div>
+			<hr class="orngln col-lg-10 col-md-10 col-sm-10 col-xs-10">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<input type="submit" class="save-btn" title="СОХРАНИТЬ" value="СОХРАНИТЬ">
+			</div>
 			
-		</div>			
-		<div class="row col-lg-8 col-md-8 col-sm-8 col-xs-12 rt-info">
-			<div class="city col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<p>Город проживания</p>
-				<input type="text" name="city" class="edit-inputs" value="{{$user->city}}">
-			</div>
-			<div class="pasport col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<p>Паспортные данные</p>
-				<input type="text" name="pasport_name" class="edit-inputs pasp_id col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="ФИО" value="{{$user->pasport_name}}">
-				<input type="text" name="pasport_number" class="edit-inputs pasp_numb col-lg-2 col-md-2 col-sm-2 col-xs-2" placeholder="№" value="{{$user->pasport_number}}">
-				<input type="text" name="pasport_series" class="edit-inputs pasp_series col-lg-4 col-md-4 col-sm-4 col-xs-4" placeholder="серия" value="{{$user->pasport_series}}">
-				<input type="date" name="pasport_date" class="edit-inputs pasp_date col-lg-6 col-md-6 col-sm-6 col-xs-6" placeholder="дд/мм/гггг" value="{{!empty($user->pasport_date) ?  gmdate("d-m-Y", $user->pasport_date) : ''}}">
-				<textarea type="text" name="pasport_issued" class="edit-inputs pasp_who col-lg-12 col-md-12 col-sm-12 col-xs-12" placeholder="кем выдан">{{$user->pasport_issued}}</textarea>
-			</div>
 		</div>
-		<input type="submit" class="save-btn" title="СОХРАНИТЬ" value="СОХРАНИТЬ">
-	</div>
-</form>
+	</form>
+</div>

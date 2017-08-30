@@ -13,7 +13,7 @@
 .left_edit_part ul {
 	font-size: 1em;
 	margin: 0;
-	padding: 6em 0 0 0;
+	padding: 5em 0 0 0;
 	list-style: none;
 	text-align: center;
 }
@@ -21,18 +21,14 @@
 .left_edit_part ul li a {
 	text-decoration: none;
 	display: block;
-	padding: 1.8em 0 1.9em 0em;
+    padding: 1.45em 0 1.55em 0em;
 	outline: none;
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
 	color: #f3efe0;
 	text-transform: uppercase;
 	text-shadow: 0 0 1px rgba(255,255,255,0.1);
 	letter-spacing: 1px;
 	font-weight: bold;
-	-webkit-transition: background 0.3s, box-shadow 0.3s;
-	transition: background 0.3s, box-shadow 0.3s;
 	font-size: 0.8em!important;
-
 }
 
 .left_edit_part ul li:first-child a {
@@ -52,8 +48,8 @@
 .left_edit_part p{
 	font-family: GilroyLight!important;
 	color: white;
-	font-size: 1em !important;
-	vertical-align: bottom;
+	font-size: 0.9vw !important;
+	vertical-align: text-bottom;
 }
 
 .user-fln{
