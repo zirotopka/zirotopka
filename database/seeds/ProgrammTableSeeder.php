@@ -93,13 +93,14 @@ class ProgrammTableSeeder extends Seeder
         	$programm->slug = $training['slug'];
         	$programm->name = $training['name'];
         	$programm->description = $training['description'];
+            $programm->cost = 2500;
 
         	if ( $programm->save() ) {
         		$programm_id = $programm->id;
 
         		$programm_days_array = [
-        			['day' => 1, 'status' => 1, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч','interest' => 0, 'difficult' => 1],
-        			['day' => 2, 'status' => 1,'interest' => 1 , 'description' => 'wvwfw r fe er ', 'lead_time' => '3ч', 'difficult' => 2],
+        			['day' => 1, 'status' => 0, 'description' => 'wvwfw r fe er ', 'lead_time' => '2ч','interest' => 0, 'difficult' => 1],
+        			['day' => 2, 'status' => 0,'interest' => 1 , 'description' => 'wvwfw r fe er ', 'lead_time' => '3ч', 'difficult' => 2],
         			['day' => 3, 'status' => 1,'interest' => 1,  'description' => 'wvwfw r fe er ', 'lead_time' => '5ч', 'difficult' => 2],
         			['day' => 2, 'status' => 0,'interest' => 0,  'description' => 'wvwfw r fe er ', 'lead_time' => '2мин.', 'difficult' => 3],
         			['day' => 5, 'status' => 1,'interest' => 1,  'description' => 'wvwfw r fe er ', 'lead_time' => '1ч', 'difficult' => 3],
