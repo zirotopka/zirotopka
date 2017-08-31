@@ -156,16 +156,16 @@ input{
     display: inline-block;
     width: 4.2em;
     text-align: right;
-	margin: 0 3em 1em 0;
+	margin: 0 2em 1em 0;
 }
 
 .rt-info p{
 	color: #b6b6b6;
 	font-family: MuseoSansCyrl_100;
 	font-size: 1em;
-	margin: 0 3em 0 0;
+	margin: 0 2em 0 0;
 	display: inline-block;
-	width: 7.6vw;
+	width: 8vw;
 	text-align: right;
 	padding: 0;
 }
@@ -271,9 +271,23 @@ input{
     width: 15vw;
     height: 3vw;
     border-radius: 4px;
+    font-size: 0.9em;
+	font-family: MuseoSansCyrl_500;
+	font-weight: 500;
+}
+
+.yadik:hover{
+    width: 15.1vw;
+    height: 3.1vw;
     font-size: 1em;
-	font-family: MuseoSansCyrl_300;
-	font-weight: 300;
+    margin: -0.1vw 0 0 -0.1vw;
+}
+
+.yadik:hover{
+    width: 15.1vw;
+    height: 3.1vw;
+    font-size: 1em;
+    margin: -0.1vw 0 0 -0.1vw;
 }
 
 .user-data-ctn{
@@ -285,7 +299,7 @@ input{
 }
 
 .qw{
-    margin: 0.6vw 3.2em 0 0!important;
+    margin: 0.6vw 2.2em 0 0!important;
 }
 
 .sg{
@@ -317,7 +331,7 @@ input{
 }
 
 .save-btn:hover{
-	margin: 2.8em 0 3em 0;
+	margin: 0.8em 0 3em 0;
 	width: 11.2em;
 	height: 3.7em;
 }
@@ -477,6 +491,18 @@ input{
 		font-size: 0.9em;
 	}
 
+	.yadik:hover {
+	    width: 45.1vw;
+	    height: 11.1vw;
+	    margin: 4% 0 0 18%;
+	}
+
+	.yadik:active {
+	    width: 45.1vw;
+	    height: 11.1vw;
+	    margin: 4% 0 0 18%;
+	}
+	
 	.txt-con{
 		margin: 0.2em 0 0em 0;
 	    font-size: 1em;

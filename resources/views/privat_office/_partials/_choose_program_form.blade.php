@@ -48,7 +48,7 @@
                 <br>
               <p class="prog-bold-txt slate">ВЫБЕРИТЕ ДАТУ <br>начала тренировок</p>
               <div class="progr-drop">      
-                <div class="select-side" style="height: 2.6em; z-index: 2; margin: 0.2em; ">
+                <div class="select-side" style="height: 2.6em; z-index: 2; margin: 0.2em 0 0 0.25em; ">
                   <img src="/ico/drop-ico.png"></img>
                 </div>
                   
