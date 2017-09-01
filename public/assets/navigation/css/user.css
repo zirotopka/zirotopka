@@ -557,6 +557,7 @@ button:focus {
 	background: url('/ico/wallet.png');
 	background-size: cover;
 	height: 1em;
+	background-repeat: no-repeat;
 }
 
 .help_ico{
@@ -616,3 +617,32 @@ button:focus {
 		margin: 0 0 0 -10em!important;
 	}
 }
+
+@media screen and (min-width: 1200px){
+	.prgr_ico {
+	    background: url(/ico/prgrm.png);
+	    margin: 0 0 0 20px!important;
+	    background-size: 1vw 1vw;
+	    width: 1vw;
+	    height: 1vw;
+	}
+
+	.prof_ico {
+	    width: 0.95vw;
+	    height: 0.95vw;
+	    margin: 0px 0 00 -0.3vw;
+	}
+
+	.wallet_ico{
+		margin: 0 0 0 -0.02vw!important;
+	    width: 1vw!important;
+	    height: 0.9vw!important;
+	}
+
+	.help_ico {
+	    margin-left: -5px;
+	    width: 1vw;
+	    height: 1vw;
+	    vertical-align: unset;
+	}
+}	
