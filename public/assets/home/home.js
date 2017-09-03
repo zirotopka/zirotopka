@@ -9,7 +9,11 @@ jQuery(document).ready(function(){
             	email: email,
             },
             success: function (data) {
-                console.log(data);
+                if (data['response'] == 200) {
+
+                } else {
+                	//Ошибка
+                }
             },
             error: function (data) {
                 console.log('Error:', data);
