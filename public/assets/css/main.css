@@ -4,6 +4,11 @@ html{
 	overflow-y: scroll!important;
 }
 
+.ip{
+    margin: 0 0 0 34.4%;
+    font-size: 0.8vw;
+}
+
 .st-content{
 	overflow: hidden!important;
 }
