@@ -37,7 +37,6 @@
                 <div  class="reg_screen_shader"></div>                
                 <div class="reg_scr_content">
                     <div class="reg_scrn_txt">
-                            {{json_encode($errors)}}
                         <h1>ОНЛАЙН ПЛАТФОРМА</h1>
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
                         <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>

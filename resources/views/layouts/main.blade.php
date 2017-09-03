@@ -201,7 +201,26 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
     <script type="text/javascript" src="/assets/lightbox/dist/js/lightbox.min.js"></script>
 
-    
+    @if (count($errors->all()) > 0)
+        <?php
+            $errorStr = '';
+            foreach ($errors->all() as $error) {
+                $errorStr .= $error.", ";
+            } 
+        ?>
+        <script type="text/javascript">
+            swal({
+                title: 'Ошибка',
+                text: "{{$errorStr}}",
+                type: "danger",
+                showCancelButton: false,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: 'Ок',
+            }).then (function () {}
+            );
+        </script>
+    @endif
+
     @section('js')
         
     @show
