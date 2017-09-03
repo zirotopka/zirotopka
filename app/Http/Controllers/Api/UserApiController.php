@@ -52,4 +52,27 @@ class UserApiController extends Controller
         return redirect('http://reformator.one');
         //return response()->json(['code' => 200, 'text' => 'Email успешно сохранен']);
     }
+
+    /**
+     * Проверяем наличие email
+     */
+    public function checkEmail(Request $request) {
+        $rules = [
+            'email' => 'required|email|unique:users,email',
+        ];
+
+        $messages = [
+            'email.required' => 'Не указана почта',
+            'email.email' => 'Не верный формат почты',
+            'email.unique' => 'Данный адрес почты уже занят',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return ['response' => 400,'text' => json_encode($validator->messages())];
+        }
+
+        return ['response' => 200];
+    }
 }

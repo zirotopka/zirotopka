@@ -19,7 +19,7 @@
     <script src="/assets/home/index-scrollspy.js"></script>
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
-
+    <script src="/assets/home/home.js"></script>
 
 @overwrite
 
@@ -37,6 +37,7 @@
                 <div  class="reg_screen_shader"></div>                
                 <div class="reg_scr_content">
                     <div class="reg_scrn_txt">
+                            {{json_encode($errors)}}
                         <h1>ОНЛАЙН ПЛАТФОРМА</h1>
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
                         <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>

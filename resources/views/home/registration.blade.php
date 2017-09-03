@@ -7,7 +7,7 @@
           <form action="/register" method="POST">
             {{ csrf_field() }}
             <p>
-              <input class="reg_input" id="email" type="email" name="email" placeholder="Почта" required="required">
+              <input class="reg_input" id="reg-email" type="email" name="email" placeholder="Почта" required="required">
               <input class="reg_input" id="password" type="password" name="password" placeholder="Пароль" required="required">
             </p>
             <div class="sex_chs col-sm-12 col-xs-12">
