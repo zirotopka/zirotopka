@@ -132,7 +132,7 @@ class UserController extends Controller
 
             return redirect('lk/'.$user->id);
         } else {
-            return redirect()->back()->withInput();
+            return redirect()->back()->withErrors();
         }
     }
 
@@ -143,7 +143,7 @@ class UserController extends Controller
         $user = Sentinel::authenticateAndRemember([ 'email' => $request->get('email'), 'password' => $request->get('password') ]);
 
         if( $user === false ) {
-            return redirect()->back();
+            return redirect()->back()->withErrors(['login' => 'Неверный логин или пароль']);
         } else {
             return redirect('lk/'.$user->id);
         }
