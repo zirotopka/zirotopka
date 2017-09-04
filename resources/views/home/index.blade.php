@@ -19,7 +19,7 @@
     <script src="/assets/home/index-scrollspy.js"></script>
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
-
+    <script src="/assets/home/home.js"></script>
 
 @overwrite
 

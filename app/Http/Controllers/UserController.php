@@ -73,7 +73,7 @@ class UserController extends Controller
         $validator = Validator::make($request->all(), $rules, $messages);
 
         if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
+            return redirect()->back()->withErrors($validator->errors());
         }
 
     	$credentials = [
