@@ -214,8 +214,7 @@
                 text: "{{$errorStr}}",
                 type: "danger",
                 showCancelButton: false,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: 'Ок',
+                showConfirmButton: false,
             }).then (function () {}
             );
         </script>

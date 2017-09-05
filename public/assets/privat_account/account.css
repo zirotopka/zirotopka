@@ -3,6 +3,10 @@
 	height: 1000px;
 }
 
+.swal2-title{
+	margin-top: 2em!important;
+}
+
 .logo{
 	padding:3em 0 0 0;
 	color: #1E0F00;

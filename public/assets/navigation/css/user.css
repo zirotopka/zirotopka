@@ -598,7 +598,6 @@ button:focus {
 	font-size: 1.8em!important;
 	font-family: MuseoSansCyrl_500!important;
 	text-transform: uppercase!important;
-	margin-top: 2em!important;
 }
 
 .swal2-content{
@@ -610,6 +609,11 @@ button:focus {
 
 .swal2-close{
 	color: #FF7F39!important;
+	display: block!important;
+}
+
+.swal2-cancel{
+	display: none!important;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1199px) {

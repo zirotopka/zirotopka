@@ -16,12 +16,12 @@
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 right-sex">
                 <div class="sex">
-                  <input type="radio" name="sex" required="required" value="2" id="fm">
+                  <input type="radio" name="sex" value="2" id="fm" required="required"/>
                   <label for="fm"><span></span></label>
                   <p>Ж</p>
                 </div>
                 <div class="sex">
-                  <input type="radio" name="sex" required="required" value="1" id="ml">
+                  <input type="radio" name="sex" value="1" id="ml" required="required"/>
                   <label for="ml"><span></span></label>
                   <p>М</p>
                 </div>
