@@ -68,7 +68,9 @@ ul li{
 .st-menu{
 	position: fixed;
 }
-
+.programm_spy{
+	display: none;
+}
 /*-----------------------------sidebar---------------------------*/
 @media screen and (min-width: 992px) {
 	.column{

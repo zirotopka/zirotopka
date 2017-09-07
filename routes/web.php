@@ -14,7 +14,8 @@
 Route::get('/', ['uses' =>  'HomeController@index']);
 Route::post('get_comment_video', [ 'uses' => 'HomeController@get_comment_video' ] );
 Route::get('bonus', [ 'uses' => 'HomeController@bonus' ] );
-Route::get('program', [ 'uses' => 'ProgrammController@index' ] );
+Route::get('programm/{slug}', [ 'uses' => 'ProgrammController@index' ] );
+
 
 
 Route::get('login', ['uses' => 'HomeController@index' ] );

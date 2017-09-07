@@ -1,0 +1,34 @@
+.zagl{
+	text-align: center;
+	margin: 20% auto;
+	background: url("/ico/REFORMATOR-zagl.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.zagl a{
+	cursor: pointer;
+	color: #313131;
+}
+
+.razrb{
+	font-size: 1.95vw;
+	margin: 1.5em 0 1.5em 0;
+	font-family:'MuseoSansCyrl_300';
+	font-weight: 300; 
+	color: #313131;
+}
+
+.known{
+	font-family:'MuseoSansCyrl_100';
+	font-weight: 600; 
+	font-size: 1.2vw;	
+}
+
+.sc a p {
+	padding: 0.5em;
+}
+
+.strt .fm_line{
+	display: none!important;
+}

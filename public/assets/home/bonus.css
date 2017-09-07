@@ -12,6 +12,10 @@ body{
 	font-size: 100%;
 }
 
+.programm_spy{
+	display: none;
+}
+
 .st-content-inner {
     font-size: 140%;
 }

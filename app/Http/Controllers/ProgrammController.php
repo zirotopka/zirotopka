@@ -11,22 +11,90 @@ use Carbon\Carbon;
 class ProgrammController extends Controller
 {	
 
-    public function index(Request $request){
-    $user = Sentinel::getUser();
-        $referral = null;
+    public function index(Request $request, $slug){
+        switch ($slug){
+            case 'r.one_start' :
+                $user = Sentinel::getUser();
+                $referral = null;
 
-        if ($request->has('referral')) {
-            $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                if ($request->has('referral')) {
+                    $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                }
+
+                $data = [
+                    'user' => $user,
+                    'referral' => $referral,
+                    'slug' => $slug,
+                ];
+
+                return view('programs.ronestart', $data);
+            break;
+            case "r.one_pro":
+                $user = Sentinel::getUser();
+                $referral = null;
+
+                if ($request->has('referral')) {
+                    $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                }
+
+                $data = [
+                    'user' => $user,
+                    'referral' => $referral,
+                    'slug' => $slug,
+                ];
+
+                return view('programs.zaglush', $data);
+            break;
+            case "r.one_runner":
+                $user = Sentinel::getUser();
+                $referral = null;
+
+                if ($request->has('referral')) {
+                    $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                }
+
+                $data = [
+                    'user' => $user,
+                    'referral' => $referral,
+                    'slug' => $slug,
+                ];
+
+                return view('programs.zaglush', $data);
+            break;
+            case "r.one_runner_plus":
+                $user = Sentinel::getUser();
+                $referral = null;
+
+                if ($request->has('referral')) {
+                    $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                }
+
+                $data = [
+                    'user' => $user,
+                    'referral' => $referral,
+                    'slug' => $slug,
+                ];
+
+                return view('programs.zaglush', $data);
+            break;
+            case "r.one_power":
+                $user = Sentinel::getUser();
+                $referral = null;
+
+                if ($request->has('referral')) {
+                    $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                }
+
+                $data = [
+                    'user' => $user,
+                    'referral' => $referral,
+                    'slug' => $slug,
+                ];
+
+                return view('programs.zaglush', $data);
+            break;
         }
-
-        $data = [
-            'user' => $user,
-            'referral' => $referral,
-        ];
-
-        return view('programs.ronestart', $data);
     }
-
 
     /**
      * получить программу

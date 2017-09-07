@@ -100,6 +100,44 @@
                         <p>программа <br> тренировок</p>
                     </a> 
                 </li>
+                <div class="programm_spy">
+                    <li class="sc strt">
+                        <p class="fm_line">|</p>
+                        <a href="/programm/r.one_start">
+                            <p>03 R.ONE START</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc pro">
+                        <p class="fm_line">|</p>
+                        <a href="/programm/r.one_pro">
+                            <p>04 R.ONE PRO</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc run">
+                        <p class="fm_line">|</p>
+                        <a href="/programm/r.one_runner">
+                            <p>05 R.ONE RUN</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc runp">
+                        <p class="fm_line">|</p>
+                        <a href="/programm/r.one_runner_plus">
+                            <p>06 R.ONE RUN+</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+                    <li class="sc pow">
+                        <p class="fm_line">|</p>
+                        <a href="/programm/r.one_power">
+                            <p>07 R.ONE POWER</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
+
+                </div>
                 <li>
                     <a href="/bonus" class="profile_btns" id="bns_l_mn">
                         <p>бонусная <br> программа</p>
@@ -109,35 +147,35 @@
                     <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#bonus_2" class="spy_sections">
-                            <p>03 КАК РАБОТАЕТ</p>
+                            <p>04 КАК РАБОТАЕТ</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
                     <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#bonus_3" class="spy_sections">
-                            <p>04 О НАС</p>
+                            <p>05 О НАС</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
                     <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#bonus_4" class="spy_sections">
-                            <p>05 О СЕРВИСЕ</p>
+                            <p>06 О СЕРВИСЕ</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
                     <li class="sc"> 
                         <p class="fm_line">|</p>
                         <a href="#bonus_5" class="spy_sections">
-                            <p>06 ВОПРОСЫ</p>
+                            <p>07 ВОПРОСЫ</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
                     <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#bonus_6" class="spy_sections">
-                            <p>06 ПРИСОЕДИНИТЬСЯ</p>
+                            <p>08 ПРИСОЕДИНИТЬСЯ</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>

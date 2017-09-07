@@ -92,7 +92,7 @@
                 </div>
                 <img src="/ico/prstart.jpg" class="hidden-xs col-sm-5 col-md-5 col-lg-5 startimg">
             </div>
-            @endif
+        @endif
             <div class="tcount-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <p class="prgr_name_st">START</p>
                 <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">

@@ -48,6 +48,7 @@ class HomeController extends Controller
         return view('home.bonus', $data);
     }
 
+
     public function get_comment_video(Request $request) {
         $comments_id = $request->get('comment_id');
 

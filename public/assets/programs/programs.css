@@ -3,6 +3,30 @@
 }
 
 /*-----------------------------Main-page-------------------------*/
+
+#prgr_l_mn{
+	border-left: 0.4em solid #F36D00;
+}
+
+.pro{
+	margin: 0!important;
+}
+
+.programm_spy a{
+	height: 1em!important;
+    padding: 0 0 0 4.7em!important;
+    background-color: transparent!important;
+}
+
+.programm_spy a p{
+	margin: 0;
+	padding: 0;
+}
+
+.strt .fm_line{
+	display: block;
+}
+
 html{
 	height: auto!important;
 	overflow-y: scroll!important;
