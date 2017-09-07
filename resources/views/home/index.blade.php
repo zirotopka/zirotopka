@@ -114,7 +114,7 @@
                         <div class="start_shader">
                             <h4>R.ONE start</h4>
                             <p>Программа для новичков</p>
-                            <a href="/program" class="arrow start-arrow" ></a>
+                            <a href="/programm/r.one_start" class="arrow start-arrow" ></a>
                         </div>
                     </div>
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -127,7 +127,7 @@
                                     <div class="pro_shader">
                                         <h4>R.ONE pro</h4>
                                         <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow" href="/program"></a>
+                                        <a class="arrow progr-arrow" href="/programm/r.one_pro"></a>
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -137,7 +137,7 @@
                                     <div class="pow_shader">
                                         <h4>R.ONE power</h4>
                                         <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow" href="/program"></a>
+                                        <a class="arrow progr-arrow" href="/programm/r.one_power"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -151,7 +151,7 @@
                                     <div class="run_shader">
                                         <h4>R.ONE run</h4>
                                         <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow" href="/program"></a>
+                                        <a class="arrow progr-arrow" href="/programm/r.one_runner"></a>
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -161,7 +161,7 @@
                                     <div class="runp_shader">
                                         <h4>R.ONE run+</h4>
                                         <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow" href="/program"></a>
+                                        <a class="arrow progr-arrow" href="/programm/r.one_runner_plus"></a>
                                     </div>
                                 </li>
                             </ul>
