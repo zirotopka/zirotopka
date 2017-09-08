@@ -5,7 +5,15 @@
     <!-- Добавлять css тут -->
     <link href="/assets/programs/zaglush.css" type="text/css" rel="stylesheet">
     <link href="/assets/programs/programs.css" type="text/css" rel="stylesheet">
-
+        @if ($slug == "r.one_pro")
+            <link href="/assets/programs/pro.css" type="text/css" rel="stylesheet">
+        @elseif ($slug == "r.one_runner")
+            <link href="/assets/programs/run.css" type="text/css" rel="stylesheet">
+        @elseif ($slug == "r.one_runner_plus")
+            <link href="/assets/programs/runp.css" type="text/css" rel="stylesheet">
+        @elseif ($slug == "r.one_power")
+            <link href="/assets/programs/pow.css" type="text/css" rel="stylesheet">
+        @endif
 
 @overwrite
 
@@ -27,10 +35,12 @@
                 <div class="zagl col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h2>ПРОГРАММА НА СТАДИИ РАЗРАБОТКИ</h2>
                     <p class="razrb">Разработка программы в завершающей стадии,<br>а пока предлагаю попробовать свои силы в:</p>
-                    <a href="/program">
-                        <h2>R.ONE START</h2>
-                        <p class="known">узнать подробнее</p>
-                    </a>
+                    <div style="width: 16vw; margin: 0 auto;">
+                        <a href="/programm/r.one_start">
+                            <h2>R.ONE START</h2>
+                            <p class="known">узнать подробнее</p>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -44,10 +54,12 @@
                 <div class="zagl col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 	<h2>ПРОГРАММА НА СТАДИИ РАЗРАБОТКИ</h2>
                 	<p class="razrb">Разработка программы в завершающей стадии,<br>а пока предлагаю попробовать свои силы в:</p>
-	                <a href="/program">
-	                	<h2>R.ONE START</h2>
-	                	<p class="known">узнать подробнее</p>
-                	</a>
+	                <div style="width: 16vw; margin: 0 auto;">
+                        <a href="/programm/r.one_start">
+    	                	<h2>R.ONE START</h2>
+    	                	<p class="known">узнать подробнее</p>
+                    	</a>
+                    </div>
                 </div>
             </div>
             

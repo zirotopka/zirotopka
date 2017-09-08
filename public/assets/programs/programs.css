@@ -23,6 +23,10 @@
 	padding: 0;
 }
 
+.pow{
+	margin: 0.5vw 0 0.5vw 0!important;
+}
+
 .strt .fm_line{
 	display: block;
 }

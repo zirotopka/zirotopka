@@ -1,0 +1,7 @@
+.pro .fm_line{
+	display: block;
+}
+
+.pro, .run{
+	margin: 0!important;
+}
