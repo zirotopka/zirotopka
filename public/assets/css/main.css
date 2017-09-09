@@ -1,3 +1,45 @@
+ #user_agreements .modal-dialog{
+	width: 80vw;
+}
+
+#partners .modal-dialog{
+	width: 60vw;
+}
+
+#partners .modal-dialog, #user_agreements .modal-content{
+	border-radius: 0;
+} 
+
+#partners b, #user_agreements b{
+    font-family: MuseoSansCyrl_500;
+}
+
+#partners, #user_agreements{
+    font-family: MuseoSansCyrl_100;
+
+}
+
+#partners ol, #user_agreements ol {
+		list-style: none; 
+		counter-reset: li; 
+	}
+
+#partners ul li:before, #user_agreements ul li:before{
+	content: none!important; 
+}
+
+#partners ol li:before, #user_agreements ol li:before {
+		counter-increment: li; 
+		content: counters(li,".") ". "; 
+	}
+#partners h2, #user_agreements h2{
+	text-align: center;
+}
+
+#partners .off, #user_agreements .off{
+	text-align: center;
+}
+
 /*-----------------------------Main-page-------------------------*/
 html{
 	height: auto!important;
