@@ -37,4 +37,17 @@ jQuery(document).ready(function(){
     $("#faq_razn").on('click',function(){
         $('.all .hidden').attr('style','display: block!important;')
     });
+
+    jQuery('body').on('click','.question',function(event){
+        event.preventDefault();
+
+        var closestLi = $(this).closest('li'),
+            answ = closestLi.find('.answ').eq(0);
+
+        if (answ.hasClass('hidden')) {
+            answ.removeClass('hidden');
+        } else {
+            answ.addClass('hidden');
+        }
+    });
 });
