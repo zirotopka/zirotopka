@@ -25,4 +25,16 @@ jQuery(document).ready(function(){
         });
            
 	})
+    $("#faq_refs").on('click',function(){
+        $('.ref .hidden').attr('style','display: block!important;')
+    });
+    $("#about_program").on('click',function(){
+        $('.prg .hidden').attr('style','display: block!important;')
+    });
+    $("#faq_ruls").on('click',function(){
+        $('.ruls .hidden').attr('style','display: block!important;')
+    });
+    $("#faq_razn").on('click',function(){
+        $('.all .hidden').attr('style','display: block!important;')
+    });
 });

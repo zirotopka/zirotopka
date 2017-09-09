@@ -1,3 +1,8 @@
+.answ{
+	display: none;
+	font-size: 0.8em;
+}
+
  #user_agreements .modal-dialog{
 	width: 80vw;
 }
@@ -34,6 +39,7 @@
 	}
 #partners h2, #user_agreements h2{
 	text-align: center;
+	color: #ff8a18;
 }
 
 #partners .off, #user_agreements .off{
@@ -1131,7 +1137,6 @@ ul li{
 	}
 	/*-----------------------------Seventh Screen(questions-screen)-----------------*/
 	.questions-screen{
-		height: 64vw;
 		text-align: center;
 		padding: 8.5% 0 0 0;
 		margin: 3% 0 5vw 0;
@@ -1209,8 +1214,12 @@ ul li{
 
 	}
 
-	.prg, .all{
+	.all{
 		margin: 3vw 0 4vw 0;
+	}
+	
+	.prg{
+		margin: 4.5vw 0 4vw 0;
 	}
 
 	.zag{
@@ -2452,7 +2461,6 @@ footer{
 	}
 
 	.questions-screen {
-	    height: 70vw;
 	}
 
 	.prg .zag, .all .zag {
@@ -2667,7 +2675,6 @@ footer{
 	}
 /*-----------------------------Eights-screen---------------------------*/
 	.questions-screen {
-	    height: 51vw;
 	    padding: 6% 0 0 0;
 	}
 
