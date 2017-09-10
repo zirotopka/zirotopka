@@ -12,3 +12,4 @@ npm-debug.log
 private.key1
 request.csr
 /public/messages
+/public/trainings/*
