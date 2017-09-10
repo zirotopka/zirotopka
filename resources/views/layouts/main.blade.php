@@ -19,7 +19,7 @@
     <link href="/assets/css/calendar.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.css">
     <link rel="stylesheet" href="/assets/lightbox/dist/css/lightbox.min.css">
-    <link rel="shortcut icon" href="/ico/favikon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="{{ asset('ico/faviсon.svg') }}" type="image/svg+xml">
 
 	<title>Reformator.ONE</title>
 
