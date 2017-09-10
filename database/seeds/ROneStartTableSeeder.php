@@ -56,10 +56,10 @@ class ROneStartTableSeeder extends Seeder
     		$programm_days_array = [
     			['day' => 1, 'status' => 0, 'description' => '1-й день программы тренировок задействует все основные мышцы в организме и сегодня контрольный тест – все упражнения делаете по максимуму, сколько сможете.
 Перед выполнением всех упражнений сразу или по отдельности рекомендуется сделать общую разминку, а после окончания выполнения тренировки – растяжку.', 'lead_time' => '','interest' => 1, 'difficult' => 1, 'stages' => [
-					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => 'U+221E','status' => 1, 'exercise_id' => 2],
-					['description' => 'Планка классическая стойка на предплечьях', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => 'U+221E', 'status' => 1, 'exercise_id' => 5],
-					['description' => 'Стульчик у опоры', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => 'U+221E', 'status' => 1, 'exercise_id' => 23],
-					['description' => 'Отжимание от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => 'U+221E', 'status' => 1, 'exercise_id' => 17],
+					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;','status' => 1, 'exercise_id' => 2],
+					['description' => 'Планка классическая стойка на предплечьях', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;', 'status' => 1, 'exercise_id' => 5],
+					['description' => 'Стульчик у опоры', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;', 'status' => 1, 'exercise_id' => 23],
+					['description' => 'Отжимание от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;', 'status' => 1, 'exercise_id' => 17],
 				]],
 				['day' => 2, 'status' => 0, 'description' => '1-й день программы тренировок задействует все основные мышцы в организме и сегодня контрольный тест – все упражнения делаете по максимуму, сколько сможете.
 Перед выполнением всех упражнений сразу или по отдельности рекомендуется сделать общую разминку, а после окончания выполнения тренировки – растяжку.', 'lead_time' => '','interest' => 0, 'difficult' => 1, 'stages' => [
@@ -176,10 +176,10 @@ class ROneStartTableSeeder extends Seeder
 					['description' => 'Стульчик у опоры ', 'interest' => 1, 'time_exercive' => '2 минуты', 'repeat_count' => '1 подход', 'status' => 1, 'exercise_id' => 23],
 				]],
 				['day' => 6, 'status' => 1, 'description' => 'Финальный день твоей программы тренировок и сегодня контрольный тест (постарайся вспомнить результаты контрольного теста в 1-й день и сравни с сегодняшними результатами)', 'lead_time' => '','interest' => 1, 'difficult' => 1, 'stages' => [
-					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => 'U+221E','status' => 1, 'exercise_id' => 2],
-					['description' => 'Планка классическая стойка на предплечьях', 'interest' => 1, 'time_exercive' => 'U+221E', 'repeat_count' => '', 'status' => 1, 'exercise_id' => 5],
-					['description' => 'Стульчик у опоры', 'interest' => 1, 'time_exercive' => 'U+221E', 'repeat_count' => '', 'status' => 1, 'exercise_id' => 23],
-					['description' => 'Отжимание от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => 'U+221E', 'status' => 1, 'exercise_id' => 17],
+					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;','status' => 1, 'exercise_id' => 2],
+					['description' => 'Планка классическая стойка на предплечьях', 'interest' => 1, 'time_exercive' => '&#8734;', 'repeat_count' => '', 'status' => 1, 'exercise_id' => 5],
+					['description' => 'Стульчик у опоры', 'interest' => 1, 'time_exercive' => '&#8734;', 'repeat_count' => '', 'status' => 1, 'exercise_id' => 23],
+					['description' => 'Отжимание от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;', 'status' => 1, 'exercise_id' => 17],
 				]],
     		];
 

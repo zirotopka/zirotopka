@@ -58,10 +58,17 @@
 						</tr>
 						<tr>
 							@foreach ( $programm_days as $program_day )
+								<?php
+									if (!empty($program_day->difficult)) {
+										$difficult = $difficult_array[$program_day->difficult];
+										$emp_star= 3 - $program_day->difficult;
+									} else {
+										$difficult = 0;
+										$emp_star= 3;
+									}
+								?>
+
 								@php
-									$difficult = $difficult_array[$program_day->difficult];
-									$emp_star= 3 - $program_day->difficult;
-									
 									$cal_class = '';
 									if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
 										$cal_class = 'hidden-xs hidden-sm';
@@ -83,7 +90,7 @@
 
 								@endphp
 								
-								@if ( empty($program_day->status) )
+								@if ( empty($program_day->status) && !in_array($program_day->day,[1,2]) )
 
 									<td class="box-cal {{$class}} {{$cal_class}}" style="background-repeat: no-repeat; background-image: url('/ico/sun.png'); background-size: 2em 2em; background-position: center;">
 										<span class="cal_hints outlet">
@@ -162,14 +169,18 @@
 								</div>
 <!--VIDEO-->
 								<div class="video_holder" data-id="{{$exercive->id}}">
-									@php
+									<?php
 								    	$preview = $exercive->previews->first();
-								    @endphp
-								    @if (!empty($preview))
-								    	<img src="{{ $preview->file_url }}" alt="" style="width: 100%;">
-								    	<div class="mask"></div>
-								    	<img class="btn-play" src="/ico/play.svg" alt="">
-								    @endif
+
+								    	if (!empty($preview)) {
+								    		$previewUrl = $preview->file_url;
+								    	} else {
+								    		$previewUrl = '/image/preview/r.one_start.png';
+								    	}
+								    ?>
+							    	<img src="{{ $previewUrl }}" alt="" style="width: 100%;">
+							    	<div class="mask"></div>
+							    	<img class="btn-play" src="/ico/play.svg" alt="">
 								</div>
 								<div class="otchet" data-programm-stage="{{$programm_stage->id}}">
 									<div class="attachment-container"></div>
