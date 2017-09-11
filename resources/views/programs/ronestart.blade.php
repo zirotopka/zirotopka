@@ -77,7 +77,7 @@
                         <p class="rst_ctn">
                             {{$program->description}}
                         </p>
-                        <button type="button" data-toggle="modal" data-target="#registr">ТЕСТОВЫЙ ПЕРЕОД (бесплатно)</button>
+                        <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                     </div>
                     <div class="rstart-img-cnt col-xs-5 col-sm-5 col-md-5 col-lg-5">
                         <img src="/ico/easy_lvl.svg" class="frs_imgs">
@@ -142,7 +142,7 @@
                             <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
                                 <p class="cs-head">ЯГОДИЧНЫЙ МОСТ</p>
                                 <p></p>
-                                <button type="button" data-toggle="modal" data-target="#registr">ТЕСТОВЫЙ ПЕРЕОД (бесплатно)</button> 
+                                <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
                         <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
