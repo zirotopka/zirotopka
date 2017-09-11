@@ -4,7 +4,7 @@
     @parent
     <!-- Добавлять css тут -->
     <link href="/assets/home/reg-log_form.css" type="text/css" rel="stylesheet">
-    <link href="http://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
+    <link href="//vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
     <link href="/assets/css/main.css" type="text/css" rel="stylesheet">
     <link href="/assets/swiper/swiper.min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
@@ -495,10 +495,10 @@
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
                     <ul>
                         <li>
-                            <a href="#">ДОГОВОР ОФЕРТА</a>
+                            <a href="#" data-toggle="modal" data-target="#partners">ПАРТНЕРСКОЕ СОГЛАШЕНИЕ</a>
                         </li>
                         <li id="pltks">
-                            <a href="#">ПОЛИТИКА<br>КОНФЕДИЦИАЛЬНОСТИ</a>
+                            <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАЩЕНИЕ</a>
                         </li>
                     </ul>
                 </div>
