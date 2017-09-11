@@ -495,10 +495,10 @@
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
                     <ul>
                         <li>
-                            <a href="#" data-toggle="modal" data-target="#partners">ПАРТНЕРСКОЕ СОГЛАШЕНИЕ</a>
+                            <a href="#">ДОГОВОР ОФЕРТА</a>
                         </li>
                         <li id="pltks">
-                            <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАЩЕНИЕ</a>
+                            <a href="#">ПОЛИТИКА<br>КОНФЕДИЦИАЛЬНОСТИ</a>
                         </li>
                     </ul>
                 </div>

@@ -237,14 +237,14 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div>        
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
                     <ul>
                         <li>
-                            <a href="#">ДОГОВОР ОФЕРТА</a>
+                            <a href="#" data-toggle="modal" data-target="#partners">ПАРТНЕРСКОЕ СОГЛАШЕНИЕ</a>
                         </li>
                         <li id="pltks">
-                            <a href="#">ПОЛИТИКА<br>КОНФЕДИЦИАЛЬНОСТИ</a>
+                            <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАЩЕНИЕ</a>
                         </li>
                     </ul>
                 </div>
@@ -272,4 +272,6 @@
     </div>
 
     @include('home.registration',['user' => $user, 'referral' => $referral])
+    @include('politics.user_agreements')
+    @include('politics.partners')
 @overwrite
