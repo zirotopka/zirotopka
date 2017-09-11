@@ -218,7 +218,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
                         <ul>
-                            <li>
+                            <li style="line-height: 1.5em;">
                                 <a href="#" data-toggle="modal" data-target="#partners">ПАРТНЕРСКОЕ СОГЛАШЕНИЕ</a>
                             </li>
                             <li id="pltks">
