@@ -13,10 +13,10 @@ class ProgrammController extends Controller
 
     public function index(Request $request, $slug){
         switch ($slug){
-            case 'r.one_start' :
+            case 'ROneStart' :
                 $user = Sentinel::getUser();
                 $referral = null;
-                $program = Programm::select([
+                $programm = Programm::select([
                     'id',
                     'description',
                     'cost',
@@ -36,12 +36,22 @@ class ProgrammController extends Controller
                     'user' => $user,
                     'referral' => $referral,
                     'slug' => $slug,
-                    'program' => $program,
+                    'program' => $programm,
                 ];
 
                 return view('programs.ronestart', $data);
             break;
-            case "r.one_pro":
+            case "r.one_pro":                $programm = Programm::select([
+                    'id',
+                    'description',
+                    'cost',
+                    'slug',
+                    'name',
+                    'days',
+                    'day_off',
+                    'trainings',
+                    'tasks'
+                ])->where('slug','=',$slug)->first();
                 $user = Sentinel::getUser();
                 $referral = null;
 
