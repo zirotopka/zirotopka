@@ -114,7 +114,7 @@
                         <div class="start_shader">
                             <h4>R.ONE start</h4>
                             <p>Программа для новичков</p>
-                            <a href="/programm/r.one_start" class="arrow start-arrow" ></a>
+                            <a href="/programm/ROneStart" class="arrow start-arrow" ></a>
                         </div>
                     </div>
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">

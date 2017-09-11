@@ -96,7 +96,7 @@
                     </li>
                 </div>
                 <li>
-                    <a href="/programm/r.one_start" class="profile_btns" id="prgr_l_mn">
+                    <a href="/programm/ROneStart" class="profile_btns" id="prgr_l_mn">
                         <p>программа <br> тренировок</p>
                     </a> 
                 </li>
