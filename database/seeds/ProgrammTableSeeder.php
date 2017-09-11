@@ -34,7 +34,7 @@ class ProgrammTableSeeder extends Seeder
         Accrual::truncate();
 
     	$exercive_array = [
-    		['slug' => 'berpie', 'name' => 'Берпи с отжиманием', 'description' => 'Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием Берпи с отжиманием', 'file_url' => '/video/trainings/birpie.mp4', 'preview' => '/image/test/preview1.png' ],
+    		['slug' => 'berpie', 'name' => 'Берпи с отжиманием', 'description' => 'Берпи с отжиманием', 'file_url' => '/video/trainings/birpie.mp4', 'preview' => '/image/test/preview1.png' ],
     		['slug' => 'jump', 'name' => 'Прыжки на скакалке', 'description' => 'Прыжки на скакалке', 'file_url' => '/video/trainings/jump.mp4', 'preview' => '/image/test/preview2.png'],
     	];
 
@@ -81,11 +81,11 @@ class ProgrammTableSeeder extends Seeder
         }
 
         $trainings = [
-            ['slug' => 'r.one_start','name' => 'R.ONE START','description' => 'Программа предназначенная для новичков'],
-            ['slug' => 'r.one_pro','name' => 'R.ONE PRO','description' => 'Программа предназначенная для Про'],
-            ['slug' => 'r.one_runner','name' => 'R.ONE RUNNER','description' => 'Программа предназначенная для бега.'],
-        	['slug' => 'r.one_runner_plus','name' => 'R.ONE RUNNER +','description' => 'Программа предназначенная для бега с бонусами'],
-        	['slug' => 'r.one_power','name' => 'R.ONE POWER','description' => 'Программа предназначенная для самых сильных'],
+            ['slug' => 'r.one_start','name' => 'R.ONE START','description' => 'Программа тренировок подойдет для всех вне зависимости от уровня подготовки, в том числе для новичков или тех, кто очень давно не занимался спортом и только сейчас готов стать реформатором. Попробуйте бесплатно в течение тестового периода.', 'days' => 28, 'tranings' => 9, 'day_off' => 9, 'tasks' => 10],
+            ['slug' => 'r.one_pro','name' => 'R.ONE PRO','description' => 'Программа предназначенная для Про', 'days' => 28, 'tranings' => 9, 'day_off' => 9, 'tasks' => 10],
+            ['slug' => 'r.one_runner','name' => 'R.ONE RUNNER','description' => 'Программа предназначенная для бега.', 'days' => 28, 'tranings' => 9, 'day_off' => 9, 'tasks' => 10],
+        	['slug' => 'r.one_runner_plus','name' => 'R.ONE RUNNER +','description' => 'Программа предназначенная для бега с бонусами', 'days' => 28, 'tranings' => 9, 'day_off' => 9, 'tasks' => 10],
+        	['slug' => 'r.one_power','name' => 'R.ONE POWER','description' => 'Программа предназначенная для самых сильных', 'days' => 28, 'tranings' => 9, 'day_off' => 9, 'tasks' => 10],
         ];
 
         foreach ( $trainings as $training ) {
@@ -94,6 +94,10 @@ class ProgrammTableSeeder extends Seeder
         	$programm->name = $training['name'];
         	$programm->description = $training['description'];
             $programm->cost = 2500;
+            $programm->days =$training['days'];
+            $programm->trainings =$training['tranings'];
+            $programm->day_off =$training['day_off'];
+            $programm->tasks =$training['tasks'];
 
         	if ( $programm->save() ) {
         		$programm_id = $programm->id;

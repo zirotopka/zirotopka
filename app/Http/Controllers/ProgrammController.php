@@ -16,6 +16,17 @@ class ProgrammController extends Controller
             case 'r.one_start' :
                 $user = Sentinel::getUser();
                 $referral = null;
+                $program = Programm::select([
+                    'id',
+                    'description',
+                    'cost',
+                    'slug',
+                    'name',
+                    'days',
+                    'day_off',
+                    'trainings',
+                    'tasks'
+                ])->where('slug','=',$slug)->first();
 
                 if ($request->has('referral')) {
                     $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
@@ -25,6 +36,7 @@ class ProgrammController extends Controller
                     'user' => $user,
                     'referral' => $referral,
                     'slug' => $slug,
+                    'program' => $program,
                 ];
 
                 return view('programs.ronestart', $data);
