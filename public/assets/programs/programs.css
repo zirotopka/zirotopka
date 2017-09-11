@@ -604,7 +604,7 @@ h2{
     width: 85%;
 }
 
-.ico_play {
+.comm_pl_hldr {
     position: absolute;
     z-index: 2;
     margin: 9% 0 0 -23vw;
@@ -612,12 +612,12 @@ h2{
     cursor: pointer;
 }
 
-.ico_play:hover {
+.comm_pl_hldr:hover {
 	width: 20.2%;
 	margin: 8.8% 0 0 -23vw;
 }
 
-.ico_play:active {
+.comm_pl_hldr:active {
 	width: 20.2%;
 	margin: 8.8% 0 0 -23vw;
 	background: url("/ico/hov-paly.svg");
@@ -967,19 +967,19 @@ h2{
 	    padding: 0 0 8vw 0;
 	}
 
-	.ico_play {
+	.comm_pl_hldr {
 	    position: absolute;
 	    z-index: 2;
 	    margin: 9% 0 0 -44vw;
 	    width: 20%;
 	}
 
-	.ico_play:hover {
+	.comm_pl_hldr:hover {
 	    margin: 8.8% 0 0 -44.05vw;
 	    width: 20.5%;
 	}
 
-	.ico_play:active {
+	.comm_pl_hldr:active {
 	    margin: 8.8% 0 0 -44.05vw;
 	    width: 20.5%;
 	}
@@ -1165,15 +1165,15 @@ footer{
 	    margin: -8% 0 0 0;
 	}
 
-	.ico_play {
+	.comm_pl_hldr {
 	    margin: 9% 0 0 -26vw;
 	}
 
-	.ico_play:hover {
+	.comm_pl_hldr:hover {
 	    margin: 8.8% 0 0 -28.05vw;
 	}
 
-	.ico_play:active {
+	.comm_pl_hldr:active {
 	    margin: 8.8% 0 0 -28.05vw;
 	}
 
@@ -1202,7 +1202,7 @@ footer{
 		.connect-screen{
 			background-size: 125vw;
 		}
-		.ico_play {
+		.comm_pl_hldr {
 		    margin: 9% 0 0 -21.5vw;
 		}
 	}
@@ -1278,15 +1278,15 @@ footer{
 	    height: 24vw;
 	}
 
-	.ico_play {
+	.comm_pl_hldr {
 	    margin: 7% 0 0 -23vw;
 	}
 
-	.ico_play:hover{
+	.comm_pl_hldr:hover{
 		margin: 6.8% 0 0 -23.05vw;
 	}
 
-	.ico_play:active{
+	.comm_pl_hldr:active{
 		margin: 6.8% 0 0 -23.05vw;
 		content: url(/ico/hov-play.svg);
 	}

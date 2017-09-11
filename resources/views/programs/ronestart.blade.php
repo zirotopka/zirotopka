@@ -4,8 +4,11 @@
     @parent
     <!-- Добавлять css тут -->
     <link href="/assets/home/reg-log_form.css" type="text/css" rel="stylesheet">
+    <link href="//vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
     <link href="/assets/programs/programs.css" type="text/css" rel="stylesheet">
     <link href="/assets/swiper/swiper.min.css" type="text/css" rel="stylesheet">
+
 
 @overwrite
 
@@ -13,7 +16,9 @@
     @parent
     <!-- Добавлять js тут -->
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
+    <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
     <script type="text/javascript" src="/assets/programs/programs.js"></script>
+
 
 @overwrite
 
@@ -121,7 +126,7 @@
                             <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
                                 <div class="bbrdr">
                                     <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.svg" alt="" class="ico_play" class="comm_pl_hldr" data-id="">
+                                    <img src="/ico/play.svg" alt="" class="ico_play1 comm_pl_hldr" data-id="">
                                     <p class="upr_d">30 минут каждый обязательный день</p>
                                 </div>
                             </div>
@@ -135,7 +140,7 @@
                             <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
                                 <div class="bbrdr">
                                     <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.svg" alt="" class="ico_play" class="comm_pl_hldr" data-id="">
+                                    <img src="/ico/play.svg" alt="" class="ico_play2 comm_pl_hldr" data-id="">
                                     <p class="upr_d">30 минут каждый обязательный день</p>
                                 </div>
                             </div>
@@ -149,7 +154,7 @@
                             <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
                                 <div class="bbrdr">
                                     <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.svg" alt="" class="ico_play" class="comm_pl_hldr" data-id="">
+                                    <img src="/ico/play.svg" alt="" class="comm_pl_hldr ico_play3" data-id="">
                                     <p class="upr_d">30 минут каждый обязательный день</p>
                                 </div>
                             </div>
@@ -252,7 +257,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
+    <div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal" style="text-align: center; margin: 3vw auto">
         <div class="display-inline width-eight-perc" role="document">
             <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

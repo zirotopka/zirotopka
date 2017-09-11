@@ -152,7 +152,7 @@ $(document).ready(function(){
     	$('.prg5').attr('style',"display:block;");
     });
 
-      $('body').on('click','.ico_play',function() {
+$('body').on('click','.ico_play',function() {
     var video_modal_form = $('#video-modal'),
         thisContainer = jQuery(this),
  			  comment_id = thisContainer.data('id');
