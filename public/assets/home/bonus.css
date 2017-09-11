@@ -833,6 +833,9 @@ footer .prgrm_list .bonus{
 
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
+.prtnrs{
+	line-height: 1.5em;
+}
 .rg_check_in{
 	margin: 3.2em 0 15vw 0!important;
 }

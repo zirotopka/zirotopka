@@ -1424,7 +1424,9 @@ footer .prgrm_list .bonus{
 }
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
-
+	.prtnrs{
+		line-height: 1.5em;
+	}
 	.questions-screen img {
 	    display: inline-block;
 	    vertical-align: baseline;
