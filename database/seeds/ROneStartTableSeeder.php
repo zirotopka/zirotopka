@@ -59,46 +59,46 @@ class ROneStartTableSeeder extends Seeder
 
     		$programm_days_array = [
     			['day' => 1, 'status' => 0, 'description' => '1-й день программы тренировок задействует все основные мышцы в организме и сегодня контрольный тест – все упражнения делаете по максимуму, сколько сможете.
-Перед выполнением всех упражнений сразу или по отдельности рекомендуется сделать общую разминку, а после окончания выполнения тренировки – растяжку.', 'lead_time' => '','interest' => 1, 'difficult' => 2, 'stages' => [
+Перед выполнением всех упражнений сразу или по отдельности рекомендуется сделать общую разминку, а после окончания выполнения тренировки – растяжку.', 'lead_time' => '','interest' => 1, 'difficult' => 2, 'lead_time' => '< 20 мин', 'stages' => [
 					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;','status' => 1, 'exercise_id' => 2],
 					['description' => 'Планка классическая стойка на предплечьях', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;', 'status' => 1, 'exercise_id' => 5],
 					['description' => 'Стульчик у опоры', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;', 'status' => 1, 'exercise_id' => 23],
 					['description' => 'Отжимание от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;', 'status' => 1, 'exercise_id' => 17],
 				]],
-				['day' => 2, 'status' => 0, 'description' => '"Вспомогательная тренировка для укрепления всего организма. Развивается общая выносливость и помощь в ускорении обмена веществ. Каждое упражнение выполняется в течение 1 минуты, отдых между переходом на другое упражнение 10-15 сек. Выполняется 3 круга."', 'lead_time' => '','interest' => 0, 'difficult' => 1, 'stages' => [
+				['day' => 2, 'status' => 0, 'description' => '"Вспомогательная тренировка для укрепления всего организма. Развивается общая выносливость и помощь в ускорении обмена веществ. Каждое упражнение выполняется в течение 1 минуты, отдых между переходом на другое упражнение 10-15 сек. Выполняется 3 круга."', 'lead_time' => '< 20 мин','interest' => 0, 'difficult' => 1, 'stages' => [
 					['description' => 'Крабик', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему.', 'repeat_count' => '2 круга','status' => 0, 'exercise_id' => 22],
 					['description' => 'Перекрестное движение рук к ногам', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему.', 'repeat_count' => '2 круга', 'status' => 0, 'exercise_id' => 18],
 					['description' => 'Выпрыгивание вверх, хлопок над головой', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему.', 'repeat_count' => '2 круга', 'status' => 0, 'exercise_id' => 25],
 					['description' => 'Планка классическая', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему.', 'repeat_count' => '2 круга', 'status' => 0, 'exercise_id' => 5],
 				]],
 				['day' => 3, 'status' => 0, 'description' => 'Выходной', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
-				['day' => 4, 'status' => 1, 'description' => 'Тренировка направлена на укрепление мышц ног и пресса.', 'lead_time' => '','interest' => 0, 'difficult' => 1, 'stages' => [
+				['day' => 4, 'status' => 1, 'description' => 'Тренировка направлена на укрепление мышц ног и пресса.', 'lead_time' => '< 20 мин','interest' => 0, 'difficult' => 1, 'stages' => [
 					['description' => 'Выпады назад на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '2 подхода * 30 повторений','status' => 0, 'exercise_id' => 1],
 					['description' => 'Разножка на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '2 подхода * 30 повторений', 'status' => 0, 'exercise_id' => 24],
 					['description' => 'Стульчик у опоры', 'interest' => 1, 'time_exercive' => '1 минута', 'repeat_count' => '2 подхода', 'status' => 0, 'exercise_id' => 23],
 					['description' => 'Подъем ног лежа', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '2 подхода * 20 повторений', 'status' => 0, 'exercise_id' => 7],
 				]],
 				['day' => 5, 'status' => 0, 'description' => 'Выходной', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
-				['day' => 6, 'status' => 1, 'description' => 'Более глубокая проработка мышечной ткани и хороший жиросжигательный эффект!', 'lead_time' => '','interest' => 1, 'difficult' => 2, 'stages' => [
+				['day' => 6, 'status' => 1, 'description' => 'Более глубокая проработка мышечной ткани и хороший жиросжигательный эффект!', 'lead_time' => '< 40 мин','interest' => 1, 'difficult' => 2, 'stages' => [
 					['description' => 'Легкий бег или хаотичные прыжки в сторону', 'interest' => 1, 'time_exercive' => '15 минут бег или 150 прыжков', 'repeat_count' => '','status' => 1, 'exercise_id' => null],
 					['description' => 'Присед + различные махи в стороны', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 26],
 					['description' => 'Скалолаз', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 15 повторений', 'status' => 1, 'exercise_id' => 15],
 					['description' => 'Альпинист', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 15 повторений', 'status' => 1, 'exercise_id' => 19],
 				]],
-				['day' => 7, 'status' => 1, 'description' => 'Легкое повышение нагрузки на организм, переход на следующую ступень', 'lead_time' => '','interest' => 0, 'difficult' => 2, 'stages' => [
+				['day' => 7, 'status' => 1, 'description' => 'Легкое повышение нагрузки на организм, переход на следующую ступень', 'lead_time' => '< 30 мин','interest' => 0, 'difficult' => 2, 'stages' => [
 					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему.', 'repeat_count' => 'Всего 3 круга','status' => 0, 'exercise_id' => 2],
 					['description' => 'Боковая планка', 'interest' => 1,  'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему.', 'repeat_count' => 'Всего 3 круга', 'status' => 0, 'exercise_id' => 4],
 					['description' => 'Упор лежа: вставание на локти и обратно', 'interest' => 1,  'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему.', 'repeat_count' => 'Всего 3 круга', 'status' => 0, 'exercise_id' => 20],
 					['description' => 'Выпрыгивание вверх , хлопок над головой', 'interest' => 1,  'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему.', 'repeat_count' => 'Всего 3 круга', 'status' => 0, 'exercise_id' => 25],
 				]],
 				['day' => 8, 'status' => 0, 'description' => 'Выходной', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
-				['day' => 9, 'status' => 1, 'description' => 'Тренировка направлена на укрепление верхнего плечевого пояса и мышц пресса.', 'lead_time' => '','interest' => 1, 'difficult' => 2, 'stages' => [
+				['day' => 9, 'status' => 1, 'description' => 'Тренировка направлена на укрепление верхнего плечевого пояса и мышц пресса.', 'lead_time' => '< 40 мин','interest' => 1, 'difficult' => 2, 'stages' => [
 					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '15 минут', 'repeat_count' => '','status' => 1, 'exercise_id' => null],
 					['description' => 'Отжимание от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 15 повторений', 'status' => 1, 'exercise_id' => 17],
 					['description' => 'Упор лежа с перекрестным движением рук к плечу', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 21],
 					['description' => 'Ножницы', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 11],
 				]],
-				['day' => 10, 'status' => 1, 'description' => '', 'lead_time' => '','interest' => 0, 'difficult' => 2, 'stages' => [
+				['day' => 10, 'status' => 1, 'description' => '', 'lead_time' => '< 30 мин','interest' => 0, 'difficult' => 2, 'stages' => [
 					['description' => 'Прыжки на скакалке', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '150 прыжков','status' => 1, 'exercise_id' => 27],
 					['description' => 'Разножка на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 24],
 					['description' => 'Присед + выпад назад', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 14],
@@ -106,39 +106,39 @@ class ROneStartTableSeeder extends Seeder
 				]],
 
 				['day' => 11, 'status' => 0, 'description' => 'Выходной', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
-				['day' => 12, 'status' => 1, 'description' => '12-й день тренировки помогает поддерживать общий тонус ваших мышц', 'lead_time' => '','interest' => 0, 'difficult' => 1, 'stages' => [
+				['day' => 12, 'status' => 1, 'description' => '12-й день тренировки помогает поддерживать общий тонус ваших мышц', 'lead_time' => '< 40 мин','interest' => 0, 'difficult' => 1, 'stages' => [
 					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '15 минут', 'repeat_count' => '','status' => 1, 'exercise_id' => null],
 					['description' => 'Прыжки на скакалке', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '150 раз', 'status' => 1, 'exercise_id' => 27],
 					['description' => 'Перекрестное движение рук к ногам', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 18],
 					['description' => 'Подъем корпуса вперед', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 6],
 				]],
-				['day' => 13, 'status' => 1, 'description' => 'Сегодняшний день тренировки заметно покажет, насколько вы преуспели в своем развитии', 'lead_time' => '','interest' => 1, 'difficult' => 3, 'stages' => [
+				['day' => 13, 'status' => 1, 'description' => 'Сегодняшний день тренировки заметно покажет, насколько вы преуспели в своем развитии', 'lead_time' => '< 40 мин','interest' => 1, 'difficult' => 3, 'stages' => [
 					['description' => 'Книжка', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '50 повторений, отдых 10-15 сек, переход к следующему. Всего 2 круга.','status' => 1, 'exercise_id' => 10],
 					['description' => 'Присед + различные махи в стороны', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '50 повторений, отдых 10-15 сек, переход к следующему. Всего 2 круга.', 'status' => 1, 'exercise_id' => 26],
 					['description' => 'Упор лежа: вставание на локти и обратно', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '50 повторений, отдых 10-15 сек, переход к следующему. Всего 2 круга.', 'status' => 1, 'exercise_id' => 20],
 					['description' => 'Планка', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '50 повторений, отдых 10-15 сек, переход к следующему. Всего 2 круга.', 'status' => 1, 'exercise_id' => 5],
 				]],
 				['day' => 14, 'status' => 0, 'description' => 'Выходной', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
-				['day' => 15, 'status' => 1, 'description' => 'Глубокая проработка мышц ног', 'lead_time' => '','interest' => 1, 'difficult' => 2, 'stages' => [
+				['day' => 15, 'status' => 1, 'description' => 'Глубокая проработка мышц ног', 'lead_time' => '< 40 мин','interest' => 1, 'difficult' => 2, 'stages' => [
 					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '20 минут', 'repeat_count' => '','status' => 1, 'exercise_id' => null],
 					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 60 повторений', 'status' => 1, 'exercise_id' => 2],
 					['description' => 'Выпрыгивание вверх, хлопок над головой', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 60 повторений', 'status' => 1, 'exercise_id' => 25],
 					['description' => 'Выпады назад крест-накрест', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 60 повторений', 'status' => 1, 'exercise_id' => 3],
 				]],
-				['day' => 16, 'status' => 1, 'description' => 'Укрепление всех мышечных групп организма', 'lead_time' => '','interest' => 0, 'difficult' => 2, 'stages' => [
+				['day' => 16, 'status' => 1, 'description' => 'Укрепление всех мышечных групп организма', 'lead_time' => '< 30 мин','interest' => 0, 'difficult' => 2, 'stages' => [
 					['description' => 'Крабик', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему. Всего 3 круга.', 'repeat_count' => '','status' => 1, 'exercise_id' => 22],
 					['description' => 'Перекрестное движение рук к ногам', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему. Всего 3 круга.', 'repeat_count' => '', 'status' => 1, 'exercise_id' => 18],
 					['description' => 'Выпрыгивание вверх, хлопок над головой', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему. Всего 3 круга.', 'repeat_count' => '', 'status' => 1, 'exercise_id' => 25],
 					['description' => 'Планка', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему. Всего 3 круга.', 'repeat_count' => '', 'status' => 1, 'exercise_id' => 5],
 				]],
 				['day' => 17, 'status' => 0, 'description' => 'Выходной', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
-				['day' => 18, 'status' => 1, 'description' => 'Поддержание мышечного тонуса ног', 'lead_time' => '','interest' => 0, 'difficult' => 3, 'stages' => [
+				['day' => 18, 'status' => 1, 'description' => 'Поддержание мышечного тонуса ног', 'lead_time' => '< 40 мин','interest' => 0, 'difficult' => 3, 'stages' => [
 					['description' => 'Выпады назад на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений','status' => 1, 'exercise_id' => 1],
 					['description' => 'Разножка на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 40 повторений', 'status' => 1, 'exercise_id' => 24],
 					['description' => 'Стульчик у опоры', 'interest' => 1, 'time_exercive' => '1,5 минуты', 'repeat_count' => '3 подхода', 'status' => 1, 'exercise_id' => 23],
 					['description' => 'Подъем ног лежа', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 7],
 				]],
-				['day' => 19, 'status' => 1, 'description' => 'Продолжаем развивать вашу двигательную активность', 'lead_time' => '','interest' => 2, 'difficult' => 1, 'stages' => [
+				['day' => 19, 'status' => 1, 'description' => 'Продолжаем развивать вашу двигательную активность', 'lead_time' => '< 40 мин','interest' => 2, 'difficult' => 1, 'stages' => [
 					['description' => 'Скручивание на полу', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений','status' => 1, 'exercise_id' => 8],
 					['description' => 'Отжимания от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 17],
 					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 60 повторений', 'status' => 1, 'exercise_id' => 2],
@@ -146,39 +146,39 @@ class ROneStartTableSeeder extends Seeder
 				]],
 				['day' => 20, 'status' => 0, 'description' => 'Выходной', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
 
-				['day' => 21, 'status' => 1, 'description' => 'Общая тренировка и хорошая проработка рук и мышц кора', 'lead_time' => '','interest' => 1, 'difficult' => 2, 'stages' => [
+				['day' => 21, 'status' => 1, 'description' => 'Общая тренировка и хорошая проработка рук и мышц кора', 'lead_time' => '< 40 мин','interest' => 1, 'difficult' => 2, 'stages' => [
 					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '15 минут', 'repeat_count' => '','status' => 1, 'exercise_id' => null],
 					['description' => 'Отжимания от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 17],
 					['description' => 'Гиперэкстензия', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 29],
 					['description' => 'Ножницы ', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 11],
 				]],
-				['day' => 22, 'status' => 1, 'description' => 'Тренировка на выносливость', 'lead_time' => '','interest' => 0, 'difficult' => 3, 'stages' => [
+				['day' => 22, 'status' => 1, 'description' => 'Тренировка на выносливость', 'lead_time' => '< 50 мин','interest' => 0, 'difficult' => 3, 'stages' => [
 					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему. ', 'repeat_count' => 'Всего 4 круга.','status' => 1, 'exercise_id' => 2],
 					['description' => 'Боковая планка', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему. ', 'repeat_count' => 'Всего 4 круга.', 'status' => 1, 'exercise_id' => 4],
 					['description' => 'Упор лежа: вставание на локти и обратно', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему. ', 'repeat_count' => 'Всего 4 круга.', 'status' => 1, 'exercise_id' => 20],
 					['description' => 'Выпрыгивание вверх, хлопок над головой ', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему. ', 'repeat_count' => 'Всего 4 круга.', 'status' => 1, 'exercise_id' => 25],
 				]],
 				['day' => 23, 'status' => 0, 'description' => 'Выходной', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
-				['day' => 24, 'status' => 1, 'description' => 'Поддержание мышечного тонуса ног', 'lead_time' => '','interest' => 0, 'difficult' => 2, 'stages' => [
+				['day' => 24, 'status' => 1, 'description' => 'Поддержание мышечного тонуса ног', 'lead_time' => '< 40 мин','interest' => 0, 'difficult' => 2, 'stages' => [
 					['description' => 'Прыжки на скакалке', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '200 прыжков','status' => 1, 'exercise_id' => 27],
 					['description' => 'Разножка на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 24],
 					['description' => 'Присед + выпад назад', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 14],
 					['description' => 'Скалолаз ', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 15],
 				]],
-				['day' => 25, 'status' => 1, 'description' => 'Хорошая проработка мышц пресса ног и рук', 'lead_time' => '','interest' => 1, 'difficult' => 2, 'stages' => [
+				['day' => 25, 'status' => 1, 'description' => 'Хорошая проработка мышц пресса ног и рук', 'lead_time' => '< 40 мин','interest' => 1, 'difficult' => 2, 'stages' => [
 					['description' => 'Прыжки на скакалке', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '250 прыжков','status' => 1, 'exercise_id' => 27],
 					['description' => 'Скручивание на полу', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 8],
 					['description' => 'Отжимания от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 17],
 					['description' => 'Приседания на месте ', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 2],
 				]],
 				['day' => 26, 'status' => 0, 'description' => 'Выходной', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
-				['day' => 27, 'status' => 1, 'description' => 'Общая тренировка и хорошая проработка ног и мышц кора', 'lead_time' => '','interest' => 0, 'difficult' => 2, 'stages' => [
+				['day' => 27, 'status' => 1, 'description' => 'Общая тренировка и хорошая проработка ног и мышц кора', 'lead_time' => '< 40 мин','interest' => 0, 'difficult' => 2, 'stages' => [
 					['description' => 'Прыжки на скакалке', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '200 прыжков','status' => 1, 'exercise_id' => 27],
 					['description' => 'Присед + выпад назад', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 14],
 					['description' => 'Скалолаз', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 15],
 					['description' => 'Стульчик у опоры ', 'interest' => 1, 'time_exercive' => '2 минуты', 'repeat_count' => '1 подход', 'status' => 1, 'exercise_id' => 23],
 				]],
-				['day' => 28, 'status' => 1, 'description' => 'Финальный день твоей программы тренировок и сегодня контрольный тест (постарайся вспомнить результаты контрольного теста в 1-й день и сравни с сегодняшними результатами)', 'lead_time' => '','interest' => 1, 'difficult' => 3, 'stages' => [
+				['day' => 28, 'status' => 1, 'description' => 'Финальный день твоей программы тренировок и сегодня контрольный тест (постарайся вспомнить результаты контрольного теста в 1-й день и сравни с сегодняшними результатами)', 'lead_time' => '< 60 мин','interest' => 1, 'difficult' => 3, 'stages' => [
 					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;','status' => 1, 'exercise_id' => 2],
 					['description' => 'Планка классическая стойка на предплечьях', 'interest' => 1, 'time_exercive' => '&#8734;', 'repeat_count' => '', 'status' => 1, 'exercise_id' => 5],
 					['description' => 'Стульчик у опоры', 'interest' => 1, 'time_exercive' => '&#8734;', 'repeat_count' => '', 'status' => 1, 'exercise_id' => 23],
