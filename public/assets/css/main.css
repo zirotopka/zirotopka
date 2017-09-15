@@ -1,5 +1,13 @@
 .answ{
-	font-size: 0.8em;
+	font-size: 0.75vw;
+}
+
+.answ ul{
+	padding: 0 0 0 1vw;
+}
+
+.answ ul li{
+	font-size: 0.75vw;
 }
 
  #user_agreements .modal-dialog{
@@ -1238,6 +1246,7 @@ ul li{
 
 	.left_quest ul li a, .right_quest ul li a {
 		font-size: 1.1vw;
+		vertical-align: super;
 	}
 	/*-----------------------------Eighth Screen(connect-screen)---------------*/
 	.connect-screen{
@@ -2038,6 +2047,18 @@ footer .prgrm_list .bonus{
 		font-size: 4vw;	
 	}
 
+	.answ{
+		font-size: 3vw;
+	}
+
+	.answ ul li{
+		font-size: 3vw;
+	}
+
+	.answ ul {
+		padding: 2vw;
+	}
+
 	.left_quest ul .else, .right_quest ul .else {
     	margin: 0.5em 0 15vw -4px;
 	}
@@ -2474,6 +2495,14 @@ footer{
 
 	.left_quest ul li a, .right_quest ul li a {
 	    font-size: 1.8vw;
+	}
+
+	.answ{
+		font-size: 1.2vw;
+	}
+
+	.answ ul li{
+		font-size: 1.2vw;
 	}
 
 	.left_quest ul li a:before, .right_quest ul li a:before {
