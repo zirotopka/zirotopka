@@ -28,7 +28,7 @@
           @endphp
                 <div class="{{$class}} bons-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h1>ЗАРАБАТЫВАЙТЕ ВМЕСТЕ<br>С НАШЕЙ БОНУСНОЙ ПРОГРАММОЙ</h1>
-                    <p>Вы начинаете заниматься спортом<br>по любой программе на платформе,<br>приглашаете друзей и сразу зарабатываете</p>
+                    <p>Ваы начинаете заниматься спортом<br>по любой программе на платформе,<br>приглашаете друзей и сразу зарабатываете</p>
                     <button type="button" class="reg_btn" data-toggle="modal" data-target="#registr">
                         РЕГИСТРАЦИЯ
                     </button>
@@ -148,7 +148,8 @@
                     </div>
                 </div>
                 <hr>
-                <div class="bons-question-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_5">
+<!--
+               <div class="bons-question-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_5">
                     <h2>ВОПРОСЫ И ОТВЕТЫ</h2>
                     <div class="quest_left col-xs-12 col-sm-5 col-md-5 col-lg-5">
                         <ul>
@@ -164,6 +165,7 @@
                     </div>
                     <p class="qwston">?</p>
                 </div>
+-->
                 <div class="connect-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="bonus_6">
                     <div  class="connect_screen_shader">
                         <p>REFORMATOR</p>
