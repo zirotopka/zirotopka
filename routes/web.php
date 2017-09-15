@@ -30,15 +30,16 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 
 	Route::post('user/change_logo', [ 'uses' => 'UserController@change_logo' ] );
 
-	Route::get('lk/{id}', [ 'uses' => 'PrivatOfficeController@index' ] );
+	// Route::get('lk/{id}', [ 'as' => 'wrverve', 'uses' => 'PrivatOfficeController@index' ] );
+	// Route::get('lk/{id}/edit', ['uses' => 'PrivatOfficeController@personal_data']);
+	Route::get('/{slug}', [ 'as' => 'wrverve', 'uses' => 'PrivatOfficeController@index' ] );
+	Route::post('/{slug}', ['uses' => 'PrivatOfficeController@personal_data_store']);
+	Route::get('/{slug}/edit', [ 'as' => 'wrverve', 'uses' => 'PrivatOfficeController@personal_data' ] );
+	Route::get('/{slug}/balance', ['uses' => 'PrivatOfficeController@balance']);
+	Route::get('/{slug}/messages', ['uses' => 'PrivatOfficeController@messages']);
+	Route::get('/{slug}/faq', ['uses' => 'PrivatOfficeController@faq']);
+
 	Route::post('privat_office/get_exercive_video', [ 'uses' => 'PrivatOfficeController@get_exercive_video' ] );
-	Route::get('lk/{id}/edit', ['uses' => 'PrivatOfficeController@personal_data']);
-	Route::post('lk/{id}', ['uses' => 'PrivatOfficeController@personal_data_store']);
-
-	Route::get('lk/{id}/balance', ['uses' => 'PrivatOfficeController@balance']);
-	Route::get('lk/{id}/messages', ['uses' => 'PrivatOfficeController@messages']);
-
-	Route::get('lk/{id}/faq', ['uses' => 'PrivatOfficeController@faq']);
 
 	Route::post('program/choice_programm', [ 'uses' => 'ProgrammController@choice_program']);
 	Route::post('program/get_program', [ 'uses' => 'ProgrammController@get_program' ] );

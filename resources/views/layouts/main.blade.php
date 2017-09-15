@@ -19,7 +19,7 @@
     <link href="/assets/css/calendar.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.css">
     <link rel="stylesheet" href="/assets/lightbox/dist/css/lightbox.min.css">
-    <link rel="shortcut icon" href="{{ asset('ico/faviсon.svg') }}" type="image/svg+xml">
+    <link rel="shortcut icon" href="{{ asset('ico/faviсon.svg') }}" type="image/svg+xml" />
 
 	<title>Reformator.ONE</title>
 
@@ -41,19 +41,19 @@
                             @endif   <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
                         </li>
                         <li>
-                           <a href="/lk/{{$user->id}}" class="profile_btns">
+                           <a href="/{{$user->slug}}" class="profile_btns">
                                 <i class="prgr_ico prof-disp"></i>
                                 <p class="prof-disp" style="margin-left: 1px;">ПРОГРАММА</p></a> 
                         </li>
                         <li>
-                           <a href="/lk/{{$user->id}}/edit" class="profile_btns"><i class="prof_ico prof-disp"></i><p class="prof-disp">ПРОФИЛЬ</p></a> 
+                           <a href="/{{$user->slug}}/edit" class="profile_btns"><i class="prof_ico prof-disp"></i><p class="prof-disp">ПРОФИЛЬ</p></a> 
                         </li>
                         <li>
-                           <a href="/lk/{{$user->id}}/balance" class="profile_btns"><i class="wallet_ico prof-disp" style="
+                           <a href="/{{$user->slug}}/balance" class="profile_btns"><i class="wallet_ico prof-disp" style="
                            margin: 0 0 0 0.98em; width: 1.1em;"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
                         </li>
                         <li>
-                            <a href="/lk/{{$user->id}}/faq" class="profile_btns help">
+                            <a href="/{{$user->slug}}/faq" class="profile_btns help">
                                 <i class="help_ico prof-disp"></i>
                                 <p class="prof-disp">ПОМОЩЬ</p>
                             </a> 
@@ -126,7 +126,7 @@
                                     @endif
                                 <!-- </div> -->
                             </div>
-                            <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" > <a href="/lk/{{$user->id}}/balance" class="wals">
+                            <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" > <a href="{{$user->slug}}/balance" class="wals">
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;</p> 
                                 </a>                            
                             </div>
@@ -143,8 +143,8 @@
                                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li><a href="/lk/{{$user->id}}">ПРОГРАММА <b class="hidden-xs">ТРЕНИРОВОК</b></a></li>
-                                    <li><a href="/lk/{{$user->id}}/edit">ПРОФИЛЬ</a></li>
+                                    <li><a href="/{{$user->slug}}">ПРОГРАММА <b class="hidden-xs">ТРЕНИРОВОК</b></a></li>
+                                    <li><a href="/{{$user->slug}}/edit">ПРОФИЛЬ</a></li>
                                     <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>
                             </div>

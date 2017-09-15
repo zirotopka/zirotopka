@@ -16,8 +16,8 @@ use Carbon\Carbon;
 
 class PrivatOfficeController extends Controller
 {
-    public function index($id)
-    {		
+    public function index($slug)
+    {	
     	$user = Sentinel::getUser();
 
         //Выбор программы
@@ -153,7 +153,7 @@ class PrivatOfficeController extends Controller
         }
     }
 
-    public function personal_data($id){
+    public function personal_data($slug){
         $user = Sentinel::getUser();
 
         $data = [
@@ -166,7 +166,7 @@ class PrivatOfficeController extends Controller
     /**
      * Сохранить персональные данные клиента
      */
-    public function personal_data_store($id,Request $request){
+    public function personal_data_store($slug,Request $request){
         $user = Sentinel::getUser();
         if (!empty($user)) {
             $rules = [
@@ -213,6 +213,11 @@ class PrivatOfficeController extends Controller
             $user->pasport_name = $request->get('pasport_name');
             $user->pasport_number = $request->get('pasport_number');
             $user->pasport_series = $request->get('pasport_series');
+            $user->surname = $request->get('surname');
+            $user->first_name = $request->get('name');
+
+            $slug = User::getSlug($user->first_name, $user->last_name, $user->surname, $user->id);
+            $user->slug = $slug;
 
             if ($request->has('pasport_date')) {
                 $user->pasport_date = Carbon::parse($request->get('pasport_date'))->timestamp;
@@ -237,7 +242,7 @@ class PrivatOfficeController extends Controller
         return redirect()->back()->withInput();
     }
 
-    public function faq($id){
+    public function faq($slug){
         $user = Sentinel::getUser();
 
         $accruals = Accrual::select([
@@ -259,7 +264,7 @@ class PrivatOfficeController extends Controller
         return view('FAQ.FAQ', $data);
     }
 
-        public function balance($id){
+        public function balance($slug){
         $user = Sentinel::getUser();
 
         $accruals = Accrual::select([
