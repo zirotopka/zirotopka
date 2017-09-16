@@ -103,6 +103,15 @@ class User extends CartalystUser
         }
     }
 
+    public static function createBySocialProvider($providerUser)
+    {
+        return self::create([
+            'email' => $providerUser->getEmail(),
+            'surname' => $providerUser->getNickname(),
+            'first_name' => $providerUser->getName(),
+        ]);
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

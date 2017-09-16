@@ -80,6 +80,9 @@ Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 	Route::get('yandex/answer', ['uses' => 'Api\YandexController@yandexPay']);
 });
 
+Route::get('/social_login/{provider}', 'SocialController@login');
+Route::get('/social_login/callback/{provider}', 'SocialController@callback');
+
 Route::post('api/user/checkEmail', [ 'uses' => 'Api\UserApiController@checkEmail' ] );
 
 Route::get('api/user/email_store', ['uses' => 'Api\UserApiController@email_store']);
