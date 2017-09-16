@@ -7,22 +7,16 @@
 		<div class="questions_block">
 			<ul>
 				<li>
-					<a href="#">Не могу зайти в личный кабинет!</a>
+					<a href="#">Подробнее о проекте</a>
 				</li>
 				<li>
-					<a href="#">Как удалить личный кабинет?</a>
+					<a href="#">Основная идея проекта</a>
 				</li>
 				<li>
-					<a href="#">Как изменить пароль?</a>
+					<a href="#">Как стать участником бонусной программы</a>
 				</li>
 				<li>
-					<a href="#">Не помню почту</a>
-				</li>
-				<li>
-					<a href="#">Не помню пароль</a>
-				</li>
-				<li>
-					<a href="#">Как изменить почту?</a>
+					<a href="#">Для кого проект?</a>
 				</li>
 				<li>
 					<a href="#" class="faq_back">Назад</a>
@@ -31,12 +25,30 @@
 		</div>
 	</div>
 	<div class="asn_faq_block col-lg-7 col-md-7 col-sm-12 col-xs-12">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+		<div class="answ1 hidden ">
+			<p>REFORMATOR.ONE - он-лайн платформа для выгодных занятий спортом в любое время из любой точки планеты!</p>
+			<ul>
+				<li>-программы тренировок для любого уровня подготовки </li>
+				<li>-видео-инструкции для всех упражнений</li>
+				<li>-все упражнения не требуют похода в фитнес-клуб или специального оборудования</li>
+				<li>-программа по питанию, адаптированная к программе тренировок</li>
+				<li>-ежедневная обратная связь от тренеров</li>
+				<li>-денежная мотивация через бонусную систему платформы </li>
+				<li>-сообщество друзей и единомышленников</li>
+			</ul>   
+		</div>
+		<div class="answ2 hidden ">
+			<p>Сделать любительский спорт и ЗОЖ доступным для всех вне зависимости от интересов и уровня подготовки, а также предоставить возможность сделать занятия спортом выгодными с помощью бонусной системы проекта.</p>
+		</div>
+		<div class="answ3 hidden ">
+			<p>Стать участником бонусной программы проекта может любой зарегистрированный пользователь, который выбрал подходящую для него программу тренировок, а также указал свои данные Яндекс.кошелька.</p>
+		</div>
+		<div class="answ4 hidden ">
+			<p>Принять участие в проекте может любой желающий в возрасте от 14 лет.</p>
+		</div>
+		<div class="answ5 hidden ">
+			<p>Миссия REFORMATOR.ONE заключается в повышении качества жизни общества через вовлечение широкого круга населения в любительский спорт и ЗОЖ.</p>
+		</div>
 		<br>
-		<p>Введите почту для восстановления</p>
-		<form action="">
-			<input type="text" class="mail_recovery">
-			<input type="submit" class="send_btn" value="ОТПРАВИТЬ">
-		</form>
 	</div>
 </div>
