@@ -156,7 +156,7 @@ class ProgrammController extends Controller
 
     		$user->save();
 
-    		return redirect('lk/'.$user->id);
+    		return redirect($user->slug);
     	} else {
             dd('Пользователь отсутствует');
     		return back();

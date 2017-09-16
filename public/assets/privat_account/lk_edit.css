@@ -183,10 +183,11 @@ input{
     border-radius: 3px;
     border: 1px solid #b6b6b6;
     height: 2em;
-    text-align: center;
+    text-align: left;
     color: #b6b6b6;
     width: 21.5vw;
     height: 2.5vw;
+    padding: 1vw;
     margin: 0 0 1.5em 0;
 }
 

@@ -102,6 +102,10 @@ class UserController extends Controller
             $timezone = IP::get_client_timezone($clientIp);
             $user->timezone = $timezone;
             $user->last_updated_at = Carbon::now($timezone);
+
+            $slug = User::getSlug($user->first_name, $user->last_name, $user->surname);
+
+            $user->slug = $slug;
             $user->save();
 
             $activation = Activation::create($user);
@@ -130,7 +134,7 @@ class UserController extends Controller
 
             Sentinel::authenticateAndRemember([ 'email' => $request->get('email'), 'password' => $request->get('password') ]);
 
-            return redirect('lk/'.$user->id);
+            return redirect($user->slug);
         } else {
             return redirect()->back()->withErrors();
         }
@@ -145,7 +149,7 @@ class UserController extends Controller
         if( $user === false ) {
             return redirect()->back()->withErrors(['login' => 'Неверный логин или пароль']);
         } else {
-            return redirect('lk/'.$user->id);
+            return redirect($user->slug);
         }
     }
 

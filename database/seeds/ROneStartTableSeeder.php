@@ -60,10 +60,10 @@ class ROneStartTableSeeder extends Seeder
     		$programm_days_array = [
     			['day' => 1, 'status' => 0, 'description' => '1-й день программы тренировок задействует все основные мышцы в организме и сегодня контрольный тест – все упражнения делаете по максимуму, сколько сможете.
 Перед выполнением всех упражнений сразу или по отдельности рекомендуется сделать общую разминку, а после окончания выполнения тренировки – растяжку.', 'lead_time' => '','interest' => 1, 'difficult' => 2, 'lead_time' => '< 20 мин', 'stages' => [
-					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;','status' => 1, 'exercise_id' => 2],
-					['description' => 'Планка классическая стойка на предплечьях', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;', 'status' => 1, 'exercise_id' => 5],
-					['description' => 'Стульчик у опоры', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;', 'status' => 1, 'exercise_id' => 23],
-					['description' => 'Отжимание от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '&#8734;', 'status' => 1, 'exercise_id' => 17],
+					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => 'максимуму','status' => 1, 'exercise_id' => 2],
+					['description' => 'Планка классическая стойка на предплечьях', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => 'максимум', 'status' => 1, 'exercise_id' => 5],
+					['description' => 'Стульчик у опоры', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => 'максимум', 'status' => 1, 'exercise_id' => 23],
+					['description' => 'Отжимание от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => 'максимум', 'status' => 1, 'exercise_id' => 17],
 				]],
 				['day' => 2, 'status' => 0, 'description' => '"Вспомогательная тренировка для укрепления всего организма. Развивается общая выносливость и помощь в ускорении обмена веществ. Каждое упражнение выполняется в течение 1 минуты, отдых между переходом на другое упражнение 10-15 сек. Выполняется 3 круга."', 'lead_time' => '< 20 мин','interest' => 0, 'difficult' => 1, 'stages' => [
 					['description' => 'Крабик', 'interest' => 1, 'time_exercive' => '1 минута, отдых 10-15 сек, переход к следующему.', 'repeat_count' => '2 круга','status' => 0, 'exercise_id' => 22],

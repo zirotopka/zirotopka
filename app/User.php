@@ -6,6 +6,8 @@ use Cartalyst\Sentinel\Users\EloquentUser as CartalystUser;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+use ElForastero\Transliterate\TransliterationFacade as Transliterate;
+
 class User extends CartalystUser
 {
     use Notifiable;
@@ -15,6 +17,11 @@ class User extends CartalystUser
     protected $table = 'users';
     protected $primaryKey = 'id';
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     /**
      * The attributes that are mass assignable.
      *
@@ -23,6 +30,78 @@ class User extends CartalystUser
     protected $fillable = [
         'first_name', 'last_name', 'email', 'password', 'sex', 'weight', 'growth', 'age', 'phone', 'user_ip', 'referer_code',
     ];
+
+    public static function getSlug($first_name, $last_name, $surname, $user_id = null) {
+        $string = '';
+
+        if (!empty($surname)) {
+            $string .= $surname;
+
+            $checkSlug = self::checkSlug($string,$user_id);
+
+            if ($checkSlug) {
+                return $checkSlug;
+            }
+
+            $string .= ' ';
+        }
+
+        if (!empty($first_name)) {
+            $string .= $first_name;
+
+            $checkSlug = self::checkSlug($string,$user_id);
+
+            if ($checkSlug) {
+                return $checkSlug;
+            }
+
+            $string .= ' ';
+        }
+
+        if (!empty($last_name)) {
+            $string .= $last_name;
+
+            $checkSlug = self::checkSlug($string,$user_id);
+
+            if ($checkSlug) {
+                return $checkSlug;
+            }
+
+            $string .= ' ';
+        }
+        
+
+        if (!empty($oldUser)) {
+            $string .= '_'.uniqid();
+
+            $checkSlug = self::checkSlug($string,$user_id);
+
+            if ($checkSlug) {
+                return $checkSlug;
+            }
+        }
+
+        return md5(uniqid().time());
+    }
+
+    public static function checkSlug($string,$user_id) {
+        $slug = Transliterate::make($string, ['type' => 'filename', 'lowercase' => true]);
+
+        $oldUserQuery = self::where('slug','=',$slug);
+
+        if (!empty($user_id)) {
+            $oldUserQuery->where('id','!=',$user_id);
+        }
+        
+        $oldUser = $oldUserQuery->count();
+
+        if ($oldUser != 0) {
+            return false;
+        } else {
+            //return trim($slug,'_');
+            return $slug;
+        }
+    }
 
     /**
      * The attributes that should be hidden for arrays.
