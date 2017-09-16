@@ -28,7 +28,7 @@
 		<p class="faq_help">ПОМОЩЬ</p>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<div class="access_block">
+				<div class="access_block" id="oref">
 					<div class="title_block">
 						<img src="/ico/faq_key.png" alt="" class="faq_ico">					
 						<p class="faq_title">ВОПРОСЫ О REFORMATOR.ONE</p>
@@ -36,15 +36,15 @@
 					<div class="questions_block">
 						<ul>
 							<li>
-								<a href="#">Подробнее о проекте</a>
+								<a href="#" class="qww1">Подробнее о проекте</a>
 							</li>
 							<li>
-								<a href="#">Основная идея проекта</a>
+								<a href="#" class="qww2">Основная идея проекта</a>
 							</li>
 							<li>
-								<a href="#">Как стать участником бонусной программы</a>
+								<a href="#" class="qww3">Как стать участником бонусной программы</a>
 							</li>
-							<li class="hidden">
+							<li class="hidden" class="qww4">
 								<a href="#">Для кого проект?</a>
 							</li>
 							<li>
@@ -53,7 +53,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="programm_block">
+				<div class="programm_block" id="oprg">
 					<div class="title_block">
 						<img src="/ico/faq_bottle.png" alt="" class="faq_ico">					
 						<p class="faq_title">ВОПРОСЫ О ПРОГРАММАХ ТРЕНИРОВОК</p>
@@ -61,15 +61,15 @@
 					<div class="questions_block">
 						<ul>
 							<li>
-								<a href="#">Сколько длится программа тренировок?</a>
+								<a href="#" class="qww1">Сколько длится программа тренировок?</a>
 							</li>
 							<li>
-								<a href="#">Будут ли выходные дни?</a>
+								<a href="#" class="qww2">Будут ли выходные дни?</a>
 							</li>
 							<li>
-								<a href="#">Какие виду упражнений предусматриваются впрограммах?</a>
+								<a href="#" class="qww3">Какие виду упражнений предусматриваются впрограммах?</a>
 							</li>
-							<li class="hidden">
+							<li class="hidden" >
 								<a href="#">Если я давно не занимался спортом, смогу ли я "осилить" программу?</a>
 							</li>
 							<li class="hidden">
@@ -89,7 +89,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<div class="programm_block">
+				<div class="programm_block" id="oprv">
 					<div class="title_block">
 						<img src="/ico/coin.png" alt="" class="faq_ico">					
 						<p class="faq_title">ПРАВИЛА УЧАСТИЯ В ПРОЕКТЕ</p>
@@ -97,13 +97,13 @@
 					<div class="questions_block">
 						<ul>
 							<li>
-								<a href="#">Как принять участие в проекте и что для этого нужно?</a>
+								<a href="#" class="qww1">Как принять участие в проекте и что для этого нужно?</a>
 							</li>
 							<li>
-								<a href="#">Что такое личный кабинет участника?</a>
+								<a href="#" class="qww2">Что такое личный кабинет участника?</a>
 							</li>
 							<li>
-								<a href="#">Что нужно делать, чтоб остаться в проекте?</a>
+								<a href="#" class="qww3">Что нужно делать, чтоб остаться в проекте?</a>
 							</li>
 							<li class="hidden">
 								<a href="#">Что такое обязательные и необязательные дни тренировок?</a>
@@ -126,7 +126,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="programm_block">
+				<div class="programm_block" id="ovsm">
 					<div class="title_block">
 						<img src="/ico/faq_star.png" alt="" class="faq_ico">
 						<p class="faq_title">РАЗНЫЕ ВОПРОСЫ</p>
@@ -134,13 +134,13 @@
 					<div class="questions_block">
 						<ul>
 							<li>
-								<a href="#">Возможно ли попробовать принять участие в проекте без оплаты?</a>
+								<a href="#" class="qww1">Возможно ли попробовать принять участие в проекте без оплаты?</a>
 							</li>
 							<li>
-								<a href="#">Как быстро участник получает деньги от бонусной системы?</a>
+								<a href="#" class="qww2">Как быстро участник получает деньги от бонусной системы?</a>
 							</li>
 							<li>
-								<a href="#">Что делать после завершения(прохождения) программы тренировок?</a>
+								<a href="#" class="qww3">Что делать после завершения(прохождения) программы тренировок?</a>
 							</li>
 							<li class="hidden">
 								<a href="#">Я нахожусь не в Москве или не в России, смогу ли я принять участие в проекте?</a>
