@@ -12,6 +12,8 @@ class SocialAccountService
 
         $providerUser = $providerObj->user();
 
+        dd($providerUser);
+
         $account = UserSocialAccount::whereProvider($providerName)
                         ->whereProviderUserId($providerUser->getId())
                             ->first();
