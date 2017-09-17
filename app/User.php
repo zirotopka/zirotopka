@@ -36,7 +36,7 @@ class User extends CartalystUser
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password', 'sex', 'weight', 'growth', 'age', 'phone', 'user_ip', 'referer_code',
+        'first_name', 'last_name', 'email', 'password', 'sex', 'weight', 'growth', 'age', 'phone', 'user_ip', 'referer_code', 'slug',
     ];
 
     public static function getSlug($first_name, $last_name, $surname, $user_id = null, $nik = null) {
@@ -143,7 +143,7 @@ class User extends CartalystUser
                     $user->surname = $nameArray[1];
                 }
 
-                $user->save();
+                $user = $user->save();
 
                 $credentials = [
                     'email'    => $providerUser->getEmail(),
@@ -163,7 +163,7 @@ class User extends CartalystUser
                 $slug = User::getSlug($user->first_name, $user->last_name, $user->surname, null, $nik);
 
                 $user->slug = $slug;
-                $user->save();
+                $user = $user->save();
 
                 dd($user);
                 $role = Sentinel::findRoleBySlug("client");
