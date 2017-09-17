@@ -127,7 +127,7 @@ class User extends CartalystUser
     {
         $credentials = [
             'email'    => $providerUser->getEmail(),
-            'password' => null,
+            'password' => 'default',
         ];
 
         $user = Sentinel::register($credentials);
@@ -144,6 +144,15 @@ class User extends CartalystUser
                 }
 
                 $user->save();
+
+                $credentials = [
+                    'email'    => $providerUser->getEmail(),
+                    'password' => 'default',
+                ];
+
+                Sentinel::authenticateAndRemember($credentials);
+
+                $user->password = null;
 
                 User::addAdditionalData($user);
 
@@ -163,8 +172,6 @@ class User extends CartalystUser
                     'user_id' => $user->id,
                     'sum' => 0,
                 ]);
-
-                Sentinel::authenticateAndRemember([ 'email' => $providerUser->getEmail(), 'password' => null ]);
 
                 return $user;
             } else {
