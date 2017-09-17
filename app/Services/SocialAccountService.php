@@ -12,8 +12,6 @@ class SocialAccountService
 
         $providerUser = $providerObj->user();
 
-        dd($providerUser);
-
         $account = UserSocialAccount::whereProvider($providerName)
                         ->whereProviderUserId($providerUser->getId())
                             ->first();
@@ -31,6 +29,8 @@ class SocialAccountService
                 $user = User::createBySocialProvider($providerUser);
             }
 
+            dd($user);
+            
             $account->user()->associate($user);
             $account->save();
 

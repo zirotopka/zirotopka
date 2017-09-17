@@ -2,12 +2,19 @@
 
 namespace App;
 
-use Cartalyst\Sentinel\Laravel\Facades\Sentinel;//Временно
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use Cartalyst\Sentinel\Laravel\Facades\Activation;
+
 use Cartalyst\Sentinel\Users\EloquentUser as CartalystUser;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 use ElForastero\Transliterate\TransliterationFacade as Transliterate;
+
+use Carbon\Carbon;
+
+use App\AdjancyList;
+use App\Balance;
 
 class User extends CartalystUser
 {
