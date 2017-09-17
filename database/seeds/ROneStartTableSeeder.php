@@ -48,7 +48,7 @@ class ROneStartTableSeeder extends Seeder
     	$programm->slug = 'ROneStart';
     	$programm->name = 'R.ONE START';
     	$programm->description = 'Программа тренировок подойдет для всех вне зависимости от уровня подготовки, в том числе для новичков или тех, кто очень давно не занимался спортом и только сейчас готов стать реформатором. Попробуйте бесплатно в течение тестового периода.';
-        $programm->cost = 2500;
+        $programm->cost = 0;
         $programm->days =28;
         $programm->trainings =9;
         $programm->day_off =8;
