@@ -15,7 +15,7 @@ class SocialAccountService
         $account = UserSocialAccount::whereProvider($providerName)
                         ->whereProviderUserId($providerUser->getId())
                             ->first();
-
+        dd($account);
         if ($account) {
             return $account->user;
         } else {
@@ -30,7 +30,7 @@ class SocialAccountService
             }
 
             dd($user);
-            
+
             $account->user()->associate($user);
             $account->save();
 
