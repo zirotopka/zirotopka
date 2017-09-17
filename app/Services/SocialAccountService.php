@@ -26,7 +26,6 @@ class SocialAccountService
             $user = User::whereEmail($providerUser->getEmail())->first();
 
             if (!$user) {
-                dd('verve');
                 $user = User::createBySocialProvider($providerUser);
             }
 
