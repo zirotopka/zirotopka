@@ -72,7 +72,7 @@ ul,li {
 }
 
 /*------------------------------FAQ-Lists-------------------------*/
-.access_list{
+.access_list, .ruls_list, .programm_list, .else_list {
 	display: none;
 	margin: 7em 0 0 0;
 	padding: 4em 0 0 10%; 
@@ -91,7 +91,7 @@ ul,li {
 }
 
 .asn_faq_block{
-	margin: 5em 0 5vw 0;
+	margin: 4.1em 0 5vw 0;
 	font-family: MuseoSansCyrl_100;
 	color: #000000b3;
 }

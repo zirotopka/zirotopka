@@ -474,10 +474,10 @@
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
                     <ul class="rgese">
                         <li>
-                            <a href="">РЕГИСТРАЦИЯ</a>
+                            <a href="#" data-toggle="modal" data-target="#registr">РЕГИСТРАЦИЯ</a>
                         </li>
                         <li class="accsss">
-                            <a href="">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
+                            <a href="#" data-toggle="modal" data-target="#registr">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
                         </li>
                         <li>
                             <a href="#">
@@ -498,7 +498,7 @@
                             <a href="#" data-toggle="modal" data-target="#partners">ПАРТНЕРСКОЕ СОГЛАШЕНИЕ</a>
                         </li>
                         <li id="pltks">
-                            <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАЩЕНИЕ</a>
+                            <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАШЕНИЕ</a>
                         </li>
                     </ul>
                 </div>

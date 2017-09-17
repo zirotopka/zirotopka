@@ -28,21 +28,24 @@
 		<p class="faq_help">ПОМОЩЬ</p>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<div class="access_block">
+				<div class="access_block" id="oref">
 					<div class="title_block">
 						<img src="/ico/faq_key.png" alt="" class="faq_ico">					
-						<p class="faq_title">ДОСТУП К ЛИЧНОМУ КАБИНЕТУ</p>
+						<p class="faq_title">ВОПРОСЫ О REFORMATOR.ONE</p>
 					</div>
 					<div class="questions_block">
 						<ul>
 							<li>
-								<a href="#">Не могу зайти в личный кабинет!</a>
+								<a href="#" class="qww1">Подробнее о проекте</a>
 							</li>
 							<li>
-								<a href="#">Как удалить личный кабинет?</a>
+								<a href="#" class="qww2">Основная идея проекта</a>
 							</li>
 							<li>
-								<a href="#">Как изменить пароль?</a>
+								<a href="#" class="qww3">Как стать участником бонусной программы</a>
+							</li>
+							<li class="hidden" class="qww4">
+								<a href="#">Для кого проект?</a>
 							</li>
 							<li>
 								<a href="#" class="faq_show_all show_access">Показать всё</a>
@@ -50,43 +53,33 @@
 						</ul>
 					</div>
 				</div>
-				<div class="programm_block">
+				<div class="programm_block" id="oprg">
 					<div class="title_block">
 						<img src="/ico/faq_bottle.png" alt="" class="faq_ico">					
-						<p class="faq_title">ВОПРОСЫ ПО КУРСУ</p>
+						<p class="faq_title">ВОПРОСЫ О ПРОГРАММАХ ТРЕНИРОВОК</p>
 					</div>
 					<div class="questions_block">
 						<ul>
 							<li>
-								<a href="#">Программа мне не подходит, можно ли изменить?</a>
+								<a href="#" class="qww1">Сколько длится программа тренировок?</a>
 							</li>
 							<li>
-								<a href="#">У меня есть вопросы по упражнениям</a>
+								<a href="#" class="qww2">Будут ли выходные дни?</a>
 							</li>
 							<li>
-								<a href="#">Не могу загрузить отчёт</a>
+								<a href="#" class="qww3">Какие виду упражнений предусматриваются впрограммах?</a>
 							</li>
-							<li>
-								<a href="#" class="faq_show_all show_progr">Показать всё</a>
+							<li class="hidden" >
+								<a href="#">Если я давно не занимался спортом, смогу ли я "осилить" программу?</a>
 							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="programm_block">
-					<div class="title_block">
-						<img src="/ico/coin.png" alt="" class="faq_ico">					
-						<p class="faq_title">ВОПРОСЫ ПО КУРСУ</p>
-					</div>
-					<div class="questions_block">
-						<ul>
-							<li>
-								<a href="#">Программа мне не подходит, можно ли изменить?</a>
+							<li class="hidden">
+								<a href="#">Кто будет проверять отчёты по выполнению?</a>
 							</li>
-							<li>
-								<a href="#">У меня есть вопросы по упражнениям</a>
+							<li class="hidden">
+								<a href="#">Есть ли возрастные ограничения для участия в проекте?</a>
 							</li>
-							<li>
-								<a href="#">Не могу загрузить отчёт</a>
+							<li class="hidden">
+								<a href="#">Будут ли рекомендации по питанию?</a>
 							</li>
 							<li>
 								<a href="#" class="faq_show_all show_progr">Показать всё</a>
@@ -96,68 +89,64 @@
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<div class="immunity_block">
+				<div class="programm_block" id="oprv">
 					<div class="title_block">
-						<img src="/ico/faq_heart.png" alt="" class="faq_ico">	
-						<p class="faq_title">ВОПРОСЫ ПРО ИММУНИТЕТ</p>				
+						<img src="/ico/coin.png" alt="" class="faq_ico">					
+						<p class="faq_title">ПРАВИЛА УЧАСТИЯ В ПРОЕКТЕ</p>
 					</div>
 					<div class="questions_block">
 						<ul>
 							<li>
-								<a href="#">Что такое иммунитет?</a>
+								<a href="#" class="qww1">Как принять участие в проекте и что для этого нужно?</a>
 							</li>
 							<li>
-								<a href="#">Как работает иммунитет?</a>
+								<a href="#" class="qww2">Что такое личный кабинет участника?</a>
 							</li>
 							<li>
-								<a href="#">Как купить иммунитет?</a>
+								<a href="#" class="qww3">Что нужно делать, чтоб остаться в проекте?</a>
+							</li>
+							<li class="hidden">
+								<a href="#">Что такое обязательные и необязательные дни тренировок?</a>
+							</li>
+							<li class="hidden">
+								<a href="#">Что такое иммунитет в проекте?</a>
+							</li>
+							<li class="hidden">
+								<a href="#">Для чего необходимо оставаться в проекте?</a>
+							</li>
+							<li class="hidden">
+								<a href="#">В каких случаях личныйй кабинет участника может быть заблокирован?</a>
+							</li>
+							<li class="hidden">
+								<a href="#">Сколько обязательных дней можно пропустить?</a>
 							</li>
 							<li>
-								<a href="#" class="faq_show_all show_immun">Показать всё</a>
+								<a href="#" class="faq_show_all show_ruls">Показать всё</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="programm_block">
+				<div class="programm_block" id="ovsm">
 					<div class="title_block">
 						<img src="/ico/faq_star.png" alt="" class="faq_ico">
-						<p class="faq_title">ОБЩИЕ ВОПРОСЫ</p>
+						<p class="faq_title">РАЗНЫЕ ВОПРОСЫ</p>
 					</div>
 					<div class="questions_block">
 						<ul>
 							<li>
-								<a href="#">Как участвовать в розыгрыше призов?</a>
+								<a href="#" class="qww1">Возможно ли попробовать принять участие в проекте без оплаты?</a>
 							</li>
 							<li>
-								<a href="#">Как работает бонусная система?</a>
+								<a href="#" class="qww2">Как быстро участник получает деньги от бонусной системы?</a>
 							</li>
 							<li>
-								<a href="#">Как изменить информацию о себе?</a>
+								<a href="#" class="qww3">Что делать после завершения(прохождения) программы тренировок?</a>
+							</li>
+							<li class="hidden">
+								<a href="#">Я нахожусь не в Москве или не в России, смогу ли я принять участие в проекте?</a>
 							</li>
 							<li>
-								<a href="#" class="faq_show_all show_quest">Показать всё</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="programm_block">
-					<div class="title_block">
-						<img src="/ico/bonus.png" alt="" class="faq_ico">
-						<p class="faq_title">ОБЩИЕ ВОПРОСЫ</p>
-					</div>
-					<div class="questions_block">
-						<ul>
-							<li>
-								<a href="#">Как участвовать в розыгрыше призов?</a>
-							</li>
-							<li>
-								<a href="#">Как работает бонусная система?</a>
-							</li>
-							<li>
-								<a href="#">Как изменить информацию о себе?</a>
-							</li>
-							<li>
-								<a href="#" class="faq_show_all show_quest">Показать всё</a>
+								<a href="#" class="faq_show_all show_alls">Показать всё</a>
 							</li>
 						</ul>
 					</div>

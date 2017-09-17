@@ -103,7 +103,7 @@
                 <div class="programm_spy">
                     <li class="sc strt">
                         <p class="fm_line">|</p>
-                        <a href="/programm/r.one_start">
+                        <a href="/programm/ROneStart">
                             <p>03 R.ONE START</p>
                         </a> 
                         <p class="fm_line">|</p>

@@ -204,7 +204,7 @@
         <?php
             $errorStr = '';
             foreach ($errors->all() as $error) {
-                $errorStr .= $error.", ";
+                $errorStr .= $error." ";
             } 
         ?>
         <script type="text/javascript">
