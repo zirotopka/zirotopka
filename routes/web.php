@@ -10,13 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' => '/', 'middleware' => ['check_password']], function () {
+	Route::get('/', ['uses' =>  'HomeController@index']);
+	Route::get('bonus', [ 'uses' => 'HomeController@bonus' ] );
+	Route::get('programm/{slug}', [ 'uses' => 'ProgrammController@index' ] );
+});
 
-Route::get('/', ['uses' =>  'HomeController@index']);
+Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
+	Route::get('password', [ 'uses' => 'UserController@setPassword' ] );
+	Route::post('password', [ 'uses' => 'UserController@postSetPassword' ] );
+});
+
 Route::post('get_comment_video', [ 'uses' => 'HomeController@get_comment_video' ] );
-Route::get('bonus', [ 'uses' => 'HomeController@bonus' ] );
-Route::get('programm/{slug}', [ 'uses' => 'ProgrammController@index' ] );
-
-
 
 Route::get('login', ['uses' => 'HomeController@index' ] );
 Route::get('register', ['uses' => 'HomeController@index' ] );
@@ -25,16 +30,16 @@ Route::post('register', ['uses' => 'UserController@registration' ] );
 Route::post('login', ['as' => 'login', 'uses' => 'UserController@login' ] );
 
 
-Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], function () {
 	Route::get('logout', [ 'as' => 'logout', 'uses' => 'UserController@logout' ] );
 
 	Route::post('user/change_logo', [ 'uses' => 'UserController@change_logo' ] );
 
 	// Route::get('lk/{id}', [ 'as' => 'wrverve', 'uses' => 'PrivatOfficeController@index' ] );
 	// Route::get('lk/{id}/edit', ['uses' => 'PrivatOfficeController@personal_data']);
-	Route::get('/{slug}', [ 'as' => 'wrverve', 'uses' => 'PrivatOfficeController@index' ] );
+	Route::get('/{slug}', [ 'as' => 'lk', 'uses' => 'PrivatOfficeController@index' ] );
 	Route::post('/{slug}', ['uses' => 'PrivatOfficeController@personal_data_store']);
-	Route::get('/{slug}/edit', [ 'as' => 'wrverve', 'uses' => 'PrivatOfficeController@personal_data' ] );
+	Route::get('/{slug}/edit', [ 'as' => 'lk_edit', 'uses' => 'PrivatOfficeController@personal_data' ] );
 	Route::get('/{slug}/balance', ['uses' => 'PrivatOfficeController@balance']);
 	Route::get('/{slug}/messages', ['uses' => 'PrivatOfficeController@messages']);
 	Route::get('/{slug}/faq', ['uses' => 'PrivatOfficeController@faq']);

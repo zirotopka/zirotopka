@@ -160,4 +160,42 @@ class UserController extends Controller
         Sentinel::logout();
         return Redirect::to('/login');
     }
+
+    public function setPassword() {
+        $user = Sentinel::getUser();
+
+        return view('user._set_password', ['user' => $user]);
+    } 
+
+    public function postSetPassword(Request $request) {
+        $rules = [
+            'password' => 'required|min:6|confirmed',
+            'password_confirmation' => 'required',
+        ];
+
+        $messages = [
+            'password.required' => 'Введите пароль',
+            'password.min' => 'Минимум 6 символов',
+            'password.confirmed' => 'Пароль не совпадает',
+
+            'password_confirmation.required' => 'Подтвердите пароль',
+        ];
+
+        $user = Sentinel::getUser();
+        $password = $request->get('password');
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator->errors());
+        }
+
+        $credentials = [
+            'password' => $password,
+        ];
+
+        $user = Sentinel::update($user, $credentials);
+
+        return redirect()->route('lk', ['slug' => $user->slug]);
+    }  
 }

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;//Временно
 use Cartalyst\Sentinel\Users\EloquentUser as CartalystUser;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -105,11 +106,22 @@ class User extends CartalystUser
 
     public static function createBySocialProvider($providerUser)
     {
-        return self::create([
-            'email' => $providerUser->getEmail(),
-            'surname' => $providerUser->getNickname(),
-            'first_name' => $providerUser->getName(),
-        ]);
+        $credentials = [
+            'email'    => $providerUser->getEmail(),
+            'password' => null,
+        ];
+
+        $user = Sentinel::register($credentials);
+
+        if ($user) {
+            $user->first_name = $providerUser->getName();
+            //'username' => $providerUser->getNickname(),
+            $user->save();
+
+            return $user;
+        }
+
+        return false;
     }
 
     /**

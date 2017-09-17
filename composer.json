@@ -11,6 +11,7 @@
         "artem328/laravel-yandex-kassa": "*",
         "barryvdh/laravel-debugbar": "^2.3",
         "cartalyst/sentinel": "2.0.*",
+        "doctrine/dbal": "^2.5",
         "doctrine/inflector": "1.1.*",
         "elforastero/transliterate": "^1.1",
         "intervention/image": "^2.4",
