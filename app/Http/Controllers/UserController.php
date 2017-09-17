@@ -92,8 +92,6 @@ class UserController extends Controller
             $user->growth = $request->get("growth");
             $user->age = $request->get("age");
             $user->phone = $request->get("phone");
-            $user->user_ip = $_SERVER["REMOTE_ADDR"];
-            $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
 
             $clientIp = $request->ip();
             $user->ip = $clientIp;
@@ -107,6 +105,8 @@ class UserController extends Controller
 
             $user->slug = $slug;
             $user->save();
+
+            User::addAdditionalData($user);
 
             $activation = Activation::create($user);
             $activation->completed = 1;
@@ -160,4 +160,42 @@ class UserController extends Controller
         Sentinel::logout();
         return Redirect::to('/login');
     }
+
+    public function setPassword() {
+        $user = Sentinel::getUser();
+
+        return view('user._set_password', ['user' => $user]);
+    } 
+
+    public function postSetPassword(Request $request) {
+        $rules = [
+            'password' => 'required|min:6|confirmed',
+            'password_confirmation' => 'required',
+        ];
+
+        $messages = [
+            'password.required' => 'Введите пароль',
+            'password.min' => 'Минимум 6 символов',
+            'password.confirmed' => 'Пароль не совпадает',
+
+            'password_confirmation.required' => 'Подтвердите пароль',
+        ];
+
+        $user = Sentinel::getUser();
+        $password = $request->get('password');
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator->errors());
+        }
+
+        $credentials = [
+            'password' => $password,
+        ];
+
+        $user = Sentinel::update($user, $credentials);
+
+        return redirect()->route('lk', ['slug' => $user->slug]);
+    }  
 }

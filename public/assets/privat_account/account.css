@@ -128,20 +128,20 @@
 .btn-play{
 	height: 5vw;
 	width: 5vw;
-	margin: -9.5vw 0 0 -2.5vw;
+	margin: -10.5vw 0 0 -2.5vw;
 	position: absolute;
 }
 
 .btn-play:hover{
 	height: 5.2vw;
 	width: 5.2vw;
-	margin: -9.6vw 0 0 -2.6vw;
+	margin: -10.6vw 0 0 -2.6vw;
 }
 
 .btn-play:active{
 	height: 5.2vw;
 	width: 5.2vw;
-	margin: -9.6vw 0 0 -2.6vw;
+	margin: -10.6vw 0 0 -2.6vw;
 	content: url("/ico/hov-play.svg");
 }
 

@@ -182,6 +182,8 @@ return [
         PulkitJalan\GeoIP\GeoIPServiceProvider::class,
         Artem328\LaravelYandexKassa\YandexKassaServiceProvider::class,
         ElForastero\Transliterate\TransliterationServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        SocialiteProviders\Manager\ServiceProvider::class,
     ],
 
     /*
@@ -238,6 +240,7 @@ return [
         'GeoIP' => PulkitJalan\GeoIP\Facades\GeoIP::class,
         'YandexKassa' => Artem328\LaravelYandexKassa\Facades\YandexKassa::class,
         'Transliterate' => ElForastero\Transliterate\TransliterationFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

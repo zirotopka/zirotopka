@@ -28,6 +28,11 @@ class EventServiceProvider extends ServiceProvider
         'Artem328\LaravelYandexKassa\Events\BeforePaymentAvisoResponse' => [
             'App\Listeners\ChangeOrderStatusWhenPaymentSuccessful',
         ],
+
+        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+            // Порписываем здесь обработку события провайдерами от SocialiteProviders
+            'SocialiteProviders\VKontakte\VKontakteExtendSocialite@handle',
+        ],
     ];
 
     /**
