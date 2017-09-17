@@ -41,12 +41,12 @@ class User extends CartalystUser
 
     public static function getSlug($first_name, $last_name, $surname, $user_id = null, $nik = null) {
         $string = '';
-
+        \Log::info($nik);
         if (!empty($nik)) {
             $string .= $nik;
 
             $checkSlug = self::checkSlug($string,$user_id);
-
+            \Log::info($checkSlug);
             if ($checkSlug) {
                 return $checkSlug;
             }
