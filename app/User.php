@@ -152,6 +152,10 @@ class User extends CartalystUser
 
                 Sentinel::authenticateAndRemember($credentials);
 
+                $activation = Activation::create($user);
+                $activation->completed = 1;
+                $activation->save();
+
                 $user->password = null;
 
                 User::addAdditionalData($user);
@@ -160,10 +164,6 @@ class User extends CartalystUser
 
                 $user->slug = $slug;
                 $user->save();
-
-                $activation = Activation::create($user);
-                $activation->completed = 1;
-                $activation->save();
 
                 $role = Sentinel::findRoleBySlug("client");
                 $role->users()->attach($user);
