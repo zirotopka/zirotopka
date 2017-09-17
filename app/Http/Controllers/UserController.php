@@ -92,8 +92,6 @@ class UserController extends Controller
             $user->growth = $request->get("growth");
             $user->age = $request->get("age");
             $user->phone = $request->get("phone");
-            $user->user_ip = $_SERVER["REMOTE_ADDR"];
-            $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
 
             $clientIp = $request->ip();
             $user->ip = $clientIp;
@@ -107,6 +105,8 @@ class UserController extends Controller
 
             $user->slug = $slug;
             $user->save();
+
+            User::addAdditionalData($user);
 
             $activation = Activation::create($user);
             $activation->completed = 1;

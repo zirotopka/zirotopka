@@ -24,6 +24,5 @@ class CheckPasswordMiddleware
         }
 
         return redirect('password');
-        
     }
 }

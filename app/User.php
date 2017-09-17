@@ -32,8 +32,20 @@ class User extends CartalystUser
         'first_name', 'last_name', 'email', 'password', 'sex', 'weight', 'growth', 'age', 'phone', 'user_ip', 'referer_code',
     ];
 
-    public static function getSlug($first_name, $last_name, $surname, $user_id = null) {
+    public static function getSlug($first_name, $last_name, $surname, $user_id = null, $nik = null) {
         $string = '';
+
+        if (!empty($nik)) {
+            $string .= $nik;
+
+            $checkSlug = self::checkSlug($string,$user_id);
+
+            if ($checkSlug) {
+                return $checkSlug;
+            }
+
+            $string .= ' ';
+        }
 
         if (!empty($surname)) {
             $string .= $surname;
@@ -114,14 +126,56 @@ class User extends CartalystUser
         $user = Sentinel::register($credentials);
 
         if ($user) {
-            $user->first_name = $providerUser->getName();
-            //'username' => $providerUser->getNickname(),
-            $user->save();
+            $nameArray = explode(' ',$providerUser->getName());
+            $nik = $providerUser->getNickname();
 
-            return $user;
+            if (count($nameArray) > 0) {
+                $user->first_name = $nameArray[0];
+
+                if (isset($nameArray[1])) {
+                    $user->surname = $nameArray[1];
+                }
+
+                $user->save();
+
+                User::addAdditionalData($user);
+
+                $slug = User::getSlug($user->first_name, $user->last_name, $user->surname, null, $nik);
+
+                $user->slug = $slug;
+                $user->save();
+
+                $activation = Activation::create($user);
+                $activation->completed = 1;
+                $activation->save();
+
+                $role = Sentinel::findRoleBySlug("client");
+                $role->users()->attach($user);
+
+                Balance::create([
+                    'user_id' => $user->id,
+                    'sum' => 0,
+                ]);
+
+                Sentinel::authenticateAndRemember([ 'email' => $providerUser->getEmail(), 'password' => null ]);
+
+                return $user;
+            } else {
+                \Log::error('createBySocialProvider: Пустое имя');
+                return false;
+            }
         }
 
+        \Log::error('createBySocialProvider: Отсутствует пользователь');
         return false;
+    }
+
+    public static function addAdditionalData(User $user)
+    {
+        $user->user_ip = $_SERVER["REMOTE_ADDR"];
+        $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
+
+        $user->save();
     }
 
     /**
