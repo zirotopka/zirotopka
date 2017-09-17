@@ -14,3 +14,4 @@ request.csr
 /public/messages
 /public/trainings/*
 /public/video/*
+.composer.lock

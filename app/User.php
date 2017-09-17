@@ -2,11 +2,19 @@
 
 namespace App;
 
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use Cartalyst\Sentinel\Laravel\Facades\Activation;
+
 use Cartalyst\Sentinel\Users\EloquentUser as CartalystUser;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 use ElForastero\Transliterate\TransliterationFacade as Transliterate;
+
+use Carbon\Carbon;
+
+use App\AdjancyList;
+use App\Balance;
 
 class User extends CartalystUser
 {
@@ -28,11 +36,23 @@ class User extends CartalystUser
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password', 'sex', 'weight', 'growth', 'age', 'phone', 'user_ip', 'referer_code',
+        'first_name', 'last_name', 'email', 'password', 'sex', 'weight', 'growth', 'age', 'phone', 'user_ip', 'referer_code', 'slug',
     ];
 
-    public static function getSlug($first_name, $last_name, $surname, $user_id = null) {
+    public static function getSlug($first_name, $last_name, $surname, $user_id = null, $nik = null) {
         $string = '';
+        \Log::info($nik);
+        if (!empty($nik)) {
+            $string .= $nik;
+
+            $checkSlug = self::checkSlug($string,$user_id);
+            \Log::info($checkSlug);
+            if ($checkSlug) {
+                return $checkSlug;
+            }
+
+            $string .= ' ';
+        }
 
         if (!empty($surname)) {
             $string .= $surname;
@@ -101,6 +121,76 @@ class User extends CartalystUser
             //return trim($slug,'_');
             return $slug;
         }
+    }
+
+    public static function createBySocialProvider($providerUser)
+    {
+        $credentials = [
+            'email'    => $providerUser->getEmail(),
+            'password' => 'default',
+        ];
+
+        $user = Sentinel::register($credentials);
+
+        if ($user) {
+            $nameArray = explode(' ',$providerUser->getName());
+            $nik = $providerUser->getNickname();
+
+            if (count($nameArray) > 0) {
+                $user->first_name = $nameArray[0];
+
+                if (isset($nameArray[1])) {
+                    $user->surname = $nameArray[1];
+                }
+
+                $user = $user->save();
+
+                $credentials = [
+                    'email'    => $providerUser->getEmail(),
+                    'password' => 'default',
+                ];
+
+                $user = User::addAdditionalData($user);
+
+                Sentinel::authenticateAndRemember($credentials);
+
+                $activation = Activation::create($user);
+                $activation->completed = 1;
+                $activation->save();
+
+                $user->password = null;
+
+                $slug = User::getSlug($user->first_name, $user->last_name, $user->surname, null, $nik);
+
+                $user->slug = $slug;
+                $user = $user->save();
+
+                dd($user);
+                $role = Sentinel::findRoleBySlug("client");
+                $role->users()->attach($user);
+
+                Balance::create([
+                    'user_id' => $user->id,
+                    'sum' => 0,
+                ]);
+
+                return $user;
+            } else {
+                \Log::error('createBySocialProvider: Пустое имя');
+                return false;
+            }
+        }
+
+        \Log::error('createBySocialProvider: Отсутствует пользователь');
+        return false;
+    }
+
+    public static function addAdditionalData(User $user)
+    {
+        $user->user_ip = $_SERVER["REMOTE_ADDR"];
+        $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
+
+        $user->save();
     }
 
     /**
