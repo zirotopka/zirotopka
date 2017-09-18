@@ -155,7 +155,8 @@
                                 <div class="bbrdr">
                                     <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
                                     <img src="/ico/play.svg" alt="" class="comm_pl_hldr ico_play3" data-id="">
-                                    <p class="upr_d">Грудью касаемся пола</p>
+
+                                    <p class="upr_d">Делаем плавные и чёткие движения</p>
                                 </div>
                             </div>
                             <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
