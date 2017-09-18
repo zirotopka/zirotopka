@@ -64,7 +64,8 @@ class ProgrammExerciveTableSeeder extends Seeder
         	$programm_exercive->slug = $exercive_row['slug'];
         	$programm_exercive->name = $exercive_row['name'];
         	$programm_exercive->description = $exercive_row['description'];
-
+            $programm_exercive->preview_url = $exercive_row['preview_url'];
+            
         	if ( $programm_exercive->save() ) {
         		$programm_exercive_ids[] = $programm_exercive->id;
 
