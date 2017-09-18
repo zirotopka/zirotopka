@@ -19,6 +19,10 @@ class CheckPasswordMiddleware
     {   
         $user = Sentinel::getUser();
 
+        if (empty($user)) {
+            return $next($request);
+        }
+
         if (!empty($user->password)) {
             return $next($request);
         }
