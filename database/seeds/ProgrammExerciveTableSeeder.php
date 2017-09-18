@@ -76,12 +76,12 @@ class ProgrammExerciveTableSeeder extends Seeder
                     'preview_url' => $exercive_row['preview'],
                 ]);
 
-                // $programm_exercive->files()->create([
-                //     'file_url' => $exercive_row['preview'],
-                //     'file_type' => 2,
-                //     'owner_id' => $programm_exercive->id,
-                //     'owner_type' => 'ProgrammExercive',
-                // ]);
+                $programm_exercive->files()->create([
+                    'file_url' => $exercive_row['preview'],
+                    'file_type' => 2,
+                    'owner_id' => $programm_exercive->id,
+                    'owner_type' => 'ProgrammExercive',
+                ]);
         	}
     	}
     }

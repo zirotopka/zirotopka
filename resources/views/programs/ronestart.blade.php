@@ -127,7 +127,7 @@
                                 <div class="bbrdr">
                                     <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
                                     <img src="/ico/play.svg" alt="" class="ico_play1 comm_pl_hldr" data-id="">
-                                    <p class="upr_d">30 минут каждый обязательный день</p>
+                                    <p class="upr_d">Отжимания от пола - одно из наиболее эффективных спортивных упражнений.</p>
                                 </div>
                             </div>
                             <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
@@ -141,7 +141,7 @@
                                 <div class="bbrdr">
                                     <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
                                     <img src="/ico/play.svg" alt="" class="ico_play2 comm_pl_hldr" data-id="">
-                                    <p class="upr_d">30 минут каждый обязательный день</p>
+                                    <p class="upr_d">Ягодичный мостик – локальное упражнение на ягодицы.</p>
                                 </div>
                             </div>
                             <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
@@ -155,7 +155,7 @@
                                 <div class="bbrdr">
                                     <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
                                     <img src="/ico/play.svg" alt="" class="comm_pl_hldr ico_play3" data-id="">
-                                    <p class="upr_d">30 минут каждый обязательный день</p>
+                                    <p class="upr_d">Грудью касаемся пола</p>
                                 </div>
                             </div>
                             <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
