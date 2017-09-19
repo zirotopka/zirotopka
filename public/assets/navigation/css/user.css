@@ -200,6 +200,10 @@ input:focus{
 	margin: 2.5em 0 1em 0;
 }
 
+.logohov:hover{
+	background: none!important;
+}
+
 .input_money .filter-option{
     padding: 0.5em 0 0 1em;
 }
