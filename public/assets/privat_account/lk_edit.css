@@ -110,10 +110,14 @@ input{
 }
 
 .m_usr_dscr .usr_name{
-	margin: 1.9em 0 0 0;
+    margin: 0px 0 0.3em 0;
 	font-weight: bolder;
 	font-family: MuseoSansCyrl_100;
 	font-size: 1em;
+}
+
+.lk_raiting{
+	margin: 2em 0 0 0;
 }
 
 .m_usr_dscr input{

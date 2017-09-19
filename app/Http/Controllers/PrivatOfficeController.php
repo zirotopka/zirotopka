@@ -51,7 +51,7 @@ class PrivatOfficeController extends Controller
         $programm_stages = 0;
 
         if ( !empty($user->current_programm_id) ) {
-            $programm_days = ProgrammDay::select('id','day','status','interest','lead_time', 'difficult')
+            $programm_days = ProgrammDay::select('id','day','status','interest','lead_time', 'difficult','description')
                                         ->where('programm_id','=',$user->current_programm_id)
                                         ->orderBy('day')->get();
 
@@ -63,6 +63,7 @@ class PrivatOfficeController extends Controller
                                         ->where('programm_day_id','=',$current_program_day->id)
                                         ->with('exercive')
                                         ->get();
+
                 }
             }
         }

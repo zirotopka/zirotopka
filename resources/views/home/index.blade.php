@@ -502,6 +502,9 @@
                         </li>
                     </ul>
                 </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>
+                </div>
             </footer>
         </div>
 	</div>

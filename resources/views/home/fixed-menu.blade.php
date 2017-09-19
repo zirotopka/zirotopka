@@ -8,7 +8,7 @@
                     @else
                         <img src="/image/logos/default.jpg" alt="" class="img-circle logo-img">
                     @endif   
-                    <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
+                    <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}} <br><br><span class="l_mn_raiting">Ваш рейтинг: 158/110</span></p>
                 </li>
                 <li>
                     <a href="/{{$user->slug}}" class="profile_btns lgn">
@@ -36,7 +36,9 @@
         <nav class="navbar spy-active" id="Scrollspy">
             <ul class="nav">
                 <li style="text-align: center;">
-                    <img src="/ico/min-logo.svg" class="side_logo" alt="">
+                    <a href="/" style="padding: 0;">    
+                        <img src="/ico/min-logo.svg" class="side_logo" alt="">
+                    </a>
                 </li>
                 <br><br>
                 <li>

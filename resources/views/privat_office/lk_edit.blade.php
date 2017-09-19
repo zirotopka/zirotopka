@@ -35,6 +35,7 @@
             </span>
 			<span class="m_usr_dscr col-lg-11 col-sm-11 col-sm-6 col-xs-6">
 				<p class="usr_name">{{$user->surname.' '.$user->first_name.' '.$user->last_name}}</p>
+				<span class="l_mn_raiting lk_raiting">Ваш рейтинг: 158/110.</span>
 				<div class="ld_img">
 					<form enctype="multipart/form-data" id="download-logos-form" role="form" method="POST" action="" >	
 						<input type="file" multiple="multiple" name="logo" accept="image/*" id="download-logos" title="Загрузить фото" style="height: 100%; width: 10em;">

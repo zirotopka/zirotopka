@@ -4,9 +4,11 @@ var attachment_count = 0,
 
 $( document ).ready(function() {
 	update_training_height();
+	update_feed_heigth();
 
 	$( window ).resize(function() {
 		update_training_height();
+		update_feed_heigth();
 	});
 
 	$('body').on('click','#send-proof-file',function(){
@@ -166,6 +168,26 @@ function update_training_height() {
 		})	
 
 		$.each(blocks, function( index, value ) {
+			$(value).outerHeight( max_height );
+		});
+	}
+}
+
+function update_feed_heigth(){
+	if ($('body').width() > 766){
+		var feeds = $('.fd_dscr_blk'), 
+			max_height = 0,
+			height = 0;
+
+		$.each(feeds, function( index, value ) {
+			height = $(value).outerHeight();
+
+			if ( height > max_height ) {
+				max_height = height;
+			}
+		})	
+
+		$.each(feeds, function( index, value ) {
 			$(value).outerHeight( max_height );
 		});
 	}

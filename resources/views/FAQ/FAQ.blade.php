@@ -152,6 +152,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="callback col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<p class="calb_text">Если Вы не нашли ответ на свой вопрос, <a href="/messages/new">напишите нам!</a> </p>
+			</div>
 		</div>
 	</div>
 </div>
