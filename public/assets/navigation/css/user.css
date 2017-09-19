@@ -127,6 +127,12 @@ input:focus{
 
 }
 
+.ip{
+    margin: 0 0 0 34.4%;
+    font-size: 0.8vw;
+}
+
+
 /* To Navigation Style */
 .codrops-top {
 	font-size: 1em;
@@ -160,6 +166,90 @@ input:focus{
 	display: block;
 	float: left;
 }
+
+.bal_modal_width{
+	width: 22em;
+	margin: 15% auto;
+	text-align: center;
+}
+
+.bal_modal_height{
+	height: 24em;
+	border-radius: 0;
+}
+
+.add_money{
+	text-align: center;
+	margin: 2em 0 0 0;
+	color: #FF9319;
+	font-family: MuseoSansCyrl_500;
+}
+
+.money{
+	margin: 0 0 0 1em;
+}
+
+.money_inputs{
+	border-radius: 4px;
+	border: 0.1em solid #b3b3b3;
+	height: 3em;
+	width: 16em;
+	color: #999;
+	padding-left: 1.7em;
+	font-family: MuseoSansCyrl_100;
+	margin: 2.5em 0 1em 0;
+}
+
+.input_money .filter-option{
+    padding: 0.5em 0 0 1em;
+}
+
+.output_money{
+	display: none;
+}
+
+.bs-placeholder{
+	width: 16em!important;
+	height: 3em;
+}
+
+.bootstrap-select{
+	left: 0.5em;
+}
+
+.send{
+	margin: 2em 0 0 0;
+	height: 3em;
+	width: 12em;
+	background-color: #ff8a18;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	font-size: 0.9em;
+}
+
+.send:hover{
+	margin: 1.8em -0.2 0 0;
+	height: 3.2em;
+	width: 12.2em;
+	background-color: #ff8a18;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	font-size: 0.9em;
+}
+
+.send:active{
+	margin: 1.8em -0.2 0 0;
+	height: 3.2em;
+	width: 12.2em;
+	background-color: #d9550e;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	font-size: 0.9em;
+}
+
 
 .codrops-icon:before {
 	margin: 0 4px;
@@ -251,6 +341,10 @@ button:hover {
 
 .drop-text{
 	padding: 0;
+}
+
+.l_mn_raiting{
+	color: #ff8a18;
 }
 
 

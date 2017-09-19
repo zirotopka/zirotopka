@@ -1,5 +1,20 @@
 /*-----------------------------------------FAQ-------------------------------------*/
+.callback{
+	text-align: center;
+}
 
+.calb_text{
+	font-size: 1.2em;
+	margin: 2em 0 0 -3em;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+
+.calb_text a{
+	color: #000000;
+	font-family: MuseoSansCyrl_500;
+	font-weight: 100;
+}
 
 ul,li {
 	list-style: none;
@@ -38,9 +53,10 @@ ul,li {
 	line-height: 1.8em;
 }
 
-.questions_block ul li a{ 
+.questions_block ul li a, .calb_text{ 
 	color: #000000;
 	font-family: MuseoSansCyrl_100;;
+	font-weight: 100;
 }
 
 

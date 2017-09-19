@@ -38,7 +38,7 @@
                                 <img src="{{'/image/logos/'.$user->user_ava_url}}" alt="" class="img-circle logo-img">
                             @else
                                 <img src="/image/logos/default.jpg" alt="" class="img-circle logo-img">
-                            @endif   <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}</p>
+                            @endif   <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}<br><br><span class="l_mn_raiting">Ваш рейтинг: 158/110</span></p>
                         </li>
                         <li>
                            <a href="/{{$user->slug}}" class="profile_btns">
@@ -104,7 +104,7 @@
                                 <a href="/" class="min-logo"></a>
                             </div>
                             <!-- <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs"> -->
-                            <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs">
+                            <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs" data-toggle="modal" data-target="#balance_motions">
                                 <span class="nav-text iimtxt" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
                                     <?php 
@@ -158,7 +158,29 @@
                 </div><!-- /st-content -->
             </div><!-- /st-pusher -->
         </div><!-- /st-container -->
-        
+<div class="modal fade" id="balance_motions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog bal_modal_width" role="document">
+    <div class="modal-content bal_modal_height">
+      <div class="modal-body">
+        <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="input_money">
+            <form action="">
+                <p class="add_money">ПОПОЛНИТЬ СЧЕТ</p>
+                <input type="text" value="Сумма" class="money_inputs">
+                <select class="selectpicker" name="program_id" id="program_id" >
+                    <option value="">Купить иммунтиеты</option> 
+                    <option value="">Оплатить программу</option>  
+                </select>
+                <img src="/ico/drop-ico.png" style="z-index: 9999; margin: -4.5em 0 0 13.2em;
+"></img>
+                <input type="submit" value="ПОПОЛНИТЬ" class="send">
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!--
 <div class="tooltip_templates" style="display: none;">

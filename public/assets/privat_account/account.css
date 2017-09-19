@@ -65,6 +65,73 @@
 	position: relative;
 }
 
+/*---------------------------- Feed -----------------------------------*/
+.feed_and_train{
+	padding: 0;
+}
+
+.training_descr, .training_feed{
+	margin: 2.5em 0 3em 0;
+	width: 49%;
+	text-align: left;
+	padding: 1.5em 0 1.5em 2.5em;
+}
+
+.training_descr{
+	background-color: #ebebeb;
+}
+
+.training_feed{
+	border: 0.2em solid #ebebeb;
+	margin-left: 1em;
+}
+
+.feed_orange, .feed_gray{
+    color: #ff8a18;
+    font-family: MuseoSansCyrl_900;
+    font-size: 1.5em;
+}
+
+.feed_gray{
+    color: #1b3149;
+}
+
+.feed_text{
+    font-family: MuseoSansCyrl_300;
+	color: #333;
+	width: 95%;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px){
+	.feed_and_train{
+		padding: 0;
+	}
+
+	.training_descr, .training_feed{
+		margin: 2.5em 0 1em 0;
+		width: 100%;
+		text-align: left;
+		padding: 1.5em 0 1.5em 2.5em;
+	}
+
+	.training_feed{
+		margin-top: 0;
+	}
+
+	.feed_orange, .feed_gray{
+	    font-size: 1.3em;
+	}
+
+	.feed_text{
+		font-size: 1em;
+		width: 90%;
+	}
+
+}
+
+
+
+/*----------------------------- Programs ----------------------------------*/
 .programs{
 	margin: 5em 0 0 0;
 	text-align: left;
@@ -565,7 +632,7 @@
 
 
 .user-fln{
-	font-size: 17px!important;
+	font-size: 13px!important;
 	font-family: MuseoSansCyrl_300!important;
 }
 

@@ -666,10 +666,23 @@ h2{
 .snick-txt{
 	margin: 0.1vw 0 0 0!important;
 }
+
 .comm_img_hldr{
+	position: relative;
     width: 100%;
     margin: -4vw 0 0 -2vw;
+	z-index: 1;
 }
+
+.sw_shader{
+    width: 80.5%;
+    margin: -4vw 0 0 -2vw;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    z-index: 2;
+    height: 70.5%;
+}
+
 	/*-----------------------------Eighth Screen(connect-screen)---------------*/
 	.connect-screen{
 	    height: 46vw;
@@ -798,7 +811,7 @@ h2{
 	}
 
 	footer .prgrm_list{
-		padding: 2.5em 0 0 0;
+		padding: 1.5em 0 0 0;
 		line-height: 2.5em;
 	}
 
