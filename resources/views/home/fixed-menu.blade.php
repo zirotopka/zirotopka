@@ -36,7 +36,11 @@
         <nav class="navbar spy-active" id="Scrollspy">
             <ul class="nav">
                 <li style="text-align: center;">
+<<<<<<< HEAD
                     <a href="/" style="padding: 0;">    
+=======
+                    <a href="/" style="padding: 0;" class="logohov">    
+>>>>>>> ced1712505cde8cba1f83ec0d254a8993fa1b64a
                         <img src="/ico/min-logo.svg" class="side_logo" alt="">
                     </a>
                 </li>

@@ -125,7 +125,8 @@
                         <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
                             <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
                                 <div class="bbrdr">
-                                    <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
+                                    <div class="sw_shader"></div>
+                                    <img src="/image/preview/отжимания-от-пола.jpg" alt="" class="comm_img_hldr video_holder" >
                                     <img src="/ico/play.svg" alt="" class="ico_play1 comm_pl_hldr" data-id="">
                                     <p class="upr_d">Отжимания от пола - одно из наиболее эффективных спортивных упражнений.</p>
                                 </div>
@@ -139,7 +140,8 @@
                         <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
                             <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
                                 <div class="bbrdr">
-                                    <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
+                                    <div class="sw_shader"></div>
+                                    <img src="/image/preview/ягодичный-мост.jpg" alt="" class="comm_img_hldr video_holder" >
                                     <img src="/ico/play.svg" alt="" class="ico_play2 comm_pl_hldr" data-id="">
                                     <p class="upr_d">Ягодичный мостик – локальное упражнение на ягодицы.</p>
                                 </div>
@@ -153,7 +155,8 @@
                         <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
                             <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
                                 <div class="bbrdr">
-                                    <img src="/ico/progimgfq.png" alt="" class="comm_img_hldr video_holder" >
+                                    <div class="sw_shader"></div>
+                                    <img src="/image/preview/присед+выпад-назад.jpg" alt="" class="comm_img_hldr video_holder" >
                                     <img src="/ico/play.svg" alt="" class="comm_pl_hldr ico_play3" data-id="">
 
                                     <p class="upr_d">Делаем плавные и чёткие движения</p>
@@ -253,6 +256,9 @@
                             <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАШЕНИЕ</a>
                         </li>
                     </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>
                 </div>
             </footer>
         </div>
