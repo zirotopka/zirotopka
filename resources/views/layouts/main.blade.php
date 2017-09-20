@@ -166,7 +166,7 @@
         <div class="input_money">
             <form action="">
                 <p class="add_money">ПОПОЛНИТЬ СЧЕТ</p>
-                <input type="text" value="Сумма" class="money_inputs">
+                <input type="text" value="250" class="money_inputs" style="text-align: center; padding: 0; font-family:MuseoSansCyrl_500; color: #ff8a18; font-size: 1.2vw;" placeholder="Сумма">
                 <select class="selectpicker" name="program_id" id="program_id" >
                     <option value="">Купить иммунтиеты</option> 
                     <option value="">Оплатить программу</option>  
