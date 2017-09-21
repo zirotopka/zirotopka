@@ -28,7 +28,6 @@
 
 #partners, #user_agreements{
     font-family: MuseoSansCyrl_100;
-
 }
 
 #partners ol, #user_agreements ol {
@@ -47,6 +46,7 @@
 #partners h2, #user_agreements h2{
 	text-align: center;
 	color: #ff8a18;
+	font-size: 22px;
 }
 
 #partners .off, #user_agreements .off{

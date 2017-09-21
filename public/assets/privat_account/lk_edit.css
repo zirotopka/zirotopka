@@ -117,7 +117,26 @@ input{
 }
 
 .lk_raiting{
+	cursor: pointer;
 	margin: 2em 0 0 0;
+}
+
+.hint_content{
+	margin: 2em 0 2em 2em;
+	font-family: MuseoSansCyrl_300;
+	color: white;
+	text-align: left;
+}
+
+#closert{
+    width: 1em;
+    height: 1em;
+    margin: -1em 0 0 -0.5em;
+}
+
+.raitc{
+	background-color: #ff8a18;
+	width: 28em;
 }
 
 .m_usr_dscr input{
