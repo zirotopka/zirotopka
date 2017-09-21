@@ -41,7 +41,7 @@ class User extends CartalystUser
 
     public static function getSlug($first_name, $last_name, $surname, $user_id = null, $nik = null) {
         $string = '';
-        \Log::info($nik);
+
         if (!empty($nik)) {
             $string .= $nik;
 
@@ -165,7 +165,7 @@ class User extends CartalystUser
                 $user->slug = $slug;
                 $user = $user->save();
 
-                dd($user);
+
                 $role = Sentinel::findRoleBySlug("client");
                 $role->users()->attach($user);
 

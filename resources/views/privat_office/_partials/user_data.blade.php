@@ -47,7 +47,7 @@
 		<hr class="orngln col-lg-10 col-md-10 col-sm-10 col-xs-10">
 		<div class="pd mb-cct col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<p class="rf ctt gray-text">Реферальная ссылка</p>
-			<p class="orange-text">{{!empty($user->referer_code) ? $user->referer_code : 'Здесь будет реферальная ссылка'}}</p>
+			<p class="orange-text">{{!empty($user->slug) ? env('APP_URL').'/'.$user->slug : 'Здесь будет реферальная ссылка'}}</p>
 			<p class="gray-lit-text">Если Вы хотите зарабатывать, то поделитесь этой ссылкой<br class="hidden-xs"> с друзьями. При регистрации они должны указать эту ссылку. </p>
 		</div>
 	</div>

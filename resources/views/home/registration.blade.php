@@ -31,7 +31,7 @@
             <input class="reg_input" id="surname" type="text" name="surname" placeholder="Фамилия" required="required"> 
 
             @if (!empty($referral))
-              <input type="hidden" name="referer_code" value="{{$referral->referer_code}}"> 
+              <input type="hidden" name="referer_code" value="{{$referral->slug}}"> 
               <div class="enter_across reg_enter_across">
                 <hr>
                 <a href="">Вас пригласил</a>
