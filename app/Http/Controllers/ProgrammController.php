@@ -29,7 +29,7 @@ class ProgrammController extends Controller
                 ])->where('slug','=',$slug)->first();
 
                 if ($request->has('referral')) {
-                    $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                    $referral = User::select('id','first_name','surname','slug')->where('slug','=',$request->get('referral'))->first();
                 }
 
                 $data = [
@@ -56,7 +56,7 @@ class ProgrammController extends Controller
                 $referral = null;
 
                 if ($request->has('referral')) {
-                    $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                    $referral = User::select('id','first_name','surname','slug')->where('slug','=',$request->get('referral'))->first();
                 }
 
                 $data = [
@@ -72,7 +72,7 @@ class ProgrammController extends Controller
                 $referral = null;
 
                 if ($request->has('referral')) {
-                    $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                    $referral = User::select('id','first_name','surname','slug')->where('slug','=',$request->get('referral'))->first();
                 }
 
                 $data = [
@@ -88,7 +88,7 @@ class ProgrammController extends Controller
                 $referral = null;
 
                 if ($request->has('referral')) {
-                    $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                    $referral = User::select('id','first_name','surname','slug')->where('slug','=',$request->get('referral'))->first();
                 }
 
                 $data = [
@@ -104,7 +104,7 @@ class ProgrammController extends Controller
                 $referral = null;
 
                 if ($request->has('referral')) {
-                    $referral = User::select('id','first_name','surname','referer_code')->where('referer_code','=',$request->get('referral'))->first();
+                    $referral = User::select('id','first_name','surname','slug')->where('slug','=',$request->get('referral'))->first();
                 }
 
                 $data = [

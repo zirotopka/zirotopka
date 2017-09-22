@@ -122,7 +122,7 @@ class UserController extends Controller
 
             //referer_code
             if ($request->has('referer_code')) {
-                $referral = User::select('id')->where('referer_code','=',$request->get('referer_code'))->first();
+                $referral = User::select('id')->where('slug','=',$request->get('referer_code'))->first();
 
                 if (!empty($referral) && ($user->id != $referral->id)) {
                     $adjancy = new AdjancyList;

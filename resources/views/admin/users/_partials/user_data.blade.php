@@ -16,7 +16,7 @@
 			</div>
 			<div class="pd col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<p class="orange-text">Реферальная ссылка</p>
-				<p class="gray-text">{{$user->referer_code}}</p>
+				<p class="gray-text">{{$user->slug}}</p>
 			</div>
 			<div class="pd col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<p class="orange-text">Яндекс кошелёк</p>
