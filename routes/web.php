@@ -26,6 +26,10 @@ Route::post('get_comment_video', [ 'uses' => 'HomeController@get_comment_video' 
 Route::get('login', ['uses' => 'HomeController@index' ] );
 Route::get('register', ['uses' => 'HomeController@index' ] );
 
+Route::group(['prefix' => '/', 'middleware' => ['check_referall']], function () {
+	Route::get('/referall/{slug}', ['uses' => 'HomeController@index' ] );
+});
+
 Route::post('register', ['uses' => 'UserController@registration' ] );
 Route::post('login', ['as' => 'login', 'uses' => 'UserController@login' ] );
 

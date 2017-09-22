@@ -59,5 +59,6 @@ class Kernel extends HttpKernel
         'admin' => \App\Http\Middleware\CheckIsAdminMiddleware::class,
         'check_token' => \App\Http\Middleware\CheckToken::class,
         'check_password' => \App\Http\Middleware\CheckPasswordMiddleware::class,
+        'check_referall' => \App\Http\Middleware\CheckReferallMiddleware::class,
     ];
 }
