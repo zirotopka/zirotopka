@@ -12,12 +12,16 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {	 
+
+        $value = session('key');
+
         $user = Sentinel::getUser();
         $comments = Comments::all();
         $referral = null;
 
-        if ($request->has('referral')) {
-        	$referral = User::select('id','first_name','surname','slug')->where('slug','=',$request->get('referral'))->first();
+        if (session()->has('ref')) {
+            $reverralSlug = $request->session()->pull('ref');
+            $referral = User::select('id','first_name','surname','slug')->where('slug','=',$reverralSlug)->first();
         }
 
        	$data = [
