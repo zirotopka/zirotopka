@@ -22,7 +22,7 @@ class CheckReferallMiddleware
         $user = User::select('id')->where('slug','=',$slug)->first();
 
         if (!empty($user)) {
-            session(['referall' => $slug]);
+            $request->session()->put('referall', $slug);
         }
         
         return $next($request);

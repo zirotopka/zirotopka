@@ -20,7 +20,8 @@ class HomeController extends Controller
         $referral = null;
 
         if (session()->has('referall')) {
-            $referral = User::select('id','first_name','surname','slug')->where('slug','=',session('referall'))->first();
+            $reverralSlug = $request->session()->pull('referall');
+            $referral = User::select('id','first_name','surname','slug')->where('slug','=',$reverralSlug)->first();
         }
 
        	$data = [
