@@ -19,8 +19,8 @@ class HomeController extends Controller
         $comments = Comments::all();
         $referral = null;
 
-        if (session()->has('referall')) {
-            $reverralSlug = $request->session()->pull('referall');
+        if (session()->has('ref')) {
+            $reverralSlug = $request->session()->pull('ref');
             $referral = User::select('id','first_name','surname','slug')->where('slug','=',$reverralSlug)->first();
         }
 

@@ -27,7 +27,7 @@ Route::get('login', ['uses' => 'HomeController@index' ] );
 Route::get('register', ['uses' => 'HomeController@index' ] );
 
 Route::group(['prefix' => '/', 'middleware' => ['check_referall']], function () {
-	Route::get('/referall/{slug}', ['uses' => 'HomeController@index' ] );
+	Route::get('/ref/{slug}', ['uses' => 'HomeController@index' ] );
 });
 
 Route::post('register', ['uses' => 'UserController@registration' ] );
