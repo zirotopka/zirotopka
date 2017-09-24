@@ -89,10 +89,10 @@ Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], funct
 	Route::get('yandex/answer', ['uses' => 'Api\YandexController@yandexPay']);
 });
 
-Route::get('/paymaster/notification', ['uses' => 'PayMasterController@notification']);
-Route::get('/paymaster/success', ['uses' => 'PayMasterController@success']);
-Route::get('/paymaster/invoice', ['uses' => 'PayMasterController@invoice']);
-Route::get('/paymaster/failure', ['uses' => 'PayMasterController@failure']);
+Route::post('/paymaster/notification', ['uses' => 'PayMasterController@notification']);
+Route::post('/paymaster/success', ['uses' => 'PayMasterController@success']);
+Route::post('/paymaster/invoice', ['uses' => 'PayMasterController@invoice']);
+Route::post('/paymaster/failure', ['uses' => 'PayMasterController@failure']);
 
 
 Route::get('/social_login/{provider}', 'SocialController@login');
