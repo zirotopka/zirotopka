@@ -25,7 +25,7 @@
         <b>.START</b>
       </a>
     </div>
-    <div class="modal fade" id="choose_programe_form" tabindex="-1" role="dialog" aria-labelledby="ProgramModalLabel">
+    <div class="modal fade" id="choose_programe_form" tabindex="-1" role="dialog" aria-labelledby="ProgramModalLabel" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog chs-program-widnow" role="document">
         <div class="modal-content reg-mod-content">
           <div class="modal-body choose-program-form">

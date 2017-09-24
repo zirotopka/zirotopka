@@ -1,6 +1,6 @@
 /* Left edit part*/
 
-input{
+input, #days, #months, #years{
 	cursor: pointer;
 }
 
@@ -274,7 +274,7 @@ input{
 .hw-cls{
 	display: inline-block;
 	width: 4vw;
-	padding: 0;
+	padding: 0.5em;
 }
 
 .wh-line{
