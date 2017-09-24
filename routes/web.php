@@ -92,6 +92,8 @@ Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], funct
 Route::post('/paymaster/notification', ['uses' => 'PayMasterController@notification']);
 Route::post('/paymaster/success', ['uses' => 'PayMasterController@success']);
 Route::post('/paymaster/invoice', ['uses' => 'PayMasterController@invoice']);
+Route::post('/paymaster/failure', ['uses' => 'PayMasterController@failure']);
+
 
 Route::get('/social_login/{provider}', 'SocialController@login');
 Route::get('/social_login/callback/{provider}', 'SocialController@callback');
