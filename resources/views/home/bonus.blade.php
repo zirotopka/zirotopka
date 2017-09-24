@@ -226,6 +226,9 @@
                             <li id="pltks">
                                 <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАШЕНИЕ</a>
                             </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#login">ВОЙТИ</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

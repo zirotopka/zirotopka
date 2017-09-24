@@ -195,11 +195,13 @@
 								</div>
 								<div class="otchet" data-programm-stage="{{$programm_stage->id}}">
 									<div class="attachment-container"></div>
-									<div class="load-btn">
-										<img class="load" src="/ico/load.png" alt="">
-										<p class="load-text">Загрузить отчёт</p>
+									<div class="otch_hover">
+										<div class="load-btn">
+											<img class="load" src="/ico/load.png" alt="">
+											<p class="load-text">Загрузить отчёт</p>
+										</div>
+										<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
 									</div>
-									<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
 								</div>
 									<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
 								</div>

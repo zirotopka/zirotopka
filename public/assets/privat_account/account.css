@@ -137,6 +137,15 @@
 	text-align: left;
 }
 
+.attachment-item{
+	font-size: 0.8em;
+}
+
+.fa-window-close{
+	cursor: pointer;
+}
+
+
 .program{
 	background-color: #ebebeb;
 	border-right: 1em solid white;
@@ -282,20 +291,25 @@
 
 .attachment-img-mask{
 	vertical-align: top;
-    margin: 3px 9px 0 -23px;
+    margin: 1px 9px 0 -18px;
 }
 
-.otchet:hover .load-btn .load{
+.attachment-container{
+	position: relative;
+	z-index: 2;
+}
+
+.otch_hover:hover .load-btn .load{
 	content: url('/ico/load_hov.png');
 	width: 3.1em;
-	margin-left: -0.1em;
+	margin: -0.1em -0.1em 0 -0.1em;
 }
 
-.otchet:hover .load-btn .load-text{
-    margin: -0.1em 0 0 1em;
+.otch_hover:hover .load-btn .load-text{
+    margin: -0.01em -0.1em 0  1em;
 }
 
-.otchet:active .load-btn .load{
+.otch_hover:active .load-btn .load{
 	content: url('/ico/load_act.png');
 }
 

@@ -5,6 +5,9 @@ var attachment_count = 0,
 $( document ).ready(function() {
 	update_training_height();
 	update_feed_heigth();
+	$('body').on('click','.fa-window-close',function(){
+		$(this).closest('.attachment-item').remove();
+	});
 
 	$( window ).resize(function() {
 		update_training_height();
