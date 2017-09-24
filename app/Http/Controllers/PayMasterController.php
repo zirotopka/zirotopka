@@ -15,13 +15,24 @@ class PayMasterController extends Controller
     	$LMI_PAID_AMOUNT = (float) $request->get('LMI_PAYMENT_AMOUNT');
         $userID = $request->get('PAYER_ID');
 
+        $user = User::select('slug','id'->where('id','=',$userID))->first();
+
+        if (empty($user)) {
+        	\Log::warning('PayMasterController: Не найден пользователь. Json: '.json_encode($request->all()));
+        } else {
+        	$user->is_programm_pay = 1;
+        	if (!$user->save()) {
+	        	\Log::warning('PayMasterController: Не сохранен пользователь. Json: '.json_encode($request->all()));
+	        }
+        }
+
         $accrual = new Accrual;
         $accrual->sum = $LMI_PAID_AMOUNT;
         $accrual->user_id = $userID;
         $accrual->type_id = 1;
         $accrual->comment = 'Успешная оплата программы';
         $accrual->accruals_json = json_encode($request->all());
-        if (!$accrual->sum()) {
+        if (!$accrual->save()) {
         	\Log::warning('PayMasterController: Не сохранен платеж в системе. Json: '.json_encode($request->all()));
         }
 
