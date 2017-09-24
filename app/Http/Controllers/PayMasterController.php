@@ -43,7 +43,7 @@ class PayMasterController extends Controller
     public function success (Request $request) {
         $userID = $request->get('PAYER_ID');
 
-        $user = User::select('slug','id'->where('id','=',$userID))->first();
+        $user = User::select('slug','id')->where('id','=',$userID)->first();
 
         if (empty($user)) {
         	return redirect('/');
