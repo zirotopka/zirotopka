@@ -164,6 +164,10 @@ option, option:hover, option:active ,option:focus,
 	height: 3em !important;
 }
 
+.cntrt .bootstrap-select{
+    margin: 0 1.1em 0 0;
+}
+
 .bootstrap-select button{
 	height: 3em;
 	background: none;

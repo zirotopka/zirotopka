@@ -277,8 +277,12 @@
 
 .otchet{
 	width: 100%;
-	height: 5em;
 	vertical-align: middle;
+}
+
+.attachment-img-mask{
+	vertical-align: top;
+    margin: 3px 9px 0 -23px;
 }
 
 .otchet:hover .load-btn .load{
