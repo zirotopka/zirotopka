@@ -19,6 +19,9 @@ class PayMasterController extends Controller
 
     public function invoice (Request $request) {
         \Log::info('invoice:'.json_encode($request->all()));
+
+        return response('YES', 200)
+                  ->header('Content-Type', 'text/plain');
     }
 
     public function failure (Request $request) {
