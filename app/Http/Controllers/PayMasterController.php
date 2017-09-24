@@ -31,7 +31,7 @@ class PayMasterController extends Controller
         $LMI_PAID_AMOUNT = (float) $request->get('LMI_PAYMENT_AMOUNT');
         $userID = $request->get('PAYER_ID');
 
-        $user = User::where('user_id','=',$userID)->first();
+        $user = User::where('id','=',$userID)->first();
 
         if (empty($user)) {
     		\Log::warning('PayMasterController: Отсутствует пользователь. Json: '.json_encode($request->all()));
