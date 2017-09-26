@@ -251,7 +251,7 @@ input, #days, #months, #years{
     background-repeat: no-repeat;
     width: 2vw;
     height: 2.5vw;
-    margin: -0.4em 0 0 1.8vw;
+    margin: -0.4em 0 0 0.5vw;
     background-position: 50% 50%;
     border-left: 1px solid #c6c6c6;
 	pointer-events: none;

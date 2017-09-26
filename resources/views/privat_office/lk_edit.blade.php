@@ -16,8 +16,23 @@
 	<script type="text/javascript" src="/assets/js/inputmask/jquery.inputmask.min.js"></script>
     <script type="text/javascript" src="/assets/js/inputmask/inputmask.phone.extensions.min.js"></script>
     <script type="text/javascript" src="/assets/privat_account/lk_edit.js"></script>
-     
+    <script type="text/javascript">
+        <?php 
+            $birth = Carbon\Carbon::parse($user->birthday);
+        ?>
+        var day = {{$birth->day}};
+        var brthdmonth = {{$birth->month}};
+        var brthyear = {{$birth->year}};
+        
+    $( document ).ready(function() {
+            $('#days').val(day)
+            $('#months').val(brthdmonth);
+            $('#years').val(brthyear);
 
+            $('.birthday').customSelect();
+            $('#days').customSelect();
+    })
+    </script>
 @overwrite
 
 
