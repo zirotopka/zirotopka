@@ -31,7 +31,7 @@ class PrivatOfficeController extends Controller
         //$currentProgramDayStatus = $user->current_program_day_status;
 
         //Оплата програм
-        //if (!empty($currentProgramDayStatus->status)) {
+        if (!empty($currentProgramDayStatus->status)) {
             if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
                 $sum = $user->current_program->cost;
                 $parents = $user->parents;
@@ -44,7 +44,7 @@ class PrivatOfficeController extends Controller
 
                 return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum, 'shopArticle' => $shopArticle]);
             }
-        //}
+        }
 
         $current_program_day = 0;
         $programm_days = 0;
