@@ -20,15 +20,17 @@
         <?php 
             $birth = Carbon\Carbon::parse($user->birthday);
         ?>
-        var day = {{$birth->day}};
-        var brthdmonth = {{$birth->month}};
-        var brthyear = {{$birth->year}};
-        
+        var birthday = "{{$user->birthday}}"; 
     $( document ).ready(function() {
-            $('#days').val(day)
-            $('#months').val(brthdmonth);
-            $('#years').val(brthyear);
-
+        if (birthday != ''){  
+            $('#days').val({{$birth->day}});
+            $('#months').val({{$birth->month}});
+            $('#years').val({{$birth->year}});           
+        } else {
+            $('#days').val('');
+            $('#months').val('');
+            $('#years').val('');
+        }
             $('.birthday').customSelect();
             $('#days').customSelect();
     })
