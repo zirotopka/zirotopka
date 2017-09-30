@@ -231,11 +231,7 @@ class PrivatOfficeController extends Controller
             try {
                 $user->save();
 
-                $data = [
-                  'user' => $user,
-                ];
-
-                return view('privat_office.lk_edit', $data);
+                return redirect('/'.$user->slug);
 
             } catch (Exception $e) {
                 return redirect()->back()->withErrors($e->getMessages());
