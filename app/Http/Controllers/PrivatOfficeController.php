@@ -192,7 +192,7 @@ class PrivatOfficeController extends Controller
             $validator = Validator::make($request->all(), $rules, $messages);
 
             if ($validator->fails()) {
-                return back()->withErrors($validator)->withInput();
+                return back()->withErrors($validator);
             }
 
             $user->phone = $request->get('phone');
