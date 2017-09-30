@@ -242,7 +242,7 @@ class PrivatOfficeController extends Controller
             }
         }
 
-        dd($user)
+        dd($user);
 
         return redirect()->back()->withErrors();
     }
