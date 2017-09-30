@@ -1,5 +1,5 @@
 <div class="user-data-ctn">
-	<form action="{{'/'.$user->slug.'/'}}" method="POST" class="show-hidden-form">
+	<form action="{{'/'.$user->slug}}" method="POST" class="show-hidden-form">
 	    {{ csrf_field() }}
 		<p id="myself_info">ИНФОРМАЦИЯ О СЕБЕ</p>
 		<img src=/ico/edit.png class="edit_btn" alt="Изменить профиль">
