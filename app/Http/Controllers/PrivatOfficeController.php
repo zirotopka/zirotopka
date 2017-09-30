@@ -228,14 +228,17 @@ class PrivatOfficeController extends Controller
             $user->pasport_issued = $request->get('pasport_issued');
             $user->city = $request->get('city');
 
-            if ($user->save()) {
+            try {
+                $user->save();
+
                 $data = [
                   'user' => $user,
                 ];
 
                 return view('privat_office.lk_edit', $data);
-            } else {
-                return redirect()->back()->withInput();
+                
+            } catch (Exception $e) {
+                dd($e);
             }
         }
 
