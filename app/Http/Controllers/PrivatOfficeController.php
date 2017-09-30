@@ -192,7 +192,6 @@ class PrivatOfficeController extends Controller
             $validator = Validator::make($request->all(), $rules, $messages);
 
             if ($validator->fails()) {
-                dd($validator);
                 return back()->withErrors($validator)->withInput();
             }
 
@@ -228,7 +227,7 @@ class PrivatOfficeController extends Controller
 
             $user->pasport_issued = $request->get('pasport_issued');
             $user->city = $request->get('city');
-
+            dd($user);
             try {
                 $user->save();
 
@@ -242,6 +241,8 @@ class PrivatOfficeController extends Controller
                 dd($e);
             }
         }
+
+        return redirect()->back()->withErrors();
     }
 
     public function faq($slug){
