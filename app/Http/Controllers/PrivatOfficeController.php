@@ -192,6 +192,7 @@ class PrivatOfficeController extends Controller
             $validator = Validator::make($request->all(), $rules, $messages);
 
             if ($validator->fails()) {
+                dd($validator);
                 return back()->withErrors($validator)->withInput();
             }
 
@@ -236,13 +237,11 @@ class PrivatOfficeController extends Controller
                 ];
 
                 return view('privat_office.lk_edit', $data);
-                
+
             } catch (Exception $e) {
                 dd($e);
             }
         }
-
-        return redirect()->back()->withErrors();
     }
 
     public function faq($slug){
