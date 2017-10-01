@@ -156,7 +156,7 @@
 			</div>
 			<div class="training_feed fd_dscr_blk col-xs-12 col-sm-6 col-md-6 col-lg-6">
 				<p class="feed_gray">ПЛАН ПИТАНИЯ</p>
-				<p class="feed_text"></p>
+				<p class="feed_text">{{$current_program_day->feed}}</p>
 			</div>
 		</div>
 
