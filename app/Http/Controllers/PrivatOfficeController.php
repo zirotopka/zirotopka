@@ -46,6 +46,11 @@ class PrivatOfficeController extends Controller
             }
         }
 
+        //Блокировка програм
+        if (empty($user->status)) {
+            return view('privat_office._partials._freezing_modal', ['user' => $user]);
+        }
+
         $current_program_day = 0;
         $programm_days = 0;
         $programm_stages = 0;
