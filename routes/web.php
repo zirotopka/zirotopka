@@ -80,6 +80,7 @@ Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], funct
 		Route::get('admin/tasks/{id}/{status}', ['uses' => 'Admin\TaskController@change_status']);
 		Route::get('admin/tasks/{id}', ['uses' => 'Admin\TaskController@task']);
 
+		Route::post('admin/get_payments', ['uses' => 'Admin\AccrualsController@get_payments']);
 
 	});
 

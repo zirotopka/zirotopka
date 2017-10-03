@@ -110,6 +110,13 @@ class BonusDistribution implements ShouldQueue
             $balance_id = 0;
         } else {
             $balance_id = $balance->id;
+
+            try {
+                $balance->sum = $balance->sum + $sum;
+                $balance->save();
+            } catch (Exception $e) {
+                \Log::error('BonusDistribution: У пользователя с id '.$user_id.'не сохранен баланс');
+            }    
         }
 
         $accrual = new Accrual;
