@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Accrual;
 
+use App\Jobs\BonusDistribution;
+
 use Illuminate\Http\Request;
 
-class PayMasterController extends Controller
+class BonusDistribution extends Controller
 {	
 
 	// [2017-09-24 14:07:12] local.INFO: notification:{"LMI_MERCHANT_ID":"273ebbb9-8678-4e29-860f-91eb86630816","LMI_PAYMENT_SYSTEM":"503","LMI_CURRENCY":"RUB","LMI_PAYMENT_AMOUNT":"2500.00","LMI_PAYMENT_DESC":"ReferMoney","LMI_SYS_PAYMENT_DATE":"2017-09-24T14:07:11","LMI_SYS_PAYMENT_ID":"89667424","LMI_PAID_AMOUNT":"2500.00","LMI_PAID_CURRENCY":"RUB","LMI_SIM_MODE":"0","LMI_PAYER_IDENTIFIER":"4XXXXXXXXXXX0010","LMI_PAYMENT_METHOD":"Test","PAYER_ID":"39","LMI_HASH":"B33BsjMgXiGBo0NS8\/NF7w=="}  
@@ -24,6 +26,9 @@ class PayMasterController extends Controller
         	if (!$user->save()) {
 	        	\Log::warning('PayMasterController: Не сохранен пользователь. Json: '.json_encode($request->all()));
 	        }
+
+            //Расспределение по бонусной
+            dispatch(new BonusDistribution($user->id));
         }
 
         $accrual = new Accrual;

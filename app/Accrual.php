@@ -12,6 +12,7 @@ class Accrual extends Model
     public $accruals_good_types = [
         '453084' => 1, //програма
         '12345' => 2, //Иммунитет
+        '12345' => 3, //Выплаты
     ];
 
     public function user()
