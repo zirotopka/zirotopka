@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Accrual;
 
-use App\Jobs\BonusDistribution;
-
 use Illuminate\Http\Request;
 
 class BonusDistribution extends Controller
@@ -20,22 +18,27 @@ class BonusDistribution extends Controller
         $user = User::select('slug','id')->where('id','=',$userID)->first();
 
         if (empty($user)) {
-        	\Log::warning('PayMasterController: Не найден пользователь. Json: '.json_encode($request->all()));
-        } else {
-        	$user->is_programm_pay = 1;
-        	if (!$user->save()) {
-	        	\Log::warning('PayMasterController: Не сохранен пользователь. Json: '.json_encode($request->all()));
-	        }
+        	\Log::error('PayMasterController: Не найден пользователь. Json: '.json_encode($request->all()));
 
-            //Расспределение по бонусной
-            dispatch(new BonusDistribution($user->id));
+            return true;
         }
+
+        $balance = $user->balance;
+
+        if (empty($balance)) {
+            \Log::error('PayMasterController: Не найден баланс. Json: '.json_encode($request->all()));
+
+            return true;
+        }
+
+        $balance->sum = $balance->sum + $LMI_PAID_AMOUNT;
+        $balance->save();
 
         $accrual = new Accrual;
         $accrual->sum = $LMI_PAID_AMOUNT;
         $accrual->user_id = $userID;
         $accrual->type_id = 1;
-        $accrual->comment = 'Успешная оплата программы';
+        $accrual->comment = 'Пополнение средств';
         $accrual->accruals_json = json_encode($request->all());
         if (!$accrual->save()) {
         	\Log::warning('PayMasterController: Не сохранен платеж в системе. Json: '.json_encode($request->all()));
@@ -76,22 +79,22 @@ class BonusDistribution extends Controller
     		return false;
     	}
 
-    	if (empty($user->current_programm_id)) {
-    		\Log::warning('PayMasterController: Отсутствует программа у пользователя. Json: '.json_encode($request->all()));
-    		return false;
-    	}
+    	// if (empty($user->current_programm_id)) {
+    	// 	\Log::warning('PayMasterController: Отсутствует программа у пользователя. Json: '.json_encode($request->all()));
+    	// 	return false;
+    	// }
 
-    	$sum = $user->current_program->cost;
-        $parents = $user->parents;
+    	// $sum = $user->current_program->cost;
+     //    $parents = $user->parents;
 
-        if (count($parents) > 0) {
-            $sum = $sum * 0.9;
-        }
+     //    if (count($parents) > 0) {
+     //        $sum = $sum * 0.9;
+     //    }
 
-        if ($LMI_PAID_AMOUNT < $sum) {
-        	\Log::warning('PayMasterController: Стоимость программы превышает сумму. Json: '.json_encode($request->all()));
-    		return false;
-        }
+      //   if ($LMI_PAID_AMOUNT < $sum) {
+      //   	\Log::warning('PayMasterController: Стоимость программы превышает сумму. Json: '.json_encode($request->all()));
+    		// return false;
+      //   }
 
         return response('YES', 200)
                   ->header('Content-Type', 'text/plain');

@@ -19,6 +19,11 @@ class PrivatOfficeController extends Controller
     public function index($slug)
     {	
     	$user = Sentinel::getUser();
+        $balance = $user->balance;
+
+        if (empty($balance)) {
+            return view('errors.error_balance');
+        }
 
         //Выбор программы
         if ( empty($user->current_programm_id) ) {
@@ -31,7 +36,7 @@ class PrivatOfficeController extends Controller
         //$currentProgramDayStatus = $user->current_program_day_status;
 
         //Оплата програм
-        if (!empty($currentProgramDayStatus->status)) {
+        //if (!empty($currentProgramDayStatus->status)) {
             if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
                 $sum = $user->current_program->cost;
                 $parents = $user->parents;
@@ -40,11 +45,16 @@ class PrivatOfficeController extends Controller
                     $sum = $sum * 0.9;
                 }
 
-                $shopArticle = env('YANDEX_KASSA_PROGRAM_ID');
+                //Проверяем наличие средств на балансе
+                if ($balance->sum >= $sum) {
+                    return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum]);
+                } else {
+                    $pay_description = 'Для приобритения програмы вам не хватает средств на балансе. Пополните, пожалуйста, баланс.';
 
-                return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum, 'shopArticle' => $shopArticle]);
+                    return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description]);
+                }
             }
-        }
+        //}
 
         //Блокировка програм
         if (empty($user->status)) {
