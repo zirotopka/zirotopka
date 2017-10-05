@@ -24,7 +24,6 @@
 
 
 @section("content")
-	@include('privat_office._partials._freezing_modal')
 	@include('privat_office._partials._start_programm_form')
 
 <!--Логотип-->

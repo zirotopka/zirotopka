@@ -11,6 +11,7 @@ use App\ProgrammStage;
 use App\Balance;
 use App\Accrual;
 use Validator;
+use App\Jobs\BonusDistribution;
 
 use Carbon\Carbon;
 
@@ -38,18 +39,19 @@ class PrivatOfficeController extends Controller
         //Оплата програм
         //if (!empty($currentProgramDayStatus->status)) {
             if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
-                $sum = $user->current_program->cost;
+                $program_cost = $user->current_program->cost;
                 $parents = $user->parents;
 
                 if (count($parents) > 0) {
-                    $sum = $sum * 0.9;
+                    $program_cost = $program_cost * 0.9;
                 }
 
                 //Проверяем наличие средств на балансе
-                if ($balance->sum >= $sum) {
-                    return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $sum]);
+                if ($balance->sum >= $program_cost) {
+                    return view('privat_office._partials._program_pay', ['user' => $user, 'sum' => $program_cost]);
                 } else {
                     $pay_description = 'Для приобритения програмы вам не хватает средств на балансе. Пополните, пожалуйста, баланс.';
+                    $sum = $program_cost - $balance->sum;
 
                     return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description]);
                 }
@@ -57,8 +59,17 @@ class PrivatOfficeController extends Controller
         //}
 
         //Блокировка програм
-        if (empty($user->status)) {
-            return view('privat_office._partials._freezing_modal', ['user' => $user]);
+        if ($user->status == 0) {
+            $immunity_cost = intval(env('IMMUNITY_COST'));
+
+            if ($balance->sum >= $immunity_cost) {
+                return view('privat_office._partials._freezing_modal', ['user' => $user]);
+            } else {
+                $pay_description = 'Для приобритения иммунитета вам не хватает средств на балансе. Пополните, пожалуйста, баланс.';
+                $sum = $immunity_cost - $balance->sum;
+
+                return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description]);
+            } 
         }
 
         $current_program_day = 0;
@@ -298,5 +309,78 @@ class PrivatOfficeController extends Controller
         ];
 
         return view('privat_office.balance', $data);
+    }
+
+
+    /**
+     * Покупка програмы
+     * @return \Illuminate\Http\Response
+     */
+    public function payProduct($type, Request $request)
+    {   
+        $user = User::select([
+                'id',
+                'status',
+                'current_programm_id',
+                'is_programm_pay',
+                'slug',
+            ])->where('id','=',$request->get('user_id'))
+            ->first();
+
+        $balance = $user->balance;
+
+        if (empty($balance)) {
+            return view('errors.error_balance');
+        }
+
+        if ($type == 1) {
+            //Програма
+            $program = $user->current_program;
+
+            if (empty($program)) {
+                return redirect()->back()->withErrors(['error' => 'Не выбрана програма']);
+            }
+
+            $sum = $user->current_program->cost;
+            $parents = $user->parents;
+
+            if (count($parents) > 0) {
+                $sum = $sum * 0.9;
+            }
+            $accrualDescription = 'Покупка программы '.$program->name;
+        } elseif ($type == 2) {
+            //immunitet
+            $sum = env('IMMUNITY_COST');
+            $accrualDescription = 'Покупка иммунитета';
+        } else {
+            return redirect()->back()->withErrors(['error' => 'Тип платежа неизвестен']);
+        }
+
+        if ($balance->sum >= $sum) {
+            $balance->sum = $balance->sum - $sum;
+            $balance->save();
+
+            if ($type == 1) {
+                //Програма
+                $user->is_programm_pay = 1;
+                BonusDistribution::dispatch($user->id);
+            }
+
+            $user->status = 1;
+            $user->save();
+
+            $accruals = new Accrual;
+            $accruals->sum = $sum;
+            $accruals->user_id = $user->id;
+            $accruals->type_id = 2;
+            $accruals->balance_id = $balance->id;
+            $accruals->comment = $accrualDescription;
+
+            $accruals->save();
+
+            return redirect('/'.$user->slug);
+        } else {
+            return redirect()->back()->withErrors(['error' => 'Не счету недостаточно средств']);
+        }
     }
 }
