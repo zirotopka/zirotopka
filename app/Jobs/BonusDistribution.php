@@ -125,7 +125,6 @@ class BonusDistribution implements ShouldQueue
         $accrual->type_id = 1;
         $accrual->balance_id = $balance_id;
         $accrual->comment = 'Пополнение средств по бонусной системе от пользователя '.$child_name;
-        $accrual->accruals_status = 0;
 
         if (!$accrual->save()) {
             \Log::error('BonusDistribution: У пользователя с id '.$user_id.' не сохранен платеж на сумму '.$sum);

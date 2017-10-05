@@ -390,6 +390,57 @@ class PrivatOfficeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function withdrawalFunds($user_id, Request $request)
-    {
+    {   
+        $user = Sentinel::getUser();
+        $balance = $user->balance;
+
+        if ($user->id != $user_id) {
+            return redirect()->back()->withErrors(['error' => 'Ваш id не совпадает с id вывода средств. Обратитесь в поддержку']);
+        }
+
+        if (empty($balance)) {
+            return view('errors.error_balance');
+        }
+
+        $withdrawal_sum = $request->get('withdrawal_sum');
+
+        if ($withdrawal_sum == 0) {
+            return redirect()->back()->withErrors(['error' => 'Вывод нулевого значения запрещен']);
+        }
+
+        if ($withdrawal_sum > $balance->sum) {
+            return redirect()->back()->withErrors(['error' => 'У вас недостаточно средств']);
+        }
+
+        $balance->sum = $balance->sum - $withdrawal_sum;
+        $balance->save();
+
+
+        $accruals = new Accrual;
+        $accruals->sum = $withdrawal_sum;
+        $accruals->user_id = $user->id;
+        $accruals->type_id = 2;
+        $accruals->balance_id = $balance->id;
+        $accruals->comment = 'Вывод средств c личного счета';
+        $accruals->accruals_freezing = 1;
+
+        $accruals->save();
+
+        return redirect('/'.$user->slug.'/balance');
+    }
+
+    /**
+     * Покупка иммунитета
+     * @return type
+     */
+    public function immunity_count($slug) {
+        $user = Sentinel::getUser();
+
+        return view('privat_office._partials._immunity', ['user' => $user]);
+    }
+
+    //Покупка иммунитета
+    public function immunity_post_count($user_id, Request $request) {
+
     }
 }

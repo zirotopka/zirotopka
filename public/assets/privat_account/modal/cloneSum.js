@@ -2,7 +2,8 @@ $( document ).ready(function() {
 	jQuery('body').on('change','#sumFront',function(){
 		var thisInput = jQuery(this),
 			thisSum = parseInt(thisInput.val()),
-			backSum = jQuery('#sumBack');
+			modalWindos = thisInput.closest('.modal').eq(0),
+			backSum = modalWindos.find('#sumBack').eq(0);
 
 		if (thisSum == NaN) {
 			backSum.val(0);

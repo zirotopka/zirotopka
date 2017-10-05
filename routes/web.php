@@ -47,10 +47,12 @@ Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], funct
 	Route::get('/{slug}/balance', ['uses' => 'PrivatOfficeController@balance']);
 	Route::get('/{slug}/messages', ['uses' => 'PrivatOfficeController@messages']);
 	Route::get('/{slug}/faq', ['uses' => 'PrivatOfficeController@faq']);
+	Route::get('/{slug}/immunity_count', ['uses' => 'PrivatOfficeController@immunity_count']);
 
 	Route::post('privat_office/get_exercive_video', [ 'uses' => 'PrivatOfficeController@get_exercive_video' ] );
 	Route::post('privat_office/payProduct/{type}', [ 'uses' => 'PrivatOfficeController@payProduct' ] );
 	Route::post('privat_office/withdrawalFunds/{user_id}', [ 'uses' => 'PrivatOfficeController@withdrawalFunds' ] );
+	Route::post('privat_office/immunityCount/{user_id}', [ 'uses' => 'PrivatOfficeController@immunity_post_count' ] );
 
 	Route::post('program/choice_programm', [ 'uses' => 'ProgrammController@choice_program']);
 	Route::post('program/get_program', [ 'uses' => 'ProgrammController@get_program' ] );
