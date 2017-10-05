@@ -12,6 +12,16 @@ $( document ).ready(function() {
 			thisInput.val(number_format(thisSum, 0, '.', ' ') + ' руб.');
 		}
 	})
+
+	jQuery('#withdrawal_modal').on('keyup','#sumFront',function(){
+		var thisInput = jQuery(this),
+			thisSum = parseInt(thisInput.val()),
+			balanceСonstraintsVal = jQuery('#balanceСonstraints').val();
+
+			if (thisSum > balanceСonstraintsVal) {
+				thisInput.val(balanceСonstraintsVal);
+			}
+	})
 })
 
 function number_format( number, decimals, dec_point, thousands_sep ) {	// Format a number with grouped thousands

@@ -73,45 +73,11 @@
 			</table>
 		</div>
 		<div class="blns_btns">
-			<button class="replenish_btn" type="button" data-toggle="modal" data-target="#balance_motions">ПОПОЛНИТЬ</button>
-			<button class="black_btn" type="button" data-toggle="modal" data-target="#balance_motions">ВЫВЕСТИ</button>
+			<button class="replenish_btn" type="button" data-toggle="modal" data-target="#refer-pay">ПОПОЛНИТЬ</button>
+			<button class="black_btn" type="button" data-toggle="modal" data-target="#withdrawal_modal">ВЫВЕСТИ</button>
 		</div>
 	</div>
-	</div>
-<div class="modal fade" id="balance_motions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog bal_modal_width" role="document">
-    <div class="modal-content bal_modal_height">
-      <div class="modal-body">
-        <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<div class="input_money">
-			<form action="">
-				<p class="add_money">ПОПОЛНИТЬ СЧЕТ</p>
-				<input type="text" value="Сумма" class="money_inputs">
-	            <select class="selectpicker" name="program_id" id="program_id" >
-	                <option value=""></option>  
-	            </select>
-                <img src="/ico/drop-ico.png" style="z-index: 9999; margin: -4.5em 0 0 13.2em;
-"></img>
-                <input type="submit" value="ПОПОЛНИТЬ" class="send">
-            </form>
-		</div>
-		<div class="output_money">
-			<form action="">
-				<p class="add_money">ВЫВЕСТИ СРЕДСТВА</p>
-				<input type="text" value="Сумма" class="money_inputs">
-	            <select class="selectpicker" name="program_id" id="program_id" >
-	                <option value=""></option>  
-	            </select>
-                <img src="/ico/drop-ico.png" style="z-index: 9999; margin: -4.5em 0 0 13.2em;
-"></img>
-                <input type="submit" value="ВЫВЕСТИ" class="send">
-            </form>
-		</div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
+	@include('privat_office._partials._refer_money_modal',['user' => $user, 'sum' => 0])
+	@include('privat_office._partials._withdrawal_modal',['user' => $user])
 @overwrite
 

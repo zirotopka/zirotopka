@@ -63,7 +63,7 @@ class PrivatOfficeController extends Controller
             $immunity_cost = intval(env('IMMUNITY_COST'));
 
             if ($balance->sum >= $immunity_cost) {
-                return view('privat_office._partials._freezing_modal', ['user' => $user]);
+                return view('privat_office._partials._freezing', ['user' => $user]);
             } else {
                 $pay_description = 'Для приобритения иммунитета вам не хватает средств на балансе. Пополните, пожалуйста, баланс.';
                 $sum = $immunity_cost - $balance->sum;
@@ -382,5 +382,14 @@ class PrivatOfficeController extends Controller
         } else {
             return redirect()->back()->withErrors(['error' => 'Не счету недостаточно средств']);
         }
+    }
+
+    /**
+     * Вывод средств
+     * 
+     * @return \Illuminate\Http\Response
+     */
+    public function withdrawalFunds($user_id, Request $request)
+    {
     }
 }

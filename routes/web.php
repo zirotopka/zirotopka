@@ -50,6 +50,7 @@ Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], funct
 
 	Route::post('privat_office/get_exercive_video', [ 'uses' => 'PrivatOfficeController@get_exercive_video' ] );
 	Route::post('privat_office/payProduct/{type}', [ 'uses' => 'PrivatOfficeController@payProduct' ] );
+	Route::post('privat_office/withdrawalFunds/{user_id}', [ 'uses' => 'PrivatOfficeController@withdrawalFunds' ] );
 
 	Route::post('program/choice_programm', [ 'uses' => 'ProgrammController@choice_program']);
 	Route::post('program/get_program', [ 'uses' => 'ProgrammController@get_program' ] );

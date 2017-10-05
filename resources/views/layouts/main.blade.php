@@ -126,7 +126,7 @@
                                     @endif
                                 <!-- </div> -->
                             </div>
-                            <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" > <a href="{{$user->slug}}/balance" class="wals">
+                            <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" > <a href="{{'/'.$user->slug}}/balance" class="wals">
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;</p> 
                                 </a>                            
                             </div>
