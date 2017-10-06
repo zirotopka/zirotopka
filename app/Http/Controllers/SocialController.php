@@ -14,7 +14,7 @@ class SocialController extends Controller
         return Socialite::driver($provider)->with(['test' => 'test'])->redirect();
     }
 
-    public function callback(SocialAccountService $service, $provider, Request $request)
+    public function callback(SocialAccountService $service, $provider)
     {
         dd($request->all());
         $driver = Socialite::driver($provider);
