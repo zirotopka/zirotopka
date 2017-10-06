@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
+use Illuminate\Http\Request;
 use App\Services\SocialAccountService;
 use Socialite;
 
 class SocialController extends Controller
 {
 
-    public function login($provider)
-    {
-        return Socialite::with($provider)->redirect();
+    public function login($provider, Request $request)
+    {   
+        return Socialite::driver($provider)->with(['test' => 'test'])->redirect();
     }
 
-    public function callback(SocialAccountService $service, $provider)
+    public function callback(SocialAccountService $service, $provider, Request $request)
     {
-        dd($provider);
+        dd($service);
         $driver = Socialite::driver($provider);
         $user = $service->createOrGetUser($driver, $provider);
 
