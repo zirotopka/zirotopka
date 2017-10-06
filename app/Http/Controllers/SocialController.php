@@ -16,8 +16,8 @@ class SocialController extends Controller
 
     public function callback(SocialAccountService $service, $provider)
     {
-        dd(request()->all());
         $driver = Socialite::driver($provider);
+        dd($driver);
         $user = $service->createOrGetUser($driver, $provider);
 
         dd($user);
