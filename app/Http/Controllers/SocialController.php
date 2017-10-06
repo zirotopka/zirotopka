@@ -11,12 +11,12 @@ class SocialController extends Controller
 
     public function login($provider, Request $request)
     {   
-        return Socialite::driver($provider)->with(['test' => 'test'])->redirect();
+        return Socialite::driver($provider)->with(['test123' => 'test'])->redirect();
     }
 
-    public function callback(SocialAccountService $service, $provider)
+    public function callback(SocialAccountService $service, $provider, Request $request)
     {
-        dd($request->all());
+        dd($request->get('test123'));
         $driver = Socialite::driver($provider);
         $user = $service->createOrGetUser($driver, $provider);
 
