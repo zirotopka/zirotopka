@@ -21,7 +21,7 @@
    height="326.19998"><metadata
      id="metadata361"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs359" /><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -39,9 +39,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.472"
-     inkscape:cx="725.80493"
-     inkscape:cy="-58.105957"
+     inkscape:zoom="0.6675088"
+     inkscape:cx="1209.6572"
+     inkscape:cy="70.882507"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
@@ -720,7 +720,7 @@
      style="fill:#a9b2ba"
      transform="translate(-253.19476,-655.4)" /><g
      id="g3692"
-     transform="translate(-253.19476,-655.4)"
+     transform="matrix(0.94295753,0,0,0.93367883,-233.15951,-611.91971)"
      style="fill:#ff8a18;fill-opacity:1"><text
        y="677.56433"
        x="349.73996"
@@ -749,7 +749,7 @@
      height="3"
      id="rect323"
      style="fill:#d28746" /><g
-     transform="translate(-261.65877,-540.31916)"
+     transform="matrix(0.96434846,0,0,0.95176642,-249.13674,-508.69713)"
      id="g3692-3"
      style="fill:#ff8a18;fill-opacity:1"><text
        y="677.56433"
@@ -795,7 +795,7 @@
        height="1.6"
        id="rect313-7"
        style="fill:#ff8a18;fill-opacity:1" /></g><g
-     transform="translate(456.68381,-604.36326)"
+     transform="matrix(1.0100838,0,0,0.94884057,453.14205,-570.82303)"
      id="g3692-0"
      style="fill:#aab3bb;fill-opacity:1"><text
        y="677.56433"
@@ -841,7 +841,7 @@
        height="1.6"
        id="rect313-6-9"
        style="fill:#aab3bb;fill-opacity:1" /></g><g
-     transform="translate(929.33674,-604.73779)"
+     transform="matrix(0.9144363,0,0,0.93970802,959.38961,-565.21025)"
      id="g3692-0-2"
      style="fill:#aab3bb;fill-opacity:1"><text
        y="677.56433"
