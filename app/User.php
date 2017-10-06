@@ -124,10 +124,12 @@ class User extends CartalystUser
     }
 
     public static function createBySocialProvider($providerUser)
-    {
+    {   
+        $password = self::generatePath();
+
         $credentials = [
             'email'    => $providerUser->getEmail(),
-            'password' => 'default',
+            'password' => $password,
         ];
 
         $user = Sentinel::register($credentials);
@@ -147,7 +149,7 @@ class User extends CartalystUser
 
                 $credentials = [
                     'email'    => $providerUser->getEmail(),
-                    'password' => 'default',
+                    'password' => $password,
                 ];
 
                 $user = User::addAdditionalData($user);
@@ -191,6 +193,25 @@ class User extends CartalystUser
         $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
 
         $user->save();
+    }
+
+    public static function generatePath(User $user) {
+        return md5(uniqid(rand(), true));
+    }
+
+    public static function sendPassword($email, $password) {
+        $msg = 'Ваш пароль: '.$password;
+
+        Mail::send('mail._template', $msg, function($message) use ($email)
+            {   
+                $message->from('order-notification@telesales-cc.ru', 'Reformator One');
+                $message->to($email);
+                
+                $message->subject('Регистрация Reformator One!');
+            });
+        }
+
+        return 1;
     }
 
     /**
