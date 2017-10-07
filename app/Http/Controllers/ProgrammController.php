@@ -7,6 +7,7 @@ use App\Programm;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Support\Facades\Redirect;
 use Carbon\Carbon;
+use App\Helpers\IP;
 
 class ProgrammController extends Controller
 {	
@@ -154,6 +155,15 @@ class ProgrammController extends Controller
                 dd('Выбранная вами дата уже прошла');
                 return back(); //Выбрана старая дата
             }
+
+            $clientIp = $request->ip();
+            $user->ip = $clientIp;
+
+            //Сделать сохранение timezone
+            $timezone = IP::get_client_timezone($clientIp);
+            $user->timezone = $timezone;
+            $user->last_updated_at = Carbon::now($timezone);
+            $user->user_ip = $_SERVER["REMOTE_ADDR"];
 
     		$user->save();
 

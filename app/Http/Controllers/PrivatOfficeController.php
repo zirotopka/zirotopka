@@ -52,7 +52,7 @@ class PrivatOfficeController extends Controller
                 } else {
                     $pay_description = 'Для приобритения програмы вам не хватает средств на балансе. Пополните, пожалуйста, баланс.';
                     $sum = $program_cost - $balance->sum;
-
+                   
                     return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description]);
                 }
             }

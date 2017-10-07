@@ -93,20 +93,11 @@ class UserController extends Controller
             $user->age = $request->get("age");
             $user->phone = $request->get("phone");
 
-            $clientIp = $request->ip();
-            $user->ip = $clientIp;
-
-            //Сделать сохранение timezone
-            $timezone = IP::get_client_timezone($clientIp);
-            $user->timezone = $timezone;
-            $user->last_updated_at = Carbon::now($timezone);
-
             $slug = User::getSlug($user->first_name, $user->last_name, $user->surname);
 
             $user->slug = $slug;
             $user->save();
 
-            $user->user_ip = $_SERVER["REMOTE_ADDR"];
             $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
 
             $activation = Activation::create($user);
