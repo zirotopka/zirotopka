@@ -171,13 +171,6 @@ class User extends CartalystUser
                     'sum' => 0,
                 ]);
 
-                $credentials = [
-                    'email'    => $providerUser->getEmail(),
-                    'password' => $password,
-                ];
-
-                Sentinel::authenticateAndRemember($credentials);
-
                 return $user;
             } else {
                 \Log::error('createBySocialProvider: Пустое имя');

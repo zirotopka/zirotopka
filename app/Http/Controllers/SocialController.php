@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\SocialAccountService;
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+
 use Socialite;
 
 class SocialController extends Controller
@@ -18,10 +20,10 @@ class SocialController extends Controller
     {
         $driver = Socialite::driver($provider);
         $user = $service->createOrGetUser($driver, $provider);
-        dd($user);
-        \Auth::login($user, true);
-        return redirect()->intended('/');
 
+        Sentinel::login($user);
+
+        return redirect($user->slug);
     }
 
 } 

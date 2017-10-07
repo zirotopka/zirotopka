@@ -29,14 +29,10 @@ class SocialAccountService
                 $user = User::createBySocialProvider($providerUser);
             }
 
-            dd($user);
-
             $account->user()->associate($user);
             $account->save();
 
             return $user;
-
         }
-
     }
 }
