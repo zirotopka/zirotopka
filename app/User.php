@@ -152,9 +152,6 @@ class User extends CartalystUser
                     $user->surname = $nameArray[1];
                 }
 
-                $user = $user->save();
-
-                $user->user_ip = $_SERVER["REMOTE_ADDR"];
                 $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
 
                 $activation = Activation::create($user);
