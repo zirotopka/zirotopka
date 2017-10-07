@@ -142,8 +142,6 @@ class User extends CartalystUser
            
             self::sendPassword($user, $password);
 
-            dd($password);
-
             $nameArray = explode(' ',$providerUser->getName());
             $nik = $providerUser->getNickname();
 
@@ -156,14 +154,8 @@ class User extends CartalystUser
 
                 $user = $user->save();
 
-                $credentials = [
-                    'email'    => $providerUser->getEmail(),
-                    'password' => $password,
-                ];
-
-                $user = User::addAdditionalData($user);
-
-                Sentinel::authenticateAndRemember($credentials);
+                $user->user_ip = $_SERVER["REMOTE_ADDR"];
+                $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
 
                 $activation = Activation::create($user);
                 $activation->completed = 1;
@@ -185,6 +177,13 @@ class User extends CartalystUser
                     'sum' => 0,
                 ]);
 
+                $credentials = [
+                    'email'    => $providerUser->getEmail(),
+                    'password' => $password,
+                ];
+
+                Sentinel::authenticateAndRemember($credentials);
+
                 return $user;
             } else {
                 \Log::error('createBySocialProvider: Пустое имя');
@@ -201,14 +200,6 @@ class User extends CartalystUser
                 ->send(new PasswordShipped($msg));
 
         return 1;
-    }
-
-    public static function addAdditionalData(User $user)
-    {
-        $user->user_ip = $_SERVER["REMOTE_ADDR"];
-        $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
-
-        $user->save();
     }
 
     public static function generatePath() {

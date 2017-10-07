@@ -106,7 +106,8 @@ class UserController extends Controller
             $user->slug = $slug;
             $user->save();
 
-            User::addAdditionalData($user);
+            $user->user_ip = $_SERVER["REMOTE_ADDR"];
+            $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
 
             $activation = Activation::create($user);
             $activation->completed = 1;
