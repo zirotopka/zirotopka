@@ -198,7 +198,6 @@ class User extends CartalystUser
 
     public static function sendPassword($user, $msg) {
         Mail::to($user->email)
-                ->subject('Регистрация Reformator One!')
                 ->send(new PasswordShipped($msg));
 
         return 1;

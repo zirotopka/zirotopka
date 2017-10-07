@@ -31,6 +31,7 @@ class PasswordShipped extends Mailable
     public function build()
     {
         return $this->from('reformstor@admin.one', 'Reformator One')
+                    ->subject('Регистрация Reformator One!')
                     ->view('mail._template');
     }
 }
