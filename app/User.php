@@ -158,13 +158,10 @@ class User extends CartalystUser
                 $activation->completed = 1;
                 $activation->save();
 
-                $user->password = null;
-
                 $slug = User::getSlug($user->first_name, $user->last_name, $user->surname, null, $nik);
 
                 $user->slug = $slug;
                 $user = $user->save();
-
 
                 $role = Sentinel::findRoleBySlug("client");
                 $role->users()->attach($user);
