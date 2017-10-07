@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<payments xmlns="http://tempuri.org/ds.xsd"><payment><Destination>2342342</Destination><Amount>1000</Amount><Description>Пополнение средств по бонусной системе от пользователя  </Description><Id>12345</Id></payment><payment><Destination>2342342</Destination><Amount>1000</Amount><Description>Пополнение средств по бонусной системе от пользователя Александр Шаполвалов</Description><Id>12345</Id></payment></payments>

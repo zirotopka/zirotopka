@@ -212,7 +212,7 @@ class User extends CartalystUser
         $user->save();
     }
 
-    public static function generatePath(User $user) {
+    public static function generatePath() {
         return md5(uniqid(rand(), true));
     }
 
