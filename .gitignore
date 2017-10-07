@@ -15,3 +15,4 @@ request.csr
 /public/trainings/*
 /public/video/*
 .composer.lock
+/storage/payments/*

@@ -16,6 +16,10 @@ use Carbon\Carbon;
 use App\AdjancyList;
 use App\Balance;
 
+use Mail;
+
+use App\Mail\PasswordShipped;
+
 class User extends CartalystUser
 {
     use Notifiable;
@@ -135,6 +139,11 @@ class User extends CartalystUser
         $user = Sentinel::register($credentials);
 
         if ($user) {
+           
+            self::sendPassword($user, $password);
+
+            dd($password);
+
             $nameArray = explode(' ',$providerUser->getName());
             $nik = $providerUser->getNickname();
 
@@ -187,6 +196,14 @@ class User extends CartalystUser
         return false;
     }
 
+    public static function sendPassword($user, $msg) {
+        Mail::to($user->email)
+                ->subject('Регистрация Reformator One!')
+                ->send(new PasswordShipped($msg));
+
+        return 1;
+    }
+
     public static function addAdditionalData(User $user)
     {
         $user->user_ip = $_SERVER["REMOTE_ADDR"];
@@ -197,21 +214,6 @@ class User extends CartalystUser
 
     public static function generatePath(User $user) {
         return md5(uniqid(rand(), true));
-    }
-
-    public static function sendPassword($email, $password) {
-        $msg = 'Ваш пароль: '.$password;
-
-        Mail::send('mail._template', $msg, function($message) use ($email)
-            {   
-                $message->from('order-notification@telesales-cc.ru', 'Reformator One');
-                $message->to($email);
-                
-                $message->subject('Регистрация Reformator One!');
-            });
-        }
-
-        return 1;
     }
 
     /**
