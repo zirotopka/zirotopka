@@ -158,8 +158,10 @@
                 </div><!-- /st-content -->
             </div><!-- /st-pusher -->
         </div><!-- /st-container -->
-        
-        @include('privat_office._partials._immunity_modal',['user' => $user])
+
+        @if ($user = Sentinel::check())
+            @include('privat_office._partials._immunity_modal',['user' => $user])
+        @endif
 <!--
 <div class="tooltip_templates" style="display: none;">
     <span id="immun_tooltip_content">
