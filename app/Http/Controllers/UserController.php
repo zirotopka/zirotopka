@@ -52,7 +52,6 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
             'first_name' => 'required',
             'surname' => 'required',
-            'sex' => 'required',
         ];
         $messages = [
             'email.required' => 'Не указана почта',
@@ -62,9 +61,6 @@ class UserController extends Controller
             'name.required' => 'Укажите Фамилию Имя Отчество',
             'first_name.required' => 'Имя не указано',
             'surname.required' => 'Фамилия не указано',
-            'sex.required' => 'Пол не указан',
-
-            'phone.required' => 'Телефон не указан',
 
             'offer.required' => 'Согласитесь с оффертой',
             'adult.required' => 'Подтвердите что вам больше 14 лет',
@@ -87,7 +83,6 @@ class UserController extends Controller
 
         if ( $user ) {
             $user->surname = $request->get("surname");
-            $user->sex = $request->get("sex");
             $user->weight = $request->get("weight");
             $user->growth = $request->get("growth");
             $user->age = $request->get("age");
@@ -113,8 +108,9 @@ class UserController extends Controller
             ]);
 
             //referer_code
-            if ($request->has('referer_code')) {
-                $referral = User::select('id')->where('slug','=',$request->get('referer_code'))->first();
+            if (session()->has('ref')) {
+                $reverralSlug = $request->session()->pull('ref');
+                $referral = User::select('id','first_name','surname','slug')->where('slug','=',$reverralSlug)->first();
 
                 if (!empty($referral) && ($user->id != $referral->id)) {
                     $adjancy = new AdjancyList;
