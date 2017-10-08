@@ -133,12 +133,12 @@
                     <h2>О ПЛАТЕЖНОМ <br class="visible-xs">СЕРВИСЕ ЯНДЕКС</h2>
                     <div class="pay_right visible-xs col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="mfc">
-                            <img src="/ico/smartphone.png" class="smartphone">
+                            <img src="/ico/smartphone.jpg" class="smartphone">
                         </div>
                     </div>
                     <div class="pay_right hidden-xs col-sm-6 col-md-6 col-lg-6">
                         <div class="mfc">
-                            <img src="/ico/smartphone.png" class="smartphone">
+                            <img src="/ico/smartphone.jpg" class="smartphone">
                         </div>
                     </div>
                     <div class="pay_left col-xs-12 col-sm-6 col-md-6 col-lg-6">
