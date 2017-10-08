@@ -19,7 +19,7 @@
           <input type="submit" value="КУПИТЬ ИММУНИТЕТ" class="forms-btns">
         </form>     
 
-        <p class="light_text slim_txt" >Если не согласен,<a href="#"> жми сюда.</a></p>
+        <p class="light_text slim_txt" >Если не согласен,<a href="#" id="here"> жми сюда.</a></p>
       </div>
     </div>
   </div>
