@@ -297,6 +297,7 @@ class PrivatOfficeController extends Controller
                 'sum',
                 'comment',
                 'created_at',
+                'accruals_freezing',
                 'type_id',
             ])->where('user_id','=',$user->id)
             ->orderBy('created_at','desc')

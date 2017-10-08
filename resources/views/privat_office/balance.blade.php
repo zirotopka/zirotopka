@@ -37,6 +37,7 @@
 						<th class="hidden-xs tb_tm">ВРЕМЯ</th>
 						<th class="tp_trz">ТИП ТРАНЗАКЦИИ</th>
 						<th class="tb_znc">НАЗНАЧЕНИЕ</th>
+						<th class="tb_sm">СТАТУС</th>
 						<th class="tb_sm">СУММА</th>
 					</tr>
 				</thead>
@@ -57,10 +58,12 @@
 							<td class="hidden-xs tb_tm">{{$created_at->format('H:i:s')}}</td>
 							<td class="tp_trz">{{!empty($accrual->type) ? $accrual->type->name : ''}}</td>
 							<td class="tb_znc">{{$accrual->comment}}</td>
+							<td class="hidden-xs tb_tm">{{!empty($accrual->accruals_freezing) ? 'В обработке' : 'Обработан'}}</td>
 							<td class="tb_sm">{{number_format($accrual->sum,0,',',' ')}}</td>
 						</tr>
 					@empty
 						<tr>
+							<td class="hidden-xs"></td>
 							<td class="hidden-xs"></td>
 							<td class="hidden-xs"></td>
 							<td class="hidden-xs"></td>
