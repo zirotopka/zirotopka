@@ -32,8 +32,22 @@
             <form action="/program/choice_programm" method="POST"> 
               {{ csrf_field() }}
 
-    <!-- Left part -->
+              <!-- Left part -->
               <div class="left-progrm-part col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                <p class="prog-bold-txt">ВЫБЕРИТЕ ПОЛ</p>
+                <div class="right-sex">
+                  <div class="sex">
+                    <input type="radio" name="sex" value="1" id="ml" required="required" checked="checked" />
+                    <label for="ml"><span></span></label>
+                    <p>М</p>
+                  </div>
+                  <div class="sex">
+                    <input type="radio" name="sex" value="2" id="fm" required="required" />
+                    <label for="fm"><span></span></label>
+                    <p>Ж</p>
+                  </div>
+                </div>
+
                  <p class="prog-bold-txt">ВЫБЕРИТЕ ПРОГРАММУ</p>
                  <div class="cntrt">
                     <img src="/ico/drop-ico.png" alt="" class="ddicc">

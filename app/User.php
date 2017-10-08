@@ -171,6 +171,19 @@ class User extends CartalystUser
                     'sum' => 0,
                 ]);
 
+                //referer_code
+                if (session()->has('ref')) {
+                    $reverralSlug = $request->session()->pull('ref');
+                    $referral = User::select('id','first_name','surname','slug')->where('slug','=',$reverralSlug)->first();
+
+                    if (!empty($referral) && ($user->id != $referral->id)) {
+                        $adjancy = new AdjancyList;
+                        $adjancy->user_id = $user->id;
+                        $adjancy->pid = $referral->id;
+                        $adjancy->save();
+                    }
+                }
+
                 return $user;
             } else {
                 \Log::error('createBySocialProvider: Пустое имя');

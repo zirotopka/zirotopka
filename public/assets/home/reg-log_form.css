@@ -120,10 +120,7 @@ hr{
 		width: 23%;
 	}
 	.login_form .modal-content{
-	background-position: 95% 8em;
-	}
-	.right-sex{
-		padding: 0 0 0 0.3em!important;
+		background-position: 95% 8em;
 	}
 }
 
@@ -162,39 +159,6 @@ hr{
 
 .reg_modal .modal-content .modal-body .user_data #password,#first_name ,#surname ,#phone{
 	margin: 0.5em 0 0 0;
-}
-
-.sex_chs{
-	height: 1em;
-
-}
-
-.sex, .sex p, .sex input{
-	display: inline-block;
-	font-family: MuseoSansCyrl_100;
-}
-
-.left-sex{
-	text-align: right;
-	padding: 0.2em 0 0 0;
-	color: #81868F;
-	font-family: MuseoSansCyrl_100;
-	margin: 0;
-}
-
-.right-sex{
-	text-align: left;
-	margin: 0;
-}
-
-.sex p{
-	vertical-align: middle;
-	color: #81868F;
-	margin: 0.2em 0 0 1.2em;
-}
-
-.sex{
-	width: 4em;
 }
 
 .registr_btn{
@@ -339,19 +303,6 @@ div {
 	.reg_input{
 		height: 2.5vw;
 		font-size: 1vw;
-	}
-
-	.left-sex{
-		font-size: 1vw;
-	}
-
-	.sex{
-		font-size: 1vw;
-	}
-
-	.sex_chs {
-    	height: 1vw;
-    	margin: 0 0 0.8vw 0;
 	}
 
 	.reg_enter_across{
