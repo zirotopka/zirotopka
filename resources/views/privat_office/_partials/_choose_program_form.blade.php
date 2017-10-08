@@ -37,14 +37,14 @@
                 <p class="prog-bold-txt">ВЫБЕРИТЕ ПОЛ</p>
                 <div class="right-sex">
                   <div class="sex">
-                    <input type="radio" name="sex" value="2" id="fm" required="required"/>
-                    <label for="fm"><span></span></label>
-                    <p>Ж</p>
-                  </div>
-                  <div class="sex">
-                    <input type="radio" name="sex" value="1" id="ml" required="required"/>
+                    <input type="radio" name="sex" value="1" id="ml" required="required" checked="checked" />
                     <label for="ml"><span></span></label>
                     <p>М</p>
+                  </div>
+                  <div class="sex">
+                    <input type="radio" name="sex" value="2" id="fm" required="required" />
+                    <label for="fm"><span></span></label>
+                    <p>Ж</p>
                   </div>
                 </div>
 
