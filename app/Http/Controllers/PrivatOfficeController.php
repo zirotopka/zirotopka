@@ -52,7 +52,7 @@ class PrivatOfficeController extends Controller
                 } else {
                     $pay_description = 'Для приобритения програмы вам не хватает средств на балансе. Пополните, пожалуйста, баланс.';
                     $sum = $program_cost - $balance->sum;
-                   
+
                     return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description]);
                 }
             }
@@ -62,14 +62,7 @@ class PrivatOfficeController extends Controller
         if ($user->status == 0) {
             $immunity_cost = intval(env('IMMUNITY_COST'));
 
-            if ($balance->sum >= $immunity_cost) {
-                return view('privat_office._partials._freezing', ['user' => $user]);
-            } else {
-                $pay_description = 'Для приобритения иммунитета вам не хватает средств на балансе. Пополните, пожалуйста, баланс.';
-                $sum = $immunity_cost - $balance->sum;
-
-                return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description]);
-            } 
+            return view('privat_office._partials._freezing', ['user' => $user]);
         }
 
         $current_program_day = 0;
@@ -435,12 +428,90 @@ class PrivatOfficeController extends Controller
      */
     public function immunity_count($slug) {
         $user = Sentinel::getUser();
+        $balance = $user->balance;
 
-        return view('privat_office._partials._immunity', ['user' => $user]);
+        if (empty($balance)) {
+            return view('errors.error_balance');
+        }
+
+        $immunity_cost = intval(env('IMMUNITY_COST'));
+
+        if ($balance->sum >= $immunity_cost) {
+            return view('privat_office._partials._immunity', ['user' => $user]);
+        } else {
+            $pay_description = 'Для приобритения иммунитета вам не хватает средств на балансе. Пополните, пожалуйста, баланс.';
+            $sum = $immunity_cost - $balance->sum;
+
+            return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description]);
+        }
     }
 
     //Покупка иммунитета
     public function immunity_post_count($user_id, Request $request) {
+        $user = Sentinel::getUser();
 
+        if (empty($user) || ($user->id != $user_id)) {
+             return redirect()->back()->withErrors(['error' => 'Пользователь не найден']);
+        }
+
+        $balance = $user->balance;
+
+        if (empty($balance)) {
+            return view('errors.error_balance');
+        }
+
+        $immunity_count = $request->get('immunity_count');
+
+        if ($immunity_count <= 0) {
+            return redirect()->back()->withErrors(['error' => 'Выберите количество иммунитетов']);
+        }
+
+        $immunity_cost = intval(env('IMMUNITY_COST'));
+        $full_cost = $immunity_cost * $immunity_count;
+
+        if ($balance->sum >= $full_cost) {
+            $user->immunity_count = $user->immunity_count + $immunity_count;
+            $user->save();
+
+            $balance->sum = $balance->sum - $full_cost;
+            $balance->save();
+
+            $accruals = new Accrual;
+            $accruals->sum = $full_cost;
+            $accruals->user_id = $user->id;
+            $accruals->type_id = 2;
+            $accruals->balance_id = $balance->id;
+            $accruals->comment = 'Покупка иммунитетов в размере '.$immunity_count.' шт.';
+
+            $accruals->save();
+
+            return redirect('/'.$user->slug.'/balance');
+        } else {
+            $pay_description = 'Для приобритения иммунитетов вам не хватает средств на балансе. Пополните, пожалуйста, баланс.';
+            $sum = $full_cost - $balance->sum;
+
+            return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description]);
+        }
+    }
+
+    //Испольщование иммунитета
+    public function useImmunity ($user_id, Request $request) {
+        $user = Sentinel::getUser();
+
+        if (empty($user) || ($user->id != $user_id)) {
+             return redirect()->back()->withErrors(['error' => 'Пользователь не найден']);
+        }
+
+        if (empty($user->immunity_count)) {
+            return redirect()->back()->withErrors(['error' => 'У вас нет иммунитетов']);
+        }
+
+        $user->immunity_count = $user->immunity_count - 1;
+        $user->status = 1;
+        $user->save();
+
+        \Log::info('Пользователь №'.$user->id.' использовал иммунитет.');
+
+        return redirect('/'.$user->slug);
     }
 }
