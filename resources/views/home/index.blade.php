@@ -72,31 +72,31 @@
                     <img src="/ico/REFORMATOR.svg" alt="">
                 </div>
                 <div class="info_cont col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 n1">
+                        <ul class="col-lg-12 col-md-12 col-sm-6 col-xs-6">
+                            <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12 n1">
                                 <img src="/ico/agenda.svg" alt="">
                                 <p>Планы тренировок для<br>любого уровня подготовки</p>
                             </li>
-                            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 n2">
+                            <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12 n2">
                                 <img src="/ico/instr.svg" alt="">
                                 <p>Наглядные видео-инструкции<br>для всех заданий</p>
                             </li>
-                            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 n3">
+                            <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12 n3">
                                 <img src="/ico/people.svg" alt="">
                                 <p>Обратная связь от <br>тренерского состава</p>
                             </li>
      
                         </ul>
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 n4">
+                        <ul class="col-lg-12 col-md-12 col-sm-6 col-xs-6">
+                            <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12 n4">
                                 <img src="/ico/feed.svg" alt="">
                                 <p>Рекомендации по питанию,<br>адаптированные к планам<br>тренировок</p>
                             </li>
-                       <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 n5">
+                       <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12 n5">
                                 <img src="/ico/rn.svg" alt="">
                                 <p>Задания не требуют<br>специального оборудования<br>или похода в фитнес-клуб</p>
                             </li>
-                            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 n6">
+                            <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12 n6">
                                 <img src="/ico/lamp.svg" alt="">
                                 <p>Возможность зарабатывать<br>деньги и заниматься спортом<br>в удовольстваие!</p>
                             </li>
