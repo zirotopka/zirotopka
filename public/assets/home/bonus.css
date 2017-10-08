@@ -586,13 +586,13 @@ h2{
 .mfc{
     background: url(/ico/mfc.png);
     height: 100%;
-    background-size: 95%;
+    background-size: 110%;
     background-repeat: no-repeat;
     background-position: 32% 13%;
 }
 
 .smartphone{
-    width: 19em;
+    width: 9em;
     float: right;
     margin: 26% 2% 0 0em;
 }
@@ -1009,16 +1009,16 @@ footer .prgrm_list .bonus{
 }
 
 	.mfc {
-	    height: 75vw;
-	    background-size: 75%;
+		height: 75vw;
+	    background-size: 100%;
 	    width: 100%;
 	    background-position: 32% 13%;
 	}
 
 	.smartphone {
-	    width: 45vw;
+	    width: 18vw;
 	    float: right;
-	    margin: 24% 0% 0 0em;
+	    margin: 26% 14% 0 0em;
 	}
 
 	.pay_right {
@@ -1323,8 +1323,14 @@ footer{
 	    padding: 14% 0 0 0;
 	    background-position: 0 43%;
 	}
+
+	.mfc{
+		background-size: 100%;
+	}
+
 	.smartphone {
-	    width: 19vw;
+	    width: 9vw;
+	    margin: 29% 14% 0 0;
 	}
 
 .bons-question-screen {
@@ -1492,6 +1498,7 @@ footer {
 	}
 
 	.carrows {
+		margin: 0 0 0 1%;
 	    width: 92%;
 	}
 
@@ -1534,8 +1541,8 @@ footer {
 	    background-position: 0 44%;
 	}
 	.smartphone {
-	    width: 19vw;
-	    margin: 21% 2% 0 0em;
+	    width: 8vw;
+	    margin: 29% 9% 0 0em;
 	}
 
 .bons-question-screen {
