@@ -1,10 +1,3 @@
-@section('js')
-    @parent
-
-    <script type="text/javascript" src="/assets/privat_account/modal/refer-pay.js?123"></script>
-    <script type="text/javascript" src="/assets/privat_account/modal/cloneSum.js?123"></script>
-@overwrite
-
 <div class="modal fade" id="refer-pay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog bal_modal_width" role="document">
     <div class="modal-content bal_modal_height">

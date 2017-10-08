@@ -8,7 +8,8 @@
         
         @if ($user->immunity_count > 0) 
           <p>Чтобы продолжить - просто воспользуйся иммунитетом</p><br>
-          <form action="">
+          <form action="{{env('APP_URL').'/privat_office/useImmunity/'.$user->id}}" method="POST">
+            {{ csrf_field() }}
             <input type="submit" value="РАЗБЛОКИРОВАТЬ АККАУНТ" class="send">
           </form>
           <p>или</p><br>

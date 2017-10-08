@@ -53,6 +53,7 @@ Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], funct
 	Route::post('privat_office/payProduct/{type}', [ 'uses' => 'PrivatOfficeController@payProduct' ] );
 	Route::post('privat_office/withdrawalFunds/{user_id}', [ 'uses' => 'PrivatOfficeController@withdrawalFunds' ] );
 	Route::post('privat_office/immunityCount/{user_id}', [ 'uses' => 'PrivatOfficeController@immunity_post_count' ] );
+	Route::post('privat_office/useImmunity/{user_id}', [ 'uses' => 'PrivatOfficeController@useImmunity' ] );
 
 	Route::post('program/choice_programm', [ 'uses' => 'ProgrammController@choice_program']);
 	Route::post('program/get_program', [ 'uses' => 'ProgrammController@get_program' ] );
