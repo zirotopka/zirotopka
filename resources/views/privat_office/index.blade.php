@@ -19,13 +19,12 @@
     <script type="text/javascript" src="/assets/js/video-btn.js?123"></script>
     <script type="text/javascript" src="/assets/js/video.js?{{ time() }}"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
+    <script type="text/javascript" src="/assets/privat_account/modal/start-program.js"></script>
     <!-- <script src="//vjs.zencdn.net/5.19/video.min.js"></script> -->
 @overwrite
 
 
 @section("content")
-	@include('privat_office._partials._start_programm_form')
-
 <!--Логотип-->
 	<div class="main-content container-fluid">
 		<div class="logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -238,6 +237,10 @@
 			    </div>
 			  </div>
 			</div>
+		@endif
+
+		@if(isset($first_pay_program))
+			@include('privat_office._partials._start_programm_form')
 		@endif
 	</div>
 	<!-- <div class="video-js-responsive-container vjs-hd" style="width:80%">

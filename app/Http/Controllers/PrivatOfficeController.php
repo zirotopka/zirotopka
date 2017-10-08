@@ -97,6 +97,13 @@ class PrivatOfficeController extends Controller
             'current_program_day' => $current_program_day,
     	];
 
+        if (session()->has('pay_program')) {
+            //Добавил вывод подтверждения
+            session()->pull('pay_program');
+            
+            $data = array_merge($data,['first_pay_program' => 1]);
+        }
+
     	return view('privat_office.index', $data);
     }
 
@@ -371,7 +378,12 @@ class PrivatOfficeController extends Controller
 
             $accruals->save();
 
-            return redirect('/'.$user->slug);
+            if ($type == 1) {
+            //Програма
+                return redirect('/'.$user->slug)->with('pay_program',1);
+            } elseif ($type == 2) {
+                return redirect('/'.$user->slug);
+            }
         } else {
             return redirect()->back()->withErrors(['error' => 'Не счету недостаточно средств']);
         }

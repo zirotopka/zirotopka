@@ -1,3 +1,5 @@
+<link href="/assets/privat_account/modal/acc_modal.css" type="text/css" rel="stylesheet">
+
 <div class="modal fade" id="starting_form" tabindex="-1" role="dialog" aria-labelledby="starting_form">
   <div class="modal-dialog starting_window" role="document">
     <div class="modal-content">
@@ -11,3 +13,6 @@
     </div>
   </div>
 </div>
+
+
+

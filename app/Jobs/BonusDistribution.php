@@ -35,7 +35,6 @@ class BonusDistribution implements ShouldQueue
      */
     public function handle()
     {   
-        \Log::info($this->user_id);
         $newUser = User::select('id','first_name','surname')->where('id','=',$this->user_id)->first();
 
         if (empty($newUser)) {
