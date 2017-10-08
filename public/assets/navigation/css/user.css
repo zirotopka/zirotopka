@@ -174,8 +174,12 @@ input:focus{
 }
 
 .bal_modal_height{
-	height: 24em;
+	height: 21em;
 	border-radius: 0;
+}
+
+.balance_modal_height{
+	height: 17em;
 }
 
 .add_money{
@@ -197,7 +201,7 @@ input:focus{
 	color: #999;
 	padding-left: 1.7em;
 	font-family: MuseoSansCyrl_100;
-	margin: 2.5em 0 1em 0;
+	margin: 1.5em 0 0 0;
 }
 
 .logohov:hover{

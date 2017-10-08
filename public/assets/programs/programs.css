@@ -549,12 +549,13 @@ h2{
 /*----------------------------------------Third screen--------------------------*/
 
 .info-screen{
-	height: 44vw;
+	height: auto;
 	margin: 0 0 4vw 0;
 }
 
 .swiper-container{
-	height: 90%;
+	height: auto;
+	padding: 0 0 6% 0;
 }
 
 .content-slide{

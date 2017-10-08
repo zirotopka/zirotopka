@@ -486,36 +486,42 @@ ul li{
 	    background: url('/ico/1.png');
 	    background-position: 15.1vw 1.75em;
 	    background-repeat: no-repeat;
+	    background-size: 4vw;
 	}
 
 	.n2{
 	    background: url('/ico/2 .png');
 	    background-position: 15.6vw 1.75em;
 	    background-repeat: no-repeat;
+	    background-size: 4vw;
 	}
 
 	.n3{
 	    background: url('/ico/3.png');
 	    background-position: 15.6vw 1.75em;
 	    background-repeat: no-repeat;
+	    background-size: 4vw;	
 	}
 
 	.n4{
 	    background: url('/ico/4.png');
 	    background-position: 14.3vw 2.3em;
 	    background-repeat: no-repeat;
+	    background-size: 4vw;	
 	}
 
 	.n5{
 	    background: url('/ico/5.png');
 	    background-position: 15.6vw 2.5em;
 	    background-repeat: no-repeat;1em
+	    background-size: 4vw;	
 	}
 
 	.n6{
 	    background: url('/ico/6.png');
 	    background-position: 15.5vw 2.4em;
 	    background-repeat: no-repeat;
+	    background-size: 4vw;	
 	}
 
 	.n1 p, .n2 p, .n3 p, .n4 p, .n5 p, .n6 p{
@@ -1623,8 +1629,12 @@ footer .prgrm_list .bonus{
 	    width: 51vw;
 	}
 
-	.n1 , .n2, .n3, .n4, .n5, .n6{
-	    margin-top: 12vw;
+	.n1 , .n2, .n3, .n4{
+	    margin-top: 10vw;
+	}
+
+	.n5, .n6{
+		margin-top: 7.3vw;
 	}
 
 	.pro_shader, .pow_shader, .run_shader, .runp_shader {
@@ -1990,7 +2000,8 @@ footer .prgrm_list .bonus{
 	}
 
 	.swiper-container{
-	    height: 65vh;
+	    height: auto;
+	    padding: 0 0 2em 0;
 	}
 
 	.ico_play {
@@ -2249,13 +2260,30 @@ footer{
 	}
 
 .info-screen {
-    height: 72vw;
+    height: auto;
+    margin-bottom: 6%; 
 }
 
 	.info_cont {
 	    padding: 6% 0 0 0;
 	}
 
+	.n1, .n2, .n3{
+		margin: 10% 0 0 0;
+	}
+	.n4{
+		margin: 10% 0 0 0;
+	}
+   .n5, .n6{
+		margin: 5% 0 0 0;
+	}
+
+	.n1, .n2, .n3, .n4, .n5, .n6{
+		background-position: 24vw 0.5em;
+	    background-size: 3em;
+	    background-repeat: no-repeat;
+	}
+	
 .programm-screen {
     height: 73.5vw;
     padding: 6% 0 0 0;
@@ -2485,6 +2513,10 @@ footer{
 	    font-size: 2vw;
 	}
 
+	.prg{
+	    margin: 9.5vw 0 4vw 0;
+	}
+
 	.ref .zag, .ruls .zag {
 	    font-size: 2vw;
 	}
@@ -2657,7 +2689,6 @@ footer{
 
 	.comments-screen {
 	    padding: 7.4% 0 0 0;
-		height: 56vw;
 	    margin: 3% 0 6.5vw 0;
 
 	}
