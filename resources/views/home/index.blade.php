@@ -223,7 +223,7 @@
                     </div>
             
                 <p class="watch_more">Смотреть больше отзывов</p>
-                <a class="arrow2" type="button"></a>
+                <a class="arrow2"></a>
             </div>
             <hr class="disp_line">
             <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_7">
@@ -277,7 +277,7 @@
                                     </div>
                                 </li>
                                 <li class="else">
-                                    <p href="#" class="else" id="faq_refs">Посмотреть ещё</p>
+                                    <p class="else" id="faq_refs">Посмотреть ещё</p>
                                 </li>
                             </ul>
                         </div>
@@ -333,7 +333,7 @@
                                     </div>
                                 </li>
                                 <li class="else">
-                                    <p href="#" class="else" id="about_program">Посмотреть ещё</p>
+                                    <p class="else" id="about_program">Посмотреть ещё</p>
                                 </li>
                             </ul>
                         </div>
@@ -396,7 +396,7 @@
                                     </div>
                                 </li>
                                 <li class="else">
-                                    <p href="#" class="else" id="faq_ruls">Посмотреть ещё</p>
+                                    <p class="else" id="faq_ruls">Посмотреть ещё</p>
                                 </li>
                             </ul>
                         </div>
@@ -433,7 +433,7 @@
                                     </div>
                                 </li>
                                 <li class="else">
-                                    <p href="#" class="else" id="faq_razn">Посмотреть ещё</p>
+                                    <p class="else" id="faq_razn">Посмотреть ещё</p>
                                 </li>
                             </ul>
                         </div>
