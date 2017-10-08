@@ -54,6 +54,10 @@ class BonusDistribution implements ShouldQueue
                 return 1;
             }
 
+            //Зачисление рейтинга
+            $parentFirstLine->second_rating = $parentFirstLine->second_rating + 5;
+            $parentFirstLine->save();
+
             $sum = 1000;
 
             $child_name = $newUser->first_name.' '.$newUser->surname;
@@ -71,6 +75,10 @@ class BonusDistribution implements ShouldQueue
                     return 1;
                 }
 
+                //Зачисление рейтинга
+                $parentsSecondLine->second_rating = $parentsSecondLine->second_rating + 3;
+                $parentsSecondLine->save();
+
                 $sum = 150;
 
                 $child_name = $parentFirstLine->first_name.' '.$parentFirstLine->surname;
@@ -87,6 +95,10 @@ class BonusDistribution implements ShouldQueue
 
                         return 1;
                     }
+
+                    //Зачисление рейтинга
+                    $parentThirtyLine->second_rating = $parentThirtyLine->second_rating + 1;
+                    $parentThirtyLine->save();
 
                     $sum = 100;
 
