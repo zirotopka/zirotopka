@@ -323,7 +323,7 @@ input, #days, #months, #years{
 }
 
 .qw{
-    margin: 0.6vw 2.2em 0 0!important;
+    margin: 0.6vw 2em 0 0!important;
 }
 
 .sg{
@@ -472,18 +472,22 @@ input, #days, #months, #years{
 	}
 
 	.mbbg p{
-		margin: 0 6.2em 0 0;
+	    margin: 0 3.8em 0 1em;
 	}
 
 	.bdd{
 	    width: 7.2em!important;
-	    margin: 0 0.8em 0 0!important;
+	    margin: 0 1.8em 0 -2em!important;
 	}
 
 	.customSelect{
 	    height: 8.5vw;	
 		width: 11vw;
 	    text-align: center;
+	}
+
+	.pd div {
+	    padding: 0 0 0 3em;
 	}
 
 	.npd{
@@ -534,7 +538,7 @@ input, #days, #months, #years{
 
 	.wq {
 	    width: 6vw!important;
-	    margin: 0.6vw 14vw 0 0!important;
+	    margin: 0.6vw 2.2em 0 0.5em!important;
 	}
 	
 }
@@ -579,7 +583,7 @@ input, #days, #months, #years{
 	}
 
 	.dss:after{
-	    margin: 0 0 0 0.6em;
+	    margin: 0 0 0 -0.6em;
 	}
 	
 	.hw-cls {
@@ -632,6 +636,6 @@ input, #days, #months, #years{
 	}
 
 	.dss:after{
-	    margin: -0.4em 0 0 1.3vw;
+	    margin: -0.4em 0 0 -0.4vw;
 	}
 }
