@@ -101,7 +101,7 @@
                   <div class="righ_prgr_text">
                     <p id="r_prgr_name"></p>
                     <p id="r_prgr_descr"></p>
-                    <p id="r_prgr_price">Руб.</p>
+                    <p id="r_prgr_price"></p>
                   </div>
               </div>
             </form>  
