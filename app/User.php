@@ -161,6 +161,8 @@ class User extends CartalystUser
                 $slug = User::getSlug($user->first_name, $user->last_name, $user->surname, null, $nik);
 
                 $user->slug = $slug;
+
+                $user->status = 1;
                 $user->save();
 
                 $role = Sentinel::findRoleBySlug("client");

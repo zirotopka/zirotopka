@@ -22,6 +22,9 @@ class PrivatOfficeController extends Controller
     	$user = Sentinel::getUser();
         $balance = $user->balance;
 
+        $now = Carbon::now('Africa/Nairobi');
+        $now_timestamp = $now->timestamp;
+
         if (empty($balance)) {
             return view('errors.error_balance');
         }
@@ -34,10 +37,10 @@ class PrivatOfficeController extends Controller
             return view('privat_office._partials._choose_program_form', ['user' => $user, 'programs' => $programs]);
         }
 
-        //$currentProgramDayStatus = $user->current_program_day_status;
+        $currentProgramDayStatus = $user->current_program_day_status;
 
         //Оплата програм
-        //if (!empty($currentProgramDayStatus->status)) {
+        if (!empty($currentProgramDayStatus->status)) {
             if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
                 $program_cost = $user->current_program->cost;
                 $parents = $user->parents;
@@ -56,7 +59,17 @@ class PrivatOfficeController extends Controller
                     return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description]);
                 }
             }
-        //}
+        }
+
+        //Проверка даты программы
+        // if (!empty($user->start_training_day)) {
+        //     $startTrainingDay = Carbon::parse($user->start_training_day,'Africa/Nairobi');
+           
+        //     if ($startTrainingDay->timestamp > $now_timestamp) {
+        //         dd('wvewrere');
+        //     } 
+        // }
+        
 
         //Блокировка програм
         if ($user->status == 0) {
@@ -297,6 +310,7 @@ class PrivatOfficeController extends Controller
                 'sum',
                 'comment',
                 'created_at',
+                'accruals_freezing',
                 'type_id',
             ])->where('user_id','=',$user->id)
             ->orderBy('created_at','desc')

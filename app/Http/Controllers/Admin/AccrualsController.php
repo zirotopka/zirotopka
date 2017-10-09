@@ -71,15 +71,15 @@ class AccrualsController extends Controller
 								'users.id as id',
 								'users.wallet as wallet',
 								'accruals.id as id',
-								'accruals.accruals_status as accruals_status',
+								'accruals.accruals_freezing as accruals_freezing',
 								'accruals.type_id as type_id',
 								'accruals.sum as sum',
 								'accruals.comment as comment',
 							])
 							->leftJoin('users','accruals.user_id','=','users.id')
 							->whereNotNull('users.wallet')
-							->where('accruals_status','=',0)
-							->where('type_id','=',1)
+							->where('accruals_freezing','=',1)
+							->where('type_id','=',2)
 							->get();
 
 		if (count($newAccruals) > 0) {
@@ -130,9 +130,16 @@ class AccrualsController extends Controller
 			}
 
 			$file_path = $storage_path.'payments-'.md5(uniqid(mt_rand(),1)).'.xml';
-			$dom->save($file_path);
+			if ($dom->save($file_path)) {
+				foreach ($newAccruals as $accrual) {
+					$accrual->accruals_freezing = 0;
+					$accrual->save();
+				}
 
-			return 1;
+				return 1;
+			} else {
+				dd('Ошибка');
+			}
 		}
 	}
 }

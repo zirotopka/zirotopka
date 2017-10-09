@@ -91,6 +91,7 @@ class UserController extends Controller
             $slug = User::getSlug($user->first_name, $user->last_name, $user->surname);
 
             $user->slug = $slug;
+            $user->status = 1;
             $user->save();
 
             $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
