@@ -760,7 +760,7 @@
 .sex p{
 	vertical-align: text-bottom;
     color: #81868F;
-    margin: 0;
+    margin: 0 0 -4px 15px;
 }
 
 .sex{
