@@ -149,7 +149,7 @@
 <!--Описание тренировок и питания-->
 		<div class="feed_and_train col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="training_descr fd_dscr_blk col-xs-12 col-sm-6 col-md-6 col-lg-6">
-				<p class="feed_orange">ОПИСАННИЕ ТРЕНИРОВКИ</p>
+				<p class="feed_orange">ОПИСАНИЕ ТРЕНИРОВКИ</p>
 				<p class="feed_text">{{$current_program_day->description}}</p>
 			</div>
 			<div class="training_feed fd_dscr_blk col-xs-12 col-sm-6 col-md-6 col-lg-6">
