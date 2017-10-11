@@ -208,6 +208,14 @@ class User extends CartalystUser
         return md5(uniqid(rand(), true));
     }
 
+    public static function getTimezone($user) {
+        if (!empty($user->user_timezone)) {
+            return $user->user_timezone;
+        } else {
+            return 'Africa/Nairobi';
+        }
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

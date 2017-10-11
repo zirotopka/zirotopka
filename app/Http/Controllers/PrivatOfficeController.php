@@ -20,9 +20,10 @@ class PrivatOfficeController extends Controller
     public function index($slug)
     {	
     	$user = Sentinel::getUser();
+        $userTimezone = User::getTimezone($user);
         $balance = $user->balance;
 
-        $now = Carbon::now('Africa/Nairobi');
+        $now = Carbon::now($userTimezone);
         $now_timestamp = $now->timestamp;
 
         if (empty($balance)) {
@@ -62,15 +63,12 @@ class PrivatOfficeController extends Controller
         }
 
         //Проверка даты программы
-        // if (!empty($user->start_training_day)) {
-        //     $startTrainingDay = Carbon::parse($user->start_training_day,'Africa/Nairobi');
-           
-        //     if ($startTrainingDay->timestamp > $now_timestamp) {
-        //         dd('wvewrere');
-        //     } 
-        // }
+        if (!empty($user->start_training_day) && empty($user->program_is_start)) {
+            $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
+            
+            return view('privat_office._partials._program_comming_soon', ['user' => $user, 'start_training_day' => $start_training_day]); 
+        }
         
-
         //Блокировка програм
         if ($user->status == 0) {
             $immunity_cost = intval(env('IMMUNITY_COST'));
