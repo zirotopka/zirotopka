@@ -245,6 +245,11 @@ class User extends CartalystUser
         return $this->hasMany('App\Accrual','user_id');
     }
 
+    public function trainings()
+    {
+        return $this->hasMany('App\Training','user_id');
+    }
+
     public function income_messages()
     {
         return $this->hasMany('App\Message', 'recipient_id', 'id')->with('files')->orderBy('created_at','desc');

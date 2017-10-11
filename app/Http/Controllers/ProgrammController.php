@@ -159,7 +159,7 @@ class ProgrammController extends Controller
             $user->sex = $request->get('sex');
             $user->start_training_day = $start_training_day;
     		$user->current_programm_id = $program_id;
-            $user->current_day = 0;
+            $user->last_updated_at = $now;
 
             if ( ($now->year > $start_training_day->year) && ($now->month > $start_training_day->month ) && ($now->day > $start_training_day->day )){
                 return redirect()->back()->withErrors(['error' => 'Выбранная вами дата уже прошла']);

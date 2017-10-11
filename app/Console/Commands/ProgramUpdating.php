@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\User;
+use App\Training;
 
 use Carbon\Carbon;
 
@@ -43,30 +44,34 @@ class ProgramUpdating extends Command
         $users_query = User::select([
             'id',
             'last_updated_at',
-            'timezone'
+            'timezone',
+            'current_day',
         ]);
         //->where('status','=',1);
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
-                if (!empty($user->timezone)) {
-                    $timezone = $user->timezone;
-                } else {
-                    $timezone = 'Africa/Nairobi';
-                }
-                $now = Carbon::now($timezone);
+                $userTimezone = User::getTimezone($user);
 
-                if (!empty($user->last_updated_at)) {    
-                    $nowDay = $now->day;
-                    $last_updated_at = Carbon::parse($user->last_updated_at);
+                $userNow = Carbon::now($userTimezone);
+                $userHour = $userNow->hour;
+                $nowDay = $userNow->day;
+
+                if ($userHour >= 22) {
+                    $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone);
                     $lastDay = $last_updated_at->day;
 
                     if ($nowDay > $lastDay) {
-                        
+                        $trainings = $user->trainings()->where('program_day')->get();
+
+                        if (count($trainings) == 0) {
+                            $user->status = 0;
+                        }
+
+                        $user->current_day = $user->current_day + 1;
+                        $user->last_updated_at = $now;
+                        $user->save();
                     }
-                } else {
-                    $user->last_updated_at = $now;
-                    $user->save();
                 }
             }
         });
