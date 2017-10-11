@@ -2,7 +2,7 @@
 
 @section('css')
     @parent
-    <link href="/assets/privat_account/modal/acc_modal.css" type="text/css" rel="stylesheet">
+    <link href="/assets/privat_account/account.css" type="text/css" rel="stylesheet">
 @overwrite
 
 @section('js')

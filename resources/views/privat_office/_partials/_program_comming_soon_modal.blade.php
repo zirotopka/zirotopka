@@ -6,6 +6,8 @@
 		<div class="input_money">
 			<p class="add_money">Вы присоединились к сообществу Reformator.One</p>
 			<b>{{ 'Первое задание появится '.$start_training_day->day.' числа в 22:00' }}</b>
+	
+			<p><button class="btn btn-success" type="button" data-dismiss="modal" aria-label="Close">ПРОДОЛЖИТЬ</button></p>
 		</div>
       </div>
     </div>
