@@ -58,7 +58,7 @@ $(document).ready(function(){
 		    success: function (result) {
 			$('#r_prgr_name').text(result['name']);
 			$('#r_prgr_descr').text(result['description']);
-			$('#r_prgr_price').text(result['cost']+" руб.");
+			$('#r_prgr_price').text(result['cost']);
 	    	}  
 	  	});
 		
