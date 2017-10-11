@@ -9,6 +9,8 @@
 
 @section('css')
     @parent
+    <link href="/assets/privat_account/modal/refer_pay.css" type="text/css" rel="stylesheet">
+
 
 @overwrite
 

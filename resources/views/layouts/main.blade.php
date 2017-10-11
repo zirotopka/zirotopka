@@ -73,7 +73,7 @@
                             </a> 
                         </li>
                         <li>
-                            <a href="/program" class="profile_btns">
+                            <a href="/programm/ROneStart" class="profile_btns">
                                 <p>программа <br> тренировок</p>
                             </a> 
                         </li>
