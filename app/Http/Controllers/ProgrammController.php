@@ -142,21 +142,6 @@ class ProgrammController extends Controller
 
     	if ( !empty($user) ) {   
     		$program_id = $request->get('program_id');
-            $start_training_day = Carbon::parse( $request->get('program_date_input'), 'Africa/Nairobi' );
-            $now = Carbon::now('Africa/Nairobi');
-
-
-            $user->sex = $request->get('sex');
-            $user->start_training_day = $start_training_day;
-    		$user->current_programm_id = $program_id;
-            $user->current_day = 0;
-
-            if ( ($now->month <= $start_training_day->month) && ($now->day <= $start_training_day->day) ) {
-                $user->current_day = 1;
-            } elseif ( ($now->year > $start_training_day->year) && ($now->month > $start_training_day->month ) && ($now->day > $start_training_day->day )){
-                dd('Выбранная вами дата уже прошла');
-                return back(); //Выбрана старая дата
-            }
 
             $clientIp = $request->ip();
             $user->ip = $clientIp;
@@ -166,13 +151,29 @@ class ProgrammController extends Controller
             $user->timezone = $timezone;
             $user->last_updated_at = Carbon::now($timezone);
             $user->user_ip = $_SERVER["REMOTE_ADDR"];
+            $user->current_day = 1;
 
-    		$user->save();
+            $start_training_day = Carbon::parse( $request->get('program_date_input'), $timezone );
+            $now = Carbon::now($timezone);
+
+            $user->sex = $request->get('sex');
+            $user->start_training_day = $start_training_day;
+    		$user->current_programm_id = $program_id;
+            $user->last_updated_at = $now;
+
+            if ( ($now->year > $start_training_day->year) && ($now->month > $start_training_day->month ) && ($now->day > $start_training_day->day )){
+                return redirect()->back()->withErrors(['error' => 'Выбранная вами дата уже прошла']);
+            }
+
+            if (($now->month = $start_training_day->month) && ($now->day == $start_training_day->day) && ($now->hour >= 22)) {
+                $user->program_is_start = 1;
+            } 
+
+            $user->save();
 
     		return redirect($user->slug);
     	} else {
-            dd('Пользователь отсутствует');
-    		return back();
+            return redirect()->back()->withErrors(['error' => 'Пользователь отсутствует']);
     	}
     }
 }

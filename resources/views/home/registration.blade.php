@@ -40,7 +40,7 @@
               <a href="/social_login/vkontakte">
                 <img src="/ico/vkontakte.png" alt="">
               </a>
-              <a href="">
+              <a href="/social_login/facebook">
                 <img src="/ico/icon-facebook.svg" alt="">
               </a>
             </div>

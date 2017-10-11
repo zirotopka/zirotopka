@@ -40,6 +40,7 @@ class PrivateOfficeApiController extends Controller
                     $training = new Training;
                     $training->programm_stage_id = $stage_key;
                     $training->user_id = $user->id;
+                    $training->program_day = $user->current_day;
                 }
 
                 if (count($stage_url) > 0) {
