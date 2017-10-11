@@ -189,12 +189,11 @@
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
                         <ul>
                             <li><a href="/programm/ROneStart">R.ONE START</a></li>
-                            <li><a href="#">R.ONE PRO</a></li>
-                            <li><a href="#">R.ONE RUNNER</a></li>
-                            <li><a href="#">R.ONE RUNNER +</a></li>
-                            <li><a href="#">R.ONE POWER</a></li>
+                            <li><a href="/programm/r.one_pro">R.ONE PRO</a></li>
+                            <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
+                            <li><a href="/programm/r.one_runner_plus">R.ONE RUNNER +</a></li>
+                            <li><a href="/programm/r.one_power">R.ONE POWER</a></li>
                             <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
-                             ПРОГРАММА</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">

@@ -167,17 +167,10 @@
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
-                    <li class="sc"> 
-                        <p class="fm_line">|</p>
-                        <a href="#bonus_5" class="spy_sections">
-                            <p>07 ВОПРОСЫ</p>
-                        </a> 
-                        <p class="fm_line">|</p>
-                    </li>
                     <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#bonus_6" class="spy_sections">
-                            <p>08 ПРИСОЕДИНИТЬСЯ</p>
+                            <p>07 ПРИСОЕДИНИТЬСЯ</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>

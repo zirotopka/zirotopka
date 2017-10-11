@@ -553,6 +553,22 @@ ul{
 		height: 100%;
 		width: 25%;
 		padding: 0!important;
+		border-radius: 0;
+	}
+
+	.little_menu li:hover{
+		height: 100%!important;
+		width: 25%!important;
+		background-color: #ff8a18;
+		border-radius: 0;
+	}
+
+	.little_menu .send{
+		height: 93%;
+	}
+
+	.little_menu .send:hover{
+		height: 93%!important;
 	}
 	
 .little_menu ul li .add_img{

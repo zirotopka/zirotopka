@@ -951,8 +951,8 @@ ul li{
 
 	/*-----------------------------Sixth Screen(comments-screen)------*/
 	.comments-screen{
-		height: 71vw;
-		padding: 10% 0 0 0;
+		height: auto;
+		padding: 10% 0 9% 0;
 		margin: 3% 0 1vw 0;
 		text-align: center;
 	}
@@ -1281,7 +1281,7 @@ ul li{
 		position: relative;
 		z-index: 2;
 		text-align: center;
-		height: 45vw;
+		height: auto;
 	}
 
 	.connect_content p{
@@ -1350,7 +1350,7 @@ footer{
 	height: auto;
 	background-color: #282828;
 	margin: 0 0 -10px 0;
-    padding: 2rem 0 0 0px!important;
+    padding: 2rem 0 1em 0px!important;
 	height: 27vw;
 }
 
@@ -1436,7 +1436,8 @@ footer .prgrm_list .bonus{
 
 @media screen and (min-device-width : 320px) and (max-device-width : 767px){
 	.prtnrs{
-		line-height: 1.5em;
+		line-height: 1em;
+		margin: 0 0 0.3em 0;
 	}
 	.questions-screen img {
 	    display: inline-block;
@@ -1915,7 +1916,7 @@ footer .prgrm_list .bonus{
 	}
 
 	footer .prgrm_list {
-	    padding: 30.5vw 0 0 0;
+	    padding: 30.5vw 0 1em 0;
 		line-height: 1.5em;
 	}
 	
@@ -2037,11 +2038,11 @@ footer .prgrm_list .bonus{
 	    padding: 0 0 0 5%;
 	}
 	.connect-screen {
-		height: 65vh;
-	    background-size: 70em!important;
+	    height: auto;
+	    background-size: 237vw !important;
 	    background-position: -21em;
+	    padding-bottom: 10vw;
 	}
-
 	.questions-screen img {
 	    margin-left: -0.4vw!important;
 	}
@@ -2161,17 +2162,17 @@ footer{
 	.connect_btn:hover{
 	    height: 10.4vw!important;
 	    width: 50.4vw!important;
-        margin: 5.6em 0 0 0!important;
+        margin: 5.6em 0 0.2em 0!important;
 	}
 
 	.connect_btn:active{
 	    height: 10.4vw!important;
 	    width: 50.4vw!important;
-        margin: 5.6em 0 0 0!important;
+        margin: 5.6em 0 0.2em 0!important;
     }
 
 	.connect_price {
-	    background-position: 24vw 5px!important;
+	    background-position: 17vw 5px!important;
 	}
 
 	.connect_screen_shader p {
@@ -2185,6 +2186,61 @@ footer{
 	.st-menu ul li a {
 	    padding: 1.8em 0 1.8em 2.6em!important;
 	    text-align: left;
+	}
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px) and (orientation: landscape){
+	.ico_play {
+		width: 13%;	
+	}
+
+	.ico_play:hover {
+		width: 13.5%;	
+	}
+
+	.ico_play:active {
+		width: 13.5%;	
+	}
+
+	.connect-screen{
+		height: auto;
+	}
+
+	.connect_content {
+	    height: auto;
+	}
+
+	.connect_price {
+	    background-position: 34vw 5px !important;
+	}
+
+	footer .prgrm_list {
+		padding: 28.6vw 0 4em 0;
+		line-height: 2em;
+	}
+
+	footer .prgrm_list .bonus {
+	    line-height: 1.5em;
+	}
+
+	footer{
+		height: auto;
+	}
+
+	.reg_f_s ul {
+	    padding: 0 0 0 6.5vw;
+	}
+
+	.bonus_btn {
+		font-size: 0.8em;
+	}
+
+	.how-screen button{
+		font-size: 0.8em!important;
+	}
+
+	.connect_btn{
+		font-size: 0.8em!important;
 	}
 }
 

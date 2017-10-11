@@ -542,6 +542,17 @@ input, #days, #months, #years{
 	}
 	
 }
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+	.mbbg p {
+	    margin: 0 3.8em 0 -0.6em;
+	}
+
+	.pd div {
+	    padding: 0 0 0 1.7em;
+	}
+}
+
 @media only screen and (min-width : 768px) and (max-width : 991px) and (orientation: portrait){
 	.gray-lit-text {
 	    font-size: 1em;

@@ -768,14 +768,14 @@ h2{
 	.connect_btn:hover{
 		height: 4.4vw;
 		width: 22.2vw;;
-		margin: 5.8em -0.2vw 0 0;
+		margin: 5.8em -0.2vw 0.15em 0;
 		background-color: #ff8a18!important;
 	}
 
 	.connect_btn:active{	
 		height: 4.4vw;
 		width: 22.2vw;
-		margin: 5.8em -0.2vw 0 0;
+		margin: 5.8em -0.2vw 0.15em 0;
 		background-color: #D9550E!important;
 	}
 	/*-------------------------footer----------------*/
@@ -1002,9 +1002,11 @@ h2{
 	}
 
 	.connect-screen {
-	    height: 65vh;
-	    background-size: 86em!important;
+	    height: auto;
+	    background-size: 105em!important;
 	    background-position: -22em;
+		padding-bottom: 5em;
+
 	}
 
 	.questions-screen img {
@@ -1030,6 +1032,10 @@ h2{
 	.connect_info{
 	    font-size: 3vw;
 	    margin: 3em 0 0 0;
+	}
+
+	.connect_content {
+	    height: auto;
 	}
 
 	.questions-screen{
@@ -1070,13 +1076,22 @@ h2{
 	}
 
 	.connect_screen_shader p {
-	    font-size: 22.2vw;
+	    font-size: 21vw;
 	    margin: 27% 0 0 -0.8vw;
 	}
 
 .swiper-slide {
     padding: 0 0 0 1vw;
 }
+
+	.sw_shader {
+	    width: 77%;
+	    margin: -4vw 0 0 -2vw;
+	    background-color: rgba(0,0,0,0.3);
+	    position: absolute;
+	    z-index: 2;
+	    height: 78.5%;
+	}
 
 .bbrdr{
 	height: auto;
@@ -1122,6 +1137,79 @@ footer{
 	}
 
 }
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px) and (orientation: landscape){
+	.ico_play {
+		width: 13%;	
+	}
+
+	.ico_play:hover {
+		width: 13.5%;	
+	}
+
+	.ico_play:active {
+		width: 13.5%;	
+	}
+
+	.connect-screen{
+		height: auto;
+	}
+
+	.content-slide button{
+		font-size: 1.2em;
+	}
+
+	.rstart-txt-cnt button{
+		font-size: 1.2em;
+	}
+
+	.connect_content {
+	    height: auto;
+	}
+
+	.connect_price {
+	    background-position: 34vw 5px !important;
+	}
+
+	footer .prgrm_list {
+		padding: 28.6vw 0 4em 0;
+		line-height: 2em;
+	}
+
+	footer .prgrm_list .bonus {
+	    line-height: 1.5em;
+	}
+
+	footer{
+		height: auto;
+	}
+
+	.reg_f_s ul {
+	    padding: 0 0 0 6.5vw;
+	}
+
+	.connect_btn{
+		font-size: 1.2em!important;
+	}
+
+	.comm_pl_hldr {
+	    position: absolute;
+	    z-index: 2;
+	    margin: 12% 0 0 -48vw;
+	    width: 16%;
+	}
+
+	.comm_pl_hldr:hover {
+	    margin: 11.9% 0 0 -48vw;
+	    width: 16.3%;
+	}
+
+	.comm_pl_hldr:active {
+	    margin: 11.9% 0 0 -48vw;
+	    width: 16.2%;
+	}
+}
+
 
 @media only screen and (max-device-width: 991px) and (min-width: 720px) {
 .side_logo {

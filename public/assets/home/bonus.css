@@ -696,7 +696,7 @@ h2{
 		position: relative;
 		z-index: 2;
 		text-align: center;
-		height: 48vw;
+		height: auto;
 	}
 
 	.connect_content p{
@@ -1062,9 +1062,10 @@ footer .prgrm_list .bonus{
 	    margin: 0 0 0 5%;
 	}
 .connect-screen {
-	    height: 65vh;
-	    background-size: 250vw!important;
-	    background-position: -22em;
+	    height: auto;
+	    background-size: 237vw !important;
+	    background-position: -21em;
+	    padding-bottom: 10vw;
 	}
 
 	.connect_screen_shader p {
@@ -1169,6 +1170,44 @@ footer{
 		.holop{
 			margin: 0 0 -3.5em 0;
 		}
+	}
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px) and (orientation: landscape){
+	.reg_btn, .abo_btn {
+	    font-size: 1.2em;
+	}
+	.connect-screen{
+		height: auto;
+	}
+
+	.connect_content {
+	    height: auto;
+	}
+
+	.connect_price {
+	    background-position: 34vw 5px !important;
+	}
+
+	footer .prgrm_list {
+		padding: 28.6vw 0 4.5em 0;
+		line-height: 2em;
+	}
+
+	footer .prgrm_list .bonus {
+	    line-height: 1.5em;
+	}
+
+	footer{
+		height: auto;
+	}
+
+	.reg_f_s ul {
+	    padding: 0 0 0 6.5vw;
+	}
+
+	.connect_btn{
+		font-size: 1.3em!important;
 	}
 }
 
