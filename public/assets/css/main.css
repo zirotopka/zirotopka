@@ -808,7 +808,7 @@ ul li{
 
 	/*----------------------------Forth Screen(Bonus)----------------------------*/
 	.bonus-screen{
-		height: 51vw;
+		height: auto;
 		text-align: center;
 		padding: 9.5% 0 0 0;
 		margin: 3% 0 1vw 0;
