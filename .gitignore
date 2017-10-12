@@ -16,3 +16,5 @@ request.csr
 /public/video/*
 .composer.lock
 /storage/payments/*
+/public/preview/*
+/public/preview

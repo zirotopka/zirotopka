@@ -171,6 +171,7 @@ input:focus{
 	width: 22em;
 	margin: 15% auto;
 	text-align: center;
+	border-radius: 0;
 }
 
 .bal_modal_height{
@@ -180,6 +181,7 @@ input:focus{
 
 .balance_modal_height{
 	height: 17em;
+	border-radius: 0;
 }
 
 .add_money{
@@ -644,7 +646,7 @@ button:focus {
 .close{
 	position: absolute;
 	z-index: 1;
-	margin: 3% 0 0 43%;
+	margin: 0 0 0 40%;
 }
 
 .close span img{

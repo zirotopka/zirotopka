@@ -1,3 +1,15 @@
+#r_prgr_price::after{
+	content: ' ';
+	background: url("/ico/ref.svg");
+	width: 1.1em;
+	height: 1.1em;
+	background-size: 1em;
+	background-repeat: no-repeat;
+	position: absolute;
+	float: right;
+	margin-top: 0.31em;
+}
+
 .main-content{
 	text-align: center;
 	height: 1000px;
@@ -444,7 +456,7 @@
 	    margin: 7vw 0 0 13vw;
 		width: 50vw;
 		height: 10vw;
-		font-size: 0.6em;
+		font-size: 0.7em;
 	}
 	.send-progr-btn:hover{
 	    margin: 6.4vw 0 0 13vw;

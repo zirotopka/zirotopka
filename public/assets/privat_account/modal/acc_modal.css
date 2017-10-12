@@ -47,7 +47,7 @@
     height: 3.1em!important;
     width: 15.1em!important;
     background-color: #ff8a18;
-
+    color: white;
 }
 
 .forms-btns:active{
@@ -55,6 +55,7 @@
     height: 3.1em!important;
     width: 15.1em!important;
     background-color: #d9550e;
+    color: white;
 }
 
 .slim_txt{
@@ -65,4 +66,13 @@
 .slim_txt a{
 	color: #333;
     font-family: MuseoSansCyrl_700;
+}
+
+.com_soon_modal{
+    height: auto;
+    border-radius: 0;
+}
+
+.input_money{
+    margin-top: 2.5em;
 }
