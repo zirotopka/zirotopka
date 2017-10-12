@@ -87,6 +87,8 @@ Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], funct
 
 		Route::post('admin/get_payments', ['uses' => 'Admin\AccrualsController@get_payments']);
 
+		Route::get('admin/rating/{id}/{rating}', ['uses' => 'Admin\TaskController@change_rating']);
+
 	});
 
 	Route::post('api/yandex/payment_aviso_test', ['uses' => 'Api\YandexController@paymentAvisoURLTest']);

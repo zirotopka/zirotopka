@@ -6,6 +6,7 @@ use App\File;
 use App\ProgrammExercive;
 use App\ProgrammStage;
 use App\Training;
+use App\User;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 
 use Illuminate\Http\Request;
@@ -55,6 +56,24 @@ class TaskController extends Controller {
 		$training = Training::find($id);
 		$training->is_moderator_check = $status;
 		$training->save();
+
+		return redirect()->route('tasks');
+	}
+
+	public function change_rating($id, $rating, Request $request)
+	{
+		$training = Training::select('id','user_id','rating')
+				->where('id','=',$id)->first();
+
+		$training->rating = $rating;
+		$training->save();
+
+		$user = User::select('id','second_rating')->first();
+
+		if (!empty($user)) {
+			$user->second_rating = $user->second_rating + $rating;
+			$user->save();
+		}
 
 		return redirect()->route('tasks');
 	}

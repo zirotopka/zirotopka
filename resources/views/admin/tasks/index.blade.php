@@ -24,6 +24,7 @@
                 <th>Дата</th>
                 <th>Пользователь</th>
                 <th>Файлы</th>
+                <th>Рейтинг</th>
                 <th>Действия</th>
                 </thead>
                 <tbody>
@@ -40,6 +41,7 @@
                         <td>
                             <a href="/admin/tasks" class="btn btn-default btn-default btn-sm">Сброс</a>
                         </td>
+                        <td></td>
                         <td>
                             <button class="btn btn-default btn-success btn-sm">Поиск</button>
                         </td>
@@ -75,6 +77,15 @@
                         </td>
                         <td>
                             <a href="/admin/tasks/{{$training->id}}">Файлы</a>
+                        </td>
+                        <td>
+                            @if (!empty($training->rating))
+                                <span>{{$training->rating}}</span>
+                            @else
+                                <a href="/admin/rating/{{$training->id}}/1" class="btn btn-default">1</a>
+                                <a href="/admin/rating/{{$training->id}}/3" class="btn btn-success">3</a>
+                                <a href="/admin/rating/{{$training->id}}/5" class="btn btn-danger">5</a>
+                            @endif
                         </td>
                         <td>
                             <a href="/admin/tasks/{{$training->id}}/2" class="btn btn-default">На доработку</a>
