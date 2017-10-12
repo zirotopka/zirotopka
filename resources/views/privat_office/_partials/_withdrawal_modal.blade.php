@@ -7,7 +7,7 @@
   <div class="modal-dialog bal_modal_width" role="document">
     <div class="modal-content bal_modal_height">
       <div class="modal-body">
-        <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="/ico/close_modal.png" alt=""></span></button>
 		<div class="input_money">
 			<p class="add_money">ВЫВОД СРЕДСТВ</p>
 
