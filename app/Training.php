@@ -13,4 +13,9 @@ class Training extends Model
 	{
 		return $this->belongsTo('App\User','user_id');
 	}
+
+	public function stages()
+	{
+		return $this->hasMany('App\TrainingStages','training_id');
+	}
 }

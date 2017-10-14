@@ -159,18 +159,52 @@
 		</div>
 
 <!--Описание программ-->
+		<?php
+			$current_group_stages = [];
+			
+			if (!empty($current_training)) {
+				$current_stages = $current_training->stages;
+			}
+		?>
 
 		@if(!empty($programm_stages))
 			<div class="programs row">
 				@forelse ( $programm_stages as $programm_stage )
-					@php
+					<?php
 				    	$exercive = $programm_stage->exercive;
-				    @endphp
+
+				    	if (count($current_stages) > 0) {
+				    		$current_stage = $current_stages->where('stage_id',$programm_stage->id)->first();
+				    		$stage_status_text = '';
+				    		$stage_files = [];
+
+				    		if (!empty($current_stage)) {
+				    			switch ($current_stage->status) {
+				    				case 1:
+								        $stage_status_text = ' (Отправлено)';
+								        break;
+								    case 2:
+								        $stage_status_text = ' (На доработку)';
+								        break;
+								    case 3:
+								        $stage_status_text = ' (Подтверждено)';
+								        break;
+								    case 4:
+								        $stage_status_text = ' (Отклонено)';
+								        break;
+								}
+
+								$stage_files = $current_stage->files;
+				    		}
+				    	}
+				    ?>
 					@if ( !empty($exercive) )
 						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
 							<form class="prog-form">
 								<div class="prog-txt-container">	
-									<p class="prog-txt prog-name">{{$exercive->name}}</p>
+									<p class="prog-txt prog-name">
+										{{$exercive->name.$stage_status_text}}
+									</p>
 									@if ( !empty($programm_stage->repeat_count) )
 										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
 									@endif 
@@ -195,7 +229,22 @@
 							    	<img class="btn-play" src="/ico/play.svg" alt="">
 								</div>
 								<div class="otchet" data-programm-stage="{{$programm_stage->id}}">
-									<div class="attachment-container"></div>
+									<div class="attachment-container">
+										@if (count($stage_files) > 0) 
+											@foreach ($stage_files as $file)
+												<div class="attachment-item attachment_block">
+													@if ($file->file_type == 2)
+														<img class="attachment-img" id="attachment-img" src="{{$file->preview_url}}">
+													@else
+														<img class="attachment-img" id="attachment-img" src="/ico/video-default.png">
+													@endif
+													<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>
+													<input type="hidden" class="attachment-file" name="{{'attachment['.uniqid().']'}}" value="{{$file->file_url}}">
+													<span class="attachment-span">{{!empty($file->name) ? $file->name : 'Загруженный файл'}}</span>
+												</div>
+											@endforeach
+										@endif
+									</div>
 									<div class="otch_hover">
 										<div class="load-btn">
 											<img class="load" src="/ico/load.png" alt="">

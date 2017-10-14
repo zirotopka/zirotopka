@@ -1,5 +1,4 @@
-var attachment_count = 0,
-	image_mime = ['image/jpeg','image/pjpeg','image/png'],
+var image_mime = ['image/jpeg','image/pjpeg','image/png'],
 	video_mime = ['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv'];
 
 $( document ).ready(function() {
@@ -110,26 +109,21 @@ $( document ).ready(function() {
 		        contentType: false, 
 		        success: function(result) {
 		        	if (result['code'] == 200) {
-		        		attachment_container.attr('style','border-right: 0.1em solid #C5C5C5;border-left: 0.1em solid #C5C5C5;border-bottom: 0.1em solid #C5C5C5;')
-							var attachment_html = '';
-						if (result['file_type']= 2) {	
-							attachment_html += '<div class="attachment-item" >'; 
-							attachment_html += '<img class="attachment-img" id="attachment-img" src="' + result['preview'] + '">';
-							attachment_html += '<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>';
-							attachment_html += '<input type="hidden" class="attachment-file" name="attachment[' + attachment_count + ']" value="' + result['file_url'] + '">'; 
-							attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>'; 
-							attachment_html += '</div>'; 
-						} else if (result['file_type'] = 3) {
-							attachment_html += '<div class="attachment-item" >'; 
-							attachment_html += '<img class="attachment-img" src="/ico/video-default.png">';
-							attachment_html += '<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>';
-							attachment_html += '<input type="hidden" class="attachment-file" name="attachment[' + attachment_count + ']" value="' + result['file_url'] + '">'; 
-							attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>'; 
-							attachment_html += '</div>';
-						}
-						attachment_container.append(attachment_html);
+						var attachment_html = '';
 
-						attachment_count++;
+						attachment_html += '<div class="attachment-item attachment_block" >'; 
+
+						if (result['file_type']= 2) {	
+							attachment_html += '<img class="attachment-img" id="attachment-img" src="' + result['preview'] + '">';
+						} else if (result['file_type'] = 3) {
+							attachment_html += '<img class="attachment-img" src="/ico/video-default.png">';
+						}
+						attachment_html += '<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>';
+						attachment_html += '<input type="hidden" class="attachment-file" name="attachment[' + uniqid() + ']" value="' + result['file_url'] + '">'; 
+						attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>'; 
+						attachment_html += '</div>';
+
+						attachment_container.append(attachment_html);
 
 						swal.close();
 					} else {
@@ -195,3 +189,20 @@ function update_feed_heigth(){
 		});
 	}
 }
+
+function uniqid (pr = '', en = '') {
+    var pr = pr || '', en = en || false, result, us;
+
+    this.seed = function (s, w) {
+        s = parseInt(s, 10).toString(16);
+        return w < s.length ? s.slice(s.length - w) : 
+                  (w > s.length) ? new Array(1 + (w - s.length)).join('0') + s : s;
+    };
+
+    result = pr + this.seed(parseInt(new Date().getTime() / 1000, 10), 8) 
+                + this.seed(Math.floor(Math.random() * 0x75bcd15) + 1, 5);
+
+    if (en) result += (Math.random() * 10).toFixed(8).toString();
+
+    return result;
+};

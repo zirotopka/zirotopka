@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
             'user' => \App\User::class,
             'exercive' => \App\ProgrammExercive::class,
             'training' => \App\Training::class,
+            'training_stages' => \App\TrainingStages::class,
 
             'message' => \App\Message::class,
             'message_answer' => \App\MessageAnswer::class,

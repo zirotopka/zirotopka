@@ -10,6 +10,7 @@ use App\ProgrammExercive;
 use App\ProgrammStage;
 use App\Balance;
 use App\Accrual;
+use App\Training;
 use Validator;
 use App\Jobs\BonusDistribution;
 
@@ -86,7 +87,7 @@ class PrivatOfficeController extends Controller
                                         ->orderBy('day')->get();
 
             if (!empty($user->current_day)) {
-                $current_program_day = $programm_days->whereStrict('day',$user->current_day)->first();
+                $current_program_day = $programm_days->where('day',$user->current_day)->first();
 
                 if (!empty($current_program_day)) {
                     $programm_stages = ProgrammStage::select('id','exercise_id','status','description', 'repeat_count','time_exercive')
@@ -95,6 +96,12 @@ class PrivatOfficeController extends Controller
                                         ->get();
 
                 }
+
+                $current_training = Training::select(['id','user_id'])
+                                        ->where('user_id','=',$user->id)
+                                        ->where('program_day','=',$user->current_day)
+                                        ->with('stages')
+                                        ->first();
             }
         }
 
@@ -106,6 +113,7 @@ class PrivatOfficeController extends Controller
             'difficult_array' => $difficult_array,
             'programm_stages' => $programm_stages,
             'current_program_day' => $current_program_day,
+            'current_training' => $current_training,
     	];
 
         if (session()->has('pay_program')) {
