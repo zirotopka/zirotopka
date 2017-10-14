@@ -49,50 +49,62 @@
 
                 </tr>
                 @foreach($trainings as $training)
-                    <tr>
-                        <td>{{ $training->id }}</td>
-                        <td>
-                            @php
-                                switch ($training->is_moderator_check) {
-                                case 0:
-                                    echo 'Ожидает проверки';
-                                    break;
-                                case 1:
-                                    echo 'Выполнено';
-                                    break;
-                                case 2:
-                                    echo 'На доработке';
-                                    break;
-                                case 3:
-                                    echo 'Отклонено';
-                                    break;
-                                }
-                            @endphp
-                         </td>
-                        <td>{{ $training->created_at }}</td>
-                        <td>
-                            @if (!empty($training->user))
-                                {{ $training->user->first_name }} {{ $training->user->surname }}
-                            @endif
-                        </td>
-                        <td>
-                            <a href="/admin/tasks/{{$training->id}}">Файлы</a>
-                        </td>
-                        <td>
-                            @if (!empty($training->rating))
-                                <span>{{$training->rating}}</span>
-                            @else
-                                <a href="/admin/rating/{{$training->id}}/1" class="btn btn-default">1</a>
-                                <a href="/admin/rating/{{$training->id}}/3" class="btn btn-success">3</a>
-                                <a href="/admin/rating/{{$training->id}}/5" class="btn btn-danger">5</a>
-                            @endif
-                        </td>
-                        <td>
-                            <a href="/admin/tasks/{{$training->id}}/2" class="btn btn-default">На доработку</a>
-                            <a href="/admin/tasks/{{$training->id}}/1" class="btn btn-success">Одобрить</a>
-                            <a href="/admin/tasks/{{$training->id}}/3" class="btn btn-danger">Отклонить</a>
-                        </td>
-                    </tr>
+                    <?php
+                        $stages = $training->stages
+                    ?>
+                    @if (count($stages))
+                        <tr>
+                           <td colspan="7" class="text-center">
+                                <b>День тренировки {{$training->program_day}}.{{!empty($training->user) ? ' Участник '.$training->user->first_name.' '.$training->user->surname : ''}} {{!empty($training->is_moderator_check) ? 'Проверено.' : ''}}</b>
+                           </td> 
+                        </tr>
+                    @endif
+                    @foreach($stages as $stage)
+                        <tr>
+                            <td>{{ $stage->id }}</td>
+                            <td>
+                                @php
+                                    switch ($stage->status) {
+                                    case 0:
+                                        echo 'Отправлено';
+                                        break;
+                                    case 1:
+                                        echo 'На доработке';
+                                        break;
+                                    case 2:
+                                        echo 'Одобрено';
+                                        break;
+                                    case 3:
+                                        echo 'Отклонено';
+                                        break;
+                                    }
+                                @endphp
+                             </td>
+                            <td>{{ $stage->created_at }}</td>
+                            <td>
+                                @if (!empty($training->user))
+                                    {{ $training->user->first_name }} {{ $training->user->surname }}
+                                @endif
+                            </td>
+                            <td>
+                                <a href="/admin/tasks/{{$stage->id}}">Файлы</a>
+                            </td>
+                            <td>
+                                @if (!empty($stage->rating))
+                                    <span>{{$stage->rating}}</span>
+                                @else
+                                    <a href="/admin/rating/{{$stage->id}}/1" class="btn btn-default">1</a>
+                                    <a href="/admin/rating/{{$stage->id}}/3" class="btn btn-success">3</a>
+                                    <a href="/admin/rating/{{$stage->id}}/5" class="btn btn-danger">5</a>
+                                @endif
+                            </td>
+                            <td>
+                                <a href="/admin/tasks/{{$stage->id}}/1" class="btn btn-default">На доработку</a>
+                                <a href="/admin/tasks/{{$stage->id}}/2" class="btn btn-success">Одобрить</a>
+                                <a href="/admin/tasks/{{$stage->id}}/3" class="btn btn-danger">Отклонить</a>
+                            </td>
+                        </tr>
+                    @endforeach
                 @endforeach
                 </tbody>
             </table>

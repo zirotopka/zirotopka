@@ -17,7 +17,7 @@
             <table class="table table-striped">
                 <tr>
                     <td>Загружено</td>
-                    <td>{{$training->current_client_date}}</td>
+                    <td>{{$training_stage->created_at}}</td>
                 </tr>
                 <tr>
                     <td>Описание стадии</td>

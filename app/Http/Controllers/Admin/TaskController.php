@@ -6,17 +6,25 @@ use App\File;
 use App\ProgrammExercive;
 use App\ProgrammStage;
 use App\Training;
+use App\TrainingStages;
 use App\User;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use Carbon\Carbon;
+
 class TaskController extends Controller {
 
 	public function index(Request $request)
-	{
-		$trainings = Training::orderBy('created_at', 'desc')->paginate(30);
+	{	
+		$now = Carbon::now('Africa/Nairobi');
+		$now->subDays(3);
+		$now_format = $now->format('Y-m-d');
+
+		$trainings = Training::whereDate('created_at','>=',$now_format)->orderBy('created_at','desc')
+							->orderBy('is_moderator_check')->with('user')->paginate(30);
 
 		return view('admin.tasks.index', [
 			'trainings'    => $trainings,
@@ -34,14 +42,14 @@ class TaskController extends Controller {
 		if ($fio) {
 
 			$trainings->leftJoin('users', 'users.id', '=', 'trainings.user_id');
-			$trainings->where('first_name', 'like', '%' . $fio[0] . '%');
+			$trainings->where('users.first_name', 'like', '%' . $fio[0] . '%');
 
 			if (count($fio) > 1) {
-				$trainings->where('surname', 'like', '%' . $fio[1] . '%');
+				$trainings->where('users.surname', 'like', '%' . $fio[1] . '%');
 			}
 		}
 
-		$trainings = $trainings->paginate(30);
+		$trainings = $trainings->orderBy('is_moderator_check')->paginate(30);
 
 		return view('admin.tasks.index', [
 			'trainings'    => $trainings,
@@ -53,16 +61,26 @@ class TaskController extends Controller {
 
 	public function change_status($id, $status, Request $request)
 	{
-		$training = Training::find($id);
-		$training->is_moderator_check = $status;
-		$training->save();
+		$trainingStage = TrainingStages::find($id);
 
+		if (!empty($trainingStage)) {
+			$trainingStage->status = $status;
+			$trainingStage->save();
+
+			$training = $trainingStage->training;
+
+			if (!empty($training)) {
+				$training->is_moderator_check = 1;
+				$training->save();
+			}
+		}
+		
 		return redirect()->route('tasks');
 	}
 
 	public function change_rating($id, $rating, Request $request)
 	{
-		$training = Training::select('id','user_id','rating')
+		$training = TrainingStages::select('id','rating')
 				->where('id','=',$id)->first();
 
 		$training->rating = $rating;
@@ -80,15 +98,15 @@ class TaskController extends Controller {
 
 	public function task($id, Request $request)
 	{
-		$training = Training::find($id);
-		$stage = ProgrammStage::find($training->programm_stage_id);
+		$training_stage = TrainingStages::find($id);
+		$stage = ProgrammStage::find($training_stage->stage_id);
 		$exercise = ProgrammExercive::find($stage->exercise_id);
 
-		$files = File::where('owner_id', '=', $id)->where('owner_type', '=', 'training')->get();
+		$files = $training_stage->files;
 
 		return view('admin.tasks.task', [
 			'files'    => $files,
-			'training' => $training,
+			'training_stage' => $training_stage,
 			'stage' => $stage,
 			'exercise' => $exercise
 		]);

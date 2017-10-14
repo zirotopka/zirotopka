@@ -60,6 +60,7 @@ class PrivateOfficeApiController extends Controller
                 if (empty($thisStage)) {
                     $thisStage = new TrainingStages;
                     $thisStage->stage_id = $stage_key;
+                    $thisStage->status = 0;
                     $thisStage->training_id = $training->id;
                     $thisStage->current_client_date = $current_client_date;
                     $thisStage->rating = 0;
