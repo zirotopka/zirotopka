@@ -63,9 +63,9 @@ class ProgramUpdating extends Command
                     $lastDay = $last_updated_at->day;
 
                     if ($nowDay > $lastDay) {
-                        $trainings = $user->trainings()->where('program_day')->get();
+                        $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
 
-                        if (count($trainings) == 0) {
+                        if (empty($trainings)) {
                             \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by lack of training');
 
                             $user->status = 0;
