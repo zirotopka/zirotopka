@@ -5,14 +5,13 @@
     <!-- Добавлять css тут -->
     <link href="/assets/privat_account/lk_balance.css" type="text/css" rel="stylesheet">
     <link href="/assets/privat_account/sidebar.css" type="text/css" rel="stylesheet">
-
 @overwrite
 
 @section('js')
     @parent
     <!-- Добавлять js тут --> 
     <script type="text/javascript" src="/assets/privat_account/lk_balance.js"></script>    
-
+	<script type="text/javascript" src="/assets/privat_account/modal/cloneSum.js?123"></script>
 @overwrite
 
 
