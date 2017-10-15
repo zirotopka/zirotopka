@@ -1,0 +1,78 @@
+.light_text{
+    font-family: MuseoSansCyrl_500;
+    font-size: 1.1vw;
+	font-weight: 100;
+	color: #333;
+}
+
+.R_lit{
+    position: absolute;
+    font-size: 16vw;
+    margin: -3vw 0px 0 26vw;
+    font-family: GubiaBlack;
+    color: rgba(0,0,0,0.1);
+}
+
+.c-orange {
+	color: #ff9319;
+}
+
+.bld_text{
+    font-family: MuseoSansCyrl_900;
+    font-size: 1.1vw;
+}
+
+.freezing-widnow .modal-content, 
+.starting_window .modal-content{
+	border-radius: 0;
+}
+
+.freez-form, .start-form{
+    padding: 3em 0 3em 4em;
+}
+
+.forms-btns{
+    margin: 1em 0 1em 0!important;
+    height: 3em!important;
+    width: 15em!important;
+    background-color: #ff8a18;
+    border-radius: 2em;
+    border: none;
+    color: white;
+    font-size: 0.9em;
+}
+
+.forms-btns:hover{
+    margin: 0.95em 0 0.95em -0.05em!important;
+    height: 3.1em!important;
+    width: 15.1em!important;
+    background-color: #ff8a18;
+    color: white;
+}
+
+.forms-btns:active{
+    margin: 0.95em 0 0.95em -0.05em!important;
+    height: 3.1em!important;
+    width: 15.1em!important;
+    background-color: #d9550e;
+    color: white;
+}
+
+.slim_txt{
+	font-size: 0.9vw;
+	margin: 0.5em 0 0 0;
+}
+
+.slim_txt a{
+	color: #333;
+    font-family: MuseoSansCyrl_700;
+}
+
+.com_soon_modal{
+    height: auto;
+    border-radius: 0;
+}
+
+.input_money{
+    margin-top: 2.5em;
+}

@@ -1,0 +1,1665 @@
+ #user_agreements .modal-dialog{
+	width: 80vw;
+}
+
+#partners .modal-dialog{
+	width: 60vw;
+}
+
+#partners .modal-dialog, #user_agreements .modal-content{
+	border-radius: 0;
+} 
+
+#partners b, #user_agreements b{
+    font-family: MuseoSansCyrl_500;
+}
+
+#partners, #user_agreements{
+    font-family: MuseoSansCyrl_100;
+
+}
+
+#partners ol, #user_agreements ol {
+		list-style: none; 
+		counter-reset: li; 
+		font-size: 1.1em;
+	}
+
+#partners ul li:before, #user_agreements ul li:before{
+	content: none!important; 
+}
+
+#partners ol li:before, #user_agreements ol li:before {
+		counter-increment: li; 
+		content: counters(li,".") ". "; 
+	}
+#partners h2, #user_agreements h2{
+	text-align: center;
+	color: #ff8a18;
+	font-size: 22px;
+}
+
+#partners .off, #user_agreements .off{
+	text-align: center;
+}
+
+
+.index_spy{
+	display: none!important;
+}
+
+/*-----------------------------Main-page-------------------------*/
+html{
+	height: auto!important;
+	overflow-y: scroll!important;
+}
+
+body{
+	font-size: 100%;
+}
+
+.programm_spy{
+	display: none;
+}
+
+.st-content-inner {
+    font-size: 140%;
+}
+
+.rg_check_in{
+	margin: 3.2em 0 15vw 0!important;
+}
+
+.st-content{
+	overflow: hidden!important;
+}
+
+.st-content, .st-pusher, .st-container, .container-fluid{
+	margin: 0;
+}
+
+.main_sidebar ul{
+	padding: 6em 0 0 0!important;
+}
+
+ul li{
+	list-style: none;
+}
+
+.bonus_spy{
+	display: none;
+}
+
+.spy_sections{
+	height: 1em!important;
+	padding: 0 0 0 4.7em!important;
+	display: none!important;
+	background-color: transparent!important;
+
+}
+
+.spy_sections p{
+	font-size: 0.9vw!important;
+	color: #818181!important;
+}
+
+.active a p{
+	color: white!important;
+}
+
+.active{
+	margin: 0 0 -1vw 0!important;
+}
+
+.active .fm_line{
+	display: block;
+	color: white!important;
+}
+
+.fm_line{
+    margin: 0.15em 0 -0.2em 8.58em!important;
+	color: #818181!important;
+	display: none;
+}
+
+.top_section{
+	padding: 0.5em 0 0 5.75vw!important;
+}
+
+.st-menu{
+	position: fixed;
+}
+
+/*-----------------------------sidebar---------------------------*/
+@media screen and (min-width: 992px) {
+	.column{
+		visibility: hidden;
+		pointer-events: none;
+	}
+
+}
+
+.disp_line{
+    margin: 0 0 0 40%;
+    width: 20%;
+    box-shadow: none;
+    border-bottom: 1px solid #ff8a18;
+    position: relative;
+    text-align: center;
+    opacity: 0.4;
+    border-top: none;
+    float: left;
+}
+
+.st-menu ul li a {
+    padding: 1.2em 0 1.7em 5em!important;
+    text-align: left;
+}
+.open ul li {
+    height: 4.5em!important;
+}
+
+.usr_img_mn{
+	text-align: center;
+    margin: 0 0px 1em 0;
+
+}
+
+.prof-disp{
+    vertical-align: middle;
+	margin: 0!important;
+}
+
+.profile_btns p{
+	margin-left: 5px!important;
+}
+
+.lgn{
+    padding: 1.5em 0 1em 4em !important;
+}
+
+.checked{
+	float: right;
+	padding: 2em 4em 0 0;
+	display: inline-block;
+}
+
+.main_dropdown .dropdown-toggle{
+	background-color: rgba(0,0,0,0);
+	width: 105%!important;
+}
+
+.main_dropdown .dropdown-toggle div{
+	width: 90%;
+}
+
+.main_dropdown .dropdown-toggle div .user-name{
+	font-size: 1vw;
+}
+
+.main_dropdown .dropdown-toggle i{
+	padding: 0!important;
+	font-size: 1.3vw;
+}
+
+
+
+.main_dropdown .user_dropdown{
+	background-color: rgba(0,0,0,0);
+	text-align: left;
+	margin: 0 -3.5em  0 4em;
+}
+
+.main_dropdown .user_dropdown li{
+	height: 3vw;
+}
+
+.main_dropdown .user_dropdown li a{
+	padding: 7% 0 0 25% !important;
+	font-size: 1vw;
+}
+.main_dropdown .user_dropdown li a:hover{
+	border:none!important;
+	background-color: rgba(255,255,255,0.5)!important;
+	
+}
+
+.cdr-btn{
+	position: absolute;
+	z-index: 2;
+	padding: 2em 0 0 2em;
+	background-color: rgba(0,0,0,0)
+}
+
+.cdr-btn:hover{
+	background-color: rgba(0,0,0,0)
+}
+
+.container-fluid{
+	padding: 0;
+}
+
+.main_sidebar{
+	height: 100%;
+	padding: 0;
+	background-color: #282828;
+	position: fixed;
+}
+
+.main_sidebar ul {
+    font-size: 1em;
+    margin: 0;
+    padding: 5em 0 0 0;
+    list-style: none;
+    text-align: left;
+}
+
+
+.main_sidebar ul li a {
+	text-decoration: none;
+	display: block;
+	padding: 0.8vw 0 1em 4em;
+	outline: none;
+	color: #f3efe0;
+	text-transform: uppercase;
+	text-shadow: 0 0 1px rgba(255,255,255,0.1);
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 0.9vw !important;
+	height: 4.35em;
+
+}
+
+.main_sidebar ul li a:hover {
+	background: rgba(0,0,0,0.2);
+	box-shadow: inset 0 -1px rgba(0,0,0,0);
+	color: #fff;
+}
+
+.main_sidebar p{
+	font-family: GilroyLight!important;
+	color: white;
+	font-size: 0.9vw!important;
+	word-wrap: break-word;
+
+}
+
+.sc{
+	margin:1vw 0 0 0;
+}
+
+.spy_sections p{
+	margin: 0;
+}
+
+.profile_btns p{
+	margin: 0;
+}
+
+.user-fln{
+	margin:1em 0 2em 0;
+}
+
+.profile_btns:hover{
+	border-left: 0.4em solid #F36D00;
+}
+
+.side_logo{
+    width: 85%;
+	text-align: center;
+}
+
+@media screen and (max-width: 61.95em) {
+	.codrops-btn{
+		display: block;
+	}
+	.office_sidebar{
+		display: none;
+	}
+}
+
+.home_content{
+	margin:0;
+	padding: 0;
+}
+
+.bonus-content{
+	margin: 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	height: auto;
+}
+
+.bonus-content hr{
+    margin: 0 0 8em 42%;
+    width: 20%;
+    box-shadow: none;
+    border-bottom: 1px solid #ff8a18;
+    position: relative;
+    text-align: center;
+    opacity: 0.4;
+    border-top: none;
+    float: left;
+}
+
+h2{
+	font-size: 2.5em;
+    text-align: center;
+    font-family: GilroyBold;
+    color: #ff8a18;
+    margin: 0 0 0 0;
+}
+/*--------------------------bonus screen-----------*/
+.bons-screen{
+    margin: 0;
+    padding: 0 0 0 8%;
+    height: 52vw;
+    background: url(/ico/logoo.png);
+    background-size: 63.5em 22em;
+    background-repeat: no-repeat;
+    background-position: right -3.8em;
+}
+
+.bons-screen h1{
+	font-size: 2.9em;
+	font-family: GilroyBold;
+	margin: 15.5% 0 0 0;
+	z-index: 2;
+	color: #232323;
+}
+
+.bons-screen p{
+	font-size: 1.9em;
+    font-family: MuseoSansCyrl_100;
+    font-weight: 100;
+    line-height: 1.4em;
+    margin: 5% 0 0 0;
+	z-index: 2;
+	color: #232323;
+}
+
+.reg_btn, .abo_btn{
+    display: inline-block;
+    width: 17vw;
+    height: 4.3vw;
+    border-radius: 2em;
+    font-family: MuseoSansCyrl_500;
+    font-size: 1.1vw;
+    margin:4% 0 0 0;
+    cursor: pointer;
+	position: relative;
+	z-index: 2;
+	font-weight: 500;
+}
+
+.reg_btn{
+    background-color: #ff8a18;
+    margin: 4% 2em 0 0;
+}
+
+.reg_btn:hover{
+    background-color: #ff8a18;
+    margin: 3% 2em 0 -0.2vw;
+   	width: 17.2vw;
+	height: 4.5vw;
+}
+
+.reg_btn:active{
+    background-color: #d9550e;
+    margin: 3% 2em 0 -0.2vw;
+   	width: 17.2vw;
+	height: 4.5vw;
+}
+
+.abo_btn{
+    border: 0.1em solid #7f7f7f;
+	background-color: #f3f3f3;
+	color: #232323;
+}
+
+.abo_btn:hover{
+	background-color: #f3f3f3;
+	color: #232323;
+   	width: 17.2vw;
+	height: 4.5vw;
+	margin: 3% -0.1vw 0 -0.1vw;
+}
+
+.abo_btn:active{
+	background-color: #cccccc;
+	color: #232323;
+   	width: 17.2vw;
+	height: 4.5vw;
+	margin: 3% -0.1vw 0 -0.1vw;
+}
+
+.bons-screen .pig{
+	float: right;
+    position: absolute;
+    width: 65%;
+    top: -7%;
+	margin: 0 0 0 -10.7%;
+	z-index: 1;
+}
+
+/*-------------------------------------------second-screen--------------*/
+
+.bons-how-screen {
+    background: url(/ico/bonus-coin.png);
+    background-repeat: no-repeat;
+    background-position: right 18em;
+    margin: 0 0 4em 0;
+    height: 57vw;
+    background-size: 25em;
+    padding: 1% 0 0 5%;
+}
+
+.how-content{
+    font-family: MuseoSansCyrl_300;
+    font-weight: 300;
+    color: #232323;
+    font-size: 1.3em;
+    word-spacing: 0.5rem;
+    margin: 6% 0 0 0;
+    padding: 0;
+}
+
+.how-images ul, .how-images ul li{
+	padding: 0;
+	margin: 0;
+}
+.how-images ul{
+	width: 100%;
+}
+
+.how-images ul li{
+	display: inline-block;
+}
+
+.how-images ul li h2{
+    text-align: left;
+    margin: 0 0 0.3em 0.4em;
+	font-family: MuseoSansCyrl_700;
+	font-size: 700;
+}
+
+.arrw p{
+	font-family: MuseoSansCyrl_300;
+    font-weight: 300;
+    color: #ff8a18;
+    margin: 0 0 -1.5em 1.8em;
+    font-size: 1.2em;
+}
+
+.holp p{
+	font-family: MuseoSansCyrl_700;
+    font-weight: 700;
+    color: #ff8a18;
+    font-size: 1.3em;
+    margin: 0 0 0 -1.2em;
+}
+
+.king{
+	width: 5.7em;
+	margin: 0 2.5em 0 0;
+	height: 10.5vw;
+}
+
+.black-arrow{
+	width: 12em;
+    margin: 0 2.4em -3em 0;
+	height: 2.5vw;
+}
+
+.holop{
+    width: 5em;
+    margin: 0 2.5em -3.5em 0;
+}
+
+#crws{
+	margin: -30vw 0 0 0;
+}
+
+.how-images{
+    height: auto;
+    padding: 0 0 0 1%;
+    margin: 5% 0 0 0%;
+    width: 100%;
+}
+
+.mob_bns{
+	display: none;
+}
+
+/*-------------------------third screen-----------*/
+
+.bons-about-screen{
+	padding: 1% 0 0 5%;
+	text-align: center;
+	height: 54vw;
+}
+
+.about-icons{
+	width: 10em;
+	height: 10em;
+}
+
+.bons-about-screen p{
+	font-family: MuseoSansCyrl_100;
+	font-weight: 100;
+	color: #575757;
+	font-size: 1.4em;
+    margin: 17% 0 0 0;
+	word-spacing: 0.2em;
+}
+
+.about-icon-content{
+    margin: 16% 0 0 0;
+}
+
+/*--------------------------forth screen--------------*/
+.bons-pay-screen{
+    margin: 4em 0 0 0;
+    padding: 1% 0 0 5%;
+    height: 51vw;
+}
+
+.pay_left{
+	color: #232323;
+	font-family: MuseoSansCyrl_100;
+	font-weight: 100;
+	font-size: 1.4em;
+	line-height: 1.8em;
+    margin: 21% 0 0 0;
+    padding: 0;
+}
+
+.pay_right{
+    background: url(/ico/circles.png);
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 12% 0 0 0;
+    background-position: 0 29%;
+}
+
+.mfc{
+    background: url(/ico/mfc.png);
+    height: 100%;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: 32% 13%;
+}
+
+.smartphone{
+    width: 9em;
+    float: right;
+    margin: 26% 2% 0 0em;
+}
+
+/*-------------------------fifth screen-----------*/
+.bons-question-screen{
+	padding: 1% 0 0 5%;
+	height: 50vw;
+}
+
+.qwston{
+    font-family: MuseoSansCyrl_900;
+    font-weight: 900;
+    color: #575757;
+    opacity: 0.1;
+    position: absolute;
+    font-size: 35em;
+    margin: -2.9% 0 0 71%;}
+
+.quest_left, .quest_right{
+	margin:10% 0 0 0;
+}
+
+.quest_left ul{
+	padding: 0;
+    line-height: 5em;
+}
+
+.ab-ct{
+	padding: 0;
+}
+
+.quest_left ul li, .quest_right p{
+	font-family: MuseoSansCyrl_300;
+	font-weight: 300;
+	color: #575757;
+	font-size: 1.4em;
+
+}
+
+.quest_left ul li{
+	font-size: 1.5em;
+}
+
+.quest_left ul li:before{
+    content: '';
+    background: url(/ico/list-type.svg);
+    display: inline-block;
+    height: 0.7em;
+    width: 0.8em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.quest_left ul li:hover:before{
+    content: '';
+    background: url('/ico/list-type-hov.svg');
+    display: inline-block;
+    height: 0.7em;
+    width: 0.8em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.quest_left ul li:hover{
+    color: #ff8a18;
+}
+
+.quest_right p{
+	width: 90%;
+}
+
+	/*-----------------------------Eighth Screen(connect-screen)---------------*/
+	.connect-screen{
+	    height: 46vw;
+	    background: url(/ico/unfootscr.png);
+	    background-repeat: no-repeat;
+	    background-size: 118%;
+	    background-position: 60% 0;
+	    margin: 0;
+	    padding: 0 0 0 0;
+	}
+
+	.connect_screen_shader{
+	    width: 100%;
+	    height: 46.1vw;
+	    position: absolute;
+	    background-color: rgba(50,50,50,0.83);
+	    z-index: 1;
+	}
+
+	.connect_screen_shader p {
+	    font-size: 19.1vw;
+	    font-family: GubiaBlack;
+	    margin: 13% 0 0 -0.8vw;
+	    opacity: 0.2;
+	    color: white;
+	}
+	 
+	.connect_content{
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		height: auto;
+	}
+
+	.connect_content p{
+		color: white;
+	}
+
+	.connect {
+	    font-family: GilroyBold;
+	    font-size: 2.9vw;
+	    letter-spacing: 1px;
+	    padding: 7vw 0 0 0;
+	}
+
+	.connect_info{
+		font-family: MuseoSansCyrl_500;
+		font-size: 2vw;
+		margin: 2em 0 0 0;
+		font-weight: 500;
+	}
+
+	.connect_price{
+		font-family: MuseoSansCyrl_700;
+		color: #c3c3c3!important;
+		font-size: 1.55em;
+		margin: 1em 0 0 0;
+		background: url(/ico/fc_line.png);
+		background-repeat: no-repeat;
+		background-position: 33vw 5px;
+	}
+
+	.connect_price b{
+		color: white!important;
+		font-size: 1.6em!important;
+	}
+
+	.connect_btn{
+		height: 4.5vw;
+		width: 24vw;
+		border-radius: 2em;
+		border: none;
+		margin: 6em 0 0 0;
+		background-color: #ff8a18;
+		color: white;
+		font-size: 1.1vw;
+		font-weight: 500;
+	    font-family: MuseoSansCyrl_500;
+	}
+
+	.connect_btn:hover{
+		height: 4.7vw;
+		width: 24.2vw;;
+		margin: 5.8em -0.2vw 0 0;
+		background-color: #ff8a18!important;
+	}
+
+	.connect_btn:active{	
+		height: 4.7vw;
+		width: 24.2vw;
+		margin: 5.8em -0.2vw 0 0;
+		background-color: #D9550E!important;
+	}
+
+/*-------------------------footer----------------*/
+footer{
+	font-family: GilroyLight;
+	height: auto;
+	background-color: #282828;
+	margin: 0 0 -10px 0;
+    padding: 2rem 0 0 0px!important;
+	height: 24vw;
+}
+
+.mission p{
+	line-height: 1.4vw;
+	color: white;
+	text-transform: uppercase;
+	font-size: 1vw;
+	margin: 3vh 0 0 0;
+}
+
+	.mission img{
+	    margin: 2.15em 0 2.15em -0.85em;
+	    width: 19vw;
+	}
+
+footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a{
+	text-decoration: none;
+	color: white;
+	font-size: 1vw;
+	margin-top: 0.2em;
+}
+
+footer .prgrm_list ul li{
+	padding-left: 28%;
+}
+
+footer .prgrm_list{
+	padding: 2.5em 0 0 0;
+	line-height: 1.5em;
+}
+
+footer .prgrm_list .bonus{
+	margin: 1em 0 0 0;
+	line-height: 1.5em;
+}
+
+.reg_f_s{
+	padding: 2.2em 0 0 0;
+	line-height: 3em;
+}
+
+.reg_f_s img{
+	display: inline-block;
+	width: 3em;
+	margin: 2em 0 0 0.5em;	
+}
+
+.ofrta{
+	padding: 2.5em 0 0 0;
+    line-height: 2.5em;
+}
+
+#pltks{
+	line-height: 1.5em;
+}
+
+.accsss{
+	line-height: 1.5em;
+}
+
+.carrwos{
+	position: relative;
+	z-index: 1;
+}
+
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px){
+.prtnrs{
+	line-height: 1.5em;
+}
+.rg_check_in{
+	margin: 3.2em 0 15vw 0!important;
+}
+	.side_logo{
+		width: 85%;
+	    margin: 0;
+	}
+
+	.bonus-content hr {
+	    margin: 0 0 18vw 40%;
+	}
+
+.bons-screen {
+	height: auto;
+	text-align: center;
+	padding: 0;
+    background-size: 100vw;
+    background-position: right 6vw;
+    margin:0 0 15vw 0;
+}
+
+	.bons-screen h1 {
+	    font-size: 4vw;
+	    margin: 23.5% 0 0 0;
+	}
+
+	.bons-screen p {
+	    font-size: 3.5vw;
+		line-height: 5vw;
+	    margin: 8% 0 0 0;
+	}
+
+	.reg_btn, .abo_btn {
+	    width: 30vw;
+	    height: 8vw;
+	    font-size: 0.8em;
+	    margin: 12% 0 0 0;
+	}
+	.reg_btn{
+	    margin: 12% 2em 0em 0;
+	}
+	.reg_btn:hover{
+		width: 30.4vw;
+		height: 8.4vw;
+	    margin: 11.8% 1.9em -0.9em -0.2vw;
+    }
+
+	.reg_btn:active{
+		width: 30.4vw;
+		height: 8.4vw;
+	    margin: 11.8% 1.9em -0.9em -0.2vw;
+    }
+
+	.abo_btn:hover{
+		width: 30.4vw;
+		height: 8.4vw;
+	    margin: 11.8% -0.2vw -0.9em -0.2vw;
+	}
+
+	.abo_btn:active{
+		width: 30.4vw;
+		height: 8.4vw;
+	    margin: 11.8% -0.2vw -0.9em -0.2vw;
+	}
+
+.bons-how-screen {
+	height: auto;
+	padding: 0;
+	text-align: center;
+    margin:0 0 0 0;
+}
+
+	.about-icon-content {
+	    margin: 3% 0 0 0;
+	}
+
+	.how-content {
+	    font-size: 3.5vw;
+	    word-spacing: 0vw;
+	    margin: 8% 0 0 0;
+	}
+
+	.how-images ul li {
+		width: 100%;
+	    margin: 7% 0 0 0;	
+	}
+
+	.how-images ul li h2{
+		text-align: center;
+	    margin: 0 0 0.3em -7vw;
+	}
+
+	.mob_bns {
+	    display: block;
+	    height: 170%;
+	    margin: -4% 0 0 -63%;
+	    width: 220%;
+	    position: absolute;
+	}
+
+	.arrw p{
+		display: inline-block;
+	}
+
+	.black-arrow {
+	    width: 6em;
+	    margin: 21% 13.5vw 39% 0;
+	    transform: rotate(90deg);
+	    display: inline-block;
+	}
+
+	.how-images ul li {
+	    display: block;
+	}
+
+	.king {
+	    width: 15vw;
+	    margin: 0 -10.5vw 0 0;
+	}
+
+	.holp p{
+		display: inline-block;
+	}
+
+	.holop{
+		display: inline-block;
+	}
+
+	.bons-about-screen {
+		height: auto;
+		padding: 0;
+		margin: 0 0 15vw 0;
+	}
+
+	.bons-about-screen p {
+	    font-size: 4.5vw;
+	    margin: 5% 0 0 0;
+	    word-spacing: 0.2em;
+	}
+
+	.ab-ct{
+		margin:10% 0 0 0;
+		padding: 0;
+	}
+	.mobimg{
+	    width: 170%;
+	    margin: 0 0 0 -42%;
+	}
+
+	.carrows{
+		width: 90%;
+	}
+
+	.holop{
+		width: 4em;
+	}
+
+	.black-arrow{
+		width: 11em;
+	}
+
+	.king{
+		margin:0;
+	}
+.bons-pay-screen {
+	height: auto;
+	padding: 0;
+	margin: 0 0 15vw 0;
+	text-align: center;
+}
+
+	.mfc {
+		height: 75vw;
+	    background-size: 100%;
+	    width: 100%;
+	    background-position: 32% 13%;
+	}
+
+	.smartphone {
+	    width: 18vw;
+	    float: right;
+	    margin: 26% 14% 0 0em;
+	}
+
+	.pay_right {
+	    margin: 7% 0 0 0;
+	}
+
+	.pay_left {
+	    color: #232323;
+	    font-family: MuseoSansCyrl_100;
+	    font-weight: 100;
+	    font-size: 4.5vw;
+	    line-height: 6.2vw;
+	    margin: 0 0 0 0;
+	    padding: 0;
+	}
+
+.bons-question-screen {
+	height: auto;
+	padding: 0;
+	text-align: center;
+	margin: 0 0 15vw 0;
+}
+
+	.quest_left ul {
+	    padding: 0 0 0 7vw;
+	    line-height: 8vw;
+	    text-align: left;
+	}
+
+	.two_lines{
+		line-height: 5vw!important;
+	}
+
+	.qwston {
+	    font-size: 50em;
+	    margin: -34% 0 0 56%;
+	}
+
+	.quest_right p {
+	    width: 90%;
+	    margin: 0 0 0 5%;
+	}
+.connect-screen {
+	    height: auto;
+	    background-size: 237vw !important;
+	    background-position: -21em;
+	    padding-bottom: 10vw;
+	}
+
+	.connect_screen_shader p {
+	    font-size: 22.2vw;
+	    margin: 27% 0 0 -0.8vw;
+	}
+
+	.connect {
+	    font-size: 3em;
+	    letter-spacing: 1px;
+	    padding: 13vw 0 0 0;
+	}
+
+	.connect {
+	    font-size: 1.5em;
+	    letter-spacing: 1px;
+	    padding: 19vw 0 0 0;
+	}
+
+	.connect_btn{
+	    height: 10vw;
+	    width: 50vw;
+	    font-size: 0.8em;
+	    border-radius: 10vw;
+	}
+
+	.connect_btn:hover{
+		height: 10.2vw;
+		width: 50.2vw;
+	}
+
+	.connect_btn:active{
+		height: 10.2vw;
+		width: 50.2vw;
+	}
+
+	.connect_price {
+	    background-position: 25vw 7px;
+	}
+
+	.connect_screen_shader {
+	    height: 100%;
+	}
+
+	.connect_info{
+	    font-size: 3vw;
+	    margin: 3em 0 0 0;
+	}
+
+footer{
+	height: 145vw;
+}
+
+	footer .prgrm_list {
+	    padding: 23vw 0 0 0;
+		line-height: 2.5em;
+
+	}
+	
+	footer .prgrm_list	.bonus{
+		line-height: 1.5em;
+	}
+
+	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a {
+	    font-size: 3vw;
+	    margin-top: 0.2em;
+	}
+
+	.mission p {
+	    line-height: 4vw;
+	    color: white;
+	    text-transform: uppercase;
+	    font-size: 3vw;
+	    padding: 0.5vw 0 0 4vw;
+	}
+
+	.reg_f_s ul{
+		padding: 0 0 0 8vw;
+	}
+
+	footer .prgrm_list ul li {
+	    padding-left: 0;
+	}
+
+	.mission img {
+	    margin: 6vw 0 6.5vw 1vw;
+	    width: 50vw;
+	}
+
+}
+
+@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
+		.connect_price {
+		    background-position: 33vw 5px;
+		}
+		.connect-screen{
+			background-size: 125vw;
+		}
+		.ico_play {
+		    margin: 9% 0 0 -21.5vw;
+		}
+		.holop{
+			margin: 0 0 -3.5em 0;
+		}
+	}
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 767px) and (orientation: landscape){
+	.reg_btn, .abo_btn {
+	    font-size: 1.2em;
+	}
+	.connect-screen{
+		height: auto;
+	}
+
+	.connect_content {
+	    height: auto;
+	}
+
+	.connect_price {
+	    background-position: 34vw 5px !important;
+	}
+
+	footer .prgrm_list {
+		padding: 28.6vw 0 4.5em 0;
+		line-height: 2em;
+	}
+
+	footer .prgrm_list .bonus {
+	    line-height: 1.5em;
+	}
+
+	footer{
+		height: auto;
+	}
+
+	.reg_f_s ul {
+	    padding: 0 0 0 6.5vw;
+	}
+
+	.connect_btn{
+		font-size: 1.3em!important;
+	}
+}
+
+@media screen and (min-width : 720px) and (max-device-width : 991px) {
+
+@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
+		.connect_price {
+		    background-position: 33vw 5px;
+		}
+		.connect-screen{
+			background-size: 125vw;
+		}
+		.ico_play {
+		    margin: 9% 0 0 -21.5vw;
+		}
+		.holop{
+			margin: 0 0 -3.5em 0;
+		}
+	}
+} 
+
+@media not all and (min-resolution:.001dpcm) {
+	.carrows{
+		width: 97%;
+		margin: 1em 0 0 0;
+	}
+
+	.holop{
+		width: 6vw;
+		margin: 0 1vw 0 0;
+	}
+
+	.king{
+		width: 6vw;
+		margin: 0 3vw 0.5vw 0;
+	}
+
+	.arrow{
+		width: 13vw;
+	}
+}
+.side_logo {
+    width: 85%;
+}
+.bons-screen {
+	background-size: 59.5em 21em;
+	background-repeat: no-repeat;
+	background-position: right -2.7em;
+	height: 65vw;
+}
+
+	.bons-screen .pig {
+	    width: 65%;
+	    margin: 0 0 0 -6%;
+	    z-index: 2;
+	}
+
+	.bons-screen h1 {
+	    font-size: 3.35vw;
+	    margin: 18.3% 0 0 0;
+	}
+
+	.bons-screen p {
+	    font-size: 2.2vw;
+	    line-height: 2.4vw;
+	    margin: 5.5% 0 0 0;
+	}
+	.reg_btn, .abo_btn {
+	    font-size: 1.4vw;
+		margin: 7% 0 0 0;
+	}
+
+	.reg_btn{
+		margin: 7% 2em 0 0;		
+	}
+
+.bons-how-screen {
+    background-position: right 21vw;
+    margin: 0 0 4vw 0;
+    height: 68vw;
+    background-size: 24em;
+    padding: 1% 0 0 5%;
+}
+
+	.arrw p {
+	    margin: 0 0 -2vw 1.5vw;
+	    font-size: 1.8vw;
+	}
+
+	.holp p {
+	    font-size: 2vw;
+	    margin: 0 0 0 -3vw;
+	}
+
+	.how-content {
+	    font-size: 1.7vw;
+	    word-spacing: 0.2vw;
+	    margin: 6% 0 0 0;
+	}
+
+	.king {
+	    width: 7vw;
+	    margin: 0 3vw 0 0;
+	}
+
+	.black-arrow {
+	    width: 14vw;
+	    margin: 0 2.1vw -3vw 0;
+	}
+
+	.holop {
+	    width: 7vw;
+	    margin: 0 1vw -1.5vw 0;
+	}
+	
+	.carrows{
+	    width: 92%;
+	}
+
+	#crws {
+	    margin: -37vw 0 0 -12vw;
+	}
+
+.bons-about-screen {
+    height: 55vw;
+}
+
+	.about-icons {
+	    width: 15vw;
+	    height: 15vw;
+	}	
+
+	.bons-about-screen p {
+	    font-size: 1.7vw;
+	    word-spacing: 0;
+	}
+	.about-icon-content {
+	    margin: 8% 0 0 0;
+	}
+.bons-pay-screen {
+    margin: 0 0 0 0;
+    padding: 1% 0 0 5%;
+    height: 62vw;
+}
+
+	.pay_left {
+	    font-size: 1.8vw;
+	    line-height: 2.8vw;
+	    margin: 21% 0 0 0;
+	}
+	.pay_right {
+	    padding: 14% 0 0 0;
+	    background-position: 0 43%;
+	}
+
+	.mfc{
+		background-size: 100%;
+	}
+
+	.smartphone {
+	    width: 9vw;
+	    margin: 29% 14% 0 0;
+	}
+
+.bons-question-screen {
+    height: 55vw;
+}
+
+	.quest_left ul li {
+	    font-size: 1.8vw!important;
+	}
+
+	.quest_left ul li, .quest_right p {
+	    font-size: 1.7vw;
+	}
+	.qwston {
+	    font-size: 42vw;
+	}
+
+@-moz-document url-prefix() {
+
+	.black-arrow{
+		margin: 0 1.2vw -3vw 0;
+	}
+}
+
+
+.connect-screen {
+    height: 56vw;
+}
+
+	.connect_screen_shader {
+	    height: 56.1vw;
+	    width: 100%;
+	}
+
+	.connect_price {
+	    background-position: 39vw 5px;
+	}
+
+	.connect_screen_shader{
+		height: 56.1vw;
+	}
+
+	.connect_screen_shader p {
+	    font-size: 22.4vw;
+	    margin: 13% 0 0 -0.8vw;
+	}
+
+	.connect {
+	    font-size: 3.5vw;
+	    padding: 12vw 0 0 0;
+	}
+
+	.connect_info {
+	    font-size: 2.5vw;
+	}
+@media not all and (min-resolution:.001dpcm) { @media only screen and (orientation: landscape) {
+		.connect_price {
+		    background-position: 33vw 5px;
+		}
+		.connect-screen{
+			background-size: 125vw;
+		}
+		.ico_play {
+		    margin: 9% 0 0 -21.5vw;
+		}
+		.holop{
+			margin: 0 0 -3.5em 0;
+		}
+	}
+}
+
+
+
+footer {
+    height: 35vw;
+}
+
+	.mission p {
+	    line-height: 1.7vw;
+	    margin: 2vh 0 0 0;
+	}
+
+	.mission img {
+	    margin: 2.15em 0 0.15em -0.5em;
+	}
+}
+
+
+@media screen and (min-width: 992px) and (max-device-width : 1999px) {
+	
+	footer{
+		height: 32vw;
+	}
+
+	footer .prgrm_list {
+	    line-height: 2.5vw;
+	}
+	footer .prgrm_list .bonus {
+	    line-height: 1.5em;
+	}
+
+	.carrows {
+	    width: 90%;
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
+	h2{
+		font-size: 2.5vw;
+	}
+
+	.bons-screen{
+	    background-size: 78em 26em!important;
+	    background-position: right 0em!important;
+	}
+
+	.bons-screen h1 {
+	    font-size: 2.9vw!important;
+	    margin: 17% 0 0 0!important;
+	}
+
+	.bons-screen p {
+	    font-size: 1.9vw;
+	}
+
+
+.bons-how-screen {
+    background-position: right 16vw;
+    background-size: 25vw;
+}
+
+	.how-content {
+	    font-size: 1.3vw!important;
+	}
+
+	.king{
+		width: 6vw;
+	    margin: 0 2.5vw 0 0;
+	    height: 10.5vw;
+	}
+
+	.holop{
+		width: 5vw;
+	    margin: 50% 2.5vw 0 0;
+	}
+	.black-arrow{
+		width: 12vw;
+	    margin: 0 2.5vw 0 0;
+	    height: 2.5vw;
+	}
+
+	.how-images ul li h2 {
+	    margin: 0 0 0.3vw 0.9vw;
+	}
+
+	.arrw p {
+	    margin: 0 0 -0.7vw 1.8em;
+	    font-size: 1.2vw;
+	}
+
+	.holp p {
+	    font-size: 1.3vw;
+	    margin: 0 0 -44% -1.4vw;
+	}
+
+	.carrows {
+		margin: 0 0 0 1%;
+	    width: 92%;
+	}
+
+@-moz-document url-prefix() {
+
+	.black-arrow{
+		margin: 0 2.1vw 0 0;
+	}
+}
+
+.bons-about-screen {
+    height: 47vw;
+}
+
+	.about-icons {
+	    width: 10vw;
+	    height: 10vw;
+	}
+	.bons-about-screen p{
+	    font-size: 1.4vw;
+	    word-spacing: 0.1vw;
+	}
+
+	.pay_left {
+	    font-size: 1.4vw;
+	    line-height: 1.8vw;
+	}
+
+	.about-icon-content {
+	    margin: 14% 0 0 0;
+	}
+
+
+.bons-pay-screen {
+    margin: 4vw 0 0 0;
+    height: 48vw;
+}
+
+	.pay_right {
+	    background-position: 0 44%;
+	}
+	.smartphone {
+	    width: 8vw;
+	    margin: 29% 9% 0 0em;
+	}
+
+.bons-question-screen {
+    height: 43vw;
+}
+
+	.quest_left ul {
+	    line-height: 4vw;
+	}
+
+	.quest_left ul li, .quest_right p {
+	    font-size: 1.4vw;
+	}
+
+	.quest_left ul li {
+	    font-size: 1.5vw;
+	}
+
+	.qwston {
+	    font-size: 30vw;
+	    margin: -1% 0 0 74%;
+	}
+
+
+	.connect {
+	    font-size: 2.5vw;
+	}
+
+	.connect_info{
+		font-size: 2vw;
+	}
+
+	.connect_price{
+		font-size: 2.3vw;
+	    background-position: 40% 1.2vw;
+		background-size: 3.5vw;
+	}
+
+	.connect_price b {
+	    font-size: 3.5vw;
+	}
+
+footer {
+    padding: 2rem 0 0 0px!important;
+    height: 26vw;
+}
+	footer .prgrm_list {
+	    padding: 2.5vw 0 0 0;
+	    line-height: 2.5vw;
+	}
+
+	.mission img {
+	    margin: 2.15vw 0 2.15vw 0;
+		width: 14vw;
+	}
+
+	footer .prgrm_list .bonus {
+	    line-height: 1.5vw;
+	}
+
+	.reg_f_s {
+	    padding: 2.2vw 0 0 0;
+	    line-height: 3vw;
+	}
+
+	footer .prgrm_list ul li a, .ofrta ul li a, .reg_f_s a{
+		margin-top: 0.2vw;
+	}
+
+	.reg_f_s img {
+	    display: inline-block;
+	    width: 3.5vw;
+	}
+
+	.ofrta {
+	    padding: 2.5vw 0 0 0;
+	    line-height: 2.5vw;
+	}
+}
+
+

@@ -1,0 +1,511 @@
+.left-progrm-part{
+	margin: 2em 0 0 0;
+	text-align: center;
+}
+
+.slate{
+	margin: 1em 0 1em 0;
+}
+
+.cntrt{
+    margin: -1em 0 0 0;
+}
+
+.video-modal{
+	height: 100%;
+}
+
+/*.modal-content{
+	height: 40em;
+}
+*/
+.video-container{
+	height: 100%;
+}
+
+.close span img{
+	width: 2em;
+}
+
+.close:hover {
+	text-decoration: none;
+	background: none;
+}
+
+.video-descr{
+	margin: 1em 0 0 0;
+}
+
+
+		/*Окно выбора программы*/
+.checkboxiki{
+	margin: 1.5em 0 0 0;
+	text-align: left;
+	font-family: MuseoSansCyrl_100;
+	font-size: 1em;
+	color: #444444;
+}
+
+.checkboxiki a{
+	color: #454545;
+	vertical-align: sub !important;
+	text-decoration: underline;
+	text-decoration-color: #454545;
+	cursor: default;
+}
+
+
+.checkboxiki ul{
+	list-style-type: none;
+	vertical-align: center;
+}
+.ddicc{
+	position: absolute;
+	z-index: 3;
+	pointer-events: none;
+
+}
+.chs-program-widnow{
+	width: 60em;
+}
+
+.choose-program-form{
+	height: 100%;
+	background: url('/ico/REFORMATOR_ONE_fon_logo.png');
+	background-repeat: no-repeat;
+	background-position: -24% 98%;
+	background-size: 78em 12em;
+
+}
+
+.prog-bold-txt{
+	font-family: GilroyBold;
+	font-size: 1em;
+	color: #FF9319;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: left;
+	margin-left: 2.3em;
+}
+
+.progr-drop{
+	position: relative;
+	width: 17.1em;
+}
+
+.drp-control{
+	height: 3em;
+	border:0.1em solid #b3b3b3;
+	border-radius: 0.3em;
+	color: #7d7d7d;
+	appearance: none;
+	-moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 0;
+    padding-left: 3em;
+    left: 2.8em;
+	margin: 0 0 0 2.3em;
+	width: 17.2em;
+	cursor: pointer;
+}
+
+.drp-control:hover {
+	background-color: #e0e0e0;
+	background-position: 0 -15px;
+	color: #333;
+	border-color: #adadad;
+}
+
+.drp-control:focus{
+    outline: none;
+    box-shadow: none;	
+	border:0.1em solid #b3b3b3;
+	border-radius: 0.3em;
+	outline: thin dotted #333 !important;
+	outline: 5px auto -webkit-focus-ring-color !important;
+	outline-offset: -2px;
+	background-color: #e0e0e0;
+    background-position: 0 -15px;
+	color: #333;
+	border-color: #8c8c8c;
+}
+
+.drp-control:active{
+	background-color: #e0e0e0;
+	border-color: #dbdbdb;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	color: #333;
+}
+.select-side{
+	pointer-events: none;
+    width: 2.7em;
+    position: absolute;
+    top: 0px;
+    height: 80%;
+    left: 16.5em;
+    padding: 0.6em 0 0 0;
+    margin: 0.4em 0 0 0;
+    border-left: 0.1em solid #b3b3b3;
+}
+
+.drp-control option{
+	height: 3em;
+	border: 0.1em solid #b3b3b3;
+
+}
+
+.bootstrap-select button, .bootstrap-select button:hover, .bootstrap-select button:active,.bootstrap-select button:focus ,input, select, select:hover, select:focus, select:active,
+option, option:hover, option:active ,option:focus,
+.form-control::-moz-focus-inner,.form-control:active,
+.form-control:hover,.form-control:focus{
+	outline: none;
+	cursor: pointer;
+}
+
+/*--Select--*/
+
+.bootstrap-select{
+	width: 17.1em !important;
+	height: 3em !important;
+}
+
+.cntrt .bootstrap-select{
+    margin: 0 1.1em 0 0;
+}
+
+.bootstrap-select button{
+	height: 3em;
+	background: none;
+	border: 0.1em solid #b3b3b3;
+	color: #7d7d7d;
+	font-family: sans-serif;
+	padding-right: 2.5em !important;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+}
+.bootstrap-select button:hover{
+	color:#7d7d7d!important;
+}
+@-moz-document url-prefix() {
+	.bootstrap-select button{
+	    padding-right: 2.68em!important;
+    }
+}
+
+.filter-option{
+	height: 100%;
+	padding: 0.5em 0 0 2em;
+	border-right: 0.1em solid #b3b3b3; 
+}
+
+.bootstrap-select button .bs-caret{
+	display: none;
+}
+
+.open ul li{
+	height: 4em;
+} 
+
+.open ul li a{
+	height: 100%;
+	padding: 2em 0 0 15% !important;
+	font-size: 0.8em;
+}
+
+.right-progrm-part{
+	text-align: left;
+	padding: 2em 0 0 4em;
+}
+
+.prg-img {
+
+}
+
+#r_prgr_name{
+	padding: 1em 0 0 0;
+    font-size: 1.1em;
+    color: #FF9319;
+    font-family: GilroyBold;
+    font-weight: 100;
+}
+
+
+
+#r_prgr_descr{
+	font-family: MuseoSansCyrl_100; 
+	color: #454545;
+	width: 24em;
+}
+
+#r_prgr_price{
+	padding-right: 7vw;
+	font-family: GilroyBold;
+    font-weight: 100;
+    color: #FF9319;
+	text-align: right;
+    font-size: 1.1em;
+
+}
+
+.righ_prgr_text p{
+	margin: 1vw;
+}
+
+.send-progr-btn{
+	float: left;
+	margin: 2em 0 0 2.3em;
+	height: 4em;
+	width: 19em;
+	background-color: #ff8a18;
+	border: none;
+	border-radius: 2em;
+	color: white;
+	font-family: MuseoSansCyrl;
+	font-size: 1em;
+}
+
+.send-progr-btn:hover{
+	width: 19.2em;
+	height: 4.2em;
+	margin: 1.8em 0 0 2.1em;
+	font-size: 1em;
+}
+
+.send-progr-btn:active{
+	width: 19.2em;
+	height: 4.2em;
+	margin: 1.8em 0 0 2.1em;
+	font-size: 1em;
+	background-color: #d9550e;
+}
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding: 0 0 0 1.95em;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+	content: '';
+	position: absolute;
+	left: 0.15em;
+	top: 0.4em;
+	width: 0.9em;
+	height: 0.9em;
+	border: 0.1em solid #ccc;
+	border-radius: 2px;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    content: ' ';
+    position: absolute;
+    background: url(/ico/check.svg);
+    left: .3em;
+    height: 1.2em;
+    width: 0.9em;
+    transition: all .2s;
+    top: 0;
+    background-size: cover;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #ff8a18!important;
+}
+
+.reg-mod-content{
+	height: 40em;
+}
+
+
+
+@media screen and (max-width: 61.95em) {
+	.bootstrap-select button{
+		padding-right: 2.65em!important;
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+	.right-progrm-part{
+		display: none!important;
+	}
+	.left-progrm-part{
+		width: 100%!important;
+	}
+	.close span img {
+   		width: 1em!important;
+	}
+	#video-modal {
+    	margin: 23vw 0 0 0!important;
+	}
+
+	.progr-drop{
+	    margin: 0 auto;
+	    text-align: center;
+	}
+
+	.cntrt{
+	    margin: 0 auto;
+	    text-align: center;
+	}
+	.checkboxiki ul {
+	    width: 110vw;
+	}
+
+	.ddicc {
+	    margin: 2.7em 0 0 7.8em !important;
+	}
+
+	.bootstrap-select{
+		width: 19.1em !important;
+		height: 3em !important;
+	}
+
+	.select-side{
+	    margin: 0.2em 0 0 2.2em!important;
+	}
+
+	.drp-control{
+		width: 19.1em;
+	}
+
+	.progr-drop {
+	    position: relative;
+	    width: 19.1em;
+	}
+
+	[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+	    width: 1em;
+	    height: 1em;
+	    background-position: 2px 2px;
+	    background-size: 0.75em;
+	}
+
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.bootstrap-select button{
+		margin-left: -8px!important;	
+	}
+	
+}
+
+@media screen and (min-width: 320px) and (max-width: 365px) {
+	.ddicc {
+	    margin: 2.7em 0 0 8.5em !important;
+	}
+
+	.cntrt .dropdown-toggle{
+		margin-left: -8px!important;
+	}
+
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+    top: -0.3em;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.01em;
+    height: 1em;
+    border: 1px solid #B3B3B3;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    background: url(/ico/crl.svg);
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+    background-size: 0.74em!important;
+    background-position: 2px 2px;
+}
+@media not all and (min-resolution:.001dpcm) { @media {
+
+	[type="radio"]:checked + label:after,
+	[type="radio"]:not(:checked) + label:after {
+	    width: 0.71em;
+	}
+}}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+@media screen and (max-width: 46.0625em) {
+	.reg_modal{
+		width: 95%;
+	}
+
+	.reg_modal .modal-content{
+		background-position: 90% 9.75em;
+
+	}
+}
