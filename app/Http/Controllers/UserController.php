@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
+use Cartalyst\Sentinel\Laravel\Facades\Reminder;
 
 use Validator;
 use App\Balance;
@@ -187,4 +188,67 @@ class UserController extends Controller
 
         return redirect()->route('lk', ['slug' => $user->slug]);
     }  
+
+    public function forgetPassword() {
+         return view('user._forget_password');
+    }
+
+    public function postForgetPassword(Request $request) {
+        $rules = [
+            'password_old' => 'required|min:6',
+            'password' => 'required|min:6|confirmed',
+            'password_confirmation' => 'required',
+        ];
+
+        $messages = [
+            'password_old.required' => 'Введите старый пароль',
+            'password.required' => 'Введите новый пароль',
+            'password_confirmation.required' => 'Введите пароль подтверждения',
+            'password_old.min' => 'Минимум 6 символов',
+            'password.min' => 'Минимум 6 символов',
+            'password.confirmed' => 'Пароль не совпадает',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator->errors());
+        }
+
+        $user = User::select('id','email')
+                    ->where('email','=',$request->get('email'))
+                    ->first();
+
+        if (empty($user)) {
+            return redirect()->back()->withErrors(['login' => 'Неверный логин или пароль']);
+        }
+
+        $user = Sentinel::findUserById($user->id);
+
+        $credentials = [
+            'email'    => $request->get('email'),
+            'password' => $request->get('password_old'),
+        ];
+
+        $check = Sentinel::validateCredentials($user, $credentials);
+        
+        if (empty($check)) {
+            return redirect()->back()->withErrors(['login' => 'Старый пароль или email не совпадают']);
+        }
+
+        $reminder = Reminder::create($user);
+
+        $code = $reminder->code;
+
+        if ($reminder = Reminder::complete($user, $code, $request->get('password')))
+        {   
+            session(['success_array' => ['caption' => 'Успешно!', 'text' => 'Пароль успешно обновлен']]);
+
+            return redirect('/');
+        }
+        else
+        {
+            return redirect()->back()->withErrors(['login' => 'Пароль не может быть обновлен']);
+        }
+    }
 }

@@ -46,7 +46,7 @@
 			<hr class="orngln col-lg-10 col-md-10 col-sm-10 col-xs-10">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: 0.7em 0 0 0;">
 				<p class="gray-text yad">WebMoney - кошелек</p>
-				<input class="edit-inputs inp-yadik" type="text" value="{{$user->wallet}}" placeholder="{{!empty($user->wallet) ? $user->wallet : 'Пример : R935624864095'}}">
+				<input class="edit-inputs inp-yadik" type="text" value="{{$user->wallet}}" name="wallet" placeholder="{{!empty($user->wallet) ? $user->wallet : 'Пример : R935624864095'}}">
 				<p class="gray-text yad or">или</p>
 				<button type="button" class="yadik" onClick='location.href="https://start.webmoney.ru/"'>ЗАВЕСТИ КОШЕЛЕК</button>
 			</div>

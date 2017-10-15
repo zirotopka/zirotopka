@@ -10,8 +10,9 @@
         <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="/ico/close_modal.png" alt=""></span></button>
 		<div class="input_money">
 			<p class="add_money">ВЫВОД СРЕДСТВ</p>
+      <p class="text-center">{{ 'Доступно '.$balance->sum.' руб.' }}</p>
 
-			<input type="text" placeholder="Сумма" class="money_inputs" name="sum" value="0 руб." id="sumFront">
+			<input type="text" placeholder="0 руб." class="money_inputs" name="sum" id="sumFront">
 			<input name="balanceСonstraints" type="hidden" value="{{ !empty($user->balance) ? $user->balance->sum : 0 }}" id="balanceСonstraints">
 
 			<form action="{{env('APP_URL').'/privat_office/withdrawalFunds/'.$user->id}}" method="POST" class="form-horizontal">
@@ -19,9 +20,9 @@
 				{{ csrf_field() }}
 				<input name="withdrawal_sum" type="hidden" value="0" id="sumBack">
 
-                <input type="submit" value="ПОПОЛНИТЬ" class="send">
-            </form>
-		</div>
+          <input type="submit" value="ВЫВЕСТИ" class="send">
+      </form>
+		  </div>
       </div>
     </div>
   </div>

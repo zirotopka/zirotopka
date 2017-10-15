@@ -39,34 +39,7 @@ html{
 	margin: 0 0 0 40%;
 }
 
-.replenish_btn{
-	height: 3.5em;
-	width: 12em;
-	background: #ff8a18;
-	color: white;
-	border-radius: 4px;
-	font-family: MuseoSansCyrl_100;
-	font-size: 0.8em;
-	margin: 3em 0 0 3%;
-}
-
-.replenish_btn:hover{
-	height: 3.7em;
-	width: 12.2em;
-	background-color: #ff8a18;
-	margin: 2.8em 0em 0 2.8%;
-}
-
-
-.replenish_btn:active{
-	height: 3.7em;
-	width: 12.2em;
-	background-color: #d9550e;
-	margin: 2.8em 0 0 2.8%;
-}
-
-.black_btn{
-	background-color: #232323;
+.balance_btn {
 	height: 3.5em;
 	width: 12em;
 	color: white;
@@ -76,22 +49,46 @@ html{
 	margin: 3em 0 0 3%
 }
 
-.black_btn:hover{
+.balance_btn:active {
+	width: 100%;
+	border-top: none;
+}
+
+.balance_btn:hover{
 	height: 3.7em;
 	width: 12.2em;
 	margin: 2.8em 0 0 2.8%;
 }
 
-.black_btn:active{
-	height: 3.7em;
-	width: 12.2em;
-	margin: 2.8em 0 0 2.8%;
+.replenish_btn {
+	background-color: #ff8a18;
+}
+
+.replenish_btn:active{
+	background-color: #d9550e;
+}
+
+.black_btn {
+	background-color: #232323;
+}
+
+.black_btn:active {
 	background-color: black;
 }
 
-.balance_table{
-	width: 100%;
-	border-top: none;
+.grey_btn {
+	background-color: grey;
+}
+
+.grey_btn:active {
+	background-color: grey;
+}
+
+.grey_btn:hover {
+	background-color: grey !important;
+	height: 3.5em;
+	width: 12em;
+	margin: 3em 0 0 3%
 }
 
 th, td{

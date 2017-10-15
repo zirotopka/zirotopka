@@ -8,7 +8,7 @@
 			@if(isset($pay_description))
 				<p>{{$pay_description}}</p>
 			@endif
-			<input type="text" placeholder="Сумма" class="money_inputs" name="sum" value="{{!empty($sum) ? number_format($sum, 0, '.', ' ') : 0}} руб." id="sumFront">
+			<input type="text" placeholder="0" class="money_inputs" name="sum" value="{{!empty($sum) ? number_format($sum, 0, '.', ' ') : ''}}" id="sumFront">
 
 			<form action="{{env('PAYMASTER_URL')}}" method="POST" class="form-horizontal">
 				<input name="LMI_MERCHANT_ID" type="hidden" value="{{env('PAYMASTER_LMI_MERCHANT_ID')}}">

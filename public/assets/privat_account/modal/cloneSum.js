@@ -1,16 +1,17 @@
 $( document ).ready(function() {
-	jQuery('body').on('change','#sumFront',function(){
+	jQuery('body').on('keyup','#sumFront',function(){
 		var thisInput = jQuery(this),
-			thisSum = parseInt(thisInput.val()),
-			modalWindos = thisInput.closest('.modal').eq(0),
-			backSum = modalWindos.find('#sumBack').eq(0);
+			RegEx=/\s/g,
+			thisSum = parseInt(thisInput.val().replace(RegEx,"")),
+			modalWindows = thisInput.closest('.modal').eq(0),
+			backSum = modalWindows.find('#sumBack').eq(0);
 
 		if (thisSum == NaN) {
 			backSum.val(0);
 			thisInput.val('');
 		} else {
 			backSum.val(thisSum);
-			thisInput.val(number_format(thisSum, 0, '.', ' ') + ' руб.');
+			thisInput.val(number_format(thisSum, 0, '.', ' '));
 		}
 	})
 

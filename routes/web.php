@@ -10,16 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['prefix' => '/', 'middleware' => ['check_password']], function () {
-	Route::get('/', ['uses' =>  'HomeController@index']);
-	Route::get('bonus', [ 'uses' => 'HomeController@bonus' ] );
-	Route::get('programm/{slug}', [ 'uses' => 'ProgrammController@index' ] );
-});
+Route::get('/', ['uses' =>  'HomeController@index']);
+Route::get('bonus', [ 'uses' => 'HomeController@bonus' ] );
+Route::get('programm/{slug}', [ 'uses' => 'ProgrammController@index' ] );
 
-Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
-	Route::get('password', [ 'uses' => 'UserController@setPassword' ] );
-	Route::post('password', [ 'uses' => 'UserController@postSetPassword' ] );
-});
+Route::get('forget_password', [ 'uses' => 'UserController@forgetPassword' ] );
+Route::post('forget_password', [ 'uses' => 'UserController@postForgetPassword' ] );
+
+// Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
+// 	Route::get('password', [ 'uses' => 'UserController@setPassword' ] );
+// 	Route::post('password', [ 'uses' => 'UserController@postSetPassword' ] );
+// });
 
 Route::post('get_comment_video', [ 'uses' => 'HomeController@get_comment_video' ] );
 

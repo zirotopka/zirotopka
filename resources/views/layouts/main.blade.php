@@ -162,6 +162,10 @@
         @if ($user = Sentinel::check())
             @include('privat_office._partials._immunity_modal',['user' => $user])
         @endif
+
+        @if (Session::has('success_array'))
+            @include('layouts.partials._success_modal',['data' => \Session::pull('success_array')])
+        @endif
 <!--
 <div class="tooltip_templates" style="display: none;">
     <span id="immun_tooltip_content">

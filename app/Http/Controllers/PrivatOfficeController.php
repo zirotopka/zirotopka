@@ -17,7 +17,21 @@ use App\Jobs\BonusDistribution;
 use Carbon\Carbon;
 
 class PrivatOfficeController extends Controller
-{
+{   
+    public $monthHuman = [
+        1 => 'января',
+        2 => 'февраля',
+        3 => 'марта',
+        4 => 'апреля',
+        5 => 'мая',
+        6 => 'июня',
+        7 => 'июля',
+        8 => 'августа',
+        9 => 'сентября',
+        10 => 'октября',
+        11 => 'ноября',
+        12 => 'декабря',
+    ];
     public function index($slug)
     {	
     	$user = Sentinel::getUser();
@@ -66,8 +80,10 @@ class PrivatOfficeController extends Controller
         //Проверка даты программы
         if (!empty($user->start_training_day) && empty($user->program_is_start)) {
             $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
+            $start_training_day->subDay();
+            $monthHuman = $this->monthHuman;
             
-            return view('privat_office._partials._program_comming_soon', ['user' => $user, 'start_training_day' => $start_training_day]); 
+            return view('privat_office._partials._program_comming_soon', ['user' => $user, 'start_training_day' => $start_training_day, 'monthHuman' => $monthHuman]); 
         }
         
         //Блокировка програм
@@ -260,6 +276,7 @@ class PrivatOfficeController extends Controller
             $user->pasport_series = $request->get('pasport_series');
             $user->surname = $request->get('surname');
             $user->first_name = $request->get('name');
+            $user->wallet = $request->get('wallet');
 
             $slug = User::getSlug($user->first_name, $user->last_name, $user->surname, $user->id);
             $user->slug = $slug;
@@ -276,7 +293,7 @@ class PrivatOfficeController extends Controller
             try {
                 $user->save();
 
-                return redirect('/'.$user->slug);
+                return redirect('/'.$user->slug.'/edit');
 
             } catch (Exception $e) {
                 return redirect()->back()->withErrors($e->getMessages());
@@ -310,6 +327,11 @@ class PrivatOfficeController extends Controller
 
         public function balance($slug){
         $user = Sentinel::getUser();
+        $balance = $user->balance;
+
+        if (empty($balance)) {
+            return view('errors.error_balance');
+        }
 
         $accruals = Accrual::select([
                 'id',
@@ -326,6 +348,7 @@ class PrivatOfficeController extends Controller
         $data = [
             'user' => $user,
             'accruals' => $accruals,
+            'balance' => $balance,
         ];
 
         return view('privat_office.balance', $data);

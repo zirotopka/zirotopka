@@ -7,6 +7,7 @@ jQuery.ajaxSetup({
 });
 
 $(document).ready(function(){
+	$('#success_form').modal('show');
 //	$('html').perfectScrollbar();
 	$(".rg_btn").click(function() {
 	    $('html,body').animate({

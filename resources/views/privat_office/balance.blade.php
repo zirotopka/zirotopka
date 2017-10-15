@@ -76,11 +76,22 @@
 			</table>
 		</div>
 		<div class="blns_btns">
-			<button class="replenish_btn" type="button" data-toggle="modal" data-target="#refer-pay">ПОПОЛНИТЬ</button>
-			<button class="black_btn" type="button" data-toggle="modal" data-target="#withdrawal_modal">ВЫВЕСТИ</button>
+			<?php
+				if (!empty($user->wallet)) {
+					$title_text = '';
+					$attr = '';
+				} else {
+					$title_text = "Введите номер WebMoney кошелька в личном кабинете";
+					$attr = 'disabled="disabled"';
+				}
+			?>
+			<button class="balance_btn replenish_btn" type="button" data-toggle="modal" data-target="#refer-pay">ПОПОЛНИТЬ</button>
+			<button class="balance_btn {{!empty($user->wallet) ? 'black_btn' : 'grey_btn'}}" type="button" data-toggle="modal" data-target="#withdrawal_modal" title="{{$title_text}}" data-toggle="tooltip" data-placement="top">ВЫВЕСТИ</button>
 		</div>
 	</div>
 	@include('privat_office._partials._refer_money_modal',['user' => $user, 'sum' => 0])
-	@include('privat_office._partials._withdrawal_modal',['user' => $user])
+	@if(!empty($user->wallet))
+		@include('privat_office._partials._withdrawal_modal',['user' => $user])
+	@endif
 @overwrite
 

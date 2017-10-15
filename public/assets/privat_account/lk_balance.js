@@ -9,4 +9,5 @@ $( document ).ready(function() {
 	});
     $('.table-scrolling').perfectScrollbar();
 
+    $('.balance_btn').tooltip();
 })

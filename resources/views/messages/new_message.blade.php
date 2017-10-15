@@ -23,8 +23,7 @@
 			<input name="sender_id" type="hidden" value="{{$user->id}}">
 			<input name="subject" type="text" placeholder="Тема:" class="msg_theme">
 			<br>
-			<textarea name="text" id="" cols="30" rows="10" placeholder="Ваш текст" class="msg_text">
-			</textarea>
+			<textarea name="text" id="" cols="30" rows="10" placeholder="Ваш текст" class="msg_text"></textarea>
 			<div id="attachment-container"></div>
 			
 		</form>

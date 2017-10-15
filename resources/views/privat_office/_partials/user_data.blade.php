@@ -41,8 +41,8 @@
 		</div>
 		<hr class="orngln col-lg-10 col-md-10 col-sm-10 col-xs-10">
 		<div class="pd mb-cct col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<p class="ctt gray-text">Яндекс - кошелёк</p>
-			<p class="orange-text">{{!empty($user->wallet) ? $user->wallet : 'Здесь будет яндекс - кошелек'}}</p>
+			<p class="gray-text yad">WebMoney - кошелек</p>
+			<p class="orange-text">{{!empty($user->wallet) ? $user->wallet : 'Здесь будет WebMoney - кошелек'}}</p>
 		</div>
 		<hr class="orngln col-lg-10 col-md-10 col-sm-10 col-xs-10">
 		<div class="pd mb-cct col-lg-12 col-md-12 col-sm-12 col-xs-12">

@@ -9,7 +9,7 @@
             
             <input class="login_input" id="email" type="email" name="email" placeholder="Почта" required="required">
             <input class="login_input" id="password" type="password" name="password" placeholder="Пароль" required="required">
-           
+  
             <input class="login_btn" type="submit" value="ВОЙТИ">
           </form>
           <a href="" id="open_reg" data-toggle="modal" data-target="#registr">Зарегистрироваться!</a>
@@ -25,6 +25,9 @@
             <a href="/social_login/facebook">
               <img src="/ico/icon-facebook.svg" alt="">
             </a>
+          </div>
+          <div>
+              <a href="{{env('APP_URL').'/forget_password'}}" class="pull-right">Забыли пароль?</a>
           </div>
         </div>
       </div>
