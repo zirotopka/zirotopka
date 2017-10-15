@@ -160,7 +160,7 @@
 
 <!--Описание программ-->
 		<?php
-			$current_group_stages = [];
+			$current_stages = [];
 			
 			if (!empty($current_training)) {
 				$current_stages = $current_training->stages;
@@ -172,11 +172,11 @@
 				@forelse ( $programm_stages as $programm_stage )
 					<?php
 				    	$exercive = $programm_stage->exercive;
+				    	$stage_files = [];
+				    	$stage_status_text = '';
 
 				    	if (count($current_stages) > 0) {
 				    		$current_stage = $current_stages->where('stage_id',$programm_stage->id)->first();
-				    		$stage_status_text = '';
-				    		$stage_files = [];
 
 				    		if (!empty($current_stage)) {
 				    			switch ($current_stage->status) {
