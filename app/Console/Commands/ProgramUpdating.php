@@ -68,12 +68,10 @@ class ProgramUpdating extends Command
                         if (empty($trainings)) {
                             \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by lack of training');
 
-<<<<<<< HEAD
+
                         if (count($trainings) == 0) {
                             \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by lack of training');
 
-=======
->>>>>>> 3f4ca19604620caa0e4a346a5058ae735f6d9d18
                             $user->status = 0;
                         } else {
                             $current_stages = $trainings->stages;
