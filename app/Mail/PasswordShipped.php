@@ -11,16 +11,16 @@ class PasswordShipped extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $msg;
+    public $password;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($msg)
+    public function __construct($password)
     {
-        $this->msg = $msg;
+        $this->password = $password;
     }
 
     /**
@@ -30,8 +30,8 @@ class PasswordShipped extends Mailable
      */
     public function build()
     {
-        return $this->from('reformstor@admin.one', 'Reformator One')
+        return $this->from('support@reformator.one', 'Reformator One')
                     ->subject('Регистрация Reformator One!')
-                    ->view('mail._template');
+                    ->view('mail._password_new',['password' => $this->password]);
     }
 }

@@ -17,20 +17,20 @@ class FileApiController extends Controller
 	 * Сохраняем файл
 	 */
     public function store_attachment(Request $request)
-    {
+    {   
         if ($request->hasFile('file'))
         {   
         	$rules = [
 	            'file' => 'mimes:jpeg,pjpeg,png,mpeg,mp4,3gpp,3gpp2,x-flv,x-ms-wmv',
 	        ];
 	        $messages = [
-	            'file.mimes' => 'Incorrect mimetypes',
+	            'file.mimes' => 'Некоректный тип файла',
 	        ];
 
 	        $validator = Validator::make($request->all(), $rules, $messages);
 
 	        if ($validator->fails()) {
-	            return response()->json(['code' => 400, 'text' => 'Incorrect mimetypes']);
+	            return response()->json(['code' => 400, 'text' => 'Некоректный тип файла']);
 	        }
 	       	//$user = $request->get('user');
 	        $user = Sentinel::getUser();

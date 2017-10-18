@@ -612,12 +612,10 @@
 		<img src="/image/mail/logo.png" alt=""   style="width: 15%;">
 	</header>
 	<div class="container" style="padding-top: 60px; margin-bottom: 60px; background: url('/image/mail/back_logo.png') no-repeat; background-size: contain;background-position: bottom;">
-		<h1 style="color: #da8836">АКТИВАЦИЯ АККАУНТА</h1>
-		<p style="font-size: 22px; margin: 40px 0px;">Пожалуйста, подтвердите Ваш электронный адрес, <a href=""><b>нажмите сюда.</b></a></p>
+		<h1 style="color: #da8836">СПАСИБО ЗА РЕГИСТРАЦИЮ</h1>
+		<p style="font-size: 22px; margin: 40px 0px;">Спасибо за регистрацию в системе Reformator.One</p>
 
-		<p style="font-size: 22px; margin: 40px 0px;">Если у вас возникнут сложности с подтверждением, напишите сюда: <b>support@reformator.one</b></p>
-
-		<a href="" style="text-decoration: none; border-radius: 30px;color: white;font-size: 22px;margin: 40px 0px;background-color: #da8836;display: inline-block;padding: 20px;">АКТИВИРОВАТЬ</a>
+		<p style="font-size: 22px; margin: 40px 0px;">Ваш пароль в системе: {{$password}}</p>
 	</div>
 	<footer class="container-fluid" style="background-color: #282828; padding: 40px">
 		<div class="container">

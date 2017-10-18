@@ -197,9 +197,9 @@ class User extends CartalystUser
         return false;
     }
 
-    public static function sendPassword($user, $msg) {
+    public static function sendPassword($user, $password) {
         Mail::to($user->email)
-                ->send(new PasswordShipped($msg));
+                ->send(new PasswordShipped($password));
 
         return 1;
     }

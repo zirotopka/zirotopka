@@ -612,12 +612,16 @@
 		<img src="/image/mail/logo.png" alt=""   style="width: 15%;">
 	</header>
 	<div class="container" style="padding-top: 60px; margin-bottom: 60px; background: url('/image/mail/back_logo.png') no-repeat; background-size: contain;background-position: bottom;">
-		<h1 style="color: #da8836">АКТИВАЦИЯ АККАУНТА</h1>
-		<p style="font-size: 22px; margin: 40px 0px;">Пожалуйста, подтвердите Ваш электронный адрес, <a href=""><b>нажмите сюда.</b></a></p>
+		<h1 style="color: #da8836">ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h1>
+		<p style="font-size: 22px; margin: 40px 0px;">Уважаемый(-ая) (Reformator).</p>
 
-		<p style="font-size: 22px; margin: 40px 0px;">Если у вас возникнут сложности с подтверждением, напишите сюда: <b>support@reformator.one</b></p>
+		<p style="font-size: 22px; margin: 40px 0px;">Нами был получен запрос на сброс вышего пароля. Для отмены запроса достаточно просто проигнорировать это письмо. Запрос утратит силу через 2 дня.</p>
 
-		<a href="" style="text-decoration: none; border-radius: 30px;color: white;font-size: 22px;margin: 40px 0px;background-color: #da8836;display: inline-block;padding: 20px;">АКТИВИРОВАТЬ</a>
+		<p style="font-size: 22px; margin: 40px 0px;">Для сброса пароля, перейдите, пожалуйста, по следующей ссылке:</p>
+
+		<a href=""></a>
+
+		<p style="font-size: 22px; margin: 40px 0px;">После перехода по ссылке, вы сможете ввести новый пароль.</p>
 	</div>
 	<footer class="container-fluid" style="background-color: #282828; padding: 40px">
 		<div class="container">

@@ -209,7 +209,7 @@
 										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
 									@endif 
 									@if ( !empty($programm_stage->time_exercive) )
-										<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,$programm_stage->time_exercive) }}</p>
+										<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,strtotime($programm_stage->time_exercive)) }}</p>
 									@endif 
 									<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
 								</div>

@@ -114,10 +114,6 @@ Route::post('api/file/store_attachment', ['uses' => 'Api\FileApiController@store
 
 Route::post('api/private_office/store_training', ['uses' => 'Api\PrivateOfficeApiController@store_training']);
 
-Route::any('test/test', function()
-{
-    return view('mail._activasion');
-});
 //Yandex
 // Route::any('yandex/CheckURL', ['uses' => 'Api\YandexController@checkURL']);
 // Route::any('yandex/CheckURLTest', ['uses' => 'Api\YandexController@checkURLTest']);
