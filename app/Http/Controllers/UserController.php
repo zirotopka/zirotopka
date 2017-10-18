@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManagerStatic as Image;
 
 use Carbon\Carbon;
+use App\Mail\ActivasionShipped;
+
+use Mail;
 
 class UserController extends Controller
 {	
@@ -98,8 +101,13 @@ class UserController extends Controller
             $user->referer_code = md5( date('Y-m-d').uniqid(rand(), true) );
 
             $activation = Activation::create($user);
-            $activation->completed = 1;
-            $activation->save();
+
+            $code = $activation->code;
+
+            Mail::to($user->email)
+                ->queue(new ActivasionShipped($user, $request->get("password"), $code));
+            // $activation->completed = 1;
+            // $activation->save();
 
             $role = Sentinel::findRoleBySlug("client");
             $role->users()->attach($user);
@@ -122,9 +130,11 @@ class UserController extends Controller
                 }
             }
 
-            Sentinel::authenticateAndRemember([ 'email' => $request->get('email'), 'password' => $request->get('password') ]);
+            //Sentinel::authenticateAndRemember([ 'email' => $request->get('email'), 'password' => $request->get('password') ]);
 
-            return redirect($user->slug);
+            session(['success_array' => ['caption' => 'Спасибо за регистрацию!', 'text' => 'На ваш почтовый ящик направлено письмо с подтверждением.']]);
+
+            return redirect('/');
         } else {
             return redirect()->back()->withErrors();
         }
@@ -149,6 +159,24 @@ class UserController extends Controller
     public function logout() {
         Sentinel::logout();
         return Redirect::to('/login');
+    }
+
+    public function activasion ($id, Request $request) {
+        $user = Sentinel::findById($id);
+
+        $password = $request->get('password');
+        $code = $request->get('code');
+
+        if (Activation::complete($user, $code))
+        {
+            Sentinel::authenticateAndRemember([ 'email' => $user->email, 'password' => $password ]);
+
+            return redirect($user->slug); 
+        }
+        else
+        {
+            return redirect('/')->withErrors(['activasion' => 'Неудачная активация. Просьба связаться с тех. поддержкой.']);
+        }
     }
 
     public function setPassword() {

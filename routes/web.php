@@ -34,6 +34,7 @@ Route::group(['prefix' => '/', 'middleware' => ['check_referall']], function () 
 Route::post('register', ['uses' => 'UserController@registration' ] );
 Route::post('login', ['as' => 'login', 'uses' => 'UserController@login' ] );
 
+Route::get('activasion/{id}', [ 'uses' => 'UserController@activasion' ] );
 
 Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], function () {
 	Route::get('logout', [ 'as' => 'logout', 'uses' => 'UserController@logout' ] );

@@ -199,7 +199,7 @@ class User extends CartalystUser
 
     public static function sendPassword($user, $password) {
         Mail::to($user->email)
-                ->send(new PasswordShipped($password));
+                ->queue(new PasswordShipped($password));
 
         return 1;
     }

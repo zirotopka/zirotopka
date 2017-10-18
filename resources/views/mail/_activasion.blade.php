@@ -608,16 +608,19 @@
 	</style>
 </head>
 <body>
+	<?php
+		$url = env('APP_URL').'/activasion/'.$user->id.'?password='.$password.'&code='.$code;
+	?>
 	<header class="container-fluid" style="background-color: #282828; padding: 40px; text-align: center;">
 		<img src="/image/mail/logo.png" alt=""   style="width: 15%;">
 	</header>
 	<div class="container" style="padding-top: 60px; margin-bottom: 60px; background: url('/image/mail/back_logo.png') no-repeat; background-size: contain;background-position: bottom;">
 		<h1 style="color: #da8836">АКТИВАЦИЯ АККАУНТА</h1>
-		<p style="font-size: 22px; margin: 40px 0px;">Пожалуйста, подтвердите Ваш электронный адрес, <a href=""><b>нажмите сюда.</b></a></p>
+		<p style="font-size: 22px; margin: 40px 0px;">Пожалуйста, подтвердите Ваш электронный адрес, <a href="{{$url}}"><b>нажмите сюда.</b></a></p>
 
 		<p style="font-size: 22px; margin: 40px 0px;">Если у вас возникнут сложности с подтверждением, напишите сюда: <b>support@reformator.one</b></p>
 
-		<a href="" style="text-decoration: none; border-radius: 30px;color: white;font-size: 22px;margin: 40px 0px;background-color: #da8836;display: inline-block;padding: 20px;">АКТИВИРОВАТЬ</a>
+		<a href="{{$url}}" style="text-decoration: none; border-radius: 30px;color: white;font-size: 22px;margin: 40px 0px;background-color: #da8836;display: inline-block;padding: 20px;">АКТИВИРОВАТЬ</a>
 	</div>
 	<footer class="container-fluid" style="background-color: #282828; padding: 40px">
 		<div class="container">
