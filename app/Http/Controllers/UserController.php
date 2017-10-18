@@ -18,6 +18,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 
 use Carbon\Carbon;
 use App\Mail\ActivasionShipped;
+use App\Mail\GetPasswordShipped;
 
 use Mail;
 
@@ -176,6 +177,82 @@ class UserController extends Controller
         else
         {
             return redirect('/')->withErrors(['activasion' => 'Неудачная активация. Просьба связаться с тех. поддержкой.']);
+        }
+    }
+
+    public function getPostPassword(Request $request) {
+        $email = $request->get('email');
+
+        $user = User::select('id','email','first_name','surname')->where('email','=',$email)->first();
+
+        if (! $user) {
+            return redirect()->back()->withErrors(['login' => 'Пользователь с таким email отсутствует']);
+        }
+
+        $sentinelUser = Sentinel::findUserById($user->id);
+
+        $sentinelUser->reminders()->delete();
+
+        $reminder = Reminder::create($sentinelUser);
+        $code = $reminder->code;
+
+        Mail::to($user->email)
+                ->queue(new GetPasswordShipped($user, $code));
+
+        session(['success_array' => ['caption' => 'Письмо отправлено!', 'text' => 'На ваш почтовый ящик направлено письмо с обновлением пароля.']]);
+
+        return redirect('/');
+    }
+
+    public function getPassword ($id, Request $request) {
+        $user = Sentinel::findById($id);
+
+        if (! $user) {
+            return redirect('/')->withErrors(['login' => 'Пользователь с таким email отсутствует']);
+        }
+
+        $code = $request->get('code');
+        $reminder = Reminder::exists($user);
+
+        if ($reminder->code == $code) {
+            return view('user._new_password', ['user' => $user, 'code' => $code]);
+        } else {
+            return redirect('/')->withErrors(['login' => 'Пользователь по email не найден. Обратитесь в тех. поддержку.']);
+        }
+    }
+
+    public function newPostPassword (Request $request) {
+        $rules = [
+            'password' => 'required|min:6|confirmed',
+            'password_confirmation' => 'required',
+        ];
+
+        $messages = [
+            'password.required' => 'Введите пароль',
+            'password.min' => 'Минимум 6 символов',
+            'password.confirmed' => 'Пароль не совпадает',
+
+            'password_confirmation.required' => 'Подтвердите пароль',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator->errors());
+        }
+
+        $user = Sentinel::findById($request->get('id'));
+        $code = $request->get('code');
+        $reminder = Reminder::exists($user);
+
+        if ($reminder = Reminder::complete($user, $code, $request->get('password'))) {
+            Sentinel::authenticateAndRemember([ 'email' => $user->email, 'password' => $request->get('password') ]);
+            
+            session(['success_array' => ['caption' => 'Обновление пароля', 'text' => 'Новый пароль успешно сохранен']]);
+
+            return redirect('/');
+        } else {
+            return redirect('/')->withErrors(['login' => 'Пароль не может быть обновлен. Обратитесь в тех. поддержку.']);
         }
     }
 

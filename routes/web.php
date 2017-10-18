@@ -14,6 +14,10 @@ Route::get('/', ['uses' =>  'HomeController@index']);
 Route::get('bonus', [ 'uses' => 'HomeController@bonus' ] );
 Route::get('programm/{slug}', [ 'uses' => 'ProgrammController@index' ] );
 
+Route::get('get_password/{id}', [ 'uses' => 'UserController@getPassword' ] );
+Route::post('get_post_password', [ 'uses' => 'UserController@getPostPassword' ] );
+Route::post('new_post_password', [ 'uses' => 'UserController@newPostPassword' ] );
+
 Route::get('forget_password', [ 'uses' => 'UserController@forgetPassword' ] );
 Route::post('forget_password', [ 'uses' => 'UserController@postForgetPassword' ] );
 

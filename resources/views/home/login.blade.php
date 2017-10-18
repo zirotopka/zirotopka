@@ -27,7 +27,7 @@
             </a>
           </div>
           <div>
-              <a href="{{env('APP_URL').'/forget_password'}}" class="pull-right">Забыли пароль?</a>
+              <a href="#" class="pull-right" data-toggle="modal" data-target="#get_password_form">Забыли пароль?</a>
           </div>
         </div>
       </div>

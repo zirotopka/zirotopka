@@ -532,6 +532,7 @@
     </div>
 	@include('home.registration',['user' => $user, 'referral' => $referral])
 	@include('home.login')
+    @include('user._get_password')
     @include('politics.user_agreements')
     @include('politics.partners')
 

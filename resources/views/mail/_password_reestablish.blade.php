@@ -608,18 +608,21 @@
 	</style>
 </head>
 <body>
+	<?php
+		$url = env('APP_URL').'/get_password/'.$user->id.'?code='.$code;
+	?>
 	<header class="container-fluid" style="background-color: #282828; padding: 40px; text-align: center;">
 		<img src="/image/mail/logo.png" alt=""   style="width: 15%;">
 	</header>
 	<div class="container" style="padding-top: 60px; margin-bottom: 60px; background: url('/image/mail/back_logo.png') no-repeat; background-size: contain;background-position: bottom;">
 		<h1 style="color: #da8836">ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h1>
-		<p style="font-size: 22px; margin: 40px 0px;">Уважаемый(-ая) (Reformator).</p>
+		<p style="font-size: 22px; margin: 40px 0px;">Уважаемый(-ая) {{$user->first_name}} {{$user->surname}} (Reformator).</p>
 
 		<p style="font-size: 22px; margin: 40px 0px;">Нами был получен запрос на сброс вышего пароля. Для отмены запроса достаточно просто проигнорировать это письмо. Запрос утратит силу через 2 дня.</p>
 
 		<p style="font-size: 22px; margin: 40px 0px;">Для сброса пароля, перейдите, пожалуйста, по следующей ссылке:</p>
 
-		<a href=""></a>
+		<a href="{{$url}}"><b>Сброс пароля</b></a>
 
 		<p style="font-size: 22px; margin: 40px 0px;">После перехода по ссылке, вы сможете ввести новый пароль.</p>
 	</div>
