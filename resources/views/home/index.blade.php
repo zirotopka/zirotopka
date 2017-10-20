@@ -1,11 +1,12 @@
 @extends('layouts.main')
 
 @section('css')
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet">
+    
     @parent
     <!-- Добавлять css тут -->
     <link href="/assets/home/reg-log_form.css" type="text/css" rel="stylesheet">
     <link href="//vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
-    <link href="/assets/css/main.css" type="text/css" rel="stylesheet">
     <link href="/assets/swiper/swiper.min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/video-btn.css">
 
