@@ -318,7 +318,108 @@
     /*
      * Profile user page
      */
-    .codrops-btn img{
-        margin: 0!important;
+    .right_edit_part{
+        padding: 90px 15px 0;
+        background: none;
+    }
+    .right_edit_part .row{
+        margin: 15px 0 0 0;
+        padding: 0;
+    }
+    .my_acc{
+        font-size: 16px;
+        margin: 0;
+    }
+    .m_usr_img{
+        width: 8em;
+    }
+    .m_usr_dscr{
+        padding: 9px 0;
+    }
+    .user-data-ctn{
+        margin-top: 30px;
+    }
+    #myself_info{
+        margin: 0;
+    }
+    .lft-info p,
+    .rt-info p{
+        width: 35%!important;
+        font-size: 1.1em!important;
+        margin: 0 15px 0 0!important;
+    }
+    .edit-inputs{
+        width: 48%;
+        margin: 0 0 15px 0;
+    }
+    .customSelect{
+        margin: 0 0 15px 0;
+        line-height: 2;
+        width: 14.5%;
+    }
+    .birthday{
+        width: 15.5%;
+    }
+    .pd div{
+        padding: 0;
+    }
+    .pd input{
+        width: 38%;
+    }
+    .pd .wq,
+    .pd .sg{
+        display: inline-block;
+        width: auto!important;
+        margin: 6px 0 0 15px!important;
+    }
+    .pd .wq,
+    .pd div .qw:first-child{
+        width: 35%!important;
+        margin: 6px 15px 0 0!important;
+    }
+    .orngln{
+        margin: 15px 0 calc(20px - 0.7em);
+        width: calc(100% - 30px);
+    }
+    .yad{
+        margin: 0 0 15px 0;
+    }
+    .inp-yadik{
+        width: 100%!important;
+        margin: 0 auto!important;
+        height: auto;
+        padding: 6px;
+        text-align: center;
+    }
+    .yad.or{
+        margin: 15px 0;
+    }
+    .yadik{
+        width: 60%;
+        height: auto;
+        margin: 0 calc(50% - 30%);
+        padding: 12px 0;
+        font-size: 14px;
+    }
+    .mb-cct{
+        margin: 0;
+    }
+    .mb-cct .gray-text{
+        margin: 5px 0 15px 0;
+    }
+    .txt-con{
+        margin: 15px 0 0;
+        font-size: 14px;
+    }
+    .save-btn{
+        margin: 8px auto 30px;
+        width: 60%;
+        height: auto;
+        padding: 12px 0;
+        font-size: 14px;
+        float: none;
+        font-weight: 700;
+        position: relative;
+        left: calc(60% - 40%);
     }
 }
