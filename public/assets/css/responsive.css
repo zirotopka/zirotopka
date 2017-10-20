@@ -215,4 +215,43 @@
         opacity: 0.35;
     }
 
+
+    .reg_modal{
+        width: 90%;
+    }
+
+    .reg_modal p{
+        margin: 0;
+    }
+
+    .login_form .modal-content .modal-body h4,
+    .reg_modal .modal-content .modal-body h3{
+        font-size: 26px;
+        margin: 15px 0;
+    }
+
+    .login_input{
+        width: 90%;
+        padding: 0 0 0 10px;
+    }
+
+    .login_form .modal-content .modal-body .user_data #email{
+        margin: 10px 0 0 0;
+    }
+
+    .login_form .modal-content .modal-body .user_data #password{
+        margin: 10px 0 0 0;
+    }
+
+    .login_btn{
+        width: 60%;
+        height: auto;
+        margin: 30px 0 0 0;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    .login_form .modal-content .modal-body a{
+        margin: 15px 0 0 0;
+    }
 }
