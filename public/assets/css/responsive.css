@@ -224,6 +224,10 @@
         margin: 0;
     }
 
+    .reg_modal div{
+        margin: 0;
+    }
+
     .login_form .modal-content .modal-body h4,
     .reg_modal .modal-content .modal-body h3{
         font-size: 26px;
@@ -253,5 +257,38 @@
 
     .login_form .modal-content .modal-body a{
         margin: 15px 0 0 0;
+    }
+
+    .vk_fs{
+        margin: 0;
+    }
+    .vk_fs a img{
+        width: 30px;
+        border-radius: 50%;
+    }
+    .vk_fs a{
+        margin: 5px 3px 0!important;
+        width: 30px;
+    }
+
+    .registr_btn{
+        margin-bottom: 15px;
+    }
+
+    .reg_enter_across{
+        margin-top: 15px;
+    }
+
+    .enter_across{
+        margin: 0;
+    }
+
+    .reg_modal .modal-content{
+        background-position: 15em 10em;
+    }
+
+    .reg_scr_content h1{
+        font-size: 16px;
+        line-height: 1.5;
     }
 }
