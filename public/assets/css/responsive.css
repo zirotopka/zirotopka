@@ -41,11 +41,12 @@
     .info_cont .n6{
         padding: 0;
         margin: 20px 0 0!important;
-        height: 160px;
+        height: 180px;
         overflow: hidden;
     }
     .info_cont p{
-        font-size: 14px;
+        font-size: 13px;
+        line-height: 1.5;
     }
 
     .disp_line{
@@ -93,6 +94,7 @@
     }
     .how_cnt img{
         width: 40%!important;
+        margin-top: 30px;
     }
     .orng{
         font-size: 20px;
@@ -159,9 +161,9 @@
         padding: 12px 0 10px!important;
         margin: 30px 0 0!important;
     }
-
     .mission img{
         margin: 5px -8px 10px;
+        width: 200px;
     }
     .mission p{
         font-size: 14px;
@@ -169,8 +171,11 @@
         line-height: 1.5;
     }
     footer .prgrm_list{
-        padding: 62px 0 0;
+        padding: 81px 0 0;
         line-height: 1.5;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
     footer .prgrm_list ul li a,
     .ofrta ul li a, .reg_f_s a{
@@ -290,5 +295,21 @@
     .reg_scr_content h1{
         font-size: 16px;
         line-height: 1.5;
+    }
+
+    footer{
+        height: auto;
+    }
+
+    .ip{
+        margin: 30px 0;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .choice,
+    .freedom,
+    .profit{
+        background-position: center 0;
     }
 }
