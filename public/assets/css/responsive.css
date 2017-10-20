@@ -83,7 +83,7 @@
         margin: 0;
     }
 
-    .how_screen,
+    .how-screen,
     .asd{
         margin: 0;
         padding: 0;
@@ -116,6 +116,11 @@
 
     .comments-screen{
         margin: 0;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: -10px;
     }
     .swiper-container{
         padding: 0;
@@ -187,4 +192,27 @@
         padding: 30px 15px 0!important;
         margin: 0;
     }
+
+    .connect_price{
+        background-position: 23vw 10px!important;
+    }
+    .connect_screen_shader p{
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .start_shader_gray p{
+        margin: 61.5vw 0 0 2vw!important;
+        opacity: 0.35;
+        font-size: 34vw!important;
+    }
+
+    .pro_shader_gray p,
+    .pow_shader_gray p,
+    .run_shader_gray p,
+    .runp_shader_gray p{
+        margin: 22vw 0 0 0;
+        opacity: 0.35;
+    }
+
 }
