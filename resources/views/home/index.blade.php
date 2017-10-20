@@ -185,17 +185,17 @@
             <div class="how-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_5">
                 <h2>КАК ЭТО РАБОТАЕТ</h2>
                 <div style="height: 43vw; max-height: 470px;" class="asd">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 how_cnt choice">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 how_cnt choice">
                         <img src="/ico/chs.svg" alt="">
                         <p class="orng">Вы выбираете сами</p>
                         <p class="who_txt">Подходящий план тренировок<br>в зависимости от подготовки.<br>Удобная дата начала тренировок.</p>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 how_cnt freedom">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 how_cnt freedom">
                         <img src="/ico/frdm.svg" alt="">
                         <p class="orng frdsd">Свобода действий</p>
                         <p class="who_txt">Самостоятельное планирование<br>времени и места для выполнения<br>заданий. Объединение<br class="visible-xs"> и мотивация<br>друзей и близких.</p>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 how_cnt profit">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 how_cnt profit">
                         <img src="/ico/prft.svg" alt="">
                         <p class="orng ewwq">Возможность зарабатывать</p>
                         <p class="who_txt">Вознаграждения через бонусную<br>систему платформы. Поощрение<br>и подарки для самых активных.</p>
