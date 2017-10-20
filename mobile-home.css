@@ -1,0 +1,190 @@
+@media only screen and (max-width : 768px) {
+    .reg-screen{
+        margin-bottom: 0;
+    }
+    .reg_log_btns{
+        margin: 14px;
+    }
+    .reg_btn,
+    .log_btn{
+        height: 24px;
+        font-size: 10px;
+        width: auto;
+        padding: 0 10px;
+    }
+
+    .info-screen,
+    info_naming{
+        padding: 0;
+        margin: 0;
+    }
+    .info_naming h2,
+    .programm-screen h2,
+    .bonus-screen h2,
+    .how-screen h2,
+    .comments-screen h2,
+    .questions-screen h2{
+        margin: 30px 0 0;
+        display: block;
+    }
+    .info_cont{
+        margin: 0;
+    }
+    .info_cont ul{
+        margin: 0;
+    }
+    .info_cont .n1,
+    .info_cont .n2,
+    .info_cont .n3,
+    .info_cont .n4,
+    .info_cont .n5,
+    .info_cont .n6{
+        padding: 0;
+        margin: 20px 0 0!important;
+        height: 160px;
+        overflow: hidden;
+    }
+    .info_cont p{
+        font-size: 14px;
+    }
+
+    .disp_line{
+        margin: 30px 0 0 30%;
+    }
+
+    .programm-screen{
+        margin: 0;
+    }
+    .programm_list{
+        overflow: hidden;
+        padding: 30px 0 0 0;
+        margin: 0;
+    }
+    .rone_other_progr{
+        margin: 0;
+    }
+
+    .right_bonus_part{
+        padding: 30px 0 0 0;
+        margin: 0;
+    }
+    .right_bonus_part p{
+        line-height: 2;
+        margin: 0;
+    }
+    .bonus_btn{
+        height: auto;
+        font-size: 14px;
+        width: 55%;
+        padding: 12px 0 10px;
+        margin: 30px 0 0;
+    }
+    .bonus-screen{
+        margin: 0;
+    }
+
+    .how_screen,
+    .asd{
+        margin: 0;
+        padding: 0;
+    }
+    .how_cnt{
+        margin: 30px auto 0;
+    }
+    .how_cnt img{
+        width: 40%!important;
+    }
+    .orng{
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    .who_txt{
+        font-size: 14px;
+    }
+
+    .how-screen button{
+        height: auto!important;
+        font-size: 14px!important;
+        width: 70%!important;
+        padding: 12px 0 10px!important;
+        margin: 30px 0 0!important;
+    }
+
+    .disp_line{
+        height: 1px;
+    }
+
+    .comments-screen{
+        margin: 0;
+    }
+    .swiper-container{
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .questions-screen{
+        margin: 0;
+        padding: 0 0 25px 0!important;
+    }
+
+    .left_quest,
+    .right_quest{
+        padding: 0 0 0 15px;
+        background: none!important;
+    }
+    .ref,
+    .prg{
+        margin: 30px 0 0 0;
+        padding: 0;
+    }
+    .left_quest ul .else,
+    .right_quest ul .else{
+        margin: 5px 0 0 0;
+        font-size: 18px;
+    }
+    .left_quest ul,
+    .right_quest ul{
+        padding: 0 15px 0 15.5vw;
+    }
+
+    .connect_btn{
+        height: auto!important;
+        font-size: 14px!important;
+        width: 70%!important;
+        padding: 12px 0 10px!important;
+        margin: 30px 0 0!important;
+    }
+
+    .mission img{
+        margin: 5px -8px 10px;
+    }
+    .mission p{
+        font-size: 14px;
+        padding: 0;
+        line-height: 1.5;
+    }
+    footer .prgrm_list{
+        padding: 62px 0 0;
+        line-height: 1.5;
+    }
+    footer .prgrm_list ul li a,
+    .ofrta ul li a, .reg_f_s a{
+        font-size: 14px;
+        margin-top: 0;
+        line-height: 1.5;
+    }
+    .reg_f_s ul,
+    .ofrta ul{
+        padding: 0;
+    }
+    .reg_f_s{
+        width: 100%!important;
+        padding: 30px 15px 0!important;
+        margin: 0;
+    }
+    .ofrta{
+        width: 100%!important;
+        padding: 30px 15px 0!important;
+        margin: 0;
+    }
+}
