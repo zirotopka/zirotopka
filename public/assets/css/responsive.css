@@ -169,9 +169,10 @@
         font-size: 14px;
         padding: 0;
         line-height: 1.5;
+        margin: 20px 0 0 0;
     }
     footer .prgrm_list{
-        padding: 81px 0 0;
+        padding: 84px 0 0;
         line-height: 1.5;
         position: absolute;
         right: 0;
@@ -311,5 +312,13 @@
     .freedom,
     .profit{
         background-position: center 0;
+    }
+
+
+    /*
+     * Profile user page
+     */
+    .codrops-btn img{
+        margin: 0!important;
     }
 }
