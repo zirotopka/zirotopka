@@ -20,14 +20,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.css">
     <link rel="stylesheet" href="/assets/lightbox/dist/css/lightbox.min.css">
     <link rel="shortcut icon" href="{{ asset('ico/faviсon.png') }}" type="image/png" />
-    <link href="/assets/css/responsive.css" type="text/css" rel="stylesheet">
+
 
 	<title>Reformator.ONE</title>
 
     @section('css')
         
     @show
-	
+
+    <link href="/assets/css/responsive.css" type="text/css" rel="stylesheet">
+    
 </head>
 <body id="top">
         <div id="st-container" class="st-container">
