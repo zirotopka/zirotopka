@@ -422,6 +422,7 @@
         position: relative;
         left: calc(60% - 40%);
     }
+<<<<<<< HEAD
 
 
 
@@ -465,4 +466,6 @@
         font-size: 16px;
         margin: 30px 15px;
     }
+=======
+>>>>>>> f5152a860649e26256a15342b3e66d2bfd8d20c8
 }
