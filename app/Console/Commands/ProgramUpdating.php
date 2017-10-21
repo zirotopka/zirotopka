@@ -41,14 +41,15 @@ class ProgramUpdating extends Command
      * @return mixed
      */
     public function handle()
-    {
+    {   
         $users_query = User::select([
             'id',
             'last_updated_at',
             'timezone',
             'current_day',
             'current_programm_id',
-        ])->where('status','=',1);
+            'status',
+        ])->where('program_is_start','=',1)->where('status','=',1);
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
@@ -62,9 +63,7 @@ class ProgramUpdating extends Command
 
                 $userHour = $userNow->hour;
                 
-                if ($userHour >= 22) {
-                    
-
+                if ($userHour >= 22) {  
                     if ($nowDay > $lastDay) {
                         $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
 
@@ -108,7 +107,53 @@ class ProgramUpdating extends Command
                         $user->last_updated_at = $userNow;
                         $user->save();
                     }
-                //}
+                }
+            }
+        });
+
+        //Начало программы
+        $users_query = User::select([
+            'id',
+            'program_is_start',
+            'start_training_day',
+            'timezone',
+        ])->where('program_is_start','=',0);
+
+        $users_query->chunk(100, function($users){
+            foreach($users as $user) {
+                $userTimezone = User::getTimezone($user);
+
+                $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
+                $start_timestamp = $start_training_day->timestamp;
+
+                $userNow = Carbon::now($userTimezone);
+                $now_timestamp = $userNow->timestamp;
+
+                if ($now_timestamp >= $start_timestamp) {
+                    $user->program_is_start = 1;
+                    $user->last_updated_at = $userNow;
+                    $user->save();
+
+                    \Log::info('Пользователь №'.$user->id.' начал программу!');
+                } else {
+                    $start_training_day->subDay();
+                    $start_year = $start_training_day->year;
+                    $start_month = $start_training_day->month;
+                    $start_day = $start_training_day->day;
+
+                    $now_year = $userNow->year;
+                    $now_month = $userNow->month;
+                    $now_day = $userNow->day;
+                    $now_hour =  $userNow->hour;
+
+                    if (($start_year == $now_year) && ($start_month == $now_month) && ($start_day == $now_day) && ($now_hour >= 22)) {
+                        $user->program_is_start = 1;
+                        $user->last_updated_at = $userNow;
+                        $user->save();
+
+                        \Log::info('Пользователь №'.$user->id.' начал программу!');
+                    }
+                }
             }
         });
     }
