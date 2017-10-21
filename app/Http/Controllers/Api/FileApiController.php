@@ -18,6 +18,8 @@ class FileApiController extends Controller
 	 */
     public function store_attachment(Request $request)
     {   
+        $file = $request->file('file');
+        \Log::info($file->getClientOriginalName());
         if ($request->hasFile('file'))
         {   
         	$rules = [
