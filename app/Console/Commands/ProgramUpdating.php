@@ -55,12 +55,15 @@ class ProgramUpdating extends Command
                 $userTimezone = User::getTimezone($user);
 
                 $userNow = Carbon::now($userTimezone);
-                $userHour = $userNow->hour;
+                $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone);
+
+                $lastDay = $last_updated_at->day;
                 $nowDay = $userNow->day;
 
-                //if ($userHour >= 22) {
-                    $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone);
-                    $lastDay = $last_updated_at->day;
+                $userHour = $userNow->hour;
+                
+                if ($userHour >= 22) {
+                    
 
                     if ($nowDay > $lastDay) {
                         $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
