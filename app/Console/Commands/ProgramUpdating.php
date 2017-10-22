@@ -42,6 +42,7 @@ class ProgramUpdating extends Command
      */
     public function handle()
     {   
+        \Log::info('Программа запущена');
         $users_query = User::select([
             'id',
             'last_updated_at',
