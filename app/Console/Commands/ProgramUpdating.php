@@ -131,6 +131,7 @@ class ProgramUpdating extends Command
 
                 if ($now_timestamp >= $start_timestamp) {
                     $user->program_is_start = 1;
+                    $user->status = 1;
                     $user->last_updated_at = $userNow;
                     $user->save();
 
