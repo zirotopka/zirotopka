@@ -31,7 +31,7 @@
     <link href="/assets/css/responsive.css" type="text/css" rel="stylesheet">
     
 </head>
-<body id="top">
+<body id="top" class="{{$bodyCss}}">
         <div id="st-container" class="st-container">
             @if ($user = Sentinel::check())
                 <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
