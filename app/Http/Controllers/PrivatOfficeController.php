@@ -446,6 +446,10 @@ class PrivatOfficeController extends Controller
             return redirect()->back()->withErrors(['error' => 'Ваш id не совпадает с id вывода средств. Обратитесь в поддержку']);
         }
 
+        if (empty($user->is_programm_pay) || empty($user->status)) {
+            return redirect()->back()->withErrors(['error' => 'Ваш аккаунт заморожен или не куплена програма']);
+        }
+
         if (empty($balance)) {
             return view('errors.error_balance');
         }
