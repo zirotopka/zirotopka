@@ -51,7 +51,7 @@ class ProgramUpdating extends Command
             'current_day',
             'current_programm_id',
             'status',
-        ])->where('program_is_start','=',1)->where('status','=',1);
+        ])->whereNotNull('current_programm_id','=',0)->where('program_is_start','=',1)->where('status','=',1);
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
@@ -121,7 +121,7 @@ class ProgramUpdating extends Command
             'program_is_start',
             'start_training_day',
             'timezone',
-        ])->where('program_is_start','=',0);
+        ])->whereNotNull('current_programm_id','=',0)->where('program_is_start','=',0);
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
