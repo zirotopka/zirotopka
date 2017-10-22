@@ -13,17 +13,11 @@
 			<form action="{{env('PAYMASTER_URL')}}" method="POST" class="form-horizontal">
 				<input name="LMI_MERCHANT_ID" type="hidden" value="{{env('PAYMASTER_LMI_MERCHANT_ID')}}">
 				<input name="LMI_CURRENCY" type="hidden" value="643">
-				<input name="LMI_PAYMENT_DESC" type="hidden" value="Reformoney">
+				<input name="LMI_PAYMENT_DESC" type="hidden" value="ReferMoney">
 				<input name="LMI_PAYER_PHONE_NUMBER" type="hidden" value="{{$user->phone}}">
 				<input name="LMI_PAYER_EMAIL" type="hidden" value="{{$user->email}}">
             	<input name="PAYER_ID" type="hidden" value="{{$user->id}}">	
-            	<input name="LMI_PAYMENT_AMOUNT" type="hidden" value="{{!empty($sum) ? $sum : 0}}" class="sumBack">	
-
-            	<input name="LMI_SHOPPINGCART.ITEMS[N].NAME" type="hidden" value="ReferMoney">	
-            	<input name="LMI_SHOPPINGCART.ITEMS[N].QTY" type="hidden" value="{{!empty($sum) ? $sum : 0}}" class="sumBack">	
-				<input name="LMI_SHOPPINGCART.ITEMS[N].PRICE" type="hidden" value="1">	
-				<input name="LMI_SHOPPINGCART.ITEMS[N].TAX" type="hidden" value="no_vat">	
-
+            	<input name="LMI_PAYMENT_AMOUNT" type="hidden" value="{{!empty($sum) ? $sum : 0}}" id="sumBack">	
                 <input type="submit" value="ПОПОЛНИТЬ" class="send">
             </form>
 		</div>

@@ -681,6 +681,7 @@
         line-height: 1.5;
         padding: 0 15px;
     }
+<<<<<<< HEAD
 
     #partners .modal-dialog,
     #user_agreements .modal-dialog{
@@ -699,4 +700,6 @@
         margin-top: 20px;
         line-height: 1.5;
     }
+=======
+>>>>>>> c7d6a172d73dd8bace2b322e198346c3b9b694a3
 }

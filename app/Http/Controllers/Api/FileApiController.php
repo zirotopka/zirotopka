@@ -41,12 +41,6 @@ class FileApiController extends Controller
 
             $file = $request->file('file');
 
-            $size = $file->getclientSize(); 
-
-            if ($size > 104857600) {
-                return response()->json(['code' => 404, 'text' => 'Файл не должен превышать 100 мб']);
-            }
-
             $fileName = time() . '-' . $file->getClientOriginalName();
             $destinationPath = public_path().$request->get('destinationPath');
             $file->move($destinationPath, $fileName);

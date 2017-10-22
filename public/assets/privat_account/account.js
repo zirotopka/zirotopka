@@ -95,11 +95,10 @@ $( document ).ready(function() {
 	            showConfirmButton: false
 	        });
 
-			var formData = new FormData(),
-				slug = jQuery('#current_slug').val();
+			var formData = new FormData();
 
 			formData.append( 'file', file );
-		    formData.append( 'destinationPath', '/trainings/' + slug + '/' );
+		    formData.append( 'destinationPath', '/trainings/' );
 
 		    $.ajax({
 		        url: '/api/file/store_attachment',
