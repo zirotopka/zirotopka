@@ -22,8 +22,8 @@ class ProgrammExerciveTableSeeder extends Seeder
     	}
 
         $exercive_array = [
-    		['id' => 1, 'slug' => '', 'name' => 'Выпады назад на месте', 'description' => 'Бедро ниже параллели, колено не выходит вперед', 'file_url' => '/video/trainings/ROneStart/01_Prisedaniya_na_meste.mp4', 'preview' => '/image/preview/выпады-назад-на-месте.jpg' ],
-    		['id' => 2, 'slug' => '', 'name' => 'Приседания на месте', 'description' => 'Бедро ниже параллели, спина прямая.', 'file_url' => '/video/trainings/ROneStart/02_Vipady_nazad_na_meste.mp4', 'preview' => '/image/preview/приседания-на-месте.jpg' ],
+    		['id' => 1, 'slug' => '', 'name' => 'Приседания на месте', 'description' => 'Бедро ниже параллели, спина прямая.', 'file_url' => '/video/trainings/ROneStart/01_Prisedaniya_na_meste.mp4', 'preview' => '/image/preview/приседания-на-месте.jpg' ],
+    		['id' => 2, 'slug' => '', 'name' => 'Выпады назад на месте', 'description' => 'Бедро ниже параллели, колено не выходит вперед', 'file_url' => '/video/trainings/ROneStart/02_Vipady_nazad_na_meste.mp4', 'preview' => '/image/preview/выпады-назад-на-месте.jpg' ],
     		['id' => 3, 'slug' => '', 'name' => 'Выпады назад крест-накрест', 'description' => 'Осанка прямая', 'file_url' => '/video/trainings/ROneStart/03_Vipady_nazad_krest-nakrest.mp4', 'preview' => '/image/preview/выпады-назад-крест-накрест.jpg' ],
     		['id' => 4, 'slug' => '', 'name' => 'Боковая планка', 'description' => 'Никаких прогибов.', 'file_url' => '/video/trainings/ROneStart/04_planka_bokovaya.mp4', 'preview' => '/image/preview/планка-боковая.jpg' ],
     		['id' => 5, 'slug' => '', 'name' => 'Планка классическая стойка на предплечьях', 'description' => 'Осанка ровная, в пояснице без прогиба, ноги на ширине таза.', 'file_url' => '/video/trainings/ROneStart/05_planka_classic.mp4', 'preview' => '/image/preview/планка-классическая.jpg' ],

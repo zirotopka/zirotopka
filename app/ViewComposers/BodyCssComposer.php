@@ -23,6 +23,10 @@ class BodyCssComposer
      * @return void
      */
     public function compose(View $view) {
-        $view->with('bodyCss', Route::current()->uri);
+        $route = Route::current();
+
+        if (isset($route)) {
+            $view->with('bodyCss', $route->uri);
+        }
     }
 }

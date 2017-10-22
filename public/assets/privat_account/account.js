@@ -50,7 +50,8 @@ $( document ).ready(function() {
 	        	console.log(result);
 	        	if (result['code'] == 200) {
 					 swal({
-					   title: 'Файлы по тренировке успешно отправлены!',
+					   title: 'Спасибо!',
+					   text: result['text'],
 					   showCloseButton: true,
 					   showConfirmButton: false,
 					 }).then(

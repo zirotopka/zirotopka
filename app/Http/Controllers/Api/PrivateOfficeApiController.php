@@ -6,6 +6,8 @@ use Cartalyst\Sentinel\Laravel\Facades\Sentinel;//Временно
 use Illuminate\Http\Request;
 use App\User;
 use App\File;
+use App\ProgrammStage;
+use App\ProgrammDay;
 use App\Training;
 use App\TrainingStages;
 use App\Http\Controllers\Controller;
@@ -31,8 +33,34 @@ class PrivateOfficeApiController extends Controller
         }
 
         $programm_stages = json_decode($request->get('programm_stages'));
+        $programm_stages_count = count($programm_stages);
+        $program_is_done = false;
+        $left_exercises = 0;
+        $stages_count = 0;
         
-        if (count($programm_stages) > 0) {
+        if ($programm_stages_count > 0) {
+            $current_program_day = ProgrammDay::select('id','day','status')
+                                                ->where('programm_id','=',$user->current_programm_id)
+                                                ->where('day','=',$user->current_day)
+                                                ->first();
+            if (!empty($current_program_day)) {
+                if (!empty($current_program_day->status)) {
+                    $stages = ProgrammStage::select('id','status')
+                                        ->where('programm_day_id','=',$current_program_day->id)
+                                        ->with('exercive')
+                                        ->get();
+                    $stages_count = count($stages);
+
+                    if ($stages_count == $programm_stages_count) {
+                        $program_is_done = true;
+                    } else {
+                        $left_exercises = abs($stages_count - $programm_stages_count);
+                    }
+                } else {
+                    $program_is_done = true;
+                }
+            }
+
             $training = Training::where('program_day','=',$user->current_day)
                               ->where('user_id','=',$user->id)
                               ->with('stages')
@@ -97,7 +125,12 @@ class PrivateOfficeApiController extends Controller
                 DB::commit();
             }
 
-            return response()->json(['code' => 200, 'text' => 'Training is saved']); 
+            if ($program_is_done) {
+                return response()->json(['code' => 200, 'text' => 'Программа успешно загружена и отправлена на обработку.']); 
+            } else {
+                return response()->json(['code' => 200, 'text' => 'Программа успешно загружена. Выполните оставшиесь задания.']); 
+            }
+            
         } else {
             return response()->json(['code' => 404, 'text' => 'Files not found']);
         }

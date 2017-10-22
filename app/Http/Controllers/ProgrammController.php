@@ -154,8 +154,8 @@ class ProgrammController extends Controller
 
             $start_training_day = Carbon::parse( $request->get('program_date_input'), $timezone );
             $now = Carbon::now($timezone);
-            $tomorrow = clone $now;
-            $tomorrow->addDay();
+            // $tomorrow = clone $now;
+            // $tomorrow->addDay();
 
             $user->sex = $request->get('sex');
             $user->start_training_day = $start_training_day;
@@ -169,9 +169,7 @@ class ProgrammController extends Controller
                 return redirect()->back()->withErrors(['error' => 'Выбранная вами дата уже прошла']);
             }
 
-            if (($now->month == $start_training_day->month && $now->day == $start_training_day->day) ||
-                ($tomorrow->month == $start_training_day->month && $tomorrow->day == $start_training_day->day && $now->hour >= 22)
-            ){
+            if ($now->month == $start_training_day->month && $now->day == $start_training_day->day && $now->hour >= 22){
                 $user->program_is_start = 1;
             } 
 

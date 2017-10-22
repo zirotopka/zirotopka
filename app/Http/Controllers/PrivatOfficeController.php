@@ -80,7 +80,7 @@ class PrivatOfficeController extends Controller
         //Проверка даты программы
         if (!empty($user->start_training_day) && empty($user->program_is_start)) {
             $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
-            $start_training_day->subDay();
+            // $start_training_day->subDay();
             $monthHuman = $this->monthHuman;
             
             return view('privat_office._partials._program_comming_soon', ['user' => $user, 'start_training_day' => $start_training_day, 'monthHuman' => $monthHuman]); 
