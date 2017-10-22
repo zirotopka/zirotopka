@@ -681,4 +681,22 @@
         line-height: 1.5;
         padding: 0 15px;
     }
+
+    #partners .modal-dialog,
+    #user_agreements .modal-dialog{
+        width: 96vw;
+        margin: 60px auto 2vw;
+    }
+    #partners h2,
+    #user_agreements h2{
+        line-height: 1.5;
+    }
+    #partners .off,
+    #partners ol,
+    #user_agreements ol{
+        font-size: 12px;
+        padding: 0;
+        margin-top: 20px;
+        line-height: 1.5;
+    }
 }
