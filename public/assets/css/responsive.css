@@ -466,9 +466,11 @@
 
 
     .rg_check_in{
-        margin-top: 40vh!important;
-        height: 100vh;
+        margin-top: 60px!important;
+    }
+    .zagl{
         background: none;
+        margin: auto;
     }
     .rg_check_in .zagl h2{
         font-size: 22px;
@@ -479,10 +481,58 @@
         margin: 20px 0;
     }
     .rg_check_in .zagl div{
-        width: 100%;
+        width: 100%!important;
     }
     .known{
         font-size: 14px;
         text-transform: uppercase;
+    }
+
+
+    .frs-left{
+        margin: 30px 0 0 0;
+        padding: 0;
+    }
+    .rstart-logo{
+        padding: 0 0 0 15px;
+        margin: 0;
+    }
+    .rstart-logo img{
+        width: 55px;
+    }
+    .rstart-logo p{
+        font-size: 26px;
+        margin: 0;
+    }
+
+    .rstart-txt-cnt{
+        padding: 0 15px;
+        width: 100%;
+        margin: 0;
+    }
+    .for_whm{
+        margin: 0;
+    }
+    .for_whm p{
+        font-size: 16px;
+        vertical-align: middle;
+        margin: 0;
+    }
+    .for_whm img{
+        width: 60px;
+        vertical-align: middle;
+    }
+    .rst_ctn{
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+    }
+    .rstart-txt-cnt button{
+        height: auto;
+        width: auto;
+        font-size: 12px;
+        padding: 12px 24px;
+        line-height: 1;
+        margin: 20px 0 30px;
     }
 }
