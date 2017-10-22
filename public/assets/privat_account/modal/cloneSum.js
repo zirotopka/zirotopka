@@ -4,19 +4,13 @@ $( document ).ready(function() {
 			RegEx=/\s/g,
 			thisSum = parseInt(thisInput.val().replace(RegEx,"")),
 			modalWindows = thisInput.closest('.modal').eq(0),
-			backSum = modalWindows.find('.sumBack');
+			backSum = modalWindows.find('#sumBack').eq(0);
 
 		if (thisSum == NaN) {
-			jQuery.each(backSum,function(index, value){
-				jQuery(this).val(0);
-			});
-
+			backSum.val(0);
 			thisInput.val('');
 		} else {
-			jQuery.each(backSum,function(index, value){
-				jQuery(this).val(thisSum);
-			});
-
+			backSum.val(thisSum);
 			thisInput.val(number_format(thisSum, 0, '.', ' '));
 		}
 	})

@@ -462,4 +462,223 @@
         font-size: 16px;
         margin: 30px 15px;
     }
+
+
+
+    .rg_check_in{
+        margin-top: 60px!important;
+    }
+    .zagl{
+        background: none;
+    }
+    .rg_check_in .zagl h2{
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .rg_check_in .zagl .razrb{
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    .rg_check_in .zagl div{
+        width: 100%!important;
+    }
+    .known{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+
+    .frs-left{
+        margin: 30px 0 0 0;
+        padding: 0;
+    }
+    .rstart-logo{
+        padding: 0 0 0 15px;
+        margin: 0;
+    }
+    .rstart-logo img{
+        width: 55px;
+    }
+    .rstart-logo p{
+        font-size: 26px;
+        margin: 0;
+    }
+
+    .rstart-txt-cnt{
+        padding: 0 15px;
+        width: 100%;
+        margin: 0;
+    }
+    .for_whm{
+        margin: 0;
+    }
+    .for_whm p{
+        font-size: 16px;
+        vertical-align: middle;
+        margin: 0;
+    }
+    .for_whm img{
+        width: 60px;
+        vertical-align: middle;
+    }
+    .rst_ctn{
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+    }
+    .rstart-txt-cnt button{
+        height: auto;
+        width: auto;
+        font-size: 12px;
+        padding: 12px 24px;
+        line-height: 1;
+        margin: 20px 0 30px;
+    }
+
+    .rstart-img-cnt{
+        margin: 0 auto;
+        float: none;
+        width: 100%;
+    }
+    .frs_imgs{
+        width: 15%;
+    }
+    .rstart-img-cnt p{
+        font-size: 16px;
+        margin: 10px 0 20px;
+    }
+
+    .tcount-screen{
+        margin: 0;
+        padding: 0 15px;
+        height: 40vw;
+    }
+    .prgr_name_st{
+        font-size: 35vw;
+        text-align: center;
+        width: 100%;
+        left: 0;
+    }
+    .tcount-screen .pdd{
+        padding: 10% 0 0 0;
+    }
+    .home_content hr{
+        display: none;
+    }
+    .tc_t{
+        font-size: 9px;
+        font-weight: 100;
+    }
+    .tc_d{
+        font-size: 26px;
+    }
+
+    .info-screen{
+        display: none;
+    }
+    .info-screen h2{
+        font-size: 16px;
+    }
+    .info-screen .swiper-container{
+        margin-top: 15px;
+    }
+    .ruls-screen{
+        height: auto;
+        margin: 0;
+    }
+    .ruls-screen h2{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .ruls-screen p{
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 20px 0 30px;
+    }
+    .ruls-screen div{
+        width: 50%;
+        padding: 0;
+        min-height: 130px;
+        margin: 0;
+    }
+    .ruls-screen img{
+        width: 60px;
+        margin: 0;
+    }
+
+    .bons-screen{
+        background: none;
+        margin: 60px 0 0!important;
+    }
+    .bons-screen h1{
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 30px 0 0;
+    }
+    .bons-screen p{
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 20px 0 0;
+    }
+    .bons-screen button{
+        height: auto;
+        font-size: 10px;
+        padding: 12px 24px;
+        line-height: 1;
+        margin: 30px 15px 0;
+    }
+
+    .bons-how-screen{
+        margin: 30px 0 0;
+    }
+    .bons-how-screen h2{
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .how-content{
+        font-size: 12px;
+        margin: 20px 0 0;
+        line-height: 1.5;
+    }
+
+    .bons-about-screen{
+        margin: 0 0 30px;
+    }
+    .bons-about-screen h2{
+        font-size: 22px;
+        line-height: 1.5;
+        margin-top: -30px;
+    }
+    .about-icon-content{
+        margin: 0;
+    }
+    .about-icons{
+        width: 60px;
+        height: auto;
+    }
+    .bons-about-screen p{
+        font-size: 12px;
+        margin: 10px 0 0;
+    }
+    .bons-about-screen .ab-ct{
+        margin: 20px 0 0;
+    }
+
+    .bons-pay-screen{
+        margin: 0 0 30px 0;
+    }
+    .bons-pay-screen h2{
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .pay_right{
+        background-size: 90%;
+        background-position: center;
+        padding: 0;
+    }
+    .pay_left{
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 0 15px;
+    }
 }

@@ -33,7 +33,6 @@
 				<b>.START</b>
 			</a>
 		</div>
-		<input type="hidden" id="current_slug" name="current_slug" value="{{$user->slug}}">
 <!--Календарь-->
 		
 		@if ( !empty($programm_days) )
