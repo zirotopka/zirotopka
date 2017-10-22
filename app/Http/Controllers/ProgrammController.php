@@ -45,7 +45,6 @@ class ProgrammController extends Controller
             case "r.one_pro":                $programm = Programm::select([
                     'id',
                     'description',
-                    'feed',
                     'cost',
                     'slug',
                     'name',
