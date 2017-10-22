@@ -462,4 +462,27 @@
         font-size: 16px;
         margin: 30px 15px;
     }
+
+
+
+    .rg_check_in{
+        margin-top: 40vh!important;
+        height: 100vh;
+        background: none;
+    }
+    .rg_check_in .zagl h2{
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .rg_check_in .zagl .razrb{
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    .rg_check_in .zagl div{
+        width: 100%;
+    }
+    .known{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
 }
