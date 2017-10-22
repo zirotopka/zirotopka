@@ -642,7 +642,7 @@
     }
 
     .bons-about-screen{
-
+        margin: 0 0 30px;
     }
     .bons-about-screen h2{
         font-size: 22px;
@@ -659,5 +659,26 @@
     .bons-about-screen p{
         font-size: 12px;
         margin: 10px 0 0;
+    }
+    .bons-about-screen .ab-ct{
+        margin: 20px 0 0;
+    }
+
+    .bons-pay-screen{
+        margin: 0 0 30px 0;
+    }
+    .bons-pay-screen h2{
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .pay_right{
+        background-size: 90%;
+        background-position: center;
+        padding: 0;
+    }
+    .pay_left{
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 0 15px;
     }
 }
