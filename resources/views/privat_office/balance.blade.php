@@ -76,11 +76,21 @@
 		</div>
 		<div class="blns_btns">
 			<?php
-				if (!empty($user->wallet)) {
-					$title_text = '';
-					$attr = '';
-				} else {
-					$title_text = "Введите номер WebMoney кошелька в личном кабинете";
+				$title_text = '';
+				$attr = '';
+
+				if (empty($user->wallet)) {
+					$title_text .= "Введите номер WebMoney кошелька в личном кабинете.";
+					$attr = 'disabled="disabled"';
+				}
+					
+				if (empty($user->is_programm_pay)) {
+					$title_text .= " Вам необходимо купить программу тренировок.";	
+					$attr = 'disabled="disabled"';
+				}
+
+				if (empty($user->status)) {
+					$title_text .= " Ваш аккаунт заморожен.";	
 					$attr = 'disabled="disabled"';
 				}
 			?>
