@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use App\User;
 use App\Training;
 use App\ProgrammDay;
+use App\ProgrammStage;
 
 use Carbon\Carbon;
 
@@ -42,7 +43,7 @@ class ProgramUpdating extends Command
      */
     public function handle()
     {   
-        \Log::info('Программа запущена');
+        \Log::info('Обновление программ запущенно');
         $users_query = User::select([
             'id',
             'last_updated_at',
@@ -57,56 +58,58 @@ class ProgramUpdating extends Command
                 $userTimezone = User::getTimezone($user);
 
                 $userNow = Carbon::now($userTimezone);
-                $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone);
-
-                $lastDay = $last_updated_at->day;
-                $nowDay = $userNow->day;
-
-                $userHour = $userNow->hour;
+                $userNowStartDay = clone $userNow;
+                $userNowStartDay->startOfDay();
+                $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone)->startOfDay();
+                $difference = $last_updated_at->diffInDays($userNowStartDay,false);
                 
-                if ($userHour >= 22) {  
-                    if ($nowDay > $lastDay) {
-                        $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
+                if ($difference > 0) {           
+                    //Разница в 1 день
+                    $userHour = $userNow->hour;
 
-                        if (count($trainings) == 0) {
-                            \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by lack of training');
+                    if ($userHour >= 22) {
+                        $current_program_day = ProgrammDay::select('id','day','status')
+                                                ->where('programm_id','=',$user->current_programm_id)
+                                                ->where('day','=',$user->current_day)
+                                                ->first();        
 
-                            $user->status = 0;
-                        } else {
-                            $current_stages = $trainings->stages;
+                        if (!empty($current_program_day)) {
+                            if (!empty($current_program_day->status)) {
+                                //Обязательный день
 
-                            if (count($current_stages) <= 0) {
-                                \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by null stages');
-                                $user->status = 0;
-                            } else {
-                                $current_program_day = ProgrammDay::select('id','day','status')
-                                                            ->where('programm_id','=',$user->current_programm_id)
-                                                            ->where('day','=',$user->current_day)
-                                                            ->first();
+                                $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
 
-                                if (!empty($current_program_day)) {
-                                    if (!empty($current_program_day->status)) {
-                                        //Обязательный день
-                                        $programm_stages = ProgrammStage::select('id','status')
+                                if (count($trainings) == 0) {
+                                    \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by lack of training');
+
+                                    $this->user_update ($user, $userNow, 0);
+                                } else {
+                                    $current_stages = $trainings->stages;
+                                    
+                                    if (count($current_stages) <= 0) {
+                                        \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by null stages');
+                                        $this->user_update ($user, $userNow, 0);
+                                    } else {
+                                        $programm_stages_count = ProgrammStage::select('id','status')
                                                             ->where('programm_day_id','=',$current_program_day->id)
                                                             ->with('exercive')
-                                                            ->get();
+                                                            ->count();
 
-                                        if (count($current_stages) < count($programm_stages)) {
+                                        if (count($current_stages) < count($programm_stages_count)) {
                                             \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by few stages');
-                                            $user->status = 0;
+                                            $this->user_update ($user, $userNow, 0);
+                                        } else {
+                                            $this->user_update ($user, $userNow, 1);
                                         }
                                     }
-                                } else {
-                                    //Ошибка дня
-                                    \Log::error('ProgramUpdating: User №'.$user->id.' has no program day');
                                 }
+                            } else {
+                                $this->user_update ($user, $userNow, 1);
                             }
+                        } else {
+                            //Ошибка дня
+                            \Log::error('ProgramUpdating: User №'.$user->id.' has no program day');
                         }
-
-                        $user->current_day = $user->current_day + 1;
-                        $user->last_updated_at = $userNow;
-                        $user->save();
                     }
                 }
             }
@@ -125,6 +128,7 @@ class ProgramUpdating extends Command
                 $userTimezone = User::getTimezone($user);
 
                 $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
+                $start_training_day->hour = 22;
                 $start_timestamp = $start_training_day->timestamp;
 
                 $userNow = Carbon::now($userTimezone);
@@ -138,7 +142,6 @@ class ProgramUpdating extends Command
 
                     \Log::info('Пользователь №'.$user->id.' начал программу!');
                 } else {
-                    $start_training_day->subDay();
                     $start_year = $start_training_day->year;
                     $start_month = $start_training_day->month;
                     $start_day = $start_training_day->day;
@@ -158,5 +161,14 @@ class ProgramUpdating extends Command
                 }
             }
         });
+    }
+
+    public function user_update ($user, $userNow, $status) {
+        $user->status = $status;
+        $user->current_day = $user->current_day + 1;
+        $user->last_updated_at = $userNow;
+        $user->save();
+
+        \Log::info('Пользователь №'.$user->id.' перешел на новый день програмы №'.$user->current_day);
     }
 }

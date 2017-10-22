@@ -53,10 +53,14 @@ class PrivatOfficeController extends Controller
             return view('privat_office._partials._choose_program_form', ['user' => $user, 'programs' => $programs]);
         }
 
-        $currentProgramDayStatus = $user->current_program_day_status;
+        $current_program_day = ProgrammDay::select('id','day','status')
+                                ->where('programm_id','=',$user->current_programm_id)
+                                ->where('day','=',$user->current_day)
+                                ->first();        
+        $currentProgramDayStatus = $current_program_day->status;
 
         //Оплата програм
-        if (!empty($currentProgramDayStatus->status)) {
+        if (!empty($currentProgramDayStatus)) {
             if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
                 $program_cost = $user->current_program->cost;
                 $parents = $user->parents;
@@ -64,6 +68,11 @@ class PrivatOfficeController extends Controller
                 if (count($parents) > 0) {
                     $program_cost = $program_cost * 0.9;
                 }
+
+                if (!empty($user->status)) {
+                    $user->status = 0;
+                    $user->save();
+                } 
 
                 //Проверяем наличие средств на балансе
                 if ($balance->sum >= $program_cost) {
