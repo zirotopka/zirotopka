@@ -130,7 +130,7 @@
                 </div>
                 <hr>
                 <div class="bons-pay-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_4">
-                    <h2>О ПЛАТЕЖНОМ <br class="visible-xs">СЕРВИСЕ ЯНДЕКС</h2>
+                    <h2>О ПЛАТЕЖНОМ <br class="visible-xs">СЕРВИСЕ WebMoney</h2>
                     <div class="pay_right visible-xs col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="mfc">
                             <img src="/ico/smartphone.jpg" class="smartphone">
