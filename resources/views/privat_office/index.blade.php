@@ -198,22 +198,25 @@
 				    		}
 				    	}
 				    ?>
-					@if ( !empty($exercive) )
-						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
-							<form class="prog-form">
-								<div class="prog-txt-container">	
-									<p class="prog-txt prog-name">
-										{{$exercive->name.$stage_status_text}}
-									</p>
-									@if ( !empty($programm_stage->repeat_count) )
-										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
-									@endif 
-									@if ( !empty($programm_stage->time_exercive) )
-										<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,strtotime($programm_stage->time_exercive)) }}</p>
-									@endif 
-									<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
-								</div>
-<!--VIDEO-->
+					<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<form class="prog-form">
+							<div class="prog-txt-container">	
+								<p class="prog-txt prog-name">
+									{{(!empty($exercive) ? $exercive->name : 'Легкий бег').$stage_status_text}}
+								</p>
+								@if ( !empty($programm_stage->repeat_count) )
+									<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
+								@endif 
+								@if ( !empty($programm_stage->time_exercive) )
+									<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,strtotime($programm_stage->time_exercive)) }}</p>
+								@endif 
+
+								<p class="prog-txt prog-descr" style="margin-bottom:  2em;">
+									{{!empty($exercive) ? $exercive->description : ''}}
+								</p>
+							</div>
+							
+							@if (!empty($exercive))
 								<div class="video_holder" data-id="{{$exercive->id}}">
 									<?php
 								    	$preview = $exercive->previews->first();
@@ -228,37 +231,44 @@
 							    	<div class="mask"></div>
 							    	<img class="btn-play" src="/ico/play.svg" alt="">
 								</div>
-								<div class="otchet" data-programm-stage="{{$programm_stage->id}}">
-									<div class="attachment-container">
-										@if (count($stage_files) > 0) 
-											@foreach ($stage_files as $file)
-												<div class="attachment-item attachment_block">
-													@if ($file->file_type == 2)
-														<img class="attachment-img" id="attachment-img" src="{{$file->preview_url}}">
-													@else
-														<img class="attachment-img" id="attachment-img" src="/ico/video-default.png">
-													@endif
-													<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>
-													<input type="hidden" class="attachment-file" name="{{'attachment['.uniqid().']'}}" value="{{$file->file_url}}">
-													<span class="attachment-span">{{!empty($file->name) ? $file->name : 'Загруженный файл'}}</span>
-												</div>
-											@endforeach
-										@endif
-									</div>
-									<div class="otch_hover">
-										<div class="load-btn">
-											<img class="load" src="/ico/load.png" alt="">
-											<p class="load-text">Загрузить отчёт</p>
-										</div>
-										<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
-									</div>
+							@else
+								<div class="video_holder">
+									<img src="{{ env('APP_URL').'/image/preview/легкий-бег.jpg' }}" alt="" style="width: 100%;">
+									<div class="mask"></div>
 								</div>
-									<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
+							@endif
+
+							<div class="otchet" data-programm-stage="{{$programm_stage->id}}">
+								<div class="attachment-container">
+									@if (count($stage_files) > 0) 
+										@foreach ($stage_files as $file)
+											<div class="attachment-item attachment_block">
+												@if ($file->file_type == 2)
+													<img class="attachment-img" id="attachment-img" src="{{$file->preview_url}}">
+												@else
+													<img class="attachment-img" id="attachment-img" src="/ico/video-default.png">
+												@endif
+												<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>
+												<input type="hidden" class="attachment-file" name="{{'attachment['.uniqid().']'}}" value="{{$file->file_url}}">
+												<span class="attachment-span">{{!empty($file->name) ? $file->name : 'Загруженный файл'}}</span>
+											</div>
+										@endforeach
+									@endif
 								</div>
-									<p class="load-text">Загрузить отчёт</p> -->
-							</form>
-						</div>
-					@endif
+								<div class="otch_hover">
+									<div class="load-btn">
+										<img class="load" src="/ico/load.png" alt="">
+										<p class="load-text">Загрузить отчёт</p>
+									</div>
+									<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
+								</div>
+							</div>
+								<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
+							</div>
+								<p class="load-text">Загрузить отчёт</p> -->
+						</form>
+					</div>
+					
 				@empty
 				@endforelse
 			</div>		

@@ -52,7 +52,7 @@ class ProgrammExerciveTableSeeder extends Seeder
     		['id' => 26, 'slug' => '', 'name' => 'Присед и махи', 'description' => 'Вперед, назад, в стороны. Соблюдаем все основные правила писеданий.', 'file_url' => '/video/trainings/ROneStart/26_prised_i_mahi.mp4', 'preview' => '/image/preview/присед+махи-в-разные-стороны.jpg' ],
     		['id' => 27, 'slug' => '', 'name' => 'Прыжки на скакалке', 'description' => '', 'file_url' => '/video/trainings/ROneStart/27_prizki_na_skakalke.mp4', 'preview' => '/image/preview/прыжки-на-скакалке.jpg' ],
     		['id' => 28, 'slug' => '', 'name' => 'Колобок', 'description' => 'Упор лежа, одна рука за голову и встречное движение противоположному колену с паузой 1сек..', 'file_url' => '/video/trainings/ROneStart/28_kolobok.mp4', 'preview' => '/image/preview/колобок.jpg' ],
-    		['id' => 29, 'slug' => 'Руки за головой или вытянуты перед собой, ноги стараться не отрывать.', 'name' => 'Гиперэкстензия', 'description' => '', 'file_url' => '/video/trainings/ROneStart/29_giperextensia.mp4', 'preview' => '/image/preview/гиперэкстензия.jpg' ],
+    		['id' => 29, 'slug' => '', 'name' => 'Гиперэкстензия', 'description' => 'Руки за головой или вытянуты перед собой, ноги стараться не отрывать.', 'file_url' => '/video/trainings/ROneStart/29_giperextensia.mp4', 'preview' => '/image/preview/гиперэкстензия.jpg' ],
     		['id' => 30, 'slug' => '', 'name' => 'Разминка', 'description' => '', 'file_url' => '/video/trainings/ROneStart/30_razminka.mp4', 'preview' => '/image/preview/разминка.jpg' ],
     	];
 
