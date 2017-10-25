@@ -62,12 +62,13 @@ class ProgramUpdating extends Command
                 $userNowStartDay->startOfDay();
                 $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone)->startOfDay();
                 $difference = $last_updated_at->diffInDays($userNowStartDay,false);
-                
+                 
                 if ($difference > 0) {           
                     //Разница в 1 день
                     $userHour = $userNow->hour;
 
                     if ($userHour >= 22) {
+
                         $current_program_day = ProgrammDay::select('id','day','status')
                                                 ->where('programm_id','=',$user->current_programm_id)
                                                 ->where('day','=',$user->current_day)
@@ -121,7 +122,7 @@ class ProgramUpdating extends Command
             'program_is_start',
             'start_training_day',
             'timezone',
-        ])->whereNotNull('current_programm_id','=',0)->where('program_is_start','=',0);
+        ])->whereNotNull('current_programm_id')->where('program_is_start','=',0);
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
