@@ -51,7 +51,7 @@ class ProgramUpdating extends Command
             'current_day',
             'current_programm_id',
             'status',
-        ])->whereNotNull('current_programm_id','=',0)->where('program_is_start','=',1)->where('status','=',1);
+        ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('status','=',1);
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
