@@ -26,7 +26,7 @@ class BodyCssComposer
         $route = Route::current();
 
         if (isset($route)) {
-            $view->with('bodyCss', str_replace(['{','}'], '', $route->uri));
+            $view->with('bodyCss', str_replace('/','-',str_replace(['{','}'], '', $route->uri)));
         }
     }
 }
