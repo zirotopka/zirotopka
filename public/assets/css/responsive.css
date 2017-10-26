@@ -808,7 +808,14 @@
         margin: 60px 0 0 0;
         height: 50px;
     }
-    .little_menu li {
+    .little_menu li,
+    .little_menu li:hover,
+    .little_menu li:active,
+    .little_menu li:focus,
+    .little_menu .send,
+    .little_menu .send:hover,
+    .little_menu .send:active,
+    .little_menu .send:focus{
         margin-top: 0;
         height: 100%!important;
         vertical-align: top;
@@ -816,15 +823,19 @@
     .little_menu ul {
         margin: 0;
     }
+    .add_img{
+        margin: 0;
+    }
 
 
     .new_message{
         padding: 0 15px;
-        margin: 140px 0;
+        margin: 125px 0;
     }
     .new-msg{
         margin: 0;
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 1;
     }
     .new_message input,
     .new_message textarea{
@@ -843,11 +854,35 @@
         width: 100%;
     }
     .new_message .send_btn_align input{
-        width: 60%;
+        width: 40%;
         letter-spacing: 1px;
     }
+    .new_message .send_btn_align .write_button{
+        padding: 8px 0;
+        font-size: 14px;
+        line-height: 1;
+    }
+    .new_message .send_btn_align .lbl_fl{
+
+    }
     #attachment-container{
-        padding: 15px 0;
         width: 100%!important;
+        padding: 5px 0;
+        margin: 0;
+    }
+
+    .messages-type .right_edit_part{
+        padding: 125px 15px 15px;
+        width: 100%;
+    }
+    .messages-type .message_list{
+        position: static;
+        padding: 0;
+    }
+    .messages-type .right_edit_part .row{
+        margin: 0;
+    }
+    .messages-type .st-pusher{
+        height: auto;
     }
 }
