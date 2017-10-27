@@ -145,6 +145,20 @@ class UserController extends Controller
      * Логин
      */
     public function login(Request $request) {
+        $user = User::where('email','=',$request->get('email'))->first();
+
+        if (empty($user)) {
+            return redirect()->back()->withErrors(['Внимание!' => 'Неверный логин или пароль']);
+        }
+
+        $activation = Activation::exists($user);
+
+        if (!empty($activation)) {
+            if (empty($activation->completed)) {
+                return redirect()->back()->withErrors(['Внимание' => 'Активируйте свой аккаунт']);
+            }
+        }
+
         $user = Sentinel::authenticateAndRemember([ 'email' => $request->get('email'), 'password' => $request->get('password') ]);
 
         if( $user === false ) {
