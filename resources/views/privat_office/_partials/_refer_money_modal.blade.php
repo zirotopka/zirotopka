@@ -16,17 +16,16 @@
 				<input name="LMI_PAYMENT_DESC" type="hidden" value="ReforMoney">
 				<input name="LMI_PAYER_PHONE_NUMBER" type="hidden" value="{{$user->phone}}">
 				<input name="LMI_PAYER_EMAIL" type="hidden" value="{{$user->email}}">
-            	<input name="PAYER_ID" type="hidden" value="{{$user->id}}">	
-            	<input name="LMI_PAYMENT_AMOUNT" type="hidden" value="{{!empty($sum) ? $sum : 0}}" class="sumBack">	
-                <input type="submit" value="ПОПОЛНИТЬ" class="send">
+      	<input name="PAYER_ID" type="hidden" value="{{$user->id}}">	
+      	<input name="LMI_PAYMENT_AMOUNT" type="hidden" value="{{!empty($sum) ? $sum : 0}}" class="sumBack">	
 
-                <input name="LMI_PAYMENT_AMOUNT" type="hidden" value="{{!empty($sum) ? $sum : 0}}" class="sumBack">	
+      	<input name="LMI_SHOPPINGCART.ITEMS[0].NAME" type="hidden" value="ReferMoney">	
+          <input name="LMI_SHOPPINGCART.ITEMS[0].QTY" type="hidden" value="{{!empty($sum) ? $sum : 0}}" class="sumBack">	
+          <input name="LMI_SHOPPINGCART.ITEMS[0].PRICE" type="hidden" value="1">	
+          <input name="LMI_SHOPPINGCART.ITEMS[0].TAX" type="hidden" value="no_vat">	
 
-            	<input name="LMI_SHOPPINGCART.ITEMS[0].NAME" type="hidden" value="ReferMoney">	
-                <input name="LMI_SHOPPINGCART.ITEMS[0].QTY" type="hidden" value="{{!empty($sum) ? $sum : 0}}" class="sumBack">	
-                <input name="LMI_SHOPPINGCART.ITEMS[0].PRICE" type="hidden" value="1">	
-                <input name="LMI_SHOPPINGCART.ITEMS[0].TAX" type="hidden" value="no_vat">	
-            </form>
+          <input type="submit" value="ПОПОЛНИТЬ" class="send">
+      </form>
 		</div>
       </div>
     </div>
