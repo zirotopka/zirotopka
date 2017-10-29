@@ -476,13 +476,13 @@
                             <a href="#" data-toggle="modal" data-target="#registr">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://facebook.com/reformator.one/">
                                 <img src="/ico/fb.png" alt="">
                             </a>
-                            <a href="#">
+                            <a href="https://vk.com/reformatorone">
                                 <img src="/ico/vk.png" alt="">
                             </a>
-                            <a href="#">
+                            <a href="https://instagram.com/reformator.one">
                                 <img src="/ico/inst.png" alt="">
                             </a>
                         </li>

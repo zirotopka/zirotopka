@@ -61,10 +61,10 @@
                     <h2>КАК ЭТО РАБОТАЕТ</h2>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <p class="how-content col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            Участником бонусной программы могут быть только<br>действующие участники любой из программ R.ONE. <br> Вы приглашаете своих партнёров в проект, давая<br>скидку на доступ и получить 500р с каждой <br> оплаты.
+                            Участником бонусной программы могут быть только<br>действующие участники любой из программ R.ONE. <br> Вы приглашаете своих друзей в проект и получаете баллы (мы называем их Reformoney). Эти баллы Вы можете конвертировать на WebMoney.
                         </p>
                         <p class="how-content col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            Начиная со 2 линии Вы получаете пассивный доход<br>от партнёров Вашей команды. Так же Ваши участники<br>следующей за вами линии тоже начинают получать<br>доход от тех людей, которых пригласили в проект Вы<br>или участники вашей линии.
+                            Еcли Ваши друзья приглашают новых участников, Вы так же накапливаете баллы.
                         </p>
                     </div>
                     <embed class="mobimg visible-xs" src="/ico/mbonus.svg">
@@ -119,18 +119,18 @@
                         <div class="ab-ct col-xs-12 col-sm-4 col-md-4 col-lg-4">
                             <img src="/ico/garanty.svg" class="about-icons">
                             <p>
-                                Мы используем <br class="visible-sm">SSL-сертификат<br class="visible-md"> для <br class="hidden-lg hidden-md">безопасности передачи<br> персональных данных<br>и защиты всех платежей
+                                Мы используем <br class="visible-sm">SSL-сертификат<br class="visible-md"> для <br class="hidden-lg hidden-md">безопасности передачи<br> персональных данных<br>и защиты всех платежей.
                             </p>
                         </div>
                         <div class="ab-ct col-xs-12 col-sm-4 col-md-4 col-lg-4">
                             <img src="/ico/payments.svg" class="about-icons">
-                            <p>Мы принимаем платежи<br>и осуществляем выплаты только<br>через проверенных партнёров,<br>таких как Яндекс.</p>
+                            <p>Мы работаем только с проверенными компаниями по взаиморасчётам, такие как WebMoney и Paymaster.</p>
                         </div>
                     </div>                    
                 </div>
                 <hr>
                 <div class="bons-pay-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_4">
-                    <h2>О ПЛАТЕЖНОМ <br class="visible-xs">СЕРВИСЕ ЯНДЕКС</h2>
+                    <h2>О ПЛАТЕЖНОМ <br class="visible-xs">СЕРВИСЕ WEBMONEY</h2>
                     <div class="pay_right visible-xs col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="mfc">
                             <img src="/ico/smartphone.jpg" class="smartphone">
@@ -143,7 +143,7 @@
                     </div>
                     <div class="pay_left col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <p>
-                            Мы готовы доверять денежные вопросы только<br class="hidden-xs">надёжным партнёрам, при этом хотим<br class="hidden-xs">чтобы все выплаты были доступны для участников<br class="hidden-xs">как можно быстрее. <br class="hidden-xs">Поэтому используем удобные сервисы Яндекс.
+                            Мы готовы доверять вопросы взаиморасчёта только<br class="hidden-xs">надёжным партнёрам, при этом хотим<br class="hidden-xs">чтобы все выплаты были доступны для участников<br class="hidden-xs">как можно быстрее. <br class="hidden-xs">Поэтому используем удобные сервисы WebMoney.
                         </p>
                     </div>
                 </div>
