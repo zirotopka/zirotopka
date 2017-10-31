@@ -41,7 +41,7 @@
                     <div class="rstart-txt-cnt col-xs-7 col-sm-7 col-md-7 col-lg-7">
                         <div class="for_whm">
                             <p>ДЛЯ КОГО</p>
-                            <img src="/ico/14+.svg">
+                            <span>14</span>
                         </div>
                         <p class="rst_ctn">
                             {{$program->description}}
@@ -77,7 +77,7 @@
                     <div class="rstart-txt-cnt col-xs-7 col-sm-7 col-md-7 col-lg-7">
                         <div class="for_whm">
                             <p>ДЛЯ КОГО</p>
-                            <img src="/ico/14+.svg">
+                            <span>14</span>
                         </div>
                         <p class="rst_ctn">
                             {{$program->description}}
@@ -222,7 +222,7 @@
                         <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
                         <li><a href="/programm/r.one_runner_plus">R.ONE RUNNER +</a></li>
                         <li><a href="/programm/r.one_power">R.ONE POWER</a></li>
-                        <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
+                        <li class="bonus"><a href="/bonus" >БОНУСНАЯ ПРОГРАММА<br>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
@@ -234,13 +234,13 @@
                             <a href="#" data-toggle="modal" data-target="#registr">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://facebook.com/reformator.one/">
                                 <img src="/ico/fb.png" alt="">
                             </a>
-                            <a href="#">
+                            <a href="https://vk.com/reformatorone">
                                 <img src="/ico/vk.png" alt="">
                             </a>
-                            <a href="#">
+                            <a href="https://instagram.com/reformator.one">
                                 <img src="/ico/inst.png" alt="">
                             </a>
                         </li>
