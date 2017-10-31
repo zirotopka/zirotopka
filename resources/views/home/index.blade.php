@@ -187,7 +187,7 @@
                     <img src="/ico/money.svg" alt="">    
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 right_bonus_part">
-                    <p>ЗАНИМАЙТЕСЬ СПОРТОМ,<br class="visible-xs"> ЗАРАБАТЫВАЙТЕ ДЕНЬГИ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ<br>БОНУСНОЙ СИСТЕМЫ<br class="visible-xs"> ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
+                    <p>ЗАНИМАЙТЕСЬ СПОРТОМ И ЗАРАБАТЫВАЙТЕ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ БОНУСНОЙ<br>СИСТЕМЫ ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
                     <button type="button" class="bonus_btn" onclick="location.href='/bonus';">ПОДРОБНЕЕ</button>
                 </div>
             </div>
