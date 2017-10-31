@@ -1,3 +1,95 @@
+*{
+    line-height: 1.5!important;
+}
+.rstart-txt-cnt .for_whm span{
+    display: inline-block;
+    color: #ff8a18;
+    font-size: 1.5vw;
+    border: 2px solid #ff8a18;
+    border-radius: 50%;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    position: relative;
+    margin-left: 10px;
+    line-height: 1.8!important;
+}
+.rstart-txt-cnt .for_whm span:before{
+    content: '+';
+    display: block;
+    position: absolute;
+    background: white;
+    height: 15px;
+    width: 18px;
+    border-radius: 50%;
+    line-height: 0.9!important;
+    right: 0;
+    top: -5px;
+    z-index: 0;
+    text-align: center;
+}
+footer .prgrm_list ul li a,
+.reg_f_s ul li a,
+.ofrta ul li a{
+    font-size: 16px;
+    font-weight: 100;
+}
+footer .prgrm_list ul li a:hover,
+.reg_f_s ul li a:hover,
+.ofrta ul li a:hover{
+    text-decoration: underline!important;
+}
+.reg_f_s,
+.ofrta{
+    padding: 1.5em 0 0 0;
+}
+
+
+.start{
+    height: 35.1vw;
+}
+
+.swiper-slide{
+    width: 70%!important;
+    margin: 30px 15% 0;
+}
+.swiper-slide .bbrdr{
+    border: 1px solid #3E474F;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.swiper-slide .comm_img_hldr{
+    width: auto;
+    margin: 0;
+}
+.swiper-slide .sw_shader{
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+.comm_pl_hldr{
+    width: 80px;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+    margin: 0;
+}
+.comm_pl_hldr:hover{
+    transform: rotate(360deg);
+    margin: 0;
+    width: 80px;
+}
+.swiper-slide .content-slide{
+    padding: 5px 0 0;
+    margin: 0;
+}
+.content-slide button{
+    margin: 15px 0 0;
+}
 @media only screen and (max-width : 768px) {
     .reg-screen {
         margin-bottom: 0;

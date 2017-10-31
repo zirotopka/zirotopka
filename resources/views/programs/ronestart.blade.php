@@ -122,8 +122,8 @@
                 <h2>ПРИМЕРЫ УПРАЖНЕНИЙ</h2>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-                            <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                        <div class="swiper-slide" >
+                            <div class="video_slide">
                                 <div class="bbrdr">
                                     <div class="sw_shader"></div>
                                     <img src="/image/preview/отжимания-от-пола.jpg" alt="" class="comm_img_hldr video_holder" >
@@ -131,14 +131,14 @@
                                     <p class="upr_d">Отжимания от пола - одно из наиболее эффективных спортивных упражнений.</p>
                                 </div>
                             </div>
-                            <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <div class="content-slide">
                                 <p class="cs-head">ОТЖИМАНИЯ ОТ ПОЛА</p>
                                 <p></p>
                                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
-                        <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-                            <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                        <div class="swiper-slide" >
+                            <div class="video_slide">
                                 <div class="bbrdr">
                                     <div class="sw_shader"></div>
                                     <img src="/image/preview/ягодичный-мост.jpg" alt="" class="comm_img_hldr video_holder" >
@@ -146,14 +146,14 @@
                                     <p class="upr_d">Ягодичный мостик – локальное упражнение на ягодицы.</p>
                                 </div>
                             </div>
-                            <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <div class="content-slide">
                                 <p class="cs-head">ЯГОДИЧНЫЙ МОСТ</p>
                                 <p></p>
                                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
-                        <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-                            <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                        <div class="swiper-slide " >
+                            <div class="video_slide">
                                 <div class="bbrdr">
                                     <div class="sw_shader"></div>
                                     <img src="/image/preview/присед+выпад-назад.jpg" alt="" class="comm_img_hldr video_holder" >
@@ -162,7 +162,7 @@
                                     <p class="upr_d">Делаем плавные и чёткие движения</p>
                                 </div>
                             </div>
-                            <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <div class="content-slide">
                                 <p class="cs-head">ПРИСЕД + ВЫПАД НАЗАД</p>
                                 <p></p>
                                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
