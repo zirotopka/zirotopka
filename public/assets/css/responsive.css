@@ -100,6 +100,27 @@ footer .prgrm_list ul li a:hover,
     height: 100%;
 }
 
+.block-payment-systems{
+    margin: 15px 0;
+    text-align: center;
+}
+.block-payment-systems img{
+    height: 25px;
+}
+footer{
+    height: auto;
+    padding: 15px 0 30px 0!important;
+}
+.ip{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+
+
+
 @media only screen and (max-width : 768px) {
     .reg-screen {
         margin-bottom: 0;
@@ -329,7 +350,7 @@ footer .prgrm_list ul li a:hover,
     }
 
     .connect_price {
-        background-position: 23vw 10px !important;
+        background-position: 20vw 10px !important;
     }
 
     .connect_screen_shader p {

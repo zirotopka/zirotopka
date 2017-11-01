@@ -502,6 +502,16 @@
                         </li>
                     </ul>
                 </div>
+                <div class="col-xs-12">
+                    <div class="block-payment-systems">
+                        <a href=""><img src="/image/payment-systems/visa.png"></a>
+                        <a href=""><img src="/image/payment-systems/mc.png"></a>
+                        <a href=""><img src="/image/payment-systems/qiwi.png"></a>
+                        <a href=""><img src="/image/payment-systems/wm.png"></a>
+                        <a href=""><img src="/image/payment-systems/yandex.png"></a>
+                        <a href=""><img src="/image/payment-systems/psb-paymaster.png"></a>
+                    </div>
+                </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>
                 </div>
