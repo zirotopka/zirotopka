@@ -32,7 +32,7 @@ class GetPasswordShipped extends Mailable
      */
     public function build()
     {
-        return $this->from('support@reformator.one', 'Reformator One')
+        return $this->from('reformator@reformator.one', 'Reformator One')
                     ->subject('Регистрация Reformator One!')
                     ->view('mail._password_reestablish',['user' => $this->user, 'code' => $this->code]);
     }
