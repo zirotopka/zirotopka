@@ -17,6 +17,7 @@ use App\AdjancyList;
 use App\Balance;
 
 use Mail;
+use App\FreeAccess;
 
 use App\Mail\PasswordShipped;
 
@@ -183,6 +184,21 @@ class User extends CartalystUser
                         $adjancy->user_id = $user->id;
                         $adjancy->pid = $referral->id;
                         $adjancy->save();
+                    }
+                }
+
+                //Бесплатный доступ
+                if (session()->has('freeAccess')) {
+                    $freeAccess = $request->session()->pull('freeAccess');
+
+                    $freeAccessModel = FreeAccess::where('id','=',$freeAccess)->whereNull('user_id')->first();
+
+                    if (!empty($freeAccessModel)) {
+                        $user->is_programm_pay = 1;
+                        if ($user->save()) {
+                            $freeAccessModel->user_id = $user->id;
+                            $freeAccessModel->save();
+                        }
                     }
                 }
 
