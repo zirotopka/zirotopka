@@ -42,7 +42,9 @@
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
                         <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>
                     </div>
-                    <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
+                    <a href="/programm/ROneStart">
+                        <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
+                    </a>
                 </div>    
             </div>
           @else
@@ -63,7 +65,9 @@
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
                         <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>
                     </div>
-                    <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
+                    <a href="/programm/ROneStart">
+                        <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
+                    </a>
                 </div>    
             </div>
           @endif

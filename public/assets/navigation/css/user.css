@@ -175,8 +175,7 @@ input:focus{
 }
 
 .bal_modal_height{
-	height: 21em;
-	border-radius: 0;
+	border-radius: 15px;
 }
 
 .balance_modal_height{
@@ -186,9 +185,9 @@ input:focus{
 
 .add_money{
 	text-align: center;
-	margin: 2em 0 0 0;
 	color: #FF9319;
 	font-family: MuseoSansCyrl_500;
+	font-size: 20px;
 }
 
 .money{
@@ -197,13 +196,13 @@ input:focus{
 
 .money_inputs{
 	border-radius: 4px;
-	border: 0.1em solid #b3b3b3;
-	height: 3em;
-	width: 16.5vw;
+	border: 1px solid #b3b3b3;
+	height: auto;
+	width: 100px;
+	text-align: center;
 	color: #999;
-	padding-left: 1.7em;
-	font-family: MuseoSansCyrl_100;
-	margin: 1.5em 0 0 0;
+	padding: 6px 8px;
+	margin: 15px 0 0;
 }
 
 .logohov:hover{

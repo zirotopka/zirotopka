@@ -94,7 +94,8 @@
 
 
 @media screen and (max-width: 46.0625em) {
-	.login_form{
+	.login_form,
+	.password_form{
 		width: 95%;
 	}
 	hr{
