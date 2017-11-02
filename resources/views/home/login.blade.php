@@ -3,7 +3,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <h4 >ВХОД</h4>
-        <div class="user_data" style="height: 350px;">
+        <div class="user_data" style="height: 370px;">
           <form action="/login" method="POST">
             {{ csrf_field() }}
             
@@ -13,6 +13,7 @@
             <input class="login_btn" type="submit" value="ВОЙТИ">
           </form>
           <a href="" id="open_reg" data-toggle="modal" data-target="#registr">Зарегистрироваться!</a>
+          <a href="#" data-toggle="modal" data-target="#get_password_form">Забыли пароль?</a>
           <div class="enter_across">
             <hr>
             <a href="">или войти через</a>
@@ -20,14 +21,8 @@
           </div>
           <div class="vk_fs"> 
             <a href="/social_login/vkontakte">
-              <img src="/ico/vkontakte.png" alt="">
+              <img src="/ico/vkontakte.png" alt="" align="center">
             </a>
-            <a href="/social_login/facebook">
-              <img src="/ico/icon-facebook.svg" alt="">
-            </a>
-          </div>
-          <div>
-              <a href="#" class="pull-right" data-toggle="modal" data-target="#get_password_form">Забыли пароль?</a>
           </div>
         </div>
       </div>

@@ -1,6 +1,71 @@
 *{
     line-height: 1.5!important;
 }
+
+button,
+.rl_btns,
+.rg_btn,
+.how-screen button,
+.connect_btn,
+.content-slide button{
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    transition: 0.15s;
+    width: auto;
+    height: auto;
+    padding: 12px 24px 10px;
+    font-size: 16px;
+}
+.how-screen button{
+    padding: 18px 24px 16px;
+}
+.reg_btn,
+.rg_btn,
+.how-screen button,
+.connect_btn,
+.content-slide button{
+    border: 3px solid transparent;
+}
+.rstart-txt-cnt button:hover,
+.reg_btn:hover,
+.rg_btn:hover,
+.how-screen button:hover,
+.connect_btn:hover,
+.content-slide button:hover{
+    background-color: transparent;
+    border: 3px solid #ef8116;
+    color: #ef8116;
+}
+.log_btn:hover{
+    background-color: white;
+    border-color: #ef8116;
+    color: #ef8116;
+}
+button:hover
+.rl_btns:hover,
+.reg_btn:hover,
+.log_btn:hover,
+.how-screen button:hover{
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+.rg_btn:hover{
+    width: auto;
+    height: auto;
+    margin: 8vw 0 0 0;
+}
+.connect_btn:hover{
+    width: auto;
+    height: auto;
+    margin: 6em 0 0 0;
+}
+.content-slide button:hover{
+    width: auto;
+    height: auto;
+    margin: 15px 0 0 0;
+}
+
 .rstart-txt-cnt .for_whm span{
     display: inline-block;
     color: #ff8a18;
@@ -103,6 +168,15 @@ footer .prgrm_list ul li a:hover,
 .block-payment-systems{
     margin: 15px 0;
     text-align: center;
+}
+.block-payment-systems a{
+    opacity: 0.7;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+}
+.block-payment-systems a:hover{
+    opacity: 1;
 }
 .block-payment-systems img{
     height: 25px;
@@ -719,7 +793,8 @@ footer{
         margin: 0;
     }
 
-    .rstart-txt-cnt button {
+    .rstart-txt-cnt button,
+    .rstart-txt-cnt button:hover{
         height: auto;
         width: auto;
         font-size: 12px;
@@ -1003,5 +1078,16 @@ footer{
     }
     .messages-type .st-pusher{
         height: auto;
+    }
+
+    .rstart-txt-cnt .for_whm{
+        margin: 0 0 10px;
+    }
+    .rstart-txt-cnt .for_whm span{
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        font-size: 16px;
+        top: 3px;
     }
 }

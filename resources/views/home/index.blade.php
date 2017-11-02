@@ -504,12 +504,15 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="block-payment-systems">
-                        <a href=""><img src="/image/payment-systems/visa.png"></a>
-                        <a href=""><img src="/image/payment-systems/mc.png"></a>
-                        <a href=""><img src="/image/payment-systems/qiwi.png"></a>
-                        <a href=""><img src="/image/payment-systems/wm.png"></a>
-                        <a href=""><img src="/image/payment-systems/yandex.png"></a>
-                        <a href=""><img src="/image/payment-systems/psb-paymaster.png"></a>
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-visa.png" title="Visa" alt="Visa">
+                        </a>
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-mastercard.png" title="MasterCard" alt="MasterCard">
+                        </a>
+                        <a href="https://info.paymaster.ru" target="_blank">
+                            <img src="/image/payment-systems/icon-paymaster.png" title="Paymaster" alt="Paymaster">
+                        </a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

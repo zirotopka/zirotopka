@@ -125,46 +125,50 @@
                         <div class="swiper-slide" >
                             <div class="video_slide">
                                 <div class="bbrdr">
-                                    <div class="sw_shader"></div>
-                                    <img src="/image/preview/отжимания-от-пола.jpg" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.svg" alt="" class="ico_play1 comm_pl_hldr" data-id="">
-                                    <p class="upr_d">Отжимания от пола - одно из наиболее эффективных спортивных упражнений.</p>
+                                    <video controls poster="/image/preview/отжимания-от-пола.jpg">
+                                        <source src="/videos/отжимания-от-пола.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                             </div>
                             <div class="content-slide">
-                                <p class="cs-head">ОТЖИМАНИЯ ОТ ПОЛА</p>
-                                <p></p>
+                                <p class="cs-head">
+                                    ОТЖИМАНИЯ ОТ ПОЛА
+                                </p>
+                                <div class="cs-body">
+                                    Одно из наиболее эффективных спортивных упражнений.
+                                </div>
                                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
                         <div class="swiper-slide" >
                             <div class="video_slide">
                                 <div class="bbrdr">
-                                    <div class="sw_shader"></div>
-                                    <img src="/image/preview/ягодичный-мост.jpg" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.svg" alt="" class="ico_play2 comm_pl_hldr" data-id="">
-                                    <p class="upr_d">Ягодичный мостик – локальное упражнение на ягодицы.</p>
+                                    <video controls poster="/image/preview/ягодичный-мост.jpg">
+                                        <source src="/videos/ягодчный-мост.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                             </div>
                             <div class="content-slide">
                                 <p class="cs-head">ЯГОДИЧНЫЙ МОСТ</p>
-                                <p></p>
+                                <div class="cs-body">
+                                    Локальное упражнение на ягодицы.
+                                </div>
                                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
                         <div class="swiper-slide " >
                             <div class="video_slide">
                                 <div class="bbrdr">
-                                    <div class="sw_shader"></div>
-                                    <img src="/image/preview/присед+выпад-назад.jpg" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.svg" alt="" class="comm_pl_hldr ico_play3" data-id="">
-
-                                    <p class="upr_d">Делаем плавные и чёткие движения</p>
+                                    <video controls poster="/image/preview/присед-выпад-назад.jpg">
+                                        <source src="/videos/присяд-выпад-назад.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                             </div>
                             <div class="content-slide">
                                 <p class="cs-head">ПРИСЕД + ВЫПАД НАЗАД</p>
-                                <p></p>
+                                <div class="cs-body">
+                                    Делаем плавные и чёткие движения.
+                                </div>
                                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>         
@@ -222,7 +226,8 @@
                         <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
                         <li><a href="/programm/r.one_runner_plus">R.ONE RUNNER +</a></li>
                         <li><a href="/programm/r.one_power">R.ONE POWER</a></li>
-                        <li class="bonus"><a href="/bonus" >БОНУСНАЯ ПРОГРАММА<br>
+                        <li class="bonus"><a href="/bonus" >БОНУСНАЯ ПРОГРАММА<br></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
@@ -258,6 +263,19 @@
                             <a href="#" data-toggle="modal" data-target="#login">ВОЙТИ</a>
                         </li>
                     </ul>
+                </div>
+                <div class="col-xs-12">
+                    <div class="block-payment-systems">
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-visa.png" title="Visa" alt="Visa">
+                        </a>
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-mastercard.png" title="MasterCard" alt="MasterCard">
+                        </a>
+                        <a href="https://info.paymaster.ru" target="_blank">
+                            <img src="/image/payment-systems/icon-paymaster.png" title="Paymaster" alt="Paymaster">
+                        </a>
+                    </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>
