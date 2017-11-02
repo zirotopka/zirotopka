@@ -2,7 +2,11 @@
     line-height: 1.5!important;
 }
 
-button,
+footer{
+    background-color: #202020;
+    height: auto;
+    padding: 30px 15px!important;
+}
 .rl_btns,
 .rg_btn,
 .how-screen button,
@@ -66,6 +70,27 @@ button:hover
     margin: 15px 0 0 0;
 }
 
+
+.block-social-links {
+    margin: 15px 0 0 0;
+}
+.block-social-links a{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+.block-social-links a img{
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    transition: 0.15s;
+    opacity: 0.5;
+    width: 32px;
+    margin: 0;
+}
+.block-social-links a:hover img{
+    opacity: 0.8;
+}
+
 .rstart-txt-cnt .for_whm span{
     display: inline-block;
     color: #ff8a18;
@@ -93,22 +118,32 @@ button:hover
     z-index: 0;
     text-align: center;
 }
+footer .prgrm_list .title,
+.reg_f_s .title,
+.ofrta .title{
+    text-transform: uppercase;
+    color: rgb(200, 200, 200);
+    margin-bottom: 10px;
+    font-weight: 100;
+    text-decoration: underline
+}
 footer .prgrm_list ul li a,
 .reg_f_s ul li a,
 .ofrta ul li a{
     font-size: 16px;
     font-weight: 100;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    transition: 0.15s;
+    color: rgb(150, 150, 150);
+    text-transform: none;
 }
 footer .prgrm_list ul li a:hover,
 .reg_f_s ul li a:hover,
 .ofrta ul li a:hover{
     text-decoration: underline!important;
+    color: white
 }
-.reg_f_s,
-.ofrta{
-    padding: 1.5em 0 0 0;
-}
-
 
 .start{
     height: 35.1vw;
@@ -180,10 +215,6 @@ footer .prgrm_list ul li a:hover,
 }
 .block-payment-systems img{
     height: 25px;
-}
-footer{
-    height: auto;
-    padding: 15px 0 30px 0!important;
 }
 .ip{
     margin: 0 auto;

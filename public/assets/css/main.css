@@ -1355,15 +1355,15 @@ footer{
 }
 
 .mission p{
-	line-height: 1.4vw;
-	color: white;
+	color: #ff8a18;
 	text-transform: uppercase;
-	font-size: 1vw;
-	margin: 3vh 0 0 0;
+	font-size: 12px;
+	margin: 15px 0 0 0;
+	font-weight: 100;
 }
 
 	.mission img{
-	    margin: 2.15em 0 2.15em -0.85em;
+	    margin: 0 0 15px -0.85em;
 	    width: 19vw;
 	}
 
@@ -1379,7 +1379,6 @@ footer .prgrm_list ul li{
 }
 
 footer .prgrm_list{
-	padding: 2.5em 0 0 0;
 	line-height: 1.5em;
 }
 
@@ -1388,20 +1387,10 @@ footer .prgrm_list .bonus{
 	line-height: 1em;
 }
 
-.reg_f_s{
-	padding: 2.2em 0 0 0;
-	line-height: 2em;
-}
-
 .reg_f_s img{
 	display: inline-block;
 	width: 3em;
-	margin: 2em 0 0 0.5em;	
-}
-
-.ofrta{
-	padding: 2em 0 0 0;
-    line-height: 2em;
+	margin: 2em 0 0 0.5em;
 }
 
 #pltks{

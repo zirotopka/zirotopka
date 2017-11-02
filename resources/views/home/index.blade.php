@@ -99,7 +99,7 @@
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12 n6">
                                 <img src="/ico/lamp.svg" alt="">
-                                <p>Возможность зарабатывать<br>деньги и заниматься спортом<br>в удовольствие!</p>
+                                <p>Возможность зарабатывать<br> и заниматься спортом<br>в удовольствие!</p>
                             </li>
                         </ul>
                 </div>
@@ -450,14 +450,13 @@
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
                     <img src="/ico/min-logo.svg" alt="">
-                    <p>наша миссия<br>
-                    в повышении качества жизни<br>
-                    общества через вовлечение<br>
-                    широкого круга населения<br>
-                    в любительский спорт и зож</p>
+                    <p>
+                        Наша миссия в повышении качества жизни общества через вовлечение широкого круга населения в любительский спорт и зож
+                    </p>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
                     <ul>
+                        <li class="title">Программы</li>
                         <li><a href="/programm/ROneStart">R.ONE START</a></li>
                         <li><a href="/programm/r.one_pro">R.ONE PRO</a></li>
                         <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
@@ -467,38 +466,30 @@
                          ПРОГРАММА</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
-                    <ul class="rgese">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#registr">РЕГИСТРАЦИЯ</a>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
+                    <ul>
+                        <li class="title">Соглашение</li>
+                        <li class="prtnrs">
+                            <a href="#" data-toggle="modal" data-target="#partners">Партнёрское соглашение</a>
                         </li>
-                        <li class="accsss">
-                            <a href="#" data-toggle="modal" data-target="#registr">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
-                        </li>
-                        <li>
-                            <a href="https://facebook.com/reformator.one/">
-                                <img src="/ico/fb.png" alt="">
-                            </a>
-                            <a href="https://vk.com/reformatorone">
-                                <img src="/ico/vk.png" alt="">
-                            </a>
-                            <a href="https://instagram.com/reformator.one">
-                                <img src="/ico/inst.png" alt="">
-                            </a>
+                        <li id="pltks">
+                            <a href="#" data-toggle="modal" data-target="#user_agreements">Пользовательское соглашение</a>
                         </li>
                     </ul>
                 </div>
-
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
-                    <ul>
-                        <li class="prtnrs">
-                            <a href="#" data-toggle="modal" data-target="#partners">ПАРТНЕРСКОЕ СОГЛАШЕНИЕ</a>
-                        </li>
-                        <li id="pltks">
-                            <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАШЕНИЕ</a>
-                        </li>
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#login">ВОЙТИ</a>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
+                    <ul class="rgese">
+                        <li class="title">Подпишись</li>
+                        <li class="block-social-links">
+                            <a href="https://facebook.com/reformator.one/">
+                                <img src="/image/social-networks/icon-facebook.png" alt="">
+                            </a>
+                            <a href="https://vk.com/reformatorone">
+                                <img src="/image/social-networks/icon-vk.png" alt="">
+                            </a>
+                            <a href="https://instagram.com/reformator.one">
+                                <img src="/image/social-networks/icon-instagram.png" alt="">
+                            </a>
                         </li>
                     </ul>
                 </div>
