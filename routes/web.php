@@ -35,6 +35,10 @@ Route::group(['prefix' => '/', 'middleware' => ['check_referall']], function () 
 	Route::get('/ref/{slug}', ['uses' => 'HomeController@index' ] );
 });
 
+Route::group(['prefix' => '/', 'middleware' => ['check_free_access']], function () {
+	Route::get('/access/{key}', ['uses' => 'HomeController@index' ] );
+});
+
 Route::post('register', ['uses' => 'UserController@registration' ] );
 Route::post('login', ['as' => 'login', 'uses' => 'UserController@login' ] );
 
@@ -75,7 +79,7 @@ Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], funct
 	]]);
 
 	Route::group(['middleware' => ['admin']], function () {
-		Route::get('admin', ['uses' => 'Admin\HomeController@index']);
+		Route::get('admin/panel', ['uses' => 'Admin\HomeController@index']);
 		Route::resource('admin/users', 'Admin\UsersController');
 		Route::post('admin/change_status/{id}', ['uses' => 'Admin\UsersController@change_status']);
 		Route::resource('admin/accruals', 'Admin\AccrualsController');
