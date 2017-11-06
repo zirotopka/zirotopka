@@ -8,10 +8,15 @@ use App\Training;
 use App\ProgrammDay;
 use App\ProgrammStage;
 
+//use Illuminate\Bus\Queueable;
 use Carbon\Carbon;
 
+use App\Mail\ProgramShipped;
+use Mail;
+
 class ProgramUpdating extends Command
-{
+{   
+    //use Queueable;
     /**
      * The name and signature of the console command.
      *
@@ -44,13 +49,19 @@ class ProgramUpdating extends Command
     public function handle()
     {   
         \Log::info('Обновление программ запущенно');
+        $user = User::first();
+    
         $users_query = User::select([
             'id',
+            'email',
             'last_updated_at',
             'timezone',
             'current_day',
             'current_programm_id',
             'status',
+            'first_name',
+            'surname',
+            'slug',
         ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('status','=',1);
 
         $users_query->chunk(100, function($users){
@@ -84,12 +95,23 @@ class ProgramUpdating extends Command
                                     \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by lack of training');
 
                                     $this->user_update ($user, $userNow, 0);
+
+                                    $subject = 'Обновление программы Reformator.One';
+                                    $text = 'Вы не выполнили программу. Сожалеем, но ваш аккаунт заморожен.';
+
+                                    $this->send_mail($user, $subject, $text);
                                 } else {
                                     $current_stages = $trainings->stages;
                                     
                                     if (count($current_stages) <= 0) {
                                         \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by null stages');
                                         $this->user_update ($user, $userNow, 0);
+
+                                        $subject = 'Обновление программы Reformator.One';
+                                        $text = 'Вы выполнили не все упражнения. Сожалеем, но ваш аккаунт заморожен.';
+
+                                        $this->send_mail($user, $subject, $text);
+
                                     } else {
                                         $programm_stages_count = ProgrammStage::select('id','status')
                                                             ->where('programm_day_id','=',$current_program_day->id)
@@ -98,13 +120,29 @@ class ProgramUpdating extends Command
 
                                         if (count($current_stages) < count($programm_stages_count)) {
                                             \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by few stages');
+
+                                            $$subject = 'Обновление программы Reformator.One';
+                                            $text = 'Вы выполнили не все упражнения. Сожалеем, но ваш аккаунт заморожен.';
+
+                                            $this->send_mail($user, $subject, $text);
+
                                             $this->user_update ($user, $userNow, 0);
                                         } else {
+                                            $subject = 'Обновление программы Reformator.One';
+                                            $text = 'Вам доступна новая тренировка за '.$current_day.'-й день.';
+
+                                            $this->send_mail($user, $subject, $text);
+
                                             $this->user_update ($user, $userNow, 1);
                                         }
                                     }
                                 }
                             } else {
+                                $subject = 'Обновление программы Reformator.One';
+                                $text = 'Вам доступна новая тренировка за '.$current_day.'-й день.';
+
+                                $this->send_mail($user, $subject, $text);
+
                                 $this->user_update ($user, $userNow, 1);
                             }
                         } else {
@@ -119,9 +157,13 @@ class ProgramUpdating extends Command
         //Начало программы
         $users_query = User::select([
             'id',
+            'email',
             'program_is_start',
             'start_training_day',
             'timezone',
+            'first_name',
+            'surname',
+            'slug',
         ])->whereNotNull('current_programm_id')->where('program_is_start','=',0);
 
         $users_query->chunk(100, function($users){
@@ -142,6 +184,11 @@ class ProgramUpdating extends Command
                     $user->save();
 
                     \Log::info('Пользователь №'.$user->id.' начал программу!');
+
+                    $subject = 'Обновление программы Reformator.One';
+                    $text = 'Вам доступна первая тренировка.';
+
+                    $this->send_mail($user, $subject, $text);      
                 } else {
                     $start_year = $start_training_day->year;
                     $start_month = $start_training_day->month;
@@ -158,6 +205,11 @@ class ProgramUpdating extends Command
                         $user->save();
 
                         \Log::info('Пользователь №'.$user->id.' начал программу!');
+
+                        $subject = 'Обновление программы Reformator.One';
+                        $text = ' Вам доступна первая тренировка.';
+
+                        $this->send_mail($user, $subject, $text);     
                     }
                 }
             }
@@ -171,5 +223,12 @@ class ProgramUpdating extends Command
         $user->save();
 
         \Log::info('Пользователь №'.$user->id.' перешел на новый день програмы №'.$user->current_day);
+    }
+
+    public function send_mail($user, $subject, $text) {
+        //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
+        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+
+        return 1;
     }
 }

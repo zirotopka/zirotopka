@@ -261,6 +261,16 @@ class User extends CartalystUser
         return $this->hasMany('App\Accrual','user_id');
     }
 
+    public function accruals_input()
+    {
+        return $this->hasMany('App\Accrual','user_id')->where('comment','=','За приглашенного пользователя');
+    }
+
+    public function accruals_output()
+    {
+        return $this->hasMany('App\Accrual','user_id')->where('comment','=','Вывод средств c личного счета');
+    }
+
     public function trainings()
     {
         return $this->hasMany('App\Training','user_id');
