@@ -29,6 +29,7 @@ class User extends CartalystUser
 
     protected $table = 'users';
     protected $primaryKey = 'id';
+    protected $dates = ['deleted_at'];
 
     public function getRouteKeyName()
     {
