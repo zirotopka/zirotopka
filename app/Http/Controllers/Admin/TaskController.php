@@ -15,6 +15,9 @@ use App\Http\Controllers\Controller;
 
 use Carbon\Carbon;
 
+use App\Mail\ProgramShipped;
+use Mail;
+
 class TaskController extends Controller {
 
 	public function index(Request $request)
@@ -72,6 +75,32 @@ class TaskController extends Controller {
 			if (!empty($training)) {
 				$training->is_moderator_check = 1;
 				$training->save();
+
+				$status_text = 'Отправлено';
+
+				switch ($status) {
+                case 0:
+                    $status_text = 'Отправлено';
+                    break;
+                case 1:
+                    $status_text = 'На доработке';
+                    break;
+                case 2:
+                    $status_text = 'Одобрено';
+                    break;
+                case 3:
+                    $status_text = 'Отклонено';
+                    break;
+                }
+
+                $stage = ProgrammStage::select('id','exercise_id')->where('id','=',$trainingStage->stage_id)->with('exercive')->first();
+
+                if (!empty($stage) && !empty($stage->exercive)) {
+                	$subject = 'Ваша тренировка проверена!';
+		            $text = 'Тренировка "'.$stage->exercive->name.'" проверена модератором и переведена в статус "'.$status_text.'".';
+
+		            $this->send_mail($user, $subject, $text);
+                }
 			}
 		}
 		
@@ -111,4 +140,10 @@ class TaskController extends Controller {
 			'exercise' => $exercise
 		]);
 	}
+
+	public function send_mail($user, $subject, $text) {
+        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+
+        return 1;
+    }
 }

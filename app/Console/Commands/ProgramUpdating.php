@@ -49,8 +49,6 @@ class ProgramUpdating extends Command
     public function handle()
     {   
         \Log::info('Обновление программ запущенно');
-        $user = User::first();
-    
         $users_query = User::select([
             'id',
             'email',
@@ -62,7 +60,7 @@ class ProgramUpdating extends Command
             'first_name',
             'surname',
             'slug',
-        ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('status','=',1);
+        ])->whereNotNull('current_programm_id')->where('program_is_start','=',1);
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
@@ -73,82 +71,94 @@ class ProgramUpdating extends Command
                 $userNowStartDay->startOfDay();
                 $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone)->startOfDay();
                 $difference = $last_updated_at->diffInDays($userNowStartDay,false);
-                 
-                if ($difference > 0) {           
-                    //Разница в 1 день
-                    $userHour = $userNow->hour;
 
-                    if ($userHour >= 22) {
+                if ($user->status == 1) {
+                    if ($difference > 0) {           
+                        //Разница в 1 день
+                        $userHour = $userNow->hour;
 
-                        $current_program_day = ProgrammDay::select('id','day','status')
-                                                ->where('programm_id','=',$user->current_programm_id)
-                                                ->where('day','=',$user->current_day)
-                                                ->first();        
+                        if ($userHour >= 22) {
 
-                        if (!empty($current_program_day)) {
-                            if (!empty($current_program_day->status)) {
-                                //Обязательный день
+                            $current_program_day = ProgrammDay::select('id','day','status')
+                                                    ->where('programm_id','=',$user->current_programm_id)
+                                                    ->where('day','=',$user->current_day)
+                                                    ->first();        
 
-                                $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
+                            if (!empty($current_program_day)) {
+                                if (!empty($current_program_day->status)) {
+                                    //Обязательный день
 
-                                if (count($trainings) == 0) {
-                                    \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by lack of training');
+                                    $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
 
-                                    $this->user_update ($user, $userNow, 0);
+                                    if (count($trainings) == 0) {
+                                        \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by lack of training');
 
-                                    $subject = 'Обновление программы Reformator.One';
-                                    $text = 'Вы не выполнили программу. Сожалеем, но ваш аккаунт заморожен.';
-
-                                    $this->send_mail($user, $subject, $text);
-                                } else {
-                                    $current_stages = $trainings->stages;
-                                    
-                                    if (count($current_stages) <= 0) {
-                                        \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by null stages');
                                         $this->user_update ($user, $userNow, 0);
 
                                         $subject = 'Обновление программы Reformator.One';
-                                        $text = 'Вы выполнили не все упражнения. Сожалеем, но ваш аккаунт заморожен.';
+                                        $text = 'Вы не выполнили программу. Сожалеем, но ваш аккаунт заморожен.';
 
                                         $this->send_mail($user, $subject, $text);
-
                                     } else {
-                                        $programm_stages_count = ProgrammStage::select('id','status')
-                                                            ->where('programm_day_id','=',$current_program_day->id)
-                                                            ->with('exercive')
-                                                            ->count();
+                                        $current_stages = $trainings->stages;
+                                        
+                                        if (count($current_stages) <= 0) {
+                                            \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by null stages');
+                                            $this->user_update ($user, $userNow, 0);
 
-                                        if (count($current_stages) < count($programm_stages_count)) {
-                                            \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by few stages');
-
-                                            $$subject = 'Обновление программы Reformator.One';
+                                            $subject = 'Обновление программы Reformator.One';
                                             $text = 'Вы выполнили не все упражнения. Сожалеем, но ваш аккаунт заморожен.';
 
                                             $this->send_mail($user, $subject, $text);
 
-                                            $this->user_update ($user, $userNow, 0);
                                         } else {
-                                            $subject = 'Обновление программы Reformator.One';
-                                            $text = 'Вам доступна новая тренировка за '.$current_day.'-й день.';
+                                            $programm_stages_count = ProgrammStage::select('id','status')
+                                                                ->where('programm_day_id','=',$current_program_day->id)
+                                                                ->with('exercive')
+                                                                ->count();
 
-                                            $this->send_mail($user, $subject, $text);
+                                            if (count($current_stages) < count($programm_stages_count)) {
+                                                \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by few stages');
 
-                                            $this->user_update ($user, $userNow, 1);
+                                                $$subject = 'Обновление программы Reformator.One';
+                                                $text = 'Вы выполнили не все упражнения. Сожалеем, но ваш аккаунт заморожен.';
+
+                                                $this->send_mail($user, $subject, $text);
+
+                                                $this->user_update ($user, $userNow, 0);
+                                            } else {
+                                                $subject = 'Обновление программы Reformator.One';
+                                                $text = 'Вам доступна новая тренировка за '.$current_day.'-й день.';
+
+                                                $this->send_mail($user, $subject, $text);
+
+                                                $this->user_update ($user, $userNow, 1);
+                                            }
                                         }
                                     }
+                                } else {
+                                    $subject = 'Обновление программы Reformator.One';
+                                    $text = 'Вам доступна новая тренировка за '.$current_day.'-й день.';
+
+                                    $this->send_mail($user, $subject, $text);
+
+                                    $this->user_update ($user, $userNow, 1);
                                 }
                             } else {
-                                $subject = 'Обновление программы Reformator.One';
-                                $text = 'Вам доступна новая тренировка за '.$current_day.'-й день.';
-
-                                $this->send_mail($user, $subject, $text);
-
-                                $this->user_update ($user, $userNow, 1);
+                                //Ошибка дня
+                                \Log::error('ProgramUpdating: User №'.$user->id.' has no program day');
                             }
-                        } else {
-                            //Ошибка дня
-                            \Log::error('ProgramUpdating: User №'.$user->id.' has no program day');
                         }
+                    }
+                } else {
+                    //Старые заказы
+                    if ($difference > 7) {
+                        User::destroy($user->id);
+                    } else {
+                        $subject = 'Напоминание от Reformator.One';
+                        $text = 'Ваш аккаунт заморожен. Вы можете восстановить его и продолжить тренировки.';
+
+                        $this->send_mail($user, $subject, $text);
                     }
                 }
             }
