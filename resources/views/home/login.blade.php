@@ -15,7 +15,7 @@
           <a href="#" data-toggle="modal" data-target="#get_password_form">Забыли пароль?</a>
           <div class="enter_across">
             <hr>
-            <a href="">или войти через</a>
+            <a href="#">или войти через</a>
             <hr>
           </div>
           <div class="vk_fs"> 

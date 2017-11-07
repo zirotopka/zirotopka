@@ -30,7 +30,7 @@
             
             <div class="enter_across reg_enter_across">
               <hr>
-              <a href="">или войти через</a>
+              <a href="#" data-toggle="modal" data-target="#login">или войти через</a>
               <hr>
             </div>
             <div class="vk_fs"> 

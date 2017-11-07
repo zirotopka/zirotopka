@@ -14,7 +14,8 @@ footer{
 .content-slide button,
 .registr_btn,
 .login_btn,
-.password_btn{
+.password_btn,
+.send{
     -webkit-transition: 0.15s;
     -moz-transition: 0.15s;
     transition: 0.15s;
@@ -33,7 +34,8 @@ footer{
 .content-slide button,
 .registr_btn,
 .login_btn,
-.password_btn{
+.password_btn,
+.send{
     border: 3px solid transparent;
 }
 .rstart-txt-cnt button:hover,
@@ -44,7 +46,8 @@ footer{
 .content-slide button:hover,
 .registr_btn:hover,
 .login_btn:hover,
-.password_btn:hover{
+.password_btn:hover,
+.send:hover{
     background-color: transparent;
     border: 3px solid #ef8116;
     color: #ef8116;
@@ -77,6 +80,12 @@ button:hover
     width: auto;
     height: auto;
     margin: 15px 0 0 0;
+}
+.send:hover{
+    width: auto;
+    height: auto;
+    margin: 30px 0 0;
+    font-size: 16px;
 }
 
 
@@ -232,8 +241,36 @@ footer .prgrm_list ul li a:hover,
     font-weight: 100;
 }
 
+.codrops-top .fa-caret-down{
+    padding: 0;
+}
+.add_money{
+    width: 50%;
+    margin: 0 auto 30px;
+}
+.modal-body .close{
 
-
+}
+.modal-body .close span,
+.modal-body .close img{
+    width: 20px;
+}
+.money_inputs{
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #B3B3B3;
+    color: #81868F;
+    width: 30%;
+    height: auto;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 6px 8px;
+    display: block;
+    margin: auto;
+}
+.modal-body .send{
+    margin: 30px 0 0;
+}
 
 @media only screen and (max-width : 768px) {
     .rl_btns,

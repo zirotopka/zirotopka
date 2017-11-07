@@ -171,7 +171,8 @@ input:focus{
 	width: 22em;
 	margin: 15% auto;
 	text-align: center;
-	border-radius: 0;
+	border-radius: 15px;
+	background-color: white;
 }
 
 .bal_modal_height{
@@ -179,8 +180,9 @@ input:focus{
 }
 
 .balance_modal_height{
-	height: 17em;
-	border-radius: 0;
+	text-align: center;
+	border-radius: 15px;
+	background-color: white;
 }
 
 .add_money{
