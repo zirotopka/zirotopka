@@ -129,17 +129,38 @@
 							@endforeach	
 						</tr>
 						<tr>
-
+							<?php
+								$start_day = Carbon\Carbon::parse($user->start_training_day);
+							?>
 							@foreach ( $programm_days as $program_day )
-								@php
+								<?php
 									$cal_class = '';
 									if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
 										$cal_class = 'hidden-xs hidden-sm';
 									}
 									$program_day->day=$program_day->day-1;
-								@endphp
+									$start_date = true;
+								?>
 									
-								<td class="cal_date {{$cal_class}}">{{Carbon\Carbon::parse($user->start_training_day)->addDays($program_day->day)->format('d/m')}}</td>
+								<td class="cal_date {{$cal_class}}">
+									<?php
+										while ($start_date) {
+											$format = $start_day->format('Y-m-d');
+											$check = in_array($format,$bans);
+
+											if ($check) {
+												$start_day->addDay();
+											} else {
+												$start_date = false;
+											}
+										}
+									?>
+									{{$start_day->format('d/m')}}
+								</td>
+
+								<?php
+									$start_day->addDay();
+								?>
 							@endforeach
 						</tr>
 					</table>

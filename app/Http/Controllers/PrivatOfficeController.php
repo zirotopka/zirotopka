@@ -11,6 +11,7 @@ use App\ProgrammStage;
 use App\Balance;
 use App\Accrual;
 use App\Training;
+use App\Ban;
 use Validator;
 use App\Jobs\BonusDistribution;
 
@@ -132,6 +133,11 @@ class PrivatOfficeController extends Controller
 
         $difficult_array = ProgrammDay::$difficult_array;
 
+        $bans = Ban::select([
+                        \DB::raw('DATE_FORMAT(created_at, "%Y-%m-%d") as create_time'),
+                    ])
+                    ->where('user_id','=',$user->id)->pluck('create_time')->toArray();
+
     	$data = [
     		'user' => $user,
             'programm_days' => $programm_days,
@@ -139,6 +145,7 @@ class PrivatOfficeController extends Controller
             'programm_stages' => $programm_stages,
             'current_program_day' => $current_program_day,
             'current_training' => $current_training,
+            'bans' => $bans,
     	];
 
         if (session()->has('pay_program')) {

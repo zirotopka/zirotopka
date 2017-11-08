@@ -80,7 +80,7 @@ class ROneStartTableSeeder extends Seeder
 				]],
 				['day' => 5, 'status' => 0, 'description' => 'Выходной', 'feed' => 'Отдыхаем. В обед/ужин лучше всего красное мясо или бобовые/соя. Прием пищи 4 раза в день, НО маленькими порциями.  Кто хочет набрать мышечную массу, то 3 раза в день, стандартными порциями.', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
 				['day' => 6, 'status' => 1, 'description' => 'Более глубокая проработка мышечной ткани и хороший жиросжигательный эффект!', 'feed' => 'Помним! Жир горит с 20 минуты! Тренируемся умеренно, но продолжительно. Увеличиваем количество белка ДО и ПОСЛЕ тренировки. Исключаем в этот день сладкое полностью. Желательно отказаться от гарнира в пользу зелени.', 'lead_time' => '< 40 мин','interest' => 1, 'difficult' => 2, 'stages' => [
-					['description' => 'Легкий бег или хаотичные прыжки в сторону', 'interest' => 1, 'time_exercive' => '15 минут бег или 150 прыжков', 'repeat_count' => '','status' => 1, 'exercise_id' => null],
+					['description' => 'Легкий бег или хаотичные прыжки в сторону', 'interest' => 1, 'time_exercive' => '15 минут бег или 150 прыжков', 'repeat_count' => '','status' => 0, 'exercise_id' => null],
 					['description' => 'Присед + различные махи в стороны', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 26],
 					['description' => 'Скалолаз', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 15 повторений', 'status' => 1, 'exercise_id' => 15],
 					['description' => 'Альпинист', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 15 повторений', 'status' => 1, 'exercise_id' => 19],
@@ -93,7 +93,7 @@ class ROneStartTableSeeder extends Seeder
 				]],
 				['day' => 8, 'status' => 0, 'description' => 'Выходной', 'feed' => '««Важно не то, насколько усердно вы тренируетесь, а насколько полноценно вы отдыхаете». В этот день исключаем углеводы и животные жиры. Кушаем белок и растительные жиры (орехи/арахис/семена льна/вишня).».', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
 				['day' => 9, 'status' => 1, 'description' => 'Тренировка направлена на укрепление верхнего плечевого пояса и мышц пресса.', 'feed' => 'Животик должен быть плоским! Утром - стакан кефира/киселя. После тренировки еще один стакан кефира. Кушаем 3 раза в день и уходим с чувством "голода". Тратим ненужные отложения. На ночь - снова стакан кефира.', 'lead_time' => '< 40 мин','interest' => 1, 'difficult' => 2, 'stages' => [
-					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '15 минут', 'repeat_count' => '','status' => 1, 'exercise_id' => null],
+					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '15 минут', 'repeat_count' => '','status' => 0, 'exercise_id' => null],
 					['description' => 'Отжимание от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 15 повторений', 'status' => 1, 'exercise_id' => 17],
 					['description' => 'Упор лежа с перекрестным движением рук к плечу', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 21],
 					['description' => 'Ножницы', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 11],
@@ -107,7 +107,7 @@ class ROneStartTableSeeder extends Seeder
 
 				['day' => 11, 'status' => 0, 'description' => 'Выходной', 'feed' => 'Отдыхаем. Пьём много воды в этот день. Исключаем мясо, едим гарнир (кроме картофеля)  и зелень.', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
 				['day' => 12, 'status' => 1, 'description' => '12-й день тренировки помогает поддерживать общий тонус ваших мышц', 'feed' => 'Питаемся в привычном режиме. Но исключаем животные жиры. На ночь хорошо будет маложирный творог с фруктами.', 'lead_time' => '< 40 мин','interest' => 0, 'difficult' => 1, 'stages' => [
-					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '15 минут', 'repeat_count' => '','status' => 1, 'exercise_id' => null],
+					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '15 минут', 'repeat_count' => '','status' => 0, 'exercise_id' => null],
 					['description' => 'Прыжки на скакалке', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '150 раз', 'status' => 1, 'exercise_id' => 27],
 					['description' => 'Перекрестное движение рук к ногам', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 18],
 					['description' => 'Подъем корпуса вперед', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 6],
@@ -120,7 +120,7 @@ class ROneStartTableSeeder extends Seeder
 				]],
 				['day' => 14, 'status' => 0, 'description' => 'Выходной', 'feed' => 'Делаем небольшой разгрузочных день! Утром и на ночь стакан нежирного кефира. А в течении дня лёгкую белковую пищу. Хорошо будет авокадо с сыром/оливковым маслом с различными гарнирами.', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
 				['day' => 15, 'status' => 1, 'description' => 'Глубокая проработка мышц ног', 'feed' => 'Предстоит побегать!) Значит ДО тренировки - лёгкий завтрак /перекус. Крепкий зелёный чай/чёрный кофе или нежирный творог. После - восполняем потраченные запасы. Питьевой йогурт без добавок будет идеален.', 'lead_time' => '< 40 мин','interest' => 1, 'difficult' => 2, 'stages' => [
-					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '20 минут', 'repeat_count' => '','status' => 1, 'exercise_id' => null],
+					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '20 минут', 'repeat_count' => '','status' => 0, 'exercise_id' => null],
 					['description' => 'Приседания на месте', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 60 повторений', 'status' => 1, 'exercise_id' => 2],
 					['description' => 'Выпрыгивание вверх, хлопок над головой', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 60 повторений', 'status' => 1, 'exercise_id' => 25],
 					['description' => 'Выпады назад крест-накрест', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 60 повторений', 'status' => 1, 'exercise_id' => 3],
@@ -147,7 +147,7 @@ class ROneStartTableSeeder extends Seeder
 				['day' => 20, 'status' => 0, 'description' => 'Выходной', 'feed' => 'Даём послабления!) НО до середины дня ~ 15.00. Допускаются любые слабости)', 'lead_time' => '','interest' => 0, 'difficult' => 0, 'stages' => []],
 
 				['day' => 21, 'status' => 1, 'description' => 'Общая тренировка и хорошая проработка рук и мышц кора', 'feed' => 'Утром сразу стакан кефира. После тренировки - снова. Это поможет правильно "распределить" съеденное накануне. В течении дня хорошо будет выпить ещё 1-2 раза кефир. Едим сухие гарниры с нежирным мясом. Желательно исключить яйца. Допускается съесть кусок чёрного хлеба или хлебец.', 'lead_time' => '< 40 мин','interest' => 1, 'difficult' => 2, 'stages' => [
-					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '15 минут', 'repeat_count' => '','status' => 1, 'exercise_id' => null],
+					['description' => 'Легкий бег', 'interest' => 1, 'time_exercive' => '15 минут', 'repeat_count' => '','status' => 0, 'exercise_id' => null],
 					['description' => 'Отжимания от пола', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 30 повторений', 'status' => 1, 'exercise_id' => 17],
 					['description' => 'Гиперэкстензия', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 29],
 					['description' => 'Ножницы ', 'interest' => 1, 'time_exercive' => '', 'repeat_count' => '3 подхода * 20 повторений', 'status' => 1, 'exercise_id' => 11],

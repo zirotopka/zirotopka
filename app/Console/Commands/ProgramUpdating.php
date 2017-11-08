@@ -7,6 +7,7 @@ use App\User;
 use App\Training;
 use App\ProgrammDay;
 use App\ProgrammStage;
+use App\Ban;
 
 //use Illuminate\Bus\Queueable;
 use Carbon\Carbon;
@@ -70,6 +71,7 @@ class ProgramUpdating extends Command
                 $userNowStartDay = clone $userNow;
                 $userNowStartDay->startOfDay();
                 $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone)->startOfDay();
+
                 $difference = $last_updated_at->diffInDays($userNowStartDay,false);
 
                 if ($user->status == 1) {
@@ -95,6 +97,8 @@ class ProgramUpdating extends Command
 
                                         $this->user_update ($user, $userNow, 0);
 
+                                        $this->addBan($user->id);
+
                                         $subject = 'Обновление программы Reformator.One';
                                         $text = 'Вы не выполнили программу. Сожалеем, но ваш аккаунт заморожен.';
 
@@ -105,6 +109,8 @@ class ProgramUpdating extends Command
                                         if (count($current_stages) <= 0) {
                                             \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by null stages');
                                             $this->user_update ($user, $userNow, 0);
+
+                                            $this->addBan($user->id);
 
                                             $subject = 'Обновление программы Reformator.One';
                                             $text = 'Вы выполнили не все упражнения. Сожалеем, но ваш аккаунт заморожен.';
@@ -126,9 +132,11 @@ class ProgramUpdating extends Command
                                                 $this->send_mail($user, $subject, $text);
 
                                                 $this->user_update ($user, $userNow, 0);
+
+                                                $this->addBan($user->id);
                                             } else {
                                                 $subject = 'Обновление программы Reformator.One';
-                                                $text = 'Вам доступна новая тренировка за '.$current_day.'-й день.';
+                                                $text = 'Вам доступна новая тренировка за '.$user->current_day.'-й день.';
 
                                                 $this->send_mail($user, $subject, $text);
 
@@ -138,7 +146,7 @@ class ProgramUpdating extends Command
                                     }
                                 } else {
                                     $subject = 'Обновление программы Reformator.One';
-                                    $text = 'Вам доступна новая тренировка за '.$current_day.'-й день.';
+                                    $text = 'Вам доступна новая тренировка за '.$user->current_day.'-й день.';
 
                                     $this->send_mail($user, $subject, $text);
 
@@ -151,14 +159,20 @@ class ProgramUpdating extends Command
                         }
                     }
                 } else {
-                    //Старые заказы
-                    if ($difference > 7) {
-                        User::destroy($user->id);
-                    } else {
-                        $subject = 'Напоминание от Reformator.One';
-                        $text = 'Ваш аккаунт заморожен. Вы можете восстановить его и продолжить тренировки.';
+                    $userHour = $userNow->hour;
 
-                        $this->send_mail($user, $subject, $text);
+                    if ($userHour >= 22) {
+                        if ($difference > 0) {
+                            $subject = 'Напоминание от Reformator.One';
+                            $text = 'Ваш аккаунт заморожен. Вы можете восстановить его и продолжить тренировки.';
+
+                            $this->send_mail($user, $subject, $text);
+
+                            $this->addBan($user->id);
+
+                            $user->last_updated_at = $userNow;
+                            $user->save();
+                        }
                     }
                 }
             }
@@ -224,6 +238,14 @@ class ProgramUpdating extends Command
                 }
             }
         });
+    }
+
+    public function addBan($userId) {
+        $bans = new Ban;
+        $bans->user_id = $userId;
+        $bans->save();
+
+        return 1;
     }
 
     public function user_update ($user, $userNow, $status) {
