@@ -61,7 +61,7 @@ class PrivatOfficeController extends Controller
         $currentProgramDayStatus = $current_program_day->status;
 
         //Оплата програм
-        if (!empty($currentProgramDayStatus)) {
+        if (!empty($currentProgramDayStatus) || $current_program_day > 2) {
             if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
                 $program_cost = $user->current_program->cost;
                 $parents = $user->parents;
