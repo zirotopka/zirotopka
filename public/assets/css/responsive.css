@@ -15,7 +15,9 @@ footer{
 .registr_btn,
 .login_btn,
 .password_btn,
-.send{
+.send,
+.bonus .reg_btn,
+.abo_btn{
     -webkit-transition: 0.15s;
     -moz-transition: 0.15s;
     transition: 0.15s;
@@ -35,7 +37,8 @@ footer{
 .registr_btn,
 .login_btn,
 .password_btn,
-.send{
+.send,
+.abo_btn{
     border: 3px solid transparent;
 }
 .rstart-txt-cnt button:hover,
@@ -57,6 +60,11 @@ footer{
     border-color: #ef8116;
     color: #ef8116;
 }
+.abo_btn:hover{
+    background-color: white;
+    border-color: #ef8116;
+    color: #ef8116;
+}
 button:hover
 .rl_btns:hover,
 .reg_btn:hover,
@@ -66,10 +74,23 @@ button:hover
     height: auto;
     margin: 0;
 }
+.abo_btn,
+.bonus .reg_btn{
+    margin-top: 50px;
+}
+.abo_btn:hover{
+    width: auto;
+    height: auto;
+    margin: 0;
+}
 .rg_btn:hover{
     width: auto;
     height: auto;
     margin: 8vw 0 0 0;
+}
+.bonus .reg_btn,
+.bonus .reg_btn:hover{
+    margin-right: 30px;
 }
 .connect_btn:hover{
     width: auto;
@@ -143,7 +164,8 @@ footer .prgrm_list .title,
     color: rgb(200, 200, 200);
     margin-bottom: 10px;
     font-weight: 100;
-    text-decoration: underline
+    text-decoration: underline;
+    font-size: 14px;
 }
 footer .prgrm_list ul li a,
 .reg_f_s ul li a,
@@ -165,6 +187,9 @@ footer .prgrm_list ul li a:hover,
 
 .start{
     height: 35.1vw;
+}
+.bonus .top_section{
+    margin-top: 20px;
 }
 
 .info-screen .swiper-slide{
@@ -1013,11 +1038,8 @@ footer .prgrm_list ul li a:hover,
     }
 
     .bons-screen button {
-        height: auto;
-        font-size: 10px;
-        padding: 12px 24px;
-        line-height: 1;
-        margin: 30px 15px 0;
+        margin: 30px auto!important;
+        display: block;
     }
 
     .bons-how-screen {
