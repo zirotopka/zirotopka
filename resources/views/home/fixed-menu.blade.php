@@ -87,14 +87,14 @@
                     <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#section_7" class="spy_sections">
-                            <p>07 ВОПРОСЫ</p>
+                            <p>06 ВОПРОСЫ</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
                     <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#section_8" class="spy_sections">
-                            <p>08 ДОСТУП</p>
+                            <p>07 ДОСТУП</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
