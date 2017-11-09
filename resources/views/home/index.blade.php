@@ -223,6 +223,7 @@
                 </div>
                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
             </div>
+              <!--
             <hr class="disp_line">
             <div class="comments-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_6">
                 <h2>ОТЗЫВЫ</h2>
@@ -245,7 +246,7 @@
             
                 <p class="watch_more">Смотреть больше отзывов</p>
                 <a class="arrow2"></a>
-            </div>
+            </div>!-->
             <hr class="disp_line">
             <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_7">
                 <h2>ВОПРОСЫ И ОТВЕТЫ</h2>

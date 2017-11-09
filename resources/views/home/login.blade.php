@@ -13,6 +13,7 @@
           </form>
           <a href="" id="open_reg" data-toggle="modal" data-target="#registr">Зарегистрироваться!</a>
           <a href="#" data-toggle="modal" data-target="#get_password_form">Забыли пароль?</a>
+          <!--
           <div class="enter_across">
             <hr>
             <a href="#">или войти через</a>
@@ -23,6 +24,7 @@
               <img src="/image/social-networks/icon-vk.png" alt="" align="center" width="36px">
             </a>
           </div>
+          !-->
         </div>
       </div>
     </div>

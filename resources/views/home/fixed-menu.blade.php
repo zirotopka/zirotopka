@@ -75,13 +75,15 @@
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
-                    <li class="sc"> 
+                    <!--
+                    <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#section_6" class="spy_sections">
                             <p>06 ОТЗЫВЫ</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
+                    !-->
                     <li class="sc">
                         <p class="fm_line">|</p>
                         <a href="#section_7" class="spy_sections">

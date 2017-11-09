@@ -27,7 +27,8 @@
                 <span>{{$referral->surname.' '.$referral->first_name}}</span>
               </div>
             @endif
-            
+
+            <!--
             <div class="enter_across reg_enter_across">
               <hr>
               <a href="#" data-toggle="modal" data-target="#login">или войти через</a>
@@ -38,6 +39,7 @@
                 <img src="/image/social-networks/icon-vk.png" alt="" align="center" width="36px">
               </a>
             </div>
+            !-->
             <input class="registr_btn" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ">
           </form>
         </div>
