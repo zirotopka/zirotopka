@@ -254,7 +254,7 @@
 								</div>
 							@else
 								<div class="video_holder">
-									<img src="{{ env('APP_URL').'/image/preview/легкий-бег.jpg' }}" alt="" style="width: 100%;">
+									<img src="{{ '/image/preview/light-running.jpg' }}" alt="" style="width: 100%;">
 									<div class="mask"></div>
 								</div>
 							@endif
