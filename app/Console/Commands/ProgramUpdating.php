@@ -61,7 +61,8 @@ class ProgramUpdating extends Command
             'first_name',
             'surname',
             'slug',
-        ])->whereNotNull('current_programm_id')->where('program_is_start','=',1);
+            'program_is_end',
+        ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('program_is_end','=',0);
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
@@ -188,7 +189,8 @@ class ProgramUpdating extends Command
             'first_name',
             'surname',
             'slug',
-        ])->whereNotNull('current_programm_id')->where('program_is_start','=',0);
+            'program_is_end',
+        ])->whereNotNull('current_programm_id')->where('program_is_start','=',0)->where('program_is_end','=',0);
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
@@ -249,8 +251,16 @@ class ProgramUpdating extends Command
     }
 
     public function user_update ($user, $userNow, $status) {
+        if ($user->current_days == 28) {
+            //Последний день
+            if ($status) {
+                $user->program_is_end = 1;
+            }
+        } else {
+            $user->current_day = $user->current_day + 1;
+        }
+
         $user->status = $status;
-        $user->current_day = $user->current_day + 1;
         $user->last_updated_at = $userNow;
         $user->save();
 

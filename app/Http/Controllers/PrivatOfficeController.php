@@ -46,6 +46,11 @@ class PrivatOfficeController extends Controller
             return view('errors.error_balance');
         }
 
+        //Конец программы
+        if ( !empty($user->program_is_end) ) {
+            return view('privat_office._partials._program_is_end', ['user' => $user]);
+        }
+
         //Выбор программы
         if ( empty($user->current_programm_id) ) {
             $programs = Programm::select('id','description','name')
@@ -586,6 +591,25 @@ class PrivatOfficeController extends Controller
         $user->save();
 
         \Log::info('Пользователь №'.$user->id.' использовал иммунитет.');
+
+        return redirect('/'.$user->slug);
+    }
+
+    //Начало новой програмы
+    public function start_new_program (Request $request) {
+        $user = Sentinel::getUser();
+
+        if ($user->current_day == 28 && $user->program_is_end == 1) {
+            $user->current_day = null;
+            $user->status = 0;
+            $user->is_programm_pay = 0;
+            $user->program_is_start = 0;
+            $user->start_training_day = null;
+            $user->current_programm_id = null;
+            $user->program_is_end = 0;
+
+            $user->save();
+        }
 
         return redirect('/'.$user->slug);
     }
