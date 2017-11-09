@@ -46,10 +46,10 @@ class MessageController extends Controller
 		$user = Sentinel::getUser();
 
 		if ($type == 1) {
-			$messages = Message::where('sender_id','=',1)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
+			$messages = Message::where('sender_id','=',$user->id)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
 
 		} else {
-			$messages = Message::where('recipient_id','=',1)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
+			$messages = Message::where('recipient_id','=',$user->id)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
 		}
 
 		$data = [
@@ -78,11 +78,14 @@ class MessageController extends Controller
 	public function sendAll(Request $request)
 	{
 		$user = Sentinel::getUser();
+
+		$users = User::select('id','first_name','surname')->get();
 		$data = [
 			'user' => $user,
+			'users' => $users,
 			'recipient_id' => -1
 		];
-		return view('admin.messages.new_message', $data);
+		return view('admin.messages.send_all', $data);
 	}
 
 	public function create_admin($recipient_id, Request $request)

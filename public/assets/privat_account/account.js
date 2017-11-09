@@ -53,11 +53,14 @@ $( document ).ready(function() {
 					   title: 'Спасибо!',
 					   text: result['text'],
 					   showCloseButton: true,
-					   showConfirmButton: false,
+					   showConfirmButton: true,
+					   confirmButtonText: 'Oк',
+					   confirmButtonColor: '#ff8a18',
 					 }).then(
 					   function () {
+					   	   window.location.href = '/';
 					    }, function (dismiss) {
-					    	seal.close();
+					    	swal.close();
 					 	}
 					 )
 				} else {
