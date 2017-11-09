@@ -98,6 +98,7 @@ class PrivateOfficeApiController extends Controller
                 DB::beginTransaction();
 
                 $thisStage->files()->delete();
+                $url_count = 0;
                 
                 foreach ($stage_url as $file_url) {
                     $file_name = basename(public_path().$file_url);
@@ -121,6 +122,12 @@ class PrivateOfficeApiController extends Controller
                     $file->owner_id = $thisStage->id;
 
                     $file->save();
+
+                    $url_count++;
+
+                    if ($url_count >= 4) {
+                        break;
+                    }
                 }
                 DB::commit();
             }

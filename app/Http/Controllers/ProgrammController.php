@@ -9,8 +9,25 @@ use Illuminate\Support\Facades\Redirect;
 use Carbon\Carbon;
 use App\Helpers\IP;
 
+use App\Mail\ProgramShipped;
+use Mail;
+
 class ProgrammController extends Controller
 {	
+    public $monthHuman = [
+        1 => 'января',
+        2 => 'февраля',
+        3 => 'марта',
+        4 => 'апреля',
+        5 => 'мая',
+        6 => 'июня',
+        7 => 'июля',
+        8 => 'августа',
+        9 => 'сентября',
+        10 => 'октября',
+        11 => 'ноября',
+        12 => 'декабря',
+    ];
 
     public function index(Request $request, $slug){
         switch ($slug){
@@ -173,11 +190,23 @@ class ProgrammController extends Controller
                 $user->program_is_start = 1;
             } 
 
+            $subject = "Выбор программы";
+            $text = 'Спасибо за выбор программы. Первая тренировка будет доступна вам '.$start_training_day->format('Y-m-d');
+
+            $this->send_mail($user, $subject, $text);
+
             $user->save();
 
     		return redirect($user->slug);
     	} else {
             return redirect()->back()->withErrors(['error' => 'Пользователь отсутствует']);
     	}
+    }
+
+    public function send_mail($user, $subject, $text) {
+        //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
+        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+
+        return 1;
     }
 }
