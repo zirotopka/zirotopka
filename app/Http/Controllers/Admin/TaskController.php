@@ -94,8 +94,9 @@ class TaskController extends Controller {
                 }
 
                 $stage = ProgrammStage::select('id','exercise_id')->where('id','=',$trainingStage->stage_id)->with('exercive')->first();
+                $user = $training->user;
 
-                if (!empty($stage) && !empty($stage->exercive)) {
+                if (!empty($stage) && !empty($stage->exercive) && !empty($user)) {
                 	$subject = 'Ваша тренировка проверена!';
 		            $text = 'Тренировка "'.$stage->exercive->name.'" проверена модератором и переведена в статус "'.$status_text.'".';
 
@@ -109,17 +110,21 @@ class TaskController extends Controller {
 
 	public function change_rating($id, $rating, Request $request)
 	{
-		$training = TrainingStages::select('id','rating')
+		$trainingStages = TrainingStages::select('id','rating')
 				->where('id','=',$id)->first();
 
-		$training->rating = $rating;
-		$training->save();
+		$trainingStages->rating = $rating;
+		$trainingStages->save();
 
-		$user = User::select('id','second_rating')->first();
+		$training = $trainingStage->training;
 
-		if (!empty($user)) {
-			$user->second_rating = $user->second_rating + $rating;
-			$user->save();
+		if (!empty($training)) {
+			$user = $training->user;
+
+			if (!empty($user)) {
+				$user->second_rating = $user->second_rating + $rating;
+				$user->save();
+			}
 		}
 
 		return redirect()->route('tasks');
