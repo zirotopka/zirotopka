@@ -7,13 +7,21 @@ $( document ).ready(function() {
 			backSum = modalWindows.find('.sumBack');
 
 		if (thisSum == NaN) {
+<<<<<<< HEAD
+			jQuery.each(backSum,function(index, value){
+=======
 			jQuery.each(backSum, function(index, value){
+>>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
 				jQuery(this).val(0);
 			});
 
 			thisInput.val('');
 		} else {
+<<<<<<< HEAD
+			jQuery.each(backSum,function(index, value){
+=======
 			jQuery.each(backSum, function(index, value){
+>>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
 				jQuery(this).val(thisSum);
 			});
 

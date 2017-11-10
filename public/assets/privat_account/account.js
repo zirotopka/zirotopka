@@ -92,6 +92,39 @@ $( document ).ready(function() {
 
 		if (attachment_items.length >= 4) {
 			swal({
+<<<<<<< HEAD
+	            title: "Загрузка файла!",
+	            text: "Ожидайте. Это может занять некоторое время",
+	            imageUrl: "/ico/spinner.gif",
+	            imageWidth: '50',
+	            imageHeight: '50',
+	            showConfirmButton: false
+	        });
+
+			var formData = new FormData(),
+				slug = jQuery('#current_slug').val();
+
+			formData.append( 'file', file );
+		    formData.append( 'destinationPath', '/trainings/' + slug + '/' );
+
+		    $.ajax({
+		        url: '/api/file/store_attachment',
+		        type: 'POST',
+		        data: formData,
+		        cache: false,
+		        processData: false, 
+		        contentType: false, 
+		        success: function(result) {
+		        	if (result['code'] == 200) {
+						var attachment_html = '';
+
+						attachment_html += '<div class="attachment-item attachment_block" >'; 
+
+						if (result['file_type']= 2) {	
+							attachment_html += '<img class="attachment-img" id="attachment-img" src="' + result['preview'] + '">';
+						} else if (result['file_type'] = 3) {
+							attachment_html += '<img class="attachment-img" src="/ico/video-default.png">';
+=======
 			   title: 'Внимание!',
 			   text: 'Загружено максимальное кол-во файлов',
 			   showCloseButton: true,
@@ -146,6 +179,7 @@ $( document ).ready(function() {
 							   showCloseButton: true,
 							   showConfirmButton: false,
 							})
+>>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
 						}
 
 			        },
