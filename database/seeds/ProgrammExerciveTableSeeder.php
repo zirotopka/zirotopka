@@ -22,8 +22,8 @@ class ProgrammExerciveTableSeeder extends Seeder
     	}
 
         $exercive_array = [
-    		['id' => 1, 'slug' => '', 'name' => 'Выпады назад на месте', 'description' => 'Бедро ниже параллели, колено не выходит вперед', 'file_url' => '/video/trainings/ROneStart/01_Prisedaniya_na_meste.mp4', 'preview' => '/image/preview/выпады-назад-на-месте.jpg' ],
-    		['id' => 2, 'slug' => '', 'name' => 'Приседания на месте', 'description' => 'Бедро ниже параллели, спина прямая.', 'file_url' => '/video/trainings/ROneStart/02_Vipady_nazad_na_meste.mp4', 'preview' => '/image/preview/приседания-на-месте.jpg' ],
+    		['id' => 1, 'slug' => '', 'name' => 'Приседания на месте', 'description' => 'Бедро ниже параллели, спина прямая.', 'file_url' => '/video/trainings/ROneStart/01_Prisedaniya_na_meste.mp4', 'preview' => '/image/preview/приседания-на-месте.jpg' ],
+    		['id' => 2, 'slug' => '', 'name' => 'Выпады назад на месте', 'description' => 'Бедро ниже параллели, колено не выходит вперед', 'file_url' => '/video/trainings/ROneStart/02_Vipady_nazad_na_meste.mp4', 'preview' => '/image/preview/выпады-назад-на-месте.jpg' ],
     		['id' => 3, 'slug' => '', 'name' => 'Выпады назад крест-накрест', 'description' => 'Осанка прямая', 'file_url' => '/video/trainings/ROneStart/03_Vipady_nazad_krest-nakrest.mp4', 'preview' => '/image/preview/выпады-назад-крест-накрест.jpg' ],
     		['id' => 4, 'slug' => '', 'name' => 'Боковая планка', 'description' => 'Никаких прогибов.', 'file_url' => '/video/trainings/ROneStart/04_planka_bokovaya.mp4', 'preview' => '/image/preview/планка-боковая.jpg' ],
     		['id' => 5, 'slug' => '', 'name' => 'Планка классическая стойка на предплечьях', 'description' => 'Осанка ровная, в пояснице без прогиба, ноги на ширине таза.', 'file_url' => '/video/trainings/ROneStart/05_planka_classic.mp4', 'preview' => '/image/preview/планка-классическая.jpg' ],
@@ -52,7 +52,7 @@ class ProgrammExerciveTableSeeder extends Seeder
     		['id' => 26, 'slug' => '', 'name' => 'Присед и махи', 'description' => 'Вперед, назад, в стороны. Соблюдаем все основные правила писеданий.', 'file_url' => '/video/trainings/ROneStart/26_prised_i_mahi.mp4', 'preview' => '/image/preview/присед+махи-в-разные-стороны.jpg' ],
     		['id' => 27, 'slug' => '', 'name' => 'Прыжки на скакалке', 'description' => '', 'file_url' => '/video/trainings/ROneStart/27_prizki_na_skakalke.mp4', 'preview' => '/image/preview/прыжки-на-скакалке.jpg' ],
     		['id' => 28, 'slug' => '', 'name' => 'Колобок', 'description' => 'Упор лежа, одна рука за голову и встречное движение противоположному колену с паузой 1сек..', 'file_url' => '/video/trainings/ROneStart/28_kolobok.mp4', 'preview' => '/image/preview/колобок.jpg' ],
-    		['id' => 29, 'slug' => 'Руки за головой или вытянуты перед собой, ноги стараться не отрывать.', 'name' => 'Гиперэкстензия', 'description' => '', 'file_url' => '/video/trainings/ROneStart/29_giperextensia.mp4', 'preview' => '/image/preview/гиперэкстензия.jpg' ],
+    		['id' => 29, 'slug' => '', 'name' => 'Гиперэкстензия', 'description' => 'Руки за головой или вытянуты перед собой, ноги стараться не отрывать.', 'file_url' => '/video/trainings/ROneStart/29_giperextensia.mp4', 'preview' => '/image/preview/гиперэкстензия.jpg' ],
     		['id' => 30, 'slug' => '', 'name' => 'Разминка', 'description' => '', 'file_url' => '/video/trainings/ROneStart/30_razminka.mp4', 'preview' => '/image/preview/разминка.jpg' ],
     	];
 

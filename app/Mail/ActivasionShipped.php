@@ -34,7 +34,7 @@ class ActivasionShipped extends Mailable
      */
     public function build()
     {
-        return $this->from('support@reformator.one', 'Reformator One')
+        return $this->from('reformator@reformator.one', 'Reformator One')
                     ->subject('Активация аккаунта Reformator One!')
                     ->view('mail._activasion',['user' => $this->user, 'password' => $this->password,'code' => $this->code]);
     }

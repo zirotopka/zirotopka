@@ -184,6 +184,8 @@ return [
         ElForastero\Transliterate\TransliterationServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         SocialiteProviders\Manager\ServiceProvider::class,
+
+        App\Providers\ComposerServiceProvider::class,
     ],
 
     /*

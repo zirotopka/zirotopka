@@ -17,6 +17,7 @@ use App\AdjancyList;
 use App\Balance;
 
 use Mail;
+use App\FreeAccess;
 
 use App\Mail\PasswordShipped;
 
@@ -28,6 +29,7 @@ class User extends CartalystUser
 
     protected $table = 'users';
     protected $primaryKey = 'id';
+    protected $dates = ['deleted_at'];
 
     public function getRouteKeyName()
     {
@@ -186,6 +188,21 @@ class User extends CartalystUser
                     }
                 }
 
+                //Бесплатный доступ
+                if (session()->has('freeAccess')) {
+                    $freeAccess = $request->session()->pull('freeAccess');
+
+                    $freeAccessModel = FreeAccess::where('id','=',$freeAccess)->whereNull('user_id')->first();
+
+                    if (!empty($freeAccessModel)) {
+                        $user->is_programm_pay = 1;
+                        if ($user->save()) {
+                            $freeAccessModel->user_id = $user->id;
+                            $freeAccessModel->save();
+                        }
+                    }
+                }
+
                 return $user;
             } else {
                 \Log::error('createBySocialProvider: Пустое имя');
@@ -243,6 +260,16 @@ class User extends CartalystUser
     public function accruals()
     {
         return $this->hasMany('App\Accrual','user_id');
+    }
+
+    public function accruals_input()
+    {
+        return $this->hasMany('App\Accrual','user_id')->where('comment','=','За приглашенного пользователя');
+    }
+
+    public function accruals_output()
+    {
+        return $this->hasMany('App\Accrual','user_id')->where('comment','=','Вывод средств c личного счета');
     }
 
     public function trainings()

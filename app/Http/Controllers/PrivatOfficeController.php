@@ -11,6 +11,7 @@ use App\ProgrammStage;
 use App\Balance;
 use App\Accrual;
 use App\Training;
+use App\Ban;
 use Validator;
 use App\Jobs\BonusDistribution;
 
@@ -45,6 +46,11 @@ class PrivatOfficeController extends Controller
             return view('errors.error_balance');
         }
 
+        //Конец программы
+        if ( !empty($user->program_is_end) ) {
+            return view('privat_office._partials._program_is_end', ['user' => $user]);
+        }
+
         //Выбор программы
         if ( empty($user->current_programm_id) ) {
             $programs = Programm::select('id','description','name')
@@ -53,10 +59,14 @@ class PrivatOfficeController extends Controller
             return view('privat_office._partials._choose_program_form', ['user' => $user, 'programs' => $programs]);
         }
 
-        $currentProgramDayStatus = $user->current_program_day_status;
+        $current_program_day = ProgrammDay::select('id','day','status')
+                                ->where('programm_id','=',$user->current_programm_id)
+                                ->where('day','=',$user->current_day)
+                                ->first();        
+        $currentProgramDayStatus = $current_program_day->status;
 
         //Оплата програм
-        if (!empty($currentProgramDayStatus->status)) {
+        if (!empty($currentProgramDayStatus) || $current_program_day->day > 2) {
             if (!empty($user->current_programm_id) && empty($user->is_programm_pay)) {
                 $program_cost = $user->current_program->cost;
                 $parents = $user->parents;
@@ -64,6 +74,11 @@ class PrivatOfficeController extends Controller
                 if (count($parents) > 0) {
                     $program_cost = $program_cost * 0.9;
                 }
+
+                if (!empty($user->status)) {
+                    $user->status = 0;
+                    $user->save();
+                } 
 
                 //Проверяем наличие средств на балансе
                 if ($balance->sum >= $program_cost) {
@@ -80,7 +95,7 @@ class PrivatOfficeController extends Controller
         //Проверка даты программы
         if (!empty($user->start_training_day) && empty($user->program_is_start)) {
             $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
-            $start_training_day->subDay();
+            // $start_training_day->subDay();
             $monthHuman = $this->monthHuman;
             
             return view('privat_office._partials._program_comming_soon', ['user' => $user, 'start_training_day' => $start_training_day, 'monthHuman' => $monthHuman]); 
@@ -123,6 +138,11 @@ class PrivatOfficeController extends Controller
 
         $difficult_array = ProgrammDay::$difficult_array;
 
+        $bans = Ban::select([
+                        \DB::raw('DATE_FORMAT(created_at, "%Y-%m-%d") as create_time'),
+                    ])
+                    ->where('user_id','=',$user->id)->pluck('create_time')->toArray();
+
     	$data = [
     		'user' => $user,
             'programm_days' => $programm_days,
@@ -130,6 +150,7 @@ class PrivatOfficeController extends Controller
             'programm_stages' => $programm_stages,
             'current_program_day' => $current_program_day,
             'current_training' => $current_training,
+            'bans' => $bans,
     	];
 
         if (session()->has('pay_program')) {
@@ -446,6 +467,10 @@ class PrivatOfficeController extends Controller
             return redirect()->back()->withErrors(['error' => 'Ваш id не совпадает с id вывода средств. Обратитесь в поддержку']);
         }
 
+        if (empty($user->is_programm_pay) || empty($user->status)) {
+            return redirect()->back()->withErrors(['error' => 'Ваш аккаунт заморожен или не куплена програма']);
+        }
+
         if (empty($balance)) {
             return view('errors.error_balance');
         }
@@ -566,6 +591,25 @@ class PrivatOfficeController extends Controller
         $user->save();
 
         \Log::info('Пользователь №'.$user->id.' использовал иммунитет.');
+
+        return redirect('/'.$user->slug);
+    }
+
+    //Начало новой програмы
+    public function start_new_program (Request $request) {
+        $user = Sentinel::getUser();
+
+        if ($user->current_day == 28 && $user->program_is_end == 1) {
+            $user->current_day = null;
+            $user->status = 0;
+            $user->is_programm_pay = 0;
+            $user->program_is_start = 0;
+            $user->start_training_day = null;
+            $user->current_programm_id = null;
+            $user->program_is_end = 0;
+
+            $user->save();
+        }
 
         return redirect('/'.$user->slug);
     }

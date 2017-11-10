@@ -21,6 +21,7 @@ use App\Mail\ActivasionShipped;
 use App\Mail\GetPasswordShipped;
 
 use Mail;
+use App\FreeAccess;
 
 class UserController extends Controller
 {	
@@ -131,6 +132,21 @@ class UserController extends Controller
                 }
             }
 
+            //Бесплатный доступ
+            if (session()->has('freeAccess')) {
+                $freeAccess = $request->session()->pull('freeAccess');
+
+                $freeAccessModel = FreeAccess::where('id','=',$freeAccess)->whereNull('user_id')->first();
+
+                if (!empty($freeAccessModel)) {
+                    $user->is_programm_pay = 1;
+                    if ($user->save()) {
+                        $freeAccessModel->user_id = $user->id;
+                        $freeAccessModel->save();
+                    }
+                }
+            }
+
             //Sentinel::authenticateAndRemember([ 'email' => $request->get('email'), 'password' => $request->get('password') ]);
 
             session(['success_array' => ['caption' => 'Спасибо за регистрацию!', 'text' => 'На ваш почтовый ящик направлено письмо с подтверждением.']]);
@@ -145,6 +161,20 @@ class UserController extends Controller
      * Логин
      */
     public function login(Request $request) {
+        $user = User::where('email','=',$request->get('email'))->first();
+
+        if (empty($user)) {
+            return redirect()->back()->withErrors(['Внимание!' => 'Неверный логин или пароль']);
+        }
+
+        $activation = Activation::exists($user);
+
+        if (!empty($activation)) {
+            if (empty($activation->completed)) {
+                return redirect()->back()->withErrors(['Внимание' => 'Активируйте свой аккаунт']);
+            }
+        }
+
         $user = Sentinel::authenticateAndRemember([ 'email' => $request->get('email'), 'password' => $request->get('password') ]);
 
         if( $user === false ) {

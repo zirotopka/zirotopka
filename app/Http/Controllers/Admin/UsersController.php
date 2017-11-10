@@ -19,8 +19,8 @@ class UsersController extends Controller
     public function index(Request $request) {
     	$users = User::select([
     		'id','email','first_name','last_name','surname',
-    		'current_programm_id','status',
-    	])->with('roles','current_program')->paginate(20);
+    		'current_programm_id','status','is_programm_pay'
+    	])->with('roles','current_program','balance','accruals_input','accruals_output')->paginate(20);
 
 		$roles = Role::get();
     	return view('admin.users.index', [
@@ -77,8 +77,7 @@ class UsersController extends Controller
 
     public function destroy($id)
     {	
-        $user = User::findOrFail($id);
-        $user->delete();
+    	User::destroy($id);
 
         return response()->json(true);
     }

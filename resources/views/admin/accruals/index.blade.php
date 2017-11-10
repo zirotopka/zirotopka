@@ -74,6 +74,8 @@
                         <td>
                             @if (!empty($accrual->user))
                                 {{ $accrual->user->first_name }} {{ $accrual->user->surname }}
+                            @else
+                                Клиент удален
                             @endif
                         </td>
                         <td>

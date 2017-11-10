@@ -91,7 +91,8 @@ footer{
 .password_btn,
 .send,
 .bonus .reg_btn,
-.abo_btn{
+.abo_btn,
+.forms-btns{
     -webkit-transition: 0.15s;
     -moz-transition: 0.15s;
     transition: 0.15s;
@@ -103,6 +104,40 @@ footer{
 .how-screen button{
     padding: 18px 24px 16px;
 }
+
+
+
+.block-modal{
+
+}
+.block-modal.program-end .modal-content{
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+}
+.block-modal.program-end .input_money{
+    margin: 0;
+}
+.block-modal.program-end .add_money{
+    width: 95%;
+}
+.block-modal.program-end .forms-btns,
+.block-modal.program-end .forms-btns:hover{
+    width: auto!important;
+    height: auto!important;
+    margin-bottom: 0!important;
+}
+.attachment-img{
+    width: 100%;
+}
+.customSelect:after{
+    height: 2.45vw;
+}
+.wh-line{
+    opacity: 0;
+}
 .reg_btn,
 .rg_btn,
 .how-screen button,
@@ -112,7 +147,8 @@ footer{
 .login_btn,
 .password_btn,
 .send,
-.abo_btn{
+.abo_btn,
+.forms-btns{
     border: 3px solid transparent;
 }
 .rstart-txt-cnt button:hover,
@@ -124,7 +160,8 @@ footer{
 .registr_btn:hover,
 .login_btn:hover,
 .password_btn:hover,
-.send:hover{
+.send:hover,
+.forms-btns:hover{
     background-color: transparent;
     border: 3px solid #ef8116;
     color: #ef8116;
@@ -373,7 +410,7 @@ footer .prgrm_list ul li a:hover,
 
 @media only screen and (max-width : 768px) {
     .dropdown{
-        width: 41.5% !important;
+        width: 50% !important;
     }
     .rl_btns,
     .rg_btn,
@@ -1313,6 +1350,30 @@ footer .prgrm_list ul li a:hover,
         font-size: 10px;
     }
     .st-menu ul li a{
-        padding: 15px 30px 15px 0!important;
+
+    }
+    .left_edit_part p{
+        font-size: 10px!important;
+    }
+    .left_edit_part{
+        width: auto!important;
+        position: static!important;
+    }
+    #partners .modal-dialog,
+    #user_agreements .modal-dialog{
+        width: 96vw;
+        margin: 60px auto 2vw;
+    }
+    #partners h2,
+    #user_agreements h2{
+        line-height: 1.5;
+    }
+    #partners .off,
+    #partners ol,
+    #user_agreements ol{
+        font-size: 12px;
+        padding: 0;
+        margin-top: 20px;
+        line-height: 1.5;
     }
 }

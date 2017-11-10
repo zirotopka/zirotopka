@@ -6,6 +6,8 @@ use App\User;
 use App\Accrual;
 
 use Illuminate\Http\Request;
+use App\Mail\ProgramShipped;
+use Mail;
 
 class PayMasterController extends Controller
 {	
@@ -15,7 +17,7 @@ class PayMasterController extends Controller
     	$LMI_PAID_AMOUNT = (float) $request->get('LMI_PAYMENT_AMOUNT');
         $userID = $request->get('PAYER_ID');
 
-        $user = User::select('slug','id')->where('id','=',$userID)->first();
+        $user = User::select('slug','id','status','first_name','surname')->where('id','=',$userID)->first();
 
         if (empty($user)) {
         	\Log::error('PayMasterController: Не найден пользователь. Json: '.json_encode($request->all()));
@@ -34,6 +36,9 @@ class PayMasterController extends Controller
         $balance->sum = $balance->sum + $LMI_PAID_AMOUNT;
         $balance->save();
 
+        $user->status = 1;
+        $user->save();
+
         $accrual = new Accrual;
         $accrual->sum = $LMI_PAID_AMOUNT;
         $accrual->user_id = $userID;
@@ -43,6 +48,11 @@ class PayMasterController extends Controller
         if (!$accrual->save()) {
         	\Log::warning('PayMasterController: Не сохранен платеж в системе. Json: '.json_encode($request->all()));
         }
+
+        $subject = 'Оплата программы Reformator.One';
+        $text = 'Вы успешно приобрели программу. Желаем удачи в тренировках.';
+
+        $this->send_mail($user, $subject, $text);
 
         return true;
     }
@@ -102,5 +112,12 @@ class PayMasterController extends Controller
 
     public function failure (Request $request) {
         return redirect('/');
+    }
+
+    public function send_mail($user, $subject, $text) {
+        //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
+        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+
+        return 1;
     }
 }

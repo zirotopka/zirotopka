@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	var confirmButtonText = "Да, удалить!";
     var confirmButtonRestoreText = "Да, восстановить!";
     var cancelButtonText = "Нет, отменить!";
@@ -55,7 +54,7 @@ $(document).ready(function(){
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: confirmButtonColor,
-            confirmButtonText: confirmButtonText,
+            confirmButtonText: 'Да, изменить статус!',
             cancelButtonText: cancelButtonText,
         }).then (function () {
                 $.ajax({

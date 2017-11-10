@@ -9,8 +9,25 @@ use Illuminate\Support\Facades\Redirect;
 use Carbon\Carbon;
 use App\Helpers\IP;
 
+use App\Mail\ProgramShipped;
+use Mail;
+
 class ProgrammController extends Controller
 {	
+    public $monthHuman = [
+        1 => 'января',
+        2 => 'февраля',
+        3 => 'марта',
+        4 => 'апреля',
+        5 => 'мая',
+        6 => 'июня',
+        7 => 'июля',
+        8 => 'августа',
+        9 => 'сентября',
+        10 => 'октября',
+        11 => 'ноября',
+        12 => 'декабря',
+    ];
 
     public function index(Request $request, $slug){
         switch ($slug){
@@ -45,7 +62,6 @@ class ProgrammController extends Controller
             case "r.one_pro":                $programm = Programm::select([
                     'id',
                     'description',
-                    'feed',
                     'cost',
                     'slug',
                     'name',
@@ -155,8 +171,8 @@ class ProgrammController extends Controller
 
             $start_training_day = Carbon::parse( $request->get('program_date_input'), $timezone );
             $now = Carbon::now($timezone);
-            $tomorrow = clone $now;
-            $tomorrow->addDay();
+            // $tomorrow = clone $now;
+            // $tomorrow->addDay();
 
             $user->sex = $request->get('sex');
             $user->start_training_day = $start_training_day;
@@ -170,11 +186,14 @@ class ProgrammController extends Controller
                 return redirect()->back()->withErrors(['error' => 'Выбранная вами дата уже прошла']);
             }
 
-            if (($now->month == $start_training_day->month && $now->day == $start_training_day->day) ||
-                ($tomorrow->month == $start_training_day->month && $tomorrow->day == $start_training_day->day && $now->hour >= 22)
-            ){
+            if ($now->month == $start_training_day->month && $now->day == $start_training_day->day && $now->hour >= 22){
                 $user->program_is_start = 1;
             } 
+
+            $subject = "Выбор программы";
+            $text = 'Спасибо за выбор программы. Первая тренировка будет доступна вам '.$start_training_day->format('Y-m-d');
+
+            $this->send_mail($user, $subject, $text);
 
             $user->save();
 
@@ -182,5 +201,12 @@ class ProgrammController extends Controller
     	} else {
             return redirect()->back()->withErrors(['error' => 'Пользователь отсутствует']);
     	}
+    }
+
+    public function send_mail($user, $subject, $text) {
+        //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
+        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+
+        return 1;
     }
 }

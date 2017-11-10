@@ -15,6 +15,9 @@ use App\Http\Controllers\Controller;
 
 use Carbon\Carbon;
 
+use App\Mail\ProgramShipped;
+use Mail;
+
 class TaskController extends Controller {
 
 	public function index(Request $request)
@@ -72,6 +75,33 @@ class TaskController extends Controller {
 			if (!empty($training)) {
 				$training->is_moderator_check = 1;
 				$training->save();
+
+				$status_text = 'Отправлено';
+
+				switch ($status) {
+                case 0:
+                    $status_text = 'Отправлено';
+                    break;
+                case 1:
+                    $status_text = 'На доработке';
+                    break;
+                case 2:
+                    $status_text = 'Одобрено';
+                    break;
+                case 3:
+                    $status_text = 'Отклонено';
+                    break;
+                }
+
+                $stage = ProgrammStage::select('id','exercise_id')->where('id','=',$trainingStage->stage_id)->with('exercive')->first();
+                $user = $training->user;
+
+                if (!empty($stage) && !empty($stage->exercive) && !empty($user)) {
+                	$subject = 'Ваша тренировка проверена!';
+		            $text = 'Тренировка "'.$stage->exercive->name.'" проверена модератором и переведена в статус "'.$status_text.'".';
+
+		            $this->send_mail($user, $subject, $text);
+                }
 			}
 		}
 		
@@ -80,17 +110,21 @@ class TaskController extends Controller {
 
 	public function change_rating($id, $rating, Request $request)
 	{
-		$training = TrainingStages::select('id','rating')
+		$trainingStage = TrainingStages::select('id','rating','training_id')
 				->where('id','=',$id)->first();
 
-		$training->rating = $rating;
-		$training->save();
+		$trainingStage->rating = $rating;
+		$trainingStage->save();
 
-		$user = User::select('id','second_rating')->first();
+		$training = $trainingStage->training;
 
-		if (!empty($user)) {
-			$user->second_rating = $user->second_rating + $rating;
-			$user->save();
+		if (!empty($training)) {
+			$user = $training->user;
+
+			if (!empty($user)) {
+				$user->second_rating = $user->second_rating + $rating;
+				$user->save();
+			}
 		}
 
 		return redirect()->route('tasks');
@@ -111,4 +145,10 @@ class TaskController extends Controller {
 			'exercise' => $exercise
 		]);
 	}
+
+	public function send_mail($user, $subject, $text) {
+        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+
+        return 1;
+    }
 }

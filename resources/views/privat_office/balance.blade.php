@@ -78,20 +78,30 @@
 		</div>
 		<div class="blns_btns">
 			<?php
-				if (!empty($user->wallet)) {
-					$title_text = '';
-					$attr = '';
-				} else {
-					$title_text = "Введите номер WebMoney кошелька в личном кабинете";
+				$title_text = '';
+				$attr = '';
+
+				if (empty($user->wallet)) {
+					$title_text .= "Введите номер WebMoney кошелька в личном кабинете.";
+					$attr = 'disabled="disabled"';
+				}
+					
+				if (empty($user->is_programm_pay)) {
+					$title_text .= " Вам необходимо купить программу тренировок.";	
+					$attr = 'disabled="disabled"';
+				}
+
+				if (empty($user->status)) {
+					$title_text .= " Ваш аккаунт заморожен.";	
 					$attr = 'disabled="disabled"';
 				}
 			?>
 			<button class="balance_btn replenish_btn" type="button" data-toggle="modal" data-target="#refer-pay">ПОПОЛНИТЬ</button>
-			<button class="balance_btn {{!empty($user->wallet) ? 'black_btn' : 'grey_btn'}}" type="button" data-toggle="modal" data-target="#withdrawal_modal" title="{{$title_text}}" data-toggle="tooltip" data-placement="top">ВЫВЕСТИ</button>
+			<button class="balance_btn {{(!empty($user->wallet) && ($user->is_programm_pay == 1) && ($user->status == 1)) ? 'black_btn' : 'grey_btn'}}" type="button" data-toggle="modal" data-target="#withdrawal_modal" title="{{$title_text}}" data-toggle="tooltip" data-placement="top">ВЫВЕСТИ</button>
 		</div>
 	</div>
 	@include('privat_office._partials._refer_money_modal',['user' => $user, 'sum' => 0])
-	@if(!empty($user->wallet))
+	@if(!empty($user->wallet) && ($user->is_programm_pay == 1) && ($user->status == 1))
 		@include('privat_office._partials._withdrawal_modal',['user' => $user])
 	@endif
 @overwrite
