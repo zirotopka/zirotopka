@@ -98,7 +98,7 @@ class TaskController extends Controller {
 
                 if (!empty($stage) && !empty($stage->exercive) && !empty($user)) {
                 	$subject = 'Ваша тренировка проверена!';
-		            $text = 'Тренировка "'.$stage->exercive->name.'" проверена модератором и переведена в статус "'.$status_text.'".';
+		            $text = 'Упражнение "'.$stage->exercive->name.'" проверено модератором и переведено в статус "'.$status_text.'".';
 
 		            $this->send_mail($user, $subject, $text);
                 }
