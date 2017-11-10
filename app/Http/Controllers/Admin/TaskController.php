@@ -110,11 +110,11 @@ class TaskController extends Controller {
 
 	public function change_rating($id, $rating, Request $request)
 	{
-		$trainingStages = TrainingStages::select('id','rating')
+		$trainingStage = TrainingStages::select('id','rating')
 				->where('id','=',$id)->first();
 
-		$trainingStages->rating = $rating;
-		$trainingStages->save();
+		$trainingStage->rating = $rating;
+		$trainingStage->save();
 
 		$training = $trainingStage->training;
 
