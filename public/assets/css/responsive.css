@@ -22,6 +22,27 @@ footer{
 .envelop{
     padding: 17px 0 0 0;
 }
+
+
+.block-lesson-video{
+    position: relative;
+    text-align: center;
+    margin: 2em 0 0 0;
+    cursor: pointer;
+}
+
+.prof-disp{
+    vertical-align: middle;
+    margin: 0 !important;
+}
+.st-menu ul li a,
+.left_edit_part ul li a{
+    padding: 1.3em 0 1em 4em!important;
+    text-align: left;
+}
+.left_edit_part p{
+    vertical-align: middle!important;
+}
 .little_menu li.send{
     border: 0;
 }

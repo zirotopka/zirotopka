@@ -2,6 +2,7 @@
   <div class="modal-dialog" role="document" style="width: 25%">
     <div class="modal-content bal_modal_height">
       <div class="modal-body">
+        <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="/ico/close_modal.png" alt=""></span></button>
           <form action="{{env('APP_URL').'/new_post_password'}}" method="POST">
             {{ csrf_field() }}
             <input type="hidden" name="code" value="{{$code}}">

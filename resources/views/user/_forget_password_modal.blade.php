@@ -3,6 +3,7 @@
     <div class="modal-dialog chs-program-widnow" role="document">
       <div class="modal-content reg-mod-content">
         <div class="modal-body choose-program-form">
+          <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="/ico/close_modal.png" alt=""></span></button>
           <form action="{{env('APP_URL').'/forget_password'}}" method="POST">
             {{ csrf_field() }}
             <div class="row">

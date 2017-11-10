@@ -35,7 +35,7 @@
         <div id="st-container" class="st-container">
             @if ($user = Sentinel::check())
                 <nav class="st-menu st-effect-2 col-xs-5 col-sm-5 col-lg-2 col-md-2" id="menu-2">
-                    <ul>
+                    <ul class="left_edit_part">
                         <li>
                             @if (!empty($user->user_ava_url))
                                 <img src="{{'/image/logos/'.$user->user_ava_url}}" alt="" class="img-circle logo-img">
@@ -44,21 +44,22 @@
                             @endif   <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}<br><br><span class="l_mn_raiting">Ваш рейтинг: {{$user->first_rating.'/'.$user->second_rating}}</span></p>
                         </li>
                         <li>
-                           <a href="/{{$user->slug}}" class="profile_btns">
+                           <a href="/{{$user->slug}}" class="profile_btns lgn">
                                 <i class="prgr_ico prof-disp"></i>
-                                <p class="prof-disp" style="margin-left: 1px;">ПРОГРАММА</p></a> 
+                                <p class="prof-disp" style="margin-left: 5px !important;">ПРОГРАММА</p></a>
                         </li>
                         <li>
-                           <a href="/{{$user->slug}}/edit" class="profile_btns"><i class="prof_ico prof-disp"></i><p class="prof-disp">ПРОФИЛЬ</p></a> 
+                           <a href="/{{$user->slug}}/edit" class="profile_btns lgn"><i class="prof_ico prof-disp"></i>
+                               <p class="prof-disp" style="margin-left: 7px !important;">ПРОФИЛЬ</p></a>
                         </li>
                         <li>
-                           <a href="/{{$user->slug}}/balance" class="profile_btns"><i class="wallet_ico prof-disp" style="
-                           margin: 0 0 0 0.98em; width: 1.1em;"></i><p class="prof-disp">МОЙ СЧЁТ</p></a> 
+                           <a href="/{{$user->slug}}/balance" class="profile_btns lgn"><i class="wallet_ico prof-disp" style="
+                           margin: 0 0 0 0.98em; width: 1.1em;"></i><p class="prof-disp" style="margin-left: 10px !important;">МОЙ СЧЁТ</p></a>
                         </li>
                         <li>
-                            <a href="/{{$user->slug}}/faq" class="profile_btns help">
+                            <a href="/{{$user->slug}}/faq" class="profile_btns help lgn">
                                 <i class="help_ico prof-disp"></i>
-                                <p class="prof-disp">ПОМОЩЬ</p>
+                                <p class="prof-disp" style="margin-left: 5px !important;">ПОМОЩЬ</p>
                             </a> 
                         </li>
                      </ul>                

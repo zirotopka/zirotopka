@@ -215,7 +215,7 @@
 									<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
 								</div>
 <!--VIDEO-->
-								<div class="video_holder" data-id="{{$exercive->id}}">
+								<div class="block-lesson-video video_holder" data-id="{{$exercive->id}}">
 									<?php
 								    	$preview = $exercive->previews->first();
 
