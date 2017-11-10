@@ -28,8 +28,9 @@
 		<?php echo $accruals->render(); ?>
 		<div class="table-scrolling col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-			<table class="table balance_table">
-				<thead>
+			<div class="table-responsive">
+				<table class="table balance_table">
+					<thead>
 					<tr>
 						<th class="hidden-xs tb_nm">№</th>
 						<th class="hidden-xs tb_dt">ДАТА</th>
@@ -39,18 +40,18 @@
 						<th class="tb_sm">СТАТУС</th>
 						<th class="tb_sm">СУММА</th>
 					</tr>
-				</thead>
-				<tbody>
-						<tr>
-							<td class="hidden-xs"></td>
-							<td class="hidden-xs"></td>
-							<td class="hidden-xs"></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="hidden-xs"></td>
+						<td class="hidden-xs"></td>
+						<td class="hidden-xs"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
 					@forelse ($accruals as $accrual)
-						<?php $created_at = DateTime::createFromFormat('Y-m-d H:i:s', $accrual->created_at); ?>
+                        <?php $created_at = DateTime::createFromFormat('Y-m-d H:i:s', $accrual->created_at); ?>
 						<tr>
 							<td class="hidden-xs tb_nm">{{$accrual->id}}</td>
 							<td class="hidden-xs tb_dt">{{$created_at->format('Y-m-d')}}</td>
@@ -71,8 +72,9 @@
 							<td></td>
 						</tr>
 					@endforelse
-				</tbody>
-			</table>
+					</tbody>
+				</table>
+			</div>
 		</div>
 		<div class="blns_btns">
 			<?php

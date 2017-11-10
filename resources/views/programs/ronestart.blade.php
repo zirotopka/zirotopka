@@ -125,7 +125,7 @@
                         <div class="swiper-slide" >
                             <div class="video_slide">
                                 <div class="bbrdr">
-                                    <video controls poster="/image/preview/отжимания-от-пола.jpg">
+                                    <video controls poster="/image/preview/program-lesson-1.jpg">
                                         <source src="/videos/отжимания-от-пола.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -143,7 +143,7 @@
                         <div class="swiper-slide" >
                             <div class="video_slide">
                                 <div class="bbrdr">
-                                    <video controls poster="/image/preview/ягодичный-мост.jpg">
+                                    <video controls poster="/image/preview/program-lesson-2.jpg">
                                         <source src="/videos/ягодчный-мост.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -159,7 +159,7 @@
                         <div class="swiper-slide " >
                             <div class="video_slide">
                                 <div class="bbrdr">
-                                    <video controls poster="/image/preview/присед-выпад-назад.jpg">
+                                    <video controls poster="/image/preview/program-lesson-3.jpg">
                                         <source src="/videos/присяд-выпад-назад.mp4" type="video/mp4">
                                     </video>
                                 </div>

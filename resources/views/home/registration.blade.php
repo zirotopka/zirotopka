@@ -2,6 +2,7 @@
   <div class="modal-dialog reg_modal" role="document">
     <div class="modal-content ">
       <div class="modal-body">
+        <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="/ico/close_modal.png" alt=""></span></button>
         <h3>ПРИСОЕДИНЯЙТЕСЬ!</h3>
         <div class="user_data">
           <form action="/register" method="POST">

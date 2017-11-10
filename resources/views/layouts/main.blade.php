@@ -96,7 +96,7 @@
                     <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                         <!-- Top Navigation -->
                         <div class="codrops-top clearfix ">
-                            <div id="st-trigger-effects" class="column col-lg-1 col-md-1 col-sm-4 col-xs-4">
+                            <div id="st-trigger-effects" class="column col-lg-1 col-md-1 col-sm-4 col-xs-3">
                                 <button data-effect="st-effect-2" class="codrops-btn">
                                     <img src="/ico/menu1.svg" alt="">
                                 </button>
@@ -133,12 +133,12 @@
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;</p> 
                                 </a>                            
                             </div>
-                            <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
+                            <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-3" >
                                 <a href="/messages/1">
                                     <img class="envel" src="/ico/envelop.png" alt="envelop">
                                 </a>
                             </div>
-                            <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">
+                            <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-6">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     <div>
                                         <span class="user-name">{{$user->first_name}}</span>
