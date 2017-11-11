@@ -19,3 +19,4 @@ request.csr
 /public/preview/*
 /public/preview
 /public/.DS_Store
+.DS_Store
