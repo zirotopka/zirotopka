@@ -116,8 +116,8 @@ class TaskController extends Controller {
                         	$handler = 1;
 
                         	foreach ($trainingStages as $localTrainingStage) {
-                        		if ($localTrainingStage != 2) {
-                        			$handler = 2;
+                        		if ($localTrainingStage->status != 2) {
+                        			$handler = 0;
                         		}
                         	}
 
