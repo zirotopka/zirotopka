@@ -90,10 +90,9 @@ $( document ).ready(function() {
 			attachment_container = report.find('.attachment-container').eq(0),
 			attachment_items = attachment_container.find('.attachment-item');
 
-		if (attachment_items.length >= 4) {
+		if (attachment_items.length <= 4) {
 			swal({
-<<<<<<< HEAD
-	            title: "Загрузка файла!",
+				title: "Загрузка файла!",
 	            text: "Ожидайте. Это может занять некоторое время",
 	            imageUrl: "/ico/spinner.gif",
 	            imageWidth: '50',
@@ -101,7 +100,7 @@ $( document ).ready(function() {
 	            showConfirmButton: false
 	        });
 
-			var formData = new FormData(),
+	        var formData = new FormData(),
 				slug = jQuery('#current_slug').val();
 
 			formData.append( 'file', file );
@@ -124,75 +123,41 @@ $( document ).ready(function() {
 							attachment_html += '<img class="attachment-img" id="attachment-img" src="' + result['preview'] + '">';
 						} else if (result['file_type'] = 3) {
 							attachment_html += '<img class="attachment-img" src="/ico/video-default.png">';
-=======
-			   title: 'Внимание!',
-			   text: 'Загружено максимальное кол-во файлов',
-			   showCloseButton: true,
-			   showConfirmButton: false,
-			})
-		} else {
-			if (file != undefined) {
-				swal({
-		            title: "Загрузка файла!",
-		            text: "Ожидайте. Это может занять некоторое время",
-		            imageUrl: "/ico/spinner.gif",
-		            imageWidth: '50',
-		            imageHeight: '50',
-		            showConfirmButton: false
-		        });
-
-				var formData = new FormData();
-
-				formData.append( 'file', file );
-			    formData.append( 'destinationPath', '/trainings/' );
-
-			    $.ajax({
-			        url: '/api/file/store_attachment',
-			        type: 'POST',
-			        data: formData,
-			        cache: false,
-			        processData: false, 
-			        contentType: false, 
-			        success: function(result) {
-			        	if (result['code'] == 200) {
-							var attachment_html = '';
-
-							attachment_html += '<div class="attachment-item attachment_block" >'; 
-
-							if (result['file_type']= 2) {	
-								attachment_html += '<img class="attachment-img" id="attachment-img" src="' + result['preview'] + '">';
-							} else if (result['file_type'] = 3) {
-								attachment_html += '<img class="attachment-img" src="/ico/video-default.png">';
-							}
-							attachment_html += '<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>';
-							attachment_html += '<input type="hidden" class="attachment-file" name="attachment[' + uniqid() + ']" value="' + result['file_url'] + '">'; 
-							attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>'; 
-							attachment_html += '</div>';
-
-							attachment_container.append(attachment_html);
-
-							swal.close();
-						} else {
-							swal({
-							   title: 'Ошибка!',
-							   text: result['text'],
-							   showCloseButton: true,
-							   showConfirmButton: false,
-							})
->>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
 						}
+						attachment_html += '<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>';
+						attachment_html += '<input type="hidden" class="attachment-file" name="attachment[' + uniqid() + ']" value="' + result['file_url'] + '">'; 
+						attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>'; 
+						attachment_html += '</div>';
 
-			        },
-			        error: function( jqXHR, textStatus, errorThrown ){
-			        	swal({
+						attachment_container.append(attachment_html);
+
+						swal.close();
+					} else {
+						swal({
 						   title: 'Ошибка!',
-						   text: 'ОШИБКИ AJAX запроса: ' + textStatus,
+						   text: result['text'],
 						   showCloseButton: true,
 						   showConfirmButton: false,
 						})
-			        }
-			    });
-		}
+					}
+
+		        },
+		        error: function( jqXHR, textStatus, errorThrown ){
+		        	swal({
+					   title: 'Ошибка!',
+					   text: 'ОШИБКИ AJAX запроса: ' + textStatus,
+					   showCloseButton: true,
+					   showConfirmButton: false,
+					})
+		        }
+		    });
+		} else {
+			swal({ 
+        		title: 'Внимание!', 
+	        	text: 'Загружено максимальное кол-во файлов', 
+	        	showCloseButton: true, 
+	        	showConfirmButton: false, 
+	       });
 		}
 	});
 });

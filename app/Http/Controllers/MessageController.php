@@ -110,7 +110,12 @@ class MessageController extends Controller
         $message = Message::where('id','=',$id)->with('outputs','files')->first();
         
         if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $user->id == $message->recipient_id)) {
-             $data = [
+        	if ($user->id == $message->recipient_id) {
+        		$message->is_read = 1;
+        		$message->save();
+        	}
+
+            $data = [
                 'user' => $user,
                 'message' => $message,
                 'type' => $type,
@@ -137,6 +142,11 @@ class MessageController extends Controller
 		$message = Message::where('id','=',$id)->with('outputs','files')->first();
 
 		if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $user->id == $message->recipient_id)) {
+			if ($user->id == $message->recipient_id) {
+        		$message->is_read = 1;
+        		$message->save();
+        	}
+
 			$data = [
 				'user' => $user,
 				'message' => $message,

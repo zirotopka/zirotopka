@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\File;
 use App\ProgrammExercive;
 use App\ProgrammStage;
+use App\ProgrammDay;
 use App\Training;
 use App\TrainingStages;
 use App\User;
@@ -97,10 +98,37 @@ class TaskController extends Controller {
                 $user = $training->user;
 
                 if (!empty($stage) && !empty($stage->exercive) && !empty($user)) {
-                	$subject = 'Ваша тренировка проверена!';
-		            $text = 'Упражнение "'.$stage->exercive->name.'" проверено модератором и переведено в статус "'.$status_text.'".';
+                	$current_program_day = ProgrammDay::select('id','day','status')
+                                                    ->where('programm_id','=',$user->current_programm_id)
+                                                    ->where('day','=',$training->program_day)
+                                                    ->first();    
 
-		            $this->send_mail($user, $subject, $text);
+                    if (!empty($current_program_day)) {
+
+                    	$programm_stages_count = ProgrammStage::select('id','status')
+                                                                ->where('programm_day_id','=',$current_program_day->id)
+                                                                ->with('exercive')
+                                                                ->count();
+                        $trainingStages = $training->stages;
+
+                        if ($programm_stages_count == count($trainingStages)) {
+
+                        	$handler = 1;
+
+                        	foreach ($trainingStages as $localTrainingStage) {
+                        		if ($localTrainingStage != 2) {
+                        			$handler = 2;
+                        		}
+                        	}
+
+                        	if ($handler == 1) {
+                        		$subject = 'Ваша тренировка проверена!';
+					            $text = 'Упражнение "'.$stage->exercive->name.'" проверено модератором и переведено в статус "'.$status_text.'".';
+
+					            $this->send_mail($user, $subject, $text);
+                        	}
+                        } 
+                    }   
                 }
 			}
 		}
