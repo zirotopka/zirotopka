@@ -104,10 +104,10 @@ class PrivateOfficeApiController extends Controller
                     $file_name = basename(public_path().$file_url);
 
                     $file = new File;
-                    $file->file_url = '/trainings/'.$file_name;
+                    $file->file_url = '/trainings/'.$user->slug.'/'.$file_name;
 
-                    if (file_exists(public_path().'/trainings/preview_'.$file_name)) {
-                         $file->preview_url = '/trainings/preview_'.$file_name;
+                    if (file_exists(public_path().'/trainings/'.$user->slug.'/preview_'.$file_name)) {
+                         $file->preview_url = '/trainings/'.$user->slug.'/preview_'.$file_name;
                     }
 
                     $mime_type = mime_content_type(public_path().$file_url);
