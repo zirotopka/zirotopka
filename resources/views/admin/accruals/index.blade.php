@@ -12,9 +12,7 @@
 @section("content")
     <div class="row">
         <div class="col-xs-12 col-sm-8 col-md-3 col-lg-3">
-            <form action="">
-                <input type="button" class="btn btn-success" value="Выплаты" id="get">
-            </form>
+            <a href="/admin/get_payments" class="btn btn-success" target="_blank">Выплаты</a>
         </div>
     </div>
     <div class="row">
