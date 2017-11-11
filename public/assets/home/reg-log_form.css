@@ -4,116 +4,98 @@
 	margin: 7em auto;
 }
 
-.login_form{
-		width: 32em;
-	}
-
-.login_form .modal-content{
-border-radius: 0;
-background: url("/ico/R.png");
-background-repeat: no-repeat;
-background-size: 11em;
-background-color: white;
-background-position: 20em 8em;
-text-align: center;
+.login_form,
+.reg_modal,
+.password_form{
+	width: 32em;
 }
 
-.login_form .modal-content .modal-body h4,.reg_modal .modal-content .modal-body h3 {
+.login_form .modal-content,
+.reg_modal .modal-content,
+.password_form .modal-content{
+	text-align: center;
+	border-radius: 15px;
+	background-color: white;
+}
+.enter_across,
+.reg_enter_across{
+	font-size: 12px;
+	font-weight: 100;
+	margin: 10px 0 0;
+}
+.enter_across hr,
+.reg_enter_across hr{
+	width: 16%;
+	margin: 2px 0;
+	text-align: center;
+	border-bottom: 1px solid #81868F;
+	display: inline-block;
+}
+.login_form .modal-content .modal-body h4,
+.reg_modal .modal-content .modal-body h3,
+.password_form .modal-content .modal-body h4{
 	color: #ff8a18;
 	font-family: MuseoSansCyrl_900;
-	font-size: 1.4em;
-	margin: 1.5em 0 0.5em 0;
+	font-size: 20px;
+	margin: 0 0 15px;
 }
 
-.login_input{
+.login_input,
+.reg_input,
+.password_input{
 	background-color: white;
 	border-radius: 3px;
-	border: 0.1em solid #B3B3B3;
+	border: 1px solid #B3B3B3;
 	color: #81868F;
-	width: 75%;
-	height: 3em;
-	font-size: 1em;
-	padding: 0 0 0 2em;
+	width: 65%;
+	height: auto;
+	font-size: 14px;
+	font-weight: 100;
+	padding: 6px 8px;
+}
+.login_input:not(:last-child),
+.reg_input:not(:last-child){
+	margin-bottom: 5px;
 }
 
-.login_form .modal-content .modal-body .user_data #email{
-	margin: 3em 0 0 0;
-}
-
-.login_form .modal-content .modal-body .user_data #password{
-	margin: 0.5em 0 0 0;
-}
 
 .login_btn{
 	background-color: #ff8a18;
 	border: none;
 	border-radius: 2em;
-	width: 40%;
-	height: 3em;
 	color: white;
-	margin: 2em 0 0 0;
 	font-family: MuseoSansCyrl_100;
-	font-size: 0.88em;
+	display: block;
+	margin: 10px auto 20px;
 }
-
-.login_btn:hover {
-	width: 41%!important;
-	height: 3.1em!important;
-	margin: 1.9em 0 0 0;
-}
-
-.login_btn:active {
-	width: 41%!important;
-	height: 3.1em!important;
-	margin: 1.9em 0 0 0;
-	background-color: #D9550E;
-
+.password_btn{
+	background-color: #ff8a18;
+	border: none;
+	border-radius: 2em;
+	color: white;
+	font-family: MuseoSansCyrl_100;
+	display: block;
+	margin: 10px auto 20px;
+	text-transform: uppercase;
 }
 
 .login_form .modal-content .modal-body a {
 	color: #81868F;
-	font-family: MuseoSansCyrl_100;
 	text-decoration: none;
 	display: block;
-	margin: 1.5em 0 0 0;
-	padding: 0;
 }
 
-hr{
-	margin: 0 0 0.2em 0;
-	width: 25%;
-	border-bottom: 0.00000000000000000000411px solid #81868F;
-	box-shadow: 0px 1px 0px #81868F;
-}
-.enter_across{
-	text-align: center;
-}
-
-
-.enter_across a, .enter_across hr{
-	display: inline-block !important;
-}
 
 .enter_across a{
-	color: #81868F !important;	
+	color: #81868F!important;
 	text-decoration: none;
-	pointer-events: none;
-}
-
-.vk_fs a img{
-	width: 3em;
-	display: inline-block;
-
-}
-
-.vk_fs a{
-	margin: 1em 0 0 0!important;
 	display: inline-block!important;
-	width: 15%;
 }
+
 
 @media screen and (max-width: 46.0625em) {
-	.login_form{
+	.login_form,
+	.password_form{
 		width: 95%;
 	}
 	hr{
@@ -127,40 +109,6 @@ hr{
 
 /*------------------------------Registration Form---------------------------------*/
 
-.reg_modal{
-	width: 32em;
-}
-
-.reg_modal .modal-content{
-	text-align: center;
-	border-radius: 0;
-	background: url("/ico/R.png");
-	background-repeat: no-repeat;
-	background-size: 11em;
-	background-color: white;
-	background-position: 20em 9.75em;
-
-}
-
-.reg_input{
-	background-color: white;
-	border-radius: 3px;
-	border: 0.1em solid #B3B3B3;
-	color: #81868F;
-	width: 65%;
-	height: 2.5em;
-	font-size: 1em;
-	padding: 0 0 0 2em;
-}
-
-.reg_modal .modal-content .modal-body .user_data #email{
-	margin: 2em 0 0 0;
-}
-
-.reg_modal .modal-content .modal-body .user_data #password,#first_name ,#surname ,#phone{
-	margin: 0.5em 0 0 0;
-}
-
 .registr_btn{
 	background-color: #ff8a18;
 	border: none;
@@ -173,31 +121,6 @@ hr{
 	font-size: 0.88em;
 }
 
-.registr_btn:hover{
-	width: 66%!important;
-	height: 3.7em;
-    margin: 1.3em 0 0.9vw 0;
-}
-
-.registr_btn:active{
-	width: 66%!important;
-	height: 3.7em;
-	margin: 1.3em 0 0.9vw 0;
-	background-color: #D9550E;
-}
-
-.reg_enter_across{
-	margin: 1em 0 0 0;
-}
-
-.reg_enter_across hr{
-	width: 16%;
-}
-
-div {
-  margin:0 0 0.5em 0;
-}
-
 
 @media screen and (min-width: 992px) {
 	.reg_modal{
@@ -208,33 +131,8 @@ div {
 		background-size: 11vw;
 	}
 
-	.reg_modal .modal-content .modal-body h3 {
-	    font-size: 1.4vw;
-	    margin: 1.5vw 0 0 0;
-	}
-
-	.login_form .modal-content .modal-body h4{
-		font-size: 1.4vw;
-		margin: 1.5vw 0 -1vw 0;
-	}
-
-	.login_form .modal-content{
-	    background-position: 19vw 5.5vw;
-	}
-
-	.reg_input{
-		height: 2.5vw;
-		font-size: 1vw;
-	}
-
-	.reg_enter_across{
-		font-size: 1vw;
-	}
-
 	.registr_btn{
-		height: 3vw;
-		margin: 1.5em 0 1vw 0;
-		font-size: 0.9vw;
+		margin: 15px 0 0 0;
 	}
 
 	.reg_modal .modal-content{

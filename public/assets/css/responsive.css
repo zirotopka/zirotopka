@@ -1,12 +1,443 @@
+*{
+    line-height: 1.5!important;
+}
+
+footer{
+    background-color: #202020;
+    height: auto;
+    padding: 30px 15px!important;
+}
+.codrops-top a{
+    vertical-align: middle;
+}
+.wals{
+    padding: 17px 0 0 3em !important;
+}
+.immunitet{
+    padding: 15px 2em 0 0;
+}
+.iimtxt{
+    top: 17px;
+}
+.envelop{
+    padding: 17px 0 0 0;
+}
+
+
+.block-lesson-video{
+    position: relative;
+    text-align: center;
+    margin: 2em 0 0 0;
+    cursor: pointer;
+}
+
+.prof-disp{
+    vertical-align: middle;
+    margin: 0 !important;
+}
+.st-menu ul li a,
+.left_edit_part ul li a{
+    padding: 1.3em 0 1em 4em!important;
+    text-align: left;
+}
+.left_edit_part p{
+    vertical-align: middle!important;
+}
+.little_menu li.send{
+    border: 0;
+}
+.user-name{
+    vertical-align: middle;
+    position: relative;
+    top: 2px;
+}
+.cls_mod_btn{
+    margin-top: -4px;
+}
+.codrops-btn img{
+    padding: 0;
+    width: 30px;
+    margin: 0 auto!important;
+}
+
+.program-description{
+    padding: 0 30px;
+    position: absolute;
+    top: 30px;
+    left: 13px;
+    color: white;
+    z-index: 3;
+    font-weight: 100;
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 1.4vw;
+}
+.rone_start a:nth-child(1),
+.rone_other_progr a:nth-child(1){
+    display: block;
+    position: relative;
+}
+.rone_start:hover .program-description,
+.rone_other_progr:hover .program-description{
+    display: none;
+}
+.rl_btns,
+.rg_btn,
+.how-screen button,
+.connect_btn,
+.content-slide button,
+.registr_btn,
+.login_btn,
+.password_btn,
+.send,
+.bonus .reg_btn,
+.abo_btn,
+.forms-btns{
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    transition: 0.15s;
+    width: auto;
+    height: auto;
+    padding: 12px 24px 10px;
+    font-size: 16px;
+}
+.how-screen button{
+    padding: 18px 24px 16px;
+}
+
+
+
+.block-modal{
+
+}
+.block-modal.program-end .modal-content{
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+}
+.block-modal.program-end .input_money{
+    margin: 0;
+}
+.block-modal.program-end .add_money{
+    width: 95%;
+}
+.block-modal.program-end .forms-btns,
+.block-modal.program-end .forms-btns:hover{
+    width: auto!important;
+    height: auto!important;
+    margin-bottom: 0!important;
+}
+.attachment-img{
+    width: 100%;
+}
+.customSelect:after{
+    height: 2.45vw;
+}
+.wh-line{
+    opacity: 0;
+}
+.reg_btn,
+.rg_btn,
+.how-screen button,
+.connect_btn,
+.content-slide button,
+.registr_btn,
+.login_btn,
+.password_btn,
+.send,
+.abo_btn,
+.forms-btns{
+    border: 3px solid transparent;
+}
+.rstart-txt-cnt button:hover,
+.reg_btn:hover,
+.rg_btn:hover,
+.how-screen button:hover,
+.connect_btn:hover,
+.content-slide button:hover,
+.registr_btn:hover,
+.login_btn:hover,
+.password_btn:hover,
+.send:hover,
+.forms-btns:hover{
+    background-color: transparent;
+    border: 3px solid #ef8116;
+    color: #ef8116;
+}
+.log_btn:hover{
+    background-color: white;
+    border-color: #ef8116;
+    color: #ef8116;
+}
+.abo_btn:hover{
+    background-color: white;
+    border-color: #ef8116;
+    color: #ef8116;
+}
+button:hover
+.rl_btns:hover,
+.reg_btn:hover,
+.log_btn:hover,
+.how-screen button:hover{
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+.abo_btn,
+.bonus .reg_btn{
+    margin-top: 50px;
+}
+.abo_btn:hover{
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+.rg_btn:hover{
+    width: auto;
+    height: auto;
+    margin: 8vw 0 0 0;
+}
+.bonus .reg_btn,
+.bonus .reg_btn:hover{
+    margin-right: 30px;
+}
+.connect_btn:hover{
+    width: auto;
+    height: auto;
+    margin: 6em 0 0 0;
+}
+.content-slide button:hover{
+    width: auto;
+    height: auto;
+    margin: 15px 0 0 0;
+}
+.send:hover{
+    width: auto;
+    height: auto;
+    margin: 30px 0 0;
+    font-size: 16px;
+}
+
+
+.block-social-links {
+    margin: 15px 0 0 0;
+}
+.block-social-links a{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+.block-social-links a img{
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    transition: 0.15s;
+    opacity: 0.5;
+    width: 32px;
+    margin: 0;
+}
+.block-social-links a:hover img{
+    opacity: 0.8;
+}
+
+.rstart-txt-cnt .for_whm span{
+    display: inline-block;
+    color: #ff8a18;
+    font-size: 1.5vw;
+    border: 2px solid #ff8a18;
+    border-radius: 50%;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    position: relative;
+    margin-left: 10px;
+    line-height: 1.8!important;
+}
+.rstart-txt-cnt .for_whm span:before{
+    content: '+';
+    display: block;
+    position: absolute;
+    background: white;
+    height: 15px;
+    width: 18px;
+    border-radius: 50%;
+    line-height: 0.9!important;
+    right: 0;
+    top: -5px;
+    z-index: 0;
+    text-align: center;
+}
+footer .prgrm_list .title,
+.reg_f_s .title,
+.ofrta .title{
+    text-transform: uppercase;
+    color: rgb(200, 200, 200);
+    margin-bottom: 10px;
+    font-weight: 100;
+    text-decoration: underline;
+    font-size: 14px;
+}
+footer .prgrm_list ul li a,
+.reg_f_s ul li a,
+.ofrta ul li a{
+    font-size: 16px;
+    font-weight: 100;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    transition: 0.15s;
+    color: rgb(150, 150, 150);
+    text-transform: none;
+}
+footer .prgrm_list ul li a:hover,
+.reg_f_s ul li a:hover,
+.ofrta ul li a:hover{
+    text-decoration: underline!important;
+    color: white
+}
+
+.start{
+    height: 35.1vw;
+}
+.bonus .top_section{
+    margin-top: 20px;
+}
+
+.info-screen .swiper-slide{
+    width: 70%!important;
+    margin: 30px 15% 0;
+}
+.swiper-slide .bbrdr{
+    border: 1px solid #3E474F;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 4px 4px 0 4px;
+}
+.swiper-slide .comm_img_hldr{
+    width: auto;
+    margin: 0;
+}
+.swiper-slide .sw_shader{
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+.comm_pl_hldr{
+    width: 80px;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+    margin: 0;
+}
+.comm_pl_hldr:hover{
+    transform: rotate(360deg);
+    margin: 0;
+    width: 80px;
+}
+.swiper-slide .content-slide{
+    padding: 5px 0 0;
+    margin: 0;
+}
+.content-slide button{
+    margin: 15px 0 0;
+}
+.content-slide .cs-body{
+    font-size: 16px;
+    font-weight: 100;
+}
+.swiper-slide video{
+    width: 100%;
+    height: 100%;
+}
+
+.block-payment-systems{
+    margin: 15px 0;
+    text-align: center;
+}
+.block-payment-systems a{
+    opacity: 0.7;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+}
+.block-payment-systems a:hover{
+    opacity: 1;
+}
+.block-payment-systems img{
+    height: 25px;
+}
+.ip{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.codrops-top .fa-caret-down{
+    padding: 0;
+}
+.add_money{
+    width: 50%;
+    margin: 0 auto 30px;
+}
+.modal-body .close{
+
+}
+.modal-body .close span,
+.modal-body .close img{
+    width: 20px;
+}
+.money_inputs{
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #B3B3B3;
+    color: #81868F;
+    width: 30%;
+    height: auto;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 6px 8px;
+    display: block;
+    margin: auto;
+}
+.modal-body .send{
+    margin: 30px 0 0;
+}
+
 @media only screen and (max-width : 768px) {
-    .reg-screen{
+    .dropdown{
+        width: 50% !important;
+    }
+    .rl_btns,
+    .rg_btn,
+    .how-screen button,
+    .connect_btn,
+    .content-slide button,
+    .registr_btn,
+    .login_btn,
+    .password_btn{
+        font-size: 14px;
+        padding: 8px 16px 6px;
+        font-size: 12px;
+    }
+    .how-screen button{
+        padding: 18px 24px 16px;
+    }
+
+    .reg-screen {
         margin-bottom: 0;
     }
-    .reg_log_btns{
+
+    .reg_log_btns {
         margin: 14px;
     }
+
     .reg_btn,
-    .log_btn{
+    .log_btn {
         height: 24px;
         font-size: 10px;
         width: auto;
@@ -14,295 +445,344 @@
     }
 
     .info-screen,
-    .info_naming{
+    .info_naming {
         padding: 0;
         margin: 0;
     }
+
     .info_naming h2,
     .programm-screen h2,
     .bonus-screen h2,
     .how-screen h2,
     .comments-screen h2,
-    .questions-screen h2{
+    .questions-screen h2 {
         margin: 30px 0 0;
         display: block;
     }
-    .info_cont{
+
+    .table-responsive thead{
+        position: static;
+        width: 100%;
+    }
+    .info_cont {
         margin: 0;
     }
-    .info_cont ul{
+
+    .info_cont ul {
         margin: 0;
     }
+
     .info_cont .n1,
     .info_cont .n2,
     .info_cont .n3,
     .info_cont .n4,
     .info_cont .n5,
-    .info_cont .n6{
+    .info_cont .n6 {
         padding: 0;
-        margin: 20px 0 0!important;
+        margin: 20px 0 0 !important;
         height: 180px;
         overflow: hidden;
     }
-    .info_cont p{
+
+    .info_cont p {
         font-size: 13px;
         line-height: 1.5;
     }
 
-    .disp_line{
+    .disp_line {
         margin: 30px 0 0 30%;
     }
 
-    .programm-screen{
+    .programm-screen {
         margin: 0;
     }
-    .programm_list{
+
+    .programm_list {
         overflow: hidden;
         padding: 30px 0 0 0;
         margin: 0;
     }
-    .rone_other_progr{
+
+    .rone_other_progr {
         margin: 0;
     }
 
-    .right_bonus_part{
+    .right_bonus_part {
         padding: 30px 0 0 0;
         margin: 0;
     }
-    .right_bonus_part p{
+
+    .right_bonus_part p {
         line-height: 2;
-        margin: 0;
+        margin: 0 15px;
     }
-    .bonus_btn{
+
+    .bonus_btn {
         height: auto;
         font-size: 14px;
         width: 55%;
         padding: 12px 0 10px;
         margin: 30px 0 0;
     }
-    .bonus-screen{
+
+    .bonus-screen {
         margin: 0;
+    }
+
+    .mission{
+        width: 100%;
+        padding: 0;
     }
 
     .how-screen,
-    .asd{
+    .asd {
         margin: 0;
         padding: 0;
     }
-    .how_cnt{
+
+    .how_cnt {
         margin: 30px auto 0;
     }
-    .how_cnt img{
-        width: 40%!important;
+
+    .how_cnt img {
+        width: 40% !important;
         margin-top: 30px;
     }
-    .orng{
+
+    .orng {
         font-size: 20px;
         margin-top: 15px;
     }
-    .who_txt{
+
+    .who_txt {
         font-size: 14px;
     }
 
-    .how-screen button{
-        height: auto!important;
-        font-size: 14px!important;
-        width: 70%!important;
-        padding: 12px 0 10px!important;
-        margin: 30px 0 0!important;
+    .how-screen button {
+        height: auto !important;
+        font-size: 14px !important;
+        width: auto !important;
+        padding: 12px 15px 10px !important;
+        margin: 30px 0 0 !important;
     }
 
+    #nav-dropdown{
+        padding-right: 15px;
+    }
+    .fa-caret-down{
+        padding: 0;
+    }
     .disp_line{
         height: 1px;
     }
+    .envelop{
+        padding: 18px 0 0 0;
+    }
 
-    .comments-screen{
+    .comments-screen {
         margin: 0;
     }
 
-    .swiper-container-horizontal>.swiper-pagination-bullets,
-    .swiper-pagination-custom, .swiper-pagination-fraction{
-        bottom: -10px;
+    .swiper-container-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-custom, .swiper-pagination-fraction {
+        display: none;
     }
-    .swiper-container{
+
+    .swiper-container {
         padding: 0;
         margin-top: 20px;
     }
 
-    .questions-screen{
+    .questions-screen {
         margin: 0;
-        padding: 0 0 25px 0!important;
+        padding: 0 0 25px 0 !important;
     }
 
     .left_quest,
-    .right_quest{
+    .right_quest {
         padding: 0 0 0 15px;
-        background: none!important;
+        background: none !important;
     }
+
     .ref,
-    .prg{
+    .prg {
         margin: 30px 0 0 0;
         padding: 0;
     }
+
     .left_quest ul .else,
-    .right_quest ul .else{
+    .right_quest ul .else {
         margin: 5px 0 0 0;
         font-size: 18px;
     }
+
     .left_quest ul,
-    .right_quest ul{
+    .right_quest ul {
         padding: 0 15px 0 15.5vw;
     }
 
-    .connect_btn{
-        height: auto!important;
-        font-size: 14px!important;
-        width: 70%!important;
-        padding: 12px 0 10px!important;
-        margin: 30px 0 0!important;
+    .connect_btn {
+        height: auto !important;
+        font-size: 14px !important;
+        width: 70% !important;
+        padding: 12px 0 10px !important;
+        margin: 30px 0 0 !important;
     }
-    .mission img{
+
+    .mission img {
         margin: 5px -8px 10px;
         width: 200px;
     }
-    .mission p{
+
+    .mission p {
         font-size: 14px;
         padding: 0;
         line-height: 1.5;
         margin: 20px 0 0 0;
     }
-    footer .prgrm_list{
-        padding: 84px 0 0;
+
+    footer .prgrm_list {
+        padding: 30px 0 0 0;
         line-height: 1.5;
-        position: absolute;
+        position: relative;
         right: 0;
         top: 0;
     }
+    footer .prgrm_list ul{
+        padding: 0;
+    }
+
     footer .prgrm_list ul li a,
-    .ofrta ul li a, .reg_f_s a{
+    .ofrta ul li a, .reg_f_s a {
         font-size: 14px;
         margin-top: 0;
         line-height: 1.5;
     }
+
     .reg_f_s ul,
-    .ofrta ul{
+    .ofrta ul {
         padding: 0;
     }
-    .reg_f_s{
-        width: 100%!important;
-        padding: 30px 15px 0!important;
-        margin: 0;
-    }
-    .ofrta{
-        width: 100%!important;
-        padding: 30px 15px 0!important;
+
+    .reg_f_s {
+        width: 100% !important;
+        padding: 0!important;
         margin: 0;
     }
 
-    .connect_price{
-        background-position: 23vw 10px!important;
+    .ofrta {
+        padding: 30px 0 0!important;
+        margin: 0;
     }
-    .connect_screen_shader p{
+
+    .connect_price {
+        background-position: 24vw 5px !important;
+    }
+
+    .connect_screen_shader p {
         font-size: 60px;
         text-align: center;
+        display: none;
     }
 
-    .start_shader_gray p{
-        margin: 61.5vw 0 0 2vw!important;
+    .start_shader_gray p {
+        margin: 61.5vw 0 0 2vw !important;
         opacity: 0.35;
-        font-size: 34vw!important;
+        font-size: 34vw !important;
     }
 
     .pro_shader_gray p,
     .pow_shader_gray p,
     .run_shader_gray p,
-    .runp_shader_gray p{
+    .runp_shader_gray p {
         margin: 22vw 0 0 0;
         opacity: 0.35;
     }
 
-
-    .reg_modal{
+    .reg_modal {
         width: 90%;
     }
 
-    .reg_modal p{
+    .reg_modal p {
         margin: 0;
     }
 
-    .reg_modal div{
+    .reg_modal div {
         margin: 0;
     }
 
     .login_form .modal-content .modal-body h4,
-    .reg_modal .modal-content .modal-body h3{
-        font-size: 26px;
+    .reg_modal .modal-content .modal-body h3 {
+        font-size: 20px;
         margin: 15px 0;
     }
 
-    .login_input{
-        width: 90%;
-        padding: 0 0 0 10px;
+    .login_input {
+        width: 100%;
     }
 
-    .login_form .modal-content .modal-body .user_data #email{
+    .login_form .modal-content .modal-body .user_data #email {
         margin: 10px 0 0 0;
     }
 
-    .login_form .modal-content .modal-body .user_data #password{
+    .login_form .modal-content .modal-body .user_data #password {
         margin: 10px 0 0 0;
     }
 
-    .login_btn{
-        width: 60%;
+    .reg_scrn_txt{
+        padding: 30vw 15px 0;
+    }
+    .login_btn {
+        width: auto;
         height: auto;
-        margin: 30px 0 0 0;
-        padding: 12px 0;
-        font-size: 16px;
+        margin: 15px 0 0 0;
+        padding: 5px 30px;
+        font-size: 12px;
     }
 
-    .login_form .modal-content .modal-body a{
+    .login_form .modal-content .modal-body a {
         margin: 15px 0 0 0;
     }
 
-    .vk_fs{
+    .vk_fs {
         margin: 0;
     }
-    .vk_fs a img{
+
+    .vk_fs a img {
         width: 30px;
         border-radius: 50%;
     }
-    .vk_fs a{
-        margin: 5px 3px 0!important;
-        width: 30px;
+
+    .vk_fs a {
+        margin: 5px 3px 0 !important;
     }
 
-    .registr_btn{
+    .registr_btn {
         margin-bottom: 15px;
     }
 
-    .reg_enter_across{
+    .reg_enter_across {
         margin-top: 15px;
     }
 
-    .enter_across{
+    .enter_across {
         margin: 0;
     }
 
-    .reg_modal .modal-content{
+    .reg_modal .modal-content {
         background-position: 15em 10em;
     }
 
-    .reg_scr_content h1{
+    .reg_scr_content h1 {
         font-size: 16px;
         line-height: 1.5;
     }
 
-    footer{
+    footer {
         height: auto;
     }
 
-    .ip{
+    .ip {
         margin: 30px 0;
         font-size: 12px;
         text-align: center;
@@ -310,108 +790,130 @@
 
     .choice,
     .freedom,
-    .profit{
+    .profit {
         background-position: center 0;
     }
-
 
     /*
      * Profile user page
      */
-    .right_edit_part{
+    .right_edit_part {
         padding: 90px 15px 0;
         background: none;
     }
-    .right_edit_part .row{
+
+    .right_edit_part .row {
         margin: 15px 0 0 0;
         padding: 0;
     }
-    .my_acc{
+
+    .my_acc {
         font-size: 16px;
         margin: 0;
     }
-    .m_usr_img{
+
+    .m_usr_img {
         width: 8em;
     }
-    .m_usr_dscr{
+
+    .m_usr_dscr {
         padding: 9px 0;
     }
-    .user-data-ctn{
+
+    .user-data-ctn {
         margin-top: 30px;
     }
-    #myself_info{
+
+    #myself_info {
         margin: 0;
     }
+
     .lft-info p,
-    .rt-info p{
-        width: 35%!important;
-        font-size: 1.1em!important;
-        margin: 0 15px 0 0!important;
+    .rt-info p {
+        width: 35% !important;
+        font-size: 1.1em !important;
+        margin: 0 15px 0 0 !important;
     }
-    .edit-inputs{
+
+    .edit-inputs {
         width: 48%;
         margin: 0 0 15px 0;
     }
-    .customSelect{
+
+    .customSelect {
         margin: 0 0 15px 0;
         line-height: 2;
         width: 14.5%;
     }
-    .birthday{
+
+    .birthday {
         width: 15.5%;
     }
-    .pd div{
+
+    .pd div {
         padding: 0;
     }
-    .pd input{
+
+    .pd input {
         width: 38%;
     }
+
     .pd .wq,
-    .pd .sg{
+    .pd .sg {
         display: inline-block;
-        width: auto!important;
-        margin: 6px 0 0 15px!important;
+        width: auto !important;
+        margin: 6px 0 0 15px !important;
     }
+
     .pd .wq,
-    .pd div .qw:first-child{
-        width: 35%!important;
-        margin: 6px 15px 0 0!important;
+    .pd div .qw:first-child {
+        width: 35% !important;
+        margin: 6px 15px 0 0 !important;
     }
-    .orngln{
+
+    .orngln {
         margin: 15px 0 calc(20px - 0.7em);
         width: calc(100% - 30px);
     }
-    .yad{
+
+    .yad {
         margin: 0 0 15px 0;
     }
-    .inp-yadik{
-        width: 100%!important;
-        margin: 0 auto!important;
+
+    .inp-yadik {
+        width: 100% !important;
+        margin: 0 auto !important;
         height: auto;
         padding: 6px;
         text-align: center;
     }
-    .yad.or{
+
+    .yad.or {
         margin: 15px 0;
     }
-    .yadik{
+
+    .yadik {
         width: 60%;
         height: auto;
         margin: 0 calc(50% - 30%);
         padding: 12px 0;
         font-size: 14px;
     }
-    .mb-cct{
+
+    .mb-cct {
         margin: 0;
     }
-    .mb-cct .gray-text{
+
+    .mb-cct .gray-text {
         margin: 5px 0 15px 0;
     }
-    .txt-con{
+
+    .txt-con {
         margin: 15px 0 0;
         font-size: 14px;
     }
-    .save-btn{
+
+    .save-btn {
         margin: 8px auto 30px;
         width: 60%;
         height: auto;
@@ -423,110 +925,130 @@
         left: calc(60% - 40%);
     }
 
-    .FAQ{
+    .FAQ {
         margin: 0 -15px;
         padding: 0;
     }
-    .faq_help{
+
+    .faq_help {
         font-size: 16px;
         margin: 0 15px;
     }
-    .access_block{
+
+    .access_block {
         margin: 0 0 30px 0;
     }
-    .faq_title{
+
+    .faq_title {
         width: 80%;
         vertical-align: 0;
         font-size: 14px;
     }
-    #oprg .faq_title{
+
+    #oprg .faq_title {
         vertical-align: -10px;
     }
-    .faq_ico{
+
+    .faq_ico {
         width: 40px;
         margin-right: 10px;
     }
-    .FAQ ul{
+
+    .FAQ ul {
         margin: 0;
     }
-    .questions_block{
+
+    .questions_block {
         margin: 0 0 0 53px;
         line-height: 1.5;
     }
-    .faq_show_all{
+
+    .faq_show_all {
         font-size: 14px;
         margin: 10px 0 0 0;
         display: block;
     }
-    .calb_text{
+
+    .calb_text {
         font-size: 16px;
         margin: 30px 15px;
     }
 
-
-
-    .rg_check_in{
-        margin-top: 60px!important;
+    .rg_check_in {
+        margin-top: 60px !important;
     }
-    .zagl{
+
+    .zagl {
         background: none;
     }
-    .rg_check_in .zagl h2{
+
+    .rg_check_in .zagl h2 {
         font-size: 22px;
         line-height: 1.5;
     }
-    .rg_check_in .zagl .razrb{
+
+    .rg_check_in .zagl .razrb {
         font-size: 14px;
         margin: 20px 0;
     }
-    .rg_check_in .zagl div{
-        width: 100%!important;
+
+    .rg_check_in .zagl div {
+        width: 100% !important;
     }
-    .known{
+
+    .known {
         font-size: 14px;
         text-transform: uppercase;
     }
 
-
-    .frs-left{
+    .frs-left {
         margin: 30px 0 0 0;
         padding: 0;
     }
-    .rstart-logo{
+
+    .rstart-logo {
         padding: 0 0 0 15px;
         margin: 0;
     }
-    .rstart-logo img{
+
+    .rstart-logo img {
         width: 55px;
     }
-    .rstart-logo p{
+
+    .rstart-logo p {
         font-size: 26px;
         margin: 0;
     }
 
-    .rstart-txt-cnt{
+    .rstart-txt-cnt {
         padding: 0 15px;
         width: 100%;
         margin: 0;
     }
-    .for_whm{
+
+    .for_whm {
         margin: 0;
     }
-    .for_whm p{
+
+    .for_whm p {
         font-size: 16px;
         vertical-align: middle;
         margin: 0;
     }
-    .for_whm img{
+
+    .for_whm img {
         width: 60px;
         vertical-align: middle;
     }
-    .rst_ctn{
+
+    .rst_ctn {
         font-size: 14px;
         line-height: 1.5;
         margin: 0;
     }
-    .rstart-txt-cnt button{
+
+    .rstart-txt-cnt button,
+    .rstart-txt-cnt button:hover{
         height: auto;
         width: auto;
         font-size: 12px;
@@ -535,153 +1057,308 @@
         margin: 20px 0 30px;
     }
 
-    .rstart-img-cnt{
+    .rstart-img-cnt {
         margin: 0 auto;
         float: none;
         width: 100%;
     }
-    .frs_imgs{
+
+    .frs_imgs {
         width: 15%;
     }
-    .rstart-img-cnt p{
+
+    .rstart-img-cnt p {
         font-size: 16px;
         margin: 10px 0 20px;
     }
 
-    .tcount-screen{
+    .tcount-screen {
         margin: 0;
         padding: 0 15px;
         height: 40vw;
     }
-    .prgr_name_st{
+
+    .prgr_name_st {
         font-size: 35vw;
         text-align: center;
         width: 100%;
         left: 0;
     }
-    .tcount-screen .pdd{
+
+    .tcount-screen .pdd {
         padding: 10% 0 0 0;
     }
-    .home_content hr{
+
+    .home_content hr {
         display: none;
     }
-    .tc_t{
+
+    .tc_t {
         font-size: 9px;
         font-weight: 100;
     }
-    .tc_d{
+
+    .tc_d {
         font-size: 26px;
     }
 
-    .info-screen{
-        display: none;
-    }
-    .info-screen h2{
+    .info-screen h2 {
         font-size: 16px;
     }
-    .info-screen .swiper-container{
+
+    .info-screen .swiper-container {
         margin-top: 15px;
     }
-    .ruls-screen{
+
+    .ruls-screen {
         height: auto;
         margin: 0;
     }
-    .ruls-screen h2{
+
+    .ruls-screen h2 {
         font-size: 16px;
         line-height: 1.5;
     }
-    .ruls-screen p{
+
+    .ruls-screen p {
         font-size: 12px;
         line-height: 1.5;
         margin: 20px 0 30px;
     }
-    .ruls-screen div{
+
+    .ruls-screen div {
         width: 50%;
         padding: 0;
         min-height: 130px;
         margin: 0;
     }
-    .ruls-screen img{
+
+    .ruls-screen img {
         width: 60px;
         margin: 0;
     }
 
-    .bons-screen{
+    .bons-screen {
         background: none;
-        margin: 60px 0 0!important;
+        margin: 60px 0 0 !important;
     }
-    .bons-screen h1{
+
+    .bons-screen h1 {
         font-size: 16px;
         line-height: 1.5;
         margin: 30px 0 0;
     }
-    .bons-screen p{
+
+    .bons-screen p {
         font-size: 12px;
         line-height: 1.5;
         margin: 20px 0 0;
     }
-    .bons-screen button{
-        height: auto;
-        font-size: 10px;
-        padding: 12px 24px;
-        line-height: 1;
-        margin: 30px 15px 0;
+
+    .bons-screen button {
+        margin: 30px auto!important;
+        display: block;
     }
 
-    .bons-how-screen{
+    .bons-how-screen {
         margin: 30px 0 0;
     }
-    .bons-how-screen h2{
+
+    .bons-how-screen h2 {
         font-size: 22px;
         line-height: 1.5;
     }
-    .how-content{
+
+    .how-content {
         font-size: 12px;
         margin: 20px 0 0;
         line-height: 1.5;
     }
 
-    .bons-about-screen{
+    .bons-about-screen {
         margin: 0 0 30px;
     }
-    .bons-about-screen h2{
+
+    .bons-about-screen h2 {
         font-size: 22px;
         line-height: 1.5;
         margin-top: -30px;
     }
-    .about-icon-content{
+
+    .about-icon-content {
         margin: 0;
     }
-    .about-icons{
+
+    .about-icons {
         width: 60px;
         height: auto;
     }
-    .bons-about-screen p{
+
+    .bons-about-screen p {
         font-size: 12px;
         margin: 10px 0 0;
     }
-    .bons-about-screen .ab-ct{
+
+    .bons-about-screen .ab-ct {
         margin: 20px 0 0;
     }
 
-    .bons-pay-screen{
+    .bons-pay-screen {
         margin: 0 0 30px 0;
     }
-    .bons-pay-screen h2{
+
+    .bons-pay-screen h2 {
         font-size: 22px;
         line-height: 1.5;
     }
-    .pay_right{
+
+    .pay_right {
         background-size: 90%;
         background-position: center;
         padding: 0;
     }
-    .pay_left{
+
+    .pay_left {
         font-size: 12px;
         line-height: 1.5;
         padding: 0 15px;
     }
 
+    #partners .modal-dialog,
+    #user_agreements .modal-dialog {
+        width: 96vw;
+        margin: 60px auto 2vw;
+    }
+
+    #partners h2,
+    #user_agreements h2 {
+        line-height: 1.5;
+    }
+
+    #partners .off,
+    #partners ol,
+    #user_agreements ol {
+        font-size: 12px;
+        padding: 0;
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+
+    .st-content-inner{
+        height: 60px;
+    }
+
+    /* Little menu */
+    .little_menu {
+        margin: 60px 0 0 0;
+        height: 50px;
+    }
+    .little_menu li,
+    .little_menu li:hover,
+    .little_menu li:active,
+    .little_menu li:focus,
+    .little_menu .send,
+    .little_menu .send:hover,
+    .little_menu .send:active,
+    .little_menu .send:focus{
+        margin-top: 0;
+        height: 100%!important;
+        vertical-align: top;
+    }
+    .little_menu ul {
+        margin: 0;
+    }
+    .add_img{
+        margin: 0;
+    }
+
+
+    .new_message{
+        padding: 0 15px;
+        margin: 125px 0;
+    }
+    .new-msg{
+        margin: 0;
+        font-size: 18px;
+        line-height: 1;
+    }
+    .new_message input,
+    .new_message textarea{
+        margin: 0;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        outline: none;
+    }
+    .new_message form{
+        margin: 15px 0 0;
+    }
+    .new_message .send_btn_align{
+        width: 100%;
+    }
+    .new_message .send_btn_align input{
+        width: 40%;
+        letter-spacing: 1px;
+    }
+    .new_message .send_btn_align .write_button{
+        padding: 8px 0;
+        font-size: 14px;
+        line-height: 1;
+    }
+    .new_message .send_btn_align .lbl_fl{
+
+    }
+    #attachment-container{
+        width: 100%!important;
+        padding: 5px 0;
+        margin: 0;
+    }
+
+    .messages-type .right_edit_part{
+        padding: 125px 15px 15px;
+        width: 100%;
+    }
+    .messages-type .message_list{
+        position: static;
+        padding: 0;
+    }
+    .messages-type .right_edit_part .row{
+        margin: 0;
+    }
+    .messages-type .st-pusher{
+        height: auto;
+    }
+
+    .rstart-txt-cnt .for_whm{
+        margin: 0 0 10px;
+    }
+    .rstart-txt-cnt .for_whm span{
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        font-size: 16px;
+        top: 3px;
+    }
+
+    .st-menu{
+        width: 60%!important;
+    }
+    .st-menu ul{
+        padding: 15px 0;
+        font-size: 10px;
+    }
+    .st-menu ul li a{
+
+    }
+    .left_edit_part p{
+        font-size: 10px!important;
+    }
+    .left_edit_part{
+        width: auto!important;
+        position: static!important;
+    }
     #partners .modal-dialog,
     #user_agreements .modal-dialog{
         width: 96vw;
