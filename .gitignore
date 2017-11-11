@@ -18,3 +18,4 @@ request.csr
 /storage/payments/*
 /public/preview/*
 /public/preview
+/public/.DS_Store
