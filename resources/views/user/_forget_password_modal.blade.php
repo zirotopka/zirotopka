@@ -3,7 +3,8 @@
     <div class="modal-dialog chs-program-widnow" role="document">
       <div class="modal-content reg-mod-content">
         <div class="modal-body choose-program-form">
-          <form action="{{env('APP_URL').'/forget_password'}}" method="POST"> 
+          <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="/ico/close_modal.png" alt=""></span></button>
+          <form action="{{env('APP_URL').'/forget_password'}}" method="POST">
             {{ csrf_field() }}
             <div class="row">
               <div class="col-md-3">
@@ -42,7 +43,7 @@
                 <input type="submit" value="Обновить" class="btn btn-success">
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div>
     </div>

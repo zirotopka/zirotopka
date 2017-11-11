@@ -102,7 +102,7 @@ class PrivateOfficeApiController extends Controller
                 
                 foreach ($stage_url as $file_url) {
                     $file_name = basename(public_path().$file_url);
-
+                    
                     $file = new File;
                     $file->file_url = '/trainings/'.$user->slug.'/'.$file_name;
 

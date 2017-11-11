@@ -33,7 +33,6 @@
 				<b>.START</b>
 			</a>
 		</div>
-<!--Календарь--> 
 		<input type="hidden" id="current_slug" value="{{$user->slug}}">
 		
 		@if ( !empty($programm_days) )
@@ -220,26 +219,24 @@
 				    		}
 				    	}
 				    ?>
-					<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<form class="prog-form">
-							<div class="prog-txt-container">	
-								<p class="prog-txt prog-name">
-									{{(!empty($exercive) ? $exercive->name : 'Легкий бег').$stage_status_text}}
-								</p>
-								@if ( !empty($programm_stage->repeat_count) )
-									<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
-								@endif 
-								@if ( !empty($programm_stage->time_exercive) )
-									<p class="prog-txt prog-count">Время выполнения: {{ $programm_stage->time_exercive }}</p>
-								@endif 
 
-								<p class="prog-txt prog-descr" style="margin-bottom:  2em;">
-									{{!empty($exercive) ? $exercive->description : ''}}
-								</p>
-							</div>
-							
-							@if (!empty($exercive))
-								<div class="video_holder" data-id="{{$exercive->id}}">
+					@if ( !empty($exercive) )
+						<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<form class="prog-form">
+								<div class="prog-txt-container">	
+									<p class="prog-txt prog-name">
+										{{$exercive->name.$stage_status_text}}
+									</p>
+									@if ( !empty($programm_stage->repeat_count) )
+										<p class="prog-txt prog-count">Количество подходов: {{$programm_stage->repeat_count}}</p>
+									@endif 
+									@if ( !empty($programm_stage->time_exercive) )
+										<p class="prog-txt prog-count">Время выполнения: {{ gmdate('H:i:s' ,strtotime($programm_stage->time_exercive)) }}</p>
+									@endif 
+									<p class="prog-txt prog-descr" style="margin-bottom:  2em;">{{$exercive->description}}</p>
+								</div>
+<!--VIDEO-->
+								<div class="block-lesson-video video_holder" data-id="{{$exercive->id}}">
 									<?php
 								    	$preview = $exercive->previews->first();
 

@@ -61,10 +61,10 @@
                     <h2>КАК ЭТО РАБОТАЕТ</h2>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <p class="how-content col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            Участником бонусной программы могут быть только<br>действующие участники любой из программ R.ONE. <br> Вы приглашаете своих партнёров в проект, давая<br>скидку на доступ и получить 500р с каждой <br> оплаты.
+                            Участником бонусной программы могут быть только<br>действующие участники любой из программ R.ONE. <br> Вы приглашаете своих друзей в проект и получаете баллы (мы называем их Reformoney).
                         </p>
                         <p class="how-content col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            Начиная со 2 линии Вы получаете пассивный доход<br>от партнёров Вашей команды. Так же Ваши участники<br>следующей за вами линии тоже начинают получать<br>доход от тех людей, которых пригласили в проект Вы<br>или участники вашей линии.
+                            Еcли Ваши друзья приглашают новых участников, Вы так же накапливаете баллы. Эти баллы Вы можете конвертировать на WebMoney.
                         </p>
                     </div>
                     <embed class="mobimg visible-xs" src="/ico/mbonus.svg">
@@ -119,18 +119,22 @@
                         <div class="ab-ct col-xs-12 col-sm-4 col-md-4 col-lg-4">
                             <img src="/ico/garanty.svg" class="about-icons">
                             <p>
-                                Мы используем <br class="visible-sm">SSL-сертификат<br class="visible-md"> для <br class="hidden-lg hidden-md">безопасности передачи<br> персональных данных<br>и защиты всех платежей
+                                Мы используем <br class="visible-sm">SSL-сертификат<br class="visible-md"> для <br class="hidden-lg hidden-md">безопасности передачи<br> персональных данных<br>и защиты всех платежей.
                             </p>
                         </div>
                         <div class="ab-ct col-xs-12 col-sm-4 col-md-4 col-lg-4">
                             <img src="/ico/payments.svg" class="about-icons">
-                            <p>Мы принимаем платежи<br>и осуществляем выплаты только<br>через проверенных партнёров,<br>таких как Яндекс.</p>
+                            <p>Мы работаем только с проверенными компаниями по взаиморасчётам, такие как WebMoney и Paymaster.</p>
                         </div>
                     </div>                    
                 </div>
                 <hr>
                 <div class="bons-pay-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_4">
+<<<<<<< HEAD
+                    <h2>О ПЛАТЕЖНОМ <br class="visible-xs">СЕРВИСЕ WEBMONEY</h2>
+=======
                     <h2>О ПЛАТЕЖНОМ <br class="visible-xs">СЕРВИСЕ WebMoney</h2>
+>>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
                     <div class="pay_right visible-xs col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="mfc">
                             <img src="/ico/smartphone.jpg" class="smartphone">
@@ -143,7 +147,7 @@
                     </div>
                     <div class="pay_left col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <p>
-                            Мы готовы доверять денежные вопросы только<br class="hidden-xs">надёжным партнёрам, при этом хотим<br class="hidden-xs">чтобы все выплаты были доступны для участников<br class="hidden-xs">как можно быстрее. <br class="hidden-xs">Поэтому используем удобные сервисы Яндекс.
+                            Мы готовы доверять вопросы взаиморасчёта только<br class="hidden-xs">надёжным партнёрам, при этом хотим<br class="hidden-xs">чтобы все выплаты были доступны для участников<br class="hidden-xs">как можно быстрее. <br class="hidden-xs">Поэтому используем удобные сервисы WebMoney.
                         </p>
                     </div>
                 </div>
@@ -177,63 +181,69 @@
                         <button class="connect_btn" type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                     </div>                
                 </div>
-                <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
-                        <img src="/ico/min-logo.svg" alt="">
-                        <p>наша миссия<br>
-                        в повышении качества жизни<br>
-                        общества через вовлечение<br>
-                        широкого круга населения<br>
-                        в любительский спорт и зож</p>
+            <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
+                    <img src="/ico/min-logo.svg" alt="">
+                    <p>
+                        Наша миссия в повышении качества жизни общества через вовлечение широкого круга населения в любительский спорт и зож
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
+                    <ul>
+                        <li class="title">Программы</li>
+                        <li><a href="/programm/ROneStart">R.ONE START</a></li>
+                        <li><a href="/programm/r.one_pro">R.ONE PRO</a></li>
+                        <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
+                        <li><a href="/programm/r.one_runner_plus">R.ONE RUNNER +</a></li>
+                        <li><a href="/programm/r.one_power">R.ONE POWER</a></li>
+                        <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
+                                ПРОГРАММА</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
+                    <ul>
+                        <li class="title">Соглашение</li>
+                        <li class="prtnrs">
+                            <a href="#" data-toggle="modal" data-target="#partners">Партнёрское соглашение</a>
+                        </li>
+                        <li id="pltks">
+                            <a href="#" data-toggle="modal" data-target="#user_agreements">Пользовательское соглашение</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
+                    <ul class="rgese">
+                        <li class="title">Подпишись</li>
+                        <li class="block-social-links">
+                            <a href="https://facebook.com/reformator.one/">
+                                <img src="/image/social-networks/icon-facebook.png" alt="">
+                            </a>
+                            <a href="https://vk.com/reformatorone">
+                                <img src="/image/social-networks/icon-vk.png" alt="">
+                            </a>
+                            <a href="https://instagram.com/reformator.one">
+                                <img src="/image/social-networks/icon-instagram.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12">
+                    <div class="block-payment-systems">
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-visa.png" title="Visa" alt="Visa">
+                        </a>
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-mastercard.png" title="MasterCard" alt="MasterCard">
+                        </a>
+                        <a href="https://info.paymaster.ru" target="_blank">
+                            <img src="/image/payment-systems/icon-paymaster.png" title="Paymaster" alt="Paymaster">
+                        </a>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
-                        <ul>
-                            <li><a href="/programm/ROneStart">R.ONE START</a></li>
-                            <li><a href="/programm/r.one_pro">R.ONE PRO</a></li>
-                            <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
-                            <li><a href="/programm/r.one_runner_plus">R.ONE RUNNER +</a></li>
-                            <li><a href="/programm/r.one_power">R.ONE POWER</a></li>
-                            <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
-                        <ul>
-                            <li>
-                                <a href="#" data-toggle="modal" data-target="#registr">РЕГИСТРАЦИЯ</a>
-                            </li>
-                            <li class="accsss">
-                                <a href="#" data-toggle="modal" data-target="#registr">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="/ico/fb.png" alt="">
-                                </a>
-                                <a href="#">
-                                    <img src="/ico/vk.png" alt="">
-                                </a>
-                                <a href="#">
-                                    <img src="/ico/inst.png" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
-                        <ul>
-                            <li class="prtnrs">
-                                <a href="#" data-toggle="modal" data-target="#partners">ПАРТНЕРСКОЕ СОГЛАШЕНИЕ</a>
-                            </li>
-                            <li id="pltks">
-                                <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАШЕНИЕ</a>
-                            </li>
-                            <li>
-                                <a href="#" data-toggle="modal" data-target="#login">ВОЙТИ</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>
-                    </div>
-                </footer>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>
+                </div>
+            </footer>
             </div>
         </div>
     </div>

@@ -41,7 +41,7 @@
                     <div class="rstart-txt-cnt col-xs-7 col-sm-7 col-md-7 col-lg-7">
                         <div class="for_whm">
                             <p>ДЛЯ КОГО</p>
-                            <img src="/ico/14+.svg">
+                            <span>14</span>
                         </div>
                         <p class="rst_ctn">
                             {{$program->description}}
@@ -77,7 +77,7 @@
                     <div class="rstart-txt-cnt col-xs-7 col-sm-7 col-md-7 col-lg-7">
                         <div class="for_whm">
                             <p>ДЛЯ КОГО</p>
-                            <img src="/ico/14+.svg">
+                            <span>14</span>
                         </div>
                         <p class="rst_ctn">
                             {{$program->description}}
@@ -122,49 +122,53 @@
                 <h2>ПРИМЕРЫ УПРАЖНЕНИЙ</h2>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-                            <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                        <div class="swiper-slide" >
+                            <div class="video_slide">
                                 <div class="bbrdr">
-                                    <div class="sw_shader"></div>
-                                    <img src="/image/preview/отжимания-от-пола.jpg" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.svg" alt="" class="ico_play1 comm_pl_hldr" data-id="">
-                                    <p class="upr_d">Отжимания от пола - одно из наиболее эффективных спортивных упражнений.</p>
+                                    <video controls poster="/image/preview/program-lesson-1.jpg">
+                                        <source src="/videos/отжимания-от-пола.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                             </div>
-                            <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                                <p class="cs-head">ОТЖИМАНИЯ ОТ ПОЛА</p>
-                                <p></p>
+                            <div class="content-slide">
+                                <p class="cs-head">
+                                    ОТЖИМАНИЯ ОТ ПОЛА
+                                </p>
+                                <div class="cs-body">
+                                    Одно из наиболее эффективных спортивных упражнений.
+                                </div>
                                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
-                        <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-                            <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                        <div class="swiper-slide" >
+                            <div class="video_slide">
                                 <div class="bbrdr">
-                                    <div class="sw_shader"></div>
-                                    <img src="/image/preview/ягодичный-мост.jpg" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.svg" alt="" class="ico_play2 comm_pl_hldr" data-id="">
-                                    <p class="upr_d">Ягодичный мостик – локальное упражнение на ягодицы.</p>
+                                    <video controls poster="/image/preview/program-lesson-2.jpg">
+                                        <source src="/videos/ягодчный-мост.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                             </div>
-                            <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <div class="content-slide">
                                 <p class="cs-head">ЯГОДИЧНЫЙ МОСТ</p>
-                                <p></p>
+                                <div class="cs-body">
+                                    Локальное упражнение на ягодицы.
+                                </div>
                                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>
-                        <div class="swiper-slide col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-                            <div class="video_slide col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                        <div class="swiper-slide " >
+                            <div class="video_slide">
                                 <div class="bbrdr">
-                                    <div class="sw_shader"></div>
-                                    <img src="/image/preview/присед+выпад-назад.jpg" alt="" class="comm_img_hldr video_holder" >
-                                    <img src="/ico/play.svg" alt="" class="comm_pl_hldr ico_play3" data-id="">
-
-                                    <p class="upr_d">Делаем плавные и чёткие движения</p>
+                                    <video controls poster="/image/preview/program-lesson-3.jpg">
+                                        <source src="/videos/присяд-выпад-назад.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                             </div>
-                            <div class="content-slide col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <div class="content-slide">
                                 <p class="cs-head">ПРИСЕД + ВЫПАД НАЗАД</p>
-                                <p></p>
+                                <div class="cs-body">
+                                    Делаем плавные и чёткие движения.
+                                </div>
                                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button> 
                             </div>
                         </div>         
@@ -209,55 +213,61 @@
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
                     <img src="/ico/min-logo.svg" alt="">
-                    <p>наша миссия<br>
-                    в повышении качества жизни<br>
-                    общества через вовлечение<br>
-                    широкого круга населения<br>
-                    в любительский спорт и зож</p>
+                    <p>
+                        Наша миссия в повышении качества жизни общества через вовлечение широкого круга населения в любительский спорт и зож
+                    </p>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
                     <ul>
+                        <li class="title">Программы</li>
                         <li><a href="/programm/ROneStart">R.ONE START</a></li>
                         <li><a href="/programm/r.one_pro">R.ONE PRO</a></li>
                         <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
                         <li><a href="/programm/r.one_runner_plus">R.ONE RUNNER +</a></li>
                         <li><a href="/programm/r.one_power">R.ONE POWER</a></li>
                         <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
+                                ПРОГРАММА</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
+                    <ul>
+                        <li class="title">Соглашение</li>
+                        <li class="prtnrs">
+                            <a href="#" data-toggle="modal" data-target="#partners">Партнёрское соглашение</a>
+                        </li>
+                        <li id="pltks">
+                            <a href="#" data-toggle="modal" data-target="#user_agreements">Пользовательское соглашение</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
                     <ul class="rgese">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#registr">РЕГИСТРАЦИЯ</a>
-                        </li>
-                        <li class="accsss">
-                            <a href="#" data-toggle="modal" data-target="#registr">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/ico/fb.png" alt="">
+                        <li class="title">Подпишись</li>
+                        <li class="block-social-links">
+                            <a href="https://facebook.com/reformator.one/">
+                                <img src="/image/social-networks/icon-facebook.png" alt="">
                             </a>
-                            <a href="#">
-                                <img src="/ico/vk.png" alt="">
+                            <a href="https://vk.com/reformatorone">
+                                <img src="/image/social-networks/icon-vk.png" alt="">
                             </a>
-                            <a href="#">
-                                <img src="/ico/inst.png" alt="">
+                            <a href="https://instagram.com/reformator.one">
+                                <img src="/image/social-networks/icon-instagram.png" alt="">
                             </a>
                         </li>
                     </ul>
-                </div>        
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
-                    <ul>
-                        <li class="prtnrs">
-                            <a href="#" data-toggle="modal" data-target="#partners">ПАРТНЕРСКОЕ СОГЛАШЕНИЕ</a>
-                        </li>
-                        <li id="pltks">
-                            <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАШЕНИЕ</a>
-                        </li>
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#login">ВОЙТИ</a>
-                        </li>
-                    </ul>
+                </div>
+                <div class="col-xs-12">
+                    <div class="block-payment-systems">
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-visa.png" title="Visa" alt="Visa">
+                        </a>
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-mastercard.png" title="MasterCard" alt="MasterCard">
+                        </a>
+                        <a href="https://info.paymaster.ru" target="_blank">
+                            <img src="/image/payment-systems/icon-paymaster.png" title="Paymaster" alt="Paymaster">
+                        </a>
+                    </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>

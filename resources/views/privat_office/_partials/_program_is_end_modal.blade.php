@@ -1,4 +1,4 @@
-<div class="modal fade" id="is-end-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade block-modal program-end" id="is-end-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog bal_modal_width" role="document">
     <div class="modal-content com_soon_modal">
       <div class="modal-body">

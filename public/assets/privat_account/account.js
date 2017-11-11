@@ -100,7 +100,7 @@ $( document ).ready(function() {
 	            showConfirmButton: false
 	        });
 
-	        var formData = new FormData(),
+			var formData = new FormData(),
 				slug = jQuery('#current_slug').val();
 
 			formData.append( 'file', file );
@@ -123,7 +123,9 @@ $( document ).ready(function() {
 							attachment_html += '<img class="attachment-img" id="attachment-img" src="' + result['preview'] + '">';
 						} else if (result['file_type'] = 3) {
 							attachment_html += '<img class="attachment-img" src="/ico/video-default.png">';
+
 						}
+						
 						attachment_html += '<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>';
 						attachment_html += '<input type="hidden" class="attachment-file" name="attachment[' + uniqid() + ']" value="' + result['file_url'] + '">'; 
 						attachment_html += '<span class="attachment-span">' + result['file_name'] + '</span>'; 

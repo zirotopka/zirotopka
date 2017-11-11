@@ -42,7 +42,9 @@
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
                         <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>
                     </div>
-                    <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
+                    <a href="#">
+                        <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
+                    </a>
                 </div>    
             </div>
           @else
@@ -63,7 +65,9 @@
                         <h1>ДЛЯ ВЫГОДНЫХ ЗАНЯТИЙ СПОРТОМ</h1>
                         <p>В ЛЮБОЕ ВРЕМЯ ИЗ ЛЮБОЙ ТОЧКИ МИРА</p>
                     </div>
-                    <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
+                    <a href="#">
+                        <button type="button" class="rg_btn">ПОДРОБНЕЕ</button>
+                    </a>
                 </div>    
             </div>
           @endif
@@ -99,7 +103,7 @@
                             </li>
                             <li class="col-lg-4 col-md-4 col-sm-12 col-xs-12 n6">
                                 <img src="/ico/lamp.svg" alt="">
-                                <p>Возможность зарабатывать<br>деньги и заниматься спортом<br>в удовольстваие!</p>
+                                <p>Возможность зарабатывать<br> и заниматься спортом<br>в удовольствие!</p>
                             </li>
                         </ul>
                 </div>
@@ -109,61 +113,76 @@
                 <h2>ПРОГРАММЫ</h2>
                 <div class="programm_list">
                     <div class="rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                        <img src="/ico/start.jpg" class="start" alt="">
-                        <p class="prg1">R.ONE start</p>
-                        <div class="start_shader_gray"><p>ST</p></div>
-                        <div class="start_shader">
-                            <h4>R.ONE start</h4>
-                            <p>Программа для новичков</p>
-                            <a href="/programm/ROneStart" class="arrow start-arrow" ></a>
-                        </div>
+                        <a href="/programm/ROneStart">
+                            <img src="/ico/start.jpg" class="start" alt="">
+                            <div class="program-description">Программа для новичков</div>
+                            <p class="prg1">R.ONE start</p>
+                            <div class="start_shader_gray"><p>ST</p></div>
+                            <div class="start_shader">
+                                <h4>R.ONE start</h4>
+                                <p>Программа для новичков</p>
+                                <a href="/programm/ROneStart" class="arrow start-arrow" ></a>
+                            </div>
+                        </a>
                     </div>
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
                         <div class="first_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <img src="/ico/pro.jpg" class="prog_imgs prop" alt="">
-                                    <p class="prprp prg2">R.ONE pro</p>
-                                    <div class="pro_shader_gray"><p>PR</p></div>
-                                    <div class="pro_shader">
-                                        <h4>R.ONE pro</h4>
-                                        <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow" href="/programm/r.one_pro"></a>
-                                    </div>
+                                    <a href="/programm/r.one_pro">
+                                        <img src="/ico/pro.jpg" class="prog_imgs prop" alt="">
+                                        <div class="program-description">Программа для продвинутых</div>
+                                        <p class="prprp prg2">R.ONE pro</p>
+                                        <div class="pro_shader_gray"><p>PR</p></div>
+                                        <div class="pro_shader">
+                                            <h4>R.ONE pro</h4>
+                                            <p>Программа для продвинутых</p>
+                                            <a class="arrow progr-arrow" href="/programm/r.one_pro"></a>
+                                        </div>
+                                    </a>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <img src="/ico/power.jpg" class="prog_imgs powp" alt="">
-                                    <p class="prprp prg3">R.ONE power</p>
-                                    <div class="pow_shader_gray"><p>PO</p></div>
-                                    <div class="pow_shader">
-                                        <h4>R.ONE power</h4>
-                                        <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow" href="/programm/r.one_power"></a>
-                                    </div>
+                                    <a href="/programm/r.one_power">
+                                        <img src="/ico/power.jpg" class="prog_imgs powp" alt="">
+                                        <div class="program-description">Программа для развития силы и роста мышечной массы</div>
+                                        <p class="prprp prg3">R.ONE power</p>
+                                        <div class="pow_shader_gray"><p>PO</p></div>
+                                        <div class="pow_shader">
+                                            <h4>R.ONE power</h4>
+                                            <p>Программа для развития силы и роста мышечной массы</p>
+                                            <a class="arrow progr-arrow" href="/programm/r.one_power"></a>
+                                        </div>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="second_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <img src="/ico/run.jpg" class="prog_imgs runp" alt="">
-                                    <p class="prprp prg4">R.ONE run</p>
-                                    <div class="run_shader_gray"><p>RU</p></div>
-                                    <div class="run_shader">
-                                        <h4>R.ONE run</h4>
-                                        <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow" href="/programm/r.one_runner"></a>
-                                    </div>
+                                    <a href="/programm/r.one_runner">
+                                        <img src="/ico/run.jpg" class="prog_imgs runp" alt="">
+                                        <div class="program-description">Программа для начинающих любителей бега</div>
+                                        <p class="prprp prg4">R.ONE run</p>
+                                        <div class="run_shader_gray"><p>RU</p></div>
+                                        <div class="run_shader">
+                                            <h4>R.ONE run</h4>
+                                            <p>Программа для начинающих любителей бега</p>
+                                            <a class="arrow progr-arrow" href="/programm/r.one_runner"></a>
+                                        </div>
+                                    </a>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <img src="/ico/run+.jpg" class="prog_imgs runpl" alt="">
-                                    <p class="prprp prg5">R.ONE run+</p>
-                                    <div class="runp_shader_gray"><p>RU+</p></div>                    
-                                    <div class="runp_shader">
-                                        <h4>R.ONE run+</h4>
-                                        <p>Программа для новичков</p>
-                                        <a class="arrow progr-arrow" href="/programm/r.one_runner_plus"></a>
-                                    </div>
+                                    <a href="/programm/r.one_runner_plus">
+                                        <img src="/ico/run+.jpg" class="prog_imgs runpl" alt="">
+                                        <div class="program-description">Программа для продвинтых любителей бега</div>
+                                        <p class="prprp prg5">R.ONE run+</p>
+                                        <div class="runp_shader_gray"><p>RU+</p></div>
+                                        <div class="runp_shader">
+                                            <h4>R.ONE run+</h4>
+                                            <p>Программа для продвинтых любителей бега</p>
+                                            <a class="arrow progr-arrow" href="/programm/r.one_runner_plus"></a>
+                                        </div>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -177,7 +196,7 @@
                     <img src="/ico/money.svg" alt="">    
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 right_bonus_part">
-                    <p>ЗАНИМАЙТЕСЬ СПОРТОМ,<br class="visible-xs"> ЗАРАБАТЫВАЙТЕ ДЕНЬГИ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ<br>БОНУСНОЙ СИСТЕМЫ<br class="visible-xs"> ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
+                    <p>ЗАНИМАЙТЕСЬ СПОРТОМ И ЗАРАБАТЫВАЙТЕ<br>С ПОМОЩЬЮ ПРОСТОЙ И УДОБНОЙ БОНУСНОЙ<br>СИСТЕМЫ ВОЗНАГРАЖДЕНИЯ УЧАСТНИКОВ</p>
                     <button type="button" class="bonus_btn" onclick="location.href='/bonus';">ПОДРОБНЕЕ</button>
                 </div>
             </div>
@@ -209,6 +228,7 @@
                 </div>
                 <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
             </div>
+              <!--
             <hr class="disp_line">
             <div class="comments-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_6">
                 <h2>ОТЗЫВЫ</h2>
@@ -231,7 +251,7 @@
             
                 <p class="watch_more">Смотреть больше отзывов</p>
                 <a class="arrow2"></a>
-            </div>
+            </div>!-->
             <hr class="disp_line">
             <div class="questions-screen col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section_7">
                 <h2>ВОПРОСЫ И ОТВЕТЫ</h2>
@@ -267,17 +287,11 @@
                                 <li>
                                     <a href="#" class="question">Как стать участником бонусной программы</a>
                                     <div class="answ hidden">
-                                        <p>Стать участником бонусной программы проекта может любой зарегистрированный пользователь, который выбрал подходящую для него программу тренировок, а также указал свои данные Яндекс.кошелька.</p>
+                                        <p>Стать участником бонусной программы проекта может любой зарегистрированный пользователь, который выбрал подходящую для него программу тренировок, а также указал свои данные WebMoney кошелька.</p>
                                         <a href="/bonus">Подробнее о бонусной системе.</a>
                                     </div>
                                 </li>
-                                <li class="hidden qw1" class="question">
-                                    <a href="">Для кого проект?</a>
-                                    <div class="answ hidden">
-                                        <p>Принять участие в проекте может любой желающий в возрасте от 14 лет.</p>
-                                    </div>
-                                </li>
-                                <li class="hidden qw">
+                                <li class="hidden qw1">
                                     <a href="#" class="question">Миссия проекта</a>
                                     <div class="answ hidden">
                                         <p>Миссия REFORMATOR.ONE заключается в повышении качества жизни общества через вовлечение широкого круга населения в любительский спорт и ЗОЖ.</p>
@@ -396,12 +410,6 @@
                                         <p>В случае невыполнения или некорректного выполнения обязательных дней тренировок (если отчет по тренировке не будет соответствовать требованиям, то в таком случае личный кабинет участника также может быть заблокирован).</p>
                                     </div>
                                 </li>
-                                <li class="hidden qw3">
-                                    <a href="#" class="question">Сколько обязательных дней можно пропустить?</a>
-                                    <div class="answ hidden">
-                                        <p>Если участник пропускает более 3 обязательных тренировок, то воспользоваться иммунитетами уже нельзя и программу тренировок необходимо будет начать заново, либо выбрать другую программу тренировок.</p>
-                                    </div>
-                                </li>
                                 <li class="else">
                                     <p class="else" id="faq_ruls">Посмотреть ещё</p>
                                 </li>
@@ -422,25 +430,10 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#" class="question">Как быстро участник получает деньги от бонусной программы?</a>
-                                    <div class="answ hidden">
-                                        <p>Моментально. Деньги распределяются платежной системой Яндекс.Деньги на Яндекс.кошелек участника проекта.</p>
-                                    </div>
-                                </li>
-                                <li>
                                     <a href="#" class="question">Что делать после завершения (прохождения) программы тренировок?</a>
                                     <div class="answ hidden">
                                         <p>Чтобы оставаться в проекте, в т.ч. чтобы пользоваться бонусной системой, участник может выбрать другую программу тренировок или выбрать повторно уже пройденную.</p>
                                     </div>
-                                </li>
-                                <li class="hidden qw4">
-                                    <a href="#">Я нахожусь не в Москве или не в России, смогу ли я принять участие в проекте?</a>
-                                    <div class="answ hidden">
-                                        <p>Однозначно! Для участия в проекте необходимо иметь телефон с камерой и доступом к интернет.</p>
-                                    </div>
-                                </li>
-                                <li class="else">
-                                    <p class="else" id="faq_razn">Посмотреть ещё</p>
                                 </li>
                             </ul>
                         </div>
@@ -461,14 +454,13 @@
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
                     <img src="/ico/min-logo.svg" alt="">
-                    <p>наша миссия<br>
-                    в повышении качества жизни<br>
-                    общества через вовлечение<br>
-                    широкого круга населения<br>
-                    в любительский спорт и зож</p>
+                    <p>
+                        Наша миссия в повышении качества жизни общества через вовлечение широкого круга населения в любительский спорт и зож
+                    </p>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
                     <ul>
+                        <li class="title">Программы</li>
                         <li><a href="/programm/ROneStart">R.ONE START</a></li>
                         <li><a href="/programm/r.one_pro">R.ONE PRO</a></li>
                         <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
@@ -478,39 +470,45 @@
                          ПРОГРАММА</a></li>
                     </ul>
                 </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
+                    <ul>
+                        <li class="title">Соглашение</li>
+                        <li class="prtnrs">
+                            <a href="#" data-toggle="modal" data-target="#partners">Партнёрское соглашение</a>
+                        </li>
+                        <li id="pltks">
+                            <a href="#" data-toggle="modal" data-target="#user_agreements">Пользовательское соглашение</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
                     <ul class="rgese">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#registr">РЕГИСТРАЦИЯ</a>
-                        </li>
-                        <li class="accsss">
-                            <a href="#" data-toggle="modal" data-target="#registr">ПОЛУЧИТЬ ДОСТУП<br>К БЕСПЛАТНОМУ КУРСУ</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/ico/fb.png" alt="">
+                        <li class="title">Подпишись</li>
+                        <li class="block-social-links">
+                            <a href="https://facebook.com/reformator.one/">
+                                <img src="/image/social-networks/icon-facebook.png" alt="">
                             </a>
-                            <a href="#">
-                                <img src="/ico/vk.png" alt="">
+                            <a href="https://vk.com/reformatorone">
+                                <img src="/image/social-networks/icon-vk.png" alt="">
                             </a>
-                            <a href="#">
-                                <img src="/ico/inst.png" alt="">
+                            <a href="https://instagram.com/reformator.one">
+                                <img src="/image/social-networks/icon-instagram.png" alt="">
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
-                    <ul>
-                        <li class="prtnrs">
-                            <a href="#" data-toggle="modal" data-target="#partners">ПАРТНЕРСКОЕ СОГЛАШЕНИЕ</a>
-                        </li>
-                        <li id="pltks">
-                            <a href="#" data-toggle="modal" data-target="#user_agreements">ПОЛЬЗОВАТЕЛЬСКОЕ<br>СОГЛАШЕНИЕ</a>
-                        </li>
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#login">ВОЙТИ</a>
-                        </li>
-                    </ul>
+                <div class="col-xs-12">
+                    <div class="block-payment-systems">
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-visa.png" title="Visa" alt="Visa">
+                        </a>
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-mastercard.png" title="MasterCard" alt="MasterCard">
+                        </a>
+                        <a href="https://info.paymaster.ru" target="_blank">
+                            <img src="/image/payment-systems/icon-paymaster.png" title="Paymaster" alt="Paymaster">
+                        </a>
+                    </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>

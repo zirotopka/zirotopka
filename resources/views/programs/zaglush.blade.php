@@ -35,7 +35,7 @@
                 <div class="zagl col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h2>ПРОГРАММА НА СТАДИИ РАЗРАБОТКИ</h2>
                     <p class="razrb">Разработка программы в завершающей стадии,<br>а пока предлагаю попробовать свои силы в:</p>
-                    <div style="width: 16vw; margin: 0 auto;">
+                    <div style="margin: 0 auto;">
                         <a href="/programm/ROneStart">
                             <h2>R.ONE START</h2>
                             <p class="known">узнать подробнее</p>
@@ -54,7 +54,7 @@
                 <div class="zagl col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 	<h2>ПРОГРАММА НА СТАДИИ РАЗРАБОТКИ</h2>
                 	<p class="razrb">Разработка программы в завершающей стадии,<br>а пока предлагаю попробовать свои силы в:</p>
-	                <div style="width: 16vw; margin: 0 auto;">
+	                <div style="margin: 0 auto;">
                         <a href="/programm/ROneStart">
     	                	<h2>R.ONE START</h2>
     	                	<p class="known">узнать подробнее</p>

@@ -49,7 +49,10 @@ class ProgramUpdating extends Command
      */
     public function handle()
     {   
+<<<<<<< HEAD
+=======
         \Log::info('Обновление программ запущенно');
+>>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
         $users_query = User::select([
             'id',
             'email',
@@ -58,17 +61,33 @@ class ProgramUpdating extends Command
             'current_day',
             'current_programm_id',
             'status',
+<<<<<<< HEAD
+        ])->where('program_is_start','=',1)->where('status','=',1);
+=======
             'first_name',
             'surname',
             'slug',
             'program_is_end',
         ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('program_is_end','=',0);
+>>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
                 $userTimezone = User::getTimezone($user);
 
                 $userNow = Carbon::now($userTimezone);
+<<<<<<< HEAD
+                $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone);
+
+                $lastDay = $last_updated_at->day;
+                $nowDay = $userNow->day;
+
+                $userHour = $userNow->hour;
+                
+                if ($userHour >= 22) {  
+                    if ($nowDay > $lastDay) {
+                        $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
+=======
                 $userNowStartDay = clone $userNow;
                 $userNowStartDay->startOfDay();
                 $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone)->startOfDay();
@@ -79,6 +98,7 @@ class ProgramUpdating extends Command
                     if ($difference > 0) {           
                         //Разница в 1 день
                         $userHour = $userNow->hour;
+>>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
 
                         if ($userHour >= 22) {
 
@@ -238,6 +258,55 @@ class ProgramUpdating extends Command
                         $this->send_mail($user, $subject, $text);     
                     }
                 }
+<<<<<<< HEAD
+            }
+        });
+
+        //Начало программы
+        $users_query = User::select([
+            'id',
+            'program_is_start',
+            'start_training_day',
+            'timezone',
+        ])->where('program_is_start','=',0);
+
+        $users_query->chunk(100, function($users){
+            foreach($users as $user) {
+                $userTimezone = User::getTimezone($user);
+
+                $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
+                $start_timestamp = $start_training_day->timestamp;
+
+                $userNow = Carbon::now($userTimezone);
+                $now_timestamp = $userNow->timestamp;
+
+                if ($now_timestamp >= $start_timestamp) {
+                    $user->program_is_start = 1;
+                    $user->last_updated_at = $userNow;
+                    $user->save();
+
+                    \Log::info('Пользователь №'.$user->id.' начал программу!');
+                } else {
+                    $start_training_day->subDay();
+                    $start_year = $start_training_day->year;
+                    $start_month = $start_training_day->month;
+                    $start_day = $start_training_day->day;
+
+                    $now_year = $userNow->year;
+                    $now_month = $userNow->month;
+                    $now_day = $userNow->day;
+                    $now_hour =  $userNow->hour;
+
+                    if (($start_year == $now_year) && ($start_month == $now_month) && ($start_day == $now_day) && ($now_hour >= 22)) {
+                        $user->program_is_start = 1;
+                        $user->last_updated_at = $userNow;
+                        $user->save();
+
+                        \Log::info('Пользователь №'.$user->id.' начал программу!');
+                    }
+                }
+=======
+>>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
             }
         });
     }

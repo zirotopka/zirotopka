@@ -2,15 +2,13 @@
   <div class="modal-dialog reg_modal" role="document">
     <div class="modal-content ">
       <div class="modal-body">
+        <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="/ico/close_modal.png" alt=""></span></button>
         <h3>ПРИСОЕДИНЯЙТЕСЬ!</h3>
         <div class="user_data">
           <form action="/register" method="POST">
             {{ csrf_field() }}
-            <p>
-              <input class="reg_input" id="reg-email" type="email" name="email" placeholder="Почта" required="required">
-              <input class="reg_input" id="password" type="password" name="password" placeholder="Пароль" required="required">
-            </p>
-            
+            <input class="reg_input" id="reg-email" type="email" name="email" placeholder="Почта" required="required">
+            <input class="reg_input" id="password" type="password" name="password" placeholder="Пароль" required="required">
             <input class="reg_input" id="first_name" type="text" name="first_name" placeholder="Имя" required="required">
             <input class="reg_input" id="surname" type="text" name="surname" placeholder="Фамилия" required="required"> 
 
@@ -30,20 +28,19 @@
                 <span>{{$referral->surname.' '.$referral->first_name}}</span>
               </div>
             @endif
-            
+
+            <!--
             <div class="enter_across reg_enter_across">
               <hr>
-              <a href="">или войти через</a>
+              <a href="#" data-toggle="modal" data-target="#login">или войти через</a>
               <hr>
             </div>
             <div class="vk_fs"> 
               <a href="/social_login/vkontakte">
-                <img src="/ico/vkontakte.png" alt="">
-              </a>
-              <a href="/social_login/facebook">
-                <img src="/ico/icon-facebook.svg" alt="">
+                <img src="/image/social-networks/icon-vk.png" alt="" align="center" width="36px">
               </a>
             </div>
+            !-->
             <input class="registr_btn" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ">
           </form>
         </div>
