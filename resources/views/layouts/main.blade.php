@@ -136,6 +136,9 @@
                             <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-4" >
                                 <a href="/messages/1">
                                     <img class="envel" src="/ico/envelop.png" alt="envelop">
+                                    @if ($newMessages > 0)
+                                        <span>{{$newMessages}}</span>
+                                    @endif
                                 </a>
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-4 ">

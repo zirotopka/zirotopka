@@ -14,6 +14,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer('*', 'App\ViewComposers\BodyCssComposer');
+        view()->composer('*', 'App\ViewComposers\MessageComposer');
     }
 
     /**

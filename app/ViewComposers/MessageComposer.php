@@ -5,10 +5,11 @@ namespace App\ViewComposers;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Message;
 
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 
-class BodyCssComposer
+class MessageComposer
 {
 
     protected $request;
@@ -25,10 +26,11 @@ class BodyCssComposer
      * @return void
      */
     public function compose(View $view) {
-        $route = Route::current();
+        $user = Sentinel::getUser();
 
-        if (isset($route)) {
-            $view->with('bodyCss', str_replace('/','-',str_replace(['{','}'], '', $route->uri)));
+        if (!empty($user)) {
+            $newMessages = Message::where('recipient_id','=',$user->id)->where('is_read','=',0)->count();
+            $view->with('newMessages', $newMessages);
         }
     }
 }
