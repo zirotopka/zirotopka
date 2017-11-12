@@ -13,7 +13,6 @@
 			<form action="{{env('PAYMASTER_URL')}}" method="POST" class="form-horizontal">
 				<input name="LMI_MERCHANT_ID" type="hidden" value="{{env('PAYMASTER_LMI_MERCHANT_ID')}}">
 				<input name="LMI_CURRENCY" type="hidden" value="643">
-<<<<<<< HEAD
 				<input name="LMI_PAYMENT_DESC" type="hidden" value="Reformoney">
 				<input name="LMI_PAYER_PHONE_NUMBER" type="hidden" value="{{$user->phone}}">
 				<input name="LMI_PAYER_EMAIL" type="hidden" value="{{$user->email}}">
@@ -27,7 +26,6 @@
 
                 <input type="submit" value="ПОПОЛНИТЬ" class="send">
             </form>
-=======
 				<input name="LMI_PAYMENT_DESC" type="hidden" value="ReforMoney">
 				<input name="LMI_PAYER_PHONE_NUMBER" type="hidden" value="{{$user->phone}}">
 				<input name="LMI_PAYER_EMAIL" type="hidden" value="{{$user->email}}">
