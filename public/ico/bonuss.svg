@@ -52,18 +52,18 @@
 	.st1{fill:#FF8A18;}
 	.st2{fill:#FF8A18;}
 	.st3{fill:#FF8A18;}
-	.st4{font-family:'MuseoSansCyrl-900';}
+	.st4{font-family:'GilroyBold';}
 	.st5{font-size:89.7028px;}
-	.st6{font-family:'MuseoSansCyrl-300';}
+	.st6{font-family:'GilroyBold';}
 	.st7{font-size:24.4343px;}
-	.st8{font-family:'MuseoSansCyrl-700';}
+	.st8{font-family:'GilroyBold';}
 	.st9{font-size:33.059px;}
 	.st10{fill:#FFFFFF;}
 	.st11{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;}
 	.st12{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:12.2629,12.2629;}
 	.st13{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:10.8539,10.8539;}
 	.st14{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:9.6667,9.6667;}
-	.st15{font-family:'MuseoSansCyrl-500';}
+	.st15{font-family:'GilroyBold';}
 	.st16{font-size:27.1795px;}
 	.st17{fill:none;stroke:#A9B2BA;stroke-width:2;stroke-miterlimit:10;}
 	.st18{fill:none;stroke:#A9B2BA;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:11.6561,11.6561;}
@@ -80,7 +80,7 @@
 	.st29{fill:none;stroke:#A9B2BA;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:11.4883,11.4883;}
 	.st30{fill:none;stroke:#A9B2BA;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:9.5802,9.5802;}
 	.st31{fill:#FF8A18;}
-	.st32{font-family:'Gubia-Black';}
+	.st32{font-family:'GilroyBold';}
 	.st33{font-size:30.1265px;}
 </style><g
      id="g73"
