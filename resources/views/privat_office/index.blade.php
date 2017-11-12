@@ -189,7 +189,7 @@
 		?>
 
 		@if(!empty($programm_stages))
-			<div class="programs row">
+			<div class="program col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				@forelse ( $programm_stages as $programm_stage )
 					<?php
 				    	$exercive = $programm_stage->exercive;
