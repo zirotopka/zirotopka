@@ -134,13 +134,15 @@
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;</p> 
                                 </a>                            
                             </div>
-                            <div class="envelop col-lg-1 col-md-1 col-sm-4 col-xs-3" >
-                                <a href="/messages/1">
-                                    <img class="envel" src="/ico/envelop.png" alt="envelop">
-                                    @if ($newMessages > 0)
-                                        <span>{{$newMessages}}</span>
-                                    @endif
-                                </a>
+                            <div class="block-envelope col-lg-1 col-md-1 col-sm-4 col-xs-3">
+                                <div class="envelop" >
+                                    <a href="/messages/1">
+                                        <img class="envel" src="/ico/envelop.png" alt="envelop">
+                                        @if ($newMessages > 0)
+                                            <span>{{$newMessages}}</span>
+                                        @endif
+                                    </a>
+                                </div>
                             </div>
                             <div class="drop-text dropdown col-lg-2 col-md-3 col-sm-4 col-xs-6">
                                 <button class="dropdown-toggle" type="button" id="nav-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

@@ -7,6 +7,12 @@ footer{
     height: auto;
     padding: 30px 15px!important;
 }
+.block-envelope{
+
+}
+.block-envelope .envelope span{
+
+}
 .codrops-top a{
     vertical-align: middle;
 }
@@ -22,7 +28,6 @@ footer{
 .envelop{
     padding: 17px 0 0 0;
 }
-
 
 .block-lesson-video{
     position: relative;
@@ -51,7 +56,6 @@ footer{
     position: relative;
     top: 2px;
 }
-
 .cls_mod_btn{
     margin-top: -4px;
 }
