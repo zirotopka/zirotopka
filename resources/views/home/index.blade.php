@@ -115,7 +115,7 @@
                     <div class="rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <a href="/programm/ROneStart">
                             <img src="/ico/start.jpg" class="start" alt="">
-                            <div class="program-description">Программа для новичков</div>
+                            <div class="program-description hidden-sm">Программа для новичков</div>
                             <p class="prg1">R.ONE start</p>
                             <div class="start_shader_gray"><p>ST</p></div>
                             <div class="start_shader">
@@ -131,7 +131,7 @@
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <a href="/programm/r.one_pro">
                                         <img src="/ico/pro.jpg" class="prog_imgs prop" alt="">
-                                        <div class="program-description">Программа для продвинутых</div>
+                                        <div class="program-description hidden-sm">Программа для продвинутых</div>
                                         <p class="prprp prg2">R.ONE pro</p>
                                         <div class="pro_shader_gray"><p>PR</p></div>
                                         <div class="pro_shader">
@@ -144,7 +144,7 @@
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <a href="/programm/r.one_power">
                                         <img src="/ico/power.jpg" class="prog_imgs powp" alt="">
-                                        <div class="program-description">Программа для развития силы и роста мышечной массы</div>
+                                        <div class="program-description hidden-sm">Программа для развития силы и роста мышечной массы</div>
                                         <p class="prprp prg3">R.ONE power</p>
                                         <div class="pow_shader_gray"><p>PO</p></div>
                                         <div class="pow_shader">
@@ -161,7 +161,7 @@
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <a href="/programm/r.one_runner">
                                         <img src="/ico/run.jpg" class="prog_imgs runp" alt="">
-                                        <div class="program-description">Программа для начинающих любителей бега</div>
+                                        <div class="program-description hidden-sm">Программа для начинающих любителей бега</div>
                                         <p class="prprp prg4">R.ONE run</p>
                                         <div class="run_shader_gray"><p>RU</p></div>
                                         <div class="run_shader">
@@ -174,7 +174,7 @@
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <a href="/programm/r.one_runner_plus">
                                         <img src="/ico/run+.jpg" class="prog_imgs runpl" alt="">
-                                        <div class="program-description">Программа для продвинтых любителей бега</div>
+                                        <div class="program-description hidden-sm">Программа для продвинтых любителей бега</div>
                                         <p class="prprp prg5">R.ONE run+</p>
                                         <div class="runp_shader_gray"><p>RU+</p></div>
                                         <div class="runp_shader">
