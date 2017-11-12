@@ -178,7 +178,7 @@
          style="fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st0 st15 st16"
      id="text109"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#FF8A18"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#FF8A18"
      x="-2.8798592"
      y="22.00033">+ 1000 </text>
 <polygon
@@ -275,7 +275,7 @@
          style="fill:none;stroke:#a9b2ba;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st2 st15 st16"
      id="text147"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#aab3bb"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#aab3bb"
      x="706.10052"
      y="72.952629">+ 1000 </text>
 <polygon
@@ -372,7 +372,7 @@
          style="fill:none;stroke:#a9b2ba;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st2 st15 st16"
      id="text185"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#aab3bb"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#aab3bb"
      x="1178.0431"
      y="72.952629">+ 1000 </text>
 <polygon
@@ -476,7 +476,7 @@
          style="fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st0 st15 st16"
      id="text225"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#FF8A18"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#FF8A18"
      x="6.120841"
      y="137.42264">+ 150 </text>
 <polygon
@@ -580,7 +580,7 @@
          style="fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st0 st15 st16"
      id="text265"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#FF8A18"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#FF8A18"
      x="6.9269419"
      y="260.26825">+ 100 </text>
 <polygon
@@ -677,7 +677,7 @@
          style="fill:none;stroke:#a9b2ba;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st2 st15 st16"
      id="text303"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#A9B2BA"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#A9B2BA"
      x="952.80542"
      y="248.95502">+ 150 </text>
 <polygon
@@ -691,7 +691,7 @@
        transform="translate(341.2654,675.8429)"
        class="st31 st32 st33"
        id="text309"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#FF8A18">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#FF8A18">R</text>
 <rect
        x="341.70001"
        y="670.79999"
@@ -712,7 +712,7 @@
        transform="translate(332.0645,791.0687)"
        class="st31 st32 st33"
        id="text317"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#FF8A18">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#FF8A18">R</text>
 <rect
        x="332.5"
        y="786.09998"
@@ -740,7 +740,7 @@
        transform="translate(334.6686,914.3362)"
        class="st31 st32 st33"
        id="text327"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#FF8A18">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#FF8A18">R</text>
 <rect
        x="335.10001"
        y="909.29999"
@@ -761,7 +761,7 @@
        transform="translate(1050.3145,726.8334)"
        class="st21 st32 st33"
        id="text335"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#a9b2ba">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#a9b2ba">R</text>
 <rect
        x="1050.7"
        y="721.79999"
@@ -782,7 +782,7 @@
        transform="translate(1522.3145,727.5075)"
        class="st21 st32 st33"
        id="text343"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#a9b2ba">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#a9b2ba">R</text>
 <rect
        x="1522.7"
        y="722.5"
@@ -803,7 +803,7 @@
        transform="translate(1278.9846,902.7182)"
        class="st21 st32 st33"
        id="text351"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#a9b2ba">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#a9b2ba">R</text>
 <rect
        x="1279.4"
        y="897.70001"
