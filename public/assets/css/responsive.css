@@ -11,6 +11,7 @@ footer{
     padding: 18px 0;
     border-left: 1px solid #909090;
     border-right: 1px solid #909090;
+    text-align: center;
 }
 .block-envelope .envelop span{
     background: #ff8a18;
