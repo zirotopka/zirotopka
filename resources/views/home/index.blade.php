@@ -174,12 +174,12 @@
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <a href="/programm/r.one_runner_plus">
                                         <img src="/ico/run+.jpg" class="prog_imgs runpl" alt="">
-                                        <div class="program-description hidden-sm">Программа для продвинтых любителей бега</div>
+                                        <div class="program-description hidden-sm">Программа для продвинутых любителей бега</div>
                                         <p class="prprp prg5">R.ONE run+</p>
                                         <div class="runp_shader_gray"><p>RU+</p></div>
                                         <div class="runp_shader">
                                             <h4>R.ONE run+</h4>
-                                            <p>Программа для продвинтых любителей бега</p>
+                                            <p>Программа для продвинутых любителей бега</p>
                                             <a class="arrow progr-arrow" href="/programm/r.one_runner_plus"></a>
                                         </div>
                                     </a>

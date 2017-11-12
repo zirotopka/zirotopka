@@ -27,6 +27,20 @@ footer{
     top: 10px;
     right: 5px;
 }
+.attachment-item{
+    border: 1px solid #c5c5c5;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+.attachment-img{
+    width: 20%;
+}
+.attachment-span{
+    font-weight: 100;
+    font-size: 12px;
+    padding-left: 5px;
+}
 .codrops-top a{
     vertical-align: middle;
 }
@@ -151,9 +165,6 @@ footer{
     width: auto!important;
     height: auto!important;
     margin-bottom: 0!important;
-}
-.attachment-img{
-    width: 100%;
 }
 .customSelect:after{
     height: 2.45vw;
