@@ -60,12 +60,23 @@ footer{
     display: inline-block;
     position: relative;
 }
-
+.otchet{
+    position: relative;
+    z-index: 100;
+}
+.block-lesson-video .btn-play{
+    width: 50px!important;
+    height: 50px!important;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    margin: 0!important;
+}
 .block-lesson-video{
     position: relative;
     text-align: center;
     margin: 2em 0 0 0;
     cursor: pointer;
+    z-index: 100;
 }
 
 .prof-disp{
@@ -448,9 +459,9 @@ footer .prgrm_list ul li a:hover,
     margin: 30px 0 0;
 }
 
-@media only screen and (min-width : 768px) and (max-width : 1024px){
+@media only screen and (min-width : 768px) and (max-width : 1112px){
     .dropdown{
-        width: 24.99% !important;
+        width: 19.3% !important;
     }
     .iimtxt{
         display: none;
@@ -479,12 +490,20 @@ footer .prgrm_list ul li a:hover,
         margin: 0;
     }
 }
-@media only screen and (min-width : 1000px){
+@media only screen and (min-width : 1000px) and (max-width : 1112px){
     .dropdown{
-        width: 50% !important;
+        width: 24.99% !important;
+    }
+}
+@media only screen and (width : 768px) and (height : 1024px){
+    .dropdown{
+        width: 33.3% !important;
     }
 }
 @media only screen and (max-width : 768px) {
+    .msg_pagination{
+        display: none;
+    }
     .start{
         height: 43.2vw;
     }
@@ -1449,5 +1468,54 @@ footer .prgrm_list ul li a:hover,
         padding: 0;
         margin-top: 20px;
         line-height: 1.5;
+    }
+}
+
+@media only screen and (width : 768px) and (height : 1024px){
+    .bons-screen button{
+        margin: 30px 20px 0 0!important;
+        display: inline-block;
+    }
+    .bons-screen .pig{
+        width: 50%;
+
+        right: 0;
+    }
+    .bons-screen{
+        height: 320px;
+    }
+    .bons-about-screen{
+        height: 200px;
+    }
+    .bons-pay-screen{
+        height: 320px;
+    }
+    .mission{
+        width: 25%;
+    }
+    .reg_f_s{
+        width: 25%!important;
+    }
+    footer .prgrm_list,
+    .ofrta{
+        padding: 0!important;
+    }
+    .connect_btn{
+        width: 35%!important;
+    }
+    .connect_price{
+        background-position: 42% 5px !important;
+    }
+}
+@media only screen and (width : 1024px) and (height : 768px){
+    .bons-screen{
+        padding: 30px;
+        height: auto;
+        margin: 70px 0 0!important;
+    }
+    .bons-how-screen{
+        margin: 0;
+        height: auto;
+        padding: 30px 20px;
     }
 }
