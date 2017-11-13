@@ -447,7 +447,11 @@ footer .prgrm_list ul li a:hover,
 .modal-body .send{
     margin: 30px 0 0;
 }
-
+@media only screen and (min-width : 1000px){
+    .dropdown{
+        width: 50% !important;
+    }
+}
 @media only screen and (min-width : 768px) and (max-width : 1024px){
     .messages-type .dropdown{
         width: 19.3% !important;
@@ -477,11 +481,6 @@ footer .prgrm_list ul li a:hover,
     }
     .show-message .when_send{
         margin: 0;
-    }
-}
-@media only screen and (min-width : 1000px){
-    .dropdown{
-        width: 50% !important;
     }
 }
 @media only screen and (max-width : 768px) {
