@@ -461,10 +461,12 @@ footer .prgrm_list ul li a:hover,
     }
     .show-message{
         position: relative;
+        height: auto!important;
     }
     .show-message .min_left_col{
         width: 100%;
-        padding: 20px 40px 20px 15px;
+        padding: 20px 70px 20px 15px;
+        float: none
     }
     .show-message .min_right_col{
         position: absolute;
