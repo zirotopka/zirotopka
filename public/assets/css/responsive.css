@@ -452,13 +452,14 @@ footer .prgrm_list ul li a:hover,
         width: 50% !important;
     }
 }
-
+@media only screen and (min-width : 768px) and (max-width : 1024px){
+    .messages-type .dropdown{
+        width: 19.3% !important;
+    }
+}
 @media only screen and (max-width : 768px) {
     .start{
         height: 43.2vw;
-    }
-    .messages-type .dropdown{
-        width: 19.3% !important;
     }
     .rl_btns,
     .rg_btn,
