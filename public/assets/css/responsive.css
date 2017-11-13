@@ -1504,7 +1504,7 @@ footer .prgrm_list ul li a:hover,
         width: 35%!important;
     }
     .connect_price{
-        background-position: 42% 5px !important;
+        background-position: 40% 5px!important;
     }
 }
 @media only screen and (width : 1024px) and (height : 768px){
@@ -1517,8 +1517,5 @@ footer .prgrm_list ul li a:hover,
         margin: 0;
         height: auto;
         padding: 30px 20px;
-    }
-    .connect_price{
-        background-position: 40% 5px!important;
     }
 }
