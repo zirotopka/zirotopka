@@ -452,7 +452,11 @@ footer .prgrm_list ul li a:hover,
         width: 50% !important;
     }
 }
+
 @media only screen and (max-width : 768px) {
+    .start{
+        height: 43.2vw;
+    }
     .rl_btns,
     .rg_btn,
     .how-screen button,
