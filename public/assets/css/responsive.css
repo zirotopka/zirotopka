@@ -457,6 +457,9 @@ footer .prgrm_list ul li a:hover,
     .start{
         height: 43.2vw;
     }
+    .messages-type .dropdown{
+        width: 19.3% !important;
+    }
     .rl_btns,
     .rg_btn,
     .how-screen button,
