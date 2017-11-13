@@ -459,6 +459,27 @@ footer .prgrm_list ul li a:hover,
     .iimtxt{
         display: none;
     }
+    .show-message{
+        position: relative;
+    }
+    .show-message .min_left_col{
+        width: 100%;
+        padding: 20px 40px 20px 15px;
+    }
+    .show-message .min_right_col{
+        position: absolute;
+        padding: 0;
+        top: 20px;
+        right: 20px;
+        width: auto;
+    }
+    .show-message .attach_ico{
+        margin: 10px auto 0;
+        display: block;
+    }
+    .show-message .when_send{
+        margin: 0;
+    }
 }
 @media only screen and (max-width : 768px) {
     .start{
