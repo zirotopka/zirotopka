@@ -398,6 +398,10 @@ footer .prgrm_list ul li a:hover,
     -moz-transition: 0.5s;
     transition: 0.5s;
 }
+.index_spy li{
+    margin: 3px 0!important;
+    min-height: 19px!important;
+}
 .block-payment-systems a:hover{
     opacity: 1;
 }
