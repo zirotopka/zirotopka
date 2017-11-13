@@ -410,7 +410,9 @@ footer .prgrm_list ul li a:hover,
     font-size: 10px;
     font-weight: 100;
 }
-
+.bons-screen .pig{
+    margin: 0;
+}
 .codrops-top .fa-caret-down{
     padding: 0;
 }
