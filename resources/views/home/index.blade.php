@@ -115,7 +115,7 @@
                     <div class="rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <a href="/programm/ROneStart">
                             <img src="/ico/start.jpg" class="start" alt="">
-                            <div class="program-description hidden-sm">Программа для новичков</div>
+                            <div class="program-description hidden-xs hidden-sm">Программа для новичков</div>
                             <p class="prg1">R.ONE start</p>
                             <div class="start_shader_gray"><p>ST</p></div>
                             <div class="start_shader">
