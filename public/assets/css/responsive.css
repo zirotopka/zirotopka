@@ -1518,4 +1518,7 @@ footer .prgrm_list ul li a:hover,
         height: auto;
         padding: 30px 20px;
     }
+    .connect_price{
+        background-position: 40% 5px!important;
+    }
 }
