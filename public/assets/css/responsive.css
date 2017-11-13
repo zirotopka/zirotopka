@@ -1507,7 +1507,7 @@ footer .prgrm_list ul li a:hover,
         background-position: 40% 5px!important;
     }
 }
-@media only screen and (width : 1024px) and (height : 768px){
+@media only screen and (width : 1024px) and (height : 753px){
     .bons-screen{
         padding: 30px;
         height: auto;
@@ -1521,4 +1521,22 @@ footer .prgrm_list ul li a:hover,
     .connect_price{
         background-position: 41% 5px!important;
     }
+}
+
+.connect_price{
+    background: none;
+    position: relative;
+    display: table;
+    margin: 20px auto 0;
+}
+.connect_price:before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 12%;
+    width: 3px;
+    height: 60px;
+    background: #c3c3c3;
+    transform: rotate(45deg);
 }
