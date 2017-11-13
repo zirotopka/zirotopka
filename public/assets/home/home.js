@@ -10,10 +10,10 @@ jQuery(document).ready(function(){
             },
             success: function (data) {
                 if (data['response'] == 200) {
-                    $('#reg-email').after('<i class="fa fa-check good" style="color:#ff8a18; position: absolute; margin: 2%;"> </i>');
+                    $('#reg-email').after('<i class="fa fa-check good" style="color:#ff8a18; position: absolute; margin: 4px 10px 3px;"> </i>');
                     $('.bad').attr('style','display: none;');
                 } else {
-                    $('#reg-email').after('<i class="fa fa-times bad" style="color:#ff8a18; position: absolute; margin: 2%;"> </i>');
+                    $('#reg-email').after('<i class="fa fa-times bad" style="color:#ff8a18; position: absolute;margin: 4px 10px 3px;"> </i>');
                     $('.good').attr('style','display: none;');
                     $('.bad').attr('title', data['text']);
                 }
