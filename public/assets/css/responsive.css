@@ -456,6 +456,9 @@ footer .prgrm_list ul li a:hover,
     .messages-type .dropdown{
         width: 19.3% !important;
     }
+    .iimtxt{
+        display: none;
+    }
 }
 @media only screen and (max-width : 768px) {
     .start{
