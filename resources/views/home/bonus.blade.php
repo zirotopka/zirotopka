@@ -67,7 +67,9 @@
                             Еcли Ваши друзья приглашают новых участников, Вы так же накапливаете баллы. Эти баллы Вы можете конвертировать на WebMoney.
                         </p>
                     </div>
-                    <embed class="mobimg visible-xs" src="/ico/mbonus.svg">
+                    <div class="visible-xs">
+                        <img src="/ico/mbonus.svg">
+                    </div>
                         
 
     
