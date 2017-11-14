@@ -1474,8 +1474,7 @@ footer .prgrm_list ul li a:hover,
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
-and (orientation : portrait)
-and (-webkit-min-device-pixel-ratio: 1){
+and (orientation : portrait){
     .bons-screen button{
         margin: 30px 20px 0 0!important;
         display: inline-block;
