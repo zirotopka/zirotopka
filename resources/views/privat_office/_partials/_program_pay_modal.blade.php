@@ -13,7 +13,7 @@
 
                     <div class="form-group">
                         <div>
-                          <input type="submit" value="АКТИВИРОВАВТЬ" class="link"/>
+                          <input type="submit" value="АКТИВИРОВАТЬ" class="link"/>
                         </div>
                     </div>
                 </form>     
