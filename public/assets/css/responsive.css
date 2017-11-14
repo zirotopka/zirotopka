@@ -7,6 +7,40 @@ footer{
     height: auto;
     padding: 30px 15px!important;
 }
+.block-envelope{
+    padding: 18px 0;
+    border-left: 1px solid #909090;
+    border-right: 1px solid #909090;
+    text-align: center;
+}
+.block-envelope .envelop span{
+    background: #ff8a18;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: block;
+    font-size: 10px;
+    line-height: 2 !important;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+.attachment-item{
+    border: 1px solid #c5c5c5;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+.attachment-img{
+    width: 20%;
+}
+.attachment-span{
+    font-weight: 100;
+    font-size: 12px;
+    padding-left: 5px;
+}
 .codrops-top a{
     vertical-align: middle;
 }
@@ -20,15 +54,29 @@ footer{
     top: 17px;
 }
 .envelop{
-    padding: 17px 0 0 0;
+    padding: 0;
+    border-left: 0;
+    border-right: 0;
+    display: inline-block;
+    position: relative;
 }
-
-
+.otchet{
+    position: relative;
+    z-index: 100;
+}
+.block-lesson-video .btn-play{
+    width: 50px!important;
+    height: 50px!important;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    margin: 0!important;
+}
 .block-lesson-video{
     position: relative;
     text-align: center;
     margin: 2em 0 0 0;
     cursor: pointer;
+    z-index: 100;
 }
 
 .prof-disp{
@@ -128,9 +176,6 @@ footer{
     width: auto!important;
     height: auto!important;
     margin-bottom: 0!important;
-}
-.attachment-img{
-    width: 100%;
 }
 .customSelect:after{
     height: 2.45vw;
@@ -364,6 +409,10 @@ footer .prgrm_list ul li a:hover,
     -moz-transition: 0.5s;
     transition: 0.5s;
 }
+.index_spy li{
+    margin: 3px 0!important;
+    min-height: 19px!important;
+}
 .block-payment-systems a:hover{
     opacity: 1;
 }
@@ -376,7 +425,9 @@ footer .prgrm_list ul li a:hover,
     font-size: 10px;
     font-weight: 100;
 }
-
+.bons-screen .pig{
+    margin: 0;
+}
 .codrops-top .fa-caret-down{
     padding: 0;
 }
@@ -408,9 +459,53 @@ footer .prgrm_list ul li a:hover,
     margin: 30px 0 0;
 }
 
-@media only screen and (max-width : 768px) {
+@media only screen and (min-width : 768px) and (max-width : 1112px){
     .dropdown{
-        width: 50% !important;
+        width: 19.3% !important;
+    }
+    .iimtxt{
+        display: none;
+    }
+    .show-message{
+        position: relative;
+        height: auto!important;
+    }
+    .show-message .min_left_col{
+        width: 100%;
+        padding: 20px 70px 20px 15px;
+        float: none
+    }
+    .show-message .min_right_col{
+        position: absolute;
+        padding: 0;
+        top: 20px;
+        right: 20px;
+        width: auto;
+    }
+    .show-message .attach_ico{
+        margin: 10px auto 0;
+        display: block;
+    }
+    .show-message .when_send{
+        margin: 0;
+    }
+}
+@media only screen and (min-width : 1000px) and (max-width : 1112px){
+    .dropdown{
+        width: 24.99% !important;
+    }
+}
+@media only screen and (width : 768px) and (height : 1024px){
+    .dropdown{
+        width: 33.3% !important;
+    }
+}
+@media only screen and (max-width : 768px) {
+    .msg_pagination{
+        display: none;
+    }
+    .start{
+        height: 43.2vw;
     }
     .rl_btns,
     .rg_btn,
@@ -575,9 +670,7 @@ footer .prgrm_list ul li a:hover,
     .disp_line{
         height: 1px;
     }
-    .envelop{
-        padding: 18px 0 0 0;
-    }
+
 
     .comments-screen {
         margin: 0;
@@ -1376,4 +1469,74 @@ footer .prgrm_list ul li a:hover,
         margin-top: 20px;
         line-height: 1.5;
     }
+}
+
+@media only screen and (width : 768px) and (height : 1024px){
+    .bons-screen button{
+        margin: 30px 20px 0 0!important;
+        display: inline-block;
+    }
+    .bons-screen .pig{
+        width: 50%;
+
+        right: 0;
+    }
+    .bons-screen{
+        height: 320px;
+    }
+    .bons-about-screen{
+        height: 200px;
+    }
+    .bons-pay-screen{
+        height: 320px;
+    }
+    .mission{
+        width: 25%;
+    }
+    .reg_f_s{
+        width: 25%!important;
+    }
+    footer .prgrm_list,
+    .ofrta{
+        padding: 0!important;
+    }
+    .connect_btn{
+        width: 35%!important;
+    }
+    .connect_price{
+        background-position: 40% 5px!important;
+    }
+}
+@media only screen and (width : 1024px) and (height : 753px){
+    .bons-screen{
+        padding: 30px;
+        height: auto;
+        margin: 70px 0 0!important;
+    }
+    .bons-how-screen{
+        margin: 0;
+        height: auto;
+        padding: 30px 20px;
+    }
+    .connect_price{
+        background-position: 41% 5px!important;
+    }
+}
+
+.connect_price{
+    background: none;
+    position: relative;
+    display: table;
+    margin: 20px auto 0;
+}
+.connect_price:before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 12%;
+    width: 3px;
+    height: 60px;
+    background: #c3c3c3;
+    transform: rotate(45deg);
 }

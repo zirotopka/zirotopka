@@ -52,18 +52,18 @@
 	.st1{fill:#FF8A18;}
 	.st2{fill:#FF8A18;}
 	.st3{fill:#FF8A18;}
-	.st4{font-family:'MuseoSansCyrl-900';}
+	.st4{font-family:'GilroyBold';}
 	.st5{font-size:89.7028px;}
-	.st6{font-family:'MuseoSansCyrl-300';}
+	.st6{font-family:'GilroyBold';}
 	.st7{font-size:24.4343px;}
-	.st8{font-family:'MuseoSansCyrl-700';}
+	.st8{font-family:'GilroyBold';}
 	.st9{font-size:33.059px;}
 	.st10{fill:#FFFFFF;}
 	.st11{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;}
 	.st12{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:12.2629,12.2629;}
 	.st13{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:10.8539,10.8539;}
 	.st14{fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:9.6667,9.6667;}
-	.st15{font-family:'MuseoSansCyrl-500';}
+	.st15{font-family:'GilroyBold';}
 	.st16{font-size:27.1795px;}
 	.st17{fill:none;stroke:#A9B2BA;stroke-width:2;stroke-miterlimit:10;}
 	.st18{fill:none;stroke:#A9B2BA;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:11.6561,11.6561;}
@@ -80,7 +80,7 @@
 	.st29{fill:none;stroke:#A9B2BA;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:11.4883,11.4883;}
 	.st30{fill:none;stroke:#A9B2BA;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:9.5802,9.5802;}
 	.st31{fill:#FF8A18;}
-	.st32{font-family:'Gubia-Black';}
+	.st32{font-family:'GilroyBold';}
 	.st33{font-size:30.1265px;}
 </style><g
      id="g73"
@@ -178,7 +178,7 @@
          style="fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st0 st15 st16"
      id="text109"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#FF8A18"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#FF8A18"
      x="-2.8798592"
      y="22.00033">+ 1000 </text>
 <polygon
@@ -275,7 +275,7 @@
          style="fill:none;stroke:#a9b2ba;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st2 st15 st16"
      id="text147"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#aab3bb"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#aab3bb"
      x="706.10052"
      y="72.952629">+ 1000 </text>
 <polygon
@@ -372,7 +372,7 @@
          style="fill:none;stroke:#a9b2ba;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st2 st15 st16"
      id="text185"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#aab3bb"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#aab3bb"
      x="1178.0431"
      y="72.952629">+ 1000 </text>
 <polygon
@@ -476,7 +476,7 @@
          style="fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st0 st15 st16"
      id="text225"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#FF8A18"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#FF8A18"
      x="6.120841"
      y="137.42264">+ 150 </text>
 <polygon
@@ -580,7 +580,7 @@
          style="fill:none;stroke:#FF8A18;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st0 st15 st16"
      id="text265"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#FF8A18"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#FF8A18"
      x="6.9269419"
      y="260.26825">+ 100 </text>
 <polygon
@@ -677,7 +677,7 @@
          style="fill:none;stroke:#a9b2ba;stroke-width:2;stroke-miterlimit:10" /></g></g><text
      class="st2 st15 st16"
      id="text303"
-     style="font-size:27.17950058px;font-family:MuseoSansCyrl-500;fill:#A9B2BA"
+     style="font-size:27.17950058px;font-family:GilroyBold;fill:#A9B2BA"
      x="952.80542"
      y="248.95502">+ 150 </text>
 <polygon
@@ -691,7 +691,7 @@
        transform="translate(341.2654,675.8429)"
        class="st31 st32 st33"
        id="text309"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#FF8A18">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#FF8A18">R</text>
 <rect
        x="341.70001"
        y="670.79999"
@@ -712,7 +712,7 @@
        transform="translate(332.0645,791.0687)"
        class="st31 st32 st33"
        id="text317"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#FF8A18">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#FF8A18">R</text>
 <rect
        x="332.5"
        y="786.09998"
@@ -727,20 +727,13 @@
        width="5.9000001"
        height="1.6"
        id="rect321"
-       style="fill:#FF8A18" /></g><rect
-     x="1102.4053"
-     y="485.71942"
-     class="st31"
-     width="9"
-     height="3"
-     id="rect323"
-     style="fill:#FF8A18" /><g
+       style="fill:#FF8A18" /></g><g
      id="g325"
      transform="translate(-253.19476,-653.88056)"><text
        transform="translate(334.6686,914.3362)"
        class="st31 st32 st33"
        id="text327"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#FF8A18">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#FF8A18">R</text>
 <rect
        x="335.10001"
        y="909.29999"
@@ -761,7 +754,7 @@
        transform="translate(1050.3145,726.8334)"
        class="st21 st32 st33"
        id="text335"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#a9b2ba">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#a9b2ba">R</text>
 <rect
        x="1050.7"
        y="721.79999"
@@ -782,7 +775,7 @@
        transform="translate(1522.3145,727.5075)"
        class="st21 st32 st33"
        id="text343"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#a9b2ba">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#a9b2ba">R</text>
 <rect
        x="1522.7"
        y="722.5"
@@ -803,7 +796,7 @@
        transform="translate(1278.9846,902.7182)"
        class="st21 st32 st33"
        id="text351"
-       style="font-size:30.12649918px;font-family:Gubia-Black;fill:#a9b2ba">R</text>
+       style="font-size:30.12649918px;font-family:GilroyBold;fill:#a9b2ba">R</text>
 <rect
        x="1279.4"
        y="897.70001"
