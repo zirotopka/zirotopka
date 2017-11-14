@@ -2,16 +2,18 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <p class="orang-txt test">ЗАВЕРШЕНИЕ ТЕСТОВОГО ПЕРЕОДА</p>        
-                <p class="gray-text">К сожалению, Ваш тестовый период закончился. <br>Чтобы продолжить участие, необходимо оплатить программу</p>
-                <p class="orang-txt price">2500 РУБ.</p>
+                <p class="orang-txt test">ЗАВЕРШЕНИЕ ТЕСТОВОГО ПЕРИОДА</p>        
+                <p class="gray-text">К сожалению, Ваш тестовый период закончился. <br>Чтобы продолжить участие, необходимо активировать программу</p>
+                <p class="orang-txt price">
+                    2500 
+                </p>
                 <form action="{{env('APP_URL').'/privat_office/payProduct/1'}}" method="POST" class="form-horizontal">
 					<input name="user_id" type="hidden" value="{{$user->id}}">
 					{{ csrf_field() }}
 
                     <div class="form-group">
                         <div>
-                          <input type="submit" value="ОПЛАТИТЬ" class="link"/>
+                          <input type="submit" value="АКТИВИРОВАВТЬ" class="link"/>
                         </div>
                     </div>
                 </form>     

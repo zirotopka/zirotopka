@@ -444,7 +444,7 @@ class PrivatOfficeController extends Controller
 
             if ($type == 1) {
             //Програма
-                return redirect('/'.$user->slug)->with('pay_program',1);
+                return redirect('/'.$user->slug);
             } elseif ($type == 2) {
                 return redirect('/'.$user->slug);
             }
