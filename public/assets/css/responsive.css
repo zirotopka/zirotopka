@@ -1490,15 +1490,35 @@ and (max-width : 1024px){
         height: 320px;
     }
     .bons-about-screen{
-        height: 200px;
+        height: auto;
     }
     .bons-pay-screen{
-        height: 320px;
+        height: auto;
+    }
+    .pay_left{
+        float: left;
+        width: 50%;
+    }
+    .pay_right{
+        float: right;
+        width: 50%;
+    }
+    .smartphone{
+        width: 20%;
+        float: none;
+        margin: 30px 73% 0;
+    }
+    .bons-screen .pig{
+        display: block !important;
+    }
+    .mfc{
+        width: 80%;
     }
     .mission{
         width: 25%;
     }
-    .reg_f_s{
+    .reg_f_s,
+    .ofrta{
         width: 25%!important;
     }
     footer .prgrm_list,
