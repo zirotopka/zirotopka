@@ -1471,7 +1471,7 @@ footer .prgrm_list ul li a:hover,
     }
 }
 
-@media only screen and (width : 768px) and (height : 1024px){
+@media only screen and (device-width : 768px) and (device-height : 1024px) and (orientation: portrait){
     .bons-screen button{
         margin: 30px 20px 0 0!important;
         display: inline-block;
