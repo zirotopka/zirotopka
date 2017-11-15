@@ -153,7 +153,6 @@ footer{
 .how-screen button{
     padding: 18px 24px 16px;
 }
-
 button:hover,
 input[type="submit"]:hover{
     border-radius: 2em;
