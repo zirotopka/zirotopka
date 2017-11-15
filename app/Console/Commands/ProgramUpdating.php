@@ -49,10 +49,9 @@ class ProgramUpdating extends Command
      */
     public function handle()
     {   
-<<<<<<< HEAD
-=======
+
         \Log::info('Обновление программ запущенно');
->>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
+
         $users_query = User::select([
             'id',
             'email',
@@ -61,33 +60,18 @@ class ProgramUpdating extends Command
             'current_day',
             'current_programm_id',
             'status',
-<<<<<<< HEAD
-        ])->where('program_is_start','=',1)->where('status','=',1);
-=======
             'first_name',
             'surname',
             'slug',
             'program_is_end',
         ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('program_is_end','=',0);
->>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
                 $userTimezone = User::getTimezone($user);
 
                 $userNow = Carbon::now($userTimezone);
-<<<<<<< HEAD
-                $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone);
 
-                $lastDay = $last_updated_at->day;
-                $nowDay = $userNow->day;
-
-                $userHour = $userNow->hour;
-                
-                if ($userHour >= 22) {  
-                    if ($nowDay > $lastDay) {
-                        $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
-=======
                 $userNowStartDay = clone $userNow;
                 $userNowStartDay->startOfDay();
                 $last_updated_at = Carbon::parse($user->last_updated_at,$userTimezone)->startOfDay();
@@ -98,7 +82,6 @@ class ProgramUpdating extends Command
                     if ($difference > 0) {           
                         //Разница в 1 день
                         $userHour = $userNow->hour;
->>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
 
                         if ($userHour >= 22) {
 
@@ -258,7 +241,6 @@ class ProgramUpdating extends Command
                         $this->send_mail($user, $subject, $text);     
                     }
                 }
-<<<<<<< HEAD
             }
         });
 
@@ -305,8 +287,6 @@ class ProgramUpdating extends Command
                         \Log::info('Пользователь №'.$user->id.' начал программу!');
                     }
                 }
-=======
->>>>>>> cadf8cebed8e49931709831d5e28ae7a84696488
             }
         });
     }
