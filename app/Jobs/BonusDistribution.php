@@ -67,44 +67,44 @@ class BonusDistribution implements ShouldQueue
             $parentsSecondLine = $parentFirstLine->parents;
 
             if (count($parentsSecondLine) > 0) {
-                $parentSecondLine = $parentsSecondLine->first();
-
-                if ($parentFirstLine->status == 0) {
-                    \Log::info('BonusDistribution: Родитель с id '.$parentSecondLine->id.' заблокирован');
-
-                    return 1;
-                }
-
-                //Зачисление рейтинга
-                $parentsSecondLine->second_rating = $parentsSecondLine->second_rating + 3;
-                $parentsSecondLine->save();
-
-                $sum = 150;
-
-                $child_name = $parentFirstLine->first_name.' '.$parentFirstLine->surname;
-
-                $this->addAccrual($parentSecondLine->id,$child_name,$sum);
-
-                $parentsThirtyLine = $parentSecondLine->parents;
-
-                if (count($parentsThirtyLine) > 0) {
-                    $parentThirtyLine = $parentsThirtyLine->first();
-
+                foreach ($parentsSecondLine as $parentSecondLine) {
                     if ($parentFirstLine->status == 0) {
-                        \Log::info('BonusDistribution: Родитель с id '.$parentThirtyLine->id.' заблокирован');
+                        \Log::info('BonusDistribution: Родитель с id '.$parentSecondLine->id.' заблокирован');
 
-                        return 1;
+                        continue;
                     }
 
                     //Зачисление рейтинга
-                    $parentThirtyLine->second_rating = $parentThirtyLine->second_rating + 1;
-                    $parentThirtyLine->save();
+                    $parentSecondLine->second_rating = $parentSecondLine->second_rating + 3;
+                    $parentSecondLine->save();
 
-                    $sum = 100;
+                    $sum = 150;
 
-                    $child_name = $parentSecondLine->first_name.' '.$parentSecondLine->surname;
+                    $child_name = $parentFirstLine->first_name.' '.$parentFirstLine->surname;
 
-                    $this->addAccrual($parentThirtyLine->id,$child_name,$sum);
+                    $this->addAccrual($parentSecondLine->id,$child_name,$sum);
+
+                    $parentsThirtyLine = $parentSecondLine->parents;
+
+                    if (count($parentsThirtyLine) > 0) {
+                        foreach ($parentsThirtyLine as $parentThirtyLine) {
+                            if ($parentFirstLine->status == 0) {
+                                \Log::info('BonusDistribution: Родитель с id '.$parentThirtyLine->id.' заблокирован');
+
+                                return 1;
+                            }
+
+                            //Зачисление рейтинга
+                            $parentThirtyLine->second_rating = $parentThirtyLine->second_rating + 1;
+                            $parentThirtyLine->save();
+
+                            $sum = 100;
+
+                            $child_name = $parentSecondLine->first_name.' '.$parentSecondLine->surname;
+
+                            $this->addAccrual($parentThirtyLine->id,$child_name,$sum);
+                        }
+                    }
                 }
             }
         }
