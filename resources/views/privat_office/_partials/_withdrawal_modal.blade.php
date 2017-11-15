@@ -18,7 +18,7 @@
 			<form action="{{env('APP_URL').'/privat_office/withdrawalFunds/'.$user->id}}" method="POST" class="form-horizontal">
 				<input name="user_id" type="hidden" value="{{$user->id}}">
 				{{ csrf_field() }}
-				<input name="withdrawal_sum" type="hidden" value="0" id="sumBack">
+				<input name="withdrawal_sum" type="hidden" value="0" class="sumBack">
 
           <input type="submit" value="ВЫВЕСТИ" class="send">
       </form>
