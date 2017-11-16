@@ -1597,6 +1597,9 @@ footer .prgrm_list ul li a:hover,
 @media only screen
 and (min-width : 753px)
 and (max-width : 1024px){
+    .rg_check_in{
+        margin-bottom: 0;
+    }
     .black-arrow{
         width: 10em;
         margin: 0 10px 0 0;
@@ -1613,7 +1616,7 @@ and (max-width : 1024px){
         margin: 30px 0 0 0;
     }
     .carrows{
-        width: 77%;
+        width: 80%;
         margin-top: 15px;
     }
     .how-images{
@@ -1666,6 +1669,7 @@ and (max-width : 1024px){
     }
     .bons-screen h1{
         margin: 60px 0 0 0;
+        width: 65%;
     }
     .bons-screen .pig{
         display: block !important;
