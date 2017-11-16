@@ -482,6 +482,10 @@ footer .prgrm_list ul li a:hover,
     top: 15px;
 }
 
+.birthday,
+.dss{
+    position: relative;
+}
 .birthday:after,
 .dss:after{
     top: 5px;
