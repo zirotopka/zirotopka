@@ -283,6 +283,12 @@ button:hover
     font-size: 16px;
 }
 
+.prof_ico{
+    background-size: contain;;
+    width: 22px;
+    height: 22px;
+}
+
 .sex label:after{
     width: 1em!important;
 }
