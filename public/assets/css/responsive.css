@@ -482,6 +482,18 @@ footer .prgrm_list ul li a:hover,
     top: 15px;
 }
 
+#video-modal button.close{
+    right: 15px;
+    top: 15px;
+}
+#video-modal button.close:hover{
+    border-radius: 0;
+}
+#video-modal .vjs-remaining-time-display{
+    top: 7px;
+    position: relative;
+}
+
 .birthday,
 .dss{
     position: relative;
