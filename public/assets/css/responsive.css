@@ -1616,7 +1616,7 @@ and (max-width : 1024px){
         margin: 30px 0 0 0;
     }
     .carrows{
-        width: 80%;
+        width: 88%;
         margin-top: 15px;
     }
     .how-images{
@@ -1634,7 +1634,7 @@ and (max-width : 1024px){
         display: inline-block;
     }
     .bons-screen .pig{
-        width: 50%;
+        width: 45%;
 
         right: 0;
     }
@@ -1669,7 +1669,6 @@ and (max-width : 1024px){
     }
     .bons-screen h1{
         margin: 60px 0 0 0;
-        width: 65%;
     }
     .bons-screen .pig{
         display: block !important;
