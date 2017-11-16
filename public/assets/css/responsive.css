@@ -527,6 +527,9 @@ footer .prgrm_list ul li a:hover,
     top: 15px;
 }
 
+.score{
+    width: 25%;
+}
 #video-modal button.close{
     right: 15px;
     top: 15px;
