@@ -108,7 +108,7 @@
                                 <a href="/" class="min-logo"></a>
                             </div>
                             <!-- <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs"> -->
-                            <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs" data-toggle="modal" data-target="#immunity-modal">
+                            <div class="immunitet col-lg-3 col-md-2 hidden-sm hidden-xs" data-toggle="modal" data-target="#immunity-modal">
                                 <span class="nav-text iimtxt" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
                                <!--  <div class="hearts col-lg-6 col-md-6">  -->
                                     <?php 
@@ -130,7 +130,7 @@
                                     @endif
                                 <!-- </div> -->
                             </div>
-                            <div class="score nav-text col-lg-2 col-md-2 hidden-xs hidden-sm" > <a href="{{'/'.$user->slug}}/balance" class="wals">
+                            <div class="score nav-text col-lg-2 col-md-3 hidden-xs hidden-sm" > <a href="{{'/'.$user->slug}}/balance" class="wals">
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;</p> 
                                 </a>                            
                             </div>
