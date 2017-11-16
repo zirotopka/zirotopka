@@ -2,6 +2,7 @@
   <div class="modal-dialog freezing-widnow" role="document">
     <div class="modal-content">
       <div class="modal-body freez-form">
+        <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="/ico/close_modal.png" alt=""></span></button>
         <p class="R_lit">R</p>
         <p class="c-orange light_text">ТВОЙ ЛИЧНЫЙ КАБИНЕТ ЗАМОРОЖЕН :(</p>
         <p class="light_text">Вероятнее всего мы не получили отчёт, либо он был выполнен неверно. <br></p>
