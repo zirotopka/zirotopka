@@ -526,10 +526,6 @@ footer .prgrm_list ul li a:hover,
     right: 15px;
     top: 15px;
 }
-
-.score{
-    width: 25%;
-}
 #video-modal button.close{
     right: 15px;
     top: 15px;
@@ -1610,6 +1606,9 @@ and (max-width : 1024px){
     }
     .bons-pay-screen{
         height: auto;
+    }
+    .score{
+        width: 25%;
     }
     .pay_left{
         float: left;
