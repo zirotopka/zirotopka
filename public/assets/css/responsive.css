@@ -550,6 +550,16 @@ footer .prgrm_list ul li a:hover,
     right: 0;
 }
 
+.carrows{
+    width: 91%;
+    margin-top: 15px;
+}
+.how-images{
+    padding: 0;
+    margin: 30px 0 0 0;
+    width: 100%;
+}
+
 @media only screen and (max-width: 991px) and (min-width: 768px) and (orientation: portrait){
     .birthday:after,
     .dss:after{
@@ -1612,6 +1622,7 @@ and (min-width : 753px)
 and (max-width : 1024px){
     .bons-how-screen{
         height: auto;
+        padding: 0 0 0 30px;
     }
     .bons-screen button{
         margin: 30px 20px 0 0!important;
