@@ -550,15 +550,6 @@ footer .prgrm_list ul li a:hover,
     right: 0;
 }
 
-.carrows{
-    width: 91%;
-    margin-top: 15px;
-}
-.how-images{
-    padding: 0;
-    margin: 30px 0 0 0;
-    width: 100%;
-}
 
 @media only screen and (max-width: 991px) and (min-width: 768px) and (orientation: portrait){
     .birthday:after,
@@ -610,20 +601,6 @@ footer .prgrm_list ul li a:hover,
         margin: 0;
     }
 }
-
-.black-arrow{
-    width: 10em;
-    margin: 0 10px 0 0;
-    height: 2.5vw;
-}
-.arrw p{
-    margin: 0;
-}
-.holp{
-    position: relative;
-    top: -15px;
-}
-
 
 .dropdown-menu-right{
     z-index: 100;
@@ -1620,9 +1597,34 @@ footer .prgrm_list ul li a:hover,
 @media only screen
 and (min-width : 753px)
 and (max-width : 1024px){
+    .black-arrow{
+        width: 10em;
+        margin: 0 10px 0 0;
+        height: 2.5vw;
+    }
+    .arrw p{
+        margin: 0;
+    }
+    .holp{
+        position: relative;
+        top: -15px;
+    }
+    .how-content{
+        margin: 30px 0 0 0;
+    }
+    .carrows{
+        width: 77%;
+        margin-top: 15px;
+    }
+    .how-images{
+        padding: 0;
+        margin: 30px 0 0 0;
+        width: 100%;
+    }
+
     .bons-how-screen{
         height: auto;
-        padding: 0 0 0 30px;
+        padding: 0 30px;
     }
     .bons-screen button{
         margin: 30px 20px 0 0!important;
