@@ -601,6 +601,20 @@ footer .prgrm_list ul li a:hover,
     }
 }
 
+.black-arrow{
+    width: 10em;
+    margin: 0 10px 0 0;
+    height: 2.5vw;
+}
+.arrw p{
+    margin: 0;
+}
+.holp{
+    position: relative;
+    top: -15px;
+}
+
+
 .dropdown-menu-right{
     z-index: 100;
 }
