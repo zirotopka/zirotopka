@@ -288,20 +288,23 @@ button:hover
 .wallet_ico,
 .help_ico{
     background-size: contain;;
-    width: 22px;
-    height: 22px;
+    height: 16px;
+    background-repeat: no-repeat;
 }
 .prof_ico{
-
+    width: 16px!important;
 }
 .prof_ico{
-
+    width: 15px!important;
 }
 .wallet_ico{
-
+    width: 16px!important;
 }
 .help_ico{
-
+    width: 16px!important;
+}
+.prof-disp{
+    font-size: 12px!important;
 }
 
 .sex label:after{
