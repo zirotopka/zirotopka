@@ -476,7 +476,10 @@ footer .prgrm_list ul li a:hover,
     top: 5px
 }
 
-
+.swiper-button-prev,
+.swiper-button-next{
+    background-position: center!important;
+}
 
 
 
