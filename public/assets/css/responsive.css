@@ -600,6 +600,12 @@ footer .prgrm_list ul li a:hover,
         margin: 0;
     }
 }
+
+.wals{
+    padding: 17px 0 0 0!important;
+    text-align: center;
+}
+
 @media only screen and (min-width : 1000px) and (max-width : 1112px){
     .dropdown{
         width: 24.99% !important;
