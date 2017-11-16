@@ -279,7 +279,7 @@ button:hover
 }
 
 .sex label:after{
-    width: 1em;
+    width: 1em!important;
 }
 
 .block-social-links {
