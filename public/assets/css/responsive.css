@@ -256,9 +256,6 @@ button:hover
 .bonus .reg_btn,
 .bonus .reg_btn:hover{
     margin-right: 30px;
-    width: auto;
-    height: auto;
-    padding: 12px 24px 10px;
 }
 .connect_btn:hover{
     width: auto;
@@ -278,7 +275,11 @@ button:hover
 }
 .send-progr-btn,
 .send-progr-btn:hover{
-    margin-top: 5px;
+    margin: 5px 0 0 2.3em;
+    width: auto;
+    height: auto;
+    padding: 12px 24px 10px;
+    font-weight: 100;
 }
 
 .sex label:after{
