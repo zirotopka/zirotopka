@@ -227,7 +227,7 @@ class PrivatOfficeController extends Controller
                                         ->with('videos')
                                         ->first();
             if ( !empty($exercive) && count( $exercive->videos ) > 0 ){
-                return ['response' => 200, 'data' => $exercive->videos->first()->file_url ];
+                return ['response' => 200, 'data' => env('APP_URL').$exercive->videos->first()->file_url ];
             } else {
                 return ['response' => 500, 'data' => 'Не найден exercive']; 
             }

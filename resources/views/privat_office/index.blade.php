@@ -316,8 +316,6 @@
 							<video id="training-video" class="video-js vjs-default-skin"
 							  controls preload="auto"
 							  data-setup='{"responsive": true,"example_option":true}'>
-							 <source src="" type="video/ogg">
-							</video>
 						</div>
 			      </div>
 			    </div>

@@ -19,7 +19,7 @@ $( document ).ready(function() {
       data: {exercive_id: exercive_id},
       success: function (data) {
         if (data['response'] == 200) {
-          
+
           var video = videojs("training-video");
           video.src(data['data']);
           video_modal_form.modal('show');
