@@ -107,7 +107,8 @@
                             </li>
                         </ul>
                     </div>
-                    <img class="carrows hidden-xs" src="/ico/bonuss.svg">
+                    <embed class="carrows hidden-xs" src="/ico/bonuss.svg">
+
                 </div>
                 <hr>
                 <div class="bons-about-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_3">
