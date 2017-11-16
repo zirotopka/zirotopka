@@ -601,6 +601,9 @@ footer .prgrm_list ul li a:hover,
     }
 }
 
+.dropdown-menu-right{
+    z-index: 100;
+}
 .wals{
     padding: 17px 0 0 0!important;
     text-align: center;
