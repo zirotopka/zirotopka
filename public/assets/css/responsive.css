@@ -467,6 +467,11 @@ footer .prgrm_list ul li a:hover,
     width: 100%;
 }
 
+/* Модальное окно ввода нового пароля */
+.get_password-id .close{
+    right: 15px;
+    top: 5px
+}
 
 
 
