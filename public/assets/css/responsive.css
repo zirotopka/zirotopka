@@ -476,6 +476,12 @@ footer .prgrm_list ul li a:hover,
     top: 5px
 }
 
+/* Модальное окно замороженного кабинета */
+.freez-form .close{
+    right: 15px;
+    top: 15px;
+}
+
 .swiper-button-prev,
 .swiper-button-next{
     background-position: center!important;
