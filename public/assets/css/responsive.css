@@ -1598,7 +1598,7 @@ footer .prgrm_list ul li a:hover,
 and (min-width : 753px)
 and (max-width : 1024px){
     .rg_check_in{
-        margin-bottom: 0;
+        margin-bottom: 0!important;
     }
     .black-arrow{
         width: 10em;
