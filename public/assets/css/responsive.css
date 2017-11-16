@@ -283,10 +283,25 @@ button:hover
     font-size: 16px;
 }
 
-.prof_ico{
+.prgr_ico,
+.prof_ico,
+.wallet_ico,
+.help_ico{
     background-size: contain;;
     width: 22px;
     height: 22px;
+}
+.prof_ico{
+
+}
+.prof_ico{
+
+}
+.wallet_ico{
+
+}
+.help_ico{
+
 }
 
 .sex label:after{
