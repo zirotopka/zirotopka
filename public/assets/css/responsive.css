@@ -482,6 +482,23 @@ footer .prgrm_list ul li a:hover,
     top: 15px;
 }
 
+.birthday:after,
+.dss:after{
+    top: 5px;
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) and (orientation: portrait){
+    .birthday:after,
+    .dss:after{
+        width: 25px!important;
+        margin: 0;
+        top: 0;
+        right: 0;
+        height: 25px!important;
+    }
+}
+
+
 .swiper-button-prev,
 .swiper-button-next{
     background-position: center!important;
