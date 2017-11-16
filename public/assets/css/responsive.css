@@ -80,6 +80,9 @@ footer{
     z-index: 100;
 }
 
+.balance_btn{
+    border-radius: 2em;
+}
 .prof-disp{
     vertical-align: middle;
     margin: 0 !important;
