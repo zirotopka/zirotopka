@@ -283,6 +283,11 @@ button:hover
     font-size: 16px;
 }
 
+#days,
+#months,
+#years{
+    top: 15px;
+}
 .prgr_ico,
 .prof_ico,
 .wallet_ico,
