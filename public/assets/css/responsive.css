@@ -604,6 +604,9 @@ footer .prgrm_list ul li a:hover,
 .dropdown-menu-right{
     z-index: 100;
 }
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+    z-index: 1;
+}
 .wals{
     padding: 17px 0 0 0!important;
     text-align: center;
