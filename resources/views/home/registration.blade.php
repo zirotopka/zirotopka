@@ -21,7 +21,7 @@
               </div>
               <div>
                 @if (!empty($referral->user_ava_url))
-                    <img src="{{'/image/logos/'.$user->user_ava_url}}" alt="" class="img-circle logo-img">
+                    <img src="{{'/image/logos/'.$referral->user_ava_url}}" alt="" class="img-circle logo-img">
                 @else
                     <img src="/image/logos/default.jpg" alt="" class="img-circle logo-img">
                 @endif
