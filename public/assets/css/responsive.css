@@ -391,7 +391,11 @@ footer .prgrm_list ul li a:hover,
     text-decoration: underline!important;
     color: white
 }
-
+.bons-screen h1,
+.bons-screen p{
+    position: relative;
+    z-index: 1;
+}
 .start{
     height: 35.1vw;
 }
