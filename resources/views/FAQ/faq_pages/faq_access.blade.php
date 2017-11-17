@@ -1,4 +1,4 @@
-<div class="access_list">
+<div class="access_list block-list-questions">
 	<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 		<div class="title_block">
 			<img src="/ico/faq_key.png" alt="" class="faq_ico">
