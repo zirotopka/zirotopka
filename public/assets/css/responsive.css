@@ -631,7 +631,8 @@ footer .prgrm_list ul li a:hover,
 
     .table-responsive th,
     .table-responsive td{
-
+        width: 10% !important;
+        white-space: normal;
     }
 }
 @media only screen and (max-width : 768px) {
