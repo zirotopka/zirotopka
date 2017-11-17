@@ -1,5 +1,5 @@
 <div class="programm_list hidden">
-	<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<div class="title_block">
 			<img src="/ico/faq_bottle.png" alt="" class="faq_ico">					
 			<p class="faq_title">ВОПРОСЫ О ПРОГРАММАХ ТРЕНИРОВОК</p>
@@ -33,7 +33,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="asn_faq_block col-lg-7 col-md-7 col-sm-12 col-xs-12">
+	<div class="asn_faq_block col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<div class="answ1 hidden answ">
             <p>Вне зависимости от выбранной программы - длительность каждой составляет 28 дней.</p>
 		</div>
