@@ -601,7 +601,7 @@ class PrivatOfficeController extends Controller
 
         if ($user->current_day == 28 && $user->program_is_end == 1) {
             $user->current_day = null;
-            $user->status = 0;
+            $user->status = 1;
             $user->is_programm_pay = 0;
             $user->program_is_start = 0;
             $user->start_training_day = null;

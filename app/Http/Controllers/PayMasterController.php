@@ -36,9 +36,6 @@ class PayMasterController extends Controller
         $balance->sum = $balance->sum + $LMI_PAID_AMOUNT;
         $balance->save();
 
-        $user->status = 1;
-        $user->save();
-
         $accrual = new Accrual;
         $accrual->sum = $LMI_PAID_AMOUNT;
         $accrual->user_id = $userID;
