@@ -65,63 +65,63 @@ $('document').ready(function(){
 
 	$('body').on('click',"#oprg .qww1",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('#oprg').attr('style','display:block;');
+		$('.programm_list').attr('style','display:block;');
 		$('.answ1').removeClass('hidden');
 		$('.qw1').focus();
 	});
 
 	$('body').on('click',"#oprg .qww2",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('#oprg').attr('style','display:block;');
+		$('.programm_list').attr('style','display:block;');
 		$('.answ2').removeClass('hidden');
 		$('.qw2').focus();
 	});
 
 	$('body').on('click',"#oprg .qww3",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('#oprg').attr('style','display:block;');
+		$('.programm_list').attr('style','display:block;');
 		$('.answ3').removeClass('hidden');
 		$('.qw3').focus();
 	});
 
 	$('body').on('click',"#oprv .qww1",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('#oprv').attr('style','display:block;');
+		$('.ruls_list').attr('style','display:block;');
 		$('.answ1').removeClass('hidden');
 		$('.qw1').focus();
 	});
 
 	$('body').on('click',"#oprv .qww2",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('#oprv').attr('style','display:block;');
+		$('.ruls_list').attr('style','display:block;');
 		$('.answ2').removeClass('hidden');
 		$('.qw2').focus();
 	});
 
 	$('body').on('click',"#oprv .qww3",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('#oprv').attr('style','display:block;');
+		$('.ruls_list').attr('style','display:block;');
 		$('.answ3').removeClass('hidden');
 		$('.qw3').focus();
 	});
 
 	$('body').on('click',"#ovsm .qww1",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('#ovsm').attr('style','display:block;');
+		$('.else_list').attr('style','display:block;');
 		$('.answ1').removeClass('hidden');
 		$('.qw1').focus();
 	});
 
 	$('body').on('click',"#ovsm .qww2",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('#ovsm').attr('style','display:block;');
+		$('.else_list').attr('style','display:block;');
 		$('.answ2').removeClass('hidden');
 		$('.qw2').focus();
 	});
 
 	$('body').on('click',"#ovsm .qww3",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('#ovsm').attr('style','display:block;');
+		$('.else_list').attr('style','display:block;');
 		$('.answ3').removeClass('hidden');
 		$('.qw3').focus();
 	});
