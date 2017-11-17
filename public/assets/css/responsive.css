@@ -510,6 +510,21 @@ footer .prgrm_list ul li a:hover,
     margin: 30px 0 0;
 }
 
+.messages-new .little_menu .send,
+.messages-type .little_menu .send{
+    border-radius: 0!important;
+}
+.messages-new .little_menu .send:hover,
+.messages-type .little_menu .send:hover{
+    border-radius: 0!important;
+    background-color: #ff8d07!important;
+}
+.messages-new .little_menu .send.orange:hover,
+.messages-type .little_menu .send.orange:hover{
+    border-radius: 0!important;
+    background-color: #ff8a18!important;
+}
+
 /* Модальное окно вывода средств на странице Счёт */
 .slug-balance .add_money{
     width: 100%;
