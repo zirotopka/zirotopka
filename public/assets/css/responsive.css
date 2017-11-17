@@ -626,10 +626,10 @@ footer .prgrm_list ul li a:hover,
 @media only screen and (min-device-width : 320px) and (max-device-width : 667px){
     .cdr-btn
     .cdr-btn:hover{
-        border-radius: 0;
-        margin: 0;
-        padding: 15px;
-        z-index: 100;
+        border-radius: 0!important;
+        margin: 0!important;
+        padding: 15px!important;
+        z-index: 100!important;
 
     }
     .dropdown{
