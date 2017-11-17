@@ -42,21 +42,21 @@ $('document').ready(function(){
 
 /* -----------------------Передалать нужно ---------------------*/
 
-	$('body').on('click',".access_block  .qww1",function(){
+	$('body').on('click',".access_block .qww1",function(){
 		$('.FAQ').attr('style','display:none;');
 		$('.access_list').attr('style','display:block;');
 		$('.answ1').removeClass('hidden');
 		$('.qw1').focus();
 	});
 
-	$('body').on('click',".access_block  .qww2",function(){
+	$('body').on('click',".access_block .qww2",function(){
 		$('.FAQ').attr('style','display:none;');
 		$('.access_list').attr('style','display:block;');
 		$('.answ2').removeClass('hidden');
 		$('.qw2').focus();
 	});
 
-	$('body').on('click',".access_block  .qww3",function(){
+	$('body').on('click',".access_block .qww3",function(){
 		$('.FAQ').attr('style','display:none;');
 		$('.access_list').attr('style','display:block;');
 		$('.answ3').removeClass('hidden');
@@ -65,63 +65,63 @@ $('document').ready(function(){
 
 	$('body').on('click',"#oprg .qww1",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('.access_list').attr('style','display:block;');
+		$('#oprg').attr('style','display:block;');
 		$('.answ1').removeClass('hidden');
 		$('.qw1').focus();
 	});
 
 	$('body').on('click',"#oprg .qww2",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('.access_list').attr('style','display:block;');
+		$('#oprg').attr('style','display:block;');
 		$('.answ2').removeClass('hidden');
 		$('.qw2').focus();
 	});
 
-	$('body').on('click',"#oprg  .qww3",function(){
+	$('body').on('click',"#oprg .qww3",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('.access_list').attr('style','display:block;');
+		$('#oprg').attr('style','display:block;');
 		$('.answ3').removeClass('hidden');
 		$('.qw3').focus();
 	});
 
-	$('body').on('click',"#oprv  .qww1",function(){
+	$('body').on('click',"#oprv .qww1",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('.access_list').attr('style','display:block;');
+		$('#oprv').attr('style','display:block;');
 		$('.answ1').removeClass('hidden');
 		$('.qw1').focus();
 	});
 
-	$('body').on('click',"#oprv  .qww2",function(){
+	$('body').on('click',"#oprv .qww2",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('.access_list').attr('style','display:block;');
+		$('#oprv').attr('style','display:block;');
 		$('.answ2').removeClass('hidden');
 		$('.qw2').focus();
 	});
 
-	$('body').on('click',"#oprv  .qww3",function(){
+	$('body').on('click',"#oprv .qww3",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('.access_list').attr('style','display:block;');
+		$('#oprv').attr('style','display:block;');
 		$('.answ3').removeClass('hidden');
 		$('.qw3').focus();
 	});
 
-	$('body').on('click',"#ovsm  .qww1",function(){
+	$('body').on('click',"#ovsm .qww1",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('.access_list').attr('style','display:block;');
+		$('#ovsm').attr('style','display:block;');
 		$('.answ1').removeClass('hidden');
 		$('.qw1').focus();
 	});
 
-	$('body').on('click',"#ovsm  .qww2",function(){
+	$('body').on('click',"#ovsm .qww2",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('.access_list').attr('style','display:block;');
+		$('#ovsm').attr('style','display:block;');
 		$('.answ2').removeClass('hidden');
 		$('.qw2').focus();
 	});
 
-	$('body').on('click',"#ovsm  .qww3",function(){
+	$('body').on('click',"#ovsm .qww3",function(){
 		$('.FAQ').attr('style','display:none;');
-		$('.access_list').attr('style','display:block;');
+		$('#ovsm').attr('style','display:block;');
 		$('.answ3').removeClass('hidden');
 		$('.qw3').focus();
 	});
