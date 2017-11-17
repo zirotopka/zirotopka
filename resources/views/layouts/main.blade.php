@@ -114,6 +114,11 @@
                                     <?php 
                                         $empty_hearts = 5;
                                         $full_hearts = $user->immunity_count;
+
+                                        if ($full_hearts > 5) {
+                                            $full_hearts = 5;
+                                        }
+
                                         $empty_hearts -= $full_hearts;
                                     ?>
                                     
