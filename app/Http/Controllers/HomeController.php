@@ -21,7 +21,7 @@ class HomeController extends Controller
 
         if (session()->has('ref')) {
             $reverralSlug = $request->session()->get('ref');
-            $referral = User::select('id','first_name','surname','slug')->where('slug','=',$reverralSlug)->first();
+            $referral = User::select('id','first_name','surname','slug','user_ava_url')->where('slug','=',$reverralSlug)->first();
         }
 
        	$data = [
@@ -40,7 +40,7 @@ class HomeController extends Controller
         $referral = null;
 
         if ($request->has('referral')) {
-            $referral = User::select('id','first_name','surname','slug')->where('slug','=',$request->get('referral'))->first();
+            $referral = User::select('id','first_name','surname','slug','user_ava_url')->where('slug','=',$request->get('referral'))->first();
         }
 
         $data = [
