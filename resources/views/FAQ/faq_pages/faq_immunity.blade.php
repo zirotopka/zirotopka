@@ -1,5 +1,5 @@
 <div class="ruls_list hidden">
-	<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<div class="title_block">
 			<img src="/ico/coin.png" alt="" class="faq_ico">
 			<p class="faq_title">ПРАВИЛА УЧАСТИЯ В ПРОЕКТЕ</p>
@@ -36,7 +36,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="asn_faq_block col-lg-7 col-md-7 col-sm-12 col-xs-12">
+	<div class="asn_faq_block col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<div class="answ1 hidden answ">
 			<p>Чтобы принять участие в проекте необходимо выбрать подходящую программу тренировок и пройти регистрацию в системе, получив доступ в личный кабинет участника. Для участия в проекте достаточно иметь мобильный телефон с доступом к интернет, возможностью записи видео, а также установленным приложением (трекер) для фиксирования беговых тренировок (Runkeeper, Runtastic, Endomondo и прочие).</p>
 		</div>

@@ -1,5 +1,5 @@
 <div class="access_list block-list-questions">
-	<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<div class="title_block">
 			<img src="/ico/faq_key.png" alt="" class="faq_ico">
 			<p class="faq_title">ДОСТУП К ЛИЧНОМУ КАБИНЕТУ</p>
@@ -24,7 +24,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="asn_faq_block col-lg-7 col-md-7 col-sm-12 col-xs-12">
+	<div class="asn_faq_block col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<div class="answ1 hidden ">
 			<p>REFORMATOR.ONE - он-лайн платформа для выгодных занятий спортом в любое время из любой точки планеты!</p>
 			<ul>
