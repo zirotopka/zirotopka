@@ -257,6 +257,7 @@ class ProgramUpdating extends Command
                 $userTimezone = User::getTimezone($user);
 
                 $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
+                $start_training_day->hour = 22;
                 $start_timestamp = $start_training_day->timestamp;
 
                 $userNow = Carbon::now($userTimezone);
