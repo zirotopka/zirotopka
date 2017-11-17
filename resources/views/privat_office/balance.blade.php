@@ -42,6 +42,7 @@
 					</tr>
 					</thead>
 					<tbody>
+					<!--
 					<tr>
 						<td class="hidden-xs"></td>
 						<td class="hidden-xs"></td>
@@ -50,6 +51,7 @@
 						<td></td>
 						<td></td>
 					</tr>
+					!-->
 					@forelse ($accruals as $accrual)
                         <?php $created_at = DateTime::createFromFormat('Y-m-d H:i:s', $accrual->created_at); ?>
 						<tr>
@@ -58,7 +60,7 @@
 							<td class="hidden-xs tb_tm">{{$created_at->format('H:i:s')}}</td>
 							<td class="tp_trz">{{!empty($accrual->type) ? $accrual->type->name : ''}}</td>
 							<td class="tb_znc">{{$accrual->comment}}</td>
-							<td class="hidden-xs tb_tm">{{!empty($accrual->accruals_freezing) ? 'В обработке' : 'Обработан'}}</td>
+							<td class="tb_tm">{{!empty($accrual->accruals_freezing) ? 'В обработке' : 'Обработан'}}</td>
 							<td class="tb_sm">{{number_format($accrual->sum,0,',',' ')}}</td>
 						</tr>
 					@empty
