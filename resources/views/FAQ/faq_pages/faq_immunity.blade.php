@@ -6,29 +6,29 @@
 		</div>
 		<div class="questions_block">
 			<ul>
-				<li>
-					<a href="#" class="item-question" data-type="1">Как принять участие в проекте и что для этого нужно?</a>
+				<li class="item-question" data-type="1">
+					<a href="#">Как принять участие в проекте и что для этого нужно?</a>
 				</li>
-				<li>
-					<a href="#" class="item-question" data-type="2">Что такое личный кабинет участника?</a>
+				<li class="item-question" data-type="2">
+					<a href="#">Что такое личный кабинет участника?</a>
 				</li>
-				<li>
-					<a href="#" class="item-question" data-type="3">Что нужно делать, чтоб остаться в проекте?</a>
+				<li class="item-question" data-type="3">
+					<a href="#">Что нужно делать, чтоб остаться в проекте?</a>
 				</li>
-				<li>
-					<a href="#" class="item-question" data-type="4">Что такое обязательные и необязательные дни тренировок?</a>
+				<li class="item-question" data-type="4">
+					<a href="#">Что такое обязательные и необязательные дни тренировок?</a>
 				</li>
-				<li>
-					<a href="#" class="item-question" data-type="5">Что такое иммунитет в проекте?</a>
+				<li class="item-question" data-type="5">
+					<a href="#">Что такое иммунитет в проекте?</a>
 				</li>
-				<li>
-					<a href="#" class="item-question" data-type="6">Для чего необходимо оставаться в проекте?</a>
+				<li class="item-question" data-type="6">
+					<a href="#">Для чего необходимо оставаться в проекте?</a>
 				</li>
-				<li>
-					<a href="#" class="item-question" data-type="7">В каких случаях личныйй кабинет участника может быть заблокирован?</a>
+				<li class="item-question" data-type="7">
+					<a href="#">В каких случаях личныйй кабинет участника может быть заблокирован?</a>
 				</li>
-				<li>
-					<a href="#" class="item-question"data-type="8">Сколько обязательных дней можно пропустить?</a>
+				<li class="item-question" data-type="8">
+					<a href="#">Сколько обязательных дней можно пропустить?</a>
 				</li>
 				<li>
 					<a href="#" class="faq_back">Назад</a>
