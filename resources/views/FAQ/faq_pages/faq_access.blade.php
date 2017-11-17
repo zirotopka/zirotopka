@@ -1,7 +1,7 @@
 <div class="access_list">
 	<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 		<div class="title_block">
-			<img src="/ico/faq_key.png" alt="" class="faq_ico">					
+			<img src="/ico/faq_key.png" alt="" class="faq_ico">
 			<p class="faq_title">ДОСТУП К ЛИЧНОМУ КАБИНЕТУ</p>
 		</div>
 		<div class="questions_block">
@@ -35,7 +35,7 @@
 				<li>-ежедневная обратная связь от тренеров</li>
 				<li>-денежная мотивация через бонусную систему платформы </li>
 				<li>-сообщество друзей и единомышленников</li>
-			</ul>   
+			</ul>
 		</div>
 		<div class="answ2 hidden ">
 			<p>Сделать любительский спорт и ЗОЖ доступным для всех вне зависимости от интересов и уровня подготовки, а также предоставить возможность сделать занятия спортом выгодными с помощью бонусной системы проекта.</p>
