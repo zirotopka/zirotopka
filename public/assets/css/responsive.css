@@ -628,6 +628,11 @@ footer .prgrm_list ul li a:hover,
         width: 50% !important;
         float: right;
     }
+
+    .table-responsive th,
+    .table-responsive td{
+
+    }
 }
 @media only screen and (max-width : 768px) {
     .msg_pagination{
