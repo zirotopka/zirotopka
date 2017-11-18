@@ -1781,14 +1781,14 @@ and (max-width : 1024px){
     top: 0!important
 }
 .sex label:before{
-    height: 20px!important
-    width: 20px!important
+    height: 20px!important;
+    width: 20px!important;
 }
 .sex label:after{
-    height: 14px!important
-    width: 14px!important
-    top: 3px!important
-    left: 3px!important
+    height: 14px!important;
+    width: 14px!important;
+    top: 3px!important;
+    left: 3px!important;
     background-size: cover!important;
     background-position: 0!important
 }
