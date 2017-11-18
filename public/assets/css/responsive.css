@@ -1797,3 +1797,9 @@ and (max-width : 1024px){
     position: relative;
     top: 12px;
 }
+
+@media only screen and (min-width : 2000px){
+    .sex p{
+        top: 18px;
+    }
+}
