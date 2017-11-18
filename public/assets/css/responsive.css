@@ -528,6 +528,12 @@ footer .prgrm_list ul li a:hover,
     background-color: #ff8a18!important;
 }
 
+.modal-body .send{
+    border-radius: 2em!important;
+    padding: 12px 24px 10px!important;
+}
+
+
 /* Модальное окно вывода средств на странице Счёт */
 .slug-balance .add_money{
     width: 100%;
@@ -630,7 +636,13 @@ footer .prgrm_list ul li a:hover,
     padding: 17px 0 0 0!important;
     text-align: center;
 }
-
+.how-content{
+    padding: 0 15px;
+}
+.registr_btn{
+    display: block;
+    margin: 15px auto 30px;
+}
 @media only screen and (min-width : 1000px) and (max-width : 1112px){
     .dropdown{
         width: 24.99% !important;

@@ -59,12 +59,12 @@
                     <hr>
                 <div class="bons-how-screen col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bonus_2">
                     <h2>КАК ЭТО РАБОТАЕТ</h2>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="row">
                         <p class="how-content col-xs-12 col-sm-6 col-md-6 col-lg-6">
                             Участником бонусной программы могут быть только<br>действующие участники любой из программ R.ONE. <br> Вы приглашаете своих друзей в проект и получаете баллы (мы называем их Reformoney).
                         </p>
                         <p class="how-content col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            Эти баллы Вы можете конвертировать на WebMoney. Еcли Ваши друзья приглашают новых участников, Вы так же накапливаете баллы.
+                            Еcли Ваши друзья приглашают новых участников, Вы так же накапливаете баллы. Эти баллы Вы можете конвертировать на WebMoney.
                         </p>
                     </div>
                     <div class="visible-xs">
