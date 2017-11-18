@@ -477,7 +477,7 @@ label:hover:before {
     background-repeat: no-repeat;
     height: 1em;
     width: 1em;
-    background-size: 0.74em!important;
+    background-size: 0.74em;
     background-position: 2px 2px;
 }
 @media not all and (min-resolution:.001dpcm) { @media {
