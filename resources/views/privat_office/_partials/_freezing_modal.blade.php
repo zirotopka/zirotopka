@@ -11,7 +11,7 @@
           <p>Чтобы продолжить - просто воспользуйся иммунитетом</p><br>
           <form action="{{env('APP_URL').'/privat_office/useImmunity/'.$user->id}}" method="POST">
             {{ csrf_field() }}
-            <input type="submit" value="РАЗБЛОКИРОВАТЬ АККАУНТ" class="forms-btns">
+            <input type="submit" value="РАЗБЛОКИРОВАТЬ АККАУНТ" class="forms-btns" style="width: auto!important;">
           </form>
           <p>или</p><br>
         @endif
