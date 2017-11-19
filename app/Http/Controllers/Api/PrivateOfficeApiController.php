@@ -71,6 +71,7 @@ class PrivateOfficeApiController extends Controller
                 $training->user_id = $user->id;
                 $training->program_day = $user->current_day;
                 $training->is_files_download = 1;
+                $training->created_at = Carbon::now($timezone);
 
                 $training->save();
             }
@@ -92,6 +93,7 @@ class PrivateOfficeApiController extends Controller
                     $thisStage->training_id = $training->id;
                     $thisStage->current_client_date = $current_client_date;
                     $thisStage->rating = 0;
+                    $thisStage->created_at = Carbon::now($timezone);
                     $thisStage->save();
                 }
 
