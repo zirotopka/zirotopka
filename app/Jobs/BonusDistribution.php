@@ -99,7 +99,7 @@ class BonusDistribution implements ShouldQueue
 
                                 $sum = 100;
 
-                                $child_name = $parentThirtyLine->first_name.' '.$parentThirtyLine->surname;
+                                $child_name = $parentSecondLine->first_name.' '.$parentSecondLine->surname;
 
                                 $this->addAccrual($parentThirtyLine->id,$child_name,$sum);
                             }
