@@ -26,7 +26,6 @@
 
 @section("content")
 <!--Логотип-->
-	<?php phpinfo(); ?>
 	<div class="main-content container-fluid">
 		<div class="logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<a href="/">
