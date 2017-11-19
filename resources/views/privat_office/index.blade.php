@@ -201,16 +201,16 @@
 
 				    		if (!empty($current_stage)) {
 				    			switch ($current_stage->status) {
-				    				case 1:
+				    				case 0:
 								        $stage_status_text = ' (Отправлено)';
 								        break;
-								    case 2:
+								    case 1:
 								        $stage_status_text = ' (На доработку)';
 								        break;
-								    case 3:
-								        $stage_status_text = ' (Подтверждено)';
+								    case 2:
+								        $stage_status_text = ' (Одобрено)';
 								        break;
-								    case 4:
+								    case 3:
 								        $stage_status_text = ' (Отклонено)';
 								        break;
 								}
