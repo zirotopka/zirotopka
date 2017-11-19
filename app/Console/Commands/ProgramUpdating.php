@@ -88,7 +88,9 @@ class ProgramUpdating extends Command
                             $current_program_day = ProgrammDay::select('id','day','status')
                                                     ->where('programm_id','=',$user->current_programm_id)
                                                     ->where('day','=',$user->current_day)
-                                                    ->first();        
+                                                    ->first(); 
+
+                            $number_training = $user->current_day + 1;       
 
                             if (!empty($current_program_day)) {
                                 if (!empty($current_program_day->status)) {
@@ -140,7 +142,7 @@ class ProgramUpdating extends Command
                                                 $this->addBan($user->id);
                                             } else {
                                                 $subject = 'Обновление программы Reformator.One';
-                                                $text = 'Вам доступна новая тренировка за '.$user->current_day.'-й день.';
+                                                $text = 'Вам доступна новая тренировка за '.$number_training.'-й день.';
 
                                                 $this->send_mail($user, $subject, $text);
 
@@ -150,7 +152,7 @@ class ProgramUpdating extends Command
                                     }
                                 } else {
                                     $subject = 'Обновление программы Reformator.One';
-                                    $text = 'Вам доступна новая тренировка за '.$user->current_day.'-й день.';
+                                    $text = 'Вам доступна новая тренировка за '.$number_training.'-й день.';
 
                                     $this->send_mail($user, $subject, $text);
 
