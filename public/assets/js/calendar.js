@@ -63,7 +63,7 @@ $(document).ready(function(){
 	  	changeMonth: true,
 	  	changeYear: true,
 	  	firstDay: 1,
-	  	minDate: 0,
+	  	minDate: new Date(2017, 11, 28),
 	  	gotoCurrent: true,
 		showOtherMonths: true,
 	});
