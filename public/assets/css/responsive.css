@@ -632,6 +632,9 @@ footer .prgrm_list ul li a:hover,
     padding: 17px 0 0 0!important;
     text-align: center;
 }
+thead{
+    position: static!important;
+}
 .how-content{
     padding: 0 15px;
 }
