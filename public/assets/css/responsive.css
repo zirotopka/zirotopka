@@ -650,6 +650,11 @@ footer .prgrm_list ul li a:hover,
     }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 736px){
+    .send-progr-btn, .send-progr-btn:hover{
+        margin: 5px 0 0 0;
+        width: 100%;
+        white-space: normal;
+    }
     .cdr-btn,
     .cdr-btn:hover{
         border-radius: 0!important;
@@ -1790,12 +1795,16 @@ and (max-width : 1024px){
     top: 3px!important;
     left: 3px!important;
     background-size: cover!important;
-    background-position: 0!important
+    background-position: 0!important;
 }
 .sex p{
     margin: 0 0 0 25px;
     position: relative;
     top: 12px;
+}
+#choose_programe_form .btn.dropdown-toggle,
+#choose_programe_form .btn.dropdown-toggle:hover{
+    border-radius: 4px!important;
 }
 
 @media only screen and (min-width : 2000px){
