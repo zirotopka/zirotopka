@@ -93,6 +93,7 @@ class UserController extends Controller
             $user->growth = $request->get("growth");
             $user->age = $request->get("age");
             $user->phone = $request->get("phone");
+            $user->immunity_count = env('START_IMMUNITY_COUNT');
 
             $slug = User::getSlug($user->first_name, $user->last_name, $user->surname);
 
