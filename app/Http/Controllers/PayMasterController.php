@@ -46,8 +46,8 @@ class PayMasterController extends Controller
         	\Log::warning('PayMasterController: Не сохранен платеж в системе. Json: '.json_encode($request->all()));
         }
 
-        $subject = 'Оплата программы Reformator.One';
-        $text = 'Вы успешно приобрели программу. Желаем удачи в тренировках.';
+        $subject = 'Пополнение средств Reformator.One';
+        $text = 'Вы успешно пополнили счет вашего личного кабинета. Желаем удачи в тренировках.';
 
         $this->send_mail($user, $subject, $text);
 

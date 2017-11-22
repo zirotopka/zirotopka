@@ -17,6 +17,8 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
+    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-187498-8zpvp';</script>
+    
     <script src="/assets/home/index-scrollspy.js"></script>
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>

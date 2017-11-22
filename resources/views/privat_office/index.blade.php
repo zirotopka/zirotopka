@@ -13,7 +13,12 @@
 
 @section('js')
     @parent
+
+    @if(isset($first_pay_program))
+    	<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-187506-hB4iq';</script>
+    @endif
     <!-- Добавлять js тут -->
+    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-187505-gLyzn';</script>
     <!-- <script src="http://vjs.zencdn.net/6.1.0/video.js"></script> -->
     <script type="text/javascript" src="/assets/privat_account/account.js?123"></script>
     <script type="text/javascript" src="/assets/js/video-btn.js?123"></script>
@@ -321,10 +326,6 @@
 			    </div>
 			  </div>
 			</div>
-		@endif
-
-		@if(isset($first_pay_program))
-			@include('privat_office._partials._start_programm_form')
 		@endif
 	</div>
 	<!-- <div class="video-js-responsive-container vjs-hd" style="width:80%">

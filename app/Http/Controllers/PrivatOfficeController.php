@@ -443,7 +443,8 @@ class PrivatOfficeController extends Controller
             $accruals->save();
 
             if ($type == 1) {
-            //Програма
+                //Програма
+                session()->set('first_pay_program',1);
                 return redirect('/'.$user->slug);
             } elseif ($type == 2) {
                 return redirect('/'.$user->slug);
