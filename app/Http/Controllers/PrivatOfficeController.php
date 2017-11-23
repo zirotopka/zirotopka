@@ -153,14 +153,20 @@ class PrivatOfficeController extends Controller
             'bans' => $bans,
     	];
 
-        if (session()->has('pay_program')) {
-            //Добавил вывод подтверждения
-            session()->pull('pay_program');
-            
-            $data = array_merge($data,['first_pay_program' => 1]);
-        }
-
     	return view('privat_office.index', $data);
+    }
+
+    public function success_pay(Request $request) {
+        $user = Sentinel::getUser();
+
+       if (session()->has('first_pay_program')) {
+            //Добавил вывод подтверждения
+            session()->pull('first_pay_program');
+            
+            return view('privat_office.success_pay',['user' => $user]);
+        } else {
+            return redirect('/'.$user->slug);
+        }
     }
 
 	public function index_admin($id)
@@ -445,7 +451,7 @@ class PrivatOfficeController extends Controller
             if ($type == 1) {
                 //Програма
                 session()->set('first_pay_program',1);
-                return redirect('/'.$user->slug);
+                return redirect('/privat_office/success_pay');
             } elseif ($type == 2) {
                 return redirect('/'.$user->slug);
             }
