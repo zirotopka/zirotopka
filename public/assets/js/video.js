@@ -27,6 +27,7 @@ $( document ).ready(function() {
           video.play();
 
         } else {
+            console.log(data);
             alert('Видео не может быть загружено. Обратитесь в тех. поддержку.')
         }
       }
