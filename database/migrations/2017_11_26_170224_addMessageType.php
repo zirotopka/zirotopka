@@ -13,9 +13,7 @@ class AddMessageType extends Migration
      */
     public function up()
     {
-        Schema::table('messages', function (Blueprint $table) { 
-            $table->boolean('type')->nullable()->default(0); 
-        });
+
     }
 
     /**
@@ -25,8 +23,6 @@ class AddMessageType extends Migration
      */
     public function down()
     {
-        Schema::table('messages', function (Blueprint $table) { 
-            $table->dropColumn('type'); 
-        });
+
     }
 }
