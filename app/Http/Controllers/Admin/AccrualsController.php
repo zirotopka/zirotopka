@@ -83,6 +83,7 @@ class AccrualsController extends Controller
 								->leftJoin('users','accruals.user_id','=','users.id')
 								->whereNotNull('users.wallet')
 								->where('users.status','=',1)
+								->where('users.is_programm_pay','=',1)
 								->where('accruals_freezing','=',1)
 								->where('type_id','=',2)
 								->get();

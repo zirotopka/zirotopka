@@ -200,10 +200,16 @@ class UserController extends Controller
         $code = $request->get('code');
 
         if (Activation::complete($user, $code))
-        {
-            Sentinel::authenticateAndRemember([ 'email' => $user->email, 'password' => $password ]);
+        {   
+            if (!empty($password)) {
+                Sentinel::authenticateAndRemember([ 'email' => $user->email, 'password' => $password ]);
 
-            return redirect($user->slug); 
+                return redirect($user->slug); 
+            } else {
+                session(['success_array' => ['caption' => 'Поздравляем!', 'text' => 'Ваш аккаунт успешно активирован..']]);
+
+                return redirect('/');
+            }
         }
         else
         {
