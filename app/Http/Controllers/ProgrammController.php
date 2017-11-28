@@ -214,7 +214,7 @@ class ProgrammController extends Controller
     public function send_mail($user, $subject, $text) {
         //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
         try {
-            Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+            //Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
         } catch (\Exception $e) {
             \Log::error($e->getMessages());
         }
