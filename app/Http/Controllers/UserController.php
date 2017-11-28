@@ -240,7 +240,7 @@ class UserController extends Controller
         try{
             Mail::to($user->email)
                     ->queue(new GetPasswordShipped($user, $code));
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             \Log::error($e->getMessages());
         }
 

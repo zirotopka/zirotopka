@@ -218,7 +218,7 @@ class User extends CartalystUser
         try {
             Mail::to($user->email)
                     ->queue(new PasswordShipped($password));
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             \Log::error($e->getMessages());
         }
 

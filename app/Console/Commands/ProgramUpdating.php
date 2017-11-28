@@ -323,7 +323,7 @@ class ProgramUpdating extends Command
         //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
         try {
             //Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             \Log::error($e->getMessages());
         }
 

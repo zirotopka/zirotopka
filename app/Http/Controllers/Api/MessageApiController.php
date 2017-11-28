@@ -114,7 +114,7 @@ class MessageApiController extends Controller
                     $this->sendMessage($request, $sender_id, $recipient->id);
                     break;
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Log::info($e->getMessages());
 
             return response()->json(['code' => 400, 'text' => 'Сообщение не сохранено. Не найден получатель.']);

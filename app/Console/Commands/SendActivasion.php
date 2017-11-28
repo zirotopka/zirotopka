@@ -60,7 +60,7 @@ class SendActivasion extends Command
                     try {
                         Mail::to($userSentinel->email)
                             ->queue(new ActivasionShipped($userSentinel, null, $code));
-                    } catch (Exception $e) {
+                    } catch (\Exception $e) {
                         \Log::error($e->getMessages());
                     }
                 }

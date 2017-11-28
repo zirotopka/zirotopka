@@ -288,7 +288,7 @@ class PrivatOfficeController extends Controller
             if ($request->get('year') && $request->get('month') && $request->get('day')) {
                 try {
                     $birthday = Carbon::parse($request->get('year').'-'.$request->get('month').'-'.$request->get('day'));
-                } catch (Exception $e) {
+                } catch (\Exception $e) {
                     $birthday = null;
                 }
             } else {
@@ -322,7 +322,7 @@ class PrivatOfficeController extends Controller
 
                 return redirect('/'.$user->slug.'/edit');
 
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 return redirect()->back()->withErrors($e->getMessages());
             }
         }
