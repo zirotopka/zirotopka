@@ -244,7 +244,6 @@
     <script type="text/javascript" src="/assets/js/perfect-scrollbar.jquery.min.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/classie.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/sidebarEffects.js"></script>
-    <script type="text/javascript" src="/assets/js/calendar.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
     <script type="text/javascript" src="/assets/lightbox/dist/js/lightbox.min.js"></script>
 

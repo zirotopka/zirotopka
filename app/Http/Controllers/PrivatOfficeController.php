@@ -56,7 +56,17 @@ class PrivatOfficeController extends Controller
             $programs = Programm::select('id','description','name')
                             ->get();
 
-            return view('privat_office._partials._choose_program_form', ['user' => $user, 'programs' => $programs]);
+            $nowHour = $now->hour;
+
+            if ($nowHour >= 22) {
+                $now->addDay();
+            }
+
+            $nowYear = $now->year;
+            $nowMonth = $now->month;
+            $nowDay = $now->day;
+
+            return view('privat_office._partials._choose_program_form', ['user' => $user, 'programs' => $programs, 'nowYear' => $nowYear, 'nowMonth' => $nowMonth, 'nowDay' => $nowDay]);
         }
 
         $current_program_day = ProgrammDay::select('id','day','status')
