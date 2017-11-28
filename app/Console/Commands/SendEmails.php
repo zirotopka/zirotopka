@@ -73,7 +73,7 @@ class SendEmails extends Command
     public function send_mail($user) {
         try {
             Mail::to($user->email)->queue(new MoneyShipped($user));
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             \Log::error($e->getMessages());
         }
 
