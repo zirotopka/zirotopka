@@ -107,9 +107,13 @@ class UserController extends Controller
 
             $code = $activation->code;
 
-            Mail::to($user->email)
-                ->queue(new ActivasionShipped($user, $request->get("password"), $code));
-            // $activation->completed = 1;
+            try {
+                Mail::to($user->email)
+                    ->queue(new ActivasionShipped($user, $request->get("password"), $code));
+            } catch (Exception $e) {
+                \Log::error($e->getMessages());
+            }
+            
             // $activation->save();
 
             $role = Sentinel::findRoleBySlug("client");
@@ -232,9 +236,13 @@ class UserController extends Controller
 
         $reminder = Reminder::create($sentinelUser);
         $code = $reminder->code;
-
-        Mail::to($user->email)
-                ->queue(new GetPasswordShipped($user, $code));
+        
+        try{
+            Mail::to($user->email)
+                    ->queue(new GetPasswordShipped($user, $code));
+        } catch (Exception $e) {
+            \Log::error($e->getMessages());
+        }
 
         session(['success_array' => ['caption' => 'Письмо отправлено!', 'text' => 'На ваш почтовый ящик направлено письмо с обновлением пароля.']]);
 
