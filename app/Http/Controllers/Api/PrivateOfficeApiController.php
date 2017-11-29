@@ -116,7 +116,7 @@ class PrivateOfficeApiController extends Controller
 
                     if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
                         $file->file_type = 2; 
-                    } elseif (in_array($mime_type,['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv'])) {
+                    } elseif (in_array($mime_type,['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv,video/mov,video/mpg,video/swf'])) {
                         $file->file_type = 3;
                     }
 

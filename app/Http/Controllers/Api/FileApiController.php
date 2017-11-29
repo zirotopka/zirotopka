@@ -21,7 +21,7 @@ class FileApiController extends Controller
         if ($request->hasFile('file'))
         {   
         	$rules = [
-	            'file' => 'mimes:jpeg,pjpeg,png,mpeg,mp4,3gpp,3gpp2,x-flv,x-ms-wmv',
+	            'file' => 'mimes:jpeg,pjpeg,png,mpeg,mp4,3gpp,3gpp2,x-flv,x-ms-wmv,mov,mpg,swf',
 	        ];
 	        $messages = [
 	            'file.mimes' => 'Некоректный тип файла',
