@@ -11,6 +11,7 @@ use App\Balance;
 use App\Helpers\IP;
 use App\AdjancyList;
 use App\User;
+use App\Accrual;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -119,10 +120,27 @@ class UserController extends Controller
             $role = Sentinel::findRoleBySlug("client");
             $role->users()->attach($user);
 
-            Balance::create([
-                'user_id' => $user->id,
-                'sum' => 0,
-            ]);
+            $sum = 0;
+
+            if (env('IS_GIFT')) {
+                $sum = 500;
+            }
+
+            $balance = new Balance;
+            $balance->user_id = $user->id;
+            $balance->sum = $sum;
+            $balance->save();
+
+            if (env('IS_GIFT')) {
+                $accruals = new Accrual;
+                $accruals->sum = $sum;
+                $accruals->user_id = $user->id;
+                $accruals->type_id = 1;
+                $accruals->balance_id = $balance->id;
+                $accruals->comment = 'Подарочные средства';
+
+                $accruals->save();
+            }
 
             //referer_code
             if (session()->has('ref')) {

@@ -64,7 +64,7 @@ class SendEmails extends Command
                     $user->immunity_count = 5;
                     $user->save();
 
-                    $this->send_mail($user);  
+                    //$this->send_mail($user);  
                 }  
             }
         });
