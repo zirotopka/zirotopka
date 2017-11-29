@@ -43,7 +43,7 @@ class FileApiController extends Controller
 
             $size = $file->getclientSize(); 
 
-            if ($size > 104857600) {
+            if ($size > 170857600) {
                 return response()->json(['code' => 404, 'text' => 'Файл не должен превышать 100 мб']);
             }
 
