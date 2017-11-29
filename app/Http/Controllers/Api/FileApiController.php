@@ -20,14 +20,14 @@ class FileApiController extends Controller
     {   
         if ($request->hasFile('file'))
         {   
-        	$rules = [
-	            'file' => 'mimes:jpeg,pjpeg,png,mpeg,mp4,3gpp,3gpp2,x-flv,x-ms-wmv,mov,mpg,swf',
-	        ];
-	        $messages = [
-	            'file.mimes' => 'Некоректный тип файла',
-	        ];
+        	// $rules = [
+	        //     'file' => 'mimes:jpeg,pjpeg,png,mpeg,mp4,3gpp,3gpp2,x-flv,x-ms-wmv,mov,mpg,swf',
+	        // ];
+	        // $messages = [
+	        //     'file.mimes' => 'Некоректный тип файла',
+	        // ];
 
-	        $validator = Validator::make($request->all(), $rules, $messages);
+	        // $validator = Validator::make($request->all(), $rules, $messages);
 
 	        if ($validator->fails()) {
 	            return response()->json(['code' => 400, 'text' => 'Некоректный тип файла']);
@@ -54,6 +54,8 @@ class FileApiController extends Controller
             $url = $destinationPath.$fileName;
 
             $mime_type = mime_content_type($url);
+
+            \Log::info($mime_type);
 
             if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
             	$preview_url = $request->get('destinationPath').'preview_'.$fileName;
