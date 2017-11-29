@@ -147,7 +147,7 @@ $( document ).ready(function() {
 		        error: function( jqXHR, textStatus, errorThrown ){
 		        	swal({
 					   title: 'Ошибка!',
-					   text: 'ОШИБКИ AJAX запроса: ' + textStatus,
+					   text: 'Превышен допустимый размер файла (100 Мб)',
 					   showCloseButton: true,
 					   showConfirmButton: false,
 					})
