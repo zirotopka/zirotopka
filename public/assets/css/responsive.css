@@ -653,6 +653,21 @@ thead{
     }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 736px){
+    .min_msg_cont.show-message .min_left_col{
+        padding: 5px 0 5px 2em;
+    }
+    .min_msg_cont.show-message .min_right_col{
+        padding: 5px 0 5px 2em;
+    }
+    #show-message-container{
+        padding: 0;
+    }
+    #show-message-container .mess_cont{
+
+    }
+    .messages-type .st-content{
+        height: 100vh;
+    }
     .send-progr-btn, .send-progr-btn:hover{
         margin: 5px 0 0 0;
         width: 100%;
