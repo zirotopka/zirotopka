@@ -18,6 +18,9 @@ class FileApiController extends Controller
 	 */
     public function store_attachment(Request $request)
     {   
+        ini_set('memory_limit', '-1');
+        ini_set('max_execution_time', 0);
+        
         if ($request->hasFile('file'))
         {   
         	// $rules = [
