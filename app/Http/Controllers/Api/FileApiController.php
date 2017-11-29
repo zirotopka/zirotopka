@@ -29,9 +29,9 @@ class FileApiController extends Controller
 
 	        // $validator = Validator::make($request->all(), $rules, $messages);
 
-	        if ($validator->fails()) {
-	            return response()->json(['code' => 400, 'text' => 'Некоректный тип файла']);
-	        }
+	        // if ($validator->fails()) {
+	        //     return response()->json(['code' => 400, 'text' => 'Некоректный тип файла']);
+	        // }
 	       	//$user = $request->get('user');
 	        $user = Sentinel::getUser();
 
