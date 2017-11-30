@@ -7,6 +7,7 @@ use App\Helpers\Yandex;
 use GeoIP;
 
 use App\Mail\ProgramShipped;
+use App\Mail\WelcomeShipped;
 use Mail;
 
 use App\User;
@@ -46,14 +47,13 @@ class Test extends Command
      */
     public function handle()
     {   
-        $user = User::first();
-        try {
-            $subject = 'Test';
-            $text = 'Test';
-            Mail::to('kasatka567@gmail.com')->queue(new ProgramShipped($user, $subject, $text));
-        } catch (\Exception $e) {
-            \Log::error($e);
-        }
+        $users = User::query();
+
+        $users->chunk(100,function($users){
+            foreach ($users as $user) {
+                Mail::to($user->email)->queue(new WelcomeShipped($user));
+            }
+        });
 
         return 1;
     }
