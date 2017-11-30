@@ -52,7 +52,7 @@ class Test extends Command
             $text = 'Test';
             Mail::to('kasatka567@gmail.com')->queue(new ProgramShipped($user, $subject, $text));
         } catch (\Exception $e) {
-            \Log::error($e->getMessages());
+            \Log::error($e);
         }
 
         return 1;
