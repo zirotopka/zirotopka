@@ -6,6 +6,11 @@ use Illuminate\Console\Command;
 use App\Helpers\Yandex;
 use GeoIP;
 
+use App\Mail\ProgramShipped;
+use Mail;
+
+use App\User;
+
 use App\Classes\Yandex\CommonHTTP3Example;
 
 class Test extends Command
@@ -40,31 +45,16 @@ class Test extends Command
      * @return mixed
      */
     public function handle()
-    {
-        $answ = Yandex::send_payments(123, 1000, '', true);
-
-        // $certificate = 'file://'.realpath('./SSL/test.cer');
-        // $privkey = 'file://'.realpath('./SSL/test.key');
-
-        // $pkcs7 = $this->sign($answ['text'],$certificate, $privkey);
-
-        // dd($pkcs7);
-
-        // $cert = openssl_pkcs7_sign($answ['text'],
-        //                            public_path().'/signed.txt',
-        //                            'file://'.realpath('./SSL/201639.cer'),
-        //                            ['file://'.realpath('./SSL/private.key'), 'Gorchel'],
-        //   
-
-        $certificate = public_path().'/yandexSslTest/client.crt';
-        $privkey = public_path().'/yandexSslTest/client.key';                     
-
+    {   
+        $user = User::first();
         try {
-            $instance = new CommonHTTP3Example();
-            $instance->runExample($answ['text'], $certificate, $privkey);
-        } catch (Exception $e) {
-            echo "Exception thrown: " . $e;
+            $subject = 'Test';
+            $text = 'Test';
+            Mail::to('kasatka567@gmail.com')->queue(new ProgramShipped($user, $subject, $text));
+        } catch (\Exception $e) {
+            \Log::error($e->getMessages());
         }
-        
+
+        return 1;
     }
 }
