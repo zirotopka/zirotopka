@@ -176,9 +176,9 @@ class TaskController extends Controller {
 
 	public function send_mail($user, $subject, $text) {
 		try {
-        	Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+        	//Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
         } catch (\Exception $e) {
-            \Log::error($e->getMessages());
+            \Log::error($e);
         }
 
         return 1;

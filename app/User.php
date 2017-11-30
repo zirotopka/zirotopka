@@ -219,7 +219,7 @@ class User extends CartalystUser
             Mail::to($user->email)
                     ->queue(new PasswordShipped($password));
         } catch (\Exception $e) {
-            \Log::error($e->getMessages());
+            \Log::error($e);
         }
 
         return 1;

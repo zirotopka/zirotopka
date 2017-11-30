@@ -112,7 +112,7 @@ class UserController extends Controller
                 Mail::to($user->email)
                     ->queue(new ActivasionShipped($user, $request->get("password"), $code));
             } catch (\Exception $e) {
-                \Log::error($e->getMessages());
+                \Log::error($e);
             }
             
             // $activation->save();
@@ -259,7 +259,7 @@ class UserController extends Controller
             Mail::to($user->email)
                     ->queue(new GetPasswordShipped($user, $code));
         } catch (\Exception $e) {
-            \Log::error($e->getMessages());
+            \Log::error($e);
         }
 
         session(['success_array' => ['caption' => 'Письмо отправлено!', 'text' => 'На ваш почтовый ящик направлено письмо с обновлением пароля.']]);

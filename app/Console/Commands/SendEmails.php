@@ -74,7 +74,7 @@ class SendEmails extends Command
         try {
             Mail::to($user->email)->queue(new MoneyShipped($user));
         } catch (\Exception $e) {
-            \Log::error($e->getMessages());
+            \Log::error($e);
         }
 
         return 1;
