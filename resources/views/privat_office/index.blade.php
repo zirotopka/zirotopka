@@ -270,7 +270,7 @@
 								<div class="mask"></div>
 							</div>
 						@endif
-
+						
 						<div class="otchet" data-programm-stage="{{$programm_stage->id}}">
 							<div class="attachment-container">
 								@if (count($stage_files) > 0) 
@@ -281,20 +281,24 @@
 											@else
 												<img class="attachment-img" id="attachment-img" src="/ico/video-default.png">
 											@endif
-											<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>
+											@if (empty($current_training))
+												<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>
+											@endif
 											<input type="hidden" class="attachment-file" name="{{'attachment['.uniqid().']'}}" value="{{$file->file_url}}">
 											<span class="attachment-span">{{!empty($file->name) ? $file->name : 'Загруженный файл'}}</span>
 										</div>
 									@endforeach
 								@endif
 							</div>
-							<div class="otch_hover">
-								<div class="load-btn">
-									<img class="load" src="/ico/load.png" alt="">
-									<p class="load-text">Загрузить отчёт</p>
+							@if (empty($current_training))
+								<div class="otch_hover {{count($stage_files) > 0 ? 'hidden' : ''}}">
+									<div class="load-btn">
+										<img class="load" src="/ico/load.png" alt="">
+										<p class="load-text">Загрузить отчёт</p>
+									</div>
+									<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
 								</div>
-								<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
-							</div>
+							@endif
 						</div>
 						<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
 					</div>
@@ -303,10 +307,12 @@
 				</div>	
 			@empty
 			@endforelse
-				
-			<div class="send-proof col-lg-12">
-				<button class="send-proof-file" id="send-proof-file"> Отправить на проверку</button>
-			</div>
+			
+			@if (empty($current_training))
+				<div class="send-proof col-lg-12">
+					<input type="button" class="send-proof-file" id="send-proof-file" value="Отправить на проверку">
+				</div>
+			@endif
 
 			<!-- --------------------------------------------------------------- -->
 			<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">

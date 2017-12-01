@@ -264,7 +264,8 @@
 }
 
 .send-proof-file{
-	background-color: #232323;
+	background-color: grey;
+	color: white;
 	float: none;
 	margin: 4em 0 4em 0;
 	font-family: GilroyLight;
@@ -272,10 +273,16 @@
 	border-radius: 0.3em;
 	width: 23.5em;
 	height: 3.5em;
-
+    padding: 0;
+    font-size: 1em;
+    letter-spacing: 1px;
 }
 
-.send-proof-file:hover{
+.send-proof-file_act {
+	background-color: #232323 !important;
+}
+
+.send-proof-file_act:hover{
 	background-color: #232323;
 	float: none;
 	margin-top: 3.8em;
@@ -286,7 +293,7 @@
 	height: 3.7em;
 }
 
-.send-proof-file:active{
+.send-proof-file_act:active{
 	background-color: black;
 	float: none;
 	margin-top: 3.8em;
@@ -422,10 +429,10 @@
 		width: 100%!important;
 		padding: 0;
 	}
-	.send-proof-file:hover{
+	.send-proof-file_act:hover{
 		width: 100%!important;
 	}
-	.send-proof-file:active{
+	.send-proof-file_act:active{
 		width: 100%!important;
 	}
 	.chs-program-widnow{
@@ -540,10 +547,10 @@
 	.send-proof-file{
 		width: 100%!important;
 	}
-	.send-proof-file:active{
+	.send-proof-file_act:active{
 		width: 100%!important;
 	}
-	.send-proof-file:hover{
+	.send-proof-file_act:hover{
 		width: 100%!important;
 	}
 	.chs-program-widnow{
@@ -570,11 +577,11 @@
 		width: 50%!important;
 	}
 
-	.send-proof-file:hover{
+	.send-proof-file_act:hover{
 		width: 51%!important;
 	}
 
-	.send-proof-file:active{
+	.send-proof-file_act:active{
 		width: 51%!important;
 	}
 }

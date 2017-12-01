@@ -5,3 +5,7 @@
 .display-inline {
 	display: inline-block;
 }
+
+.st-content-inner {
+	z-index: 110 !important;
+}
