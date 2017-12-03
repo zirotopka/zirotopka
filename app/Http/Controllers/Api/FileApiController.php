@@ -29,6 +29,7 @@ class FileApiController extends Controller
 	        // $messages = [
 	        //     'file.mimes' => 'Некоректный тип файла',
 	        // ];
+            //'video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv,video/mov,video/mpg,video/swf','video/webm','video/ogg'
 
 	        // $validator = Validator::make($request->all(), $rules, $messages);
 

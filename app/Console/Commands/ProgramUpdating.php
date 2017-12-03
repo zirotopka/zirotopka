@@ -103,7 +103,7 @@ class ProgramUpdating extends Command
 
                                         $this->user_update ($user, $userNow, 0);
 
-                                        $this->addBan($user->id);
+                                        $this->addBan($user->id, $userNow);
 
                                         $subject = 'Обновление программы Reformator.One';
                                         $text = 'Вы не выполнили программу. Сожалеем, но ваш аккаунт заморожен.';
@@ -116,7 +116,7 @@ class ProgramUpdating extends Command
                                             \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by null stages');
                                             $this->user_update ($user, $userNow, 0);
 
-                                            $this->addBan($user->id);
+                                            $this->addBan($user->id, $userNow);
 
                                             $subject = 'Обновление программы Reformator.One';
                                             $text = 'Вы выполнили не все упражнения. Сожалеем, но ваш аккаунт заморожен.';
@@ -139,7 +139,7 @@ class ProgramUpdating extends Command
 
                                                 $this->user_update ($user, $userNow, 0);
 
-                                                $this->addBan($user->id);
+                                                $this->addBan($user->id, $userNow);
                                             } else {
                                                 $subject = 'Обновление программы Reformator.One';
                                                 $text = 'Вам доступна новая тренировка за '.$number_training.'-й день.';
@@ -174,7 +174,7 @@ class ProgramUpdating extends Command
 
                             $this->send_mail($user, $subject, $text);
 
-                            $this->addBan($user->id);
+                            $this->addBan($user->id, $userNow);
 
                             $user->last_updated_at = $userNow;
                             $user->save();
@@ -294,8 +294,9 @@ class ProgramUpdating extends Command
         });
     }
 
-    public function addBan($userId) {
+    public function addBan($userId, $userNow) {
         $bans = new Ban;
+        $bans->created_at = $userNow;
         $bans->user_id = $userId;
         $bans->save();
 

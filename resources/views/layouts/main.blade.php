@@ -69,7 +69,7 @@
                                 <img src="{{'/image/logos/'.$user->user_ava_url}}" alt="" class="img-circle logo-img">
                             @else
                                 <img src="/image/logos/default.jpg" alt="" class="img-circle logo-img">
-                            @endif   <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}<br><br><span class="l_mn_raiting">Ваш рейтинг: {{$user->first_rating.'/'.$user->second_rating}}</span></p>
+                            @endif   <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}<br>
                         </li>
                         <li>
                            <a href="/{{$user->slug}}" class="profile_btns lgn">

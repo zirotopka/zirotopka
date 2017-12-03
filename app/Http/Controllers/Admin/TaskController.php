@@ -9,6 +9,7 @@ use App\ProgrammDay;
 use App\Training;
 use App\TrainingStages;
 use App\User;
+use App\Ban;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 
 use Illuminate\Http\Request;
@@ -27,8 +28,8 @@ class TaskController extends Controller {
 		$now->subDays(3);
 		$now_format = $now->format('Y-m-d');
 
-		$trainings = Training::whereDate('created_at','>=',$now_format)->orderBy('created_at','desc')
-							->orderBy('is_moderator_check')->with('user')->paginate(30);
+		$trainings = Training::where('is_moderator_check','=',0)->orderBy('created_at','desc')
+									->with('user')->paginate(30);
 
 		return view('admin.tasks.index', [
 			'trainings'    => $trainings,
@@ -65,76 +66,50 @@ class TaskController extends Controller {
 
 	public function change_status($id, $status, Request $request)
 	{
-		$trainingStage = TrainingStages::find($id);
+		$training = Training::find($id);
+		$user = $training->user;
 
-		if (!empty($trainingStage)) {
-			$trainingStage->status = $status;
-			$trainingStage->save();
-
-			$training = $trainingStage->training;
-
-			if (!empty($training)) {
-				$training->is_moderator_check = 1;
-				$training->save();
-
-				$status_text = 'Отправлено';
-
-				switch ($status) {
-                case 0:
-                    $status_text = 'Отправлено';
-                    break;
-                case 1:
-                    $status_text = 'На доработке';
-                    break;
-                case 2:
-                    $status_text = 'Одобрено';
-                    break;
-                case 3:
-                    $status_text = 'Отклонено';
-                    break;
-                }
-
-                $stage = ProgrammStage::select('id','exercise_id')->where('id','=',$trainingStage->stage_id)->with('exercive')->first();
-                $user = $training->user;
-
-                if (!empty($stage) && !empty($stage->exercive) && !empty($user)) {
-                	$current_program_day = ProgrammDay::select('id','day','status')
-                                                    ->where('programm_id','=',$user->current_programm_id)
-                                                    ->where('day','=',$training->program_day)
-                                                    ->first();    
-
-                    if (!empty($current_program_day)) {
-
-                    	$programm_stages_count = ProgrammStage::select('id','status')
-                                                                ->where('programm_day_id','=',$current_program_day->id)
-                                                                ->with('exercive')
-                                                                ->count();
-                        $trainingStages = $training->stages;
-
-                        if ($programm_stages_count == count($trainingStages)) {
-
-                        	$handler = 1;
-
-                        	foreach ($trainingStages as $localTrainingStage) {
-                        		if ($localTrainingStage->status != 2) {
-                        			$handler = 0;
-                        		}
-                        	}
-
-                        	if ($handler == 1) {
-                        		$subject = 'Ваша тренировка проверена!';
-					            $text = 'Упражнение "'.$stage->exercive->name.'" проверено модератором и переведено в статус "'.$status_text.'".';
-
-					            $this->send_mail($user, $subject, $text);
-                        	}
-                        } 
-                    }   
-                }
-			}
+		if (empty($training)) {
+			\Log::info('Admin:TaskController:change_status - Тренировка не найдена. Id '.$id);
+			return redirect()->back();
 		}
-		
+
+		$training->status = $status;
+		$training->is_moderator_check = 1;
+		$training->save();
+
+		if ($status == 1) {
+			$subject = 'Поздравляем!';
+            $text = 'Вы успешно выполнили все упражнения за '.$training->program_day.' день тренировки.';
+		} else {
+			$subject = 'Внимание!!';
+            $text = 'За '.$training->program_day.' день ваша тренировка была отклонена тренером.';
+
+            $userTimezone = User::getTimezone($user);
+            $userNow = Carbon::now($userTimezone);
+
+            \Log::info($userTimezone);
+            \Log::info($userNow);
+
+            $user->status = 0;
+            $user->save();
+
+            $this->addBan($user->id, $userNow);
+		}
+
+		$this->send_mail($user, $subject, $text);
+
 		return redirect()->route('tasks');
 	}
+
+	public function addBan($userId, $userNow) {
+        $bans = new Ban;
+        $bans->created_at = $userNow;
+        $bans->user_id = $userId;
+        $bans->save();
+
+        return 1;
+    }
 
 	public function change_rating($id, $rating, Request $request)
 	{
@@ -176,7 +151,7 @@ class TaskController extends Controller {
 
 	public function send_mail($user, $subject, $text) {
 		try {
-        	//Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+        	Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
         } catch (\Exception $e) {
             \Log::error($e);
         }
