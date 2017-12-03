@@ -132,6 +132,7 @@
 								@endif
 											
 							@endforeach	
+
 						</tr>
 						<tr>
 							<?php
@@ -143,7 +144,7 @@
 									if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
 										$cal_class = 'hidden-xs hidden-sm';
 									}
-									$program_day->day=$program_day->day-1;
+									//$program_day->day=$program_day->day-1;
 									$start_date = true;
 								?>
 									
@@ -167,6 +168,7 @@
 									$start_day->addDay();
 								?>
 							@endforeach
+
 						</tr>
 					</table>
 				</div>
@@ -308,10 +310,13 @@
 			@empty
 			@endforelse
 			
-			@if (empty($current_training))
-				<div class="send-proof col-lg-12">
-					<input type="button" class="send-proof-file" id="send-proof-file" value="Отправить на проверку">
-				</div>
+			@if ( empty($current_program_day->status) && !in_array($current_program_day->day,[1,2]) )
+			@else
+				@if (empty($current_training))
+					<div class="send-proof col-lg-12">
+						<input type="button" class="send-proof-file" id="send-proof-file" value="Отправить на проверку">
+					</div>
+				@endif
 			@endif
 
 			<!-- --------------------------------------------------------------- -->

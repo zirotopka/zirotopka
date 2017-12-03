@@ -153,19 +153,10 @@ function sendReport() {
 		programm_stages = {};
 
 	jQuery.each(reports, function(index, report){
-		var attachment_files = jQuery(report).find('input.attachment-file'),
-			data_programm_stage = jQuery(report).data('programm-stage'),
-			attachment_files_arr = [],
-			url;
+		var attachment_file = jQuery(report).find('input.attachment-file').eq(0).val(),
+			data_programm_stage = jQuery(report).data('programm-stage');
 
-		if (attachment_files.length > 0) {
-			jQuery.each(attachment_files, function(index, file){
-				url = jQuery(file).val();
-				attachment_files_arr.push(url);
-			});
-
-			programm_stages[data_programm_stage] = attachment_files_arr;
-		}
+		programm_stages[data_programm_stage] = attachment_file;
 	});
 
 	swal({
