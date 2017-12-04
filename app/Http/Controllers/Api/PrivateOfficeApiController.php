@@ -64,11 +64,27 @@ class PrivateOfficeApiController extends Controller
                               ->with('stages')
                               ->delete();
 
+            $now = Carbon::now($timezone);
+            $nowHour = $now->hour;
+            $deadline = clone $now;
+
+            $deadline->addDay();
+
+            if ($nowHour >= 22) {
+                $deadline->addDay();
+            }
+
+            $deadline->hour = 22;
+            $deadline->minute = 0;
+            $deadline->second = 0;
+
             $training = new Training;
             $training->user_id = $user->id;
             $training->program_day = $user->current_day;
             $training->is_files_download = 1;
             $training->created_at = Carbon::now($timezone);
+            $training->deadline_at = $deadline->timestamp;
+            $training->program_day_id = $current_program_day->id;
 
             if (!$training->save()) {
                 return response()->json(['code' => 404, 'text' => 'Тренировка не сохранена. Обратитесь в поддержку']);

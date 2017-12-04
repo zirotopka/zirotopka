@@ -74,28 +74,44 @@ class TaskController extends Controller {
 			return redirect()->back();
 		}
 
-		$training->status = $status;
-		$training->is_moderator_check = 1;
-		$training->save();
-
 		if ($status == 1) {
 			$subject = 'Поздравляем!';
             $text = 'Вы успешно выполнили все упражнения за '.$training->program_day.' день тренировки.';
 		} else {
-			$subject = 'Внимание!!';
-            $text = 'За '.$training->program_day.' день ваша тренировка была отклонена тренером.';
+			$program_day = ProgrammDay::select([
+                            'id',
+                            'status'
+                        ])
+                        ->where('id','=',$training->program_day_id)
+                        ->first();
 
-            $userTimezone = User::getTimezone($user);
-            $userNow = Carbon::now($userTimezone);
+            if (empty($program_day)) {
+                \Log::error('ProgramUpdating: ProgrammDay not find. Training '.$training->id);
+                continue;
+            }
 
-            \Log::info($userTimezone);
-            \Log::info($userNow);
+            $subject = 'Внимание!!';
 
-            $user->status = 0;
-            $user->save();
+            if (empty($program_day->status)) {
+            	$text = 'За '.$training->program_day.' день ваша тренировка была отклонена тренером.';
+            } else {
+            	$userTimezone = User::getTimezone($user);
+            	$userNow = Carbon::now($userTimezone);
 
-            $this->addBan($user->id, $userNow);
+            	$user->status = 0;
+	            $user->save();
+
+	            $this->addBan($user->id, $userNow);
+
+	            $text = 'За '.$training->program_day.' день ваша тренировка была отклонена тренером. Ваш аккаунт заморожен.';
+
+	            \Log::info($text);
+            }
 		}
+
+		$training->status = $status;
+		$training->is_moderator_check = 1;
+		$training->save();
 
 		$this->send_mail($user, $subject, $text);
 
@@ -104,7 +120,7 @@ class TaskController extends Controller {
 
 	public function addBan($userId, $userNow) {
         $bans = new Ban;
-        $bans->created_at = $userNow;
+        $bans->created_at = $userNow->format('Y-m-d H:i:s');
         $bans->user_id = $userId;
         $bans->save();
 

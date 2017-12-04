@@ -37,7 +37,11 @@
                         <td>{{$user->first_name.' '.$user->surname}}</td>
                         <td>{{$training->program_day}}</td>
                         <td>{{$training->created_at}}</td>
-                        <td>{{$training->created_at}}</td>
+                        <td>
+                            @if ($training->deadline_at)
+                                {{Carbon\Carbon::createFromTimestamp($training->deadline_at,'Africa/Nairobi')}}
+                            @endif
+                        </td>
                         <td>
                             @foreach($stages as $stage)
                                 <?php
