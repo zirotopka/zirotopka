@@ -59,8 +59,6 @@ class FileApiController extends Controller
 
             $mime_type = mime_content_type($url);
 
-            \Log::info($mime_type);
-
             if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
             	$preview_url = $request->get('destinationPath').'preview_'.$fileName;
             	$preview_full_url = public_path().$preview_url;

@@ -102,6 +102,8 @@ class PrivateOfficeApiController extends Controller
                 $thisStage->created_at = Carbon::now($timezone);
                 $thisStage->save();
 
+                $thisStage->files()->delete();
+
                 $file_name = basename(public_path().$stage_file);
                     
                 $file = new File;
@@ -109,19 +111,15 @@ class PrivateOfficeApiController extends Controller
                 
                 if (file_exists(public_path().'/trainings/'.$user->slug.'/preview_'.$file_name)) {
                      $file->preview_url = '/trainings/'.$user->slug.'/preview_'.$file_name;
-                } else {
-                    \Log::error('PrivateOfficeApiController:store_training file not found. Name '.$file_name);
-
-                    continue;
                 }
 
                 $mime_type = mime_content_type(public_path().$stage_file);
 
                 if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
                     $file->file_type = 2; 
-                } elseif (in_array($mime_type,['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv,video/mov,video/mpg,video/swf','video/webm','video/ogg'])) {
+                } elseif (in_array($mime_type,['video/mpeg','video/mp4','video/3gpp','video/3gpp2','video/x-flv','video/x-ms-wmv','video/mov','video/mpg','video/swf','video/webm','video/ogg'])) {
                     $file->file_type = 3;
-                }
+                } 
 
                 $file->owner_type = 'training_stages';
                 $file->owner_id = $thisStage->id;

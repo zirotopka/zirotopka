@@ -64,7 +64,8 @@ class ProgramUpdating extends Command
             'surname',
             'slug',
             'program_is_end',
-        ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('program_is_end','=',0);
+        ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('program_is_end','=',0)
+            ->whereNotNull('current_day');
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
@@ -144,6 +145,7 @@ class ProgramUpdating extends Command
             'surname',
             'slug',
             'program_is_end',
+            'current_day',
         ])->whereNotNull('current_programm_id')->where('program_is_start','=',0)->where('program_is_end','=',0);
 
         $users_query->chunk(100, function($users){
@@ -159,6 +161,7 @@ class ProgramUpdating extends Command
 
                 if ($now_timestamp >= $start_timestamp) {
                     $user->program_is_start = 1;
+                    $user->current_day = 1;
                     $user->status = 1;
                     $user->last_updated_at = $userNow;
                     $user->save();
