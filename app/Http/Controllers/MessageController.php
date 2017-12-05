@@ -29,14 +29,17 @@ class MessageController extends Controller
 
         if ($type == 1) {
             $messages = $user->output_messages()->paginate(10);
+            $is_send = true;
         } else {
             $messages = $user->income_messages()->paginate(10);
+            $is_send = false;
         }
 
         $data = [
             'user' => $user,
             'messages' => $messages,
             'type' => $type,
+            'is_send' => $is_send,
         ];
         return view('messages.inbox', $data);
     }
@@ -47,15 +50,17 @@ class MessageController extends Controller
 
 		if ($type == 1) {
 			$messages = Message::where('sender_id','=',$user->id)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
-
+            $is_send = true;
 		} else {
 			$messages = Message::where('recipient_id','=',0)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
+            $is_send = false;
 		}
 
 		$data = [
 			'user' => $user,
 			'messages' => $messages,
 			'type' => $type,
+            'is_send' => $is_send,
 		];
 
 		return view('admin.messages.inbox', $data);
