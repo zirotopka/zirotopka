@@ -64,8 +64,12 @@ class ProgramUpdating extends Command
             'surname',
             'slug',
             'program_is_end',
+            'is_programm_pay',
         ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('program_is_end','=',0)
-            ->whereNotNull('current_day');
+            ->whereNotNull('current_day')->where(function($query){
+                                            $query->whereIn('current_day',[1,2])
+                                                  ->orWhere('is_programm_pay','=',1);
+                                        });
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
