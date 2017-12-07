@@ -49,8 +49,6 @@ Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], funct
 
 	Route::post('user/change_logo', [ 'uses' => 'UserController@change_logo' ] );
 
-	Route::get('privat_office/success_pay', ['uses' => 'PrivatOfficeController@success_pay']);
-
 	// Route::get('lk/{id}', [ 'as' => 'wrverve', 'uses' => 'PrivatOfficeController@index' ] );
 	// Route::get('lk/{id}/edit', ['uses' => 'PrivatOfficeController@personal_data']);
 	Route::get('/{slug}', [ 'as' => 'lk', 'uses' => 'PrivatOfficeController@index' ] );

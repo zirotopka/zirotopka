@@ -11,7 +11,6 @@ use App\Balance;
 use App\Helpers\IP;
 use App\AdjancyList;
 use App\User;
-use App\Accrual;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -94,7 +93,6 @@ class UserController extends Controller
             $user->growth = $request->get("growth");
             $user->age = $request->get("age");
             $user->phone = $request->get("phone");
-            $user->immunity_count = env('START_IMMUNITY_COUNT');
 
             $slug = User::getSlug($user->first_name, $user->last_name, $user->surname);
 
@@ -108,39 +106,18 @@ class UserController extends Controller
 
             $code = $activation->code;
 
-            try {
-                Mail::to($user->email)
-                    ->queue(new ActivasionShipped($user, $request->get("password"), $code));
-            } catch (\Exception $e) {
-                \Log::error($e);
-            }
-            
+            Mail::to($user->email)
+                ->queue(new ActivasionShipped($user, $request->get("password"), $code));
+            // $activation->completed = 1;
             // $activation->save();
 
             $role = Sentinel::findRoleBySlug("client");
             $role->users()->attach($user);
 
-            $sum = 0;
-
-            if (env('IS_GIFT')) {
-                $sum = 500;
-            }
-
-            $balance = new Balance;
-            $balance->user_id = $user->id;
-            $balance->sum = $sum;
-            $balance->save();
-
-            if (env('IS_GIFT')) {
-                $accruals = new Accrual;
-                $accruals->sum = $sum;
-                $accruals->user_id = $user->id;
-                $accruals->type_id = 1;
-                $accruals->balance_id = $balance->id;
-                $accruals->comment = 'Подарочные средства';
-
-                $accruals->save();
-            }
+            Balance::create([
+                'user_id' => $user->id,
+                'sum' => 0,
+            ]);
 
             //referer_code
             if (session()->has('ref')) {
@@ -222,16 +199,10 @@ class UserController extends Controller
         $code = $request->get('code');
 
         if (Activation::complete($user, $code))
-        {   
-            if (!empty($password)) {
-                Sentinel::authenticateAndRemember([ 'email' => $user->email, 'password' => $password ]);
+        {
+            Sentinel::authenticateAndRemember([ 'email' => $user->email, 'password' => $password ]);
 
-                return redirect($user->slug); 
-            } else {
-                session(['success_array' => ['caption' => 'Поздравляем!', 'text' => 'Ваш аккаунт успешно активирован..']]);
-
-                return redirect('/');
-            }
+            return redirect($user->slug); 
         }
         else
         {
@@ -255,12 +226,8 @@ class UserController extends Controller
         $reminder = Reminder::create($sentinelUser);
         $code = $reminder->code;
 
-        try{
-            Mail::to($user->email)
-                    ->queue(new GetPasswordShipped($user, $code));
-        } catch (\Exception $e) {
-            \Log::error($e);
-        }
+        Mail::to($user->email)
+                ->queue(new GetPasswordShipped($user, $code));
 
         session(['success_array' => ['caption' => 'Письмо отправлено!', 'text' => 'На ваш почтовый ящик направлено письмо с обновлением пароля.']]);
 

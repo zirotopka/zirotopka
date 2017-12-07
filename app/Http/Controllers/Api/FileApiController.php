@@ -18,24 +18,20 @@ class FileApiController extends Controller
 	 */
     public function store_attachment(Request $request)
     {   
-        ini_set('memory_limit', '-1');
-        ini_set('max_execution_time', 0);
-        
         if ($request->hasFile('file'))
         {   
-        	// $rules = [
-	        //     'file' => 'mimes:jpeg,pjpeg,png,mpeg,mp4,3gpp,3gpp2,x-flv,x-ms-wmv,mov,mpg,swf',
-	        // ];
-	        // $messages = [
-	        //     'file.mimes' => 'Некоректный тип файла',
-	        // ];
-            //'video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv,video/mov,video/mpg,video/swf','video/webm','video/ogg'
+        	$rules = [
+	            'file' => 'mimes:jpeg,pjpeg,png,mpeg,mp4,3gpp,3gpp2,x-flv,x-ms-wmv',
+	        ];
+	        $messages = [
+	            'file.mimes' => 'Некоректный тип файла',
+	        ];
 
-	        // $validator = Validator::make($request->all(), $rules, $messages);
+	        $validator = Validator::make($request->all(), $rules, $messages);
 
-	        // if ($validator->fails()) {
-	        //     return response()->json(['code' => 400, 'text' => 'Некоректный тип файла']);
-	        // }
+	        if ($validator->fails()) {
+	            return response()->json(['code' => 400, 'text' => 'Некоректный тип файла']);
+	        }
 	       	//$user = $request->get('user');
 	        $user = Sentinel::getUser();
 
@@ -47,7 +43,7 @@ class FileApiController extends Controller
 
             $size = $file->getclientSize(); 
 
-            if ($size > 170857600) {
+            if ($size > 104857600) {
                 return response()->json(['code' => 404, 'text' => 'Файл не должен превышать 100 мб']);
             }
 

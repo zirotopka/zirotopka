@@ -21,34 +21,6 @@
     <link rel="stylesheet" href="/assets/lightbox/dist/css/lightbox.min.css">
     <link rel="shortcut icon" href="{{ asset('ico/faviсon.png') }}" type="image/png" />
 
-    <script type="text/javascript" >
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function() {
-                try {
-                    w.yaCounter46718757 = new Ya.Metrika({
-                        id:46718757,
-                        clickmap:true,
-                        trackLinks:true,
-                        accurateTrackBounce:true,
-                        webvisor:true
-                    });
-                } catch(e) { }
-            });
-
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () { n.parentNode.insertBefore(s, n); };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else { f(); }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/46718757" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
 
 	<title>Reformator.ONE</title>
 
@@ -69,7 +41,7 @@
                                 <img src="{{'/image/logos/'.$user->user_ava_url}}" alt="" class="img-circle logo-img">
                             @else
                                 <img src="/image/logos/default.jpg" alt="" class="img-circle logo-img">
-                            @endif   <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}<br>
+                            @endif   <p class="user-fln">{{$user->first_name}} <br> {{$user->surname}}<br><br><span class="l_mn_raiting">Ваш рейтинг: {{$user->first_rating.'/'.$user->second_rating}}</span></p>
                         </li>
                         <li>
                            <a href="/{{$user->slug}}" class="profile_btns lgn">
@@ -142,11 +114,6 @@
                                     <?php 
                                         $empty_hearts = 5;
                                         $full_hearts = $user->immunity_count;
-
-                                        if ($full_hearts > 5) {
-                                            $full_hearts = 5;
-                                        }
-
                                         $empty_hearts -= $full_hearts;
                                     ?>
                                     
@@ -185,7 +152,7 @@
                                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li style="cursor: pointer"><a href="/{{$user->slug}}">ПРОГРАММА <b class="hidden-xs">ТРЕНИРОВОК</b></a></li>
+                                    <li><a href="/{{$user->slug}}">ПРОГРАММА <b class="hidden-xs">ТРЕНИРОВОК</b></a></li>
                                     <li><a href="/{{$user->slug}}/edit">ПРОФИЛЬ</a></li>
                                     <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>
@@ -244,6 +211,7 @@
     <script type="text/javascript" src="/assets/js/perfect-scrollbar.jquery.min.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/classie.js"></script>
     <script type="text/javascript" src="/assets/navigation/js/sidebarEffects.js"></script>
+    <script type="text/javascript" src="/assets/js/calendar.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
     <script type="text/javascript" src="/assets/lightbox/dist/js/lightbox.min.js"></script>
 

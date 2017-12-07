@@ -5,7 +5,7 @@
         <button type="button" class="close cls_mod_btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="/ico/close_modal.png" alt=""></span></button>
     		<div class="input_money">
     			<p class="add_money">Поздравляем, вы успешно закончили программу.</p>
-    			<b>Вы можете начать программу заново или выбрать новую</b>
+    			<b>Вы можете начать программу заного или выбрать новую</b>
     	    <p><a class="btn forms-btns" href="/privat_office/start_new_program">ВЫБОР ПРОГРАММЫ</a></p>
     		</div>
       </div>

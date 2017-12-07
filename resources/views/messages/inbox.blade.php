@@ -26,15 +26,12 @@
 					@forelse ($messages as $message)
 						<li class="min_msg_cont show-message" data-type="{{$type}}" data-id="{{$message->id}}">
 							<div class="min_left_col col-lg-6 col-md-6 col-sm-6 col-xs-6">
-								<p class="who_send  {{empty($is_send) && empty($message->is_read) ? 'orange-color' : ''}}">{{!empty($message->outputs) ? $message->outputs->first_name.' '.$message->outputs->last_name : 'Неизвестный отправитель'}}</p>
+								<p class="who_send">{{!empty($message->outputs) ? $message->outputs->first_name.' '.$message->outputs->last_name : 'Неизвестный отправитель'}}</p>
 								<a class="answer_msg" href="/messages/new">Ответить на вопрос</a>
 							</div>
 							<div class="min_right_col col-lg-6 col-md-6 col-sm-6 col-xs-6">
 								<p class="when_send">{{Carbon\Carbon::parse($message->created_at)->format('m-d')}}</p>
-								@if (!empty($is_send) && !empty($message->is_read))
-									<span class="answer_msg">Прочитано</span>
-								@endif
-								<!-- <img class="attach_ico" src="/ico/attach_grey.png" alt=""> -->
+								<img class="attach_ico" src="/ico/attach_grey.png" alt="">
 							</div>
 						</li>
 					@empty
