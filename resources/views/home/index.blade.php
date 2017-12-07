@@ -118,7 +118,7 @@
                         <a href="/programm/r.one_lite">
                             <img src="/ico/start.jpg" class="start" alt="">
                             <div class="program-description hidden-xs hidden-sm">Программа для новичков</div>
-                            <p class="prg1">R.ONE start</p>
+                            <p class="prg1">R.ONE Lite</p>
                             <div class="start_shader_gray"><p>Lite</p></div>
                             <div class="start_shader">
                                 <h4>R.ONE Lite</h4>
