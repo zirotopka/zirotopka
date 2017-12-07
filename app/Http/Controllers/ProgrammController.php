@@ -53,7 +53,7 @@ class ProgrammController extends Controller
                 $template = 'ronestart';
                 break;
             case 'r.one_lite' :
-                $template = 'ronestart-lite';
+                $template = 'ronestartlite';
                 break;
             default:
                 $template = 'zaglush';
@@ -65,7 +65,7 @@ class ProgrammController extends Controller
             'slug' => $slug,
             'program' => $programm,
         ];
-
+        
         return view('programs.'.$template, $data);
     }
 

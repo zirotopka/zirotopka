@@ -43,10 +43,8 @@
                             <p>ДЛЯ КОГО</p>
                             <span>14</span>
                         </div>
-                        <p class="rst_ctn">
-                            {{$program->description}}
-                        </p>
-                        <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
+                       
+                        <button type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО11</button>
                     </div>
                     <div class="rstart-img-cnt col-xs-5 col-sm-5 col-md-5 col-lg-5">
                         <img src="/ico/easy_lvl.svg" class="frs_imgs">
