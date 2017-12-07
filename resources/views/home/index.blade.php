@@ -17,6 +17,8 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
+    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-187498-8zpvp';</script>
+    
     <script src="/assets/home/index-scrollspy.js"></script>
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
@@ -123,7 +125,16 @@
                                 <p>Программа по лайт-цене для новичков</p>
                             </a><a href="/programm/r.one_lite" class="arrow start-arrow"></a>
                         </div>
-
+                            <img src="/ico/start.jpg" class="start" alt="">
+                            <div class="program-description hidden-xs hidden-sm">Программа по лайт-цене для новичков</div>
+                            <p class="prg1">R.ONE Lite</p>
+                            <div class="start_shader_gray"><p>Lite</p></div>
+                            <div class="start_shader">
+                                <h4>R.ONE Lite</h4>
+                                <p>Программа по лайт-цене для новичков</p>
+                                <a href="/programm/r.one_lite" class="arrow start-arrow" ></a>
+                            </div>
+                        </a>
                     </div>
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
                         <div class="first_progr_string">
@@ -139,7 +150,16 @@
                                             <p>Программа для начинающих</p>
                                         </a><a class="arrow progr-arrow" href="/programm/r.one_start"></a>
                                     </div>
-
+                                        <img src="/ico/pro.jpg" class="prog_imgs prop" alt="">
+                                        <div class="program-description hidden-xs hidden-sm">Программа для начинающих</div>
+                                        <p class="prprp prg2">R.ONE START</p>
+                                        <div class="pro_shader_gray"><p>ST</p></div>
+                                        <div class="pro_shader">
+                                            <h4>R.ONE START</h4>
+                                            <p>Программа для начинающих</p>
+                                            <a class="arrow progr-arrow" href="/programm/r.one_start"></a>
+                                        </div>
+                                    </a>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <a href="/programm/r.one_pro">
@@ -152,6 +172,9 @@
                                             <p>Программа для продвинутых</p>
                                         </a><a class="arrow progr-arrow" href="/programm/r.one_pro"></a>
                                     </div>
+                                            <a class="arrow progr-arrow" href="/programm/r.one_pro"></a>
+                                        </div>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -181,7 +204,16 @@
                                             <p>Программа для развития силы и роста мышечной массы</p>
                                         </a><a class="arrow progr-arrow" href="/programm/r.one_power"></a>
                                     </div>
-
+                                        <img src="/ico/power.jpg" class="prog_imgs powp" alt="">
+                                        <div class="program-description hidden-xs hidden-sm">Программа для развития силы и роста мышечной массы</div>
+                                        <p class="prprp prg3">R.ONE power</p>
+                                        <div class="pow_shader_gray"><p>PO</p></div>
+                                        <div class="pow_shader">
+                                            <h4>R.ONE power</h4>
+                                            <p>Программа для развития силы и роста мышечной массы</p>
+                                            <a class="arrow progr-arrow" href="/programm/r.one_power"></a>
+                                        </div>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
