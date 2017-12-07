@@ -8,6 +8,29 @@ footer{
     padding: 30px 15px!important;
 }
 
+/*
+    R-ONE LITE PROGRAM
+ */
+.program-r_one-lite .home_content{
+    background: #f7f7f7;
+}
+.program-r_one-lite .r_one-lite-logo{
+    position: relative;
+    margin-bottom: -35px;
+    padding-left: 1.5em;
+}
+.program-r_one-lite .rstart-img-cnt{
+    margin: -10px 0 0 0;
+}
+
+.program-r_one-lite .rstart-txt-cnt span:before{
+    background: #f7f7f7;
+    color: #ff8a18;
+}
+.program-r_one-lite .rst_ctn{
+    margin: 20px 0 60px;
+}
+
 .block-envelope{
     padding: 18px 0;
     border-left: 1px solid #909090;
