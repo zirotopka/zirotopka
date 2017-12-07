@@ -23,7 +23,7 @@
 @overwrite
 
 @section("content")
-    <div class="container-fluid" >
+    <div class="container-fluid program-r_one-lite" >
         @include('home.fixed-menu')
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2"></div>   
         <div class="home_content col-lg-10 col-md-10 col-sm-12 col-xs-12">
