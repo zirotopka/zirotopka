@@ -117,7 +117,7 @@
                     <div class="rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <a href="/programm/r.one_lite">
                             <img src="/ico/start.jpg" class="start" alt="">
-                            <div class="program-description hidden-xs hidden-sm">Программа для новичков</div>
+                            <div class="program-description hidden-xs hidden-sm">Программа по лайт-цене для новичков</div>
                             <p class="prg1">R.ONE Lite</p>
                             <div class="start_shader_gray"><p>Lite</p></div>
                             <div class="start_shader">
@@ -138,7 +138,7 @@
                                         <div class="pro_shader_gray"><p>ST</p></div>
                                         <div class="pro_shader">
                                             <h4>R.ONE START</h4>
-                                            <p>Программа для продвинутых</p>
+                                            <p>Программа для начинающих</p>
                                             <a class="arrow progr-arrow" href="/programm/r.one_start"></a>
                                         </div>
                                     </a>
