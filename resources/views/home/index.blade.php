@@ -113,46 +113,45 @@
                 <h2>ПРОГРАММЫ</h2>
                 <div class="programm_list">
                     <div class="rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                        <a href="/programm/ROneStart">
-                            <img src="/ico/start.jpg" class="start" alt="">
-                            <div class="program-description hidden-xs hidden-sm">Программа для новичков</div>
-                            <p class="prg1">R.ONE start</p>
-                            <div class="start_shader_gray"><p>ST</p></div>
-                            <div class="start_shader">
-                                <h4>R.ONE start</h4>
-                                <p>Программа для новичков</p>
-                                <a href="/programm/ROneStart" class="arrow start-arrow" ></a>
-                            </div>
-                        </a>
+                        <a href="/programm/r.one_lite">
+                            <img src="/ico/program-start-lite.jpg" class="start" alt="">
+                            <div class="program-description hidden-xs hidden-sm">Программа по лайт-цене для новичков</div>
+                            <p class="prg1" style="display:block;">R.ONE Lite</p>
+                            <div class="start_shader_gray"><p>Lite</p></div>
+                        </a><div class="start_shader" style="display:none;"><a href="/programm/r.one_lite">
+                                <h4>R.ONE Lite</h4>
+                                <p>Программа по лайт-цене для новичков</p>
+                            </a><a href="/programm/r.one_lite" class="arrow start-arrow"></a>
+                        </div>
+
                     </div>
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
                         <div class="first_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="/programm/r.one_pro">
-                                        <img src="/ico/pro.jpg" class="prog_imgs prop" alt="">
-                                        <div class="program-description hidden-xs hidden-sm">Программа для продвинутых</div>
-                                        <p class="prprp prg2">R.ONE pro</p>
-                                        <div class="pro_shader_gray"><p>PR</p></div>
-                                        <div class="pro_shader">
-                                            <h4>R.ONE pro</h4>
-                                            <p>Программа для продвинутых</p>
-                                            <a class="arrow progr-arrow" href="/programm/r.one_pro"></a>
-                                        </div>
-                                    </a>
+                                    <a href="/programm/r.one_start">
+                                        <img src="/ico/program-start.jpg" class="prog_imgs prop" alt="">
+                                        <div class="program-description hidden-xs hidden-sm">Программа для начинающих</div>
+                                        <p class="prprp prg2" style="display:block;">R.ONE START</p>
+                                        <div class="pro_shader_gray"><p>ST</p></div>
+                                    </a><div class="pro_shader" style="display:none;"><a href="/programm/r.one_start">
+                                            <h4>R.ONE START</h4>
+                                            <p>Программа для начинающих</p>
+                                        </a><a class="arrow progr-arrow" href="/programm/r.one_start"></a>
+                                    </div>
+
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="/programm/r.one_power">
-                                        <img src="/ico/power.jpg" class="prog_imgs powp" alt="">
-                                        <div class="program-description hidden-xs hidden-sm">Программа для развития силы и роста мышечной массы</div>
-                                        <p class="prprp prg3">R.ONE power</p>
-                                        <div class="pow_shader_gray"><p>PO</p></div>
-                                        <div class="pow_shader">
-                                            <h4>R.ONE power</h4>
-                                            <p>Программа для развития силы и роста мышечной массы</p>
-                                            <a class="arrow progr-arrow" href="/programm/r.one_power"></a>
-                                        </div>
-                                    </a>
+                                    <a href="/programm/r.one_pro">
+                                        <img src="/ico/program-pro.jpg" class="prog_imgs prop" alt="">
+                                        <div class="program-description hidden-xs hidden-sm">Программа для продвинутых</div>
+                                        <p class="prprp prg2" style="display:block;">R.ONE pro</p>
+                                        <div class="pro_shader_gray"><p>PR</p></div>
+                                    </a><div class="pro_shader" style="display:block;"><a href="/programm/r.one_pro">
+                                            <h4>R.ONE pro</h4>
+                                            <p>Программа для продвинутых</p>
+                                        </a><a class="arrow progr-arrow" href="/programm/r.one_pro"></a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -160,29 +159,29 @@
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <a href="/programm/r.one_runner">
-                                        <img src="/ico/run.jpg" class="prog_imgs runp" alt="">
+                                        <img src="/ico/program-runner.jpg" class="prog_imgs runp" alt="">
                                         <div class="program-description hidden-xs hidden-sm">Программа для начинающих любителей бега</div>
-                                        <p class="prprp prg4">R.ONE run</p>
+                                        <p class="prprp prg4" style="display:block;">R.ONE run</p>
                                         <div class="run_shader_gray"><p>RU</p></div>
-                                        <div class="run_shader">
+                                    </a><div class="run_shader" style="display:none;"><a href="/programm/r.one_runner">
                                             <h4>R.ONE run</h4>
                                             <p>Программа для начинающих любителей бега</p>
-                                            <a class="arrow progr-arrow" href="/programm/r.one_runner"></a>
-                                        </div>
-                                    </a>
+                                        </a><a class="arrow progr-arrow" href="/programm/r.one_runner"></a>
+                                    </div>
+
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="/programm/r.one_runner_plus">
-                                        <img src="/ico/run+.jpg" class="prog_imgs runpl" alt="">
-                                        <div class="program-description hidden-xs hidden-sm">Программа для продвинутых любителей бега</div>
-                                        <p class="prprp prg5">R.ONE run+</p>
-                                        <div class="runp_shader_gray"><p>RU+</p></div>
-                                        <div class="runp_shader">
-                                            <h4>R.ONE run+</h4>
-                                            <p>Программа для продвинутых любителей бега</p>
-                                            <a class="arrow progr-arrow" href="/programm/r.one_runner_plus"></a>
-                                        </div>
-                                    </a>
+                                    <a href="/programm/r.one_power">
+                                        <img src="/ico/program-power.jpg" class="prog_imgs powp" alt="">
+                                        <div class="program-description hidden-xs hidden-sm">Программа для развития силы и роста мышечной массы</div>
+                                        <p class="prprp prg3" style="display:block;">R.ONE power</p>
+                                        <div class="pow_shader_gray"><p>PO</p></div>
+                                    </a><div class="pow_shader" style="display:none;"><a href="/programm/r.one_power">
+                                            <h4>R.ONE power</h4>
+                                            <p>Программа для развития силы и роста мышечной массы</p>
+                                        </a><a class="arrow progr-arrow" href="/programm/r.one_power"></a>
+                                    </div>
+
                                 </li>
                             </ul>
                         </div>
