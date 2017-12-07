@@ -64,7 +64,12 @@ class ProgramUpdating extends Command
             'surname',
             'slug',
             'program_is_end',
-        ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('program_is_end','=',0);
+            'is_programm_pay',
+        ])->whereNotNull('current_programm_id')->where('program_is_start','=',1)->where('program_is_end','=',0)
+            ->whereNotNull('current_day')->where(function($query){
+                                            $query->whereIn('current_day',[1,2])
+                                                  ->orWhere('is_programm_pay','=',1);
+                                        });
 
         $users_query->chunk(100, function($users){
             foreach($users as $user) {
@@ -78,104 +83,55 @@ class ProgramUpdating extends Command
 
                 $difference = $last_updated_at->diffInDays($userNowStartDay,false);
 
-                if ($user->status == 1) {
-                    if ($difference > 0) {           
-                        //Разница в 1 день
-                        $userHour = $userNow->hour;
+                if ($difference > 0) {           
+                    //Разница в 1 день
+                    $userHour = $userNow->hour;
 
-                        if ($userHour >= 22) {
+                    if ($userHour >= 22) {
 
-                            $current_program_day = ProgrammDay::select('id','day','status')
-                                                    ->where('programm_id','=',$user->current_programm_id)
-                                                    ->where('day','=',$user->current_day)
-                                                    ->first();        
+                        $current_program_day = ProgrammDay::select('id','day','status')
+                                                ->where('programm_id','=',$user->current_programm_id)
+                                                ->where('day','=',$user->current_day)
+                                                ->first(); 
 
-                            if (!empty($current_program_day)) {
-                                if (!empty($current_program_day->status)) {
-                                    //Обязательный день
+                        $number_training = $user->current_day + 1;       
 
-                                    $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
+                        if (!empty($current_program_day)) {
+                            if (!empty($current_program_day->status)) {
+                                //Обязательный день
 
-                                    if (count($trainings) == 0) {
-                                        \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by lack of training');
+                                $trainings = $user->trainings()->where('program_day','=',$user->current_day)->first();
 
-                                        $this->user_update ($user, $userNow, 0);
+                                if (empty($trainings)) {
+                                    \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by lack of training');
 
-                                        $this->addBan($user->id);
+                                    $this->user_update ($user, $userNow, 0);
 
-                                        $subject = 'Обновление программы Reformator.One';
-                                        $text = 'Вы не выполнили программу. Сожалеем, но ваш аккаунт заморожен.';
+                                    $this->addBan($user->id, $userNow);
 
-                                        $this->send_mail($user, $subject, $text);
-                                    } else {
-                                        $current_stages = $trainings->stages;
-                                        
-                                        if (count($current_stages) <= 0) {
-                                            \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by null stages');
-                                            $this->user_update ($user, $userNow, 0);
+                                    $subject = 'Обновление программы Reformator.One';
+                                    $text = 'Вы не выполнили программу. Сожалеем, но ваш аккаунт заморожен.';
 
-                                            $this->addBan($user->id);
-
-                                            $subject = 'Обновление программы Reformator.One';
-                                            $text = 'Вы выполнили не все упражнения. Сожалеем, но ваш аккаунт заморожен.';
-
-                                            $this->send_mail($user, $subject, $text);
-
-                                        } else {
-                                            $programm_stages_count = ProgrammStage::select('id','status')
-                                                                ->where('programm_day_id','=',$current_program_day->id)
-                                                                ->with('exercive')
-                                                                ->count();
-
-                                            if (count($current_stages) < count($programm_stages_count)) {
-                                                \Log::info('ProgramUpdating: User №'.$user->id.' get freezing by few stages');
-
-                                                $$subject = 'Обновление программы Reformator.One';
-                                                $text = 'Вы выполнили не все упражнения. Сожалеем, но ваш аккаунт заморожен.';
-
-                                                $this->send_mail($user, $subject, $text);
-
-                                                $this->user_update ($user, $userNow, 0);
-
-                                                $this->addBan($user->id);
-                                            } else {
-                                                $subject = 'Обновление программы Reformator.One';
-                                                $text = 'Вам доступна новая тренировка за '.$user->current_day.'-й день.';
-
-                                                $this->send_mail($user, $subject, $text);
-
-                                                $this->user_update ($user, $userNow, 1);
-                                            }
-                                        }
-                                    }
+                                    $this->send_mail($user, $subject, $text);
                                 } else {
                                     $subject = 'Обновление программы Reformator.One';
-                                    $text = 'Вам доступна новая тренировка за '.$user->current_day.'-й день.';
+                                    $text = 'Вам доступна новая тренировка за '.$number_training.'-й день.';
 
                                     $this->send_mail($user, $subject, $text);
 
                                     $this->user_update ($user, $userNow, 1);
                                 }
                             } else {
-                                //Ошибка дня
-                                \Log::error('ProgramUpdating: User №'.$user->id.' has no program day');
+                                $subject = 'Обновление программы Reformator.One';
+                                $text = 'Вам доступна новая тренировка за '.$number_training.'-й день.';
+
+                                $this->send_mail($user, $subject, $text);
+
+                                $this->user_update ($user, $userNow, 1);
                             }
-                        }
-                    }
-                } else {
-                    $userHour = $userNow->hour;
-
-                    if ($userHour >= 22) {
-                        if ($difference > 0) {
-                            $subject = 'Напоминание от Reformator.One';
-                            $text = 'Ваш аккаунт заморожен. Вы можете восстановить его и продолжить тренировки.';
-
-                            $this->send_mail($user, $subject, $text);
-
-                            $this->addBan($user->id);
-
-                            $user->last_updated_at = $userNow;
-                            $user->save();
+                        } else {
+                            //Ошибка дня
+                            \Log::error('ProgramUpdating: User №'.$user->id.' has no program day');
                         }
                     }
                 }
@@ -193,6 +149,7 @@ class ProgramUpdating extends Command
             'surname',
             'slug',
             'program_is_end',
+            'current_day',
         ])->whereNotNull('current_programm_id')->where('program_is_start','=',0)->where('program_is_end','=',0);
 
         $users_query->chunk(100, function($users){
@@ -208,6 +165,7 @@ class ProgramUpdating extends Command
 
                 if ($now_timestamp >= $start_timestamp) {
                     $user->program_is_start = 1;
+                    $user->current_day = 1;
                     $user->status = 1;
                     $user->last_updated_at = $userNow;
                     $user->save();
@@ -244,55 +202,74 @@ class ProgramUpdating extends Command
             }
         });
 
-        //Начало программы
-        $users_query = User::select([
-            'id',
-            'program_is_start',
-            'start_training_day',
-            'timezone',
-        ])->where('program_is_start','=',0);
+        //Дедлайн тренировки
+        $trainings = Training::select([
+            'is_moderator_check',
+            'user_id',
+            'program_day',
+            'deadline_at',
+            'status',
+            'program_day_id',
+        ])->where('is_moderator_check','=',0)
+            ->whereNotNull('deadline_at');
 
-        $users_query->chunk(100, function($users){
-            foreach($users as $user) {
+        $trainings->chunk(100, function($trainings){
+            foreach($trainings as $training) {
+                $user = User::select([
+                    'id',
+                    'timezone',
+                    'status',
+                ])->where('id','=',$training->id)
+                    ->first();
+
+                if (empty($user)) {
+                    \Log::error('ProgramUpdating: user not find. Training '.$training->id);
+                    continue;
+                }
+
                 $userTimezone = User::getTimezone($user);
-
-                $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
-                $start_timestamp = $start_training_day->timestamp;
-
                 $userNow = Carbon::now($userTimezone);
-                $now_timestamp = $userNow->timestamp;
+                $nowTimestamp = $userNow->timestamp;
 
-                if ($now_timestamp >= $start_timestamp) {
-                    $user->program_is_start = 1;
-                    $user->last_updated_at = $userNow;
-                    $user->save();
+                if ($nowTimestamp > $training->timestamp) {
+                    $program_day = ProgrammDay::select([
+                                            'id',
+                                            'status'
+                                        ])
+                                        ->where('id','=',$training->program_day_id)
+                                        ->first();
 
-                    \Log::info('Пользователь №'.$user->id.' начал программу!');
-                } else {
-                    $start_training_day->subDay();
-                    $start_year = $start_training_day->year;
-                    $start_month = $start_training_day->month;
-                    $start_day = $start_training_day->day;
+                    if (empty($program_day)) {
+                        \Log::error('ProgramUpdating: ProgrammDay not find. Training '.$training->id);
+                        continue;
+                    }
 
-                    $now_year = $userNow->year;
-                    $now_month = $userNow->month;
-                    $now_day = $userNow->day;
-                    $now_hour =  $userNow->hour;
+                    $subject = 'Обновление программы Reformator.One';
 
-                    if (($start_year == $now_year) && ($start_month == $now_month) && ($start_day == $now_day) && ($now_hour >= 22)) {
-                        $user->program_is_start = 1;
-                        $user->last_updated_at = $userNow;
+                    if (!empty($program_day->status)) {
+                        $user->status = 0;
                         $user->save();
 
-                        \Log::info('Пользователь №'.$user->id.' начал программу!');
+                        $this->addBan($user->id, $userNow);
+
+                        $text = ' К сожалению, тренировка за '.$training->program_day.' день была отклонена тренером. Ваш аккаунт заморожен.';
+                    } else {
+                        $text = ' К сожалению, тренировка за необязательный '.$training->program_day.' день была отклонена тренером.';
                     }
+
+                    $training->is_moderator_check = 1;
+                    $training->status = 0;
+                    $training->save();
+                   
+                    $this->send_mail($user, $subject, $text);    
                 }
             }
         });
     }
 
-    public function addBan($userId) {
+    public function addBan($userId, $userNow) {
         $bans = new Ban;
+        $bans->created_at = $userNow->format('Y-m-d H:i:s');
         $bans->user_id = $userId;
         $bans->save();
 
@@ -317,8 +294,11 @@ class ProgramUpdating extends Command
     }
 
     public function send_mail($user, $subject, $text) {
-        //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
-        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+        try {
+            Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+        } catch (\Exception $e) {
+            \Log::error($e);
+        }
 
         return 1;
     }

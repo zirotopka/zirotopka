@@ -8,7 +8,7 @@
                     @else
                         <img src="/image/logos/default.jpg" alt="" class="img-circle logo-img">
                     @endif   
-                    <p class="user-fln">{{$user->first_name}}<br>{{$user->surname}}<br><br><span class="l_mn_raiting">Ваш рейтинг: {{$user->first_rating.'/'.$user->second_rating}}</span></p>
+                    <p class="user-fln">{{$user->first_name}}<br>{{$user->surname}}<br>
                 </li>
                 <li>
                     <a href="/{{$user->slug}}" class="profile_btns lgn">
@@ -100,43 +100,50 @@
                     </li>
                 </div>
                 <li>
-                    <a href="/programm/ROneStart" class="profile_btns" id="prgr_l_mn">
+                    <a href="/programm/r.one_lite" class="profile_btns" id="prgr_l_mn">
                         <p>программа <br> тренировок</p>
                     </a> 
                 </li>
                 <div class="programm_spy">
+                    <li class="sc strt-lite">
+                        <p class="fm_line">|</p>
+                        <a href="/programm/r.one_lite">
+                            <p>01 R.ONE START LITE</p>
+                        </a> 
+                        <p class="fm_line">|</p>
+                    </li>
                     <li class="sc strt">
                         <p class="fm_line">|</p>
-                        <a href="/programm/ROneStart">
-                            <p>03 R.ONE START</p>
+                        <a href="/programm/r.one_start">
+                            <p>02 R.ONE START</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
                     <li class="sc pro">
                         <p class="fm_line">|</p>
                         <a href="/programm/r.one_pro">
-                            <p>04 R.ONE PRO</p>
+                            <p>03 R.ONE PRO</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
                     <li class="sc run">
                         <p class="fm_line">|</p>
                         <a href="/programm/r.one_runner">
-                            <p>05 R.ONE RUN</p>
+                            <p>04 R.ONE RUN</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
                     <li class="sc runp">
                         <p class="fm_line">|</p>
                         <a href="/programm/r.one_runner_plus">
-                            <p>06 R.ONE RUN+</p>
+                            <p>05 R.ONE RUN+</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
                     <li class="sc pow">
                         <p class="fm_line">|</p>
                         <a href="/programm/r.one_power">
-                            <p>07 R.ONE POWER</p>
+                            <p>06 R.ONE POWER</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>

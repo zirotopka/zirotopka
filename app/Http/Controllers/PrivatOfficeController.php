@@ -56,7 +56,17 @@ class PrivatOfficeController extends Controller
             $programs = Programm::select('id','description','name')
                             ->get();
 
-            return view('privat_office._partials._choose_program_form', ['user' => $user, 'programs' => $programs]);
+            $nowHour = $now->hour;
+
+            if ($nowHour >= 22) {
+                $now->addDay();
+            }
+
+            $nowYear = $now->year;
+            $nowMonth = $now->month;
+            $nowDay = $now->day;
+
+            return view('privat_office._partials._choose_program_form', ['user' => $user, 'programs' => $programs, 'nowYear' => $nowYear, 'nowMonth' => $nowMonth, 'nowDay' => $nowDay]);
         }
 
         $current_program_day = ProgrammDay::select('id','day','status')
@@ -95,7 +105,7 @@ class PrivatOfficeController extends Controller
         //Проверка даты программы
         if (!empty($user->start_training_day) && empty($user->program_is_start)) {
             $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
-            // $start_training_day->subDay();
+            //$start_training_day->subDay();
             $monthHuman = $this->monthHuman;
             
             return view('privat_office._partials._program_comming_soon', ['user' => $user, 'start_training_day' => $start_training_day, 'monthHuman' => $monthHuman]); 
@@ -153,14 +163,20 @@ class PrivatOfficeController extends Controller
             'bans' => $bans,
     	];
 
-        if (session()->has('pay_program')) {
-            //Добавил вывод подтверждения
-            session()->pull('pay_program');
-            
-            $data = array_merge($data,['first_pay_program' => 1]);
-        }
-
     	return view('privat_office.index', $data);
+    }
+
+    public function success_pay(Request $request) {
+        $user = Sentinel::getUser();
+
+       if (session()->has('first_pay_program')) {
+            //Добавил вывод подтверждения
+            session()->pull('first_pay_program');
+            
+            return view('privat_office.success_pay',['user' => $user]);
+        } else {
+            return redirect('/'.$user->slug);
+        }
     }
 
 	public function index_admin($id)
@@ -227,7 +243,7 @@ class PrivatOfficeController extends Controller
                                         ->with('videos')
                                         ->first();
             if ( !empty($exercive) && count( $exercive->videos ) > 0 ){
-                return ['response' => 200, 'data' => $exercive->videos->first()->file_url ];
+                return ['response' => 200, 'data' => env('APP_URL').$exercive->videos->first()->file_url ];
             } else {
                 return ['response' => 500, 'data' => 'Не найден exercive']; 
             }
@@ -282,7 +298,7 @@ class PrivatOfficeController extends Controller
             if ($request->get('year') && $request->get('month') && $request->get('day')) {
                 try {
                     $birthday = Carbon::parse($request->get('year').'-'.$request->get('month').'-'.$request->get('day'));
-                } catch (Exception $e) {
+                } catch (\Exception $e) {
                     $birthday = null;
                 }
             } else {
@@ -316,7 +332,7 @@ class PrivatOfficeController extends Controller
 
                 return redirect('/'.$user->slug.'/edit');
 
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 return redirect()->back()->withErrors($e->getMessages());
             }
         }
@@ -443,8 +459,9 @@ class PrivatOfficeController extends Controller
             $accruals->save();
 
             if ($type == 1) {
-            //Програма
-                return redirect('/'.$user->slug);
+                //Програма
+                session()->set('first_pay_program',1);
+                return redirect('/privat_office/success_pay');
             } elseif ($type == 2) {
                 return redirect('/'.$user->slug);
             }
@@ -601,7 +618,7 @@ class PrivatOfficeController extends Controller
 
         if ($user->current_day == 28 && $user->program_is_end == 1) {
             $user->current_day = null;
-            $user->status = 0;
+            $user->status = 1;
             $user->is_programm_pay = 0;
             $user->program_is_start = 0;
             $user->start_training_day = null;

@@ -36,9 +36,6 @@ class PayMasterController extends Controller
         $balance->sum = $balance->sum + $LMI_PAID_AMOUNT;
         $balance->save();
 
-        $user->status = 1;
-        $user->save();
-
         $accrual = new Accrual;
         $accrual->sum = $LMI_PAID_AMOUNT;
         $accrual->user_id = $userID;
@@ -49,8 +46,8 @@ class PayMasterController extends Controller
         	\Log::warning('PayMasterController: Не сохранен платеж в системе. Json: '.json_encode($request->all()));
         }
 
-        $subject = 'Оплата программы Reformator.One';
-        $text = 'Вы успешно приобрели программу. Желаем удачи в тренировках.';
+        $subject = 'Пополнение средств Reformator.One';
+        $text = 'Вы успешно пополнили счет вашего личного кабинета. Желаем удачи в тренировках.';
 
         $this->send_mail($user, $subject, $text);
 
@@ -115,8 +112,11 @@ class PayMasterController extends Controller
     }
 
     public function send_mail($user, $subject, $text) {
-        //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
-        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+        try {
+            Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
+        } catch (\Exception $e) {
+            \Log::error($e);
+        }
 
         return 1;
     }

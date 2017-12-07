@@ -9,5 +9,5 @@
 @overwrite
 
 @section("content")
-
+ <?php echo phpinfo(); ?>
 @overwrite

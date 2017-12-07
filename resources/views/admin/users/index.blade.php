@@ -37,6 +37,7 @@
                 <th>Заработал</th>
                 <th>Вывел</th>
                 <th></th>
+                <th></th>
                 <th>Действия</th>
                 </thead>
                 <tbody>
@@ -126,6 +127,11 @@
                                 $accruals_output = $user->accruals_output->sum('sum');
                             ?>
                             {{$accruals_output}}
+                        </td>
+                        <td>
+                            <a href="{{'/admin/messages/sendAll?recipient='.$user->id}}">
+                                <i class="fa fa-envelope-open" aria-hidden="true" style="color:black"></i>
+                            </a>
                         </td>
                         <td class="tc-center nowrap">
                             <div class="users-toolbar" role="toolbar">

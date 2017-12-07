@@ -215,8 +215,12 @@ class User extends CartalystUser
     }
 
     public static function sendPassword($user, $password) {
-        Mail::to($user->email)
-                ->queue(new PasswordShipped($password));
+        try {
+            Mail::to($user->email)
+                    ->queue(new PasswordShipped($password));
+        } catch (\Exception $e) {
+            \Log::error($e);
+        }
 
         return 1;
     }

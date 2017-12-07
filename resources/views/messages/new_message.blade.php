@@ -19,7 +19,7 @@
 		<p class="new-msg">НОВОЕ СООБЩЕНИЕ</p>
 		<form action="#" id="new_message_form">
 			{{ csrf_field() }}
-			<input name="recipient_id" type="hidden" value="1">
+			<input name="recipient_id" type="hidden" value="0">
 			<input name="sender_id" type="hidden" value="{{$user->id}}">
 			<input name="subject" type="text" placeholder="Тема:" class="msg_theme">
 			<br>

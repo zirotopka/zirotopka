@@ -9,29 +9,30 @@ $( document ).ready(function() {
 // 	}) 
 
   $('body').on('click','.video_holder',function() {
-    var video_modal_form = $('#video-modal'),
-        thisContainer = jQuery(this),
- 			  exercive_id = thisContainer.data('id');
+      var video_modal_form = $('#video-modal'),
+          thisContainer = jQuery(this),
+          exercive_id = thisContainer.data('id');
 
- 		jQuery.ajax({
-      type: "post",
-      url: '/privat_office/get_exercive_video',
-      data: {exercive_id: exercive_id},
-      success: function (data) {
-        if (data['response'] == 200) {
-          
-          var video = videojs("training-video");
-          video.src(data['data']);
-          video_modal_form.modal('show');
-          video.load();
-          video.play();
+      jQuery.ajax({
+        type: "post",
+        url: '/privat_office/get_exercive_video',
+        data: {exercive_id: exercive_id},
+        success: function (data) {
+          if (data['response'] == 200) {
 
-        } else {
-            alert('Видео не может быть загружено. Обратитесь в тех. поддержку.')
+            var video = videojs("training-video");
+            video.src(data['data']);
+            video_modal_form.modal('show');
+            video.load();
+            video.play();
+
+          } else {
+              console.log(data);
+              alert('Видео не может быть загружено. Обратитесь в тех. поддержку.')
+          }
         }
-      }
+      });
     });
-  });
   $("#video-modal").on('hide.bs.modal', function () {
       var video = document.getElementsByTagName('video');
       for (var i = 0; i < video.length; i++) {

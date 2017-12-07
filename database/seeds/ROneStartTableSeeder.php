@@ -17,7 +17,7 @@ class ROneStartTableSeeder extends Seeder
      */
     public function run()
     {	
-    	$program = Programm::where('slug','=','ROneStart')->first();
+    	$program = Programm::where('slug','=','r.one_start')->first();
 
     	if (!empty($program)) {
     		$programDays = ProgrammDay::where('programm_id','=',$program->id)->get();
@@ -45,14 +45,14 @@ class ROneStartTableSeeder extends Seeder
 
     	$programm = new Programm;
     	$programm->id = 1;
-    	$programm->slug = 'ROneStart';
+    	$programm->slug = 'r.one_start';
     	$programm->name = 'R.ONE START';
     	$programm->description = 'Программа тренировок подойдет для всех вне зависимости от уровня подготовки, в том числе для новичков или тех, кто очень давно не занимался спортом и только сейчас готов стать реформатором. Попробуйте бесплатно в течение тестового периода.';
         $programm->cost = 0;
         $programm->days =28;
-        $programm->trainings =9;
-        $programm->day_off =8;
-        $programm->tasks =9;
+        $programm->trainings =8;
+        $programm->day_off =10;
+        $programm->tasks =11;
 
         if ( $programm->save() ) {
     		$programm_id = $programm->id;

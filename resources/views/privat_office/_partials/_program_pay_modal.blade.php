@@ -5,7 +5,7 @@
                 <p class="orang-txt test">ЗАВЕРШЕНИЕ ТЕСТОВОГО ПЕРИОДА</p>        
                 <p class="gray-text">К сожалению, Ваш тестовый период закончился. <br>Чтобы продолжить участие, необходимо активировать программу</p>
                 <p class="orang-txt price">
-                    2500 <img src="/image/ref.svg" style="width: 2vw; position: relative; top: -3px;">
+                    {{$sum}} <img src="/image/ref.svg" style="width: 2vw; position: relative; top: -3px;">
                 </p>
                 <form action="{{env('APP_URL').'/privat_office/payProduct/1'}}" method="POST" class="form-horizontal">
 					<input name="user_id" type="hidden" value="{{$user->id}}">

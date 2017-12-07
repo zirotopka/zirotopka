@@ -4,8 +4,21 @@ var image_mime = ['image/jpeg','image/pjpeg','image/png'],
 $( document ).ready(function() {
 	update_training_height();
 	update_feed_heigth();
+
+	checkIsFiles();
+
 	$('body').on('click','.fa-window-close',function(){
+		var otchet = $(this).closest('.otchet').eq(0),
+			otch_hover = otchet.find('.otch_hover').eq(0);
+
 		$(this).closest('.attachment-item').remove();
+
+		//Прячем кнопку
+		if (otch_hover.hasClass('hidden')) {
+			otch_hover.removeClass('hidden');
+		}
+
+		checkIsFiles();
 	});
 
 	$( window ).resize(function() {
@@ -14,83 +27,46 @@ $( document ).ready(function() {
 	});
 
 	$('body').on('click','#send-proof-file',function(){
-		var reports = jQuery('.otchet'),
-			programm_stages = {};
+		var sendBtn = jQuery(this);
 
-		jQuery.each(reports, function(index, report){
-			var attachment_files = jQuery(report).find('input.attachment-file'),
-				data_programm_stage = jQuery(report).data('programm-stage'),
-				attachment_files_arr = [],
-				url;
+		if (!sendBtn.hasClass('send-proof-file_act')) {
+			swal({
+			   title: 'Внимание!',
+			   text: 'Выполните все упражнения',
+			   showCloseButton: true,
+			   showConfirmButton: false,
+			})
 
-			if (attachment_files.length > 0) {
-				jQuery.each(attachment_files, function(index, file){
-					url = jQuery(file).val();
-					attachment_files_arr.push(url);
-				});
-
-				programm_stages[data_programm_stage] = attachment_files_arr;
-			}
-		});
+			return true;
+		}
 
 		swal({
-            title: "Загрузка тренировки!",
-            text: "Ожидайте. Это может занять некоторое время",
-            imageUrl: "/ico/spinner.gif",
-            imageWidth: '50',
-            imageHeight: '50',
-            showConfirmButton: false
-        });
+            title: 'Внимание!',
+            text: 'Вы готовы отправить отчет?',
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "rgb(15,157,88)",
+            confirmButtonText: "Ок",
+            cancelButtonText: "Нет",
+            closeOnConfirm: true,
+            closeOnCancel: true
+        }).then(
+		   function () {
+		   	   sendReport();
+		    }, function (dismiss) {
 
-        $.ajax({
-	        url: '/api/private_office/store_training',
-	        type: 'POST',
-	        data: {programm_stages: JSON.stringify(programm_stages)},
-	        success: function(result) {
-	        	console.log(result);
-	        	if (result['code'] == 200) {
-					 swal({
-					   title: 'Спасибо!',
-					   text: result['text'],
-					   showCloseButton: true,
-					   showConfirmButton: true,
-					   confirmButtonText: 'Oк',
-					   confirmButtonColor: '#ff8a18',
-					 }).then(
-					   function () {
-					   	   window.location.href = '/';
-					    }, function (dismiss) {
-					    	swal.close();
-					 	}
-					 )
-				} else {
-					swal({
-					   title: 'Ошибка!',
-					   text: result['text'],
-					   showCloseButton: true,
-					   showConfirmButton: false,
-					})
-				}
-
-	        },
-	        error: function( jqXHR, textStatus, errorThrown ){
-	        	swal({
-				   title: 'Ошибка!',
-				   text: 'ОШИБКИ AJAX запроса: ' + textStatus,
-				   showCloseButton: true,
-				   showConfirmButton: false,
-				})
-	        }
-	    });
+		 	}
+		 )
 	});
 
 	$('body').on('change','.add_file', function() {
 		var file = this.files[0],
+			otch_hover = jQuery(this).closest('.otch_hover').eq(0),
 			report = jQuery(this).closest('.otchet').eq(0),
 			attachment_container = report.find('.attachment-container').eq(0),
 			attachment_items = attachment_container.find('.attachment-item');
 
-		if (attachment_items.length <= 4) {
+		if (attachment_items.length < 1) {
 			swal({
 				title: "Загрузка файла!",
 	            text: "Ожидайте. Это может занять некоторое время",
@@ -133,6 +109,14 @@ $( document ).ready(function() {
 
 						attachment_container.append(attachment_html);
 
+						//Прячем кнопку
+						if (!otch_hover.hasClass('hidden')) {
+							otch_hover.addClass('hidden');
+						}
+
+						//Показываем отправку
+						checkIsFiles();
+						
 						swal.close();
 					} else {
 						swal({
@@ -147,7 +131,7 @@ $( document ).ready(function() {
 		        error: function( jqXHR, textStatus, errorThrown ){
 		        	swal({
 					   title: 'Ошибка!',
-					   text: 'ОШИБКИ AJAX запроса: ' + textStatus,
+					   text: 'Превышен допустимый размер файла (100 Мб)',
 					   showCloseButton: true,
 					   showConfirmButton: false,
 					})
@@ -163,6 +147,94 @@ $( document ).ready(function() {
 		}
 	});
 });
+
+function sendReport() {
+	var reports = jQuery('.otchet'),
+		programm_stages = {};
+
+	jQuery.each(reports, function(index, report){
+		var attachment_file = jQuery(report).find('input.attachment-file').eq(0).val(),
+			data_programm_stage = jQuery(report).data('programm-stage');
+
+		programm_stages[data_programm_stage] = attachment_file;
+	});
+
+	swal({
+        title: "Загрузка тренировки!",
+        text: "Ожидайте. Это может занять некоторое время",
+        imageUrl: "/ico/spinner.gif",
+        imageWidth: '50',
+        imageHeight: '50',
+        showConfirmButton: false
+    });
+
+    $.ajax({
+        url: '/api/private_office/store_training',
+        type: 'POST',
+        data: {programm_stages: JSON.stringify(programm_stages)},
+        success: function(result) {
+        	console.log(result);
+        	if (result['code'] == 200) {
+				 swal({
+				   title: 'Спасибо!',
+				   text: result['text'],
+				   showCloseButton: true,
+				   showConfirmButton: true,
+				   confirmButtonText: 'Oк',
+				   confirmButtonColor: '#ff8a18',
+				 }).then(
+				   function () {
+				   	    window.location.href = '/';
+				    }, function (dismiss) {
+				    	window.location.href = '/';
+				 	}
+				 )
+			} else {
+				swal({
+				   title: 'Ошибка!',
+				   text: result['text'],
+				   showCloseButton: true,
+				   showConfirmButton: false,
+				})
+			}
+
+        },
+        error: function( jqXHR, textStatus, errorThrown ){
+        	swal({
+			   title: 'Ошибка!',
+			   text: 'ОШИБКИ AJAX запроса: ' + textStatus,
+			   showCloseButton: true,
+			   showConfirmButton: false,
+			})
+        }
+    });
+}
+
+function checkIsFiles() {
+	var reports = jQuery('.otchet'),
+		sendBtn = jQuery('#send-proof-file'),
+		handler = 1;
+
+	jQuery.each(reports, function(index, report){
+		var attachment_files = jQuery(report).find('input.attachment-file');
+
+		if (attachment_files.length <= 0) {
+			handler = 0;
+		}
+	});
+
+	if (handler) {
+		if (!sendBtn.hasClass('send-proof-file_act')) {
+			sendBtn.addClass('send-proof-file_act');
+		}
+	} else {
+		if (sendBtn.hasClass('send-proof-file_act')) {
+			sendBtn.removeClass('send-proof-file_act');
+		}
+	}
+
+	return true;
+}
 
 function update_training_height() {
 	if ($('body').width() > 766){

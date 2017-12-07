@@ -10,6 +10,15 @@
 
 @section('js')
     @parent
+
+    <script>
+      var nowYear = {{ $nowYear }};
+      var nowMonth = {{ $nowMonth }};
+      var nowDay = {{ $nowDay }};
+    </script>
+
+    <script type="text/javascript" src="/assets/js/calendar.js"></script>
+
     <!-- Добавлять js тут -->
     <!-- <script src="http://vjs.zencdn.net/6.1.0/video.js"></script> -->
     <script type="text/javascript" src="/assets/privat_account/account.js?123"></script>
