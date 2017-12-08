@@ -62,10 +62,9 @@
                     <img src="/ico/drop-ico.png" alt="" class="ddicc">
                     <br>
                     <select class="selectpicker" name="program_id" id="program_id" >
-                    <!--  @foreach ($programs as $program)
+                      @foreach ($programs as $program)
                         <option value="{{$program->id}}">{{$program->name}} </option>  
-                      @endforeach -->
-                        <option value="1">R.ONE START </option>
+                      @endforeach
                     </select>
                 </div>
                 <br>

@@ -33,6 +33,7 @@ class PrivatOfficeController extends Controller
         11 => 'ноября',
         12 => 'декабря',
     ];
+    
     public function index($slug)
     {	
     	$user = Sentinel::getUser();
@@ -54,6 +55,7 @@ class PrivatOfficeController extends Controller
         //Выбор программы
         if ( empty($user->current_programm_id) ) {
             $programs = Programm::select('id','description','name')
+                            ->where('status','=',1)
                             ->get();
 
             $nowHour = $now->hour;
@@ -97,7 +99,13 @@ class PrivatOfficeController extends Controller
                     $pay_description = 'Для приобритения програмы вам не хватает средств на балансе. Пополните, пожалуйста, баланс.';
                     $sum = $program_cost - $balance->sum;
 
-                    return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description]);
+                    if (env('PAYMENT_STATUS') == 'prod') {
+                        $template = '_refer_money_modal';
+                    } else {
+                        $template = '_refer_money_test_modal';
+                    }
+
+                    return view('privat_office._partials._refer_money_pay', ['user' => $user, 'sum' => $sum,'pay_description' => $pay_description, 'template' => $template]);
                 }
             }
         }
@@ -105,7 +113,7 @@ class PrivatOfficeController extends Controller
         //Проверка даты программы
         if (!empty($user->start_training_day) && empty($user->program_is_start)) {
             $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
-            //$start_training_day->subDay();
+            // $start_training_day->subDay();
             $monthHuman = $this->monthHuman;
             
             return view('privat_office._partials._program_comming_soon', ['user' => $user, 'start_training_day' => $start_training_day, 'monthHuman' => $monthHuman]); 
@@ -163,20 +171,14 @@ class PrivatOfficeController extends Controller
             'bans' => $bans,
     	];
 
-    	return view('privat_office.index', $data);
-    }
-
-    public function success_pay(Request $request) {
-        $user = Sentinel::getUser();
-
-       if (session()->has('first_pay_program')) {
+        if (session()->has('pay_program')) {
             //Добавил вывод подтверждения
-            session()->pull('first_pay_program');
+            session()->pull('pay_program');
             
-            return view('privat_office.success_pay',['user' => $user]);
-        } else {
-            return redirect('/'.$user->slug);
+            $data = array_merge($data,['first_pay_program' => 1]);
         }
+
+    	return view('privat_office.index', $data);
     }
 
 	public function index_admin($id)
@@ -232,6 +234,19 @@ class PrivatOfficeController extends Controller
 		return view('privat_office.index', $data);
 	}
 
+    public function success_pay(Request $request) {
+        $user = Sentinel::getUser();
+
+       if (session()->has('first_pay_program')) {
+            //Добавил вывод подтверждения
+            session()->pull('first_pay_program');
+            
+            return view('privat_office.success_pay',['user' => $user]);
+        } else {
+            return redirect('/'.$user->slug);
+        }
+    }
+
     /**
      * Получаем видео по тренировке 
      */
@@ -243,7 +258,7 @@ class PrivatOfficeController extends Controller
                                         ->with('videos')
                                         ->first();
             if ( !empty($exercive) && count( $exercive->videos ) > 0 ){
-                return ['response' => 200, 'data' => env('APP_URL').$exercive->videos->first()->file_url ];
+                return ['response' => 200, 'data' => $exercive->videos->first()->file_url ];
             } else {
                 return ['response' => 500, 'data' => 'Не найден exercive']; 
             }
@@ -298,7 +313,7 @@ class PrivatOfficeController extends Controller
             if ($request->get('year') && $request->get('month') && $request->get('day')) {
                 try {
                     $birthday = Carbon::parse($request->get('year').'-'.$request->get('month').'-'.$request->get('day'));
-                } catch (\Exception $e) {
+                } catch (Exception $e) {
                     $birthday = null;
                 }
             } else {
@@ -332,7 +347,7 @@ class PrivatOfficeController extends Controller
 
                 return redirect('/'.$user->slug.'/edit');
 
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 return redirect()->back()->withErrors($e->getMessages());
             }
         }
@@ -449,14 +464,16 @@ class PrivatOfficeController extends Controller
             $user->status = 1;
             $user->save();
 
-            $accruals = new Accrual;
-            $accruals->sum = $sum;
-            $accruals->user_id = $user->id;
-            $accruals->type_id = 2;
-            $accruals->balance_id = $balance->id;
-            $accruals->comment = $accrualDescription;
+            Accrual::storeAccrual($sum, $user->id, 2, $balance->id, $accrualDescription);
 
-            $accruals->save();
+            $program_slug = $program->slug;
+
+            if ($type == 1 && $program_slug == 'r.one_lite') {
+                $balance->sum = $balance->sum - 1000;
+                $comment = "Остаточные средства к пополнению";
+
+                Accrual::storeAccrual(1000, $user->id, 2, $balance->id, $comment);
+            } 
 
             if ($type == 1) {
                 //Програма
@@ -618,7 +635,7 @@ class PrivatOfficeController extends Controller
 
         if ($user->current_day == 28 && $user->program_is_end == 1) {
             $user->current_day = null;
-            $user->status = 1;
+            $user->status = 0;
             $user->is_programm_pay = 0;
             $user->program_is_start = 0;
             $user->start_training_day = null;

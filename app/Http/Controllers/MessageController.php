@@ -44,27 +44,27 @@ class MessageController extends Controller
         return view('messages.inbox', $data);
     }
 
-	public function index_admin($type)
-	{
-		$user = Sentinel::getUser();
+    public function index_admin($type)
+    {
+        $user = Sentinel::getUser();
 
-		if ($type == 1) {
-			$messages = Message::where('sender_id','=',$user->id)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
+        if ($type == 1) {
+            $messages = Message::where('sender_id','=',$user->id)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
             $is_send = true;
-		} else {
-			$messages = Message::where('recipient_id','=',0)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
+        } else {
+            $messages = Message::where('recipient_id','=',0)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
             $is_send = false;
-		}
+        }
 
-		$data = [
-			'user' => $user,
-			'messages' => $messages,
-			'type' => $type,
+        $data = [
+            'user' => $user,
+            'messages' => $messages,
+            'type' => $type,
             'is_send' => $is_send,
-		];
+        ];
 
-		return view('admin.messages.inbox', $data);
-	}
+        return view('admin.messages.inbox', $data);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -80,28 +80,28 @@ class MessageController extends Controller
         return view('messages.new_message', $data);
     }
 
-	public function sendAll(Request $request)
-	{
-		$user = Sentinel::getUser();
+    public function sendAll(Request $request)
+    {
+        $user = Sentinel::getUser();
 
-		$users = User::select('id','first_name','surname')->get();
-		$data = [
-			'user' => $user,
-			'users' => $users,
-			'recipient_id' => -1
-		];
-		return view('admin.messages.send_all', $data);
-	}
+        $users = User::select('id','first_name','surname')->get();
+        $data = [
+            'user' => $user,
+            'users' => $users,
+            'recipient_id' => -1
+        ];
+        return view('admin.messages.send_all', $data);
+    }
 
-	public function create_admin($recipient_id, Request $request)
-	{
-		$user = Sentinel::getUser();
-		$data = [
-			'user' => $user,
-			'recipient_id' => $recipient_id
-		];
-		return view('admin.messages.new_message', $data);
-	}
+    public function create_admin($recipient_id, Request $request)
+    {
+        $user = Sentinel::getUser();
+        $data = [
+            'user' => $user,
+            'recipient_id' => $recipient_id
+        ];
+        return view('admin.messages.new_message', $data);
+    }
     /**
      * Display the specified resource.
      *
@@ -120,20 +120,20 @@ class MessageController extends Controller
                 $message->is_read = 1;
                 $message->save();
             }
-        	
+            
             $data = [
                 'user' => $user,
                 'message' => $message,
                 'type' => $type,
             ];
 
-			$user_role = DB::table('role_users')->where('user_id', '=', $user->id)->first();
+            $user_role = DB::table('role_users')->where('user_id', '=', $user->id)->first();
 
-			if ($userRole == 4) {
-				$view = view('admin.messages.show', $data)->render();
-			} else {
-				$view = view('messages.show', $data)->render();
-			}
+            if ($userRole == 4) {
+                $view = view('admin.messages.show', $data)->render();
+            } else {
+                $view = view('messages.show', $data)->render();
+            }
 
             return ['response' => 200, 'data' => $view];
         }
@@ -141,28 +141,28 @@ class MessageController extends Controller
         return ['response' => 404, 'text' => 'Сообщение не найдено'];
     }
 
-	public function show_admin($id, Request $request)
-	{
-		$user = Sentinel::getUser();
-		$type = $request->get('type');
-		$message = Message::where('id','=',$id)->with('outputs','files')->first();
+    public function show_admin($id, Request $request)
+    {
+        $user = Sentinel::getUser();
+        $type = $request->get('type');
+        $message = Message::where('id','=',$id)->with('outputs','files')->first();
 
-		if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $message->recipient_id == 0)) {
-			if ($message->recipient_id == 0) {
-        		$message->is_read = 1;
-        		$message->save();
-        	}
+        if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $message->recipient_id == 0)) {
+            if ($message->recipient_id == 0) {
+                $message->is_read = 1;
+                $message->save();
+            }
 
-			$data = [
-				'user' => $user,
-				'message' => $message,
-				'type' => $type,
-			];
-			$view = view('admin.messages.show', $data)->render();
+            $data = [
+                'user' => $user,
+                'message' => $message,
+                'type' => $type,
+            ];
+            $view = view('admin.messages.show', $data)->render();
 
-			return ['response' => 200, 'data' => $view];
-		}
+            return ['response' => 200, 'data' => $view];
+        }
 
-		return ['response' => 404, 'text' => 'Сообщение не найдено'];
-	}
+        return ['response' => 404, 'text' => 'Сообщение не найдено'];
+    }
 }

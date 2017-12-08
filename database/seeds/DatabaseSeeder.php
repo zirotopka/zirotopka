@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Role;
+use App\AccrualType;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,6 +24,22 @@ class DatabaseSeeder extends Seeder
         	$roleModel->name = $role['name'];
         	$roleModel->slug = $role['slug'];
         	$roleModel->save();
+        }
+
+        AccrualType::truncate();
+
+        $accruals_types = [
+            ['id' => 1, 'slug' => 'replenishment', 'name' => 'Пополнение'],
+            ['id' => 2, 'slug' => 'write-off', 'name' => 'Списание'],
+        ];
+
+        foreach ( $accruals_types as $accruals_type ) {
+            $type = new AccrualType;
+            $type->id = $accruals_type['id'];
+            $type->slug = $accruals_type['slug'];
+            $type->name = $accruals_type['name'];
+
+            $type->save();
         }
     }
 }

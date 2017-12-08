@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Accrual;
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 
 use Illuminate\Http\Request;
 use App\Mail\ProgramShipped;
@@ -36,6 +37,9 @@ class PayMasterController extends Controller
         $balance->sum = $balance->sum + $LMI_PAID_AMOUNT;
         $balance->save();
 
+        $user->status = 1;
+        $user->save();
+
         $accrual = new Accrual;
         $accrual->sum = $LMI_PAID_AMOUNT;
         $accrual->user_id = $userID;
@@ -46,8 +50,8 @@ class PayMasterController extends Controller
         	\Log::warning('PayMasterController: Не сохранен платеж в системе. Json: '.json_encode($request->all()));
         }
 
-        $subject = 'Пополнение средств Reformator.One';
-        $text = 'Вы успешно пополнили счет вашего личного кабинета. Желаем удачи в тренировках.';
+        $subject = 'Оплата программы Reformator.One';
+        $text = 'Вы успешно приобрели программу. Желаем удачи в тренировках.';
 
         $this->send_mail($user, $subject, $text);
 
@@ -112,12 +116,42 @@ class PayMasterController extends Controller
     }
 
     public function send_mail($user, $subject, $text) {
-        try {
-            Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
-        } catch (\Exception $e) {
-            \Log::error($e);
-        }
+        //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
+        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
 
         return 1;
+    }
+
+    public function testPayment (Request $request) {
+        if (env('PAYMENT_STATUS') != 'prod') {
+            $user = Sentinel::getUser();
+            $balance = $user->balance;
+
+            if (empty($balance)) {
+                return view('errors.error_balance');
+            }
+
+            $LMI_PAID_AMOUNT = $request->get('LMI_PAYMENT_AMOUNT');
+
+            $balance->sum = $balance->sum + $LMI_PAID_AMOUNT;
+            $balance->save();
+
+            $user->status = 1;
+            $user->save();
+
+            $accrual = new Accrual;
+            $accrual->sum = $LMI_PAID_AMOUNT;
+            $accrual->user_id = $user->id;
+            $accrual->type_id = 1;
+            $accrual->comment = 'Тестовое пополнение средств';
+            $accrual->accruals_json = json_encode($request->all());
+            if (!$accrual->save()) {
+                \Log::warning('PayMasterController: Не сохранен платеж в системе. Json: '.json_encode($request->all()));
+            }
+
+            return redirect('/'.$user->slug);
+        } else {
+            return redirect('/');
+        }
     }
 }

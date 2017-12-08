@@ -12,10 +12,10 @@ use App\File;
 use Validator;
 
 class FileApiController extends Controller
-{	
-	/**
-	 * Сохраняем файл
-	 */
+{   
+    /**
+     * Сохраняем файл
+     */
     public function store_attachment(Request $request)
     {   
         ini_set('memory_limit', '-1');
@@ -23,25 +23,25 @@ class FileApiController extends Controller
         
         if ($request->hasFile('file'))
         {   
-        	// $rules = [
-	        //     'file' => 'mimes:jpeg,pjpeg,png,mpeg,mp4,3gpp,3gpp2,x-flv,x-ms-wmv,mov,mpg,swf',
-	        // ];
-	        // $messages = [
-	        //     'file.mimes' => 'Некоректный тип файла',
-	        // ];
+            // $rules = [
+            //     'file' => 'mimes:jpeg,pjpeg,png,mpeg,mp4,3gpp,3gpp2,x-flv,x-ms-wmv,mov,mpg,swf',
+            // ];
+            // $messages = [
+            //     'file.mimes' => 'Некоректный тип файла',
+            // ];
             //'video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv,video/mov,video/mpg,video/swf','video/webm','video/ogg'
 
-	        // $validator = Validator::make($request->all(), $rules, $messages);
+            // $validator = Validator::make($request->all(), $rules, $messages);
 
-	        // if ($validator->fails()) {
-	        //     return response()->json(['code' => 400, 'text' => 'Некоректный тип файла']);
-	        // }
-	       	//$user = $request->get('user');
-	        $user = Sentinel::getUser();
+            // if ($validator->fails()) {
+            //     return response()->json(['code' => 400, 'text' => 'Некоректный тип файла']);
+            // }
+            //$user = $request->get('user');
+            $user = Sentinel::getUser();
 
-	        if (empty($user)) {
-	            return response()->json(['code' => 404, 'text' => 'User not found']);
-	        }
+            if (empty($user)) {
+                return response()->json(['code' => 404, 'text' => 'User not found']);
+            }
 
             $file = $request->file('file');
 
@@ -60,14 +60,14 @@ class FileApiController extends Controller
             $mime_type = mime_content_type($url);
 
             if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
-            	$preview_url = $request->get('destinationPath').'preview_'.$fileName;
-            	$preview_full_url = public_path().$preview_url;
+                $preview_url = $request->get('destinationPath').'preview_'.$fileName;
+                $preview_full_url = public_path().$preview_url;
 
-            	$image = Image::make($url)->resize(56, 50);
-	            $image->save($preview_full_url);
+                $image = Image::make($url)->resize(56, 50);
+                $image->save($preview_full_url);
 
             } else {
-            	$preview_url = '/ico/video-default.png';
+                $preview_url = '/ico/video-default.png';
             }
 
             return response()->json(['code' => 200, 'file_url' => $request->get('destinationPath').$fileName, 'type' => $mime_type, 'preview' => $preview_url, 'file_name' => $fileName ]);
