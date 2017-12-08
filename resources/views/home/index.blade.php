@@ -136,7 +136,6 @@
                                         <img src="/ico/program-start.jpg" class="prog_imgs prop" alt="">
                                         <div class="program-description hidden-xs hidden-sm">Программа для начинающих</div>
                                         <p class="prprp prg2" style="display:block;">R.ONE START</p>
-                                        <div class="pro_shader_gray"><p>ST</p></div>
                                     </a>
                                     <div class="pro_shader" style="display:none;"><a href="/programm/r.one_start">
                                             <h4>R.ONE START</h4>
@@ -150,7 +149,6 @@
                                         <img src="/ico/program-pro.jpg" class="prog_imgs powp" alt="">
                                         <div class="program-description hidden-xs hidden-sm">Программа для продвинутых</div>
                                         <p class="prprp prg3">R.ONE pro</p>
-                                        <div class="pow_shader_gray"><p>PR</p></div>
                                     </a>
                                     <div class="pow_shader"><a href="/programm/r.one_pro">
                                             <h4>R.ONE pro</h4>
@@ -168,7 +166,6 @@
                                         <img src="/ico/program-runner.jpg" class="prog_imgs runp" alt="">
                                         <div class="program-description hidden-xs hidden-sm">Программа для начинающих любителей бега</div>
                                         <p class="prprp prg4">R.ONE run</p>
-                                        <div class="run_shader_gray"><p>RU</p></div>
                                     </a>
                                     <div class="run_shader"><a href="/programm/r.one_runner">
                                             <h4>R.ONE run</h4>
@@ -182,7 +179,6 @@
                                         <img src="/ico/program-power.jpg" class="prog_imgs runpl" alt="">
                                         <div class="program-description hidden-xs hidden-sm">Программа для развития силы и роста мышечной массы</div>
                                         <p class="prprp prg5">R.ONE power</p>
-                                        <div class="runp_shader_gray"><p>PO</p></div>
                                     </a>
                                     <div class="runp_shader"><a href="/programm/r.one_power">
                                             <h4>R.ONE power</h4>
