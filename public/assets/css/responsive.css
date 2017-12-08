@@ -24,7 +24,7 @@ footer{
 }
 
 .program-r_one-lite .rstart-txt-cnt span:before{
-    background: #f7f7f7;
+    background: #f7f7f7!important;
     color: #ff8a18;
 }
 .program-r_one-lite .rst_ctn{
