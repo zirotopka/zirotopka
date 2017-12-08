@@ -98,7 +98,7 @@
         @endif
             <div class="tcount-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <p class="prgr_name_st">START</p>
-                <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xs-offset-0 col-sm-offset-3">
                     <p class="tc_d">{{$program->days}}</p>
                     <p class="tc_t">ДНЕЙ</p>
                 </div>
