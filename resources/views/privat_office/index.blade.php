@@ -13,12 +13,7 @@
 
 @section('js')
     @parent
-
-    @if(isset($first_pay_program))
-    	<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-187506-hB4iq';</script>
-    @endif
     <!-- Добавлять js тут -->
-    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-187505-gLyzn';</script>
     <!-- <script src="http://vjs.zencdn.net/6.1.0/video.js"></script> -->
     <script type="text/javascript" src="/assets/privat_account/account.js?123"></script>
     <script type="text/javascript" src="/assets/js/video-btn.js?123"></script>
@@ -132,7 +127,6 @@
 								@endif
 											
 							@endforeach	
-
 						</tr>
 						<tr>
 							<?php
@@ -144,7 +138,7 @@
 									if ( $program_day->day < $start_class_key || $program_day->day > ( $start_class_key + 7 ) ) {
 										$cal_class = 'hidden-xs hidden-sm';
 									}
-									//$program_day->day=$program_day->day-1;
+									$program_day->day=$program_day->day-1;
 									$start_date = true;
 								?>
 									
@@ -168,7 +162,6 @@
 									$start_day->addDay();
 								?>
 							@endforeach
-
 						</tr>
 					</table>
 				</div>
@@ -208,16 +201,16 @@
 
 				    		if (!empty($current_stage)) {
 				    			switch ($current_stage->status) {
-				    				case 0:
+				    				case 1:
 								        $stage_status_text = ' (Отправлено)';
 								        break;
-								    case 1:
+								    case 2:
 								        $stage_status_text = ' (На доработку)';
 								        break;
-								    case 2:
-								        $stage_status_text = ' (Одобрено)';
-								        break;
 								    case 3:
+								        $stage_status_text = ' (Подтверждено)';
+								        break;
+								    case 4:
 								        $stage_status_text = ' (Отклонено)';
 								        break;
 								}
@@ -272,7 +265,7 @@
 								<div class="mask"></div>
 							</div>
 						@endif
-						
+
 						<div class="otchet" data-programm-stage="{{$programm_stage->id}}">
 							<div class="attachment-container">
 								@if (count($stage_files) > 0) 
@@ -283,24 +276,20 @@
 											@else
 												<img class="attachment-img" id="attachment-img" src="/ico/video-default.png">
 											@endif
-											@if (empty($current_training))
-												<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>
-											@endif
+											<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>
 											<input type="hidden" class="attachment-file" name="{{'attachment['.uniqid().']'}}" value="{{$file->file_url}}">
 											<span class="attachment-span">{{!empty($file->name) ? $file->name : 'Загруженный файл'}}</span>
 										</div>
 									@endforeach
 								@endif
 							</div>
-							@if (empty($current_training))
-								<div class="otch_hover {{count($stage_files) > 0 ? 'hidden' : ''}}">
-									<div class="load-btn">
-										<img class="load" src="/ico/load.png" alt="">
-										<p class="load-text">Загрузить отчёт</p>
-									</div>
-									<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
+							<div class="otch_hover">
+								<div class="load-btn">
+									<img class="load" src="/ico/load.png" alt="">
+									<p class="load-text">Загрузить отчёт</p>
 								</div>
-							@endif
+								<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
+							</div>
 						</div>
 						<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
 					</div>
@@ -309,15 +298,10 @@
 				</div>	
 			@empty
 			@endforelse
-			
-			@if ( empty($current_program_day->status) && !in_array($current_program_day->day,[1,2]) )
-			@else
-				@if (empty($current_training))
-					<div class="send-proof col-lg-12">
-						<input type="button" class="send-proof-file" id="send-proof-file" value="Отправить на проверку">
-					</div>
-				@endif
-			@endif
+				
+			<div class="send-proof col-lg-12">
+				<button class="send-proof-file" id="send-proof-file"> Отправить на проверку</button>
+			</div>
 
 			<!-- --------------------------------------------------------------- -->
 			<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
@@ -332,11 +316,17 @@
 							<video id="training-video" class="video-js vjs-default-skin"
 							  controls preload="auto"
 							  data-setup='{"responsive": true,"example_option":true}'>
+							 <source src="" type="video/ogg">
+							</video>
 						</div>
 			      </div>
 			    </div>
 			  </div>
 			</div>
+		@endif
+
+		@if(isset($first_pay_program))
+			@include('privat_office._partials._start_programm_form')
 		@endif
 	</div>
 	<!-- <div class="video-js-responsive-container vjs-hd" style="width:80%">

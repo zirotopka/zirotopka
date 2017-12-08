@@ -92,80 +92,99 @@ class MessageApiController extends Controller
             return response()->json(['code' => 406, 'text' => 'Uncorrect data id']);
         }
 
-        try {
-            switch ($recipient_id) {
-                case 0:
-                    $role = Sentinel::findRoleBySlug("admin");
+        if ($recipient_id == -1) {
 
-                    $this->sendMessage($request, $sender_id, $recipient_id);
-                    break;
-                case -1:
-                    $role = Sentinel::findRoleBySlug("client");
-                    $recipients = $role->users;
+        	$allUsers = User::select('id')->get();
+        	foreach ($allUsers as $target) {
 
-                    if (count($recipients) > 0) {
-                        foreach ($recipients as $recipient) {
-                            $this->sendMessage($request, $sender_id, $recipient->id);
-                        }
-                    }
-                    break;
-                default:
-                    $recipient = User::where('id','=',$recipient_id)->first();
-                    $this->sendMessage($request, $sender_id, $recipient->id);
-                    break;
-            }
-        } catch (\Exception $e) {
-            Log::info($e->getMessages());
+				$message = new Message;
+				$message->recipient_id = $target->id;
+				$message->sender_id = $sender_id;
+				$message->subject = $request->get('subject');
+				$message->text = $request->get('text');
+				$message->is_read = 0;
+				if ( $message->save() )
+				{
+					if ($request->has('attachment'))
+					{
+						DB::beginTransaction();
+						foreach ($request->get('attachment') as $file_url)
+						{
+							$file = new File;
+							$file->file_url = $file_url;
 
-            return response()->json(['code' => 400, 'text' => 'Сообщение не сохранено. Не найден получатель.']);
-        }
+							$file_name = basename(public_path().$file_url);
 
-        return response()->json(['code' => 200, 'text' => 'Сообщение отправлено.']);
-    }
+							if (file_exists(public_path() . '/messages/preview_' . $file_name))
+							{
+								$file->preview_url = '/messages/preview_' . $file_name;
+							}
 
-    public function sendMessage(Request $request, $sender_id, $recipient_id) {
-        $message = new Message;
-        $message->recipient_id = $recipient_id;
-        $message->sender_id = $sender_id;
-        $message->subject = $request->get('subject');
-        $message->text = $request->get('text');
-        $message->is_read = 0;
+							$mime_type = mime_content_type(public_path().$file_url);
 
-        if ( $message->save() )
-        {
-            if ($request->has('attachment'))
-            {
-                DB::beginTransaction();
-                foreach ($request->get('attachment') as $file_url)
-                {
-                    $file = new File;
-                    $file->file_url = $file_url;
+							if (in_array($mime_type, ['image/jpeg', 'image/pjpeg', 'image/png']))
+							{
+								$file->file_type = 2;
+							} elseif (in_array($mime_type, ['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv']))
+							{
+								$file->file_type = 3;
+							}
 
-                    $file_name = basename(public_path().$file_url);
+							$file->owner_type = 'message';
+							$file->owner_id = $message->id;
 
-                    if (file_exists(public_path() . '/messages/preview_' . $file_name))
-                    {
-                        $file->preview_url = '/messages/preview_' . $file_name;
-                    }
+							$file->save();
+						}
+						DB::commit();
+					}
+				}
+			}
 
-                    $mime_type = mime_content_type(public_path().$file_url);
+			return response()->json(['code' => 200, 'text' => 'Message is send', 'data' => $message->id]);
 
-                    if (in_array($mime_type, ['image/jpeg', 'image/pjpeg', 'image/png']))
-                    {
-                        $file->file_type = 2;
-                    } elseif (in_array($mime_type, ['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv']))
-                    {
-                        $file->file_type = 3;
-                    }
+		} else {
+			$message = new Message;
+			$message->recipient_id = $recipient_id;
+			$message->sender_id = $sender_id;
+			$message->subject = $request->get('subject');
+			$message->text = $request->get('text');
+			$message->is_read = 0;
+			if ( $message->save() ) {
+				if ($request->has('attachment')) {
+					DB::beginTransaction();
+					foreach ($request->get('attachment') as $file_url) {
+						$file = new File;
+						$file->file_url = $file_url;
 
-                    $file->owner_type = 'message';
-                    $file->owner_id = $message->id;
+						$file_name = basename(public_path().$file_url);
 
-                    $file->save();
-                }
-                DB::commit();
-            }
-        }
+						if (file_exists(public_path().'/messages/preview_'.$file_name)) {
+							$file->preview_url = '/messages/preview_'.$file_name;
+						}
+
+						$mime_type = mime_content_type(public_path().$file_url);
+
+						if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
+							$file->file_type = 2;
+						} elseif (in_array($mime_type,['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv'])) {
+							$file->file_type = 3;
+						}
+
+						$file->owner_type = 'message';
+						$file->owner_id = $message->id;
+
+						$file->save();
+					}
+					DB::commit();
+				}
+
+				return response()->json(['code' => 200, 'text' => 'Message is send', 'data' => $message->id]);
+			} else {
+				return response()->json(['code' => 400, 'text' => 'Message is not save']);
+			}
+		}
+
+
     }
     /**
      * Display the specified resource.

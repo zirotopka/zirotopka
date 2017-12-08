@@ -29,17 +29,14 @@ class MessageController extends Controller
 
         if ($type == 1) {
             $messages = $user->output_messages()->paginate(10);
-            $is_send = true;
         } else {
             $messages = $user->income_messages()->paginate(10);
-            $is_send = false;
         }
 
         $data = [
             'user' => $user,
             'messages' => $messages,
             'type' => $type,
-            'is_send' => $is_send,
         ];
         return view('messages.inbox', $data);
     }
@@ -50,17 +47,15 @@ class MessageController extends Controller
 
 		if ($type == 1) {
 			$messages = Message::where('sender_id','=',$user->id)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
-            $is_send = true;
+
 		} else {
-			$messages = Message::where('recipient_id','=',0)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
-            $is_send = false;
+			$messages = Message::where('recipient_id','=',$user->id)->with('outputs','files')->orderBy('created_at','desc')->paginate(10);
 		}
 
 		$data = [
 			'user' => $user,
 			'messages' => $messages,
 			'type' => $type,
-            'is_send' => $is_send,
 		];
 
 		return view('admin.messages.inbox', $data);
@@ -111,16 +106,15 @@ class MessageController extends Controller
     public function show($id, Request $request)
     {
         $user = Sentinel::getUser();
-        $userRole = $user->role_id;
         $type = $request->get('type');
         $message = Message::where('id','=',$id)->with('outputs','files')->first();
+        
+        if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $user->id == $message->recipient_id)) {
+        	if ($user->id == $message->recipient_id) {
+        		$message->is_read = 1;
+        		$message->save();
+        	}
 
-        if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $message->recipient_id == $user->id)) {
-            if ($user->id == $message->recipient_id) {
-                $message->is_read = 1;
-                $message->save();
-            }
-        	
             $data = [
                 'user' => $user,
                 'message' => $message,
@@ -129,7 +123,7 @@ class MessageController extends Controller
 
 			$user_role = DB::table('role_users')->where('user_id', '=', $user->id)->first();
 
-			if ($userRole == 4) {
+			if ($user_role->role_id == 4) {
 				$view = view('admin.messages.show', $data)->render();
 			} else {
 				$view = view('messages.show', $data)->render();
@@ -147,8 +141,8 @@ class MessageController extends Controller
 		$type = $request->get('type');
 		$message = Message::where('id','=',$id)->with('outputs','files')->first();
 
-		if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $message->recipient_id == 0)) {
-			if ($message->recipient_id == 0) {
+		if (!empty($type) && !empty($message) && ($user->id == $message->sender_id || $user->id == $message->recipient_id)) {
+			if ($user->id == $message->recipient_id) {
         		$message->is_read = 1;
         		$message->save();
         	}
