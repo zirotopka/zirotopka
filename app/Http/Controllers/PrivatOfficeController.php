@@ -129,8 +129,25 @@ class PrivatOfficeController extends Controller
         $current_program_day = 0;
         $programm_days = 0;
         $programm_stages = 0;
+        $current_training = null;
+
+        $difficult_array = ProgrammDay::$difficult_array;
+
+        $bans = Ban::select([
+                        \DB::raw('DATE_FORMAT(created_at, "%Y-%m-%d") as create_time'),
+                    ])
+                    ->where('user_id','=',$user->id)->pluck('create_time')->toArray();
 
         if ( !empty($user->current_programm_id) ) {
+            $current_program = $user->current_program;
+
+            if ($current_program->lite == 1) {
+                $is_lite = 1;
+            } else {
+                $is_lite = 0;
+            }
+
+            
             $programm_days = ProgrammDay::select('id','day','status','interest','lead_time', 'difficult','description', 'feed')
                                         ->where('programm_id','=',$user->current_programm_id)
                                         ->orderBy('day')->get();
@@ -146,20 +163,15 @@ class PrivatOfficeController extends Controller
 
                 }
 
-                $current_training = Training::select(['id','user_id'])
-                                        ->where('user_id','=',$user->id)
-                                        ->where('program_day','=',$user->current_day)
-                                        ->with('stages')
-                                        ->first();
+                if ($is_lite == 0) {
+                    $current_training = Training::select(['id','user_id'])
+                                            ->where('user_id','=',$user->id)
+                                            ->where('program_day','=',$user->current_day)
+                                            ->with('stages')
+                                            ->first();
+                }
             }
         }
-
-        $difficult_array = ProgrammDay::$difficult_array;
-
-        $bans = Ban::select([
-                        \DB::raw('DATE_FORMAT(created_at, "%Y-%m-%d") as create_time'),
-                    ])
-                    ->where('user_id','=',$user->id)->pluck('create_time')->toArray();
 
     	$data = [
     		'user' => $user,
@@ -169,6 +181,7 @@ class PrivatOfficeController extends Controller
             'current_program_day' => $current_program_day,
             'current_training' => $current_training,
             'bans' => $bans,
+            'is_lite' => $is_lite,
     	];
 
         if (session()->has('pay_program')) {

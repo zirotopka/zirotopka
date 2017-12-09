@@ -137,8 +137,8 @@
                             </div>
                             <!-- <div class="immunitet col-lg-3 col-md-3 hidden-sm hidden-xs"> -->
                             <div class="immunitet col-lg-3 col-md-2 hidden-sm hidden-xs" data-toggle="modal" data-target="#immunity-modal">
-                                <span class="nav-text iimtxt" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
-                               <!--  <div class="hearts col-lg-6 col-md-6">  -->
+                                @if (!empty($user->current_program) && (empty($user->current_program->lite)))
+                                    <span class="nav-text iimtxt" style="position: absolute; margin: 0 0 0 -11em;">Ваши иммунитеты:</span>
                                     <?php 
                                         $empty_hearts = 5;
                                         $full_hearts = $user->immunity_count;
@@ -161,7 +161,7 @@
                                             <i class="fa fa-heart-o fa-2x c-white" aria-hidden="true"></i>
                                         @endfor
                                     @endif
-                                <!-- </div> -->
+                                @endif
                             </div>
                             <div class="score nav-text col-lg-2 col-md-3 hidden-xs hidden-sm" > <a href="{{'/'.$user->slug}}/balance" class="wals">
                                 <p>Ваш счёт:&nbsp;{{ !empty($user->balance) ? number_format($user->balance->sum, 0, ',', ' ') : 0 }}&nbsp;</p> 
