@@ -34,12 +34,30 @@ footer{
 
 .programm_list .block-program{
     overflow: hidden;
+    position: relative;
+}
+.programm_list .block-program .program-mask{
+    background: #b6584b;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
 }
 .programm_list .block-program .program-image{
     width: 100%;
-    background-size: cover;
+    background-size: cover!important;
     height: 100%;
     background-position: center top;
+}
+.programm_list .block-program .program-top{
+    height: 49px;
+    background-position: 40px 30px;
+    position: relative;
+    z-index: 2;
+}
+.programm_list .block-program .program-description{
+    padding: 10px 40px 0;
+    color: white;
 }
 .programm_list .block-program-rone-lite{
     height: 37.6vw;
@@ -151,26 +169,10 @@ footer{
     margin: 0 auto!important;
 }
 
-.program-description{
-    padding: 0 30px;
-    position: absolute;
-    top: 30px;
-    left: 13px;
-    color: white;
-    z-index: 3;
-    font-weight: 100;
-    width: 100%;
-    word-wrap: break-word;
-    font-size: 1.4vw;
-}
 .rone_start a:nth-child(1),
 .rone_other_progr a:nth-child(1){
     display: block;
     position: relative;
-}
-.rone_start:hover .program-description,
-.rone_other_progr:hover .program-description{
-    display: none;
 }
 .rl_btns,
 .rg_btn,

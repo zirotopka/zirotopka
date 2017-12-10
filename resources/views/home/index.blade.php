@@ -115,12 +115,15 @@
                 <h2>ПРОГРАММЫ</h2>
                 <div class="programm_list">
                     <div class="block-program block-program-rone-lite rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                        <div class="program-mask"></div>
                         <a href="/programm/r.one_lite" class="program-image" style="background: url('/image/programs/rone-lite.jpg') no-repeat;">
                             <div class="program-top" style="background: url('/image/programs/logos/logo-rone-lite.png') no-repeat;">
-                                
+
                             </div>
-                            <div class="program-description hidden-xs hidden-sm">Программа по лайт-цене для новичков</div>
-                            <p class="prg1" style="display:none;">R.ONE Lite</p>
+                            <div class="program-description hidden-xs hidden-sm">
+                                Программа по лайт-цене <br>для новичков
+                            </div>
+
                         </a>
                     </div>
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
