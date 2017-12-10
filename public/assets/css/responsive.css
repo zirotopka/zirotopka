@@ -47,15 +47,14 @@ footer{
     left: 40px;
     position: relative;
     z-index: 3;
-}
-.programm_list .block-program .program-top img{
     height: 22px;
 }
 .programm_list .block-program .program-description{
-    padding: 10px 40px 0;
     color: white;
     position: relative;
     z-index: 3;
+    top: 62px;
+    left: 40px;
 }
 .programm_list .block-program-rone-lite{
     height: 37.6vw;

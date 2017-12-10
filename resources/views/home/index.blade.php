@@ -129,32 +129,26 @@
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="block-program block-program-rone-start">
-                                        <a href="/programm/r.one_start" class="program-image" style="background: url('/image/programs/rone-lite.jpg') no-repeat;">
+                                        <a href="/programm/r.one_start" class="program-image" style="background: url('/image/programs/rone-start.jpg') no-repeat;">
                                             <div class="program-top">
                                                 <img src="/image/programs/logos/logo-rone-start.png">
                                             </div>
                                             <div class="program-description hidden-xs hidden-sm">
-                                                Программа по лайт-цене <br>для новичков
+                                                Программа для начинающих
                                             </div>
-
-                                            <img src="/ico/program-start.jpg" class="prog_imgs prop" alt="">
-                                            <div class="program-description hidden-xs hidden-sm">Программа для начинающих</div>
-                                            <p class="prprp prg2" style="display:block;">R.ONE START</p>
                                         </a>
                                     </div>
-
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="/programm/r.one_pro">
-                                        <img src="/ico/program-pro.jpg" class="prog_imgs powp" alt="">
-                                        <div class="program-description hidden-xs hidden-sm">Программа для продвинутых</div>
-                                        <p class="prprp prg3">R.ONE pro</p>
-                                    </a>
-                                    <div class="pow_shader"><a href="/programm/r.one_pro">
-                                            <h4>R.ONE pro</h4>
-                                            <p>Программа для продвинутых</p>
+                                    <div class="block-program block-program-rone-start">
+                                        <a href="/programm/r.one_pro" class="program-image" style="background: url('/image/programs/rone-pro.jpg') no-repeat;">
+                                            <div class="program-top">
+                                                <img src="/image/programs/logos/logo-rone-pro.png">
+                                            </div>
+                                            <div class="program-description hidden-xs hidden-sm">
+                                                Программа в разработке
+                                            </div>
                                         </a>
-                                        <a class="arrow progr-arrow" href="/programm/r.one_pro"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -162,29 +156,27 @@
                         <div class="second_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="/programm/r.one_runner">
-                                        <img src="/ico/program-runner.jpg" class="prog_imgs runp" alt="">
-                                        <div class="program-description hidden-xs hidden-sm">Программа для начинающих любителей бега</div>
-                                        <p class="prprp prg4">R.ONE run</p>
-                                    </a>
-                                    <div class="run_shader"><a href="/programm/r.one_runner">
-                                            <h4>R.ONE run</h4>
-                                            <p>Программа для начинающих любителей бега</p>
+                                    <div class="block-program block-program-rone-start">
+                                        <a href="/programm/r.one_runner" class="program-image" style="background: url('/image/programs/rone-runner.jpg') no-repeat;">
+                                            <div class="program-top">
+                                                <img src="/image/programs/logos/logo-rone-runner.png">
+                                            </div>
+                                            <div class="program-description hidden-xs hidden-sm">
+                                                Программа в разработке
+                                            </div>
                                         </a>
-                                        <a class="arrow progr-arrow" href="/programm/r.one_runner"></a>
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="/programm/r.one_power">
-                                        <img src="/ico/program-power.jpg" class="prog_imgs runpl" alt="">
-                                        <div class="program-description hidden-xs hidden-sm">Программа для развития силы и роста мышечной массы</div>
-                                        <p class="prprp prg5">R.ONE power</p>
-                                    </a>
-                                    <div class="runp_shader"><a href="/programm/r.one_power">
-                                            <h4>R.ONE power</h4>
-                                            <p>Программа для развития силы и роста мышечной массы</p>
+                                    <div class="block-program block-program-rone-start">
+                                        <a href="/programm/r.one_power" class="program-image" style="background: url('/image/programs/rone-power.jpg') no-repeat;">
+                                            <div class="program-top">
+                                                <img src="/image/programs/logos/logo-rone-power.png">
+                                            </div>
+                                            <div class="program-description hidden-xs hidden-sm">
+                                                Программа в разработке
+                                            </div>
                                         </a>
-                                        <a class="arrow progr-arrow" href="/programm/r.one_power"></a>
                                     </div>
                                 </li>
                             </ul>
