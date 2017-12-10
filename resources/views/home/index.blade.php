@@ -122,6 +122,9 @@
                             <div class="program-description hidden-xs hidden-sm">
                                 Программа по лайт-цене <br>для новичков
                             </div>
+                            <div class="block-arrow">
+                                <div class="arrow"></div>
+                            </div>
                         </a>
                     </div>
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
