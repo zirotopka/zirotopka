@@ -93,7 +93,7 @@
                         <p>для похудения<br>и поддержания формы</p>
                     </div>
                 </div>
-                <img src="/image/programs/rone-lite.jpg" class="hidden-xs col-sm-5 col-md-5 col-lg-4 startimg">
+                <img src="/ico/prstart-lite.jpg" class="hidden-xs col-sm-5 col-md-5 col-lg-4 startimg">
             </div>
         @endif
             <div class="tcount-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
