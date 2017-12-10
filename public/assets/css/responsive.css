@@ -78,7 +78,8 @@ footer{
 .second_progr_string ul{
     padding-left: 0;
 }
-.second_progr_string ul li{
+.first_progr_string ul li:last-child,
+.second_progr_string ul li:last-child{
     padding-left: 0;
 }
 
