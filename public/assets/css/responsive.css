@@ -79,8 +79,8 @@ footer{
     height: 17.24vw;
     overflow: hidden;
 }
-.programm_list .block-program:hover{
-
+.programm_list .block-program:hover .block-arrow{
+    display: block;
 }
 .first_progr_string ul,
 .second_progr_string ul{
@@ -91,10 +91,32 @@ footer{
     padding-left: 0;
 }
 .block-arrow{
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 7;
+    display: none;
 }
-.block-arrow.arrow{
+.block-arrow .arrow{
     background: url('/ico/arrow1.svg') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    left: -5px;
+    margin-top: 50%;
+    transform: translateY(-50%;)
+    opacity: 0.8;
+    -webkit-transition: 0.15;
+    -moz-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s;
+}
+.block-arrow .arrow:hover{
+    opacity: 1;
 }
 
 .block-envelope{

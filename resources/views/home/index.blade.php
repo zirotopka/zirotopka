@@ -123,7 +123,7 @@
                                 Программа по лайт-цене <br>для новичков
                             </div>
                             <div class="block-arrow">
-                                <div class="arrow"></div>
+                                <div class="arrow-circle"></div>
                             </div>
                         </a>
                     </div>
