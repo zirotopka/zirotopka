@@ -35,7 +35,7 @@ footer{
 .programm_list .block-program{
     overflow: hidden;
 }
-.programm_list .block-program.program-image{
+.programm_list .block-program .program-image{
     width: 100%;
     background-size: cover;
     height: 100%;
