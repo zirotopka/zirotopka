@@ -36,13 +36,6 @@ footer{
     overflow: hidden;
     position: relative;
 }
-.programm_list .block-program .program-mask{
-    background: #b6584b;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-}
 .programm_list .block-program .program-image{
     width: 100%;
     background-size: cover!important;
@@ -51,13 +44,16 @@ footer{
 }
 .programm_list .block-program .program-top{
     height: 49px;
-    background-position: 40px 30px;
+    top: 30px;
+    left: 40px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 .programm_list .block-program .program-description{
     padding: 10px 40px 0;
     color: white;
+    position: relative;
+    z-index: 3;
 }
 .programm_list .block-program-rone-lite{
     height: 37.6vw;
