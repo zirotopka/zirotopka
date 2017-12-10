@@ -117,7 +117,7 @@
                     <div class="block-program block-program-rone-lite rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <a href="/programm/r.one_lite" class="program-image" style="background: url('/image/programs/rone-lite.jpg') no-repeat;">
                             <div class="program-top">
-                                <img src="/image/programs/logos/logo-rone-lite.png">
+                                <img src="/image/programs/logos/logo-rone-lite.png" style="height: 19px;">
                             </div>
                             <div class="program-description hidden-xs hidden-sm">
                                 Программа по лайт-цене <br>для новичков
@@ -131,7 +131,7 @@
                                     <div class="block-program block-program-rone-start">
                                         <a href="/programm/r.one_start" class="program-image" style="background: url('/image/programs/rone-start.jpg') no-repeat;">
                                             <div class="program-top">
-                                                <img src="/image/programs/logos/logo-rone-start.png">
+                                                <img src="/image/programs/logos/logo-rone-start.png" style="height: 17px;">
                                             </div>
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа для начинающих
@@ -143,7 +143,7 @@
                                     <div class="block-program block-program-rone-pro">
                                         <a href="/programm/r.one_pro" class="program-image" style="background: url('/image/programs/rone-pro.jpg') no-repeat;">
                                             <div class="program-top">
-                                                <img src="/image/programs/logos/logo-rone-pro.png">
+                                                <img src="/image/programs/logos/logo-rone-pro.png" style="height: 21px;">
                                             </div>
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа в разработке
@@ -159,7 +159,7 @@
                                     <div class="block-program block-program-rone-runner">
                                         <a href="/programm/r.one_runner" class="program-image" style="background: url('/image/programs/rone-runner.jpg') no-repeat;">
                                             <div class="program-top">
-                                                <img src="/image/programs/logos/logo-rone-runner.png">
+                                                <img src="/image/programs/logos/logo-rone-runner.png" style="height: 17px;">
                                             </div>
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа в разработке
@@ -171,7 +171,7 @@
                                     <div class="block-program block-program-rone-power">
                                         <a href="/programm/r.one_power" class="program-image" style="background: url('/image/programs/rone-power.jpg') no-repeat;">
                                             <div class="program-top">
-                                                <img src="/image/programs/logos/logo-rone-power.png">
+                                                <img src="/image/programs/logos/logo-rone-power.png" style="height: 21px;">
                                             </div>
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа в разработке
