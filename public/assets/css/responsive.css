@@ -107,7 +107,7 @@ footer{
     margin: auto;
     position: relative;
     left: -5px;
-    margin-top: 50%;
+    top: 50%;
     transform: translateY(-50%);
     opacity: 0.8;
     -webkit-transition: 0.15;
