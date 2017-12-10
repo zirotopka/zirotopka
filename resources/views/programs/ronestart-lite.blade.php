@@ -33,7 +33,7 @@
               $class = 'rg_check_in';
           @endphp
             <div class="{{$class}} rstart-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="frs-left col-xs-12 col-sm-7 col-md-7 col-lg-8">
+                <div class="frs-left col-xs-12 col-sm-7 col-md-7 col-lg-7">
                     <div class="r_one-lite-logo">
                         <img src="/ico/r_one-lite-logo" alt="">
                     </div>
@@ -58,7 +58,7 @@
                         <p>для похудения<br>и поддержания формы</p>
                     </div>
                 </div>
-                <img src="/ico/prstart-lite.jpg" class="hidden-xs col-sm-5 col-md-5 col-lg-4 startimg">
+                <img src="/ico/prstart-lite.jpg" class="hidden-xs col-sm-5 col-md-5 col-lg-5 startimg">
             </div>
 
         @else
@@ -68,7 +68,7 @@
                 </button>
             </div>
             <div class="rstart-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="frs-left col-xs-12 col-sm-7 col-md-7 col-lg-8">
+                <div class="frs-left col-xs-12 col-sm-7 col-md-7 col-lg-7">
                     <div class="r_one-lite-logo">
                         <img src="/ico/r_one-lite-logo.png" alt="">
                     </div>
@@ -93,7 +93,7 @@
                         <p>для похудения<br>и поддержания формы</p>
                     </div>
                 </div>
-                <img src="/ico/prstart-lite.jpg" class="hidden-xs col-sm-5 col-md-5 col-lg-4 startimg">
+                <img src="/ico/prstart-lite.jpg" class="hidden-xs col-sm-5 col-md-5 col-lg-5 startimg">
             </div>
         @endif
             <div class="tcount-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
