@@ -37,6 +37,9 @@ footer{
 }
 .programm_list .block-program.program-image{
     width: 100%;
+    background-size: cover;
+    height: 100%;
+    background-position: center top;
 }
 .programm_list .block-program-rone-lite{
     height: 37.6vw;
