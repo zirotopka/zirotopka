@@ -93,18 +93,26 @@
                         <p>для похудения<br>и поддержания формы</p>
                     </div>
                 </div>
-                <img src="/ico/prstart-lite.jpg" class="hidden-xs col-sm-5 col-md-5 col-lg-4 startimg">
+                <img src="/programs/rone-lite.jpg" class="hidden-xs col-sm-5 col-md-5 col-lg-4 startimg">
             </div>
         @endif
             <div class="tcount-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <p class="prgr_name_st">START</p>
-                <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xs-offset-0 col-sm-offset-3">
+                <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <p class="tc_d">{{$program->days}}</p>
                     <p class="tc_t">ДНЕЙ</p>
                 </div>
                 <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <p class="tc_d">{{$program->trainings}}</p>
+                    <p class="tc_t">ОБЯЗАТЕЛЬНЫХ ТРЕНИРОВОК</p>
+                </div>
+                <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <p class="tc_d">{{$program->day_off}}</p>
                     <p class="tc_t">ВЫХОДНЫХ</p>
+                </div>
+                <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <p class="tc_d">{{$program->tasks}}</p>
+                    <p class="tc_t">НЕОБЯЗАТЕЛЬНЫХ ТРЕНИРОВОК</p>
                 </div>
             </div>
             <hr>
