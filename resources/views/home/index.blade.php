@@ -136,6 +136,7 @@
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа для начинающих
                                             </div>
+                                            <div class="program-bottom">ST</div>
                                         </a>
                                     </div>
                                 </li>
@@ -148,6 +149,7 @@
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа в разработке
                                             </div>
+                                            <div class="program-bottom">PR</div>
                                         </a>
                                     </div>
                                 </li>
@@ -164,6 +166,7 @@
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа в разработке
                                             </div>
+                                            <div class="program-bottom">RU</div>
                                         </a>
                                     </div>
                                 </li>
@@ -176,6 +179,7 @@
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа в разработке
                                             </div>
+                                            <div class="program-bottom">PO</div>
                                         </a>
                                     </div>
                                 </li>

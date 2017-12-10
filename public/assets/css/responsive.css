@@ -52,6 +52,9 @@ footer{
     z-index: 3;
     height: 20px;
 }
+.programm_list .block-program .program-bottom{
+
+}
 .programm_list .block-program .program-description{
     color: white;
     position: relative;
