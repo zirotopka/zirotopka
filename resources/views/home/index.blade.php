@@ -143,7 +143,7 @@
                                     <div class="block-program block-program-rone-pro">
                                         <a href="/programm/r.one_pro" class="program-image" style="background: url('/image/programs/rone-pro.jpg') no-repeat;">
                                             <div class="program-top">
-                                                <img src="/image/programs/logos/logo-rone-pro.png" style="height: 21px;">
+                                                <img src="/image/programs/logos/logo-rone-pro.png" style="height: 20px;">
                                             </div>
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа в разработке
@@ -159,7 +159,7 @@
                                     <div class="block-program block-program-rone-runner">
                                         <a href="/programm/r.one_runner" class="program-image" style="background: url('/image/programs/rone-runner.jpg') no-repeat;">
                                             <div class="program-top">
-                                                <img src="/image/programs/logos/logo-rone-runner.png" style="height: 17px;">
+                                                <img src="/image/programs/logos/logo-rone-runner.png" style="height: 16px;">
                                             </div>
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа в разработке
@@ -171,7 +171,7 @@
                                     <div class="block-program block-program-rone-power">
                                         <a href="/programm/r.one_power" class="program-image" style="background: url('/image/programs/rone-power.jpg') no-repeat;">
                                             <div class="program-top">
-                                                <img src="/image/programs/logos/logo-rone-power.png" style="height: 21px;">
+                                                <img src="/image/programs/logos/logo-rone-power.png" style="height: 20px;">
                                             </div>
                                             <div class="program-description hidden-xs hidden-sm">
                                                 Программа в разработке
