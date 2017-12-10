@@ -42,6 +42,9 @@ footer{
     height: 100%;
     background-position: center top;
 }
+.programm_list .block-program .program-image img{
+    width: auto;
+}
 .programm_list .block-program .program-top{
     top: 30px;
     left: 40px;
