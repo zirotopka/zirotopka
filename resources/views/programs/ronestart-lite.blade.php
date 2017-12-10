@@ -97,7 +97,7 @@
             </div>
         @endif
             <div class="tcount-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <p class="prgr_name_st" style="background: url('/image/programs/logos/rone-logo-lite-shadow-large.png') no-repeat"></p>
+                <p class="prgr_name_st" style="background: url('/image/programs/logos/rone-logo-lite-shadow-large.png') no-repeat; width: 100%; height: 100%; background-position: center 90%;"></p>
                 <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <p class="tc_d">{{$program->days}}</p>
                     <p class="tc_t">ДНЕЙ</p>
