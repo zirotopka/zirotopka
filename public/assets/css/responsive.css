@@ -100,7 +100,7 @@ footer{
     z-index: 7;
     display: none;
 }
-.block-arrow .arrow{
+.block-arrow .arrow-circle{
     background: url('/ico/arrow1.svg') no-repeat;
     width: 100px;
     height: 100px;
@@ -115,7 +115,7 @@ footer{
     -o-transition: 0.15s;
     transition: 0.15s;
 }
-.block-arrow .arrow:hover{
+.block-arrow .arrow-circle:hover{
     opacity: 1;
 }
 

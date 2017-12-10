@@ -140,6 +140,9 @@
                                                 Программа для начинающих
                                             </div>
                                             <div class="program-bottom">ST</div>
+                                            <div class="block-arrow">
+                                                <div class="arrow-circle"></div>
+                                            </div>
                                         </a>
                                     </div>
                                 </li>
@@ -153,6 +156,9 @@
                                                 Программа в разработке
                                             </div>
                                             <div class="program-bottom">PR</div>
+                                            <div class="block-arrow">
+                                                <div class="arrow-circle"></div>
+                                            </div>
                                         </a>
                                     </div>
                                 </li>
@@ -170,6 +176,9 @@
                                                 Программа в разработке
                                             </div>
                                             <div class="program-bottom">RU</div>
+                                            <div class="block-arrow">
+                                                <div class="arrow-circle"></div>
+                                            </div>
                                         </a>
                                     </div>
                                 </li>
@@ -183,6 +192,9 @@
                                                 Программа в разработке
                                             </div>
                                             <div class="program-bottom">PO</div>
+                                            <div class="block-arrow">
+                                                <div class="arrow-circle"></div>
+                                            </div>
                                         </a>
                                     </div>
                                 </li>
