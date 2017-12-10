@@ -43,11 +43,13 @@ footer{
     background-position: center top;
 }
 .programm_list .block-program .program-top{
-    height: 49px;
     top: 30px;
     left: 40px;
     position: relative;
     z-index: 3;
+}
+.programm_list .block-program .program-top img{
+    height: 22px;
 }
 .programm_list .block-program .program-description{
     padding: 10px 40px 0;

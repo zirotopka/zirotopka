@@ -116,30 +116,33 @@
                 <div class="programm_list">
                     <div class="block-program block-program-rone-lite rone_start col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <a href="/programm/r.one_lite" class="program-image" style="background: url('/image/programs/rone-lite.jpg') no-repeat;">
-                            <div class="program-top" style="background: url('/image/programs/logos/logo-rone-lite.png') no-repeat;">
-
+                            <div class="program-top">
+                                <img src="/image/programs/logos/logo-rone-lite.png">
                             </div>
                             <div class="program-description hidden-xs hidden-sm">
                                 Программа по лайт-цене <br>для новичков
                             </div>
-
                         </a>
                     </div>
                     <div class="rone_other_progr col-lg-7 col-md-7 col-sm-7 col-xs-12">
                         <div class="first_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="/programm/r.one_start">
-                                        <img src="/ico/program-start.jpg" class="prog_imgs prop" alt="">
-                                        <div class="program-description hidden-xs hidden-sm">Программа для начинающих</div>
-                                        <p class="prprp prg2" style="display:block;">R.ONE START</p>
-                                    </a>
-                                    <div class="pro_shader" style="display:none;"><a href="/programm/r.one_start">
-                                            <h4>R.ONE START</h4>
-                                            <p>Программа для начинающих</p>
+                                    <div class="block-program block-program-rone-start">
+                                        <a href="/programm/r.one_start" class="program-image" style="background: url('/image/programs/rone-lite.jpg') no-repeat;">
+                                            <div class="program-top">
+                                                <img src="/image/programs/logos/logo-rone-start.png">
+                                            </div>
+                                            <div class="program-description hidden-xs hidden-sm">
+                                                Программа по лайт-цене <br>для новичков
+                                            </div>
+
+                                            <img src="/ico/program-start.jpg" class="prog_imgs prop" alt="">
+                                            <div class="program-description hidden-xs hidden-sm">Программа для начинающих</div>
+                                            <p class="prprp prg2" style="display:block;">R.ONE START</p>
                                         </a>
-                                        <a class="arrow progr-arrow" href="/programm/r.one_start"></a>
                                     </div>
+
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <a href="/programm/r.one_pro">
