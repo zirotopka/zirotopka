@@ -140,7 +140,7 @@
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <div class="block-program block-program-rone-start">
+                                    <div class="block-program block-program-rone-pro">
                                         <a href="/programm/r.one_pro" class="program-image" style="background: url('/image/programs/rone-pro.jpg') no-repeat;">
                                             <div class="program-top">
                                                 <img src="/image/programs/logos/logo-rone-pro.png">
@@ -156,7 +156,7 @@
                         <div class="second_progr_string">
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <div class="block-program block-program-rone-start">
+                                    <div class="block-program block-program-rone-runner">
                                         <a href="/programm/r.one_runner" class="program-image" style="background: url('/image/programs/rone-runner.jpg') no-repeat;">
                                             <div class="program-top">
                                                 <img src="/image/programs/logos/logo-rone-runner.png">
@@ -168,7 +168,7 @@
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <div class="block-program block-program-rone-start">
+                                    <div class="block-program block-program-rone-power">
                                         <a href="/programm/r.one_power" class="program-image" style="background: url('/image/programs/rone-power.jpg') no-repeat;">
                                             <div class="program-top">
                                                 <img src="/image/programs/logos/logo-rone-power.png">
