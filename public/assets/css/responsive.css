@@ -108,7 +108,7 @@ footer{
     position: relative;
     left: -5px;
     margin-top: 50%;
-    transform: translateY(-50%;)
+    transform: translateY(-50%);
     opacity: 0.8;
     -webkit-transition: 0.15;
     -moz-transition: 0.15s;
