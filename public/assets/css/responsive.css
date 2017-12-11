@@ -791,16 +791,17 @@ thead{
     }
 }
 @media only screen and (max-width : 768px) {
+    .programm_list .block-program{
+        padding: 0 15px;
+    }
     .programm_list .block-program-rone-lite{
-        height: 100%;
-        overflow: hidden;
+        height: 300px;
     }
     .programm_list .block-program-rone-start,
     .programm_list .block-program-rone-pro,
     .programm_list .block-program-rone-power,
     .programm_list .block-program-rone-runner{
-        height: 100%;
-        overflow: hidden;
+        height: 300px;
     }
 
 
