@@ -826,7 +826,16 @@ thead{
     .rone_other_progr{
         padding: 0;
     }
-
+    .first_progr_string ul li img,
+    .second_progr_string ul li img{
+        width: auto;
+        height: auto;
+        margin: 0;
+    }
+    .programm_list .block-program .program-top,
+    .programm_list .block-program .program-description{
+        text-align: left;
+    }
 
     .msg_pagination{
         display: none;
