@@ -791,6 +791,9 @@ thead{
     }
 }
 @media only screen and (max-width : 768px) {
+    .programm-screen{
+        height: auto;
+    }
     .programm_list .block-program{
         padding: 0 15px;
     }
@@ -802,6 +805,26 @@ thead{
     .programm_list .block-program-rone-power,
     .programm_list .block-program-rone-runner{
         height: 300px;
+    }
+    .first_progr_string ul li,
+    .second_progr_string ul li{
+        width: 100%;
+        margin: 0;
+    }
+    .first_progr_string ul,
+    .second_progr_string ul,
+    .rone_start{
+        padding: 0;
+    }
+    .second_progr_string{
+        margin: 0;
+    }
+    .first_progr_string ul li:last-child,
+    .second_progr_string ul li:last-child{
+        padding: 0 15px;
+    }
+    .rone_other_progr{
+        padding: 0;
     }
 
 

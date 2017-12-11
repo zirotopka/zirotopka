@@ -119,7 +119,7 @@
                             <div class="program-top">
                                 <img src="/image/programs/logos/logo-rone-lite.png" style="height: 19px;">
                             </div>
-                            <div class="program-description hidden-xs hidden-sm">
+                            <div class="program-description">
                                 Программа по лайт-цене <br>для новичков
                             </div>
                             <div class="block-arrow">
@@ -136,7 +136,7 @@
                                             <div class="program-top">
                                                 <img src="/image/programs/logos/logo-rone-start.png" style="height: 17px;">
                                             </div>
-                                            <div class="program-description hidden-xs hidden-sm">
+                                            <div class="program-description">
                                                 Программа для начинающих
                                             </div>
                                             <div class="program-bottom">ST</div>
@@ -152,7 +152,7 @@
                                             <div class="program-top">
                                                 <img src="/image/programs/logos/logo-rone-pro.png" style="height: 20px;">
                                             </div>
-                                            <div class="program-description hidden-xs hidden-sm">
+                                            <div class="program-description">
                                                 Программа в разработке
                                             </div>
                                             <div class="program-bottom">PR</div>
@@ -172,7 +172,7 @@
                                             <div class="program-top">
                                                 <img src="/image/programs/logos/logo-rone-runner.png" style="height: 16px;">
                                             </div>
-                                            <div class="program-description hidden-xs hidden-sm">
+                                            <div class="program-description">
                                                 Программа в разработке
                                             </div>
                                             <div class="program-bottom">RU</div>
@@ -188,7 +188,7 @@
                                             <div class="program-top">
                                                 <img src="/image/programs/logos/logo-rone-power.png" style="height: 20px;">
                                             </div>
-                                            <div class="program-description hidden-xs hidden-sm">
+                                            <div class="program-description">
                                                 Программа в разработке
                                             </div>
                                             <div class="program-bottom">PO</div>
