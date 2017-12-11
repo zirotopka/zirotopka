@@ -311,7 +311,7 @@ input[type="submit"]:hover{
 .send:hover,
 .forms-btns:hover,
 .send-progr-btn:hover{
-    background-color: transparent;
+    background-color: transparent!important;
     border: 3px solid #ef8116;
     color: #ef8116;
 }
