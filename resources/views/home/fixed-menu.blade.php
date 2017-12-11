@@ -101,7 +101,7 @@
                 </div>
                 <li>
                     <a href="/programm/r.one_lite" class="profile_btns" id="prgr_l_mn">
-                        <p>программа <br> тренировок</p>
+                        <p>программы <br> тренировок</p>
                     </a> 
                 </li>
                 <div class="programm_spy">
