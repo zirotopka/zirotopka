@@ -795,7 +795,7 @@ thead{
         height: auto;
     }
     .programm_list .block-program{
-        width: 100%!important;
+
     }
     .programm_list .block-program-rone-lite{
         height: 300px;
@@ -808,7 +808,7 @@ thead{
     }
     .first_progr_string ul li,
     .second_progr_string ul li{
-        width: 100%;
+        width: 100%!important;
     }
     .first_progr_string ul,
     .second_progr_string ul,
