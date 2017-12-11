@@ -801,6 +801,9 @@ thead{
         height: 300px!important;
         padding: 0 15px;
     }
+    .programm_list .block-program-rone-lite a{
+        background-position: center bottom -120px!important;
+    }
     .programm_list .block-program-rone-start,
     .programm_list .block-program-rone-pro,
     .programm_list .block-program-rone-power,
