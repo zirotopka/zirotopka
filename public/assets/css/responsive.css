@@ -1950,7 +1950,7 @@ and (max-width : 1024px){
     left: 12%;
     width: 3px;
     height: 60px;
-    background: #c3c3c3;
+    background: white;
     transform: rotate(45deg);
 }
 .sex label{
