@@ -795,7 +795,7 @@ thead{
         height: auto;
     }
     .programm_list .block-program{
-
+        width: 100%;
     }
     .programm_list .block-program-rone-lite{
         height: 300px;
