@@ -840,6 +840,15 @@ thead{
         text-align: left;
     }
 
+
+
+    .prgr_name_st{
+        background-size: contain;
+    }
+    .r_one-lite-logo img{
+        width: 100%;
+    }
+
     .msg_pagination{
         display: none;
     }
