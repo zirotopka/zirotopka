@@ -795,7 +795,7 @@ thead{
         height: auto;
     }
     .programm_list .block-program{
-        padding: 0 15px;
+
     }
     .programm_list .block-program-rone-lite{
         height: 300px;
@@ -809,12 +809,12 @@ thead{
     .first_progr_string ul li,
     .second_progr_string ul li{
         width: 100%;
-        margin: 0;
     }
     .first_progr_string ul,
     .second_progr_string ul,
     .rone_start{
         padding: 0;
+        margin: 0;
     }
     .second_progr_string{
         margin: 0;
