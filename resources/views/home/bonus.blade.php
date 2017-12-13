@@ -176,7 +176,7 @@
                     <div class="connect_content">
                         <p class="connect">ПРИСОЕДИНИТЬСЯ!</p>
                         <p class="connect_info">ПОЛУЧИТЬ ДОСТУП К ПЛАТФОРМЕ REFORMATOR.ONE <br>В ТЕЧЕНИЕ ТЕСТОВОГО ПЕРИОДА СОВЕРШЕННО БЕСПЛАТНО</p>
-                        <p class="connect_price">2500 руб. <b>0 руб.</b></p>
+                        <p class="connect_price"><b>0 руб.</b></p>
                         <button class="connect_btn" type="button" data-toggle="modal" data-target="#registr">ПОПРОБОВАТЬ БЕСПЛАТНО</button>
                     </div>                
                 </div>
@@ -190,10 +190,10 @@
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
                     <ul>
                         <li class="title">Программы</li>
-                        <li><a href="/programm/ROneStart">R.ONE START</a></li>
+                        <li><a href="/programm/r.one_lite">R.ONE LITE</a></li>
+                        <li><a href="/programm/r.one_start">R.ONE START</a></li>
                         <li><a href="/programm/r.one_pro">R.ONE PRO</a></li>
                         <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
-                        <li><a href="/programm/r.one_runner_plus">R.ONE RUNNER +</a></li>
                         <li><a href="/programm/r.one_power">R.ONE POWER</a></li>
                         <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
                                 ПРОГРАММА</a></li>

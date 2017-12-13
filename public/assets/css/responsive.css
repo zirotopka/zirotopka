@@ -24,11 +24,99 @@ footer{
 }
 
 .program-r_one-lite .rstart-txt-cnt span:before{
-    background: #f7f7f7;
+    background: #f7f7f7!important;
     color: #ff8a18;
 }
 .program-r_one-lite .rst_ctn{
     margin: 20px 0 60px;
+}
+
+
+.programm_list .block-program{
+    overflow: hidden;
+    position: relative;
+}
+.programm_list .block-program .program-image{
+    width: 100%;
+    background-size: cover!important;
+    height: 100%;
+    background-position: center top;
+}
+.programm_list .block-program .program-image img{
+    width: auto;
+}
+.programm_list .block-program .program-top{
+    top: 30px;
+    left: 30px;
+    position: relative;
+    z-index: 3;
+    height: 20px;
+}
+.programm_list .block-program .program-bottom{
+    position: absolute;
+    bottom: -65px;
+    left: -15px;
+    color: rgba(255, 255, 255, 0.15);
+    font-family: 'MuseoSansCyrl_900';
+    font-size: 150px;
+}
+.programm_list .block-program .program-description{
+    color: white;
+    position: relative;
+    z-index: 3;
+    top: 40px;
+    left: 30px;
+    padding-right: 30px;
+}
+.programm_list .block-program-rone-lite{
+    height: 37.7vw;
+    overflow: hidden;
+}
+.programm_list .block-program-rone-start,
+.programm_list .block-program-rone-pro,
+.programm_list .block-program-rone-power,
+.programm_list .block-program-rone-runner{
+    height: 17.24vw;
+    overflow: hidden;
+}
+.programm_list .block-program:hover .block-arrow{
+    display: block;
+}
+.first_progr_string ul,
+.second_progr_string ul{
+    padding-left: 0;
+}
+.first_progr_string ul li:last-child,
+.second_progr_string ul li:last-child{
+    padding-left: 0;
+}
+.block-arrow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 7;
+    display: none;
+}
+.block-arrow .arrow-circle{
+    background: url('/ico/arrow1.svg') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    -webkit-transition: 0.15;
+    -moz-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s;
+}
+.block-arrow .arrow-circle:hover{
+    opacity: 1;
 }
 
 .block-envelope{
@@ -135,26 +223,10 @@ footer{
     margin: 0 auto!important;
 }
 
-.program-description{
-    padding: 0 30px;
-    position: absolute;
-    top: 30px;
-    left: 13px;
-    color: white;
-    z-index: 3;
-    font-weight: 100;
-    width: 100%;
-    word-wrap: break-word;
-    font-size: 1.4vw;
-}
 .rone_start a:nth-child(1),
 .rone_other_progr a:nth-child(1){
     display: block;
     position: relative;
-}
-.rone_start:hover .program-description,
-.rone_other_progr:hover .program-description{
-    display: none;
 }
 .rl_btns,
 .rg_btn,
@@ -239,7 +311,7 @@ input[type="submit"]:hover{
 .send:hover,
 .forms-btns:hover,
 .send-progr-btn:hover{
-    background-color: transparent;
+    background-color: transparent!important;
     border: 3px solid #ef8116;
     color: #ef8116;
 }
@@ -719,6 +791,64 @@ thead{
     }
 }
 @media only screen and (max-width : 768px) {
+    .programm-screen{
+        height: auto;
+    }
+    .programm_list .block-program{
+        margin-top: 15px;
+    }
+    .programm_list .block-program-rone-lite{
+        height: 300px!important;
+        padding: 0 15px;
+    }
+    .programm_list .block-program-rone-lite a{
+        background-position: center bottom -120px!important;
+    }
+    .programm_list .block-program-rone-start,
+    .programm_list .block-program-rone-pro,
+    .programm_list .block-program-rone-power,
+    .programm_list .block-program-rone-runner{
+        height: 300px;
+    }
+    .first_progr_string ul li,
+    .second_progr_string ul li{
+        width: 100%!important;
+    }
+    .first_progr_string ul,
+    .second_progr_string ul{
+        padding: 0!important;
+        margin: 0;
+    }
+    .second_progr_string{
+        margin: 0;
+    }
+    .first_progr_string ul li:last-child,
+    .second_progr_string ul li:last-child{
+        padding: 0 15px;
+    }
+    .rone_other_progr{
+        padding: 0;
+    }
+    .first_progr_string ul li img,
+    .second_progr_string ul li img{
+        width: auto!important;
+        height: auto!important;
+        margin: 0;
+    }
+    .programm_list .block-program .program-top,
+    .programm_list .block-program .program-description{
+        text-align: left;
+    }
+
+
+
+    .prgr_name_st{
+        background-size: contain;
+    }
+    .r_one-lite-logo img{
+        width: 100%;
+    }
+
     .msg_pagination{
         display: none;
     }
@@ -1820,7 +1950,7 @@ and (max-width : 1024px){
     left: 12%;
     width: 3px;
     height: 60px;
-    background: #c3c3c3;
+    background: transparent;
     transform: rotate(45deg);
 }
 .sex label{

@@ -101,14 +101,14 @@
                 </div>
                 <li>
                     <a href="/programm/r.one_lite" class="profile_btns" id="prgr_l_mn">
-                        <p>программа <br> тренировок</p>
+                        <p>программы <br> тренировок</p>
                     </a> 
                 </li>
                 <div class="programm_spy">
                     <li class="sc strt-lite">
                         <p class="fm_line">|</p>
                         <a href="/programm/r.one_lite">
-                            <p>01 R.ONE START LITE</p>
+                            <p>01 R.ONE LITE</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
@@ -129,21 +129,14 @@
                     <li class="sc run">
                         <p class="fm_line">|</p>
                         <a href="/programm/r.one_runner">
-                            <p>04 R.ONE RUN</p>
-                        </a> 
-                        <p class="fm_line">|</p>
-                    </li>
-                    <li class="sc runp">
-                        <p class="fm_line">|</p>
-                        <a href="/programm/r.one_runner_plus">
-                            <p>05 R.ONE RUN+</p>
+                            <p>04 R.ONE RUNNER</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
                     <li class="sc pow">
                         <p class="fm_line">|</p>
                         <a href="/programm/r.one_power">
-                            <p>06 R.ONE POWER</p>
+                            <p>05 R.ONE POWER</p>
                         </a> 
                         <p class="fm_line">|</p>
                     </li>
