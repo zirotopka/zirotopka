@@ -42,7 +42,6 @@ class ProgrammController extends Controller
         }
 
         $data = [
-            'user' => $user,
             'referral' => $referral,
             'slug' => $slug,
             'program' => $programm,
