@@ -71,6 +71,7 @@ class ProgrammController extends Controller
                 'cost',
                 'name',
                 'logo',
+                'lite',
             ])->where('id','=',$request->get('id'))
             ->first();
 

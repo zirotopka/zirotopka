@@ -142,10 +142,17 @@ function get_program() {
 	    url: '/program/get_program',
 	    data: {id: program_id},
 	    success: function (result) {
-			$('#r_prgr_name').text(result['name']);
-			$('#r_prgr_descr').text(result['description']);
-			$('#r_prgr_price').text(result['cost']);
-			$("#program_bnr").attr('src',result['logo']);
+  			$('#r_prgr_name').text(result['name']);
+  			$('#r_prgr_descr').text(result['description']);
+
+        var price = result['cost'];
+
+        if (result['lite'] == 1) {
+          price += ' *';
+        }
+
+  			$('#r_prgr_price').text(price);
+  			$("#program_bnr").attr('src',result['logo']);
     	}  
   	});
 }

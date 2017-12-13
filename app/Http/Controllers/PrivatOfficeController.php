@@ -75,7 +75,7 @@ class PrivatOfficeController extends Controller
                                 ->where('programm_id','=',$user->current_programm_id)
                                 ->where('day','=',$user->current_day)
                                 ->first();        
-        $currentProgramDayStatus = $current_program_day->status;
+        $currentProgramDayStatus = $current_program_day->free_day;
 
         //Оплата програм
         if (!empty($currentProgramDayStatus) || $current_program_day->day > 2) {
