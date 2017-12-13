@@ -30,21 +30,32 @@ class ProgrammController extends Controller
     ];
 
     public function index(Request $request, $slug){
+        $user = Sentinel::getUser();
+        $referral = null;
+
+        if (session()->has('ref')) {
+            $reverralSlug = $request->session()->get('ref');
+            $referral = User::select('id','first_name','surname','slug')->where('slug','=',$reverralSlug)->first();
+        }
+
+        $program = Programm::where('slug','=',$slug)->first();
+
         switch ($slug){
             case 'r.one_start' :
                 $template = 'ronestart';
                 break;
             case 'r.one_lite' :
-                $template = 'ronestartlite';
+                $template = 'ronestart-lite';
                 break;
             default:
                 $template = 'zaglush';
         }
 
         $data = [
+            'user' => $user,
             'referral' => $referral,
             'slug' => $slug,
-            'program' => $programm,
+            'program' => $program,
         ];
         
         return view('programs.'.$template, $data);
