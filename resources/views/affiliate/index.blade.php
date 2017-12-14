@@ -219,7 +219,7 @@
                         width: 70%;
                     }
                     .block-parthner-program .block-footer{
-
+                        height: 50vw;
                     }
                 }
             </style>
