@@ -197,6 +197,7 @@
                         <li><a href="/programm/r.one_power">R.ONE POWER</a></li>
                         <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
                                 ПРОГРАММА</a></li>
+                        <li class="bonus"><a href="/affiliate/desktop">ПАРТНЁРСКАЯ ПРОГРАММА</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">

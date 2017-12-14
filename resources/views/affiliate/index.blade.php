@@ -179,6 +179,10 @@
                     left: 29.5vw;
                 }
 
+                .parthner_btn,
+                .parthner_btn:hover{
+                    margin-top: 4%;
+                }
 
                 @media only screen and (max-width : 768px){
                     .block-parthner-program .block-parthner-information .content .item.upper-image{
@@ -232,7 +236,7 @@
                         <h1>ПАРТНЕРСКАЯ ПРОГРАММА REFORMATOR.ONE</h1>
                         <span>Зарабатывай 1000 рублей с 1 продажи и создавай пассивный доход по системе CPA*</span>
                     </div>
-                    <button type="button" class="reg_btn" data-toggle="modal" data-target="#">СТАТЬ ПАРТНЕРОМ</button>
+                    <button type="button" class="parthner_btn" data-toggle="modal" data-target="#">СТАТЬ ПАРТНЕРОМ</button>
                 </div>
                 <div class="block-content">
                     <div class="block-parthner-information" style="padding-bottom: 0;">
@@ -312,7 +316,7 @@
                     <div class="title">
                         <h1>СОТНИ ПАРТНЕРОВ УЖЕ ЗАРАБАТЫВАЮТ С НАМИ</h1>
                     </div>
-                    <button type="button" class="reg_btn" data-toggle="modal" data-target="#">ПРИСОЕДИНИТЬСЯ</button>
+                    <button type="button" class="parthner_btn" data-toggle="modal" data-target="#">ПРИСОЕДИНИТЬСЯ</button>
                 </div>
             </div>
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -330,8 +334,8 @@
                         <li><a href="/programm/r.one_pro">R.ONE PRO</a></li>
                         <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
                         <li><a href="/programm/r.one_power">R.ONE POWER</a></li>
-                        <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
-                                ПРОГРАММА</a></li>
+                        <li class="bonus"><a href="/bonus" >БОНУСНАЯ <br>ПРОГРАММА</a></li>
+                        <li class="bonus"><a href="/affiliate/desktop">ПАРТНЁРСКАЯ ПРОГРАММА</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
