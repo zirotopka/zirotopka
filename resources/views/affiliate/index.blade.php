@@ -116,16 +116,16 @@
                 .block-parthner-program .block-parthner-information .item.upper-image img{
                     width: auto;
                 }
-                .block-parthner-program .block-parthner-information .content .upper-image:nth-child(1){
+                .block-parthner-program .block-parthner-information .content .block-upper-image-1{
                     position: relative;
                     top: -220px;
                     left: 330px;
                 }
-                .block-parthner-program .block-parthner-information .content .upper-image:nth-child(2){
+                .block-parthner-program .block-parthner-information .content .block-upper-image-2{
                     position: relative;
                     top: -250px;
                 }
-                .block-parthner-program .block-parthner-information .content .upper-image:nth-child(3){
+                .block-parthner-program .block-parthner-information .content .block-upper-image-3{
                     position: absolute;
                     left: 330px;
                     top: 600px;
@@ -241,21 +241,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item upper-image">
+                            <div class="item upper-image block-upper-image-1">
                                 <img src="/image/parthner-image-2.png">
                                 <div class="title">БОЛЬШИЕ ВОЗНАГРАЖДЕНИЯ</div>
                                 <div class="text">
                                     Вы зарабатываете 1000 рублей с каждой оплаты, а так же предусмотрена система пассивного дохода.
                                 </div>
                             </div>
-                            <div class="item upper-image">
+                            <div class="item upper-image block-upper-image-2">
                                 <img src="/image/parthner-image-3.png">
                                 <div class="title">ПАССИВНЫЙ ДОХОД</div>
                                 <div class="text">
                                     *Если Ваш реферал приведет нового - Вы получите + 150 рублей, а если реферал Вашего реферала приведет участника + 100 рублей пассивного дохода.
                                 </div>
                             </div>
-                            <div class="item upper-image">
+                            <div class="item upper-image block-upper-image-3">
                                 <img src="/image/parthner-image-4.png">
                                 <div class="title">ВЫСОКАЯ КОНВЕРСИЯ <br>БЫСТРЫЕ ВЫПЛАТЫ</div>
                                 <div class="text">
