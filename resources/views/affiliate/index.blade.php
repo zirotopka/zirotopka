@@ -26,11 +26,11 @@
 
                 }
                 .block-parthner-program .block-top{
-                    background: url("/public/image/bg-parthner-program.jpg") no-repeat;
-                    height: 600px;
+                    background: url("/image/bg-parthner-program.jpg") no-repeat;
+                    height: 40vw;
                     width: 100%;
                     background-size: cover;
-                    padding: 150px 50px;
+                    padding: 11.41vw 50px;
                 }
                 .block-parthner-program .block-top .title,
                 .block-parthner-program .block-footer .title{
@@ -51,7 +51,7 @@
                 }
 
                 .block-parthner-program .block-footer{
-                    background: url("/public/image/bg-parthner-program-footer.jpg") no-repeat;
+                    background: url("/image/bg-parthner-program-footer.jpg") no-repeat;
                     height: 400px;
                     width: 100%;
                     background-size: cover;
@@ -94,6 +94,38 @@
                     font-weight: 100;
                     font-family: 'MuseoSansCyrl_100';
                 }
+                .block-parthner-program .block-parthner-information .content img{
+                    width: 100%;
+                }
+                .block-parthner-program .block-parthner-information .item{
+                    overflow: hidden;
+                }
+                .block-parthner-program .block-parthner-information .item .col-1{
+                    float: left;
+                    max-width: 295px;
+                }
+                .block-parthner-program .block-parthner-information .item .col-2{
+                    float: left;
+                    max-width: 310px;
+                    margin-left: 30px;
+                }
+                .block-parthner-program .block-parthner-information .item.upper-image{
+
+                }
+                .block-parthner-program .block-parthner-information .item.upper-image img{
+
+                }
+                .block-parthner-program .block-parthner-information .content.item .upper-image:nth-child(1){
+
+                }
+                .block-parthner-program .block-parthner-information .content.item .upper-image:nth-child(2){
+
+                }
+                .block-parthner-program .block-parthner-information .content.item .upper-image:nth-child(3){
+
+                }
+
+
 
                 .block-parthner-program .block-parthner-information .block-how-it-works{
 
@@ -124,14 +156,14 @@
                     position: absolute;
                 }
                 .block-parthner-program .block-parthner-information .block-how-it-works .item:nth-child(1):before{
-                    background: url("/public/image/parthner-icon-1.png") no-repeat;
+                    background: url("/image/parthner-icon-1.png") no-repeat;
                     width: 210px;
                     height: 58px;
                     top: 120px;
                     left: 150px;
                 }
                 .block-parthner-program .block-parthner-information .block-how-it-works .item:nth-child(2):before{
-                    background: url("/public/image/parthner-icon-2.png") no-repeat;
+                    background: url("/image/parthner-icon-2.png") no-repeat;
                     width: 210px;
                     height: 58px;
                     top: 120px;
@@ -142,9 +174,7 @@
                 <div class="block-top">
                     <div class="title">
                         <h1>ПАРТНЕРСКАЯ ПРОГРАММА REFORMATOR.ONE</h1>
-                        <span>
-                                    Зарабатывай 1000 рублей с 1 продажи и создавай пассивный доход по системе CPA*
-                                </span>
+                        <span>Зарабатывай 1000 рублей с 1 продажи и создавай пассивный доход по системе CPA*</span>
                     </div>
                     <button type="button" class="reg_btn" data-toggle="modal" data-target="#">СТАТЬ ПАРТНЕРОМ</button>
                 </div>
@@ -187,41 +217,36 @@
                             <h1>ПРЕИМУЩЕСТВА РАБОТЫ С НАМИ</h1>
                         </div>
                         <div class="content">
-                            <div class="row item">
-                                <div class="col-sm-4">
-                                    <img src="/public/image/parthner-image-1.jpg">
+                            <div class="item">
+                                <div class="col-1">
+                                    <img src="/image/parthner-image-1.jpg">
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-2">
                                     <div class="title">УНИКАЛЬНЫЙ ПРОДУКТ</div>
                                     <div class="text">
                                         Занятия спортом из любой точки мира , видеоинструкции, поддержка тренеров, рекомендации по питанию.
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" style="margin-top: -220px;">
-                                <div class="col-sm-4 item">
-                                    <img src="/public/image/parthner-image-2.png">
-                                    <div class="title">БОЛЬШИЕ ВОЗНАГРАЖДЕНИЯ</div>
-                                    <div class="text">
-                                        Вы зарабатываете 1000 рублей с каждой оплаты, а так же предусмотрена система пассивного дохода.
-                                    </div>
+                            <div class="item upper-image">
+                                <img src="/image/parthner-image-2.png">
+                                <div class="title">БОЛЬШИЕ ВОЗНАГРАЖДЕНИЯ</div>
+                                <div class="text">
+                                    Вы зарабатываете 1000 рублей с каждой оплаты, а так же предусмотрена система пассивного дохода.
                                 </div>
                             </div>
-                            <div class="row" style="margin-top: 50px;">
-                                <div class="col-sm-4 item" style="margin-top: -50px;">
-                                    <img src="/public/image/parthner-image-3.png">
-                                    <div class="title">ПАССИВНЫЙ ДОХОД</div>
-                                    <div class="text">
-                                        *Если Ваш реферал приведет нового - Вы получите + 150 рублей, а если реферал Вашего реферала приведет участника + 100 рублей пассивного дохода.
-                                    </div>
+                            <div class="item upper-image">
+                                <img src="/image/parthner-image-3.png">
+                                <div class="title">ПАССИВНЫЙ ДОХОД</div>
+                                <div class="text">
+                                    *Если Ваш реферал приведет нового - Вы получите + 150 рублей, а если реферал Вашего реферала приведет участника + 100 рублей пассивного дохода.
                                 </div>
-                                <div class="col-sm-4 item" style="margin-top: 25px;">
-                                    <img src="/public/image/parthner-image-4.png">
-                                    <div class="title">ВЫСОКАЯ КОНВЕРСИЯ <br>БЫСТРЫЕ ВЫПЛАТЫ</div>
-                                    <div class="text">
-                                        Мы не ставим минимальную сумму вывода, выплаты осуществляем в течении
-                                        3 дней.
-                                    </div>
+                            </div>
+                            <div class="item upper-image">
+                                <img src="/image/parthner-image-4.png">
+                                <div class="title">ВЫСОКАЯ КОНВЕРСИЯ <br>БЫСТРЫЕ ВЫПЛАТЫ</div>
+                                <div class="text">
+                                    Мы не ставим минимальную сумму вывода, выплаты осуществляем в течении 3 дней.
                                 </div>
                             </div>
                         </div>
