@@ -26,7 +26,7 @@
 
                 }
                 .block-parthner-program .block-top{
-                    background: url("/public/image/bg-parthner-program.jpg") no-repeat;
+                    background: url("/image/bg-parthner-program.jpg") no-repeat;
                     height: 600px;
                     width: 100%;
                     background-size: cover;
@@ -51,7 +51,7 @@
                 }
 
                 .block-parthner-program .block-footer{
-                    background: url("/public/image/bg-parthner-program-footer.jpg") no-repeat;
+                    background: url("/image/bg-parthner-program-footer.jpg") no-repeat;
                     height: 400px;
                     width: 100%;
                     background-size: cover;
@@ -124,14 +124,14 @@
                     position: absolute;
                 }
                 .block-parthner-program .block-parthner-information .block-how-it-works .item:nth-child(1):before{
-                    background: url("/public/image/parthner-icon-1.png") no-repeat;
+                    background: url("/image/parthner-icon-1.png") no-repeat;
                     width: 210px;
                     height: 58px;
                     top: 120px;
                     left: 150px;
                 }
                 .block-parthner-program .block-parthner-information .block-how-it-works .item:nth-child(2):before{
-                    background: url("/public/image/parthner-icon-2.png") no-repeat;
+                    background: url("/image/parthner-icon-2.png") no-repeat;
                     width: 210px;
                     height: 58px;
                     top: 120px;
@@ -189,7 +189,7 @@
                         <div class="content">
                             <div class="row item">
                                 <div class="col-sm-4">
-                                    <img src="/public/image/parthner-image-1.jpg">
+                                    <img src="/image/parthner-image-1.jpg">
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="title">УНИКАЛЬНЫЙ ПРОДУКТ</div>
@@ -200,7 +200,7 @@
                             </div>
                             <div class="row" style="margin-top: -220px;">
                                 <div class="col-sm-4 item">
-                                    <img src="/public/image/parthner-image-2.png">
+                                    <img src="/image/parthner-image-2.png">
                                     <div class="title">БОЛЬШИЕ ВОЗНАГРАЖДЕНИЯ</div>
                                     <div class="text">
                                         Вы зарабатываете 1000 рублей с каждой оплаты, а так же предусмотрена система пассивного дохода.
@@ -209,14 +209,14 @@
                             </div>
                             <div class="row" style="margin-top: 50px;">
                                 <div class="col-sm-4 item" style="margin-top: -50px;">
-                                    <img src="/public/image/parthner-image-3.png">
+                                    <img src="/image/parthner-image-3.png">
                                     <div class="title">ПАССИВНЫЙ ДОХОД</div>
                                     <div class="text">
                                         *Если Ваш реферал приведет нового - Вы получите + 150 рублей, а если реферал Вашего реферала приведет участника + 100 рублей пассивного дохода.
                                     </div>
                                 </div>
                                 <div class="col-sm-4 item" style="margin-top: 25px;">
-                                    <img src="/public/image/parthner-image-4.png">
+                                    <img src="/image/parthner-image-4.png">
                                     <div class="title">ВЫСОКАЯ КОНВЕРСИЯ <br>БЫСТРЫЕ ВЫПЛАТЫ</div>
                                     <div class="text">
                                         Мы не ставим минимальную сумму вывода, выплаты осуществляем в течении
