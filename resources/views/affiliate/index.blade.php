@@ -30,7 +30,7 @@
                     height: 40vw;
                     width: 100%;
                     background-size: cover;
-                    padding: 11.41vw 50px;
+                    padding: 11.41vw 5vw;
                 }
                 .block-parthner-program .block-top .title,
                 .block-parthner-program .block-footer .title{
@@ -52,10 +52,10 @@
 
                 .block-parthner-program .block-footer{
                     background: url("/image/bg-parthner-program-footer.jpg") no-repeat;
-                    height: 400px;
+                    height: 30vw;
                     width: 100%;
                     background-size: cover;
-                    padding: 100px 50px;
+                    padding: 9.93vw 5vw;
                     text-align: center;
                 }
                 .block-parthner-program .block-footer .title h1{
@@ -65,10 +65,10 @@
                 }
 
                 .block-parthner-program .block-content{
-                    padding: 0 50px;
+                    padding: 0 5vw;
                 }
                 .block-parthner-program .block-parthner-information{
-                    padding: 100px 0;
+                    padding: 7.5vw 0;
                 }
                 .block-parthner-program .block-parthner-information .title{
                     margin-bottom: 30px;
@@ -136,6 +136,9 @@
                 .block-parthner-program .block-parthner-information .block-how-it-works{
 
                 }
+                .block-parthner-program .block-parthner-information .block-how-it-works .item{
+                    overflow: visible;
+                }
                 .block-parthner-program .block-parthner-information .block-how-it-works span{
                     color: #ff8a18;
                     font-family: 'GilroyBold';
@@ -183,7 +186,7 @@
                         margin-top: 50px;
                     }
                     .block-parthner-program .block-parthner-information .content{
-                        max-height: auto;
+                        max-height: 100%!important;
                     }
                 }
             </style>
