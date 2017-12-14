@@ -116,16 +116,16 @@
                 .block-parthner-program .block-parthner-information .item.upper-image img{
                     width: auto;
                 }
-                .block-parthner-program .block-parthner-information .content .item.upper-image:nth-child(1){
+                .block-parthner-program .block-parthner-information .content .upper-image:nth-child(1){
                     position: relative;
                     top: -220px;
                     left: 330px;
                 }
-                .block-parthner-program .block-parthner-information .content .item.upper-image:nth-child(2){
+                .block-parthner-program .block-parthner-information .content .upper-image:nth-child(2){
                     position: relative;
                     top: -250px;
                 }
-                .block-parthner-program .block-parthner-information .content .item.upper-image:nth-child(3){
+                .block-parthner-program .block-parthner-information .content .upper-image:nth-child(3){
                     position: absolute;
                     left: 330px;
                     top: 600px;
