@@ -190,7 +190,9 @@
                     }
                     .block-parthner-program .block-parthner-information .block-how-it-works .item{
                         overflow: visible;
-                        margin: 30px 0;
+                    }
+                    .block-parthner-program .block-parthner-information .block-how-it-works .item:not(:last-child){
+                        margin-bottom: 30px;
                     }
                     .block-parthner-program .block-parthner-information .block-how-it-works .item:nth-child(1):before,
                     .block-parthner-program .block-parthner-information .block-how-it-works .item:nth-child(2):before{
