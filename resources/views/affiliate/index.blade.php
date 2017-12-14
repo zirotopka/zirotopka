@@ -80,7 +80,8 @@
                     color: #ff8a18;
                 }
                 .block-parthner-program .block-parthner-information .content{
-
+                    position: relative;
+                    max-height: 900px;
                 }
                 .block-parthner-program .block-parthner-information .content .title{
                     font-family: 'GilroyBold';
@@ -110,19 +111,24 @@
                     margin-left: 30px;
                 }
                 .block-parthner-program .block-parthner-information .item.upper-image{
-
+                    max-width: 300px;
                 }
                 .block-parthner-program .block-parthner-information .item.upper-image img{
-
+                    width: auto;
                 }
-                .block-parthner-program .block-parthner-information .content.item .upper-image:nth-child(1){
-
+                .block-parthner-program .block-parthner-information .content .item.upper-image:nth-child(1){
+                    position: relative;
+                    top: -220px;
+                    left: 330px;
                 }
-                .block-parthner-program .block-parthner-information .content.item .upper-image:nth-child(2){
-
+                .block-parthner-program .block-parthner-information .content .item.upper-image:nth-child(2){
+                    position: relative;
+                    top: -250px;
                 }
-                .block-parthner-program .block-parthner-information .content.item .upper-image:nth-child(3){
-
+                .block-parthner-program .block-parthner-information .content .item.upper-image:nth-child(3){
+                    position: absolute;
+                    left: 330px;
+                    top: 600px;
                 }
 
 
@@ -168,6 +174,13 @@
                     height: 58px;
                     top: 120px;
                     left: 29.5vw;
+                }
+
+
+                @media only screen and (width : 768px){
+                    .block-parthner-program .block-parthner-information .content .item.upper-image{
+                        position: static!important;
+                    }
                 }
             </style>
             <div class="block-parthner-program">
