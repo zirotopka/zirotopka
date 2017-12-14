@@ -180,6 +180,10 @@
                 @media only screen and (max-width : 768px){
                     .block-parthner-program .block-parthner-information .content .item.upper-image{
                         position: static!important;
+                        margin-top: 50px;
+                    }
+                    .block-parthner-program .block-parthner-information .content{
+                        max-height: auto;
                     }
                 }
             </style>
