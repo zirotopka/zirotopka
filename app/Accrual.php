@@ -24,4 +24,19 @@ class Accrual extends Model
     {	
     	return $this->belongsTo('App\AccrualType','type_id');
     }
+
+    public static function storeAccrual($sum, $userId, $typeId, $balanceId, $accrualDescription) {
+        $accruals = new self;
+        $accruals->sum = $sum;
+        $accruals->user_id = $userId;
+        $accruals->type_id = $typeId;
+        $accruals->balance_id = $balanceId;
+        $accruals->comment = $accrualDescription;
+
+        if ($accruals->save()) {
+            return $accruals;
+        } else {
+            return null;
+        }
+    } 
 }

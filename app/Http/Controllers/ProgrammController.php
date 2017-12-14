@@ -32,21 +32,13 @@ class ProgrammController extends Controller
     public function index(Request $request, $slug){
         $user = Sentinel::getUser();
         $referral = null;
-        $programm = Programm::select([
-            'id',
-            'description',
-            'cost',
-            'slug',
-            'name',
-            'days',
-            'day_off',
-            'trainings',
-            'tasks'
-        ])->where('slug','=',$slug)->first();
 
-        if ($request->has('referral')) {
-            $referral = User::select('id','first_name','surname','slug')->where('slug','=',$request->get('referral'))->first();
+        if (session()->has('ref')) {
+            $reverralSlug = $request->session()->get('ref');
+            $referral = User::select('id','first_name','surname','slug')->where('slug','=',$reverralSlug)->first();
         }
+
+        $program = Programm::where('slug','=',$slug)->first();
 
         switch ($slug){
             case 'r.one_start' :
@@ -63,9 +55,9 @@ class ProgrammController extends Controller
             'user' => $user,
             'referral' => $referral,
             'slug' => $slug,
-            'program' => $programm,
+            'program' => $program,
         ];
-
+        
         return view('programs.'.$template, $data);
     }
 
@@ -77,19 +69,22 @@ class ProgrammController extends Controller
                 'id',
                 'description',
                 'cost',
-                'name'
+                'name',
+                'logo',
+                'lite',
             ])->where('id','=',$request->get('id'))
             ->first();
 
         return $program;
     }
+    
 	/**
-	 * Выбор программы
-	 */
+     * Выбор программы
+     */
     public function choice_program(Request $request) {
         $user = Sentinel::getUser();
 
-    	if ( !empty($user) ) {   
+        if ( !empty($user) ) {   
             $clientIp = $request->ip();
             $user->ip = $clientIp;
 
@@ -103,7 +98,7 @@ class ProgrammController extends Controller
                 return redirect()->back()->withErrors(['error' => 'Начало прогаммы 28 октября']);
             }
 
-    		$program_id = $request->get('program_id');
+            $program_id = $request->get('program_id');
 
             $user->timezone = $timezone;
             $user->last_updated_at = Carbon::now($timezone);
@@ -117,7 +112,7 @@ class ProgrammController extends Controller
 
             $user->sex = $request->get('sex');
             $user->start_training_day = $start_training_day;
-    		$user->current_programm_id = $program_id;
+            $user->current_programm_id = $program_id;
             $user->last_updated_at = $now;
 
             if ( ($now->year > $start_training_day->year) || 
@@ -138,19 +133,15 @@ class ProgrammController extends Controller
 
             $user->save();
 
-    		return redirect($user->slug);
-    	} else {
+            return redirect($user->slug);
+        } else {
             return redirect()->back()->withErrors(['error' => 'Пользователь отсутствует']);
-    	}
+        }
     }
 
     public function send_mail($user, $subject, $text) {
         //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
-        try {
-            //Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
-        } catch (\Exception $e) {
-            \Log::error($e);
-        }
+        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
 
         return 1;
     }

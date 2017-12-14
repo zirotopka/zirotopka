@@ -15,5 +15,5 @@
 @overwrite
 
 @section("content")
-	@include('privat_office._partials._refer_money_modal',['pay_description' => $pay_description,'user' => $user, 'sum' => $sum])
+		@include('privat_office._partials.'.$template,['pay_description' => $pay_description,'user' => $user, 'sum' => $sum])
 @overwrite

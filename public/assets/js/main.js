@@ -15,71 +15,16 @@ $(document).ready(function(){
 	        800);
 	});
 
-
 	$('#choose_programe_form').modal('show');
+
 	$('.selectpicker').on('changed.bs.select', function (e) {
-		var program_id = $('.selectpicker').val();
-    
-	    jQuery.ajax({
-		    type: "post",
-		    url: '/program/get_program',
-		    data: {id: program_id},
-		    success: function (result) {
-			$('#r_prgr_name').text(result['name']);
-			$('#r_prgr_descr').text(result['description']);
-			$('#r_prgr_price').text(result['cost']);
-	    	}  
-	  	});
-		
-		if (program_id == 1) {
-			$("#program_bnr").attr('src',"/image/test/r.one_start.png");
-				
-		}
-		else if (program_id == 2){
-			$("#program_bnr").attr('src',"/image/test/r.one_pro.png");
-		}
-		else if (program_id == 3){
-			$("#program_bnr").attr('src',"/image/test/r.one_run.png");
-		}
-		else if (program_id == 4){
-			$("#program_bnr").attr('src',"/image/test/r.one_run+.png");
-		}
-		else if (program_id == 5){
-			$("#program_bnr").attr('src',"/image/test/r.one_power.png");
-		}
+		get_program();
 	});
 	
 	$('.selectpicker').on('loaded.bs.select', function (e) {
-		var program_id = $('.selectpicker').val();
-    
-	    jQuery.ajax({
-		    type: "post",
-		    url: '/program/get_program',
-		    data: {id: program_id},
-		    success: function (result) {
-			$('#r_prgr_name').text(result['name']);
-			$('#r_prgr_descr').text(result['description']);
-			$('#r_prgr_price').text(result['cost']);
-	    	}  
-	  	});
-		
-		if (program_id == 1) {
-			$("#program_bnr").attr('src',"/image/test/r.one_start.png");
-				
-		}
-		else if (program_id == 2){
-			$("#program_bnr").attr('src',"/image/test/r.one_pro.png");
-		}
-		else if (program_id == 3){
-			$("#program_bnr").attr('src',"/image/test/r.one_run.png");
-		}
-		else if (program_id == 4){
-			$("#program_bnr").attr('src',"/image/test/r.one_run+.png");
-		}
-		else if (program_id == 5){
-			$("#program_bnr").attr('src',"/image/test/r.one_power.png");
-		}
+		get_program();
 	});
+
 	$('#open_reg').on('click',function(){
 		$('#login').modal('hide');
 	})
@@ -184,6 +129,33 @@ $('body').on('click','.ico_play',function() {
       }
   });
 });
+
+function get_program() {
+	var program_id = $('.selectpicker').val();
+
+	if (program_id == undefined || program_id == 0) {
+		program_id = 1;
+	}
+    
+    jQuery.ajax({
+	    type: "post",
+	    url: '/program/get_program',
+	    data: {id: program_id},
+	    success: function (result) {
+  			$('#r_prgr_name').text(result['name']);
+  			$('#r_prgr_descr').text(result['description']);
+
+        var price = result['cost'];
+
+        if (result['lite'] == 1) {
+          price += ' *';
+        }
+
+  			$('#r_prgr_price').text(price);
+  			$("#program_bnr").attr('src',result['logo']);
+    	}  
+  	});
+}
 
 Array.prototype.in_array = function(p_val) {
     for(var i = 0, l = this.length; i < l; i++)  {

@@ -107,11 +107,13 @@
 									<td class="box-cal {{$class}} {{$cal_class}}">
 										<span class="cal_hints">
 											@if ( !empty($difficult) )
-												@if ($program_day->interest == 1)
-													<p style="text-align: center; margin-right: 10%;">Обязательный день</p>
-										  		@else
-													<p style="text-align: center; margin-right: 10%;">Необязательный день</p>
-										  		@endif
+												@if ($is_lite == 0)
+													@if ($program_day->interest == 1)
+														<p style="text-align: center; margin-right: 10%;">Обязательный день</p>
+											  		@else
+														<p style="text-align: center; margin-right: 10%;">Необязательный день</p>
+											  		@endif
+											  	@endif
 										  		<p class="" style="display: inline-block; width: 65%;">Уровень сложности:</p>
 										  		<div style="display: inline-block; text-align: center; width: 30%">
 														@for ($i=0;$i<$program_day->difficult;$i++)
@@ -273,35 +275,37 @@
 							</div>
 						@endif
 						
-						<div class="otchet" data-programm-stage="{{$programm_stage->id}}">
-							<div class="attachment-container">
-								@if (count($stage_files) > 0) 
-									@foreach ($stage_files as $file)
-										<div class="attachment-item attachment_block">
-											@if ($file->file_type == 2)
-												<img class="attachment-img" id="attachment-img" src="{{$file->preview_url}}">
-											@else
-												<img class="attachment-img" id="attachment-img" src="/ico/video-default.png">
-											@endif
-											@if (empty($current_training))
-												<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>
-											@endif
-											<input type="hidden" class="attachment-file" name="{{'attachment['.uniqid().']'}}" value="{{$file->file_url}}">
-											<span class="attachment-span">{{!empty($file->name) ? $file->name : 'Загруженный файл'}}</span>
+						@if ($is_lite == 0)
+							<div class="otchet" data-programm-stage="{{$programm_stage->id}}">
+								<div class="attachment-container">
+									@if (count($stage_files) > 0) 
+										@foreach ($stage_files as $file)
+											<div class="attachment-item attachment_block">
+												@if ($file->file_type == 2)
+													<img class="attachment-img" id="attachment-img" src="{{$file->preview_url}}">
+												@else
+													<img class="attachment-img" id="attachment-img" src="/ico/video-default.png">
+												@endif
+												@if (empty($current_training))
+													<label for="attachment-img>" class="attachment-img-mask"><i class="fa fa-window-close" aria-hidden="true"></i></label>
+												@endif
+												<input type="hidden" class="attachment-file" name="{{'attachment['.uniqid().']'}}" value="{{$file->file_url}}">
+												<span class="attachment-span">{{!empty($file->name) ? $file->name : 'Загруженный файл'}}</span>
+											</div>
+										@endforeach
+									@endif
+								</div>
+								@if (empty($current_training))
+									<div class="otch_hover {{count($stage_files) > 0 ? 'hidden' : ''}}">
+										<div class="load-btn">
+											<img class="load" src="/ico/load.png" alt="">
+											<p class="load-text">Загрузить отчёт</p>
 										</div>
-									@endforeach
+										<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
+									</div>
 								@endif
 							</div>
-							@if (empty($current_training))
-								<div class="otch_hover {{count($stage_files) > 0 ? 'hidden' : ''}}">
-									<div class="load-btn">
-										<img class="load" src="/ico/load.png" alt="">
-										<p class="load-text">Загрузить отчёт</p>
-									</div>
-									<input class="prof-file add_file" type="file" title="Загрузить отчёт" accept="image/x-png,image/gif,image/jpeg,image/*,video/mp4,video/x-m4v,video/*">
-								</div>
-							@endif
-						</div>
+						@endif
 						<!-- <input class="prof-file tooltipstered" data-tooltip-content="#otchet_tooltipe" type="file">
 					</div>
 						<p class="load-text">Загрузить отчёт</p> -->
@@ -310,7 +314,7 @@
 			@empty
 			@endforelse
 			
-			@if ( empty($current_program_day->status) && !in_array($current_program_day->day,[1,2]) )
+			@if ( ($current_program_day->status == 0) || ($is_lite == 1))
 			@else
 				@if (empty($current_training))
 					<div class="send-proof col-lg-12">
@@ -318,7 +322,7 @@
 					</div>
 				@endif
 			@endif
-
+		
 			<!-- --------------------------------------------------------------- -->
 			<div class="modal fade" id="video-modal" modali-backdrop="true" tabindex="1" role="dialog" aria-labelledby="videoModal">
 			  <div class="display-inline width-eight-perc" role="document">

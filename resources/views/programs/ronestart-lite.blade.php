@@ -103,16 +103,16 @@
                     <p class="tc_t">ДНЕЙ</p>
                 </div>
                 <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                    <p class="tc_d">{{$program->trainings}}</p>
-                    <p class="tc_t">ОБЯЗАТЕЛЬНЫХ ТРЕНИРОВОК</p>
+                    <p class="tc_d">20</p>
+                    <p class="tc_t">ТРЕНИРОВОК</p>
                 </div>
                 <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                    <p class="tc_d">{{$program->day_off}}</p>
+                    <p class="tc_d">8</p>
                     <p class="tc_t">ВЫХОДНЫХ</p>
                 </div>
                 <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                    <p class="tc_d">{{$program->tasks}}</p>
-                    <p class="tc_t">НЕОБЯЗАТЕЛЬНЫХ ТРЕНИРОВОК</p>
+                    <p class="tc_d">50</p>
+                    <p class="tc_t">ЗАДАНИЙ</p>
                 </div>
             </div>
             <hr>

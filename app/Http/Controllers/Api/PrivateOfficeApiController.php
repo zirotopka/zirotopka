@@ -32,9 +32,9 @@ class PrivateOfficeApiController extends Controller
             return response()->json(['code' => 404, 'text' => 'User not found']);
         }
 
-        $programm_stages = (array) json_decode($request->get('programm_stages'));
+        $programm_stages = json_decode($request->get('programm_stages'));
         $programm_stages_count = count($programm_stages);
-
+        $program_is_done = false;
         $left_exercises = 0;
         $stages_count = 0;
         
@@ -43,93 +43,103 @@ class PrivateOfficeApiController extends Controller
                                                 ->where('programm_id','=',$user->current_programm_id)
                                                 ->where('day','=',$user->current_day)
                                                 ->first();
+            if (!empty($current_program_day)) {
+                if (!empty($current_program_day->status)) {
+                    $stages = ProgrammStage::select('id','status')
+                                        ->where('programm_day_id','=',$current_program_day->id)
+                                        ->with('exercive')
+                                        ->get();
+                    $stages_count = count($stages);
 
-            if (empty($current_program_day)) {
-                return response()->json(['code' => 404, 'text' => 'Отсутствует день. Обратитесь в поддержку']);
+                    if ($stages_count == $programm_stages_count) {
+                        $program_is_done = true;
+                    } else {
+                        $left_exercises = abs($stages_count - $programm_stages_count);
+                    }
+                } else {
+                    $program_is_done = true;
+                }
             }
-
-            $stages = ProgrammStage::select('id','status')
-                                ->where('programm_day_id','=',$current_program_day->id)
-                                ->with('exercive')
-                                ->get();
-
-            $stages_count = count($stages);
-
-            if ($stages_count > $programm_stages_count) {
-                return response()->json(['code' => 404, 'text' => 'Не все упражнения выполнены. Необходимо '.$stages_count.'. Выполнено '.$programm_stages_count]);
-            } 
 
             $training = Training::where('program_day','=',$user->current_day)
                               ->where('user_id','=',$user->id)
                               ->with('stages')
-                              ->delete();
+                              ->first();
 
-            $now = Carbon::now($timezone);
-            $nowHour = $now->hour;
-            $deadline = clone $now;
+            if (empty($training)) {
+                $training = new Training;
+                $training->user_id = $user->id;
+                $training->program_day = $user->current_day;
+                $training->is_files_download = 1;
 
-            $deadline->addDay();
-
-            if ($nowHour >= 22) {
-                $deadline->addDay();
+                $training->save();
             }
 
-            $deadline->hour = 22;
-            $deadline->minute = 0;
-            $deadline->second = 0;
-
-            $training = new Training;
-            $training->user_id = $user->id;
-            $training->program_day = $user->current_day;
-            $training->is_files_download = 1;
-            $training->created_at = Carbon::now($timezone);
-            $training->deadline_at = $deadline->timestamp;
-            $training->program_day_id = $current_program_day->id;
-
-            if (!$training->save()) {
-                return response()->json(['code' => 404, 'text' => 'Тренировка не сохранена. Обратитесь в поддержку']);
-            }
-
+            $stages = $training->stages;
             $current_client_date = Carbon::now($timezone);//Нужно будет переделать на время по временной зоне
 
-            foreach($programm_stages as $stage_key => $stage_file) {
-                $thisStage = new TrainingStages;
-                $thisStage->stage_id = $stage_key;
-                $thisStage->status = 0;
-                $thisStage->training_id = $training->id;
-                $thisStage->current_client_date = $current_client_date;
-                $thisStage->rating = 0;
-                $thisStage->created_at = Carbon::now($timezone);
-                $thisStage->save();
-
-                $thisStage->files()->delete();
-
-                $file_name = basename(public_path().$stage_file);
-                    
-                $file = new File;
-                $file->file_url = '/trainings/'.$user->slug.'/'.$file_name;
-                
-                if (file_exists(public_path().'/trainings/'.$user->slug.'/preview_'.$file_name)) {
-                     $file->preview_url = '/trainings/'.$user->slug.'/preview_'.$file_name;
+            foreach($programm_stages as $stage_key => $stage_url) {
+                if (count($stage_url) <= 0) {
+                    continue;
                 }
 
-                $mime_type = mime_content_type(public_path().$stage_file);
+                $thisStage = $stages->where('stage_id',$stage_key)->first();
 
-                if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
-                    $file->file_type = 2; 
-                } elseif (in_array($mime_type,['video/mpeg','video/mp4','video/3gpp','video/3gpp2','video/x-flv','video/x-ms-wmv','video/mov','video/mpg','video/swf','video/webm','video/ogg'])) {
-                    $file->file_type = 3;
-                } 
+                if (empty($thisStage)) {
+                    $thisStage = new TrainingStages;
+                    $thisStage->stage_id = $stage_key;
+                    $thisStage->status = 0;
+                    $thisStage->training_id = $training->id;
+                    $thisStage->current_client_date = $current_client_date;
+                    $thisStage->rating = 0;
+                    $thisStage->save();
+                }
 
-                $file->owner_type = 'training_stages';
-                $file->owner_id = $thisStage->id;
+                DB::beginTransaction();
 
-                $file->save();
+                $thisStage->files()->delete();
+                $url_count = 0;
+                
+                foreach ($stage_url as $file_url) {
+                    $file_name = basename(public_path().$file_url);
+                    
+                    $file = new File;
+                    $file->file_url = '/trainings/'.$user->slug.'/'.$file_name;
+
+                    if (file_exists(public_path().'/trainings/'.$user->slug.'/preview_'.$file_name)) {
+                         $file->preview_url = '/trainings/'.$user->slug.'/preview_'.$file_name;
+                    }
+
+                    $mime_type = mime_content_type(public_path().$file_url);
+
+                    if (in_array($mime_type,['image/jpeg','image/pjpeg','image/png'])) {
+                        $file->file_type = 2; 
+                    } elseif (in_array($mime_type,['video/mpeg,video/mp4,video/3gpp,video/3gpp2,video/x-flv,video/x-ms-wmv'])) {
+                        $file->file_type = 3;
+                    }
+
+                    $file->owner_type = 'training_stages';
+                    $file->owner_id = $thisStage->id;
+
+                    $file->save();
+
+                    $url_count++;
+
+                    if ($url_count >= 4) {
+                        break;
+                    }
+                }
+                DB::commit();
             }
 
-            return response()->json(['code' => 200, 'text' => 'Программа успешно загружена. Выполните оставшиесь задания.']);  
+            if ($program_is_done) {
+                return response()->json(['code' => 200, 'text' => 'Программа успешно загружена и отправлена на обработку.']); 
+            } else {
+                return response()->json(['code' => 200, 'text' => 'Программа успешно загружена. Выполните оставшиесь задания.']); 
+            }
+            
         } else {
-            return response()->json(['code' => 404, 'text' => 'Файлы отсутствуют']);
+            return response()->json(['code' => 404, 'text' => 'Files not found']);
         }
     }
 }

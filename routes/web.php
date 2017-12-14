@@ -21,6 +21,9 @@ Route::post('new_post_password', [ 'uses' => 'UserController@newPostPassword' ] 
 Route::get('forget_password', [ 'uses' => 'UserController@forgetPassword' ] );
 Route::post('forget_password', [ 'uses' => 'UserController@postForgetPassword' ] );
 
+//Партнерка
+Route::get('affiliate/desktop', [ 'uses' => 'AffiliateController@index' ] );
+
 // Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 // 	Route::get('password', [ 'uses' => 'UserController@setPassword' ] );
 // 	Route::post('password', [ 'uses' => 'UserController@postSetPassword' ] );
@@ -66,6 +69,8 @@ Route::group(['prefix' => '/', 'middleware' => ['auth','check_password']], funct
 	Route::post('privat_office/withdrawalFunds/{user_id}', [ 'uses' => 'PrivatOfficeController@withdrawalFunds' ] );
 	Route::post('privat_office/immunityCount/{user_id}', [ 'uses' => 'PrivatOfficeController@immunity_post_count' ] );
 	Route::post('privat_office/useImmunity/{user_id}', [ 'uses' => 'PrivatOfficeController@useImmunity' ] );
+
+	Route::post('paymaster/test_payment', [ 'uses' => 'PayMasterController@testPayment' ] );
 
 	Route::get('privat_office/start_new_program', [ 'uses' => 'PrivatOfficeController@start_new_program' ] );
 
