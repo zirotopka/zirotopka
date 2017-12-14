@@ -208,6 +208,9 @@
                     .block-parthner-program .block-footer .title h1{
                         font-size: 5vw;
                     }
+                    .block-parthner-program .block-parthner-information .title h1{
+                        font-size: 5vw;
+                    }
                     .block-parthner-program .block-top .title span{
                         font-size: 3vw;
                         width: 100%;
@@ -312,6 +315,69 @@
                     <button type="button" class="reg_btn" data-toggle="modal" data-target="#">ПРИСОЕДИНИТЬСЯ</button>
                 </div>
             </div>
+            <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mission">
+                    <img src="/ico/min-logo.svg" alt="">
+                    <p>
+                        Наша миссия в повышении качества жизни общества через вовлечение широкого круга населения в любительский спорт и зож
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 prgrm_list">
+                    <ul>
+                        <li class="title">Программы</li>
+                        <li><a href="/programm/r.one_lite">R.ONE LITE</a></li>
+                        <li><a href="/programm/r.one_start">R.ONE START</a></li>
+                        <li><a href="/programm/r.one_pro">R.ONE PRO</a></li>
+                        <li><a href="/programm/r.one_runner">R.ONE RUNNER</a></li>
+                        <li><a href="/programm/r.one_power">R.ONE POWER</a></li>
+                        <li class="bonus"><a href="/bonus" >БОНУСНАЯ<br>
+                                ПРОГРАММА</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
+                    <ul>
+                        <li class="title">Соглашение</li>
+                        <li class="prtnrs">
+                            <a href="#" data-toggle="modal" data-target="#partners">Партнёрское соглашение</a>
+                        </li>
+                        <li id="pltks">
+                            <a href="#" data-toggle="modal" data-target="#user_agreements">Пользовательское соглашение</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
+                    <ul class="rgese">
+                        <li class="title">Подпишись</li>
+                        <li class="block-social-links">
+                            <a href="https://facebook.com/reformator.one/">
+                                <img src="/image/social-networks/icon-facebook.png" alt="">
+                            </a>
+                            <a href="https://vk.com/reformatorone">
+                                <img src="/image/social-networks/icon-vk.png" alt="">
+                            </a>
+                            <a href="https://instagram.com/reformator.one">
+                                <img src="/image/social-networks/icon-instagram.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12">
+                    <div class="block-payment-systems">
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-visa.png" title="Visa" alt="Visa">
+                        </a>
+                        <a href="javascript:void(0);">
+                            <img src="/image/payment-systems/icon-mastercard.png" title="MasterCard" alt="MasterCard">
+                        </a>
+                        <a href="https://info.paymaster.ru" target="_blank">
+                            <img src="/image/payment-systems/icon-paymaster.png" title="Paymaster" alt="Paymaster">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>
+                </div>
+            </footer>
         </div>
     </div>
     @include('home.registration',['user' => $user, 'referral' => $referral])

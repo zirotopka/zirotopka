@@ -105,7 +105,7 @@
                             </a> 
                         </li>
                         <li>
-                            <a href="/programm/ROneStart" class="profile_btns">
+                            <a href="/#section_3" class="profile_btns">
                                 <p>программы <br> тренировок</p>
                             </a> 
                         </li>

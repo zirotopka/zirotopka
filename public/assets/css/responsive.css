@@ -228,6 +228,20 @@ footer{
     display: block;
     position: relative;
 }
+.parthner_btn{
+    display: inline-block;
+    width: 17vw;
+    height: 4.3vw;
+    border-radius: 2em;
+    font-family: MuseoSansCyrl_500;
+    font-size: 1.1vw;
+    margin: 4% 0 0 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+    background-color: #ff8a18;
+}
 .rl_btns,
 .rg_btn,
 .how-screen button,
@@ -240,7 +254,8 @@ footer{
 .bonus .reg_btn,
 .abo_btn,
 .forms-btns,
-.send-progr-btn{
+.send-progr-btn,
+.parthner_btn{
     -webkit-transition: 0.15s;
     -moz-transition: 0.15s;
     transition: 0.15s;
@@ -297,6 +312,7 @@ input[type="submit"]:hover{
 .abo_btn,
 .forms-btns,
 .send-progr-btn,
+.parthner_btn,
 .parthner_btn{
     border: 3px solid transparent;
 }
@@ -311,7 +327,8 @@ input[type="submit"]:hover{
 .password_btn:hover,
 .send:hover,
 .forms-btns:hover,
-.send-progr-btn:hover{
+.send-progr-btn:hover,
+.parthner_btn:hover{
     background-color: transparent!important;
     border: 3px solid #ef8116;
     color: #ef8116;
