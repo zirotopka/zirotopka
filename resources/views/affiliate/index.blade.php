@@ -188,6 +188,14 @@
                     .block-parthner-program .block-parthner-information .content{
                         max-height: 100%!important;
                     }
+                    .block-parthner-program .block-parthner-information .block-how-it-works .item{
+                        overflow: visible;
+                        margin: 30px 0;
+                    }
+                    .block-parthner-program .block-parthner-information .block-how-it-works .item:nth-child(1):before,
+                    .block-parthner-program .block-parthner-information .block-how-it-works .item:nth-child(2):before{
+                        background: none!important;
+                    }
                 }
             </style>
             <div class="block-parthner-program">
