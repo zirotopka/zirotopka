@@ -199,6 +199,29 @@
                         background: none!important;
                     }
                 }
+
+                @media only screen and (min-device-width : 320px) and (max-device-width : 736px){
+                    .block-parthner-program .block-top{
+                        height: 60vw;
+                    }
+                    .block-parthner-program .block-top .title h1,
+                    .block-parthner-program .block-footer .title h1{
+                        font-size: 5vw;
+                    }
+                    .block-parthner-program .block-top .title span{
+                        font-size: 3vw;
+                        width: 100%;
+                    }
+                    .block-parthner-program .block-parthner-information .block-how-it-works .row div{
+                        max-width: 100%;
+                    }
+                    .block-parthner-program .block-parthner-information .block-how-it-works .row .col-sm-5 div{
+                        width: 70%;
+                    }
+                    .block-parthner-program .block-footer{
+
+                    }
+                }
             </style>
             <div class="block-parthner-program">
                 <div class="block-top">
