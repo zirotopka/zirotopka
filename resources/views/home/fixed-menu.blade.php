@@ -13,7 +13,7 @@
                 <li>
                     <a href="/{{$user->slug}}" class="profile_btns lgn">
                         <i class="prgr_ico prof-disp"></i>
-                        <p class="prof-disp" style="margin-left: 1px;">ПРОГРАММА</p></a> 
+                        <p class="prof-disp" style="margin-left: 1px;">{{ $_personalArea }}</p></a> 
                 </li>
                 <li>
                     <a href="/{{$user->slug}}/edit" class="profile_btns lgn"><i class="prof_ico prof-disp"></i><p class="prof-disp" style="margin-left: 9px!important;">ПРОФИЛЬ</p></a> 

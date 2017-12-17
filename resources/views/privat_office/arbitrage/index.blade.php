@@ -15,7 +15,14 @@
 <!--     <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-187505-gLyzn';</script> -->
     <!-- <script src="http://vjs.zencdn.net/6.1.0/video.js"></script> -->
     <script type="text/javascript" src="/assets/privat_account/account.js"></script>
-    <script type="text/javascript" src="/assets/privat_account/arbitrage/lk.js"></script>
+
+    <script>
+		var adjansyListDays = JSON.parse('{{ json_encode($adjansyListDays) }}');
+		var adjansyListValues = JSON.parse('{{ json_encode($adjansyListValues) }}');
+		var accrualsSumPerDay = JSON.parse('{{ json_encode($accrualsSumPerDay) }}');
+	</script>
+
+    <script type="text/javascript" src="/assets/privat_account/arbitrage/lk.js?{{time()}}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/js/mdb.min.js"></script>
 @overwrite
 
@@ -35,12 +42,12 @@
 		    <div class="container">
 		    	<div class="row">
 			    	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-			    		<label for="">График</label>
-				    	<canvas id="lineChart"></canvas>
+			    		<label for="lineChartMonth">Количество рефералов за месяц</label>
+				    	<canvas id="lineChartMonth"></canvas>
 			    	</div>
 			    	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-			    		<label for="">График</label>
-			    		<canvas id="barChart"></canvas>
+			    		<label for="lineChartAccruals">Заработано средств от рефералов</label>
+			    		<canvas id="lineChartAccruals"></canvas>
 			    	</div>
 			    </div>
 			    <div class="row">

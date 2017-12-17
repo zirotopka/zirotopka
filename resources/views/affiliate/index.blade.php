@@ -237,6 +237,7 @@
                         <span>Зарабатывай 1000 рублей с 1 продажи и создавай пассивный доход по системе CPA*</span>
                     </div>
                     <button type="button" class="parthner_btn" data-toggle="modal">СТАТЬ ПАРТНЕРОМ</button>
+                    <button type="button" class="parthner_btn" data-toggle="modal" data-target="#login">ВХОД</button>
                 </div>
                 <div class="block-content">
                     <div class="block-parthner-information" style="padding-bottom: 0;">
@@ -385,7 +386,7 @@
         </div>
     </div>
     @include('home.registration',['user' => $user, 'referral' => $referral])
-    @include('home.login')
+    @include('home.login',['title' => 'ВХОД ДЛЯ ПАРТНЕРОВ'])
     @include('politics.user_agreements')
     @include('politics.partners')
 @overwrite

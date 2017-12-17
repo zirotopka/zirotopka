@@ -12,7 +12,7 @@
                         <li>
                            <a href="/{{$user->slug}}" class="profile_btns">
                                 <i class="prgr_ico prof-disp"></i>
-                                <p class="prof-disp" style="padding-left: 5px!important;">ПРОГРАММА</p></a>
+                                <p class="prof-disp" style="padding-left: 5px!important;">{{ $_personalArea }}</p></a>
                         </li>
                         <li>
                            <a href="/{{$user->slug}}/edit" class="profile_btns">

@@ -43,6 +43,10 @@ class PrivatOfficeController extends Controller
             return redirect('/');
         }
 
+        $userTimezone = User::getTimezone($user);
+        $now = Carbon::now($userTimezone);
+        $now_timestamp = $now->timestamp;
+
         $role = $user->roles->first();
 
         if ($role->slug == 'arbitrage') {
@@ -55,18 +59,44 @@ class PrivatOfficeController extends Controller
                                             'users.is_programm_pay',
                                         ])
                                         ->limit(15)->get();
+
+            $daysInMonth = $now->daysInMonth;
+            $now_start_month = clone $now;
+
+            $now_start_month->startOfMonth();
+
+            $adjansyListDays = array();
+            $adjansyListValues = array();
+            $adjansyListSum = array();
+
+            for ($i = 1; $i <= $daysInMonth; $i++) {
+                $adjansyListDayCount =  AdjancyList::where('adjancy_lists.pid','=',$user->id)
+                                                ->whereDate('adjancy_lists.created_at','=',$now_start_month)
+                                                ->count();
+
+                $accrualsSumPerDay = Accrual::where('user_id','=',$user->id)
+                                        ->where('type_id','=',1)
+                                        ->sum('sum');
+
+                array_push($adjansyListDays,$i);
+                array_push($adjansyListValues,$adjansyListDayCount);
+                array_push($adjansyListSum,$accrualsSumPerDay);
+
+                $now_start_month->addDay();
+            }
+
             $data = [
                'adjansyList' => $adjansyList,
+               'adjansyListDays' => $adjansyListDays,
+               'adjansyListValues' => $adjansyListValues,
+               'accrualsSumPerDay' => $accrualsSumPerDay,
             ];
 
             return view('privat_office.arbitrage.index', $data);
         }
 
-        $userTimezone = User::getTimezone($user);
+        
         $balance = $user->balance;
-
-        $now = Carbon::now($userTimezone);
-        $now_timestamp = $now->timestamp;
 
         if (empty($balance)) {
             return view('errors.error_balance');
