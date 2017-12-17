@@ -30,5 +30,28 @@ class BodyCssComposer
         if (isset($route)) {
             $view->with('bodyCss', str_replace('/','-',str_replace(['{','}'], '', $route->uri)));
         }
+
+        $user = Sentinel::getUser();
+        $_personalArea = 'ПРОГРАММА';
+
+        if (!empty($user)) {
+            $role = $user->roles->first();
+
+            if (!empty($role)) {
+                switch ($role->slug) {
+                    case 'arbitrage':
+                        $_personalArea = 'ЛИЧНЫЙ КАБИНЕТ';
+                        break;
+                    
+                    default:
+                        $_personalArea = 'ПРОГРАММА';
+                        break;
+                }
+            }
+
+            $view->with('user', $user);
+        }
+
+        $view->with('_personalArea', $_personalArea);
     }
 }

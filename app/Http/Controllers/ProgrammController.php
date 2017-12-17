@@ -100,20 +100,26 @@ class ProgrammController extends Controller
 
             $program_id = $request->get('program_id');
 
+            $program = Programm::select(['id','lite'])->where('id','=',$program_id)
+                                ->first();
+
+            if (empty($program)) {
+                return redirect()->back()->withErrors(['error' => 'Данная программа не найдена']);
+            }          
+
+            $now = Carbon::now($timezone);         
+
             $user->timezone = $timezone;
             $user->last_updated_at = Carbon::now($timezone);
             $user->user_ip = $_SERVER["REMOTE_ADDR"];
             $user->current_day = 1;
 
-            
-            $now = Carbon::now($timezone);
-            // $tomorrow = clone $now;
-            // $tomorrow->addDay();
-
             $user->sex = $request->get('sex');
             $user->start_training_day = $start_training_day;
             $user->current_programm_id = $program_id;
             $user->last_updated_at = $now;
+
+
 
             if ( ($now->year > $start_training_day->year) || 
                  ($now->year == $start_training_day->year && $now->month > $start_training_day->month ) || 
@@ -122,8 +128,18 @@ class ProgrammController extends Controller
                 return redirect()->back()->withErrors(['error' => 'Выбранная вами дата уже прошла']);
             }
 
-            if ($now->month == $start_training_day->month && $now->day == $start_training_day->day && $now->hour >= 22){
-                $user->program_is_start = 1;
+            switch ($program->lite) {
+                case 1:
+                    if ($now->month == $start_training_day->month && $now->day == $start_training_day->day){
+                        $user->program_is_start = 1;
+                    }
+                    break;
+                
+                case 0:
+                    if ($now->month == $start_training_day->month && $now->day == $start_training_day->day && $now->hour >= 22){
+                        $user->program_is_start = 1;
+                    }
+                    break;
             } 
 
             $subject = "Выбор программы";

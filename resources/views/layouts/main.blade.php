@@ -74,7 +74,7 @@
                         <li>
                            <a href="/{{$user->slug}}" class="profile_btns lgn">
                                 <i class="prgr_ico prof-disp"></i>
-                                <p class="prof-disp" style="margin-left: 5px !important;">ПРОГРАММА</p></a>
+                                <p class="prof-disp" style="margin-left: 5px !important;">{{$_personalArea}}</p></a>
                         </li>
                         <li>
                            <a href="/{{$user->slug}}/edit" class="profile_btns lgn"><i class="prof_ico prof-disp"></i>
@@ -185,7 +185,7 @@
                                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </button>
                                 <ul class="user_dropdown dropdown-menu dropdown-menu-right" aria-labelledby="nav-dropdown">
-                                    <li style="cursor: pointer"><a href="/{{$user->slug}}">ПРОГРАММА <b class="hidden-xs">ТРЕНИРОВОК</b></a></li>
+                                    <li style="cursor: pointer"><a href="/{{$user->slug}}">{{ $_personalArea }}</a></li>
                                     <li><a href="/{{$user->slug}}/edit">ПРОФИЛЬ</a></li>
                                     <li><a href="/logout">ВЫЙТИ</a></li>
                                 </ul>

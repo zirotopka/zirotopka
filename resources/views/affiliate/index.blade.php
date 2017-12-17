@@ -236,7 +236,7 @@
                         <h1>ПАРТНЕРСКАЯ ПРОГРАММА REFORMATOR.ONE</h1>
                         <span>Зарабатывай 1000 рублей с 1 продажи и создавай пассивный доход по системе CPA*</span>
                     </div>
-                    <button type="button" class="parthner_btn" data-toggle="modal" data-target="#">СТАТЬ ПАРТНЕРОМ</button>
+                    <button type="button" class="parthner_btn" data-toggle="modal">СТАТЬ ПАРТНЕРОМ</button>
                 </div>
                 <div class="block-content">
                     <div class="block-parthner-information" style="padding-bottom: 0;">
@@ -316,7 +316,7 @@
                     <div class="title">
                         <h1>СОТНИ ПАРТНЕРОВ УЖЕ ЗАРАБАТЫВАЮТ С НАМИ</h1>
                     </div>
-                    <button type="button" class="parthner_btn" data-toggle="modal" data-target="#">ПРИСОЕДИНИТЬСЯ</button>
+                    <button type="button" class="parthner_btn" data-toggle="modal">ПРИСОЕДИНИТЬСЯ</button>
                 </div>
             </div>
             <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

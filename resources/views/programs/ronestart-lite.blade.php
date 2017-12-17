@@ -111,7 +111,7 @@
                     <p class="tc_t">ВЫХОДНЫХ</p>
                 </div>
                 <div class="pdd col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                    <p class="tc_d">50</p>
+                    <p class="tc_d">80</p>
                     <p class="tc_t">ЗАДАНИЙ</p>
                 </div>
             </div>
@@ -179,7 +179,7 @@
             <hr>
             <div class="ruls-screen col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h2>ПРАВИЛА</h2>
-                <p>Выполнение заданий подтверждается только с помощью отчёта в форме видео<br class="visible-xs"> или принтскрина экрана.<br class="hidden-xs"> Для того чтобы принять участие в проекте Вам понадобится:</p>
+                <p>Для того чтобы принять участие в проекте Вам понадобится:</p>
                 <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <img src="/ico/responsive.svg" alt="">
                     <p class="img-txt">Пк, телефон<br>или планшет</p>

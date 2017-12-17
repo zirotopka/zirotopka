@@ -5,4 +5,9 @@ $(document).ready(function(){
 	        scrollTop: $("#bonus_2").offset().top},
 	        800);
 	});
+
+	$("body").on('click','.parthner_btn', function () {
+	    $('#registr #reg_role').val('arbitrage');
+	    $('#registr').modal('show');
+	  });
 })

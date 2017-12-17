@@ -58,6 +58,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
             'first_name' => 'required',
             'surname' => 'required',
+            'role' => 'required|in:client,arbitrage',
         ];
         $messages = [
             'email.required' => 'Не указана почта',
@@ -70,6 +71,9 @@ class UserController extends Controller
 
             'offer.required' => 'Согласитесь с оффертой',
             'adult.required' => 'Подтвердите что вам больше 14 лет',
+
+            'role.required' => 'Роль отсутствует',
+            'role.in' => 'Выбранная роль не существует',
         ];
 
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -106,12 +110,16 @@ class UserController extends Controller
 
             $code = $activation->code;
 
-            Mail::to($user->email)
-                ->queue(new ActivasionShipped($user, $request->get("password"), $code));
-            // $activation->completed = 1;
-            // $activation->save();
+            if (env('PAYMENT_STATUS') == 'test') {
+                Activation::complete($user, $code);
+                Sentinel::authenticateAndRemember([ 'email' => $request->get("email"), 'password' => $request->get("password") ]);
+            } else {
+                Mail::to($user->email)
+                    ->queue(new ActivasionShipped($user, $request->get("password"), $code));
+            }
 
-            $role = Sentinel::findRoleBySlug("client");
+            $role_slug = $request->get('role');
+            $role = Sentinel::findRoleBySlug($role_slug);
             $role->users()->attach($user);
 
             Balance::create([

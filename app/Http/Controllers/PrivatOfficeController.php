@@ -12,6 +12,7 @@ use App\Balance;
 use App\Accrual;
 use App\Training;
 use App\Ban;
+use App\AdjancyList;
 use Validator;
 use App\Jobs\BonusDistribution;
 
@@ -37,6 +38,30 @@ class PrivatOfficeController extends Controller
     public function index($slug)
     {	
     	$user = Sentinel::getUser();
+
+        if (empty($user)) {
+            return redirect('/');
+        }
+
+        $role = $user->roles->first();
+
+        if ($role->slug == 'arbitrage') {
+            $adjansyList = AdjancyList::where('adjancy_lists.pid','=',$user->id)->orderBy('adjancy_lists.created_at','desc')
+                                        ->leftJoin('users','adjancy_lists.user_id','=','users.id')
+                                        ->select([
+                                            'users.first_name',
+                                            'users.surname',
+                                            'adjancy_lists.created_at as created_at',
+                                            'users.is_programm_pay',
+                                        ])
+                                        ->limit(15)->get();
+            $data = [
+               'adjansyList' => $adjansyList,
+            ];
+
+            return view('privat_office.arbitrage.index', $data);
+        }
+
         $userTimezone = User::getTimezone($user);
         $balance = $user->balance;
 
@@ -56,6 +81,7 @@ class PrivatOfficeController extends Controller
         if ( empty($user->current_programm_id) ) {
             $programs = Programm::select('id','description','name')
                             ->where('status','=',1)
+                            ->orderBy('lite','desc')
                             ->get();
 
             $nowHour = $now->hour;

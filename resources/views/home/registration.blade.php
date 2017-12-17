@@ -7,6 +7,7 @@
         <div class="user_data">
           <form action="/register" method="POST">
             {{ csrf_field() }}
+            <input type="hidden" name="role" id="reg_role" value="client">
             <input class="reg_input" id="reg-email" type="email" name="email" placeholder="Почта" required="required">
             <input class="reg_input" id="password" type="password" name="password" placeholder="Пароль" required="required">
             <input class="reg_input" id="first_name" type="text" name="first_name" placeholder="Имя" required="required">

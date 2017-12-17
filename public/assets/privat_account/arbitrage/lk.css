@@ -1,0 +1,24 @@
+.arbitrage-panel {
+	margin-top: 100px;
+}
+
+.arbitrage-panel .panel-heading {
+	padding: 0px;
+}
+
+.arbitrage-panel .panel-heading span {
+	padding: 10px;
+    display: inline-block;
+}
+
+.border-right {
+	border-right: 2px solid #ddd;
+}
+
+.width-fourhundred {
+	width: 400px;
+}
+
+.color-orange {
+	color: #ff8a18;
+}
