@@ -21,6 +21,9 @@ Route::post('new_post_password', [ 'uses' => 'UserController@newPostPassword' ] 
 Route::get('forget_password', [ 'uses' => 'UserController@forgetPassword' ] );
 Route::post('forget_password', [ 'uses' => 'UserController@postForgetPassword' ] );
 
+//Партнерка
+Route::get('affiliate/desktop', [ 'uses' => 'AffiliateController@index' ] );
+
 // Route::group(['prefix' => '/', 'middleware' => ['auth']], function () {
 // 	Route::get('password', [ 'uses' => 'UserController@setPassword' ] );
 // 	Route::post('password', [ 'uses' => 'UserController@postSetPassword' ] );

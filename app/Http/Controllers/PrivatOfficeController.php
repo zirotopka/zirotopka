@@ -12,6 +12,7 @@ use App\Balance;
 use App\Accrual;
 use App\Training;
 use App\Ban;
+use App\AdjancyList;
 use Validator;
 use App\Jobs\BonusDistribution;
 
@@ -37,11 +38,65 @@ class PrivatOfficeController extends Controller
     public function index($slug)
     {	
     	$user = Sentinel::getUser();
-        $userTimezone = User::getTimezone($user);
-        $balance = $user->balance;
 
+        if (empty($user)) {
+            return redirect('/');
+        }
+
+        $userTimezone = User::getTimezone($user);
         $now = Carbon::now($userTimezone);
         $now_timestamp = $now->timestamp;
+
+        $role = $user->roles->first();
+
+        if ($role->slug == 'arbitrage') {
+            $adjansyList = AdjancyList::where('adjancy_lists.pid','=',$user->id)->orderBy('adjancy_lists.created_at','desc')
+                                        ->leftJoin('users','adjancy_lists.user_id','=','users.id')
+                                        ->select([
+                                            'users.first_name',
+                                            'users.surname',
+                                            'adjancy_lists.created_at as created_at',
+                                            'users.is_programm_pay',
+                                        ])
+                                        ->limit(15)->get();
+
+            $daysInMonth = $now->daysInMonth;
+            $now_start_month = clone $now;
+
+            $now_start_month->startOfMonth();
+
+            $adjansyListDays = array();
+            $adjansyListValues = array();
+            $adjansyListSum = array();
+
+            for ($i = 1; $i <= $daysInMonth; $i++) {
+                $adjansyListDayCount =  AdjancyList::where('adjancy_lists.pid','=',$user->id)
+                                                ->whereDate('adjancy_lists.created_at','=',$now_start_month)
+                                                ->count();
+
+                $accrualsSumPerDay = Accrual::where('user_id','=',$user->id)
+                                        ->where('type_id','=',1)
+                                        ->sum('sum');
+
+                array_push($adjansyListDays,$i);
+                array_push($adjansyListValues,$adjansyListDayCount);
+                array_push($adjansyListSum,$accrualsSumPerDay);
+
+                $now_start_month->addDay();
+            }
+
+            $data = [
+               'adjansyList' => $adjansyList,
+               'adjansyListDays' => $adjansyListDays,
+               'adjansyListValues' => $adjansyListValues,
+               'accrualsSumPerDay' => $accrualsSumPerDay,
+            ];
+
+            return view('privat_office.arbitrage.index', $data);
+        }
+
+        
+        $balance = $user->balance;
 
         if (empty($balance)) {
             return view('errors.error_balance');
@@ -56,6 +111,7 @@ class PrivatOfficeController extends Controller
         if ( empty($user->current_programm_id) ) {
             $programs = Programm::select('id','description','name')
                             ->where('status','=',1)
+                            ->orderBy('lite','desc')
                             ->get();
 
             $nowHour = $now->hour;
@@ -75,7 +131,7 @@ class PrivatOfficeController extends Controller
                                 ->where('programm_id','=',$user->current_programm_id)
                                 ->where('day','=',$user->current_day)
                                 ->first();        
-        $currentProgramDayStatus = $current_program_day->status;
+        $currentProgramDayStatus = $current_program_day->free_day;
 
         //Оплата програм
         if (!empty($currentProgramDayStatus) || $current_program_day->day > 2) {
