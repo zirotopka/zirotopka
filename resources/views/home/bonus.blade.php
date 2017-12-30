@@ -10,7 +10,6 @@
 @section('js')
     @parent
     <!-- Добавлять js тут -->
-    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-187501-9TeUl';</script>
     <script type="text/javascript" src="/assets/swiper/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="/assets/home/bonus-scrollspy.js"></script>
     <script type="text/javascript" src="/assets/home/bonus.js?{{time()}}"></script>

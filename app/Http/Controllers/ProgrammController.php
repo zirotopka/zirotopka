@@ -31,6 +31,26 @@ class ProgrammController extends Controller
 
     public function index(Request $request, $slug){
         switch ($slug){
+<<<<<<< HEAD
+            case 'r.one_start' :
+                $template = 'ronestart';
+                break;
+            case 'r.one_lite' :
+                $template = 'ronestartlite';
+                break;
+            default:
+                $template = 'zaglush';
+        }
+
+        $data = [
+            'user' => $user,
+            'referral' => $referral,
+            'slug' => $slug,
+            'program' => $programm,
+        ];
+        
+        return view('programs.'.$template, $data);
+=======
             case 'ROneStart' :
                 $user = Sentinel::getUser();
                 $referral = null;
@@ -134,6 +154,7 @@ class ProgrammController extends Controller
                 return view('programs.zaglush', $data);
             break;
         }
+>>>>>>> 60692ed086fe1200b7518e1faae443a7f8c7f66f
     }
 
     /**
@@ -157,27 +178,19 @@ class ProgrammController extends Controller
         $user = Sentinel::getUser();
 
     	if ( !empty($user) ) {   
+    		$program_id = $request->get('program_id');
+
             $clientIp = $request->ip();
             $user->ip = $clientIp;
 
             //Сделать сохранение timezone
             $timezone = IP::get_client_timezone($clientIp);
-            
-            $start_training_day = Carbon::parse( $request->get('program_date_input'), $timezone );
-            $start_date = Carbon::parse('2017-11-28',$timezone);
-
-            if ($start_training_day->format('Y-m-d') < $start_date->format('Y-m-d')) {
-                return redirect()->back()->withErrors(['error' => 'Начало прогаммы 28 октября']);
-            }
-
-    		$program_id = $request->get('program_id');
-
             $user->timezone = $timezone;
             $user->last_updated_at = Carbon::now($timezone);
             $user->user_ip = $_SERVER["REMOTE_ADDR"];
             $user->current_day = 1;
 
-            
+            $start_training_day = Carbon::parse( $request->get('program_date_input'), $timezone );
             $now = Carbon::now($timezone);
             // $tomorrow = clone $now;
             // $tomorrow->addDay();
@@ -213,11 +226,7 @@ class ProgrammController extends Controller
 
     public function send_mail($user, $subject, $text) {
         //$message = (new ProgramUpdating($user, $subject, $text))->onQueue('emails');
-        try {
-            //Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
-        } catch (\Exception $e) {
-            \Log::error($e);
-        }
+        Mail::to($user->email)->queue(new ProgramShipped($user, $subject, $text));
 
         return 1;
     }

@@ -29,7 +29,7 @@
 						<option value="-1">Отправить всем</option>
 						@if (count($users) > 0) 
 							@foreach($users as $thisUser)
-								<option value="{{ $thisUser->id }}" {{Request::get('recipient') == $thisUser->id ? 'selected="selected"': ''}}>{{$thisUser->first_name.' '.$thisUser->surname}}</option>
+								<option value="{{ $thisUser->id }}">{{$thisUser->first_name.' '.$thisUser->surname}}</option>
 							@endforeach
 						@endif
 					</select>

@@ -46,63 +46,63 @@ class BonusDistribution implements ShouldQueue
         $parentsFirstLine = $newUser->parents;
 
         if (count($parentsFirstLine) > 0) {
-            foreach ($parentsFirstLine as $parentFirstLine) {
-                if ($parentFirstLine->status == 0 || $parentFirstLine->is_programm_pay == 0) {
-                    \Log::info('BonusDistribution: Родитель с id '.$parentFirstLine->id.' заблокирован или не куплена программа');
+            $parentFirstLine = $parentsFirstLine->first();
 
-                    continue;
-                }
+            if ($parentFirstLine->status == 0) {
+                \Log::info('BonusDistribution: Родитель с id '.$parentFirstLine->id.' заблокирован');
 
-                //Зачисление рейтинга
-                $parentFirstLine->second_rating = $parentFirstLine->second_rating + 5;
-                $parentFirstLine->save();
+                return 1;
+            }
 
-                $sum = 1000;
+            //Зачисление рейтинга
+            $parentFirstLine->second_rating = $parentFirstLine->second_rating + 5;
+            $parentFirstLine->save();
 
-                $child_name = $newUser->first_name.' '.$newUser->surname;
+            $sum = 1000;
 
-                $this->addAccrual($parentFirstLine->id,$child_name,$sum);
+            $child_name = $newUser->first_name.' '.$newUser->surname;
 
-                $parentsSecondLine = $parentFirstLine->parents;
+            $this->addAccrual($parentFirstLine->id,$child_name,$sum);
 
-                if (count($parentsSecondLine) > 0) {
-                    foreach ($parentsSecondLine as $parentSecondLine) {
-                        if ($parentSecondLine->status == 0 || $parentSecondLine->is_programm_pay == 0) {
-                            \Log::info('BonusDistribution: Родитель с id '.$parentSecondLine->id.' заблокирован или не куплена программа');
+            $parentsSecondLine = $parentFirstLine->parents;
 
-                            continue;
-                        }
+            if (count($parentsSecondLine) > 0) {
+                foreach ($parentsSecondLine as $parentSecondLine) {
+                    if ($parentFirstLine->status == 0) {
+                        \Log::info('BonusDistribution: Родитель с id '.$parentSecondLine->id.' заблокирован');
 
-                        //Зачисление рейтинга
-                        $parentSecondLine->second_rating = $parentSecondLine->second_rating + 3;
-                        $parentSecondLine->save();
+                        continue;
+                    }
 
-                        $sum = 150;
+                    //Зачисление рейтинга
+                    $parentSecondLine->second_rating = $parentSecondLine->second_rating + 3;
+                    $parentSecondLine->save();
 
-                        $child_name = $parentFirstLine->first_name.' '.$parentFirstLine->surname;
+                    $sum = 150;
 
-                        $this->addAccrual($parentSecondLine->id,$child_name,$sum);
+                    $child_name = $parentFirstLine->first_name.' '.$parentFirstLine->surname;
 
-                        $parentsThirtyLine = $parentSecondLine->parents;
+                    $this->addAccrual($parentSecondLine->id,$child_name,$sum);
 
-                        if (count($parentsThirtyLine) > 0) {
-                            foreach ($parentsThirtyLine as $parentThirtyLine) {
-                                if ($parentThirtyLine->status == 0 || $parentThirtyLine->is_programm_pay == 0) {
-                                    \Log::info('BonusDistribution: Родитель с id '.$parentThirtyLine->id.' заблокирован или не куплена программа');
+                    $parentsThirtyLine = $parentSecondLine->parents;
 
-                                    continue;
-                                }
+                    if (count($parentsThirtyLine) > 0) {
+                        foreach ($parentsThirtyLine as $parentThirtyLine) {
+                            if ($parentFirstLine->status == 0) {
+                                \Log::info('BonusDistribution: Родитель с id '.$parentThirtyLine->id.' заблокирован');
 
-                                //Зачисление рейтинга
-                                $parentThirtyLine->second_rating = $parentThirtyLine->second_rating + 1;
-                                $parentThirtyLine->save();
-
-                                $sum = 100;
-
-                                $child_name = $parentSecondLine->first_name.' '.$parentSecondLine->surname;
-
-                                $this->addAccrual($parentThirtyLine->id,$child_name,$sum);
+                                return 1;
                             }
+
+                            //Зачисление рейтинга
+                            $parentThirtyLine->second_rating = $parentThirtyLine->second_rating + 1;
+                            $parentThirtyLine->save();
+
+                            $sum = 100;
+
+                            $child_name = $parentSecondLine->first_name.' '.$parentSecondLine->surname;
+
+                            $this->addAccrual($parentThirtyLine->id,$child_name,$sum);
                         }
                     }
                 }
@@ -125,7 +125,7 @@ class BonusDistribution implements ShouldQueue
             try {
                 $balance->sum = $balance->sum + $sum;
                 $balance->save();
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 \Log::error('BonusDistribution: У пользователя с id '.$user_id.'не сохранен баланс');
             }    
         }

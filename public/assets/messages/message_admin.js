@@ -6,7 +6,7 @@ $( document ).ready(function() {
 	//Отправляем новое сообщение
 	$('body').on('click','#send_new_message', function() {
 		var data = $('#new_message_form').serialize();
-		console.log(data);
+
 		jQuery.ajax({
 		    type: "POST",
 		    url: '/api/message',
@@ -52,7 +52,7 @@ $( document ).ready(function() {
 
 		jQuery.ajax({
 		    type: "GET",
-		    url: '/admin/message/'+ data_id,
+		    url: '/message/'+ data_id,
 		    data: {type:data_type},
 		    success: function (result) {
 		    	console.log(result);
