@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 namespace App\Http\Controllers;
 
@@ -118,8 +118,7 @@ class ProgrammController extends Controller
             $user->start_training_day = $start_training_day;
             $user->current_programm_id = $program_id;
             $user->last_updated_at = $now;
-
-
+            $user->status = 1;
 
             if ( ($now->year > $start_training_day->year) || 
                  ($now->year == $start_training_day->year && $now->month > $start_training_day->month ) || 
