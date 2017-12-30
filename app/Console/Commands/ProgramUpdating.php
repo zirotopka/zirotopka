@@ -147,17 +147,19 @@ class ProgramUpdating extends Command
         });
 
         //Начало программы
-        $users_query = User::select([
-            'id',
-            'email',
-            'program_is_start',
-            'start_training_day',
-            'timezone',
-            'first_name',
-            'surname',
-            'slug',
-            'program_is_end',
-            'current_day',
+        $users_query = User::leftJoin('programms','users.current_programm_id','=','programms.id')
+        ->select([
+            'users.id as id',
+            'users.email as email',
+            'users.program_is_start as program_is_start',
+            'users.start_training_day as start_training_day',
+            'users.timezone as timezone',
+            'users.first_name as first_name',
+            'users.surname as surname',
+            'users.slug as slug',
+            'users.program_is_end as program_is_end',
+            'users.current_day as current_day',
+            'programms.lite as lite',
         ])->whereNotNull('current_programm_id')->where('program_is_start','=',0)->where('program_is_end','=',0);
 
         $users_query->chunk(100, function($users){
@@ -165,7 +167,13 @@ class ProgramUpdating extends Command
                 $userTimezone = User::getTimezone($user);
 
                 $start_training_day = Carbon::parse($user->start_training_day,$userTimezone);
-                $start_training_day->hour = 22;
+                if ($user->lite == 1) {
+                    $start_training_day = $start_training_day->startOfDay();
+                } else {
+                    $start_training_day->hour = 22;
+                    $start_training_day->minute = 0;
+                }
+                
                 $start_timestamp = $start_training_day->timestamp;
 
                 $userNow = Carbon::now($userTimezone);
