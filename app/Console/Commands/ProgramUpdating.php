@@ -88,6 +88,12 @@ class ProgramUpdating extends Command
                     $userHour = $userNow->hour;
 
                     if ($userHour >= 22) {
+			if ($user->status == 0) {
+                            $user->last_updated_at = $userNow;
+                            $user->save();
+
+                            continue;
+                        }
 
                         $current_program_day = ProgrammDay::select('id','day','status')
                                                 ->where('programm_id','=',$user->current_programm_id)
