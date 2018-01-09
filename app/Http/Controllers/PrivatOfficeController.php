@@ -537,12 +537,12 @@ class PrivatOfficeController extends Controller
 
             $program_slug = $program->slug;
 
-            if ($type == 1 && $program_slug == 'r.one_lite') {
-                $balance->sum = $balance->sum - 1000;
-                $comment = "Остаточные средства к пополнению";
+            // if ($type == 1 && $program_slug == 'r.one_lite') {
+            //     $balance->sum = $balance->sum - 1000;
+            //     $comment = "Остаточные средства к пополнению";
 
-                Accrual::storeAccrual(1000, $user->id, 2, $balance->id, $comment);
-            } 
+            //     Accrual::storeAccrual(1000, $user->id, 2, $balance->id, $comment);
+            // } 
 
             if ($type == 1) {
                 //Програма
