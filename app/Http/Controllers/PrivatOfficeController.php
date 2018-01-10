@@ -545,6 +545,12 @@ class PrivatOfficeController extends Controller
             // } 
 
             if ($type == 1) {
+                $balance->sum = $balance->sum + 500;
+                $balance->save();
+
+                $bonusDescription = "Подарочные средства";
+
+                Accrual::storeAccrual(500, $user->id, 1, $balance->id, $bonusDescription);
                 //Програма
                 session()->set('first_pay_program',1);
                 return redirect('/privat_office/success_pay');
