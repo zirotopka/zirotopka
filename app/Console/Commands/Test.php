@@ -6,7 +6,10 @@ use Illuminate\Console\Command;
 use App\Helpers\Yandex;
 use GeoIP;
 
-use App\Classes\Yandex\CommonHTTP3Example;
+use App\User;
+
+use App\Mail\CustomShipped;
+use Mail;
 
 class Test extends Command
 {
@@ -40,31 +43,9 @@ class Test extends Command
      * @return mixed
      */
     public function handle()
-    {
-        $answ = Yandex::send_payments(123, 1000, '', true);
-
-        // $certificate = 'file://'.realpath('./SSL/test.cer');
-        // $privkey = 'file://'.realpath('./SSL/test.key');
-
-        // $pkcs7 = $this->sign($answ['text'],$certificate, $privkey);
-
-        // dd($pkcs7);
-
-        // $cert = openssl_pkcs7_sign($answ['text'],
-        //                            public_path().'/signed.txt',
-        //                            'file://'.realpath('./SSL/201639.cer'),
-        //                            ['file://'.realpath('./SSL/private.key'), 'Gorchel'],
-        //   
-
-        $certificate = public_path().'/yandexSslTest/client.crt';
-        $privkey = public_path().'/yandexSslTest/client.key';                     
-
-        try {
-            $instance = new CommonHTTP3Example();
-            $instance->runExample($answ['text'], $certificate, $privkey);
-        } catch (Exception $e) {
-            echo "Exception thrown: " . $e;
-        }
-        
+    {   
+        $user = User::first();
+        $subject = 'Новости Reformator.One';
+        Mail::to($user->email)->queue(new CustomShipped($user, $subject));
     }
 }

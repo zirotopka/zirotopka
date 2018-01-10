@@ -35,7 +35,11 @@
 		<div class="logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<a href="/">
 				<img class="logo-pos" src="/ico/R'ONE logo.png" alt="">
-				<b>.START</b>
+				@if ($is_lite == 0)
+					<b>.START</b>
+				@else
+					<b>.LITE</b>
+				@endif
 			</a>
 		</div>
 		<input type="hidden" id="current_slug" value="{{$user->slug}}">
