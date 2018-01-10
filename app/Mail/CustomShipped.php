@@ -11,6 +11,9 @@ class CustomShipped extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
+    public $user;
+    public $subject;
+
     /**
      * Create a new message instance.
      *
