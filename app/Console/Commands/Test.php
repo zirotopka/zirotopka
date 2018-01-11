@@ -44,8 +44,24 @@ class Test extends Command
      */
     public function handle()
     {   
-        $user = User::first();
-        $subject = 'Новости Reformator.One';
-        Mail::to($user->email)->queue(new CustomShipped($user, $subject));
+
+        DB::table('users')->chunk(100, function($users)
+        {
+            foreach ($users as $user)
+            {
+                $user->current_day = null;
+                $user->status = 1;
+                $user->is_programm_pay = 0;
+                $user->program_is_start = 0;
+                $user->start_training_day = null;
+                $user->current_programm_id = null;
+                $user->program_is_end = 0;
+
+                $user->save();
+
+                $subject = 'Новости Reformator.One';
+                Mail::to($user->email)->queue(new CustomShipped($user, $subject)); 
+            }
+        });
     }
 }
