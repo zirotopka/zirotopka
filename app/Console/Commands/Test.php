@@ -45,7 +45,7 @@ class Test extends Command
     public function handle()
     {   
 
-        DB::table('users')->chunk(100, function($users)
+        \DB::table('users')->chunk(100, function($users)
         {
             foreach ($users as $user)
             {
