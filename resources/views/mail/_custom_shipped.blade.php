@@ -16,7 +16,7 @@
 	</header>
 	<div class="container" style="padding: 60px; min-height: 300px; margin-bottom: 60px; background: url('{{env("APP_URL")."/image/mail/back_logo.png"}}') no-repeat; background-size: contain;background-position: bottom;">
 		<h1 style="color: #da8836; font-size: 30px; margin-bottom: 70px;">Рассылка Reformator.One</h1>
-		<p style="font-size: 20px; margin: 20px 0px;">Уважаемый(-ая) {{$user->first_name}} {{$user->surname}} (Reformator).</p>
+		<p style="font-size: 20px; margin: 20px 0px;">Привет, reformator!</p>
 		<p style="font-size: 20px; margin: 20px 0px;">
 			В прошлом году многие жаловались на некоторые технические проблемы в работе платформы, а также многим не нравилось отправлять видео-отчеты по выполнению заданий.
 		</p>

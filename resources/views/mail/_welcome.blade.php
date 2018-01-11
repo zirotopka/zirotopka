@@ -19,7 +19,7 @@
 	</div>
 	<div class="container" style="padding: 60px; min-height: 300px; margin-bottom: 60px; background: url('{{env("APP_URL")."/image/mail/back_logo.png"}}') no-repeat; background-size: contain;background-position: bottom;">
 		<h1 style="color: #da8836; font-size: 30px; margin-bottom: 70px;">Скорее присоединяйся в наш Telegram</h1>
-		<p style="font-size: 20px; margin: 40px 0px;">Уважаемый(-ая) {{$user->first_name}} {{$user->surname}} (Reformator).</p>
+		<p style="font-size: 20px; margin: 20px 0px;">Привет, reformator!</p>
 
 		<p style="font-size: 20px; margin: 40px 0px;">Подпишись обязательно на наш официальный канал в Telegram - мы там будем давать разъяснения и другую полезную информацию! </p>
 
