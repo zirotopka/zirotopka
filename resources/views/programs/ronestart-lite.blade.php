@@ -229,15 +229,17 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 ofrta">
-                    <ul>
-                        <li class="title">Соглашение</li>
-                        <li class="prtnrs">
-                            <a href="#" data-toggle="modal" data-target="#partners">Партнёрское соглашение</a>
-                        </li>
-                        <li id="pltks">
-                            <a href="#" data-toggle="modal" data-target="#user_agreements">Пользовательское соглашение</a>
-                        </li>
-                    </ul>
+                    @if (env('APP_ENV') == 'prod')
+                        <ul>
+                            <li class="title">Соглашение</li>
+                            <li class="prtnrs">
+                                <a href="#" data-toggle="modal" data-target="#partners">Партнёрское соглашение</a>
+                            </li>
+                            <li id="pltks">
+                                <a href="#" data-toggle="modal" data-target="#user_agreements">Пользовательское соглашение</a>
+                            </li>
+                        </ul>
+                    @endif
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 reg_f_s">
                     <ul class="rgese">
@@ -269,7 +271,9 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>
+                    @if (env('APP_ENV') == 'prod')
+                        <p style="color:#737272" class="ip">ИП Санджиева Фаина Санджаевна, ОГРНИП 315081600010093, ИНН 081410033690</p>
+                    @endif
                 </div>
             </footer>
         </div>
